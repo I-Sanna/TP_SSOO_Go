@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 )
 
@@ -11,9 +12,19 @@ type PCB struct {
 	PID            int
 	ProgramCounter int
 	Quantum        int
-	Estado         string
+	Estado         ProcessState
 	RegistrosCPU   map[string]int
 }
+
+type ProcessState string
+
+const (
+	New   ProcessState = "NEW"
+	Ready ProcessState = "READY"
+	Exec  ProcessState = "EXEC"
+	Block ProcessState = "BLOCK"
+	Exit  ProcessState = "EXIT"
+)
 
 // Recurso representa un recurso del sistema
 type Recurso struct {
@@ -37,12 +48,12 @@ func iniciarProceso(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	pid := len(procesos)
+	pid := len(procesos) + 1
 	proceso := &PCB{
 		PID:            pid,
 		ProgramCounter: 0,
 		Quantum:        100, // Valor por defecto
-		Estado:         "NEW",
+		Estado:         New,
 		RegistrosCPU:   make(map[string]int),
 	}
 
@@ -52,6 +63,7 @@ func iniciarProceso(w http.ResponseWriter, r *http.Request) {
 
 	json.NewEncoder(w).Encode(map[string]int{"pid": pid})
 
+	log.Println("Hola soy un log")
 }
 
 func estadoProceso(w http.ResponseWriter, r *http.Request) {
@@ -65,7 +77,7 @@ func estadoProceso(w http.ResponseWriter, r *http.Request) {
 	resp := struct {
 		State string `json:"state"`
 	}{
-		State: proceso.Estado,
+		State: string(proceso.Estado),
 	}
 
 	json.NewEncoder(w).Encode(resp)
@@ -95,13 +107,11 @@ func listarProcesos(w http.ResponseWriter, r *http.Request) {
 
 // iniciarPlanificacion inicia la planificación de procesos
 func iniciarPlanificacion(w http.ResponseWriter, r *http.Request) {
-	// Implementación de la lógica de planificación
 	fmt.Println("Iniciar planificación...")
 }
 
 // detenerPlanificacion detiene la planificación de procesos
 func detenerPlanificacion(w http.ResponseWriter, r *http.Request) {
-	// Implementación de la lógica de detención de planificación
 	fmt.Println("Detener planificación...")
 }
 
