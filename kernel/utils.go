@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"log"
 	"net/http"
 )
@@ -62,6 +63,7 @@ func iniciarProceso(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(map[string]int{"pid": pid})*/
 
 	log.Println("Se solicito crear un proceso")
+	json.NewEncoder(w).Encode(0)
 }
 
 func estadoProceso(w http.ResponseWriter, r *http.Request) {
@@ -80,6 +82,7 @@ func estadoProceso(w http.ResponseWriter, r *http.Request) {
 
 	json.NewEncoder(w).Encode(resp)*/
 	log.Println("Se solicito el estado de un proceso")
+	json.NewEncoder(w).Encode("EXIT")
 }
 
 // finalizarProceso finaliza un proceso
@@ -95,7 +98,7 @@ func finalizarProceso(w http.ResponseWriter, r *http.Request) {
 
 // listarProcesos lista todos los procesos
 func listarProcesos(w http.ResponseWriter, r *http.Request) {
-	/*var lista []map[string]interface{}
+	var lista []map[string]interface{}
 	for pid, proceso := range procesos {
 		lista = append(lista, map[string]interface{}{
 			"pid":   pid,
@@ -103,7 +106,7 @@ func listarProcesos(w http.ResponseWriter, r *http.Request) {
 		})
 	}
 
-	json.NewEncoder(w).Encode(lista)*/
+	json.NewEncoder(w).Encode(lista)
 	log.Println("Se solicito listar un proceso")
 }
 
