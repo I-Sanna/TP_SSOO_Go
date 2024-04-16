@@ -1,20 +1,21 @@
 package main
 
 import (
-	"fmt"
-	"log"
 	"net/http"
 )
 
 func main() {
-	http.HandleFunc("GET /process", iniciarProceso)
-	http.HandleFunc("/process/", finalizarProceso)
-	http.HandleFunc("/process/", estadoProceso)
-	http.HandleFunc("/process", listarProcesos)
-	http.HandleFunc("/plani", iniciarPlanificacion)
-	http.HandleFunc("/plani", detenerPlanificacion)
+	mux := http.NewServeMux()
 
-	fmt.Println("Kernel escuchando en el puerto 8080...")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	mux.HandleFunc("/PUT/process", iniciarProceso)
+	mux.HandleFunc("/DELETE/process/{pid}", finalizarProceso)
+	mux.HandleFunc("/GET/process/{pid}", estadoProceso)
+	mux.HandleFunc("/PUT/plani", iniciarPlanificacion)
+	mux.HandleFunc("/DELETE/plani", detenerPlanificacion)
+	mux.HandleFunc("/GET/process", listarProcesos)
 
+	err := http.ListenAndServe("localhost:8080", mux)
+	if err != nil {
+		panic(err)
+	}
 }

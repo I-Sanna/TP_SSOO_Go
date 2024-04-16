@@ -1,8 +1,6 @@
 package main
 
 import (
-	"encoding/json"
-	"fmt"
 	"log"
 	"net/http"
 )
@@ -38,7 +36,7 @@ var procesos = make(map[int]*PCB)
 
 // iniciarProceso inicia un nuevo proceso
 func iniciarProceso(w http.ResponseWriter, r *http.Request) {
-	var reqBody struct {
+	/*var reqBody struct {
 		Path string `json:"path"`
 	}
 
@@ -61,13 +59,13 @@ func iniciarProceso(w http.ResponseWriter, r *http.Request) {
 
 	fmt.Printf("Se crea el proceso %d en NEW\n", pid)
 
-	json.NewEncoder(w).Encode(map[string]int{"pid": pid})
+	json.NewEncoder(w).Encode(map[string]int{"pid": pid})*/
 
-	log.Println("Hola soy un log")
+	log.Println("Se solicito crear un proceso")
 }
 
 func estadoProceso(w http.ResponseWriter, r *http.Request) {
-	pid := obtenerPID(r)
+	/*pid := obtenerPID(r)
 	proceso, ok := procesos[pid]
 	if !ok {
 		http.Error(w, "Proceso no encontrado", http.StatusNotFound)
@@ -80,21 +78,24 @@ func estadoProceso(w http.ResponseWriter, r *http.Request) {
 		State: string(proceso.Estado),
 	}
 
-	json.NewEncoder(w).Encode(resp)
+	json.NewEncoder(w).Encode(resp)*/
+	log.Println("Se solicito el estado de un proceso")
 }
 
 // finalizarProceso finaliza un proceso
 func finalizarProceso(w http.ResponseWriter, r *http.Request) {
-	pid := obtenerPID(r)
+	//pid := obtenerPID(r)
 
-	delete(procesos, pid)
+	//delete(procesos, pid)
 
-	fmt.Printf("Finaliza el proceso %d - Motivo: SUCCESS\n", pid)
+	//fmt.Printf("Finaliza el proceso %d - Motivo: SUCCESS\n", pid)
+
+	log.Println("Se solicito finalizar un proceso")
 }
 
 // listarProcesos lista todos los procesos
 func listarProcesos(w http.ResponseWriter, r *http.Request) {
-	var lista []map[string]interface{}
+	/*var lista []map[string]interface{}
 	for pid, proceso := range procesos {
 		lista = append(lista, map[string]interface{}{
 			"pid":   pid,
@@ -102,22 +103,25 @@ func listarProcesos(w http.ResponseWriter, r *http.Request) {
 		})
 	}
 
-	json.NewEncoder(w).Encode(lista)
+	json.NewEncoder(w).Encode(lista)*/
+	log.Println("Se solicito listar un proceso")
 }
 
 // iniciarPlanificacion inicia la planificación de procesos
 func iniciarPlanificacion(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("Iniciar planificación...")
+	log.Println("Iniciar planificación...")
 }
 
 // detenerPlanificacion detiene la planificación de procesos
 func detenerPlanificacion(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("Detener planificación...")
+	log.Println("Detener planificación...")
 }
 
 // obtenerPID obtiene el PID desde la URL
 func obtenerPID(r *http.Request) int {
-	var pid int
-	fmt.Sscanf(r.URL.Path, "/process/%d", &pid)
-	return pid
+	//var pid int
+	//fmt.Sscanf(r.URL.Path, "/process/%d", &pid)
+	//return pid
+	log.Println("Se solicito un PID")
+	return 0
 }
