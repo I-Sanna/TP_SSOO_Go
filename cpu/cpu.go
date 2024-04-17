@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/execute", executeInstruction)
+	http.HandleFunc("/execute", ejecutarInstruccion)
 
 	fmt.Println("CPU running on :8081")
 	log.Fatal(http.ListenAndServe(":8081", nil))
