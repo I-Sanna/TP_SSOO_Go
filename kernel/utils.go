@@ -35,6 +35,23 @@ var procesos = make(map[int]*PCB)
 
 //var recursos = make(map[string]*Recurso)
 
+type BodyRequest struct {
+	Path string `json:"path"`
+}
+
+type BodyRequestPid struct {
+	PID int `json:"pid"`
+}
+
+type BodyResponsePCB struct {
+	PID   int    `json:"pid"`
+	State string `json:"state"`
+}
+
+type BodyResponsePCBArray struct {
+	Processes []BodyResponsePCB `json:"processes"`
+}
+
 // iniciarProceso inicia un nuevo proceso
 func iniciarProceso(w http.ResponseWriter, r *http.Request) {
 	/*var reqBody struct {
@@ -61,9 +78,25 @@ func iniciarProceso(w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("Se crea el proceso %d en NEW\n", pid)
 
 	json.NewEncoder(w).Encode(map[string]int{"pid": pid})*/
+	var request BodyRequest
+	var response BodyRequestPid
 
-	log.Println("Se solicito crear un proceso")
-	json.NewEncoder(w).Encode(0)
+	err := json.NewDecoder(r.Body).Decode(&request)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	response.PID = 48
+
+	respuesta, err := json.Marshal(response.PID)
+	if err != nil {
+		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
+	w.Write(respuesta)
 }
 
 func estadoProceso(w http.ResponseWriter, r *http.Request) {
@@ -81,8 +114,20 @@ func estadoProceso(w http.ResponseWriter, r *http.Request) {
 	}
 
 	json.NewEncoder(w).Encode(resp)*/
-	log.Println("Se solicito el estado de un proceso")
-	json.NewEncoder(w).Encode("EXIT")
+	pid := r.PathValue("pid")
+	log.Println(pid)
+
+	var response BodyRequest
+	response.Path = "EXIT"
+
+	respuesta, err := json.Marshal(response.Path)
+	if err != nil {
+		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
+	w.Write(respuesta)
 }
 
 // finalizarProceso finaliza un proceso
@@ -93,12 +138,19 @@ func finalizarProceso(w http.ResponseWriter, r *http.Request) {
 
 	//fmt.Printf("Finaliza el proceso %d - Motivo: SUCCESS\n", pid)
 
-	log.Println("Se solicito finalizar un proceso")
+	respuesta, err := json.Marshal("Se solicito finalizar un proceso")
+	if err != nil {
+		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
+	w.Write(respuesta)
 }
 
 // listarProcesos lista todos los procesos
 func listarProcesos(w http.ResponseWriter, r *http.Request) {
-	var lista []map[string]interface{}
+	/*var lista []map[string]interface{}
 	for pid, proceso := range procesos {
 		lista = append(lista, map[string]interface{}{
 			"pid":   pid,
@@ -106,18 +158,54 @@ func listarProcesos(w http.ResponseWriter, r *http.Request) {
 		})
 	}
 
-	json.NewEncoder(w).Encode(lista)
-	log.Println("Se solicito listar un proceso")
+	json.NewEncoder(w).Encode(lista)*/
+
+	var proceso1 BodyResponsePCB
+	proceso1.PID = 1
+	proceso1.State = "Ready"
+
+	var proceso2 BodyResponsePCB
+	proceso2.PID = 2
+	proceso2.State = "EXIT"
+
+	var procesos BodyResponsePCBArray
+	procesos.Processes = append(procesos.Processes, proceso1)
+	procesos.Processes = append(procesos.Processes, proceso2)
+
+	respuesta, err := json.Marshal(procesos.Processes)
+	if err != nil {
+		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
+	w.Write(respuesta)
 }
 
 // iniciarPlanificacion inicia la planificación de procesos
 func iniciarPlanificacion(w http.ResponseWriter, r *http.Request) {
-	log.Println("Iniciar planificación...")
+
+	respuesta, err := json.Marshal("Se solicito iniciar planificación")
+	if err != nil {
+		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
+	w.Write(respuesta)
 }
 
 // detenerPlanificacion detiene la planificación de procesos
 func detenerPlanificacion(w http.ResponseWriter, r *http.Request) {
-	log.Println("Detener planificación...")
+
+	respuesta, err := json.Marshal("Se solicito detener planificación")
+	if err != nil {
+		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
+	w.Write(respuesta)
 }
 
 // obtenerPID obtiene el PID desde la URL
