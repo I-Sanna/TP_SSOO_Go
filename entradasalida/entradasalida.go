@@ -14,13 +14,13 @@ var ioInterfaces = make(map[string]IOInterface)
 
 func main() {
 	http.HandleFunc("/connect", connectInterface)
-	http.HandleFunc("/disconnect", disconnectInterface)
+	//http.HandleFunc("/disconnect", disconnectInterface)
 
 	fmt.Println("I/O Interfaces running on :8083")
 	log.Fatal(http.ListenAndServe(":8083", nil))
 }
 
-func connectInterface(w http.ResponseWriter, r *http.Request) {
+/*func connectInterface(w http.ResponseWriter, r *http.Request) {
 	var io IOInterface
 	io.Name = "Interface1" // Here you would get the name from the request
 
@@ -37,4 +37,4 @@ func disconnectInterface(w http.ResponseWriter, r *http.Request) {
 	} else {
 		fmt.Fprintf(w, "Interface %s not found", name)
 	}
-}
+}*/

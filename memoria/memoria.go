@@ -16,7 +16,7 @@ func main() {
 	log.Fatal(http.ListenAndServe(":8082", nil))
 }
 
-func allocateMemory(w http.ResponseWriter, r *http.Request) {
+/* func allocateMemory(w http.ResponseWriter, r *http.Request) {
 	address := len(memory)
 	memory[address] = "DATA"
 
@@ -32,3 +32,4 @@ func freeMemory(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Memory at address %d not found", address)
 	}
 }
+*/

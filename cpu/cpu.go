@@ -7,13 +7,12 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/execute", executeInstruction)
+	http.HandleFunc("/execute", ejecutarInstruccion)
 
 	fmt.Println("CPU running on :8081")
 	log.Fatal(http.ListenAndServe(":8081", nil))
 }
 
-func executeInstruction(w http.ResponseWriter, r *http.Request) {
-	// Simulated CPU execution
-	fmt.Fprintf(w, "Instruction executed successfully")
+func ejecutarInstruccion(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "instruccion ejecutada correctamente")
 }
