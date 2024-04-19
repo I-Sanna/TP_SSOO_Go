@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
@@ -13,28 +14,22 @@ type IOInterface struct {
 var ioInterfaces = make(map[string]IOInterface)
 
 func main() {
-	http.HandleFunc("/connect", connectInterface)
+	http.HandleFunc("/connect", leerDeConsola)
 	//http.HandleFunc("/disconnect", disconnectInterface)
 
-	fmt.Println("I/O Interfaces running on :8083")
-	log.Fatal(http.ListenAndServe(":8083", nil))
+	fmt.Println("I/O Interfaces running on :8080")
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
-/*func connectInterface(w http.ResponseWriter, r *http.Request) {
-	var io IOInterface
-	io.Name = "Interface1" // Here you would get the name from the request
-
-	ioInterfaces[io.Name] = io
-
-	fmt.Fprintf(w, "Interface %s connected", io.Name)
-}
-
-func disconnectInterface(w http.ResponseWriter, r *http.Request) {
-	name := "Interface1" // Here you would get the name from the request
-	if _, exists := ioInterfaces[name]; exists {
-		delete(ioInterfaces, name)
-		fmt.Fprintf(w, "Interface %s disconnected", name)
-	} else {
-		fmt.Fprintf(w, "Interface %s not found", name)
+func leerDeConsola(w http.ResponseWriter, r *http.Request) {
+	respuesta, err := json.Marshal("se lee desde la consola")
+	if err != nil {
+		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
+		return
 	}
-}*/
+
+	w.WriteHeader(http.StatusOK)
+	w.Write(respuesta)
+	log.Print("leer desde consola")
+
+}

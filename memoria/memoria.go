@@ -1,19 +1,22 @@
 package main
 
 import (
-	"fmt"
+	"encoding/json"
 	"log"
 	"net/http"
 )
 
-var memory = make(map[int]string)
+//var memory = make(map[int]string)
 
 func main() {
-	http.HandleFunc("/allocate", allocateMemory)
-	http.HandleFunc("/free", freeMemory)
+	mux := http.NewServeMux()
 
-	fmt.Println("Memory running on :8082")
-	log.Fatal(http.ListenAndServe(":8082", nil))
+	mux.HandleFunc("GET /memoria", crearProceso)
+
+	err := http.ListenAndServe(":8080", mux)
+	if err != nil {
+		panic(err)
+	}
 }
 
 /* func allocateMemory(w http.ResponseWriter, r *http.Request) {
@@ -21,15 +24,18 @@ func main() {
 	memory[address] = "DATA"
 
 	fmt.Fprintf(w, "Memory allocated at address %d", address)
-}
+}*/
 
-func freeMemory(w http.ResponseWriter, r *http.Request) {
-	address := 0 // Here you would get the address from the request
-	if _, exists := memory[address]; exists {
-		delete(memory, address)
-		fmt.Fprintf(w, "Memory at address %d freed", address)
-	} else {
-		fmt.Fprintf(w, "Memory at address %d not found", address)
+func crearProceso(w http.ResponseWriter, r *http.Request) {
+
+	respuesta, err := json.Marshal("se crea un nuevo proceso")
+	if err != nil {
+		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
+		return
 	}
+
+	w.WriteHeader(http.StatusOK)
+	w.Write(respuesta)
+	log.Print("se creo proceso exitosamente")
+
 }
-*/
