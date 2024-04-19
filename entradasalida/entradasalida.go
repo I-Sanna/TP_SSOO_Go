@@ -14,7 +14,7 @@ type IOInterface struct {
 var ioInterfaces = make(map[string]IOInterface)
 
 func main() {
-	http.HandleFunc("/connect", leerDeConsola)
+	http.HandleFunc("GET /connect", leerDeConsola)
 	//http.HandleFunc("/disconnect", disconnectInterface)
 
 	fmt.Println("I/O Interfaces running on :8080")
