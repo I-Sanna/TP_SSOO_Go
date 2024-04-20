@@ -17,8 +17,8 @@ func main() {
 	http.HandleFunc("GET /connect", leerDeConsola)
 	//http.HandleFunc("/disconnect", disconnectInterface)
 
-	fmt.Println("I/O Interfaces running on :8080")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	fmt.Println("I/O Interfaces running on :8004")
+	log.Fatal(http.ListenAndServe(":8004", nil))
 }
 
 func leerDeConsola(w http.ResponseWriter, r *http.Request) {

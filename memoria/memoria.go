@@ -13,7 +13,7 @@ func main() {
 
 	mux.HandleFunc("GET /memoria", crearProceso)
 
-	err := http.ListenAndServe(":8080", mux)
+	err := http.ListenAndServe(":8002", mux)
 	if err != nil {
 		panic(err)
 	}

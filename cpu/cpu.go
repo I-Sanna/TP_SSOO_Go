@@ -11,7 +11,7 @@ func main() {
 
 	mux.HandleFunc("GET /cpu", ejecutarInstruccion)
 
-	err := http.ListenAndServe(":8080", mux)
+	err := http.ListenAndServe(":8006", mux)
 	if err != nil {
 		panic(err)
 	}

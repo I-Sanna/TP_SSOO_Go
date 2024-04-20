@@ -26,7 +26,7 @@ func main() {
 	body = body
 
 	cliente := &http.Client{}
-	url := fmt.Sprintf("http://localhost:8080/cpu")
+	url := fmt.Sprintf("http://localhost:8001/process")
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		return

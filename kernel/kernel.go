@@ -14,7 +14,7 @@ func main() {
 	mux.HandleFunc("DELETE /plani", detenerPlanificacion)
 	mux.HandleFunc("GET /process", listarProcesos)
 
-	err := http.ListenAndServe(":8080", mux)
+	err := http.ListenAndServe(":8001", mux)
 	if err != nil {
 		panic(err)
 	}
