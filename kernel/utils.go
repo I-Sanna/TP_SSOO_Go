@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"encoding/json"
 	"log"
 	"net/http"
@@ -112,6 +113,8 @@ func iniciarProceso(w http.ResponseWriter, r *http.Request) {
 	var request BodyRequest
 	var response BodyRequestPid
 
+	enviarProcesoACPU(nuevoProceso)
+
 	err := json.NewDecoder(r.Body).Decode(&request)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
@@ -128,6 +131,23 @@ func iniciarProceso(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
+}
+
+func enviarProcesoACPU(pcb *PCB) {
+	body, err := json.Marshal(pcb)
+	if err != nil {
+		log.Printf("error codificando mensajes: %s", err.Error())
+		return
+	}
+
+	url := "http://localhost:8006/PCB"
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
+	if err != nil {
+		log.Printf("error enviando PCB: %s", err.Error())
+		return
+	}
+
+	log.Printf("respuesta del servidor: %s", resp.Status)
 }
 
 func estadoProceso(w http.ResponseWriter, r *http.Request) {
@@ -203,7 +223,7 @@ func listarProcesos(w http.ResponseWriter, r *http.Request) {
 	procesos.Processes = append(procesos.Processes, proceso1)
 	procesos.Processes = append(procesos.Processes, proceso2)
 
-	respuesta, err := json.Marshal(procesos.Processes)
+	respuesta, err := json.Marshal(k.Procesos)
 	if err != nil {
 		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
 		return
@@ -237,13 +257,4 @@ func detenerPlanificacion(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
-}
-
-// obtenerPID obtiene el PID desde la URL
-func obtenerPID(r *http.Request) int {
-	//var pid int
-	//fmt.Sscanf(r.URL.Path, "/process/%d", &pid)
-	//return pid
-	log.Println("Se solicito un PID")
-	return 0
 }

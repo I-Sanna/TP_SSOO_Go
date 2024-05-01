@@ -6,10 +6,28 @@ import (
 	"net/http"
 )
 
+type PCB struct {
+	PID            int
+	ProgramCounter int
+	Quantum        int
+	Estado         ProcessState
+	RegistrosCPU   map[string]int
+}
+
+type ProcessState string
+
+const (
+	New   ProcessState = "NEW"
+	Ready ProcessState = "READY"
+	Exec  ProcessState = "EXEC"
+	Block ProcessState = "BLOCK"
+	Exit  ProcessState = "EXIT"
+)
+
 func main() {
 	mux := http.NewServeMux()
 
-	mux.HandleFunc("GET /cpu", ejecutarInstruccion)
+	mux.HandleFunc("GET /PCB", recibirPCB)
 
 	err := http.ListenAndServe(":8006", mux)
 	if err != nil {
@@ -17,21 +35,20 @@ func main() {
 	}
 }
 
-func ejecutarInstruccion(w http.ResponseWriter, r *http.Request) {
+func recibirPCB(w http.ResponseWriter, r *http.Request) {
+	var paquete PCB
 
-	//pid := obtenerPID(r)
-
-	//delete(procesos, pid)
-
-	//fmt.Printf("Finaliza el proceso %d - Motivo: SUCCESS\n", pid)
-
-	respuesta, err := json.Marshal("Se solicito ejecutar instruccion")
+	err := json.NewDecoder(r.Body).Decode(&paquete)
 	if err != nil {
-		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
+		log.Printf("error al decodificar mensaje: %s\n", err.Error())
+		w.WriteHeader(http.StatusBadRequest)
+		w.Write([]byte("error al decodificar mensaje"))
 		return
 	}
 
+	log.Println("me llegó un PCB")
+	log.Printf("%+v\n", paquete)
+
 	w.WriteHeader(http.StatusOK)
-	w.Write(respuesta)
-	log.Print("instruccion ejecutada correctamente")
+	w.Write([]byte("ok"))
 }
