@@ -41,11 +41,6 @@ func crearProceso(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
-	//respuesta, err := json.Marshal(response.PID)
-	if err != nil {
-		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
-		return
-	}
 	readFile(request.Path)
 	respuesta, err := json.Marshal("se crea un nuevo proceso")
 	if err != nil {
