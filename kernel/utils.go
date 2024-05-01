@@ -108,7 +108,7 @@ func iniciarProceso(w http.ResponseWriter, r *http.Request) {
 		RegistrosCPU:   make(map[string]int),
 	}
 
-	k.Procesos = append(k.Procesos, nuevoProceso)
+	//k.Procesos = append(k.Procesos, nuevoProceso)
 
 	var request BodyRequest
 	var response BodyRequestPid

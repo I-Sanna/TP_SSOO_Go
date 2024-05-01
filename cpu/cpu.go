@@ -27,7 +27,7 @@ const (
 func main() {
 	mux := http.NewServeMux()
 
-	mux.HandleFunc("GET /PCB", recibirPCB)
+	mux.HandleFunc(" /PCB", recibirProceso)
 
 	err := http.ListenAndServe(":8006", mux)
 	if err != nil {
@@ -35,7 +35,7 @@ func main() {
 	}
 }
 
-func recibirPCB(w http.ResponseWriter, r *http.Request) {
+func recibirProceso(w http.ResponseWriter, r *http.Request) {
 	var paquete PCB
 
 	err := json.NewDecoder(r.Body).Decode(&paquete)
@@ -46,7 +46,7 @@ func recibirPCB(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	log.Println("me llegó un PCB")
+	log.Println("me llegó un Proceso")
 	log.Printf("%+v\n", paquete)
 
 	w.WriteHeader(http.StatusOK)

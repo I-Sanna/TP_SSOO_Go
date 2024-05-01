@@ -27,7 +27,7 @@ func main() {
 
 	cliente := &http.Client{}
 	url := fmt.Sprintf("http://localhost:8001/process")
-	req, err := http.NewRequest("GET", url, nil)
+	req, err := http.NewRequest("PUT", url, nil)
 	if err != nil {
 		return
 	}
