@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
+	"os"
 )
 
 // PCB representa la estructura de control del proceso
@@ -50,6 +51,42 @@ type BodyResponsePCB struct {
 
 type BodyResponsePCBArray struct {
 	Processes []BodyResponsePCB `json:"processes"`
+}
+type Config struct {
+	PortKernel         int               `json:"port_kernel"`
+	IpMemory           string            `json:"ip_memory"`
+	PortMemory         int               `json:"port_memory"`
+	IpCPU              string            `json:"ip_cpu"`
+	PortCPU            int               `json:"port_cpu"`
+	PortIO             int               `json:"port_io"`
+	PlanningAlgorithm  string            `json:"planning_algorithm"`
+	Quantum            int               `json:"quantum"`
+	Resources          map[string]string `json:"resources"`
+	Resource_instances []int             `json:"resource_instances"`
+	Multiprogramming   int               `json:"multiprogramming"`
+}
+
+var ClientConfig *Config
+
+func configurar() {
+
+	ClientConfig = IniciarConfiguracion("config.json")
+	log.Println(ClientConfig.PortKernel)
+	log.Println(ClientConfig.PortCPU)
+	log.Println(ClientConfig.PortMemory)
+}
+func IniciarConfiguracion(filePath string) *Config {
+	var config *Config
+	configFile, err := os.Open(filePath)
+	if err != nil {
+		log.Fatal(err.Error())
+	}
+	defer configFile.Close()
+
+	jsonParser := json.NewDecoder(configFile)
+	jsonParser.Decode(&config)
+
+	return config
 }
 
 // iniciarProceso inicia un nuevo proceso

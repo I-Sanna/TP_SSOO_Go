@@ -5,6 +5,7 @@ import (
 )
 
 func main() {
+	configurar()
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("PUT /process", iniciarProceso)
