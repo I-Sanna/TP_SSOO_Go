@@ -75,6 +75,7 @@ func configurar() {
 	log.Println(ClientConfig.PortCPU)
 	log.Println(ClientConfig.PortMemory)
 }
+
 func IniciarConfiguracion(filePath string) *Config {
 	var config *Config
 	configFile, err := os.Open(filePath)
@@ -89,32 +90,25 @@ func IniciarConfiguracion(filePath string) *Config {
 	return config
 }
 
+type Kernel struct {
+	Procesos []*PCB
+}
+
+var k *Kernel
+
 // iniciarProceso inicia un nuevo proceso
 func iniciarProceso(w http.ResponseWriter, r *http.Request) {
-	/*var reqBody struct {
-		Path string `json:"path"`
-	}
 
-	err := json.NewDecoder(r.Body).Decode(&reqBody)
-	if err != nil {
-		http.Error(w, "Error en la solicitud", http.StatusBadRequest)
-		return
-	}
-
-	pid := len(procesos) + 1
-	proceso := &PCB{
-		PID:            pid,
+	nuevoProceso := &PCB{
+		PID:            1,
 		ProgramCounter: 0,
 		Quantum:        100, // Valor por defecto
 		Estado:         New,
 		RegistrosCPU:   make(map[string]int),
 	}
 
-	procesos[pid] = proceso
+	k.Procesos = append(k.Procesos, nuevoProceso)
 
-	fmt.Printf("Se crea el proceso %d en NEW\n", pid)
-
-	json.NewEncoder(w).Encode(map[string]int{"pid": pid})*/
 	var request BodyRequest
 	var response BodyRequestPid
 
@@ -124,7 +118,7 @@ func iniciarProceso(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	response.PID = 48
+	response.PID = nuevoProceso.PID
 
 	respuesta, err := json.Marshal(response.PID)
 	if err != nil {
