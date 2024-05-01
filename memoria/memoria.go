@@ -2,13 +2,16 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
+	"os"
 )
 
 //var memory = make(map[int]string)
 
 func main() {
+	readFile("../leer.txt") //con ../ busca el que esta en general, con ./ o sin aclarar busca el de memoria
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("GET /memoria", crearProceso)
@@ -17,6 +20,19 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+}
+
+func readFile(fileName string) {
+	file, err := os.Open(fileName) // For read access.
+	if err != nil {
+		log.Fatal(err)
+	}
+	data := make([]byte, 100)
+	count, err := file.Read(data)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("read %d bytes: %q\n", count, data[:count])
 }
 
 /* func allocateMemory(w http.ResponseWriter, r *http.Request) {
