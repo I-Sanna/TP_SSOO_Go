@@ -8,7 +8,12 @@ import (
 	"memoria/globals"
 	"net/http"
 	"os"
+	"strconv"
 )
+
+var memoria []byte
+
+var tablaPaginas map[int]int
 
 type BodyRequest struct {
 	Path string `json:"path"`
@@ -38,6 +43,12 @@ func ConfigurarLogger() {
 	log.SetOutput(mw)
 }
 
+func InicializarMemoriaYTablas() {
+	memoria = make([]byte, globals.ClientConfig.MemorySize)
+
+	tablaPaginas = make(map[int]int)
+}
+
 func readFile(fileName string) {
 	file, err := os.Open(fileName) // For read access.
 	if err != nil {
@@ -49,6 +60,27 @@ func readFile(fileName string) {
 		log.Fatal(err)
 	}
 	fmt.Printf("read %d bytes: %q\n", count, data[:count])
+}
+
+func BuscarMarco(w http.ResponseWriter, r *http.Request) {
+	pagina := r.PathValue("pagina")
+
+	i, err := strconv.Atoi(pagina)
+	if err != nil {
+		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+		return
+	}
+
+	var marco = tablaPaginas[i]
+
+	respuesta, err := json.Marshal(marco)
+	if err != nil {
+		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
+	w.Write(respuesta)
 }
 
 /*
