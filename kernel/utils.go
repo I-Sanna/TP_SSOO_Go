@@ -160,7 +160,7 @@ func iniciarProceso(w http.ResponseWriter, r *http.Request) {
 	var request BodyRequest
 	var response BodyRequestPid
 
-	err := json.NewDecoder(r.Body).Decode(&request)
+	err := json.NewDecoder(r.Body).Decode(&request)//aca hay un error despues lo chequeamos pero, si comentamos de la linea 163 a la 168 no da error el pid y lo imprime bien
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
