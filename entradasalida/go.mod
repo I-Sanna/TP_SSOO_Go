@@ -1,3 +1,3 @@
-module github.com/sisoputnfrba/tp-golang/entradasalida
+module entradasalida
 
 go 1.22

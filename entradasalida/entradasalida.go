@@ -1,35 +1,27 @@
 package main
 
 import (
-	"encoding/json"
+	"entradasalida/globals"
+	"entradasalida/utils"
 	"fmt"
 	"log"
 	"net/http"
+	"strconv"
 )
 
-type IOInterface struct {
-	Name string `json:"name"`
-}
-
-var ioInterfaces = make(map[string]IOInterface)
-
 func main() {
-	http.HandleFunc("GET /connect", leerDeConsola)
-	//http.HandleFunc("/disconnect", disconnectInterface)
+	utils.ConfigurarLogger()
 
-	fmt.Println("I/O Interfaces running on :8004")
-	log.Fatal(http.ListenAndServe(":8004", nil))
-}
+	fmt.Print("Ingrese el archivo de configuracion del dispositivo: ")
+	var configDispositivo string = utils.LeerConsola()
 
-func leerDeConsola(w http.ResponseWriter, r *http.Request) {
-	respuesta, err := json.Marshal("se lee desde la consola")
-	if err != nil {
-		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
-		return
+	globals.ClientConfig = utils.IniciarConfiguracion(configDispositivo)
+
+	if globals.ClientConfig == nil {
+		log.Fatalf("No se pudo cargar la configuración")
 	}
 
-	w.WriteHeader(http.StatusOK)
-	w.Write(respuesta)
-	log.Print("leer desde consola")
+	http.HandleFunc("PUT /sleep/{units}", utils.IO_GEN_SLEEP)
 
+	log.Fatal(http.ListenAndServe(":"+strconv.Itoa(globals.ClientConfig.Port), nil))
 }
