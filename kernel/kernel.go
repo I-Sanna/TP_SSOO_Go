@@ -5,10 +5,12 @@ import (
 )
 
 func main() {
+
 	configurar()
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("PUT /process", iniciarProceso)
+	mux.HandleFunc("PUT /enviar", planificadoCortoPlazo)
 	mux.HandleFunc("DELETE /process/{pid}", finalizarProceso)
 	mux.HandleFunc("GET /process/{pid}", estadoProceso)
 	mux.HandleFunc("PUT /plani", iniciarPlanificacion)

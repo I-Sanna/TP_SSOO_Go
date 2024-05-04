@@ -14,7 +14,21 @@ type PCB struct {
 	ProgramCounter int
 	Quantum        int
 	Estado         ProcessState
-	RegistrosCPU   map[string]int
+	RegistrosCPU   Registros
+}
+
+type Registros struct {
+	PC  uint32 // Program Counter, indica la próxima instrucción a ejecutar
+	AX  uint8  // Registro Numérico de propósito general
+	BX  uint8  // Registro Numérico de propósito general
+	CX  uint8  // Registro Numérico de propósito general
+	DX  uint8  // Registro Numérico de propósito general
+	EAX uint32 // Registro Numérico de propósito general
+	EBX uint32 // Registro Numérico de propósito general
+	ECX uint32 // Registro Numérico de propósito general
+	EDX uint32 // Registro Numérico de propósito general
+	SI  uint32 // Contiene la dirección lógica de memoria de origen desde donde se va a copiar un string
+	DI  uint32 // Contiene la dirección lógica de memoria de destino a donde se va a copiar un string
 }
 
 type ProcessState string
@@ -95,25 +109,56 @@ type Kernel struct {
 	Procesos []*PCB
 }
 
+func (k *Kernel) planificarFIFO() *PCB {
+	if len(k.Procesos) == 0 {
+		return nil
+	}
+	// Selecciona el primer proceso en la lista de procesos
+	proceso := k.Procesos[0]
+	// Remueve el proceso de la lista de procesos
+	k.Procesos = k.Procesos[1:]
+	// Cambia el estado del proceso a EXEC
+	proceso.Estado = Exec
+	return proceso
+}
+
+// Función para planificar un proceso usando Round Robin (RR)
+func (k *Kernel) planificarRR() *PCB {
+	if len(k.Procesos) == 0 {
+		return nil
+	}
+	// Selecciona el primer proceso en la lista de procesos
+	proceso := k.Procesos[0]
+	// Remueve el proceso de la lista de procesos
+	k.Procesos = append(k.Procesos[1:], proceso)
+	// Cambia el estado del proceso a EXEC
+	proceso.Estado = Exec
+	return proceso
+}
+
 var k *Kernel
+
+func init() {
+	k = &Kernel{
+		Procesos: make([]*PCB, 0),
+	}
+}
 
 // iniciarProceso inicia un nuevo proceso
 func iniciarProceso(w http.ResponseWriter, r *http.Request) {
 
 	nuevoProceso := &PCB{
-		PID:            1,
+		PID:            len(k.Procesos) + 1,
 		ProgramCounter: 0,
 		Quantum:        100, // Valor por defecto
 		Estado:         New,
-		RegistrosCPU:   make(map[string]int),
+		RegistrosCPU:   Registros{},
 	}
 
-	//k.Procesos = append(k.Procesos, nuevoProceso)
+	k.Procesos = append(k.Procesos, nuevoProceso)
 
 	var request BodyRequest
 	var response BodyRequestPid
-
-	enviarProcesoACPU(nuevoProceso)
 
 	err := json.NewDecoder(r.Body).Decode(&request)
 	if err != nil {
@@ -121,7 +166,35 @@ func iniciarProceso(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	response.PID = nuevoProceso.PID
+	response = BodyRequestPid{PID: nuevoProceso.PID}
+
+	respuesta, err := json.Marshal(response)
+	if err != nil {
+		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
+	w.Write(respuesta)
+}
+
+func planificadoCortoPlazo(w http.ResponseWriter, r *http.Request) {
+
+	var request BodyRequest
+	var response BodyRequestPid
+
+	procesoPlanificado := k.planificarFIFO()
+	if procesoPlanificado == nil {
+		procesoPlanificado = k.planificarRR()
+	}
+
+	enviarProcesoACPU(procesoPlanificado)
+
+	err := json.NewDecoder(r.Body).Decode(&request)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
 
 	respuesta, err := json.Marshal(response.PID)
 	if err != nil {
