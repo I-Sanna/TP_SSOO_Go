@@ -1,8 +1,4 @@
-instruccion1
-//intenta ser el archivo de pseudocodigo
-crearProceso
-while(1)
-if(a = b)
-print
-return a
-fin
+SET AX 1
+SET BX 1
+SUM AX BX
+EXIT

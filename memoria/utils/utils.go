@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"os"
 	"strconv"
+	"strings"
 )
 
 var memoria []byte
@@ -49,17 +50,23 @@ func InicializarMemoriaYTablas() {
 	tablaPaginas = make(map[int]int)
 }
 
-func readFile(fileName string) {
+func readFile(fileName string) []string {
 	file, err := os.Open(fileName) // For read access.
 	if err != nil {
 		log.Fatal(err)
 	}
-	data := make([]byte, 100)
+	data := make([]byte, 150)
 	count, err := file.Read(data)
 	if err != nil {
 		log.Fatal(err)
 	}
+	strData := string(data)
+	instrucciones := strings.Split(strings.TrimRight(strData, "\x00"), "\n")
+	//for _, value := range instrucciones {
+	//	fmt.Println(value)
+	//}
 	fmt.Printf("read %d bytes: %q\n", count, data[:count])
+	return instrucciones
 }
 
 func BuscarMarco(w http.ResponseWriter, r *http.Request) {
@@ -100,10 +107,8 @@ func CrearProceso(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
-
-	readFile(request.Path)
-
-	respuesta, err := json.Marshal("se crea un nuevo proceso")
+	instr := readFile(request.Path)
+	respuesta, err := json.Marshal(instr)
 	if err != nil {
 		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
 		return
