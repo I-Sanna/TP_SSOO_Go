@@ -1,7 +1,7 @@
 package globals
 
 type Config struct {
-	PortKernel         int               `json:"port"`
+	PortKernel         int               `json:"port_kernel"`
 	IpMemory           string            `json:"ip_memory"`
 	PortMemory         int               `json:"port_memory"`
 	IpCPU              string            `json:"ip_cpu"`
