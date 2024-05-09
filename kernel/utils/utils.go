@@ -96,31 +96,34 @@ type Kernel struct {
 }
 
 func (k *Kernel) planificarFIFO() *PCB {
-	log.Print("\nSe planifica por FIFO\n")
+	//log.Print("\nSe planifica por FIFO\n")
 
-	if len(k.Procesos) == 0 {
-		return nil
-	}
-	proceso := k.Procesos[0]
-	for len(k.Procesos) > 0 {
-		// Selecciona el primer proceso en la lista de procesos
-		proceso := k.Procesos[0]
-		// Remueve el proceso de la lista de procesos
-		k.Procesos = k.Procesos[1:]
-		// Cambia el estado del proceso a EXEC
-		proceso.Estado = Exec
-	}
-	return proceso
-}
-
-// Función para planificar un proceso usando Round Robin (RR)
-func (k *Kernel) planificarRR() *PCB {
-	log.Print("\nSe planifica por Round Robin\n")
 	if len(k.Procesos) == 0 {
 		return nil
 	}
 	// Selecciona el primer proceso en la lista de procesos
 	proceso := k.Procesos[0]
+	if proceso.Estado != Ready {
+		return proceso
+	}
+	// Remueve el proceso de la lista de procesos
+	k.Procesos = append(k.Procesos[1:], proceso)
+	// Cambia el estado del proceso a EXEC
+	proceso.Estado = Exec
+	return proceso
+}
+
+// Función para planificar un proceso usando Round Robin (RR)
+func (k *Kernel) planificarRR() *PCB {
+	//log.Print("\nSe planifica por Round Robin\n")
+	if len(k.Procesos) == 0 {
+		return nil
+	}
+	// Selecciona el primer proceso en la lista de procesos
+	proceso := k.Procesos[0]
+	if proceso.Estado != Ready {
+		return proceso
+	}
 	// Remueve el proceso de la lista de procesos
 	k.Procesos = append(k.Procesos[1:], proceso)
 	// Cambia el estado del proceso a EXEC
@@ -168,13 +171,21 @@ func PlanificadoCortoPlazo(w http.ResponseWriter, r *http.Request) {
 
 	switch globals.ClientConfig.PlanningAlgorithm {
 	case "FIFO":
-		procesoPlanificado := k.planificarFIFO()
-		log.Print("\nPlanifico por FIFO switch case 1\n")
-		EnviarProcesoACPU(procesoPlanificado)
+		for i := 0; i < len(k.Procesos); i++ {
+			procesoPlanificado := k.planificarFIFO()
+			log.Printf("\nk=%d Planifico por FIFO switch case 2\n", len(k.Procesos)-i)
+			if procesoPlanificado.Estado == Exec {
+				EnviarProcesoACPU(procesoPlanificado)
+			}
+		}
 	case "RR":
-		procesoPlanificado := k.planificarRR()
-		log.Print("\nPlanifico por RR switch case 2\n")
-		EnviarProcesoACPU(procesoPlanificado)
+		for i := 0; i < len(k.Procesos); i++ {
+			procesoPlanificado := k.planificarRR()
+			log.Printf("\nk=%d Planifico por RR switch case 2\n", len(k.Procesos)-i)
+			if procesoPlanificado.Estado == Exec {
+				EnviarProcesoACPU(procesoPlanificado)
+			}
+		}
 	default:
 		http.Error(w, "Algoritmo de planificación no soportado", http.StatusInternalServerError)
 		return
@@ -303,6 +314,11 @@ func IniciarPlanificacion(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
 		return
+	}
+	for i := 0; i < len(k.Procesos); i++ {
+		proceso := k.Procesos[0]
+		proceso.Estado = Ready
+		k.Procesos = append(k.Procesos[1:], proceso)
 	}
 
 	w.WriteHeader(http.StatusOK)
