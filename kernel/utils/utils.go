@@ -8,6 +8,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"time"
 )
 
 // PCB representa la estructura de control del proceso
@@ -142,6 +143,8 @@ func init() {
 // iniciarProceso inicia un nuevo proceso
 func IniciarProceso(w http.ResponseWriter, r *http.Request) {
 
+	//for i := 0; i < 10; i++ {
+
 	nuevoProceso := &PCB{
 		PID:            len(k.Procesos) + 1,
 		ProgramCounter: 0,
@@ -162,13 +165,26 @@ func IniciarProceso(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
+	//}
+}
+
+var quantumOk = false
+
+func iniciarQuantum() {
+	quantumOk = true
+	tiempo := globals.ClientConfig.Quantum
+	log.Print("\n\nSe inicio el quantum\n\n")
+	time.Sleep(time.Duration(tiempo) * time.Millisecond)
+	log.Print("\n\nFin de quantum\n\n")
+	quantumOk = false
+
 }
 
 func PlanificadoCortoPlazo(w http.ResponseWriter, r *http.Request) {
 
 	var request BodyRequest
 	var response BodyRequestPid
-
+	log.Print(globals.ClientConfig.PlanningAlgorithm)
 	switch globals.ClientConfig.PlanningAlgorithm {
 	case "FIFO":
 		for i := 0; i < len(k.Procesos); i++ {
@@ -180,6 +196,9 @@ func PlanificadoCortoPlazo(w http.ResponseWriter, r *http.Request) {
 		}
 	case "RR":
 		for i := 0; i < len(k.Procesos); i++ {
+			if !quantumOk {
+				go iniciarQuantum()
+			}
 			procesoPlanificado := k.planificarRR()
 			log.Printf("\nk=%d Planifico por RR switch case 2\n", len(k.Procesos)-i)
 			if procesoPlanificado.Estado == Exec {
