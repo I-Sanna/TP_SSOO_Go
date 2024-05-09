@@ -96,20 +96,26 @@ type Kernel struct {
 }
 
 func (k *Kernel) planificarFIFO() *PCB {
+	log.Print("\nSe planifica por FIFO\n")
+
 	if len(k.Procesos) == 0 {
 		return nil
 	}
-	// Selecciona el primer proceso en la lista de procesos
 	proceso := k.Procesos[0]
-	// Remueve el proceso de la lista de procesos
-	k.Procesos = k.Procesos[1:]
-	// Cambia el estado del proceso a EXEC
-	proceso.Estado = Exec
+	for len(k.Procesos) > 0 {
+		// Selecciona el primer proceso en la lista de procesos
+		proceso := k.Procesos[0]
+		// Remueve el proceso de la lista de procesos
+		k.Procesos = k.Procesos[1:]
+		// Cambia el estado del proceso a EXEC
+		proceso.Estado = Exec
+	}
 	return proceso
 }
 
 // Función para planificar un proceso usando Round Robin (RR)
 func (k *Kernel) planificarRR() *PCB {
+	log.Print("\nSe planifica por Round Robin\n")
 	if len(k.Procesos) == 0 {
 		return nil
 	}
@@ -143,16 +149,7 @@ func IniciarProceso(w http.ResponseWriter, r *http.Request) {
 
 	k.Procesos = append(k.Procesos, nuevoProceso)
 
-	var request BodyRequest
-	var response BodyRequestPid
-
-	err := json.NewDecoder(r.Body).Decode(&request)
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusBadRequest)
-		return
-	}
-
-	response = BodyRequestPid{PID: nuevoProceso.PID}
+	var response = BodyRequestPid{PID: nuevoProceso.PID}
 
 	respuesta, err := json.Marshal(response)
 	if err != nil {
@@ -171,7 +168,7 @@ func PlanificadoCortoPlazo(w http.ResponseWriter, r *http.Request) {
 
 	procesoPlanificado := k.planificarFIFO()
 	if procesoPlanificado == nil {
-		procesoPlanificado = k.planificarRR()
+		procesoPlanificado = k.planificarRR() //Hacer un while con un semaforo con un delay de un tiempo chiquito
 	}
 
 	EnviarProcesoACPU(procesoPlanificado)

@@ -1,2 +1,17 @@
 2024/05/08 23:06:55 respuesta del servidor: 200 OK
 2024/05/08 23:09:55 error enviando PCB: parse ":8001": missing protocol scheme
+2024/05/09 15:50:30 error enviando PCB: Post "http://localhost:8006/PCB": dial tcp 127.0.0.1:8006: connect: connection refused
+2024/05/09 15:51:07 error enviando PCB: Post "http://localhost:8006/PCB": dial tcp 127.0.0.1:8006: connect: connection refused
+2024/05/09 15:52:04 respuesta del servidor: 200 OK
+2024/05/09 15:52:29 respuesta del servidor: 200 OK
+2024/05/09 15:52:35 respuesta del servidor: 200 OK
+2024/05/09 15:52:40 respuesta del servidor: 200 OK
+2024/05/09 15:52:43 respuesta del servidor: 200 OK
+2024/05/09 15:52:45 respuesta del servidor: 200 OK
+2024/05/09 15:53:53 respuesta del servidor: 200 OK
+2024/05/09 15:53:59 respuesta del servidor: 200 OK
+2024/05/09 15:54:04 respuesta del servidor: 200 OK
+2024/05/09 15:54:06 respuesta del servidor: 200 OK
+2024/05/09 15:54:08 respuesta del servidor: 200 OK
+2024/05/09 15:54:10 respuesta del servidor: 200 OK
+2024/05/09 15:54:14 respuesta del servidor: 200 OK
