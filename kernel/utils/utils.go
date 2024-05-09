@@ -166,12 +166,19 @@ func PlanificadoCortoPlazo(w http.ResponseWriter, r *http.Request) {
 	var request BodyRequest
 	var response BodyRequestPid
 
-	procesoPlanificado := k.planificarFIFO()
-	if procesoPlanificado == nil {
-		procesoPlanificado = k.planificarRR() //Hacer un while con un semaforo con un delay de un tiempo chiquito
+	switch globals.ClientConfig.PlanningAlgorithm {
+	case "FIFO":
+		procesoPlanificado := k.planificarFIFO()
+		log.Print("\nPlanifico por FIFO switch case 1\n")
+		EnviarProcesoACPU(procesoPlanificado)
+	case "RR":
+		procesoPlanificado := k.planificarRR()
+		log.Print("\nPlanifico por RR switch case 2\n")
+		EnviarProcesoACPU(procesoPlanificado)
+	default:
+		http.Error(w, "Algoritmo de planificación no soportado", http.StatusInternalServerError)
+		return
 	}
-
-	EnviarProcesoACPU(procesoPlanificado)
 
 	err := json.NewDecoder(r.Body).Decode(&request)
 	if err != nil {
