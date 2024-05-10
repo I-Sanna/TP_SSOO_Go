@@ -18,6 +18,7 @@ func main() {
 
 	//mux.HandleFunc("DELETE /process", finalizarProceso)
 	mux.HandleFunc("PUT /process", utils.CrearProceso)
+	mux.HandleFunc("GET /instruction/{pc}", utils.DevolverInstruccion)
 	mux.HandleFunc("GET /pagina/{pagina}", utils.BuscarMarco)
 
 	err := http.ListenAndServe(":"+strconv.Itoa(globals.ClientConfig.Port), mux)

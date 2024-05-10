@@ -16,6 +16,8 @@ var memoria []byte
 
 var tablaPaginas map[int]int
 
+var instrucciones []string
+
 type BodyRequest struct {
 	Path string `json:"path"`
 }
@@ -107,8 +109,8 @@ func CrearProceso(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
-	instr := readFile(request.Path)
-	respuesta, err := json.Marshal(instr)
+	instrucciones = readFile(request.Path)
+	respuesta, err := json.Marshal(instrucciones)
 	if err != nil {
 		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
 		return
@@ -117,5 +119,21 @@ func CrearProceso(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
 	log.Print("se creo proceso exitosamente")
+}
+
+func DevolverInstruccion(w http.ResponseWriter, r *http.Request) {
+	pc := r.PathValue("pc")
+	log.Println(pc)
+	log.Println(instrucciones)
+	indice, err := strconv.Atoi(pc)
+	log.Println(indice)
+	log.Println(instrucciones[indice])
+	respuesta, err := json.Marshal(instrucciones[indice])
+	if err != nil {
+		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
+		return
+	}
+	w.WriteHeader(http.StatusOK)
+	w.Write(respuesta)
 
 }
