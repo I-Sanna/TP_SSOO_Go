@@ -1,54 +1,23 @@
 package main
 
 import (
-	"encoding/json"
-	"log"
+	"cpu/globals"
+	"cpu/utils"
 	"net/http"
-)
-
-type PCB struct {
-	PID            int
-	ProgramCounter int
-	Quantum        int
-	Estado         ProcessState
-	RegistrosCPU   map[string]int
-}
-
-type ProcessState string
-
-const (
-	New   ProcessState = "NEW"
-	Ready ProcessState = "READY"
-	Exec  ProcessState = "EXEC"
-	Block ProcessState = "BLOCK"
-	Exit  ProcessState = "EXIT"
+	"strconv"
 )
 
 func main() {
+	//utils.ConfigurarLogger()
+
+	globals.ClientConfig = utils.IniciarConfiguracion("config.json")
+
 	mux := http.NewServeMux()
+	mux.HandleFunc("GET /probar", utils.ProbarCPU)
+	mux.HandleFunc(" /PCB", utils.RecibirProceso)
 
-	mux.HandleFunc(" /PCB", recibirProceso)
-
-	err := http.ListenAndServe(":8006", mux)
+	err := http.ListenAndServe(":"+strconv.Itoa(globals.ClientConfig.Port), mux)
 	if err != nil {
 		panic(err)
 	}
-}
-
-func recibirProceso(w http.ResponseWriter, r *http.Request) {
-	var paquete PCB
-
-	err := json.NewDecoder(r.Body).Decode(&paquete)
-	if err != nil {
-		log.Printf("error al decodificar mensaje: %s\n", err.Error())
-		w.WriteHeader(http.StatusBadRequest)
-		w.Write([]byte("error al decodificar mensaje"))
-		return
-	}
-
-	log.Println("me llegó un Proceso")
-	log.Printf("%+v\n", paquete)
-
-	w.WriteHeader(http.StatusOK)
-	w.Write([]byte("ok"))
 }
