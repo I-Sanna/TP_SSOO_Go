@@ -13,8 +13,8 @@ func main() {
 	globals.ClientConfig = utils.IniciarConfiguracion("config.json")
 
 	mux := http.NewServeMux()
-	mux.HandleFunc("GET /probar", utils.ProbarCPU)
-	mux.HandleFunc(" /PCB", utils.RecibirProceso)
+	mux.HandleFunc("GET /probar", utils.ProbarSET)
+	mux.HandleFunc("GET /PCB", utils.RecibirProceso)
 
 	err := http.ListenAndServe(":"+strconv.Itoa(globals.ClientConfig.Port), mux)
 	if err != nil {
