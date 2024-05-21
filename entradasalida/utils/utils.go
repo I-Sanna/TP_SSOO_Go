@@ -58,7 +58,9 @@ func IO_GEN_SLEEP(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var tiempoAEsperar = cantidadInt * globals.ClientConfig.UnitWorkTime
+	log.Printf("\n\n Iniciando bloqueo de io")
 	time.Sleep(time.Duration(tiempoAEsperar) * time.Millisecond)
+	log.Printf("\n\n Finalizado bloqueo de io")
 
 	respuesta, err := json.Marshal("OK")
 	if err != nil {

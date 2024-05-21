@@ -3,5 +3,7 @@
     "ip_memory": "127.0.0.1",
     "port_memory": 8002,
     "number_felling_tbl": 32,
-    "algorithm_tbl": "FIFO"
+    "algorithm_tbl": "FIFO",
+    "ip_kernel": "127.0.0.1",
+    "port_kernel": 8001
 }

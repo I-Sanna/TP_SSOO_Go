@@ -1,11 +1,13 @@
 package utils
 
 import (
+	"bytes"
 	"cpu/globals"
 	"encoding/json"
 	"log"
 	"net/http"
 	"os"
+	"strconv"
 	"strings"
 )
 
@@ -58,10 +60,6 @@ func IniciarConfiguracion(filePath string) *globals.Config {
 	return config
 }
 
-func ProbarCPU(w http.ResponseWriter, r *http.Request) {
-	log.Println("API Probar!! Todo ok")
-}
-
 func RecibirProceso(w http.ResponseWriter, r *http.Request) {
 	var paquete PCB
 
@@ -82,12 +80,8 @@ func RecibirProceso(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("ok"))
 }
 
-func ProbarSET(w http.ResponseWriter, r *http.Request) {
-	SET("AX", 8)
-	SET("BX", 8)
-	SUB("AX", "BX")
-	JNZ("AX", 14)
-	JNZ("BX", 12)
+func ProbarCPU(w http.ResponseWriter, r *http.Request) {
+	IO_GEN_SLEEP("hola", 10)
 }
 
 func SET(nombreRegistro string, valor int) {
@@ -182,17 +176,32 @@ func ObtenerRegistro32Bits(nombre string) *uint32 {
 	return &otherwise
 }
 
-func PeticionKernel(w http.ResponseWriter, r *http.Request) {
-	url := "http://localhost:8001/io"
-	resp, err := http.Post(url, "application/json", nil) // Enviando nil como el cuerpo
+type BodyRequestTime struct {
+	Dispositivo string
+	CantidadIO  int
+}
+
+func IO_GEN_SLEEP(nombre string, tiempo int) {
+	var sending BodyRequestTime
+
+	sending.Dispositivo = nombre
+	sending.CantidadIO = tiempo
+
+	body, err := json.Marshal(sending)
+	if err != nil {
+		log.Printf("error codificando mensajes: %s", err.Error())
+		return
+	}
+
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
+	log.Printf("\nACA------------------- %s", url)
 	if err != nil {
 		log.Printf("error enviando: %s", err.Error())
 		return
 	}
 
-	defer resp.Body.Close()
 	log.Printf("respuesta del servidor: %s", resp.Status)
-
 }
 
 func LeerPseudo(w http.ResponseWriter, r *http.Request) {

@@ -19,6 +19,8 @@ func main() {
 
 	if globals.ClientConfig == nil {
 		log.Fatalf("No se pudo cargar la configuración")
+	} else {
+		log.Printf("\nConfiguracion cargada con exito!\n")
 	}
 
 	http.HandleFunc("GET /sleep/{units}", utils.IO_GEN_SLEEP)

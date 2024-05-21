@@ -8,6 +8,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strconv"
 	"time"
 )
 
@@ -250,13 +251,11 @@ func EstadoProceso(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Proceso no encontrado", http.StatusNotFound)
 		return
 	}
-
 	resp := struct {
 		State string `json:"state"`
 	}{
 		State: string(proceso.Estado),
 	}
-
 	json.NewEncoder(w).Encode(resp)*/
 	pid := r.PathValue("pid")
 	log.Println(pid)
@@ -357,15 +356,29 @@ func DetenerPlanificacion(w http.ResponseWriter, r *http.Request) {
 	w.Write(respuesta)
 }
 
+type BodyRequestTime struct {
+	Dispositivo string
+	CantidadIO  int
+}
+
 // pedir io a entradasalid
 func PedirIO(w http.ResponseWriter, r *http.Request) {
-	url := "http://localhost:8004/sleep"
-	resp, err := http.Post(url, "application/json", nil) // Enviando nil como el cuerpo
+	var request BodyRequestTime
+
+	err := json.NewDecoder(r.Body).Decode(&request)
 	if err != nil {
-		log.Printf("error enviando PCB: %s", err.Error())
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	url := "http://localhost:8005/sleep/" + strconv.Itoa(request.CantidadIO)
+	resp, err := http.Get(url) // Enviando nil como el cuerpo
+	if err != nil {
+		log.Printf("error enviando: %s", err.Error())
 		return
 	}
 
 	defer resp.Body.Close()
 	log.Printf("respuesta del servidor: %s", resp.Status)
+
 }
