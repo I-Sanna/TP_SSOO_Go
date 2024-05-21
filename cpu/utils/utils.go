@@ -186,7 +186,7 @@ func PeticionKernel(w http.ResponseWriter, r *http.Request) {
 	url := "http://localhost:8001/io"
 	resp, err := http.Post(url, "application/json", nil) // Enviando nil como el cuerpo
 	if err != nil {
-		log.Printf("error enviando PCB: %s", err.Error())
+		log.Printf("error enviando: %s", err.Error())
 		return
 	}
 

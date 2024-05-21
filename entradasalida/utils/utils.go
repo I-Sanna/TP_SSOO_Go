@@ -8,8 +8,13 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strconv"
 	"time"
 )
+
+type BodyRequestTime struct {
+	TIME int `json:"tiempo"`
+}
 
 func IniciarConfiguracion(filePath string) *globals.Config {
 	var config *globals.Config
@@ -43,9 +48,16 @@ func ConfigurarLogger() {
 }
 
 func IO_GEN_SLEEP(w http.ResponseWriter, r *http.Request) {
-	cantidadIO := 4 //Este lo manda el cpu a kernel y kernel a io
 
-	var tiempoAEsperar = cantidadIO * globals.ClientConfig.UnitWorkTime
+	cantidad := r.PathValue("units")
+
+	cantidadInt, err := strconv.Atoi(cantidad)
+	if err != nil {
+		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+		return
+	}
+
+	var tiempoAEsperar = cantidadInt * globals.ClientConfig.UnitWorkTime
 	time.Sleep(time.Duration(tiempoAEsperar) * time.Millisecond)
 
 	respuesta, err := json.Marshal("OK")

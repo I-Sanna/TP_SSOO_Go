@@ -21,7 +21,7 @@ func main() {
 		log.Fatalf("No se pudo cargar la configuración")
 	}
 
-	http.HandleFunc("PUT /sleep", utils.IO_GEN_SLEEP)
+	http.HandleFunc("GET /sleep/{units}", utils.IO_GEN_SLEEP)
 
 	log.Fatal(http.ListenAndServe(":"+strconv.Itoa(globals.ClientConfig.Port), nil))
 }
