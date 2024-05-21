@@ -8,7 +8,6 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"strconv"
 	"time"
 )
 
@@ -44,15 +43,9 @@ func ConfigurarLogger() {
 }
 
 func IO_GEN_SLEEP(w http.ResponseWriter, r *http.Request) {
-	cantidad := r.PathValue("units")
+	cantidadIO := 4 //Este lo manda el cpu a kernel y kernel a io
 
-	cantidadInt, err := strconv.Atoi(cantidad)
-	if err != nil {
-		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
-		return
-	}
-
-	var tiempoAEsperar = cantidadInt * globals.ClientConfig.UnitWorkTime
+	var tiempoAEsperar = cantidadIO * globals.ClientConfig.UnitWorkTime
 	time.Sleep(time.Duration(tiempoAEsperar) * time.Millisecond)
 
 	respuesta, err := json.Marshal("OK")

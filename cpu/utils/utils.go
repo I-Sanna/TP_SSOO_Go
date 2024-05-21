@@ -181,3 +181,22 @@ func ObtenerRegistro32Bits(nombre string) *uint32 {
 	otherwise := uint32(0)
 	return &otherwise
 }
+
+func PeticionKernel(w http.ResponseWriter, r *http.Request) {
+	url := "http://localhost:8001/io"
+	resp, err := http.Post(url, "application/json", nil) // Enviando nil como el cuerpo
+	if err != nil {
+		log.Printf("error enviando PCB: %s", err.Error())
+		return
+	}
+
+	defer resp.Body.Close()
+	log.Printf("respuesta del servidor: %s", resp.Status)
+
+}
+
+func LeerPseudo(w http.ResponseWriter, r *http.Request) {
+	//var paquete PCB
+
+	//err := json.NewDecoder(r.Body).Decode(&paquete)
+}

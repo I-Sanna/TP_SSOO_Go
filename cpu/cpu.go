@@ -15,6 +15,7 @@ func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /probar", utils.ProbarSET)
 	mux.HandleFunc("GET /PCB", utils.RecibirProceso)
+	mux.HandleFunc("PUT /IOKERNEL", utils.PeticionKernel)
 
 	err := http.ListenAndServe(":"+strconv.Itoa(globals.ClientConfig.Port), mux)
 	if err != nil {

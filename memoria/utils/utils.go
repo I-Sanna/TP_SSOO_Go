@@ -1,9 +1,11 @@
 package utils
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"log"
 	"memoria/globals"
 	"net/http"
@@ -126,6 +128,10 @@ func DevolverInstruccion(w http.ResponseWriter, r *http.Request) {
 	log.Println(pc)
 	log.Println(instrucciones)
 	indice, err := strconv.Atoi(pc)
+	if err != nil {
+		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
+		return
+	}
 	log.Println(indice)
 	log.Println(instrucciones[indice])
 	respuesta, err := json.Marshal(instrucciones[indice])
@@ -136,4 +142,26 @@ func DevolverInstruccion(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
 
+}
+
+func EnviarPresudo(w http.ResponseWriter, r *http.Request) {
+
+	filePath := "memoria/leer.txt"
+	fileContent, err := ioutil.ReadFile(filePath)
+	if err != nil {
+		log.Printf("error leyendo el archivo: %s", err.Error())
+		http.Error(w, "Error leyendo el archivo", http.StatusInternalServerError)
+		return
+	}
+
+	url := "http://localhost:8006/RecibirPseudo{pseudocodigo}"
+
+	resp, err := http.Post(url, "text/plain", bytes.NewBuffer(fileContent)) // Cambiar a "text/plain" para enviar un archivo de texto
+	if err != nil {
+		log.Printf("error enviando txt: %s", err.Error())
+		return
+	}
+
+	defer resp.Body.Close()
+	log.Printf("respuesta del servidor: %s", resp.Status)
 }
