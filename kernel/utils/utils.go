@@ -363,11 +363,14 @@ type BodyRequestTime struct {
 
 // pedir io a entradasalid
 func PedirIO(w http.ResponseWriter, r *http.Request) {
+
 	var request BodyRequestTime
 
 	err := json.NewDecoder(r.Body).Decode(&request)
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusBadRequest)
+		log.Printf("error al decodificar mensaje: %s\n", err.Error())
+		w.WriteHeader(http.StatusBadRequest)
+		w.Write([]byte("error al decodificar mensaje"))
 		return
 	}
 
@@ -378,7 +381,10 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	defer resp.Body.Close()
-	log.Printf("respuesta del servidor: %s", resp.Status)
+	log.Println("me llegó un Proceso")
+	log.Printf("%+v\n", request)
 
+	w.WriteHeader(http.StatusOK)
+	w.Write([]byte("ok"))
+	log.Printf("respuesta del servidor: %s", resp.Status)
 }

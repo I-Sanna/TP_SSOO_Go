@@ -195,7 +195,6 @@ func IO_GEN_SLEEP(nombre string, tiempo int) {
 
 	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
-	log.Printf("\nACA------------------- %s", url)
 	if err != nil {
 		log.Printf("error enviando: %s", err.Error())
 		return

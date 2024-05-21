@@ -15,7 +15,6 @@ func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /probar", utils.ProbarCPU)
 	mux.HandleFunc("GET /PCB", utils.RecibirProceso)
-	//mux.HandleFunc("PUT /IOKERNEL", utils.IO_GEN_SLEEP)
 	//mux.HandleFunc("GET /RecibirPseudo{pseudocodigo", utils.LeerPseudo)
 
 	err := http.ListenAndServe(":"+strconv.Itoa(globals.ClientConfig.Port), mux)
