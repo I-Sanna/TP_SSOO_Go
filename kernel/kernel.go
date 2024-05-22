@@ -13,6 +13,7 @@ func main() {
 	globals.ClientConfig = utils.IniciarConfiguracion("config.json")
 
 	utils.InicializarVariables()
+	utils.InicializarPlanificador()
 
 	mux := http.NewServeMux()
 

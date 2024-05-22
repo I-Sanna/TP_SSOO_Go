@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"os"
 	"strconv"
+	"sync"
 	"time"
 )
 
@@ -45,6 +46,13 @@ const (
 	Exit  ProcessState = "EXIT"
 )
 
+// Semaforos
+var planificadorCortoPlazo sync.Mutex
+var agregarProceso sync.Mutex
+var eliminarProceso sync.Mutex
+var semProcesosListos = make(chan int)
+
+// Variables
 var planificando bool
 var colaDeNuevos []PCB
 var colaDeListos []PCB
@@ -71,10 +79,6 @@ type BodyResponsePCB struct {
 	State string `json:"state"`
 }
 
-type BodyResponsePCBArray struct {
-	Processes []BodyResponsePCB `json:"processes"`
-}
-
 func IniciarConfiguracion(filePath string) *globals.Config {
 	var config *globals.Config
 	configFile, err := os.Open(filePath)
@@ -99,7 +103,7 @@ func ConfigurarLogger() {
 }
 
 func InicializarVariables() {
-	planificando = false
+	planificando = true
 	estadosProcesos = make(map[int]string)
 	recursos = make(map[string]int)
 	puertosDispGenericos = make(map[string]int)
@@ -115,23 +119,33 @@ func InicializarVariables() {
 	}
 }
 
-func planificarFIFO() {
-	//Semaforo para que espre hasta que haya procesos en la cola de listos
-	for len(colaDeListos) > 0 && planificando {
-		// Selecciona el primer proceso en la lista de procesos
-		proceso := colaDeListos[0]
-
-		// Remueve el proceso de la lista de procesos
-		colaDeListos = colaDeListos[1:]
-		// Cambia el estado del proceso a EXEC
-		proceso.Estado = Exec
-		// Enviarlo a ejecutar a la CPU
+func InicializarPlanificador() {
+	switch globals.ClientConfig.PlanningAlgorithm {
+	case "FIFO":
+		go planificarFIFO()
+	case "RR":
+		go planificarRR()
 	}
+}
+
+func planificarFIFO() {
+	planificadorCortoPlazo.Lock()
+	semProcesosListos <- 0
+	// Selecciona el primer proceso en la lista de procesos
+	proceso := colaDeListos[0]
+
+	// Remueve el proceso de la lista de procesos
+	colaDeListos = colaDeListos[1:]
+	// Cambia el estado del proceso a EXEC
+	proceso.Estado = Exec
+	// Enviarlo a ejecutar a la CPU
+	planificadorCortoPlazo.Unlock()
 }
 
 // Función para planificar un proceso usando Round Robin (RR)
 func planificarRR() {
-	//Semaforo para que espre hasta que haya procesos en la cola de listos
+	planificadorCortoPlazo.Lock()
+	semProcesosListos <- 0
 	for len(colaDeListos) > 0 && planificando {
 
 		// Selecciona el primer proceso en la lista de procesos
@@ -143,13 +157,15 @@ func planificarRR() {
 		proceso.Estado = Exec
 		// Enviarlo a ejecutar a la CPU
 		time.Sleep(time.Duration(globals.ClientConfig.Quantum) * time.Millisecond)
+
+		//wait(planificadorCortoPlazo) -> Manejar Interrupcion -> Signal
+		planificadorCortoPlazo.Unlock()
 	}
 }
 
 // iniciarProceso inicia un nuevo proceso
 func IniciarProceso(w http.ResponseWriter, r *http.Request) {
-
-	//for i := 0; i < 10; i++ {
+	agregarProceso.Lock()
 
 	nuevoProceso := PCB{
 		PID:            len(colaDeListos) + 1,
@@ -171,6 +187,7 @@ func IniciarProceso(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
+	agregarProceso.Unlock()
 }
 
 func ProbarKernel(w http.ResponseWriter, r *http.Request) {
@@ -260,9 +277,24 @@ func EstadoProceso(w http.ResponseWriter, r *http.Request) {
 	w.Write(respuesta)
 }
 
-// A desarrollar
 func FinalizarProceso(w http.ResponseWriter, r *http.Request) {
-	respuesta, err := json.Marshal("Se solicito finalizar un proceso")
+	eliminarProceso.Lock()
+	pid := r.PathValue("pid")
+
+	pidInt, err := strconv.Atoi(pid)
+	if err != nil {
+		http.Error(w, "Error al convertir de string a Int", 0)
+		return
+	}
+
+	valor, ok := estadosProcesos[pidInt]
+	if !ok {
+		valor = "El PID ingresado no existe"
+	} else {
+		valor = "El proceso fue eliminado con exito"
+	}
+
+	respuesta, err := json.Marshal(valor)
 	if err != nil {
 		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
 		return
@@ -270,42 +302,46 @@ func FinalizarProceso(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
+	eliminarProceso.Unlock()
 }
 
-// A desarrollar
 func ListarProcesos(w http.ResponseWriter, r *http.Request) {
+	var listaProcesos []BodyResponsePCB
+	var proceso BodyResponsePCB
 
-}
+	for pid, estado := range estadosProcesos {
+		proceso.PID = pid
+		proceso.State = estado
+		listaProcesos = append(listaProcesos, proceso)
+	}
 
-// A desarrollar
-func IniciarPlanificacion(w http.ResponseWriter, r *http.Request) {
-
-	respuesta, err := json.Marshal("Se solicito iniciar planificación")
+	respuesta, err := json.Marshal(listaProcesos)
 	if err != nil {
 		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
 		return
 	}
-	for i := 0; i < len(colaDeListos); i++ {
-		proceso := colaDeListos[0]
-		proceso.Estado = Ready
-		colaDeListos = append(colaDeListos[1:], proceso)
-	}
 
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
+}
+
+func IniciarPlanificacion(w http.ResponseWriter, r *http.Request) {
+	if !planificando {
+		planificadorCortoPlazo.Unlock()
+		agregarProceso.Unlock()
+		eliminarProceso.Unlock()
+		planificando = true
+	}
 }
 
 // A desarrollar
 func DetenerPlanificacion(w http.ResponseWriter, r *http.Request) {
-
-	respuesta, err := json.Marshal("Se solicito detener planificación")
-	if err != nil {
-		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
-		return
+	if planificando {
+		planificadorCortoPlazo.Lock()
+		agregarProceso.Lock()
+		eliminarProceso.Lock()
+		planificando = false
 	}
-
-	w.WriteHeader(http.StatusOK)
-	w.Write(respuesta)
 }
 
 type BodyRequestTime struct {
