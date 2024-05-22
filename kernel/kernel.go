@@ -22,6 +22,7 @@ func main() {
 	mux.HandleFunc("DELETE /plani", utils.DetenerPlanificacion)
 	mux.HandleFunc("GET /process", utils.ListarProcesos)
 	mux.HandleFunc("POST /io", utils.PedirIO)
+	mux.HandleFunc("POST /nuevoIO", utils.RegistrarIO)
 	print(globals.ClientConfig.PortKernel)
 
 	err := http.ListenAndServe(":"+strconv.Itoa(globals.ClientConfig.PortKernel), mux)

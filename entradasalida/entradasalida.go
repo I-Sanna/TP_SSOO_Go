@@ -12,6 +12,9 @@ import (
 func main() {
 	utils.ConfigurarLogger()
 
+	fmt.Print("Ingrese el nombre del dispositivo: ")
+	var nombreDispositivo string = utils.LeerConsola()
+
 	fmt.Print("Ingrese el archivo de configuracion del dispositivo: ")
 	var configDispositivo string = utils.LeerConsola()
 
@@ -22,6 +25,8 @@ func main() {
 	} else {
 		log.Printf("\nConfiguracion cargada con exito!\n")
 	}
+
+	utils.EstablecerConexion(nombreDispositivo, globals.ClientConfig.Port)
 
 	http.HandleFunc("GET /sleep/{units}", utils.IO_GEN_SLEEP)
 

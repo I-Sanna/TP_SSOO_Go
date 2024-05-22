@@ -81,7 +81,8 @@ func RecibirProceso(w http.ResponseWriter, r *http.Request) {
 }
 
 func ProbarCPU(w http.ResponseWriter, r *http.Request) {
-	IO_GEN_SLEEP("hola", 10)
+	IO_GEN_SLEEP("Teclado", 100)
+	IO_GEN_SLEEP("Mouse", 100)
 }
 
 func SET(nombreRegistro string, valor int) {
@@ -177,8 +178,8 @@ func ObtenerRegistro32Bits(nombre string) *uint32 {
 }
 
 type BodyRequestTime struct {
-	Dispositivo string
-	CantidadIO  int
+	Dispositivo string `json:"dispositivo"`
+	CantidadIO  int    `json:"cantidad_io"`
 }
 
 func IO_GEN_SLEEP(nombre string, tiempo int) {

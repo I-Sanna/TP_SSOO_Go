@@ -357,13 +357,12 @@ func DetenerPlanificacion(w http.ResponseWriter, r *http.Request) {
 }
 
 type BodyRequestTime struct {
-	Dispositivo string
-	CantidadIO  int
+	Dispositivo string `json:"dispositivo"`
+	CantidadIO  int    `json:"cantidad_io"`
 }
 
 // pedir io a entradasalid
 func PedirIO(w http.ResponseWriter, r *http.Request) {
-
 	var request BodyRequestTime
 
 	err := json.NewDecoder(r.Body).Decode(&request)
@@ -374,17 +373,53 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	url := "http://localhost:8005/sleep/" + strconv.Itoa(request.CantidadIO)
-	resp, err := http.Get(url) // Enviando nil como el cuerpo
-	if err != nil {
-		log.Printf("error enviando: %s", err.Error())
-		return
-	}
+	go Sleep(puertosDispositivosGenericos[request.Dispositivo], request.CantidadIO)
 
 	log.Println("me llegó un Proceso")
 	log.Printf("%+v\n", request)
 
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte("ok"))
+}
+
+func Sleep(puerto int, cantidadIO int) {
+	url := "http://localhost:" + strconv.Itoa(puerto) + "/sleep/" + strconv.Itoa(cantidadIO)
+	resp, err := http.Get(url) // Enviando nil como el cuerpo
+	if err != nil {
+		log.Printf("error enviando: %s", err.Error())
+		return
+	}
+
 	log.Printf("respuesta del servidor: %s", resp.Status)
+}
+
+type BodyRequestIO struct {
+	NombreDispositivo    string `json:"nombre_dispositivo"`
+	PuertoDispositivo    int    `json:"puerto_dispositivo"`
+	CategoriaDispositivo string `json:"categoria_dispositivo"`
+}
+
+var puertosDispositivosGenericos map[string]int
+
+func RegistrarIO(w http.ResponseWriter, r *http.Request) {
+	var request BodyRequestIO
+
+	err := json.NewDecoder(r.Body).Decode(&request)
+	if err != nil {
+		log.Printf("error al decodificar mensaje: %s\n", err.Error())
+		w.WriteHeader(http.StatusBadRequest)
+		w.Write([]byte("error al decodificar mensaje"))
+		return
+	}
+
+	if puertosDispositivosGenericos == nil {
+		puertosDispositivosGenericos = make(map[string]int)
+	}
+
+	switch request.CategoriaDispositivo {
+	case "Generico":
+		puertosDispositivosGenericos[request.NombreDispositivo] = request.PuertoDispositivo
+	}
+
+	log.Printf("%+v\n", puertosDispositivosGenericos)
 }

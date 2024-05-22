@@ -2,6 +2,7 @@ package utils
 
 import (
 	"bufio"
+	"bytes"
 	"encoding/json"
 	"entradasalida/globals"
 	"io"
@@ -70,4 +71,33 @@ func IO_GEN_SLEEP(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
+}
+
+type BodyRequestIO struct {
+	NombreDispositivo    string `json:"nombre_dispositivo"`
+	PuertoDispositivo    int    `json:"puerto_dispositivo"`
+	CategoriaDispositivo string `json:"categoria_dispositivo"`
+}
+
+func EstablecerConexion(nombre string, puerto int) {
+	var datosConexion BodyRequestIO
+
+	datosConexion.NombreDispositivo = nombre
+	datosConexion.PuertoDispositivo = puerto
+	datosConexion.CategoriaDispositivo = globals.ClientConfig.Type
+
+	body, err := json.Marshal(datosConexion)
+	if err != nil {
+		log.Printf("error codificando mensajes: %s", err.Error())
+		return
+	}
+
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/nuevoIO"
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body)) // Enviando nil como el cuerpo
+	if err != nil {
+		log.Printf("error enviando: %s", err.Error())
+		return
+	}
+
+	log.Printf("respuesta del servidor: %s", resp.Status)
 }
