@@ -14,11 +14,11 @@ import (
 
 // PCB representa la estructura de control del proceso
 type PCB struct {
-	PID            int
-	ProgramCounter int
-	Quantum        int
-	Estado         ProcessState
-	RegistrosCPU   Registros
+	PID            int          `json:"pid"`
+	ProgramCounter int          `json:"program_counter"`
+	Quantum        int          `json:"quantum"`
+	Estado         ProcessState `json:"estado"`
+	RegistrosCPU   Registros    `json:"registros_cpu"`
 }
 
 type Registros struct {
@@ -48,6 +48,7 @@ const (
 var planificando bool
 var colaDeNuevos []PCB
 var colaDeListos []PCB
+var estadosProcesos map[int]string
 var recursos map[string]int
 var puertosDispGenericos map[string]int
 var puertosDispSTDIN map[string]int
@@ -99,6 +100,7 @@ func ConfigurarLogger() {
 
 func InicializarVariables() {
 	planificando = false
+	estadosProcesos = make(map[int]string)
 	recursos = make(map[string]int)
 	puertosDispGenericos = make(map[string]int)
 	puertosDispSTDIN = make(map[string]int)
@@ -111,10 +113,6 @@ func InicializarVariables() {
 	for i := 0; i < len(globals.ClientConfig.Resources); i++ {
 		recursos[globals.ClientConfig.Resources[i]] = globals.ClientConfig.Resource_instances[i]
 	}
-}
-
-type Kernel struct {
-	Procesos []*PCB
 }
 
 func planificarFIFO() {
@@ -176,12 +174,31 @@ func IniciarProceso(w http.ResponseWriter, r *http.Request) {
 }
 
 func ProbarKernel(w http.ResponseWriter, r *http.Request) {
-	var pcbPrueba PCB
-	pcbPrueba.PID = 14
-	pcbPrueba.ProgramCounter = 0
-	pcbPrueba.Quantum = 100
-	pcbPrueba.Estado = Ready
-	EnviarProcesoACPU(&pcbPrueba)
+	var pcb1 PCB
+	pcb1.PID = 1
+	pcb1.ProgramCounter = 0
+	pcb1.Quantum = 100
+	pcb1.Estado = New
+	var pcb2 PCB
+	pcb2.PID = 2
+	pcb2.ProgramCounter = 0
+	pcb2.Quantum = 100
+	pcb2.Estado = Ready
+	var pcb3 PCB
+	pcb3.PID = 3
+	pcb3.ProgramCounter = 0
+	pcb3.Quantum = 100
+	pcb3.Estado = Exec
+	estadosProcesos[pcb1.PID] = string(pcb1.Estado)
+	estadosProcesos[pcb2.PID] = string(pcb2.Estado)
+	estadosProcesos[pcb3.PID] = string(pcb3.Estado)
+	log.Printf("Llego el proceso modificado")
+	log.Printf("%+v\n", estadosProcesos)
+}
+
+type BodyReqExec struct {
+	Pcb     PCB    `json:"pcb"`
+	Mensaje string `json:"mensaje"`
 }
 
 func EnviarProcesoACPU(pcb *PCB) {
@@ -204,25 +221,36 @@ func EnviarProcesoACPU(pcb *PCB) {
 		return
 	}
 
-	err = json.NewDecoder(resp.Body).Decode(&pcb)
+	var resultadoCPU BodyReqExec
+
+	err = json.NewDecoder(resp.Body).Decode(&resultadoCPU)
 	if err != nil {
 		log.Printf("error al decodificar mensaje: %s\n", err.Error())
 		return
 	}
 
+	*pcb = resultadoCPU.Pcb
+
 	log.Printf("Llego el proceso modificado")
 	log.Printf("%+v\n", pcb)
+	log.Printf(resultadoCPU.Mensaje)
 }
 
-// A desarrolar
 func EstadoProceso(w http.ResponseWriter, r *http.Request) {
 	pid := r.PathValue("pid")
-	log.Println(pid)
 
-	var response BodyRequest
-	response.Path = "EXIT"
+	pidInt, err := strconv.Atoi(pid)
+	if err != nil {
+		http.Error(w, "Error al convertir de string a Int", 0)
+		return
+	}
 
-	respuesta, err := json.Marshal(response.Path)
+	valor, ok := estadosProcesos[pidInt]
+	if !ok {
+		valor = "El PID ingresado no existe"
+	}
+
+	respuesta, err := json.Marshal(valor)
 	if err != nil {
 		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
 		return

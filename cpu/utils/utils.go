@@ -12,11 +12,11 @@ import (
 )
 
 type PCB struct {
-	PID            int
-	ProgramCounter int
-	Quantum        int
-	Estado         ProcessState
-	RegistrosCPU   Registros
+	PID            int          `json:"pid"`
+	ProgramCounter int          `json:"program_counter"`
+	Quantum        int          `json:"quantum"`
+	Estado         ProcessState `json:"estado"`
+	RegistrosCPU   Registros    `json:"registros_cpu"`
 }
 
 type Registros struct {
@@ -60,6 +60,11 @@ func IniciarConfiguracion(filePath string) *globals.Config {
 	return config
 }
 
+type BodyReqExec struct {
+	Pcb     PCB    `json:"pcb"`
+	Mensaje string `json:"mensaje"`
+}
+
 func RecibirProceso(w http.ResponseWriter, r *http.Request) {
 	var paquete PCB
 
@@ -74,7 +79,13 @@ func RecibirProceso(w http.ResponseWriter, r *http.Request) {
 	log.Println("me llegó un Proceso")
 	log.Printf("%+v\n", paquete)
 
-	respuesta, err := json.Marshal(procesoActual)
+	//Ejecutar las instrucciones
+
+	var resultadoExec BodyReqExec
+	resultadoExec.Pcb = procesoActual
+	resultadoExec.Mensaje = "finalizo" //Mensaje que devolveria una funcion EjecutarInstruccion()
+
+	respuesta, err := json.Marshal(resultadoExec)
 	if err != nil {
 		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
 		return
