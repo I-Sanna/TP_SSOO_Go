@@ -50,6 +50,8 @@ const (
 var planificadorCortoPlazo sync.Mutex
 var agregarProceso sync.Mutex
 var eliminarProceso sync.Mutex
+var dispositivoGenerico sync.Mutex
+var puertosGenericos sync.Mutex
 var semProcesosListos = make(chan int)
 
 // Variables
@@ -61,10 +63,15 @@ var recursos map[string]int
 var puertosDispGenericos map[string]int
 var puertosDispSTDIN map[string]int
 var puertosDispSTDOUT map[string]int
-var listaEsperaRecursos map[string][]PCB
-var listaEsperaGenericos map[string][]PCB
-var listaEsperaSTDIN map[string][]PCB
-var listaEsperaSTDOUT map[string][]PCB
+var listaEsperaRecursos map[string][]int
+var listaEsperaGenericos map[string][]BodyIO
+var listaEsperaSTDIN map[string][]int
+var listaEsperaSTDOUT map[string][]int
+
+type BodyIO struct {
+	PID        int
+	CantidadIO int
+}
 
 type BodyRequest struct {
 	Path string `json:"path"`
@@ -109,10 +116,10 @@ func InicializarVariables() {
 	puertosDispGenericos = make(map[string]int)
 	puertosDispSTDIN = make(map[string]int)
 	puertosDispSTDOUT = make(map[string]int)
-	listaEsperaRecursos = make(map[string][]PCB)
-	listaEsperaGenericos = make(map[string][]PCB)
-	listaEsperaSTDIN = make(map[string][]PCB)
-	listaEsperaSTDOUT = make(map[string][]PCB)
+	listaEsperaRecursos = make(map[string][]int)
+	listaEsperaGenericos = make(map[string][]BodyIO)
+	listaEsperaSTDIN = make(map[string][]int)
+	listaEsperaSTDOUT = make(map[string][]int)
 
 	for i := 0; i < len(globals.ClientConfig.Resources); i++ {
 		recursos[globals.ClientConfig.Resources[i]] = globals.ClientConfig.Resource_instances[i]
@@ -277,6 +284,7 @@ func EstadoProceso(w http.ResponseWriter, r *http.Request) {
 	w.Write(respuesta)
 }
 
+// A desarrollar
 func FinalizarProceso(w http.ResponseWriter, r *http.Request) {
 	eliminarProceso.Lock()
 	pid := r.PathValue("pid")
@@ -347,6 +355,8 @@ func DetenerPlanificacion(w http.ResponseWriter, r *http.Request) {
 type BodyRequestTime struct {
 	Dispositivo string `json:"dispositivo"`
 	CantidadIO  int    `json:"cantidad_io"`
+	PID         int    `json:"pid"`
+	Instruccion string `json:"instruccion"`
 }
 
 // pedir io a entradasalid
@@ -356,35 +366,67 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 	err := json.NewDecoder(r.Body).Decode(&request)
 	if err != nil {
 		log.Printf("error al decodificar mensaje: %s\n", err.Error())
-		w.WriteHeader(http.StatusBadRequest)
-		w.Write([]byte("error al decodificar mensaje"))
 		return
 	}
 
-	go Sleep(puertosDispGenericos[request.Dispositivo], request.CantidadIO)
+	switch request.Instruccion {
+	case "SLEEP":
+		var datosIO BodyIO
+		datosIO.PID = request.PID
+		datosIO.CantidadIO = request.CantidadIO
+		dispositivoGenerico.Lock() //Habria que hacer un semaforo por dispostivo
+		puerto, ok := puertosDispGenericos[request.Dispositivo]
+		if ok {
+			listaEsperaGenericos[request.Dispositivo] = append(listaEsperaGenericos[request.Dispositivo], datosIO)
+			if len(listaEsperaGenericos[request.Dispositivo]) == 1 {
+				go Sleep(request.Dispositivo, puerto)
+			}
+		} else {
+			estadosProcesos[request.PID] = "EXIT" //Agreggar logica para eliminarlo
+		}
+		log.Printf("%+v\n", listaEsperaGenericos[request.Dispositivo])
+		dispositivoGenerico.Unlock()
+	}
 
 	log.Println("me llegó un Proceso")
 	log.Printf("%+v\n", request)
 
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte("ok"))
 }
 
-func Sleep(puerto int, cantidadIO int) {
-	url := "http://localhost:" + strconv.Itoa(puerto) + "/sleep/" + strconv.Itoa(cantidadIO)
-	resp, err := http.Get(url) // Enviando nil como el cuerpo
-	if err != nil {
-		log.Printf("error enviando: %s", err.Error())
-		return
-	}
+func Sleep(nombreDispositivo string, puerto int) {
+	dispositivoGenerico.Lock()
+	for len(listaEsperaGenericos[nombreDispositivo]) > 0 {
+		proceso := listaEsperaGenericos[nombreDispositivo][0]
+		dispositivoGenerico.Unlock()
+		url := "http://localhost:" + strconv.Itoa(puerto) + "/sleep/" + strconv.Itoa(proceso.CantidadIO)
 
-	log.Printf("respuesta del servidor: %s", resp.Status)
+		resp, err := http.Get(url)
+		if err != nil {
+			log.Printf("error enviando: %s", err.Error())
+			dispositivoGenerico.Lock()
+			for _, elemento := range listaEsperaGenericos[nombreDispositivo] {
+				estadosProcesos[elemento.PID] = "EXIT"
+				log.Printf("%+v\n", estadosProcesos[elemento.PID])
+			}
+			delete(listaEsperaGenericos, nombreDispositivo)
+			delete(puertosDispGenericos, nombreDispositivo)
+			dispositivoGenerico.Unlock()
+			return
+		}
+
+		if resp.StatusCode != http.StatusOK {
+			log.Printf("error en la respuesta de la consulta: %s", resp.Status)
+			return
+		}
+		log.Printf("respuesta del servidor: %s", resp.Status)
+	}
 }
 
 type BodyRequestIO struct {
-	NombreDispositivo    string `json:"nombre_dispositivo"`
-	PuertoDispositivo    int    `json:"puerto_dispositivo"`
-	CategoriaDispositivo string `json:"categoria_dispositivo"`
+	Nombre    string `json:"nombre_dispositivo"`
+	Puerto    int    `json:"puerto_dispositivo"`
+	Categoria string `json:"categoria_dispositivo"`
 }
 
 func RegistrarIO(w http.ResponseWriter, r *http.Request) {
@@ -393,18 +435,12 @@ func RegistrarIO(w http.ResponseWriter, r *http.Request) {
 	err := json.NewDecoder(r.Body).Decode(&request)
 	if err != nil {
 		log.Printf("error al decodificar mensaje: %s\n", err.Error())
-		w.WriteHeader(http.StatusBadRequest)
-		w.Write([]byte("error al decodificar mensaje"))
 		return
 	}
 
-	if puertosDispGenericos == nil {
-		puertosDispGenericos = make(map[string]int)
-	}
-
-	switch request.CategoriaDispositivo {
+	switch request.Categoria {
 	case "Generico":
-		puertosDispGenericos[request.NombreDispositivo] = request.PuertoDispositivo
+		puertosDispGenericos[request.Nombre] = request.Puerto
 	}
 
 	log.Printf("%+v\n", puertosDispGenericos)
