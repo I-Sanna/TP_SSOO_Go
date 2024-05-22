@@ -45,13 +45,17 @@ const (
 	Exit  ProcessState = "EXIT"
 )
 
-// Recurso representa un recurso del sistema
-type Recurso struct {
-	Nombre     string
-	Instancias int
-}
-
-//var recursos = make(map[string]*Recurso)
+var planificando bool
+var colaDeNuevos []PCB
+var colaDeListos []PCB
+var recursos map[string]int
+var puertosDispGenericos map[string]int
+var puertosDispSTDIN map[string]int
+var puertosDispSTDOUT map[string]int
+var listaEsperaRecursos map[string][]PCB
+var listaEsperaGenericos map[string][]PCB
+var listaEsperaSTDIN map[string][]PCB
+var listaEsperaSTDOUT map[string][]PCB
 
 type BodyRequest struct {
 	Path string `json:"path"`
@@ -93,51 +97,54 @@ func ConfigurarLogger() {
 	log.SetOutput(mw)
 }
 
+func InicializarVariables() {
+	planificando = false
+	recursos = make(map[string]int)
+	puertosDispGenericos = make(map[string]int)
+	puertosDispSTDIN = make(map[string]int)
+	puertosDispSTDOUT = make(map[string]int)
+	listaEsperaRecursos = make(map[string][]PCB)
+	listaEsperaGenericos = make(map[string][]PCB)
+	listaEsperaSTDIN = make(map[string][]PCB)
+	listaEsperaSTDOUT = make(map[string][]PCB)
+
+	for i := 0; i < len(globals.ClientConfig.Resources); i++ {
+		recursos[globals.ClientConfig.Resources[i]] = globals.ClientConfig.Resource_instances[i]
+	}
+}
+
 type Kernel struct {
 	Procesos []*PCB
 }
 
-func (k *Kernel) planificarFIFO() *PCB {
-	//log.Print("\nSe planifica por FIFO\n")
+func planificarFIFO() {
+	//Semaforo para que espre hasta que haya procesos en la cola de listos
+	for len(colaDeListos) > 0 && planificando {
+		// Selecciona el primer proceso en la lista de procesos
+		proceso := colaDeListos[0]
 
-	if len(k.Procesos) == 0 {
-		return nil
+		// Remueve el proceso de la lista de procesos
+		colaDeListos = colaDeListos[1:]
+		// Cambia el estado del proceso a EXEC
+		proceso.Estado = Exec
+		// Enviarlo a ejecutar a la CPU
 	}
-	// Selecciona el primer proceso en la lista de procesos
-	proceso := k.Procesos[0]
-	if proceso.Estado != Ready {
-		return proceso
-	}
-	// Remueve el proceso de la lista de procesos
-	k.Procesos = append(k.Procesos[1:], proceso)
-	// Cambia el estado del proceso a EXEC
-	proceso.Estado = Exec
-	return proceso
 }
 
 // Función para planificar un proceso usando Round Robin (RR)
-func (k *Kernel) planificarRR() *PCB {
-	//log.Print("\nSe planifica por Round Robin\n")
-	if len(k.Procesos) == 0 {
-		return nil
-	}
-	// Selecciona el primer proceso en la lista de procesos
-	proceso := k.Procesos[0]
-	if proceso.Estado != Ready {
-		return proceso
-	}
-	// Remueve el proceso de la lista de procesos
-	k.Procesos = append(k.Procesos[1:], proceso)
-	// Cambia el estado del proceso a EXEC
-	proceso.Estado = Exec
-	return proceso
-}
+func planificarRR() {
+	//Semaforo para que espre hasta que haya procesos en la cola de listos
+	for len(colaDeListos) > 0 && planificando {
 
-var k *Kernel
+		// Selecciona el primer proceso en la lista de procesos
+		proceso := colaDeListos[0]
 
-func init() {
-	k = &Kernel{
-		Procesos: make([]*PCB, 0),
+		// Remueve el proceso de la lista de procesos
+		colaDeListos = colaDeListos[1:]
+		// Cambia el estado del proceso a EXEC
+		proceso.Estado = Exec
+		// Enviarlo a ejecutar a la CPU
+		time.Sleep(time.Duration(globals.ClientConfig.Quantum) * time.Millisecond)
 	}
 }
 
@@ -146,15 +153,15 @@ func IniciarProceso(w http.ResponseWriter, r *http.Request) {
 
 	//for i := 0; i < 10; i++ {
 
-	nuevoProceso := &PCB{
-		PID:            len(k.Procesos) + 1,
+	nuevoProceso := PCB{
+		PID:            len(colaDeListos) + 1,
 		ProgramCounter: 0,
 		Quantum:        100, // Valor por defecto
 		Estado:         New,
 		RegistrosCPU:   Registros{},
 	}
 
-	k.Procesos = append(k.Procesos, nuevoProceso)
+	colaDeListos = append(colaDeListos, nuevoProceso)
 
 	var response = BodyRequestPid{PID: nuevoProceso.PID}
 
@@ -166,97 +173,49 @@ func IniciarProceso(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
-	//}
 }
 
-var quantumOk = false
-
-func iniciarQuantum() {
-	quantumOk = true
-	tiempo := globals.ClientConfig.Quantum
-	log.Print("\n\nSe inicio el quantum\n\n")
-	time.Sleep(time.Duration(tiempo) * time.Millisecond)
-	log.Print("\n\nFin de quantum\n\n")
-	quantumOk = false
-
-}
-
-func PlanificadoCortoPlazo(w http.ResponseWriter, r *http.Request) {
-
-	var request BodyRequest
-	var response BodyRequestPid
-	log.Print(globals.ClientConfig.PlanningAlgorithm)
-	switch globals.ClientConfig.PlanningAlgorithm {
-	case "FIFO":
-		for i := 0; i < len(k.Procesos); i++ {
-			procesoPlanificado := k.planificarFIFO()
-			log.Printf("\nk=%d Planifico por FIFO switch case 2\n", len(k.Procesos)-i)
-			if procesoPlanificado.Estado == Exec {
-				EnviarProcesoACPU(procesoPlanificado)
-			}
-		}
-	case "RR":
-		for i := 0; i < len(k.Procesos); i++ {
-			if !quantumOk {
-				go iniciarQuantum()
-			}
-			procesoPlanificado := k.planificarRR()
-			log.Printf("\nk=%d Planifico por RR switch case 2\n", len(k.Procesos)-i)
-			if procesoPlanificado.Estado == Exec {
-				EnviarProcesoACPU(procesoPlanificado)
-			}
-		}
-	default:
-		http.Error(w, "Algoritmo de planificación no soportado", http.StatusInternalServerError)
-		return
-	}
-
-	err := json.NewDecoder(r.Body).Decode(&request)
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusBadRequest)
-		return
-	}
-
-	respuesta, err := json.Marshal(response.PID)
-	if err != nil {
-		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
-		return
-	}
-
-	w.WriteHeader(http.StatusOK)
-	w.Write(respuesta)
+func ProbarKernel(w http.ResponseWriter, r *http.Request) {
+	var pcbPrueba PCB
+	pcbPrueba.PID = 14
+	pcbPrueba.ProgramCounter = 0
+	pcbPrueba.Quantum = 100
+	pcbPrueba.Estado = Ready
+	EnviarProcesoACPU(&pcbPrueba)
 }
 
 func EnviarProcesoACPU(pcb *PCB) {
+
 	body, err := json.Marshal(pcb)
 	if err != nil {
 		log.Printf("error codificando mensajes: %s", err.Error())
 		return
 	}
 
-	url := "http://localhost:8006/PCB"
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortCPU) + "/PCB"
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
 		log.Printf("error enviando PCB: %s", err.Error())
 		return
 	}
 
-	log.Printf("respuesta del servidor: %s", resp.Status)
-}
-
-func EstadoProceso(w http.ResponseWriter, r *http.Request) {
-	/*pid := obtenerPID(r)
-	proceso, ok := procesos[pid]
-	if !ok {
-		http.Error(w, "Proceso no encontrado", http.StatusNotFound)
+	if resp.StatusCode != http.StatusOK {
+		log.Printf("error en la respuesta de la consulta: %s", resp.Status)
 		return
 	}
-	resp := struct {
-		State string `json:"state"`
-	}{
-		State: string(proceso.Estado),
+
+	err = json.NewDecoder(resp.Body).Decode(&pcb)
+	if err != nil {
+		log.Printf("error al decodificar mensaje: %s\n", err.Error())
+		return
 	}
-	json.NewEncoder(w).Encode(resp)*/
+
+	log.Printf("Llego el proceso modificado")
+	log.Printf("%+v\n", pcb)
+}
+
+// A desarrolar
+func EstadoProceso(w http.ResponseWriter, r *http.Request) {
 	pid := r.PathValue("pid")
 	log.Println(pid)
 
@@ -273,14 +232,8 @@ func EstadoProceso(w http.ResponseWriter, r *http.Request) {
 	w.Write(respuesta)
 }
 
-// finalizarProceso finaliza un proceso
+// A desarrollar
 func FinalizarProceso(w http.ResponseWriter, r *http.Request) {
-	//pid := obtenerPID(r)
-
-	//delete(procesos, pid)
-
-	//fmt.Printf("Finaliza el proceso %d - Motivo: SUCCESS\n", pid)
-
 	respuesta, err := json.Marshal("Se solicito finalizar un proceso")
 	if err != nil {
 		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
@@ -291,41 +244,12 @@ func FinalizarProceso(w http.ResponseWriter, r *http.Request) {
 	w.Write(respuesta)
 }
 
-// listarProcesos lista todos los procesos
+// A desarrollar
 func ListarProcesos(w http.ResponseWriter, r *http.Request) {
-	/*var lista []map[string]interface{}
-	for pid, proceso := range procesos {
-		lista = append(lista, map[string]interface{}{
-			"pid":   pid,
-			"state": proceso.Estado,
-		})
-	}
 
-	json.NewEncoder(w).Encode(lista)*/
-
-	var proceso1 BodyResponsePCB
-	proceso1.PID = 1
-	proceso1.State = "Ready"
-
-	var proceso2 BodyResponsePCB
-	proceso2.PID = 2
-	proceso2.State = "EXIT"
-
-	var procesos BodyResponsePCBArray
-	procesos.Processes = append(procesos.Processes, proceso1)
-	procesos.Processes = append(procesos.Processes, proceso2)
-
-	respuesta, err := json.Marshal(k.Procesos)
-	if err != nil {
-		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
-		return
-	}
-
-	w.WriteHeader(http.StatusOK)
-	w.Write(respuesta)
 }
 
-// iniciarPlanificacion inicia la planificación de procesos
+// A desarrollar
 func IniciarPlanificacion(w http.ResponseWriter, r *http.Request) {
 
 	respuesta, err := json.Marshal("Se solicito iniciar planificación")
@@ -333,17 +257,17 @@ func IniciarPlanificacion(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
 		return
 	}
-	for i := 0; i < len(k.Procesos); i++ {
-		proceso := k.Procesos[0]
+	for i := 0; i < len(colaDeListos); i++ {
+		proceso := colaDeListos[0]
 		proceso.Estado = Ready
-		k.Procesos = append(k.Procesos[1:], proceso)
+		colaDeListos = append(colaDeListos[1:], proceso)
 	}
 
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
 }
 
-// detenerPlanificacion detiene la planificación de procesos
+// A desarrollar
 func DetenerPlanificacion(w http.ResponseWriter, r *http.Request) {
 
 	respuesta, err := json.Marshal("Se solicito detener planificación")
@@ -373,7 +297,7 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	go Sleep(puertosDispositivosGenericos[request.Dispositivo], request.CantidadIO)
+	go Sleep(puertosDispGenericos[request.Dispositivo], request.CantidadIO)
 
 	log.Println("me llegó un Proceso")
 	log.Printf("%+v\n", request)
@@ -399,8 +323,6 @@ type BodyRequestIO struct {
 	CategoriaDispositivo string `json:"categoria_dispositivo"`
 }
 
-var puertosDispositivosGenericos map[string]int
-
 func RegistrarIO(w http.ResponseWriter, r *http.Request) {
 	var request BodyRequestIO
 
@@ -412,14 +334,14 @@ func RegistrarIO(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if puertosDispositivosGenericos == nil {
-		puertosDispositivosGenericos = make(map[string]int)
+	if puertosDispGenericos == nil {
+		puertosDispGenericos = make(map[string]int)
 	}
 
 	switch request.CategoriaDispositivo {
 	case "Generico":
-		puertosDispositivosGenericos[request.NombreDispositivo] = request.PuertoDispositivo
+		puertosDispGenericos[request.NombreDispositivo] = request.PuertoDispositivo
 	}
 
-	log.Printf("%+v\n", puertosDispositivosGenericos)
+	log.Printf("%+v\n", puertosDispGenericos)
 }

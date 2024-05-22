@@ -66,8 +66,6 @@ func RecibirProceso(w http.ResponseWriter, r *http.Request) {
 	err := json.NewDecoder(r.Body).Decode(&paquete)
 	if err != nil {
 		log.Printf("error al decodificar mensaje: %s\n", err.Error())
-		w.WriteHeader(http.StatusBadRequest)
-		w.Write([]byte("error al decodificar mensaje"))
 		return
 	}
 
@@ -76,8 +74,14 @@ func RecibirProceso(w http.ResponseWriter, r *http.Request) {
 	log.Println("me llegó un Proceso")
 	log.Printf("%+v\n", paquete)
 
+	respuesta, err := json.Marshal(procesoActual)
+	if err != nil {
+		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
+		return
+	}
+
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte("ok"))
+	w.Write(respuesta)
 }
 
 func ProbarCPU(w http.ResponseWriter, r *http.Request) {
