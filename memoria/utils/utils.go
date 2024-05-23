@@ -17,7 +17,7 @@ var memoria []byte
 
 var tablaPaginas map[int]int
 
-var instrucciones []string
+var instruccionesProcesos [][]string
 
 type BodyRequest struct {
 	Path string `json:"path"`
@@ -59,7 +59,7 @@ func readFile(fileName string) []string {
 		log.Fatal(err)
 	}
 	data := make([]byte, 150)
-	count, err := file.Read(data)
+	_, err = file.Read(data)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -69,8 +69,6 @@ func readFile(fileName string) []string {
 	//	fmt.Println(value)
 	//}
 	//fmt.Printf("read %d bytes: %q\n", count, data[:count])
-	log.Printf("%+v\n", count)
-	log.Printf("%+v\n", instrucciones[0])
 	return instrucciones
 }
 
@@ -113,30 +111,38 @@ func CrearProceso(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	instrucciones = readFile(request.Path)
+	instrucciones := readFile(request.Path)
+	instruccionesProcesos = append(instruccionesProcesos, instrucciones)
 
+	log.Printf("%+v\n", instruccionesProcesos)
 	w.WriteHeader(http.StatusOK)
 }
 
 func DevolverInstruccion(w http.ResponseWriter, r *http.Request) {
+	pid := r.PathValue("pid")
 	pc := r.PathValue("pc")
 	log.Println(pc)
-	log.Println(instrucciones)
-	indice, err := strconv.Atoi(pc)
+	log.Println(pid)
+	indice, err := strconv.Atoi(pid)
 	if err != nil {
-		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
+		http.Error(w, "Error al convertir de json a Int", http.StatusInternalServerError)
+		return
+	}
+	subindice, err := strconv.Atoi(pc)
+	if err != nil {
+		http.Error(w, "Error al convertir de json a Int", http.StatusInternalServerError)
 		return
 	}
 	log.Println(indice)
-	log.Println(instrucciones[indice])
-	respuesta, err := json.Marshal(instrucciones[indice])
+	log.Println(subindice)
+	log.Println(instruccionesProcesos[indice][subindice])
+	respuesta, err := json.Marshal(instruccionesProcesos[indice][subindice])
 	if err != nil {
 		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
 		return
 	}
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
-
 }
 
 func EnviarPresudo(w http.ResponseWriter, r *http.Request) {

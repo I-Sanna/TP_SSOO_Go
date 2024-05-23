@@ -65,6 +65,8 @@ type BodyReqExec struct {
 	Mensaje string `json:"mensaje"`
 }
 
+var resultadoEjecucion BodyReqExec
+
 func RecibirProceso(w http.ResponseWriter, r *http.Request) {
 	var paquete PCB
 
@@ -81,11 +83,10 @@ func RecibirProceso(w http.ResponseWriter, r *http.Request) {
 
 	//Ejecutar las instrucciones
 
-	var resultadoExec BodyReqExec
-	resultadoExec.Pcb = procesoActual
-	resultadoExec.Mensaje = "finalizo" //Mensaje que devolveria una funcion EjecutarInstruccion()
+	resultadoEjecucion.Pcb = procesoActual
+	resultadoEjecucion.Mensaje = "finalizo" //Mensaje que devolveria una funcion EjecutarInstruccion()
 
-	respuesta, err := json.Marshal(resultadoExec)
+	respuesta, err := json.Marshal(resultadoEjecucion)
 	if err != nil {
 		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
 		return
@@ -219,6 +220,11 @@ func IO_GEN_SLEEP(pid int, nombre string, tiempo int) {
 	if err != nil {
 		log.Printf("error enviando: %s", err.Error())
 		return
+	}
+
+	if resp.StatusCode != http.StatusOK {
+		procesoActual.Estado = "EXIT"
+		resultadoEjecucion.Mensaje = "INVALID_IO"
 	}
 
 	log.Printf("respuesta del servidor: %s", resp.Status)

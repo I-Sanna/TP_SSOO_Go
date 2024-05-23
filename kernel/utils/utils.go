@@ -150,9 +150,19 @@ func planificarFIFO() {
 	// Cambia el estado del proceso a EXEC
 	proceso.Estado = Exec
 	// Enviarlo a ejecutar a la CPU
+	//mensaje := EnviarProcesoACPU(&proceso)
+
+	planificadorCortoPlazo.Unlock()
+	planificadorCortoPlazo.Lock() //Estos semaforos es por si se ejecuto "detenerPlanificacion"
+
 	mutexColaListos.Lock()
 	colaDeListos = colaDeListos[1:]
-	//Agregar el proceso modificado por la CPU
+	//Agregar el proceso modificado por la CPU si corresponde
+	if estadosProcesos[proceso.PID] == "EXIT" {
+		delete(estadosProcesos, proceso.PID)
+	} else {
+		colaDeListos = append(colaDeListos, proceso)
+	}
 	mutexColaListos.Unlock()
 	planificadorCortoPlazo.Unlock()
 }
@@ -237,6 +247,7 @@ func IniciarProceso(w http.ResponseWriter, r *http.Request) {
 		if (len(colaDeListos) + len(colaDeWaiting)) < globals.ClientConfig.Multiprogramming {
 			nuevoProceso.Estado = Ready
 			colaDeListos = append(colaDeListos, nuevoProceso)
+			<-semProcesosListos
 			mutexColaWaiting.Unlock()
 			mutexColaListos.Unlock()
 		} else {
@@ -293,24 +304,24 @@ type BodyReqExec struct {
 	Mensaje string `json:"mensaje"`
 }
 
-func EnviarProcesoACPU(pcb *PCB) {
+func EnviarProcesoACPU(pcb *PCB) string {
 
 	body, err := json.Marshal(pcb)
 	if err != nil {
 		log.Printf("error codificando mensajes: %s", err.Error())
-		return
+		return "error"
 	}
 
 	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortCPU) + "/PCB"
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
 		log.Printf("error enviando PCB: %s", err.Error())
-		return
+		return "error"
 	}
 
 	if resp.StatusCode != http.StatusOK {
 		log.Printf("error en la respuesta de la consulta: %s", resp.Status)
-		return
+		return "error"
 	}
 
 	var resultadoCPU BodyReqExec
@@ -318,14 +329,20 @@ func EnviarProcesoACPU(pcb *PCB) {
 	err = json.NewDecoder(resp.Body).Decode(&resultadoCPU)
 	if err != nil {
 		log.Printf("error al decodificar mensaje: %s\n", err.Error())
-		return
+		return "error"
 	}
 
 	*pcb = resultadoCPU.Pcb
 
 	log.Printf("Llego el proceso modificado")
-	log.Printf("%+v\n", pcb)
+	log.Printf("%+v\n", resultadoCPU.Pcb)
 	log.Printf(resultadoCPU.Mensaje)
+
+	return resultadoCPU.Mensaje
+}
+
+func ManejarInterrupcion(interrupcion string) {
+
 }
 
 func EstadoProceso(w http.ResponseWriter, r *http.Request) {
@@ -448,7 +465,9 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 				go Sleep(request.Dispositivo, puerto)
 			}
 		} else {
-			estadosProcesos[request.PID] = "EXIT" //Agreggar logica para eliminarlo
+			w.WriteHeader(http.StatusBadRequest)
+			dispositivoGenerico.Unlock()
+			return
 		}
 		log.Printf("%+v\n", listaEsperaGenericos[request.Dispositivo])
 		dispositivoGenerico.Unlock()
