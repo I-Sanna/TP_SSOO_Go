@@ -115,7 +115,7 @@ func ConfigurarLogger() {
 func InicializarVariables() {
 	contadorPID = 0
 	planificando = true
-	semProcesosListos = make(chan int)
+	semProcesosListos = make(chan int, globals.ClientConfig.Multiprogramming)
 	estadosProcesos = make(map[int]string)
 	recursos = make(map[string]int)
 	puertosDispGenericos = make(map[string]int)
@@ -142,31 +142,33 @@ func InicializarPlanificador() {
 }
 
 func planificarFIFO() {
-	semProcesosListos <- 0
-	planificadorCortoPlazo.Lock()
-	// Selecciona el primer proceso en la lista de procesos
-	proceso := colaDeListos[0]
-
-	// Cambia el estado del proceso a EXEC
-	proceso.Estado = Exec
-	// Enviarlo a ejecutar a la CPU
-	mensaje := EnviarProcesoACPU(&proceso)
-	log.Print(mensaje)
-	planificadorCortoPlazo.Unlock()
-	planificadorCortoPlazo.Lock() //Estos semaforos es por si se ejecuto "detenerPlanificacion"
-	log.Print(proceso.Estado)
-	mutexColaListos.Lock()
-	colaDeListos = colaDeListos[1:]
-	//Agregar el proceso modificado por la CPU si corresponde
-	if proceso.Estado == "EXIT" {
-		delete(estadosProcesos, proceso.PID)
-		log.Printf("Finalizo el proceso")
-	} else {
-		colaDeListos = append(colaDeListos, proceso)
+	for {
 		<-semProcesosListos
+		planificadorCortoPlazo.Lock()
+		// Selecciona el primer proceso en la lista de procesos
+		proceso := colaDeListos[0]
+
+		// Cambia el estado del proceso a EXEC
+		proceso.Estado = Exec
+		// Enviarlo a ejecutar a la CPU
+		mensaje := EnviarProcesoACPU(&proceso)
+		log.Print(mensaje)
+		planificadorCortoPlazo.Unlock()
+		planificadorCortoPlazo.Lock() //Estos semaforos es por si se ejecuto "detenerPlanificacion"
+		log.Print(proceso.Estado)
+		mutexColaListos.Lock()
+		colaDeListos = colaDeListos[1:]
+		//Agregar el proceso modificado por la CPU si corresponde
+		if proceso.Estado == "EXIT" {
+			delete(estadosProcesos, proceso.PID)
+			log.Printf("Finalizo el proceso")
+		} else {
+			colaDeListos = append(colaDeListos, proceso)
+			semProcesosListos <- 0
+		}
+		mutexColaListos.Unlock()
+		planificadorCortoPlazo.Unlock()
 	}
-	mutexColaListos.Unlock()
-	planificadorCortoPlazo.Unlock()
 }
 
 // Función para planificar un proceso usando Round Robin (RR)
@@ -256,7 +258,9 @@ func IniciarProceso(w http.ResponseWriter, r *http.Request) {
 		if (len(colaDeListos) + len(colaDeWaiting)) < globals.ClientConfig.Multiprogramming {
 			nuevoProceso.Estado = Ready
 			colaDeListos = append(colaDeListos, nuevoProceso)
-			<-semProcesosListos
+			print("Antes de habilitar un recurso")
+			semProcesosListos <- 0
+			print("Despues de habilitar un recurso")
 			mutexColaWaiting.Unlock()
 			log.Printf("\nDesbloquear cola waiting")
 			mutexColaListos.Unlock()
