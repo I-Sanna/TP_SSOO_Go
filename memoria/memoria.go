@@ -18,7 +18,7 @@ func main() {
 
 	//mux.HandleFunc("DELETE /process", finalizarProceso)
 	mux.HandleFunc("PUT /process", utils.CrearProceso)
-	mux.HandleFunc("GET /instruction/{pid}/{pc}", utils.DevolverInstruccion)
+	mux.HandleFunc("GET /instruccion/{pid}/{pc}", utils.DevolverInstruccion)
 	mux.HandleFunc("GET /pagina/{pagina}", utils.BuscarMarco)
 	mux.HandleFunc("PUT /enviarPresudo/{pesudocodigo}", utils.EnviarPresudo)
 

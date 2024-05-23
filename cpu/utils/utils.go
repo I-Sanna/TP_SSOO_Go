@@ -4,11 +4,14 @@ import (
 	"bytes"
 	"cpu/globals"
 	"encoding/json"
+	"fmt"
+	"io"
 	"log"
 	"net/http"
 	"os"
 	"strconv"
 	"strings"
+	"time"
 )
 
 type PCB struct {
@@ -83,8 +86,13 @@ func RecibirProceso(w http.ResponseWriter, r *http.Request) {
 
 	//Ejecutar las instrucciones
 
-	resultadoEjecucion.Pcb = procesoActual
-	resultadoEjecucion.Mensaje = "finalizo" //Mensaje que devolveria una funcion EjecutarInstruccion()
+	for procesoActual.Estado != "EXIT" {
+		instruccion := SolicitarInstruccion(procesoActual.PID, procesoActual.ProgramCounter)
+		decoYExecInstru(instruccion)
+		procesoActual.ProgramCounter++
+	}
+
+	resultadoEjecucion.Mensaje = "AEEA YO SOY SABALERO AEEA SABALERO SABALERO" //Mensaje que devolveria una funcion EjecutarInstruccion()
 
 	respuesta, err := json.Marshal(resultadoEjecucion)
 	if err != nil {
@@ -228,6 +236,76 @@ func IO_GEN_SLEEP(pid int, nombre string, tiempo int) {
 	}
 
 	log.Printf("respuesta del servidor: %s", resp.Status)
+}
+
+func decoYExecInstru(instrucciones string) {
+	//"Decodificar" instruccion
+	instru := strings.Split(strings.TrimRight(instrucciones, "\x00"), " ")
+	log.Printf(instru[0])
+	time.Sleep(time.Duration(5000) * time.Millisecond)
+	//Ejecutar instruccion
+	switch instru[0] {
+	case "SET":
+		valor, err := strconv.Atoi(instru[2])
+		if err != nil {
+			log.Printf("error enviando: %s", err.Error())
+			return
+		}
+		SET(instru[1], valor)
+	case "SUM":
+		SUM(instru[1], instru[2])
+	case "SUB":
+		SUB(instru[1], instru[2])
+	case "JNZ":
+		valor, err := strconv.Atoi(instru[2])
+		if err != nil {
+			log.Printf("error enviando: %s", err.Error())
+			return
+		}
+		JNZ(instru[1], valor)
+	case "EXIT":
+		procesoActual.Estado = "EXIT"
+	case "IO_GEN_SLEEP":
+		valor, err := strconv.Atoi(instru[2])
+		if err != nil {
+			log.Printf("error enviando: %s", err.Error())
+			return
+		}
+		IO_GEN_SLEEP(procesoActual.PID, instru[1], valor)
+	}
+}
+
+func SolicitarInstruccion(pid int, pc int) string {
+
+	url := fmt.Sprintf("http://localhost:%d/instruccion/%d/%d", globals.ClientConfig.PortMemory, pid, pc)
+
+	resp, err := http.Get(url)
+	if err != nil {
+		log.Printf("Error al enviar la solicitud: %s", err.Error())
+		return ""
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		log.Printf("Error en la respuesta del servidor: %s", resp.Status)
+		return ""
+	}
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		log.Printf("Error al leer la respuesta: %s", err.Error())
+		return ""
+	}
+
+	var instruccion string
+
+	err = json.Unmarshal(body, &instruccion)
+	if err != nil {
+		log.Printf("Error al decodificar la respuesta JSON: %s", err.Error())
+		return ""
+	}
+
+	return instruccion
 }
 
 func LeerPseudo(w http.ResponseWriter, r *http.Request) {

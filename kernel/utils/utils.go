@@ -150,18 +150,20 @@ func planificarFIFO() {
 	// Cambia el estado del proceso a EXEC
 	proceso.Estado = Exec
 	// Enviarlo a ejecutar a la CPU
-	//mensaje := EnviarProcesoACPU(&proceso)
-
+	mensaje := EnviarProcesoACPU(&proceso)
+	log.Print(mensaje)
 	planificadorCortoPlazo.Unlock()
 	planificadorCortoPlazo.Lock() //Estos semaforos es por si se ejecuto "detenerPlanificacion"
-
+	log.Print(proceso.Estado)
 	mutexColaListos.Lock()
 	colaDeListos = colaDeListos[1:]
 	//Agregar el proceso modificado por la CPU si corresponde
-	if estadosProcesos[proceso.PID] == "EXIT" {
+	if proceso.Estado == "EXIT" {
 		delete(estadosProcesos, proceso.PID)
+		log.Printf("Finalizo el proceso")
 	} else {
 		colaDeListos = append(colaDeListos, proceso)
+		<-semProcesosListos
 	}
 	mutexColaListos.Unlock()
 	planificadorCortoPlazo.Unlock()
@@ -189,7 +191,9 @@ func planificarRR() {
 
 // iniciarProceso inicia un nuevo proceso
 func IniciarProceso(w http.ResponseWriter, r *http.Request) {
+	log.Printf("\nEntre a inicio")
 	planificadorLargoPlazo.Lock()
+	log.Printf("\nEntre a proceso")
 
 	var request BodyRequest
 
@@ -233,30 +237,41 @@ func IniciarProceso(w http.ResponseWriter, r *http.Request) {
 	}
 
 	contadorPID++
-
+	log.Printf("\nAntes de entrar a la cola de nuevos")
 	mutexColaNuevos.Lock()
+	log.Printf("\nEntre a la cola de nuevo")
 	if len(colaDeNuevos) > 0 {
 		colaDeNuevos = append(colaDeNuevos, nuevoProceso)
 		mutexColaNuevos.Unlock()
+		log.Printf("\nDesbloquear cola nuevos")
 	} else {
 		mutexColaNuevos.Unlock()
+		log.Printf("\nDesbloquear cola nuevos")
 
 		mutexColaListos.Lock()
+		log.Printf("\nbloquear cola listos")
 		mutexColaWaiting.Lock()
+		log.Printf("\nbloquear cola waiting")
 
 		if (len(colaDeListos) + len(colaDeWaiting)) < globals.ClientConfig.Multiprogramming {
 			nuevoProceso.Estado = Ready
 			colaDeListos = append(colaDeListos, nuevoProceso)
 			<-semProcesosListos
 			mutexColaWaiting.Unlock()
+			log.Printf("\nDesbloquear cola waiting")
 			mutexColaListos.Unlock()
+			log.Printf("\nDesbloquear cola listos")
 		} else {
 			mutexColaWaiting.Unlock()
+			log.Printf("\nDesbloquear cola waiting")
 			mutexColaListos.Unlock()
+			log.Printf("\nDesbloquear cola listos")
 
 			mutexColaNuevos.Lock()
+			log.Printf("\nbloquear cola nuevos")
 			colaDeNuevos = append(colaDeNuevos, nuevoProceso)
 			mutexColaNuevos.Unlock()
+			log.Printf("\nDesbloquear cola nuevos")
 		}
 	}
 	log.Printf("%+v\n", colaDeNuevos)
@@ -271,9 +286,10 @@ func IniciarProceso(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	planificadorLargoPlazo.Unlock()
+	log.Printf("\nDesbloquear plani larggo plazo")
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
-	planificadorLargoPlazo.Unlock()
 }
 
 func ProbarKernel(w http.ResponseWriter, r *http.Request) {
@@ -393,9 +409,9 @@ func FinalizarProceso(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	planificadorLargoPlazo.Unlock()
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
-	planificadorLargoPlazo.Unlock()
 }
 
 func ListarProcesos(w http.ResponseWriter, r *http.Request) {
@@ -504,8 +520,14 @@ func Sleep(nombreDispositivo string, puerto int) {
 			log.Printf("error en la respuesta de la consulta: %s", resp.Status)
 			return
 		}
+		dispositivoGenerico.Lock()
+		listaEsperaGenericos[nombreDispositivo] = listaEsperaGenericos[nombreDispositivo][1:]
+		dispositivoGenerico.Unlock()
+
 		log.Printf("respuesta del servidor: %s", resp.Status)
+		dispositivoGenerico.Lock()
 	}
+	dispositivoGenerico.Unlock()
 }
 
 type BodyRequestIO struct {
