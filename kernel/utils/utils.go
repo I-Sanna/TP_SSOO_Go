@@ -48,16 +48,19 @@ const (
 
 // Semaforos
 var planificadorCortoPlazo sync.Mutex
-var agregarProceso sync.Mutex
-var eliminarProceso sync.Mutex
+var planificadorLargoPlazo sync.Mutex
 var dispositivoGenerico sync.Mutex
-var puertosGenericos sync.Mutex
-var semProcesosListos = make(chan int)
+var mutexColaListos sync.Mutex
+var mutexColaWaiting sync.Mutex
+var mutexColaNuevos sync.Mutex
+var semProcesosListos chan int
 
 // Variables
+var contadorPID int
 var planificando bool
 var colaDeNuevos []PCB
 var colaDeListos []PCB
+var colaDeWaiting []PCB
 var estadosProcesos map[int]string
 var recursos map[string]int
 var puertosDispGenericos map[string]int
@@ -110,7 +113,9 @@ func ConfigurarLogger() {
 }
 
 func InicializarVariables() {
+	contadorPID = 0
 	planificando = true
+	semProcesosListos = make(chan int)
 	estadosProcesos = make(map[int]string)
 	recursos = make(map[string]int)
 	puertosDispGenericos = make(map[string]int)
@@ -124,6 +129,7 @@ func InicializarVariables() {
 	for i := 0; i < len(globals.ClientConfig.Resources); i++ {
 		recursos[globals.ClientConfig.Resources[i]] = globals.ClientConfig.Resource_instances[i]
 	}
+
 }
 
 func InicializarPlanificador() {
@@ -136,53 +142,115 @@ func InicializarPlanificador() {
 }
 
 func planificarFIFO() {
-	planificadorCortoPlazo.Lock()
 	semProcesosListos <- 0
+	planificadorCortoPlazo.Lock()
 	// Selecciona el primer proceso en la lista de procesos
 	proceso := colaDeListos[0]
 
-	// Remueve el proceso de la lista de procesos
-	colaDeListos = colaDeListos[1:]
 	// Cambia el estado del proceso a EXEC
 	proceso.Estado = Exec
 	// Enviarlo a ejecutar a la CPU
+	mutexColaListos.Lock()
+	colaDeListos = colaDeListos[1:]
+	//Agregar el proceso modificado por la CPU
+	mutexColaListos.Unlock()
 	planificadorCortoPlazo.Unlock()
 }
 
 // Función para planificar un proceso usando Round Robin (RR)
 func planificarRR() {
-	planificadorCortoPlazo.Lock()
 	semProcesosListos <- 0
-	for len(colaDeListos) > 0 && planificando {
+	planificadorCortoPlazo.Lock()
+	// Selecciona el primer proceso en la lista de procesos
+	proceso := colaDeListos[0]
 
-		// Selecciona el primer proceso en la lista de procesos
-		proceso := colaDeListos[0]
+	// Cambia el estado del proceso a EXEC
+	proceso.Estado = Exec
+	// Enviarlo a ejecutar a la CPU
+	time.Sleep(time.Duration(globals.ClientConfig.Quantum) * time.Millisecond)
 
-		// Remueve el proceso de la lista de procesos
-		colaDeListos = colaDeListos[1:]
-		// Cambia el estado del proceso a EXEC
-		proceso.Estado = Exec
-		// Enviarlo a ejecutar a la CPU
-		time.Sleep(time.Duration(globals.ClientConfig.Quantum) * time.Millisecond)
-
-		//wait(planificadorCortoPlazo) -> Manejar Interrupcion -> Signal
-		planificadorCortoPlazo.Unlock()
-	}
+	//wait(planificadorCortoPlazo) -> Manejar Interrupcion -> Signal
+	mutexColaListos.Lock()
+	colaDeListos = colaDeListos[1:]
+	//Agregar el proceso modificado por la CPU
+	mutexColaListos.Unlock()
+	planificadorCortoPlazo.Unlock()
 }
 
 // iniciarProceso inicia un nuevo proceso
 func IniciarProceso(w http.ResponseWriter, r *http.Request) {
-	agregarProceso.Lock()
+	planificadorLargoPlazo.Lock()
+
+	var request BodyRequest
+
+	err := json.NewDecoder(r.Body).Decode(&request)
+	if err != nil {
+		log.Printf("error al decodificar mensaje: %s\n", err.Error())
+		return
+	}
+	//Quizas se podria omitir este proceso de decodificar y luego codificar de nuevo
+	body, err := json.Marshal(request)
+	if err != nil {
+		log.Printf("error codificando mensajes: %s", err.Error())
+		return
+	}
+
+	cliente := &http.Client{}
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/process"
+	req, err := http.NewRequest("PUT", url, bytes.NewBuffer(body))
+	if err != nil {
+		return
+	}
+
+	req.Header.Set("Content-Type", "application/json")
+	resp, err := cliente.Do(req)
+	if err != nil {
+		log.Printf("error enviando el Path: %s", err.Error())
+		return
+	}
+
+	if resp.StatusCode != http.StatusOK {
+		log.Printf("error en la respuesta de la consulta: %s", resp.Status)
+		return
+	}
 
 	nuevoProceso := PCB{
-		PID:            len(colaDeListos) + 1,
+		PID:            contadorPID,
 		ProgramCounter: 0,
-		Quantum:        100, // Valor por defecto
+		Quantum:        globals.ClientConfig.Quantum, // Valor por defecto
 		Estado:         New,
 		RegistrosCPU:   Registros{},
 	}
 
-	colaDeListos = append(colaDeListos, nuevoProceso)
+	contadorPID++
+
+	mutexColaNuevos.Lock()
+	if len(colaDeNuevos) > 0 {
+		colaDeNuevos = append(colaDeNuevos, nuevoProceso)
+		mutexColaNuevos.Unlock()
+	} else {
+		mutexColaNuevos.Unlock()
+
+		mutexColaListos.Lock()
+		mutexColaWaiting.Lock()
+
+		if (len(colaDeListos) + len(colaDeWaiting)) < globals.ClientConfig.Multiprogramming {
+			nuevoProceso.Estado = Ready
+			colaDeListos = append(colaDeListos, nuevoProceso)
+			mutexColaWaiting.Unlock()
+			mutexColaListos.Unlock()
+		} else {
+			mutexColaWaiting.Unlock()
+			mutexColaListos.Unlock()
+
+			mutexColaNuevos.Lock()
+			colaDeNuevos = append(colaDeNuevos, nuevoProceso)
+			mutexColaNuevos.Unlock()
+		}
+	}
+	log.Printf("%+v\n", colaDeNuevos)
+	log.Printf("%+v\n", colaDeListos)
+	log.Printf("%+v\n", colaDeWaiting)
 
 	var response = BodyRequestPid{PID: nuevoProceso.PID}
 
@@ -194,7 +262,7 @@ func IniciarProceso(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
-	agregarProceso.Unlock()
+	planificadorLargoPlazo.Unlock()
 }
 
 func ProbarKernel(w http.ResponseWriter, r *http.Request) {
@@ -286,7 +354,7 @@ func EstadoProceso(w http.ResponseWriter, r *http.Request) {
 
 // A desarrollar
 func FinalizarProceso(w http.ResponseWriter, r *http.Request) {
-	eliminarProceso.Lock()
+	planificadorLargoPlazo.Lock()
 	pid := r.PathValue("pid")
 
 	pidInt, err := strconv.Atoi(pid)
@@ -310,7 +378,7 @@ func FinalizarProceso(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
-	eliminarProceso.Unlock()
+	planificadorLargoPlazo.Unlock()
 }
 
 func ListarProcesos(w http.ResponseWriter, r *http.Request) {
@@ -336,8 +404,7 @@ func ListarProcesos(w http.ResponseWriter, r *http.Request) {
 func IniciarPlanificacion(w http.ResponseWriter, r *http.Request) {
 	if !planificando {
 		planificadorCortoPlazo.Unlock()
-		agregarProceso.Unlock()
-		eliminarProceso.Unlock()
+		planificadorLargoPlazo.Unlock()
 		planificando = true
 	}
 }
@@ -346,8 +413,7 @@ func IniciarPlanificacion(w http.ResponseWriter, r *http.Request) {
 func DetenerPlanificacion(w http.ResponseWriter, r *http.Request) {
 	if planificando {
 		planificadorCortoPlazo.Lock()
-		agregarProceso.Lock()
-		eliminarProceso.Lock()
+		planificadorLargoPlazo.Lock()
 		planificando = false
 	}
 }

@@ -3,7 +3,6 @@ package utils
 import (
 	"bytes"
 	"encoding/json"
-	"fmt"
 	"io"
 	"io/ioutil"
 	"log"
@@ -69,7 +68,9 @@ func readFile(fileName string) []string {
 	//for _, value := range instrucciones {
 	//	fmt.Println(value)
 	//}
-	fmt.Printf("read %d bytes: %q\n", count, data[:count])
+	//fmt.Printf("read %d bytes: %q\n", count, data[:count])
+	log.Printf("%+v\n", count)
+	log.Printf("%+v\n", instrucciones[0])
 	return instrucciones
 }
 
@@ -111,16 +112,10 @@ func CrearProceso(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
+
 	instrucciones = readFile(request.Path)
-	respuesta, err := json.Marshal(instrucciones)
-	if err != nil {
-		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
-		return
-	}
 
 	w.WriteHeader(http.StatusOK)
-	w.Write(respuesta)
-	log.Print("se creo proceso exitosamente")
 }
 
 func DevolverInstruccion(w http.ResponseWriter, r *http.Request) {
