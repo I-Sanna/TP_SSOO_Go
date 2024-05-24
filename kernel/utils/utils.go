@@ -154,25 +154,51 @@ func planificarFIFO() {
 		planificadorCortoPlazo.Unlock()
 	}
 }
+func quantum() {
+	time.Sleep(time.Duration(globals.ClientConfig.Quantum) * time.Millisecond)
+	log.Print("\n FIN DE QUANTUM\n")
+}
 
 // Función para planificar un proceso usando Round Robin (RR)
 func planificarRR() {
-	semProcesosListos <- 0
-	planificadorCortoPlazo.Lock()
-	// Selecciona el primer proceso en la lista de procesos
-	proceso := colaDeListos[0]
+	for {
+		<-semProcesosListos
 
-	// Cambia el estado del proceso a EXEC
-	cambiarEstado(string(proceso.Estado), "EXEC", &proceso)
-	// Enviarlo a ejecutar a la CPU
-	time.Sleep(time.Duration(globals.ClientConfig.Quantum) * time.Millisecond)
+		planificadorCortoPlazo.Lock()
 
-	//wait(planificadorCortoPlazo) -> Manejar Interrupcion -> Signal
-	mutexColaListos.Lock()
-	colaDeListos = colaDeListos[1:]
-	//Agregar el proceso modificado por la CPU
-	mutexColaListos.Unlock()
-	planificadorCortoPlazo.Unlock()
+		if len(colaDeListos) == 0 {
+			planificadorCortoPlazo.Unlock()
+			continue
+		}
+		// Selecciona el primer proceso en la lista de procesos
+		mutexColaListos.Lock()
+		proceso := colaDeListos[0]
+		//colaDeListos = colaDeListos[1:] // Elimina el proceso de la cola de listos
+		mutexColaListos.Unlock()
+
+		// Cambia el estado del proceso a EXEC
+		cambiarEstado(proceso.Estado, "EXEC", &proceso)
+
+		// Enviar el proceso a la CPU para su ejecución
+		mensaje := EnviarProcesoACPU(&proceso)
+		if mensaje != "error" {
+			log.Printf("Proceso %d ejecutando con mensaje: %s", proceso.PID, mensaje)
+		} else {
+			log.Printf("Error ejecutando el proceso %d", proceso.PID)
+		}
+
+		// Simula la ejecución durante el quantum
+		time.Sleep(time.Duration(globals.ClientConfig.Quantum) * time.Millisecond)
+		semProcesosListos <- 0 // Se señaliza que el proceso ha terminado su quantum
+		if proceso.Estado != "EXIT" {
+			log.Printf("\nfin de quantum\n")
+		}
+
+		// Manejar la interrupción y la actualización de la cola de listos
+		ManejarInterrupcion(mensaje, proceso)
+
+		planificadorCortoPlazo.Unlock()
+	}
 }
 
 // iniciarProceso inicia un nuevo proceso
@@ -342,7 +368,11 @@ func ManejarInterrupcion(interrupcion string, proceso PCB) {
 	case "EXIT":
 		mutexColaListos.Unlock()
 		delete(estadosProcesos, proceso.PID)
-		log.Printf("Finaliza el proceso %d - Motivo: %v", proceso.PID, motivo[1])
+		mensaje := ""
+		if len(motivo) > 1 {
+			mensaje = motivo[1]
+		}
+		log.Printf("Finaliza el proceso %d - Motivo: %v", proceso.PID, mensaje)
 		agregarProcesosALaColaListos()
 	case "EXEC":
 		cambiarEstado(string(proceso.Estado), "READY", &proceso)
@@ -350,12 +380,14 @@ func ManejarInterrupcion(interrupcion string, proceso PCB) {
 		mutexColaListos.Unlock()
 		semProcesosListos <- 0
 	case "BLOCKED":
-		mutexColaListos.Unlock()
 		cambiarEstado(string(proceso.Estado), "BLOCKED", &proceso)
-		mutexColaBlocked.Lock()
 		colaDeBlocked = append(colaDeBlocked, proceso)
-		mutexColaBlocked.Unlock()
-		log.Printf("PID: %d - Bloqueado por: %v", proceso.PID, motivo[1])
+		mutexColaListos.Unlock()
+		mensaje := ""
+		if len(motivo) > 1 {
+			mensaje = motivo[1]
+		}
+		log.Printf("PID: %d - Bloqueado por: %v", proceso.PID, mensaje)
 		semProcesoBloqueado <- 0
 	}
 }
