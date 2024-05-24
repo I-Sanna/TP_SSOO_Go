@@ -26,7 +26,6 @@ func main() {
 	mux.HandleFunc("POST /io", utils.PedirIO)
 	mux.HandleFunc("POST /nuevoIO", utils.RegistrarIO)
 
-	mux.HandleFunc("GET /probar", utils.ProbarKernel)
 	print(globals.ClientConfig.PortKernel)
 
 	err := http.ListenAndServe(":"+strconv.Itoa(globals.ClientConfig.PortKernel), mux)

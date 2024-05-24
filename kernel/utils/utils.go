@@ -9,17 +9,18 @@ import (
 	"net/http"
 	"os"
 	"strconv"
+	"strings"
 	"sync"
 	"time"
 )
 
 // PCB representa la estructura de control del proceso
 type PCB struct {
-	PID            int          `json:"pid"`
-	ProgramCounter int          `json:"program_counter"`
-	Quantum        int          `json:"quantum"`
-	Estado         ProcessState `json:"estado"`
-	RegistrosCPU   Registros    `json:"registros_cpu"`
+	PID            int       `json:"pid"`
+	ProgramCounter int       `json:"program_counter"`
+	Quantum        int       `json:"quantum"`
+	Estado         string    `json:"estado"`
+	RegistrosCPU   Registros `json:"registros_cpu"`
 }
 
 type Registros struct {
@@ -36,31 +37,22 @@ type Registros struct {
 	DI  uint32 // Contiene la dirección lógica de memoria de destino a donde se va a copiar un string
 }
 
-type ProcessState string
-
-const (
-	New   ProcessState = "NEW"
-	Ready ProcessState = "READY"
-	Exec  ProcessState = "EXEC"
-	Block ProcessState = "BLOCK"
-	Exit  ProcessState = "EXIT"
-)
-
 // Semaforos
 var planificadorCortoPlazo sync.Mutex
 var planificadorLargoPlazo sync.Mutex
 var dispositivoGenerico sync.Mutex
 var mutexColaListos sync.Mutex
-var mutexColaWaiting sync.Mutex
+var mutexColaBlocked sync.Mutex
 var mutexColaNuevos sync.Mutex
 var semProcesosListos chan int
+var semProcesoBloqueado chan int
 
 // Variables
 var contadorPID int
 var planificando bool
 var colaDeNuevos []PCB
 var colaDeListos []PCB
-var colaDeWaiting []PCB
+var colaDeBlocked []PCB
 var estadosProcesos map[int]string
 var recursos map[string]int
 var puertosDispGenericos map[string]int
@@ -115,6 +107,7 @@ func ConfigurarLogger() {
 func InicializarVariables() {
 	contadorPID = 0
 	planificando = true
+	semProcesoBloqueado = make(chan int, 1)
 	semProcesosListos = make(chan int, globals.ClientConfig.Multiprogramming)
 	estadosProcesos = make(map[int]string)
 	recursos = make(map[string]int)
@@ -149,24 +142,15 @@ func planificarFIFO() {
 		proceso := colaDeListos[0]
 
 		// Cambia el estado del proceso a EXEC
-		proceso.Estado = Exec
+		cambiarEstado(string(proceso.Estado), "EXEC", &proceso)
 		// Enviarlo a ejecutar a la CPU
 		mensaje := EnviarProcesoACPU(&proceso)
-		log.Print(mensaje)
+
 		planificadorCortoPlazo.Unlock()
 		planificadorCortoPlazo.Lock() //Estos semaforos es por si se ejecuto "detenerPlanificacion"
-		log.Print(proceso.Estado)
-		mutexColaListos.Lock()
-		colaDeListos = colaDeListos[1:]
-		//Agregar el proceso modificado por la CPU si corresponde
-		if proceso.Estado == "EXIT" {
-			delete(estadosProcesos, proceso.PID)
-			log.Printf("Finalizo el proceso")
-		} else {
-			colaDeListos = append(colaDeListos, proceso)
-			semProcesosListos <- 0
-		}
-		mutexColaListos.Unlock()
+
+		ManejarInterrupcion(mensaje, proceso)
+
 		planificadorCortoPlazo.Unlock()
 	}
 }
@@ -179,7 +163,7 @@ func planificarRR() {
 	proceso := colaDeListos[0]
 
 	// Cambia el estado del proceso a EXEC
-	proceso.Estado = Exec
+	cambiarEstado(string(proceso.Estado), "EXEC", &proceso)
 	// Enviarlo a ejecutar a la CPU
 	time.Sleep(time.Duration(globals.ClientConfig.Quantum) * time.Millisecond)
 
@@ -193,9 +177,7 @@ func planificarRR() {
 
 // iniciarProceso inicia un nuevo proceso
 func IniciarProceso(w http.ResponseWriter, r *http.Request) {
-	log.Printf("\nEntre a inicio")
 	planificadorLargoPlazo.Lock()
-	log.Printf("\nEntre a proceso")
 
 	var request BodyRequest
 
@@ -234,53 +216,20 @@ func IniciarProceso(w http.ResponseWriter, r *http.Request) {
 		PID:            contadorPID,
 		ProgramCounter: 0,
 		Quantum:        globals.ClientConfig.Quantum, // Valor por defecto
-		Estado:         New,
+		Estado:         "NEW",
 		RegistrosCPU:   Registros{},
 	}
 
 	contadorPID++
-	log.Printf("\nAntes de entrar a la cola de nuevos")
+
+	log.Printf("Se crea el proceso %d en NEW", nuevoProceso.PID)
+
 	mutexColaNuevos.Lock()
-	log.Printf("\nEntre a la cola de nuevo")
-	if len(colaDeNuevos) > 0 {
-		colaDeNuevos = append(colaDeNuevos, nuevoProceso)
-		mutexColaNuevos.Unlock()
-		log.Printf("\nDesbloquear cola nuevos")
-	} else {
-		mutexColaNuevos.Unlock()
-		log.Printf("\nDesbloquear cola nuevos")
-
-		mutexColaListos.Lock()
-		log.Printf("\nbloquear cola listos")
-		mutexColaWaiting.Lock()
-		log.Printf("\nbloquear cola waiting")
-
-		if (len(colaDeListos) + len(colaDeWaiting)) < globals.ClientConfig.Multiprogramming {
-			nuevoProceso.Estado = Ready
-			colaDeListos = append(colaDeListos, nuevoProceso)
-			print("Antes de habilitar un recurso")
-			semProcesosListos <- 0
-			print("Despues de habilitar un recurso")
-			mutexColaWaiting.Unlock()
-			log.Printf("\nDesbloquear cola waiting")
-			mutexColaListos.Unlock()
-			log.Printf("\nDesbloquear cola listos")
-		} else {
-			mutexColaWaiting.Unlock()
-			log.Printf("\nDesbloquear cola waiting")
-			mutexColaListos.Unlock()
-			log.Printf("\nDesbloquear cola listos")
-
-			mutexColaNuevos.Lock()
-			log.Printf("\nbloquear cola nuevos")
-			colaDeNuevos = append(colaDeNuevos, nuevoProceso)
-			mutexColaNuevos.Unlock()
-			log.Printf("\nDesbloquear cola nuevos")
-		}
+	colaDeNuevos = append(colaDeNuevos, nuevoProceso)
+	mutexColaNuevos.Unlock()
+	if len(colaDeNuevos) == 1 {
+		agregarProcesosALaColaListos()
 	}
-	log.Printf("%+v\n", colaDeNuevos)
-	log.Printf("%+v\n", colaDeListos)
-	log.Printf("%+v\n", colaDeWaiting)
 
 	var response = BodyRequestPid{PID: nuevoProceso.PID}
 
@@ -291,32 +240,60 @@ func IniciarProceso(w http.ResponseWriter, r *http.Request) {
 	}
 
 	planificadorLargoPlazo.Unlock()
-	log.Printf("\nDesbloquear plani larggo plazo")
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
 }
 
-func ProbarKernel(w http.ResponseWriter, r *http.Request) {
-	var pcb1 PCB
-	pcb1.PID = 1
-	pcb1.ProgramCounter = 0
-	pcb1.Quantum = 100
-	pcb1.Estado = New
-	var pcb2 PCB
-	pcb2.PID = 2
-	pcb2.ProgramCounter = 0
-	pcb2.Quantum = 100
-	pcb2.Estado = Ready
-	var pcb3 PCB
-	pcb3.PID = 3
-	pcb3.ProgramCounter = 0
-	pcb3.Quantum = 100
-	pcb3.Estado = Exec
-	estadosProcesos[pcb1.PID] = string(pcb1.Estado)
-	estadosProcesos[pcb2.PID] = string(pcb2.Estado)
-	estadosProcesos[pcb3.PID] = string(pcb3.Estado)
-	log.Printf("Llego el proceso modificado")
-	log.Printf("%+v\n", estadosProcesos)
+func agregarProcesosALaColaListos() {
+	mutexColaListos.Lock()
+	mutexColaBlocked.Lock()
+	mutexColaNuevos.Lock()
+
+	for (len(colaDeListos)+len(colaDeBlocked)) < globals.ClientConfig.Multiprogramming && len(colaDeNuevos) > 0 {
+		proceso := colaDeNuevos[0]
+		cambiarEstado(string(proceso.Estado), "READY", &proceso)
+		colaDeListos = append(colaDeListos, proceso)
+		colaDeNuevos = colaDeNuevos[1:]
+		semProcesosListos <- 0
+	}
+
+	mutexColaNuevos.Unlock()
+	mutexColaBlocked.Unlock()
+
+	var listaPID []int
+	for _, proceso := range colaDeListos {
+		listaPID = append(listaPID, proceso.PID)
+	}
+
+	log.Printf("Cola Ready colaDeListos: %v", listaPID)
+	mutexColaListos.Unlock()
+}
+
+func rehabilitarProcesoBlocked(PID int) {
+	mutexColaListos.Lock()
+	mutexColaBlocked.Lock()
+
+	var contador int = 0
+
+	_, ok := estadosProcesos[PID]
+	if !ok {
+		return
+	}
+
+	for _, proceso := range colaDeBlocked {
+		if proceso.PID == PID {
+			cambiarEstado(proceso.Estado, "READY", &proceso)
+			colaDeBlocked = removerIndex(colaDeBlocked, contador)
+			colaDeListos = append(colaDeListos, proceso)
+			semProcesosListos <- 0
+			break
+		} else {
+			contador++
+		}
+	}
+
+	mutexColaListos.Unlock()
+	mutexColaBlocked.Unlock()
 }
 
 type BodyReqExec struct {
@@ -354,15 +331,39 @@ func EnviarProcesoACPU(pcb *PCB) string {
 
 	*pcb = resultadoCPU.Pcb
 
-	log.Printf("Llego el proceso modificado")
-	log.Printf("%+v\n", resultadoCPU.Pcb)
-	log.Printf(resultadoCPU.Mensaje)
-
 	return resultadoCPU.Mensaje
 }
 
-func ManejarInterrupcion(interrupcion string) {
+func ManejarInterrupcion(interrupcion string, proceso PCB) {
+	motivo := strings.Split(strings.TrimRight(interrupcion, "\x00"), " ")
+	mutexColaListos.Lock()
+	colaDeListos = colaDeListos[1:]
+	switch motivo[0] {
+	case "EXIT":
+		mutexColaListos.Unlock()
+		delete(estadosProcesos, proceso.PID)
+		log.Printf("Finaliza el proceso %d - Motivo: %v", proceso.PID, motivo[1])
+		agregarProcesosALaColaListos()
+	case "EXEC":
+		cambiarEstado(string(proceso.Estado), "READY", &proceso)
+		colaDeListos = append(colaDeListos, proceso)
+		mutexColaListos.Unlock()
+		semProcesosListos <- 0
+	case "BLOCKED":
+		mutexColaListos.Unlock()
+		cambiarEstado(string(proceso.Estado), "BLOCKED", &proceso)
+		mutexColaBlocked.Lock()
+		colaDeBlocked = append(colaDeBlocked, proceso)
+		mutexColaBlocked.Unlock()
+		log.Printf("PID: %d - Bloqueado por: %v", proceso.PID, motivo[1])
+		semProcesoBloqueado <- 0
+	}
+}
 
+func cambiarEstado(estadoAnterior string, estadoNuevo string, proceso *PCB) {
+	proceso.Estado = estadoNuevo
+	estadosProcesos[proceso.PID] = estadoNuevo
+	log.Printf("PID: %d - Estado Anterior: %v - Estado Actual: %v", proceso.PID, estadoAnterior, estadoNuevo)
 }
 
 func EstadoProceso(w http.ResponseWriter, r *http.Request) {
@@ -400,14 +401,16 @@ func FinalizarProceso(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	valor, ok := estadosProcesos[pidInt]
+	var mensaje string
+
+	_, ok := estadosProcesos[pidInt]
 	if !ok {
-		valor = "El PID ingresado no existe"
+		mensaje = "El PID ingresado no existe"
 	} else {
-		valor = "El proceso fue eliminado con exito"
+		mensaje = "El proceso fue eliminado con exito"
 	}
 
-	respuesta, err := json.Marshal(valor)
+	respuesta, err := json.Marshal(mensaje)
 	if err != nil {
 		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
 		return
@@ -477,26 +480,35 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 		var datosIO BodyIO
 		datosIO.PID = request.PID
 		datosIO.CantidadIO = request.CantidadIO
+
 		dispositivoGenerico.Lock() //Habria que hacer un semaforo por dispostivo
 		puerto, ok := puertosDispGenericos[request.Dispositivo]
-		if ok {
-			listaEsperaGenericos[request.Dispositivo] = append(listaEsperaGenericos[request.Dispositivo], datosIO)
-			if len(listaEsperaGenericos[request.Dispositivo]) == 1 {
-				go Sleep(request.Dispositivo, puerto)
-			}
+
+		if ok && validarConexionIO(puerto) {
+			go agregarElemAListaGenericos(request.Dispositivo, puerto, datosIO)
 		} else {
 			w.WriteHeader(http.StatusBadRequest)
 			dispositivoGenerico.Unlock()
 			return
 		}
-		log.Printf("%+v\n", listaEsperaGenericos[request.Dispositivo])
 		dispositivoGenerico.Unlock()
 	}
 
-	log.Println("me llegó un Proceso")
-	log.Printf("%+v\n", request)
-
 	w.WriteHeader(http.StatusOK)
+}
+
+func agregarElemAListaGenericos(dispositivo string, puerto int, datosIO BodyIO) {
+	<-semProcesoBloqueado
+	listaEsperaGenericos[dispositivo] = append(listaEsperaGenericos[dispositivo], datosIO)
+	if len(listaEsperaGenericos[dispositivo]) == 1 {
+		go Sleep(dispositivo, puerto)
+	}
+}
+
+func validarConexionIO(puerto int) bool {
+	url := "http://localhost:" + strconv.Itoa(puerto) + "/validar"
+	_, err := http.Get(url)
+	return err == nil
 }
 
 func Sleep(nombreDispositivo string, puerto int) {
@@ -504,19 +516,32 @@ func Sleep(nombreDispositivo string, puerto int) {
 	for len(listaEsperaGenericos[nombreDispositivo]) > 0 {
 		proceso := listaEsperaGenericos[nombreDispositivo][0]
 		dispositivoGenerico.Unlock()
+
+		_, ok := estadosProcesos[proceso.PID]
+		if !ok {
+			dispositivoGenerico.Lock()
+			listaEsperaGenericos[nombreDispositivo] = listaEsperaGenericos[nombreDispositivo][1:]
+			continue
+		}
+
 		url := "http://localhost:" + strconv.Itoa(puerto) + "/sleep/" + strconv.Itoa(proceso.CantidadIO)
 
 		resp, err := http.Get(url)
 		if err != nil {
+
 			log.Printf("error enviando: %s", err.Error())
 			dispositivoGenerico.Lock()
+
 			for _, elemento := range listaEsperaGenericos[nombreDispositivo] {
-				estadosProcesos[elemento.PID] = "EXIT"
-				log.Printf("%+v\n", estadosProcesos[elemento.PID])
+				mutexColaBlocked.Lock()
+				removerProcesoDeLista(&colaDeBlocked, elemento.PID, "LOST_CONNECTION_IO")
+				mutexColaBlocked.Unlock()
 			}
+
 			delete(listaEsperaGenericos, nombreDispositivo)
 			delete(puertosDispGenericos, nombreDispositivo)
 			dispositivoGenerico.Unlock()
+			agregarProcesosALaColaListos()
 			return
 		}
 
@@ -524,14 +549,36 @@ func Sleep(nombreDispositivo string, puerto int) {
 			log.Printf("error en la respuesta de la consulta: %s", resp.Status)
 			return
 		}
+
 		dispositivoGenerico.Lock()
 		listaEsperaGenericos[nombreDispositivo] = listaEsperaGenericos[nombreDispositivo][1:]
 		dispositivoGenerico.Unlock()
+
+		rehabilitarProcesoBlocked(proceso.PID)
 
 		log.Printf("respuesta del servidor: %s", resp.Status)
 		dispositivoGenerico.Lock()
 	}
 	dispositivoGenerico.Unlock()
+}
+
+func removerProcesoDeLista(lista *[]PCB, PID int, motivo string) {
+	var contador int = 0
+	for _, elemento := range *lista {
+		if elemento.PID == PID {
+			*lista = removerIndex(*lista, contador)
+			log.Printf("Finaliza el proceso %d - Motivo: %v", PID, motivo)
+			break
+		} else {
+			contador++
+		}
+	}
+}
+
+func removerIndex(s []PCB, index int) []PCB {
+	ret := make([]PCB, 0)
+	ret = append(ret, s[:index]...)
+	return append(ret, s[index+1:]...)
 }
 
 type BodyRequestIO struct {
@@ -553,6 +600,4 @@ func RegistrarIO(w http.ResponseWriter, r *http.Request) {
 	case "Generico":
 		puertosDispGenericos[request.Nombre] = request.Puerto
 	}
-
-	log.Printf("%+v\n", puertosDispGenericos)
 }

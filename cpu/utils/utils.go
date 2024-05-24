@@ -46,6 +46,7 @@ const (
 )
 
 var procesoActual PCB
+var interrupcion bool
 
 func IniciarConfiguracion(filePath string) *globals.Config {
 	var config *globals.Config
@@ -71,6 +72,7 @@ var resultadoEjecucion BodyReqExec
 
 func RecibirProceso(w http.ResponseWriter, r *http.Request) {
 	var paquete PCB
+	interrupcion = false
 
 	err := json.NewDecoder(r.Body).Decode(&paquete)
 	if err != nil {
@@ -85,14 +87,13 @@ func RecibirProceso(w http.ResponseWriter, r *http.Request) {
 
 	//Ejecutar las instrucciones
 
-	for procesoActual.Estado != "EXIT" {
+	for !interrupcion {
 		instruccion := SolicitarInstruccion(procesoActual.PID, procesoActual.ProgramCounter)
 		decoYExecInstru(instruccion)
 		procesoActual.ProgramCounter++
 	}
 
 	resultadoEjecucion.Pcb = procesoActual
-	resultadoEjecucion.Mensaje = "AEEA YO SOY SABALERO AEEA SABALERO SABALERO" //Mensaje que devolveria una funcion EjecutarInstruccion()
 
 	respuesta, err := json.Marshal(resultadoEjecucion)
 	if err != nil {
@@ -231,9 +232,11 @@ func IO_GEN_SLEEP(pid int, nombre string, tiempo int) {
 	}
 
 	if resp.StatusCode != http.StatusOK {
-		procesoActual.Estado = "EXIT"
-		resultadoEjecucion.Mensaje = "INVALID_IO"
+		resultadoEjecucion.Mensaje = "EXIT INVALID_IO"
+	} else {
+		resultadoEjecucion.Mensaje = "BLOCKED " + sending.Dispositivo
 	}
+	interrupcion = true
 
 	log.Printf("respuesta del servidor: %s", resp.Status)
 }
@@ -263,7 +266,8 @@ func decoYExecInstru(instrucciones string) {
 		}
 		JNZ(instru[1], valor)
 	case "EXIT":
-		procesoActual.Estado = "EXIT"
+		resultadoEjecucion.Mensaje = "EXIT SUCCESS"
+		interrupcion = true
 	case "IO_GEN_SLEEP":
 		valor, err := strconv.Atoi(instru[2])
 		if err != nil {

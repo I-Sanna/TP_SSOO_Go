@@ -29,6 +29,7 @@ func main() {
 	utils.EstablecerConexion(nombreDispositivo, globals.ClientConfig.Port)
 
 	http.HandleFunc("GET /sleep/{units}", utils.IO_GEN_SLEEP)
+	http.HandleFunc("GET /validar", utils.ValidarConexion)
 
 	log.Fatal(http.ListenAndServe(":"+strconv.Itoa(globals.ClientConfig.Port), nil))
 }

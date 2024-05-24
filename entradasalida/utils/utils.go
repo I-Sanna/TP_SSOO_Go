@@ -101,3 +101,7 @@ func EstablecerConexion(nombre string, puerto int) {
 
 	log.Printf("respuesta del servidor: %s", resp.Status)
 }
+
+func ValidarConexion(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusOK)
+}
