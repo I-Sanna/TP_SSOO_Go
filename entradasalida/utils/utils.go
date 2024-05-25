@@ -51,6 +51,7 @@ func ConfigurarLogger() {
 func IO_GEN_SLEEP(w http.ResponseWriter, r *http.Request) {
 
 	cantidad := r.PathValue("units")
+	pid := r.PathValue("pid")
 
 	cantidadInt, err := strconv.Atoi(cantidad)
 	if err != nil {
@@ -58,10 +59,16 @@ func IO_GEN_SLEEP(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	pidInt, err := strconv.Atoi(pid)
+	if err != nil {
+		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+		return
+	}
+
+	log.Printf("PID: %d - Operación: IO_GEN_SLEEP", pidInt)
+
 	var tiempoAEsperar = cantidadInt * globals.ClientConfig.UnitWorkTime
-	log.Printf("\n\n Iniciando bloqueo de io")
 	time.Sleep(time.Duration(tiempoAEsperar) * time.Millisecond)
-	log.Printf("\n\n Finalizado bloqueo de io")
 
 	respuesta, err := json.Marshal("OK")
 	if err != nil {
@@ -93,13 +100,11 @@ func EstablecerConexion(nombre string, puerto int) {
 	}
 
 	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/nuevoIO"
-	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body)) // Enviando nil como el cuerpo
+	_, err = http.Post(url, "application/json", bytes.NewBuffer(body)) // Enviando nil como el cuerpo
 	if err != nil {
 		log.Printf("error enviando: %s", err.Error())
 		return
 	}
-
-	log.Printf("respuesta del servidor: %s", resp.Status)
 }
 
 func ValidarConexion(w http.ResponseWriter, r *http.Request) {

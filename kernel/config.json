@@ -6,7 +6,7 @@
     "port_cpu": 8003,
     "port_io": 8004,
     "planning_algorithm": "RR",
-    "quantum": 1000,
+    "quantum": 3,
     "resources": ["RA","RB","RC"],
     "resource_instances": [1,2,1],
     "multiprogramming": 10

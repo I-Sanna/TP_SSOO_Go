@@ -1,0 +1,2515 @@
+2024/05/25 16:18:27 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:19:08 me llegó un Proceso
+2024/05/25 16:19:08 {PID:0 ProgramCounter:0 Quantum:10 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:19:08 {PID:0 ProgramCounter:0 Quantum:10 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:19:08 {PID:0 ProgramCounter:1 Quantum:10 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:19:08 {PID:0 ProgramCounter:2 Quantum:10 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:19:08 {PID:0 ProgramCounter:3 Quantum:10 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:19:08 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:19:08 respuesta del servidor: 200 OK
+2024/05/25 16:19:13 me llegó un Proceso
+2024/05/25 16:19:13 {PID:0 ProgramCounter:5 Quantum:10 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:19:13 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:21:52 me llegó un Proceso
+2024/05/25 16:21:52 {PID:0 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:21:52 {PID:0 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:21:52 {PID:0 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:21:52 {PID:0 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:21:52 {PID:0 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:21:52 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:24:28 me llegó un Proceso
+2024/05/25 16:24:28 {PID:0 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:24:28 {PID:0 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:24:28 {PID:0 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:24:28 {PID:0 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:24:28 {PID:0 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:24:28 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:24:28 respuesta del servidor: 200 OK
+2024/05/25 16:24:33 me llegó un Proceso
+2024/05/25 16:24:33 {PID:0 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:24:33 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:24:51 me llegó un Proceso
+2024/05/25 16:24:51 {PID:1 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:24:51 {PID:1 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:24:51 {PID:1 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:24:51 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:24:51 {PID:1 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:24:51 me llegó un Proceso
+2024/05/25 16:24:51 {PID:1 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:24:51 {PID:1 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:24:51 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:24:51 respuesta del servidor: 200 OK
+2024/05/25 16:24:56 me llegó un Proceso
+2024/05/25 16:24:56 {PID:1 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:24:56 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:25:40 me llegó un Proceso
+2024/05/25 16:25:40 {PID:2 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:40 {PID:2 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:40 {PID:2 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:40 {PID:2 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:40 {PID:2 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:40 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:25:40 respuesta del servidor: 200 OK
+2024/05/25 16:25:41 me llegó un Proceso
+2024/05/25 16:25:41 {PID:3 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:41 {PID:3 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:41 {PID:3 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:41 {PID:3 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:41 {PID:3 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:41 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:25:41 respuesta del servidor: 200 OK
+2024/05/25 16:25:42 me llegó un Proceso
+2024/05/25 16:25:42 {PID:4 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:42 {PID:4 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:42 {PID:4 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:42 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:25:42 {PID:4 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:42 me llegó un Proceso
+2024/05/25 16:25:42 {PID:4 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:42 {PID:4 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:42 respuesta del servidor: 200 OK
+2024/05/25 16:25:42 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:25:42 me llegó un Proceso
+2024/05/25 16:25:42 {PID:5 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:42 {PID:5 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:42 {PID:5 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:42 {PID:5 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:42 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:25:42 {PID:5 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:42 me llegó un Proceso
+2024/05/25 16:25:42 {PID:5 ProgramCounter:4 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:42 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:25:42 respuesta del servidor: 200 OK
+2024/05/25 16:25:43 me llegó un Proceso
+2024/05/25 16:25:43 {PID:6 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:43 {PID:6 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:43 {PID:6 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:43 {PID:6 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:43 {PID:6 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:43 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:25:43 respuesta del servidor: 200 OK
+2024/05/25 16:25:44 me llegó un Proceso
+2024/05/25 16:25:44 {PID:7 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:44 {PID:7 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:44 {PID:7 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:44 {PID:7 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:44 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:25:44 {PID:7 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:44 me llegó un Proceso
+2024/05/25 16:25:44 {PID:7 ProgramCounter:4 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:44 respuesta del servidor: 200 OK
+2024/05/25 16:25:44 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:25:44 me llegó un Proceso
+2024/05/25 16:25:44 {PID:8 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:44 {PID:8 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:44 {PID:8 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:44 {PID:8 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:44 {PID:8 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:44 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:25:44 respuesta del servidor: 200 OK
+2024/05/25 16:25:45 me llegó un Proceso
+2024/05/25 16:25:45 {PID:9 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:45 {PID:9 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:45 {PID:9 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:45 {PID:9 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:45 {PID:9 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:45 respuesta del servidor: 200 OK
+2024/05/25 16:25:45 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:25:45 me llegó un Proceso
+2024/05/25 16:25:45 {PID:10 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:45 {PID:10 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:45 {PID:10 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:45 {PID:10 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:45 {PID:10 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:45 respuesta del servidor: 200 OK
+2024/05/25 16:25:45 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:25:45 me llegó un Proceso
+2024/05/25 16:25:45 {PID:2 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:45 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:25:46 me llegó un Proceso
+2024/05/25 16:25:46 {PID:11 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:46 {PID:11 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:46 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:25:46 {PID:11 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:46 me llegó un Proceso
+2024/05/25 16:25:46 {PID:11 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:46 {PID:11 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:46 {PID:11 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:46 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:25:46 respuesta del servidor: 200 OK
+2024/05/25 16:25:46 me llegó un Proceso
+2024/05/25 16:25:46 {PID:12 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:46 {PID:12 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:46 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:25:46 {PID:12 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:46 me llegó un Proceso
+2024/05/25 16:25:46 {PID:12 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:46 {PID:12 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:46 {PID:12 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:46 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:25:46 respuesta del servidor: 200 OK
+2024/05/25 16:25:50 me llegó un Proceso
+2024/05/25 16:25:50 {PID:3 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:50 me llegó un Proceso
+2024/05/25 16:25:50 {PID:13 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:50 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:25:51 {PID:13 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:51 {PID:13 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:51 {PID:13 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:51 {PID:13 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:51 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:25:51 respuesta del servidor: 200 OK
+2024/05/25 16:25:56 me llegó un Proceso
+2024/05/25 16:25:56 {PID:4 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:56 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:25:56 me llegó un Proceso
+2024/05/25 16:25:56 {PID:14 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:56 {PID:14 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:56 {PID:14 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:56 {PID:14 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:56 {PID:14 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:25:56 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:25:56 respuesta del servidor: 200 OK
+2024/05/25 16:26:01 me llegó un Proceso
+2024/05/25 16:26:01 {PID:5 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:01 me llegó un Proceso
+2024/05/25 16:26:01 {PID:15 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:01 {PID:15 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:01 {PID:15 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:01 {PID:15 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:01 {PID:15 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:01 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:01 respuesta del servidor: 200 OK
+2024/05/25 16:26:01 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:06 me llegó un Proceso
+2024/05/25 16:26:06 {PID:6 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:06 me llegó un Proceso
+2024/05/25 16:26:06 {PID:16 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:06 {PID:16 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:06 {PID:16 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:06 {PID:16 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:06 {PID:16 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:06 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:06 respuesta del servidor: 200 OK
+2024/05/25 16:26:06 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:11 me llegó un Proceso
+2024/05/25 16:26:11 {PID:7 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:11 me llegó un Proceso
+2024/05/25 16:26:11 {PID:17 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:11 {PID:17 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:11 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:11 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:11 {PID:17 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:11 me llegó un Proceso
+2024/05/25 16:26:11 {PID:17 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:11 {PID:17 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:11 {PID:17 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:11 respuesta del servidor: 200 OK
+2024/05/25 16:26:11 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:16 me llegó un Proceso
+2024/05/25 16:26:16 {PID:8 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:16 me llegó un Proceso
+2024/05/25 16:26:16 {PID:18 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:16 {PID:18 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:16 {PID:18 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:16 {PID:18 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:16 {PID:18 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:16 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:16 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:16 respuesta del servidor: 200 OK
+2024/05/25 16:26:21 me llegó un Proceso
+2024/05/25 16:26:21 {PID:9 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:21 me llegó un Proceso
+2024/05/25 16:26:21 {PID:19 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:21 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:21 {PID:19 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:21 {PID:19 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:21 {PID:19 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:21 {PID:19 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:21 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:21 respuesta del servidor: 200 OK
+2024/05/25 16:26:26 me llegó un Proceso
+2024/05/25 16:26:26 {PID:10 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:26 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:26 me llegó un Proceso
+2024/05/25 16:26:26 {PID:20 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:26 me llegó un Proceso
+2024/05/25 16:26:26 {PID:20 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:26 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:26 {PID:20 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:26 me llegó un Proceso
+2024/05/25 16:26:26 {PID:20 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:26 {PID:20 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:26 {PID:20 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:26 {PID:20 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:26 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:26 respuesta del servidor: 200 OK
+2024/05/25 16:26:26 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:31 me llegó un Proceso
+2024/05/25 16:26:31 {PID:11 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:31 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:31 me llegó un Proceso
+2024/05/25 16:26:31 {PID:21 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:31 {PID:21 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:31 {PID:21 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:31 {PID:21 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:31 {PID:21 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:31 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:31 respuesta del servidor: 200 OK
+2024/05/25 16:26:36 me llegó un Proceso
+2024/05/25 16:26:36 {PID:12 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:36 me llegó un Proceso
+2024/05/25 16:26:36 {PID:22 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:36 {PID:22 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:36 {PID:22 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:36 {PID:22 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:36 {PID:22 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:36 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:36 respuesta del servidor: 200 OK
+2024/05/25 16:26:36 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:41 me llegó un Proceso
+2024/05/25 16:26:41 {PID:13 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:41 me llegó un Proceso
+2024/05/25 16:26:41 {PID:23 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:41 {PID:23 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:41 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:41 {PID:23 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:41 {PID:23 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:41 {PID:23 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:41 respuesta del servidor: 200 OK
+2024/05/25 16:26:41 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:46 me llegó un Proceso
+2024/05/25 16:26:46 {PID:14 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:46 me llegó un Proceso
+2024/05/25 16:26:46 {PID:24 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:46 {PID:24 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:46 {PID:24 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:46 {PID:24 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:46 {PID:24 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:46 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:46 respuesta del servidor: 200 OK
+2024/05/25 16:26:46 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:51 me llegó un Proceso
+2024/05/25 16:26:51 {PID:15 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:51 me llegó un Proceso
+2024/05/25 16:26:51 {PID:25 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:51 {PID:25 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:51 {PID:25 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:51 {PID:25 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:51 {PID:25 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:51 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:51 respuesta del servidor: 200 OK
+2024/05/25 16:26:51 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:56 me llegó un Proceso
+2024/05/25 16:26:56 {PID:16 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:56 me llegó un Proceso
+2024/05/25 16:26:56 {PID:26 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:56 {PID:26 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:56 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:56 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:26:56 {PID:26 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:56 me llegó un Proceso
+2024/05/25 16:26:56 {PID:26 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:56 {PID:26 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:56 {PID:26 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:26:56 respuesta del servidor: 200 OK
+2024/05/25 16:26:56 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:27:01 me llegó un Proceso
+2024/05/25 16:27:01 {PID:17 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:27:01 me llegó un Proceso
+2024/05/25 16:27:01 {PID:27 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:27:01 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:27:01 {PID:27 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:27:01 {PID:27 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:27:01 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:27:01 {PID:27 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:27:01 me llegó un Proceso
+2024/05/25 16:27:01 {PID:27 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:27:01 {PID:27 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:27:01 respuesta del servidor: 200 OK
+2024/05/25 16:27:01 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:27:06 me llegó un Proceso
+2024/05/25 16:27:06 {PID:18 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:27:06 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:27:11 me llegó un Proceso
+2024/05/25 16:27:11 {PID:19 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:27:11 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:27:16 me llegó un Proceso
+2024/05/25 16:27:16 {PID:20 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:27:16 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:27:21 me llegó un Proceso
+2024/05/25 16:27:21 {PID:21 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:27:21 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:27:26 me llegó un Proceso
+2024/05/25 16:27:26 {PID:22 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:27:26 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:27:31 me llegó un Proceso
+2024/05/25 16:27:31 {PID:23 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:27:31 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:27:36 me llegó un Proceso
+2024/05/25 16:27:36 {PID:24 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:27:36 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:27:41 me llegó un Proceso
+2024/05/25 16:27:41 {PID:25 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:27:41 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:27:46 me llegó un Proceso
+2024/05/25 16:27:46 {PID:26 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:27:46 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:27:51 me llegó un Proceso
+2024/05/25 16:27:51 {PID:27 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:27:51 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:28:31 me llegó un Proceso
+2024/05/25 16:28:31 {PID:28 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:28:31 {PID:28 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:28:31 {PID:28 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:28:31 {PID:28 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:28:31 {PID:28 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:28:31 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:28:31 respuesta del servidor: 200 OK
+2024/05/25 16:28:36 me llegó un Proceso
+2024/05/25 16:28:36 {PID:28 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:28:36 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:32:54 me llegó un Proceso
+2024/05/25 16:32:54 {PID:0 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:32:54 {PID:0 ProgramCounter:0 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:32:54 {PID:0 ProgramCounter:1 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:32:54 {PID:0 ProgramCounter:2 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:32:54 {PID:0 ProgramCounter:3 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:32:54 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:32:54 respuesta del servidor: 200 OK
+2024/05/25 16:32:59 me llegó un Proceso
+2024/05/25 16:32:59 {PID:0 ProgramCounter:5 Quantum:5 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:32:59 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:33:58 me llegó un Proceso
+2024/05/25 16:33:58 {PID:0 ProgramCounter:0 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:33:58 {PID:0 ProgramCounter:0 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:33:58 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:33:58 {PID:0 ProgramCounter:1 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:33:58 me llegó un Proceso
+2024/05/25 16:33:58 {PID:0 ProgramCounter:2 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:33:58 {PID:0 ProgramCounter:2 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:33:58 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:33:58 {PID:0 ProgramCounter:3 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:33:58 me llegó un Proceso
+2024/05/25 16:33:58 {PID:0 ProgramCounter:4 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:33:58 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:33:58 respuesta del servidor: 200 OK
+2024/05/25 16:33:59 me llegó un Proceso
+2024/05/25 16:33:59 {PID:1 ProgramCounter:0 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:33:59 {PID:1 ProgramCounter:0 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:33:59 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:33:59 {PID:1 ProgramCounter:1 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:33:59 me llegó un Proceso
+2024/05/25 16:33:59 {PID:1 ProgramCounter:2 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:33:59 {PID:1 ProgramCounter:2 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:33:59 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:33:59 {PID:1 ProgramCounter:3 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:33:59 me llegó un Proceso
+2024/05/25 16:33:59 {PID:1 ProgramCounter:4 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:33:59 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:33:59 respuesta del servidor: 200 OK
+2024/05/25 16:33:59 me llegó un Proceso
+2024/05/25 16:33:59 {PID:2 ProgramCounter:0 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:0 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:33:59 {PID:2 ProgramCounter:0 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:0 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:33:59 {PID:2 ProgramCounter:1 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:33:59 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:33:59 {PID:2 ProgramCounter:2 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:33:59 me llegó un Proceso
+2024/05/25 16:33:59 {PID:2 ProgramCounter:3 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:2 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:33:59 {PID:2 ProgramCounter:3 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:33:59 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:33:59 respuesta del servidor: 200 OK
+2024/05/25 16:34:03 me llegó un Proceso
+2024/05/25 16:34:03 {PID:0 ProgramCounter:5 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:34:03 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:34:08 me llegó un Proceso
+2024/05/25 16:34:08 {PID:1 ProgramCounter:5 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:34:08 AEEA YO SOY SABALERO AEEA
+2024/05/25 16:34:13 me llegó un Proceso
+2024/05/25 16:34:13 {PID:2 ProgramCounter:5 Quantum:1 Estado:EXEC RegistrosCPU:{PC:0 AX:1 BX:1 CX:0 DX:0 EAX:0 EBX:0 ECX:0 EDX:0 SI:0 DI:0}}
+2024/05/25 16:34:13 AEEA YO SOY SABALERO AEEA
+2024/05/25 17:00:35 PID: 0 - FETCH - Program Counter: 0
+2024/05/25 17:00:35 PID: 0 - Ejecutando: SET - AX,1
+2024/05/25 17:00:35 PID: 0 - FETCH - Program Counter: 1
+2024/05/25 17:00:35 PID: 0 - Ejecutando: SET - BX,1
+2024/05/25 17:00:35 PID: 0 - FETCH - Program Counter: 2
+2024/05/25 17:00:35 PID: 0 - Ejecutando: SUM - AX,BX
+2024/05/25 17:00:35 PID: 0 - FETCH - Program Counter: 3
+2024/05/25 17:00:35 PID: 0 - Ejecutando: SUB - AX,BX
+2024/05/25 17:00:35 PID: 0 - FETCH - Program Counter: 4
+2024/05/25 17:00:35 PID: 0 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:00:40 PID: 0 - FETCH - Program Counter: 5
+2024/05/25 17:00:40 http: panic serving 127.0.0.1:42172: runtime error: index out of range [1] with length 1
+goroutine 34 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6e1ec0?, 0xc000138198?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+cpu/utils.decoYExecInstru({0xc000122684?, 0x5?})
+	/home/utnso/Desktop/SO/tp-2024-1c-EPIC/cpu/utils/utils.go:247 +0x647
+cpu/utils.RecibirProceso({0x7837d0, 0xc0000a4000}, 0xc000090000)
+	/home/utnso/Desktop/SO/tp-2024-1c-EPIC/cpu/utils/utils.go:103 +0x2fe
+net/http.HandlerFunc.ServeHTTP(0xc000118d00?, {0x7837d0?, 0xc0000a4000?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x7837d0, 0xc0000a4000}, 0xc000090000)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x7827b8?}, {0x7837d0?, 0xc0000a4000?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000208000, {0x783d90, 0xc000116d50})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/05/25 17:23:27 PID: 0 - FETCH - Program Counter: 0
+2024/05/25 17:23:27 PID: 0 - Ejecutando: SET - AX,1
+2024/05/25 17:23:27 PID: 0 - FETCH - Program Counter: 1
+2024/05/25 17:23:27 PID: 0 - Ejecutando: SET - BX,1
+2024/05/25 17:23:27 PID: 0 - FETCH - Program Counter: 2
+2024/05/25 17:23:27 PID: 0 - Ejecutando: SUM - AX,BX
+2024/05/25 17:23:27 PID: 0 - FETCH - Program Counter: 3
+2024/05/25 17:23:27 PID: 0 - Ejecutando: SUB - AX,BX
+2024/05/25 17:23:27 PID: 0 - FETCH - Program Counter: 4
+2024/05/25 17:23:27 PID: 0 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:23:32 PID: 0 - FETCH - Program Counter: 5
+2024/05/25 17:23:32 PID: 0 - Ejecutando: EXIT
+2024/05/25 17:25:11 PID: 1 - FETCH - Program Counter: 0
+2024/05/25 17:25:11 PID: 1 - Ejecutando: SET - AX,1
+2024/05/25 17:25:11 PID: 1 - FETCH - Program Counter: 1
+2024/05/25 17:25:11 PID: 1 - Ejecutando: SET - BX,1
+2024/05/25 17:25:11 PID: 1 - FETCH - Program Counter: 2
+2024/05/25 17:25:11 PID: 1 - Ejecutando: SUM - AX,BX
+2024/05/25 17:25:11 PID: 1 - FETCH - Program Counter: 3
+2024/05/25 17:25:11 PID: 1 - Ejecutando: SUB - AX,BX
+2024/05/25 17:25:11 PID: 1 - FETCH - Program Counter: 4
+2024/05/25 17:25:11 PID: 1 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:25:12 PID: 2 - FETCH - Program Counter: 0
+2024/05/25 17:25:12 PID: 2 - Ejecutando: SET - AX,1
+2024/05/25 17:25:12 PID: 2 - FETCH - Program Counter: 1
+2024/05/25 17:25:12 PID: 2 - Ejecutando: SET - BX,1
+2024/05/25 17:25:12 PID: 2 - FETCH - Program Counter: 2
+2024/05/25 17:25:12 PID: 2 - Ejecutando: SUM - AX,BX
+2024/05/25 17:25:12 PID: 2 - FETCH - Program Counter: 3
+2024/05/25 17:25:12 PID: 2 - Ejecutando: SUB - AX,BX
+2024/05/25 17:25:12 PID: 2 - FETCH - Program Counter: 4
+2024/05/25 17:25:12 PID: 2 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:25:12 PID: 3 - FETCH - Program Counter: 0
+2024/05/25 17:25:12 PID: 3 - Ejecutando: SET - AX,1
+2024/05/25 17:25:12 PID: 3 - FETCH - Program Counter: 1
+2024/05/25 17:25:12 PID: 3 - Ejecutando: SET - BX,1
+2024/05/25 17:25:12 PID: 3 - FETCH - Program Counter: 2
+2024/05/25 17:25:12 PID: 3 - Ejecutando: SUM - AX,BX
+2024/05/25 17:25:12 PID: 3 - FETCH - Program Counter: 3
+2024/05/25 17:25:12 PID: 3 - Ejecutando: SUB - AX,BX
+2024/05/25 17:25:12 PID: 3 - FETCH - Program Counter: 4
+2024/05/25 17:25:12 PID: 3 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:25:13 PID: 4 - FETCH - Program Counter: 0
+2024/05/25 17:25:13 PID: 4 - Ejecutando: SET - AX,1
+2024/05/25 17:25:13 PID: 4 - FETCH - Program Counter: 1
+2024/05/25 17:25:13 PID: 4 - Ejecutando: SET - BX,1
+2024/05/25 17:25:13 PID: 4 - FETCH - Program Counter: 2
+2024/05/25 17:25:13 PID: 4 - Ejecutando: SUM - AX,BX
+2024/05/25 17:25:13 PID: 4 - FETCH - Program Counter: 3
+2024/05/25 17:25:13 PID: 4 - Ejecutando: SUB - AX,BX
+2024/05/25 17:25:13 PID: 4 - FETCH - Program Counter: 4
+2024/05/25 17:25:13 PID: 4 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:25:14 PID: 5 - FETCH - Program Counter: 0
+2024/05/25 17:25:14 PID: 5 - Ejecutando: SET - AX,1
+2024/05/25 17:25:14 PID: 5 - FETCH - Program Counter: 1
+2024/05/25 17:25:14 PID: 5 - Ejecutando: SET - BX,1
+2024/05/25 17:25:14 PID: 5 - FETCH - Program Counter: 2
+2024/05/25 17:25:14 PID: 5 - Ejecutando: SUM - AX,BX
+2024/05/25 17:25:14 PID: 5 - FETCH - Program Counter: 3
+2024/05/25 17:25:14 PID: 5 - Ejecutando: SUB - AX,BX
+2024/05/25 17:25:14 PID: 5 - FETCH - Program Counter: 4
+2024/05/25 17:25:14 PID: 5 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:25:14 PID: 6 - FETCH - Program Counter: 0
+2024/05/25 17:25:14 PID: 6 - Ejecutando: SET - AX,1
+2024/05/25 17:25:14 PID: 6 - FETCH - Program Counter: 1
+2024/05/25 17:25:14 PID: 6 - Ejecutando: SET - BX,1
+2024/05/25 17:25:14 PID: 6 - FETCH - Program Counter: 2
+2024/05/25 17:25:14 PID: 6 - Ejecutando: SUM - AX,BX
+2024/05/25 17:25:14 PID: 6 - FETCH - Program Counter: 3
+2024/05/25 17:25:14 PID: 6 - Ejecutando: SUB - AX,BX
+2024/05/25 17:25:14 PID: 6 - FETCH - Program Counter: 4
+2024/05/25 17:25:14 PID: 6 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:25:15 PID: 7 - FETCH - Program Counter: 0
+2024/05/25 17:25:15 PID: 7 - Ejecutando: SET - AX,1
+2024/05/25 17:25:15 PID: 7 - FETCH - Program Counter: 1
+2024/05/25 17:25:15 PID: 7 - Ejecutando: SET - BX,1
+2024/05/25 17:25:15 PID: 7 - FETCH - Program Counter: 2
+2024/05/25 17:25:15 PID: 7 - Ejecutando: SUM - AX,BX
+2024/05/25 17:25:15 PID: 7 - FETCH - Program Counter: 3
+2024/05/25 17:25:15 PID: 7 - Ejecutando: SUB - AX,BX
+2024/05/25 17:25:15 PID: 7 - FETCH - Program Counter: 4
+2024/05/25 17:25:15 PID: 7 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:25:15 PID: 8 - FETCH - Program Counter: 0
+2024/05/25 17:25:15 PID: 8 - Ejecutando: SET - AX,1
+2024/05/25 17:25:15 PID: 8 - FETCH - Program Counter: 1
+2024/05/25 17:25:15 PID: 8 - Ejecutando: SET - BX,1
+2024/05/25 17:25:15 PID: 8 - FETCH - Program Counter: 2
+2024/05/25 17:25:15 PID: 8 - Ejecutando: SUM - AX,BX
+2024/05/25 17:25:15 PID: 8 - FETCH - Program Counter: 3
+2024/05/25 17:25:15 PID: 8 - Ejecutando: SUB - AX,BX
+2024/05/25 17:25:15 PID: 8 - FETCH - Program Counter: 4
+2024/05/25 17:25:15 PID: 8 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:25:16 PID: 9 - FETCH - Program Counter: 0
+2024/05/25 17:25:16 PID: 9 - Ejecutando: SET - AX,1
+2024/05/25 17:25:16 PID: 9 - FETCH - Program Counter: 1
+2024/05/25 17:25:16 PID: 9 - Ejecutando: SET - BX,1
+2024/05/25 17:25:16 PID: 9 - FETCH - Program Counter: 2
+2024/05/25 17:25:16 PID: 9 - Ejecutando: SUM - AX,BX
+2024/05/25 17:25:16 PID: 9 - FETCH - Program Counter: 3
+2024/05/25 17:25:16 PID: 9 - Ejecutando: SUB - AX,BX
+2024/05/25 17:25:16 PID: 9 - FETCH - Program Counter: 4
+2024/05/25 17:25:16 PID: 9 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:25:16 PID: 1 - FETCH - Program Counter: 5
+2024/05/25 17:25:16 PID: 1 - Ejecutando: EXIT
+2024/05/25 17:25:16 PID: 10 - FETCH - Program Counter: 0
+2024/05/25 17:25:16 PID: 10 - Ejecutando: SET - AX,1
+2024/05/25 17:25:16 PID: 10 - FETCH - Program Counter: 1
+2024/05/25 17:25:16 PID: 10 - Ejecutando: SET - BX,1
+2024/05/25 17:25:16 PID: 10 - FETCH - Program Counter: 2
+2024/05/25 17:25:16 PID: 10 - Ejecutando: SUM - AX,BX
+2024/05/25 17:25:16 PID: 10 - FETCH - Program Counter: 3
+2024/05/25 17:25:16 PID: 10 - Ejecutando: SUB - AX,BX
+2024/05/25 17:25:16 PID: 10 - FETCH - Program Counter: 4
+2024/05/25 17:25:16 PID: 10 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:25:17 PID: 11 - FETCH - Program Counter: 0
+2024/05/25 17:25:17 PID: 11 - Ejecutando: SET - AX,1
+2024/05/25 17:25:17 PID: 11 - FETCH - Program Counter: 1
+2024/05/25 17:25:17 PID: 11 - Ejecutando: SET - BX,1
+2024/05/25 17:25:17 PID: 11 - FETCH - Program Counter: 2
+2024/05/25 17:25:17 PID: 11 - Ejecutando: SUM - AX,BX
+2024/05/25 17:25:17 PID: 11 - FETCH - Program Counter: 3
+2024/05/25 17:25:17 PID: 11 - Ejecutando: SUB - AX,BX
+2024/05/25 17:25:17 PID: 11 - FETCH - Program Counter: 4
+2024/05/25 17:25:17 PID: 11 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:25:21 PID: 2 - FETCH - Program Counter: 5
+2024/05/25 17:25:21 PID: 2 - Ejecutando: EXIT
+2024/05/25 17:25:21 PID: 12 - FETCH - Program Counter: 0
+2024/05/25 17:25:21 PID: 12 - Ejecutando: SET - AX,1
+2024/05/25 17:25:21 PID: 12 - FETCH - Program Counter: 1
+2024/05/25 17:25:21 PID: 12 - Ejecutando: SET - BX,1
+2024/05/25 17:25:21 PID: 12 - FETCH - Program Counter: 2
+2024/05/25 17:25:21 PID: 12 - Ejecutando: SUM - AX,BX
+2024/05/25 17:25:21 PID: 12 - FETCH - Program Counter: 3
+2024/05/25 17:25:21 PID: 12 - Ejecutando: SUB - AX,BX
+2024/05/25 17:25:21 PID: 12 - FETCH - Program Counter: 4
+2024/05/25 17:25:21 PID: 12 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:25:26 PID: 3 - FETCH - Program Counter: 5
+2024/05/25 17:25:26 PID: 3 - Ejecutando: EXIT
+2024/05/25 17:25:26 PID: 13 - FETCH - Program Counter: 0
+2024/05/25 17:25:26 PID: 13 - Ejecutando: SET - AX,1
+2024/05/25 17:25:26 PID: 13 - FETCH - Program Counter: 1
+2024/05/25 17:25:26 PID: 13 - Ejecutando: SET - BX,1
+2024/05/25 17:25:26 PID: 13 - FETCH - Program Counter: 2
+2024/05/25 17:25:26 PID: 13 - Ejecutando: SUM - AX,BX
+2024/05/25 17:25:26 PID: 13 - FETCH - Program Counter: 3
+2024/05/25 17:25:26 PID: 13 - Ejecutando: SUB - AX,BX
+2024/05/25 17:25:26 PID: 13 - FETCH - Program Counter: 4
+2024/05/25 17:25:26 PID: 13 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:25:31 PID: 4 - FETCH - Program Counter: 5
+2024/05/25 17:25:31 PID: 4 - Ejecutando: EXIT
+2024/05/25 17:25:31 PID: 14 - FETCH - Program Counter: 0
+2024/05/25 17:25:31 PID: 14 - Ejecutando: SET - AX,1
+2024/05/25 17:25:31 PID: 14 - FETCH - Program Counter: 1
+2024/05/25 17:25:31 PID: 14 - Ejecutando: SET - BX,1
+2024/05/25 17:25:31 PID: 14 - FETCH - Program Counter: 2
+2024/05/25 17:25:31 PID: 14 - Ejecutando: SUM - AX,BX
+2024/05/25 17:25:31 PID: 14 - FETCH - Program Counter: 3
+2024/05/25 17:25:31 PID: 14 - Ejecutando: SUB - AX,BX
+2024/05/25 17:25:31 PID: 14 - FETCH - Program Counter: 4
+2024/05/25 17:25:31 PID: 14 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:25:36 PID: 5 - FETCH - Program Counter: 5
+2024/05/25 17:25:36 PID: 5 - Ejecutando: EXIT
+2024/05/25 17:25:36 PID: 15 - FETCH - Program Counter: 0
+2024/05/25 17:25:36 PID: 15 - Ejecutando: SET - AX,1
+2024/05/25 17:25:36 PID: 15 - FETCH - Program Counter: 1
+2024/05/25 17:25:36 PID: 15 - Ejecutando: SET - BX,1
+2024/05/25 17:25:36 PID: 15 - FETCH - Program Counter: 2
+2024/05/25 17:25:36 PID: 15 - Ejecutando: SUM - AX,BX
+2024/05/25 17:25:36 PID: 15 - FETCH - Program Counter: 3
+2024/05/25 17:25:36 PID: 15 - Ejecutando: SUB - AX,BX
+2024/05/25 17:25:36 PID: 15 - FETCH - Program Counter: 4
+2024/05/25 17:25:36 PID: 15 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:25:41 PID: 6 - FETCH - Program Counter: 5
+2024/05/25 17:25:41 PID: 6 - Ejecutando: EXIT
+2024/05/25 17:25:41 PID: 16 - FETCH - Program Counter: 0
+2024/05/25 17:25:41 PID: 16 - Ejecutando: SET - AX,1
+2024/05/25 17:25:41 PID: 16 - FETCH - Program Counter: 1
+2024/05/25 17:25:41 PID: 16 - Ejecutando: SET - BX,1
+2024/05/25 17:25:41 PID: 16 - FETCH - Program Counter: 2
+2024/05/25 17:25:41 PID: 16 - Ejecutando: SUM - AX,BX
+2024/05/25 17:25:41 PID: 16 - FETCH - Program Counter: 3
+2024/05/25 17:25:41 PID: 16 - Ejecutando: SUB - AX,BX
+2024/05/25 17:25:41 PID: 16 - FETCH - Program Counter: 4
+2024/05/25 17:25:41 PID: 16 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:25:46 PID: 7 - FETCH - Program Counter: 5
+2024/05/25 17:25:46 PID: 7 - Ejecutando: EXIT
+2024/05/25 17:25:46 PID: 17 - FETCH - Program Counter: 0
+2024/05/25 17:25:46 PID: 17 - Ejecutando: SET - AX,1
+2024/05/25 17:25:46 PID: 17 - FETCH - Program Counter: 1
+2024/05/25 17:25:46 PID: 17 - Ejecutando: SET - BX,1
+2024/05/25 17:25:46 PID: 17 - FETCH - Program Counter: 2
+2024/05/25 17:25:46 PID: 17 - Ejecutando: SUM - AX,BX
+2024/05/25 17:25:46 PID: 17 - FETCH - Program Counter: 3
+2024/05/25 17:25:46 PID: 17 - Ejecutando: SUB - AX,BX
+2024/05/25 17:25:46 PID: 17 - FETCH - Program Counter: 4
+2024/05/25 17:25:46 PID: 17 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:25:51 PID: 8 - FETCH - Program Counter: 5
+2024/05/25 17:25:51 PID: 8 - Ejecutando: EXIT
+2024/05/25 17:25:51 PID: 18 - FETCH - Program Counter: 0
+2024/05/25 17:25:51 PID: 18 - Ejecutando: SET - AX,1
+2024/05/25 17:25:51 PID: 18 - FETCH - Program Counter: 1
+2024/05/25 17:25:51 PID: 18 - Ejecutando: SET - BX,1
+2024/05/25 17:25:51 PID: 18 - FETCH - Program Counter: 2
+2024/05/25 17:25:51 PID: 18 - Ejecutando: SUM - AX,BX
+2024/05/25 17:25:51 PID: 18 - FETCH - Program Counter: 3
+2024/05/25 17:25:51 PID: 18 - Ejecutando: SUB - AX,BX
+2024/05/25 17:25:51 PID: 18 - FETCH - Program Counter: 4
+2024/05/25 17:25:51 PID: 18 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:25:56 PID: 9 - FETCH - Program Counter: 5
+2024/05/25 17:25:56 PID: 9 - Ejecutando: EXIT
+2024/05/25 17:25:56 PID: 19 - FETCH - Program Counter: 0
+2024/05/25 17:25:56 PID: 19 - Ejecutando: SET - AX,1
+2024/05/25 17:25:56 PID: 19 - FETCH - Program Counter: 1
+2024/05/25 17:25:56 PID: 19 - Ejecutando: SET - BX,1
+2024/05/25 17:25:56 PID: 19 - FETCH - Program Counter: 2
+2024/05/25 17:25:56 PID: 19 - Ejecutando: SUM - AX,BX
+2024/05/25 17:25:56 PID: 19 - FETCH - Program Counter: 3
+2024/05/25 17:25:56 PID: 19 - Ejecutando: SUB - AX,BX
+2024/05/25 17:25:56 PID: 19 - FETCH - Program Counter: 4
+2024/05/25 17:25:56 PID: 19 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:26:01 PID: 10 - FETCH - Program Counter: 5
+2024/05/25 17:26:01 PID: 10 - Ejecutando: EXIT
+2024/05/25 17:26:01 PID: 20 - FETCH - Program Counter: 0
+2024/05/25 17:26:01 PID: 20 - Ejecutando: SET - AX,1
+2024/05/25 17:26:01 PID: 20 - FETCH - Program Counter: 1
+2024/05/25 17:26:01 PID: 20 - Ejecutando: SET - BX,1
+2024/05/25 17:26:01 PID: 20 - FETCH - Program Counter: 2
+2024/05/25 17:26:01 PID: 20 - Ejecutando: SUM - AX,BX
+2024/05/25 17:26:01 PID: 20 - FETCH - Program Counter: 3
+2024/05/25 17:26:01 PID: 20 - Ejecutando: SUB - AX,BX
+2024/05/25 17:26:01 PID: 20 - FETCH - Program Counter: 4
+2024/05/25 17:26:01 PID: 20 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:26:06 PID: 11 - FETCH - Program Counter: 5
+2024/05/25 17:26:06 PID: 11 - Ejecutando: EXIT
+2024/05/25 17:26:06 PID: 21 - FETCH - Program Counter: 0
+2024/05/25 17:26:06 PID: 21 - Ejecutando: SET - AX,1
+2024/05/25 17:26:06 PID: 21 - FETCH - Program Counter: 1
+2024/05/25 17:26:06 PID: 21 - Ejecutando: SET - BX,1
+2024/05/25 17:26:06 PID: 21 - FETCH - Program Counter: 2
+2024/05/25 17:26:06 PID: 21 - Ejecutando: SUM - AX,BX
+2024/05/25 17:26:06 PID: 21 - FETCH - Program Counter: 3
+2024/05/25 17:26:06 PID: 21 - Ejecutando: SUB - AX,BX
+2024/05/25 17:26:06 PID: 21 - FETCH - Program Counter: 4
+2024/05/25 17:26:06 PID: 21 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:26:11 PID: 12 - FETCH - Program Counter: 5
+2024/05/25 17:26:11 PID: 12 - Ejecutando: EXIT
+2024/05/25 17:26:11 PID: 22 - FETCH - Program Counter: 0
+2024/05/25 17:26:11 PID: 22 - Ejecutando: SET - AX,1
+2024/05/25 17:26:11 PID: 22 - FETCH - Program Counter: 1
+2024/05/25 17:26:11 PID: 22 - Ejecutando: SET - BX,1
+2024/05/25 17:26:11 PID: 22 - FETCH - Program Counter: 2
+2024/05/25 17:26:11 PID: 22 - Ejecutando: SUM - AX,BX
+2024/05/25 17:26:11 PID: 22 - FETCH - Program Counter: 3
+2024/05/25 17:26:11 PID: 22 - Ejecutando: SUB - AX,BX
+2024/05/25 17:26:11 PID: 22 - FETCH - Program Counter: 4
+2024/05/25 17:26:11 PID: 22 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:30:45 PID: 0 - FETCH - Program Counter: 0
+2024/05/25 17:30:45 PID: 0 - Ejecutando: SET - AX,1
+2024/05/25 17:30:45 PID: 0 - FETCH - Program Counter: 1
+2024/05/25 17:30:45 PID: 0 - Ejecutando: SET - BX,1
+2024/05/25 17:30:45 PID: 0 - FETCH - Program Counter: 2
+2024/05/25 17:30:45 PID: 0 - Ejecutando: SUM - AX,BX
+2024/05/25 17:30:45 PID: 0 - FETCH - Program Counter: 3
+2024/05/25 17:30:45 PID: 0 - Ejecutando: SUB - AX,BX
+2024/05/25 17:30:45 PID: 0 - FETCH - Program Counter: 4
+2024/05/25 17:30:45 PID: 0 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:30:50 PID: 0 - FETCH - Program Counter: 5
+2024/05/25 17:30:50 PID: 0 - Ejecutando: EXIT
+2024/05/25 17:30:54 PID: 1 - FETCH - Program Counter: 0
+2024/05/25 17:30:54 PID: 1 - Ejecutando: SET - AX,1
+2024/05/25 17:30:54 PID: 1 - FETCH - Program Counter: 1
+2024/05/25 17:30:54 PID: 1 - Ejecutando: SET - BX,1
+2024/05/25 17:30:54 PID: 1 - FETCH - Program Counter: 2
+2024/05/25 17:30:54 PID: 1 - Ejecutando: SUM - AX,BX
+2024/05/25 17:30:54 PID: 1 - FETCH - Program Counter: 3
+2024/05/25 17:30:54 PID: 1 - Ejecutando: SUB - AX,BX
+2024/05/25 17:30:54 PID: 1 - FETCH - Program Counter: 4
+2024/05/25 17:30:54 PID: 1 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:30:55 PID: 2 - FETCH - Program Counter: 0
+2024/05/25 17:30:55 PID: 2 - Ejecutando: SET - AX,1
+2024/05/25 17:30:55 PID: 2 - FETCH - Program Counter: 1
+2024/05/25 17:30:55 PID: 2 - Ejecutando: SET - BX,1
+2024/05/25 17:30:55 PID: 2 - FETCH - Program Counter: 2
+2024/05/25 17:30:55 PID: 2 - Ejecutando: SUM - AX,BX
+2024/05/25 17:30:55 PID: 2 - FETCH - Program Counter: 3
+2024/05/25 17:30:55 PID: 2 - Ejecutando: SUB - AX,BX
+2024/05/25 17:30:55 PID: 2 - FETCH - Program Counter: 4
+2024/05/25 17:30:55 PID: 2 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:30:55 PID: 3 - FETCH - Program Counter: 0
+2024/05/25 17:30:55 PID: 3 - Ejecutando: SET - AX,1
+2024/05/25 17:30:55 PID: 3 - FETCH - Program Counter: 1
+2024/05/25 17:30:55 PID: 3 - Ejecutando: SET - BX,1
+2024/05/25 17:30:55 PID: 3 - FETCH - Program Counter: 2
+2024/05/25 17:30:55 PID: 3 - Ejecutando: SUM - AX,BX
+2024/05/25 17:30:55 PID: 3 - FETCH - Program Counter: 3
+2024/05/25 17:30:55 PID: 3 - Ejecutando: SUB - AX,BX
+2024/05/25 17:30:55 PID: 3 - FETCH - Program Counter: 4
+2024/05/25 17:30:55 PID: 3 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:30:56 PID: 4 - FETCH - Program Counter: 0
+2024/05/25 17:30:56 PID: 4 - Ejecutando: SET - AX,1
+2024/05/25 17:30:56 PID: 4 - FETCH - Program Counter: 1
+2024/05/25 17:30:56 PID: 4 - Ejecutando: SET - BX,1
+2024/05/25 17:30:56 PID: 4 - FETCH - Program Counter: 2
+2024/05/25 17:30:56 PID: 4 - Ejecutando: SUM - AX,BX
+2024/05/25 17:30:56 PID: 4 - FETCH - Program Counter: 3
+2024/05/25 17:30:56 PID: 4 - Ejecutando: SUB - AX,BX
+2024/05/25 17:30:56 PID: 4 - FETCH - Program Counter: 4
+2024/05/25 17:30:56 PID: 4 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:30:57 PID: 5 - FETCH - Program Counter: 0
+2024/05/25 17:30:57 PID: 5 - Ejecutando: SET - AX,1
+2024/05/25 17:30:57 PID: 5 - FETCH - Program Counter: 1
+2024/05/25 17:30:57 PID: 5 - Ejecutando: SET - BX,1
+2024/05/25 17:30:57 PID: 5 - FETCH - Program Counter: 2
+2024/05/25 17:30:57 PID: 5 - Ejecutando: SUM - AX,BX
+2024/05/25 17:30:57 PID: 5 - FETCH - Program Counter: 3
+2024/05/25 17:30:57 PID: 5 - Ejecutando: SUB - AX,BX
+2024/05/25 17:30:57 PID: 5 - FETCH - Program Counter: 4
+2024/05/25 17:30:57 PID: 5 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:30:57 PID: 6 - FETCH - Program Counter: 0
+2024/05/25 17:30:57 PID: 6 - Ejecutando: SET - AX,1
+2024/05/25 17:30:57 PID: 6 - FETCH - Program Counter: 1
+2024/05/25 17:30:57 PID: 6 - Ejecutando: SET - BX,1
+2024/05/25 17:30:57 PID: 6 - FETCH - Program Counter: 2
+2024/05/25 17:30:57 PID: 6 - Ejecutando: SUM - AX,BX
+2024/05/25 17:30:57 PID: 6 - FETCH - Program Counter: 3
+2024/05/25 17:30:57 PID: 6 - Ejecutando: SUB - AX,BX
+2024/05/25 17:30:57 PID: 6 - FETCH - Program Counter: 4
+2024/05/25 17:30:57 PID: 6 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:30:58 PID: 7 - FETCH - Program Counter: 0
+2024/05/25 17:30:58 PID: 7 - Ejecutando: SET - AX,1
+2024/05/25 17:30:58 PID: 7 - FETCH - Program Counter: 1
+2024/05/25 17:30:58 PID: 7 - Ejecutando: SET - BX,1
+2024/05/25 17:30:58 PID: 7 - FETCH - Program Counter: 2
+2024/05/25 17:30:58 PID: 7 - Ejecutando: SUM - AX,BX
+2024/05/25 17:30:58 PID: 7 - FETCH - Program Counter: 3
+2024/05/25 17:30:58 PID: 7 - Ejecutando: SUB - AX,BX
+2024/05/25 17:30:58 PID: 7 - FETCH - Program Counter: 4
+2024/05/25 17:30:58 PID: 7 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:30:58 PID: 8 - FETCH - Program Counter: 0
+2024/05/25 17:30:58 PID: 8 - Ejecutando: SET - AX,1
+2024/05/25 17:30:58 PID: 8 - FETCH - Program Counter: 1
+2024/05/25 17:30:58 PID: 8 - Ejecutando: SET - BX,1
+2024/05/25 17:30:58 PID: 8 - FETCH - Program Counter: 2
+2024/05/25 17:30:58 PID: 8 - Ejecutando: SUM - AX,BX
+2024/05/25 17:30:58 PID: 8 - FETCH - Program Counter: 3
+2024/05/25 17:30:58 PID: 8 - Ejecutando: SUB - AX,BX
+2024/05/25 17:30:58 PID: 8 - FETCH - Program Counter: 4
+2024/05/25 17:30:58 PID: 8 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:30:59 PID: 9 - FETCH - Program Counter: 0
+2024/05/25 17:30:59 PID: 9 - Ejecutando: SET - AX,1
+2024/05/25 17:30:59 PID: 9 - FETCH - Program Counter: 1
+2024/05/25 17:30:59 PID: 9 - Ejecutando: SET - BX,1
+2024/05/25 17:30:59 PID: 9 - FETCH - Program Counter: 2
+2024/05/25 17:30:59 PID: 9 - Ejecutando: SUM - AX,BX
+2024/05/25 17:30:59 PID: 9 - FETCH - Program Counter: 3
+2024/05/25 17:30:59 PID: 9 - Ejecutando: SUB - AX,BX
+2024/05/25 17:30:59 PID: 9 - FETCH - Program Counter: 4
+2024/05/25 17:30:59 PID: 9 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:30:59 PID: 1 - FETCH - Program Counter: 5
+2024/05/25 17:30:59 PID: 1 - Ejecutando: EXIT
+2024/05/25 17:30:59 PID: 10 - FETCH - Program Counter: 0
+2024/05/25 17:30:59 PID: 10 - Ejecutando: SET - AX,1
+2024/05/25 17:30:59 PID: 10 - FETCH - Program Counter: 1
+2024/05/25 17:30:59 PID: 10 - Ejecutando: SET - BX,1
+2024/05/25 17:30:59 PID: 10 - FETCH - Program Counter: 2
+2024/05/25 17:30:59 PID: 10 - Ejecutando: SUM - AX,BX
+2024/05/25 17:30:59 PID: 10 - FETCH - Program Counter: 3
+2024/05/25 17:30:59 PID: 10 - Ejecutando: SUB - AX,BX
+2024/05/25 17:30:59 PID: 10 - FETCH - Program Counter: 4
+2024/05/25 17:30:59 PID: 10 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:31:00 PID: 11 - FETCH - Program Counter: 0
+2024/05/25 17:31:00 PID: 11 - Ejecutando: SET - AX,1
+2024/05/25 17:31:00 PID: 11 - FETCH - Program Counter: 1
+2024/05/25 17:31:00 PID: 11 - Ejecutando: SET - BX,1
+2024/05/25 17:31:00 PID: 11 - FETCH - Program Counter: 2
+2024/05/25 17:31:00 PID: 11 - Ejecutando: SUM - AX,BX
+2024/05/25 17:31:00 PID: 11 - FETCH - Program Counter: 3
+2024/05/25 17:31:00 PID: 11 - Ejecutando: SUB - AX,BX
+2024/05/25 17:31:00 PID: 11 - FETCH - Program Counter: 4
+2024/05/25 17:31:00 PID: 11 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:31:04 PID: 2 - FETCH - Program Counter: 5
+2024/05/25 17:31:04 PID: 2 - Ejecutando: EXIT
+2024/05/25 17:31:04 PID: 12 - FETCH - Program Counter: 0
+2024/05/25 17:31:04 PID: 12 - Ejecutando: SET - AX,1
+2024/05/25 17:31:04 PID: 12 - FETCH - Program Counter: 1
+2024/05/25 17:31:04 PID: 12 - Ejecutando: SET - BX,1
+2024/05/25 17:31:04 PID: 12 - FETCH - Program Counter: 2
+2024/05/25 17:31:04 PID: 12 - Ejecutando: SUM - AX,BX
+2024/05/25 17:31:04 PID: 12 - FETCH - Program Counter: 3
+2024/05/25 17:31:04 PID: 12 - Ejecutando: SUB - AX,BX
+2024/05/25 17:31:04 PID: 12 - FETCH - Program Counter: 4
+2024/05/25 17:31:04 PID: 12 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:31:09 PID: 3 - FETCH - Program Counter: 5
+2024/05/25 17:31:09 PID: 3 - Ejecutando: EXIT
+2024/05/25 17:31:09 PID: 13 - FETCH - Program Counter: 0
+2024/05/25 17:31:09 PID: 13 - Ejecutando: SET - AX,1
+2024/05/25 17:31:09 PID: 13 - FETCH - Program Counter: 1
+2024/05/25 17:31:09 PID: 13 - Ejecutando: SET - BX,1
+2024/05/25 17:31:09 PID: 13 - FETCH - Program Counter: 2
+2024/05/25 17:31:09 PID: 13 - Ejecutando: SUM - AX,BX
+2024/05/25 17:31:09 PID: 13 - FETCH - Program Counter: 3
+2024/05/25 17:31:09 PID: 13 - Ejecutando: SUB - AX,BX
+2024/05/25 17:31:09 PID: 13 - FETCH - Program Counter: 4
+2024/05/25 17:31:09 PID: 13 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:31:14 PID: 4 - FETCH - Program Counter: 5
+2024/05/25 17:31:14 PID: 4 - Ejecutando: EXIT
+2024/05/25 17:31:14 PID: 14 - FETCH - Program Counter: 0
+2024/05/25 17:31:14 PID: 14 - Ejecutando: SET - AX,1
+2024/05/25 17:31:14 PID: 14 - FETCH - Program Counter: 1
+2024/05/25 17:31:14 PID: 14 - Ejecutando: SET - BX,1
+2024/05/25 17:31:14 PID: 14 - FETCH - Program Counter: 2
+2024/05/25 17:31:14 PID: 14 - Ejecutando: SUM - AX,BX
+2024/05/25 17:31:14 PID: 14 - FETCH - Program Counter: 3
+2024/05/25 17:31:14 PID: 14 - Ejecutando: SUB - AX,BX
+2024/05/25 17:31:14 PID: 14 - FETCH - Program Counter: 4
+2024/05/25 17:31:14 PID: 14 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:31:19 PID: 5 - FETCH - Program Counter: 5
+2024/05/25 17:31:19 PID: 5 - Ejecutando: EXIT
+2024/05/25 17:31:19 PID: 15 - FETCH - Program Counter: 0
+2024/05/25 17:31:19 PID: 15 - Ejecutando: SET - AX,1
+2024/05/25 17:31:19 PID: 15 - FETCH - Program Counter: 1
+2024/05/25 17:31:19 PID: 15 - Ejecutando: SET - BX,1
+2024/05/25 17:31:19 PID: 15 - FETCH - Program Counter: 2
+2024/05/25 17:31:19 PID: 15 - Ejecutando: SUM - AX,BX
+2024/05/25 17:31:19 PID: 15 - FETCH - Program Counter: 3
+2024/05/25 17:31:19 PID: 15 - Ejecutando: SUB - AX,BX
+2024/05/25 17:31:19 PID: 15 - FETCH - Program Counter: 4
+2024/05/25 17:31:19 PID: 15 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:31:24 PID: 6 - FETCH - Program Counter: 5
+2024/05/25 17:31:24 PID: 6 - Ejecutando: EXIT
+2024/05/25 17:31:24 PID: 16 - FETCH - Program Counter: 0
+2024/05/25 17:31:24 PID: 16 - Ejecutando: SET - AX,1
+2024/05/25 17:31:24 PID: 16 - FETCH - Program Counter: 1
+2024/05/25 17:31:24 PID: 16 - Ejecutando: SET - BX,1
+2024/05/25 17:31:24 PID: 16 - FETCH - Program Counter: 2
+2024/05/25 17:31:24 PID: 16 - Ejecutando: SUM - AX,BX
+2024/05/25 17:31:24 PID: 16 - FETCH - Program Counter: 3
+2024/05/25 17:31:24 PID: 16 - Ejecutando: SUB - AX,BX
+2024/05/25 17:31:24 PID: 16 - FETCH - Program Counter: 4
+2024/05/25 17:31:24 PID: 16 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:09 PID: 17 - FETCH - Program Counter: 0
+2024/05/25 17:32:09 PID: 17 - Ejecutando: SET - AX,1
+2024/05/25 17:32:09 PID: 17 - FETCH - Program Counter: 1
+2024/05/25 17:32:09 PID: 17 - Ejecutando: SET - BX,1
+2024/05/25 17:32:09 PID: 17 - FETCH - Program Counter: 2
+2024/05/25 17:32:09 PID: 17 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:09 PID: 17 - FETCH - Program Counter: 3
+2024/05/25 17:32:09 PID: 17 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:09 PID: 17 - FETCH - Program Counter: 4
+2024/05/25 17:32:09 PID: 17 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:09 PID: 18 - FETCH - Program Counter: 0
+2024/05/25 17:32:09 PID: 18 - Ejecutando: SET - AX,1
+2024/05/25 17:32:09 PID: 18 - FETCH - Program Counter: 1
+2024/05/25 17:32:09 PID: 18 - Ejecutando: SET - BX,1
+2024/05/25 17:32:09 PID: 18 - FETCH - Program Counter: 2
+2024/05/25 17:32:09 PID: 18 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:09 PID: 18 - FETCH - Program Counter: 3
+2024/05/25 17:32:09 PID: 18 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:09 PID: 18 - FETCH - Program Counter: 4
+2024/05/25 17:32:09 PID: 18 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:10 PID: 19 - FETCH - Program Counter: 0
+2024/05/25 17:32:10 PID: 19 - Ejecutando: SET - AX,1
+2024/05/25 17:32:10 PID: 19 - FETCH - Program Counter: 1
+2024/05/25 17:32:10 PID: 19 - Ejecutando: SET - BX,1
+2024/05/25 17:32:10 PID: 19 - FETCH - Program Counter: 2
+2024/05/25 17:32:10 PID: 19 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:10 PID: 19 - FETCH - Program Counter: 3
+2024/05/25 17:32:10 PID: 19 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:10 PID: 19 - FETCH - Program Counter: 4
+2024/05/25 17:32:10 PID: 19 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:10 PID: 20 - FETCH - Program Counter: 0
+2024/05/25 17:32:10 PID: 20 - Ejecutando: SET - AX,1
+2024/05/25 17:32:10 PID: 20 - FETCH - Program Counter: 1
+2024/05/25 17:32:10 PID: 20 - Ejecutando: SET - BX,1
+2024/05/25 17:32:10 PID: 20 - FETCH - Program Counter: 2
+2024/05/25 17:32:10 PID: 20 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:10 PID: 20 - FETCH - Program Counter: 3
+2024/05/25 17:32:10 PID: 20 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:10 PID: 20 - FETCH - Program Counter: 4
+2024/05/25 17:32:10 PID: 20 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:11 PID: 21 - FETCH - Program Counter: 0
+2024/05/25 17:32:11 PID: 21 - Ejecutando: SET - AX,1
+2024/05/25 17:32:11 PID: 21 - FETCH - Program Counter: 1
+2024/05/25 17:32:11 PID: 21 - Ejecutando: SET - BX,1
+2024/05/25 17:32:11 PID: 21 - FETCH - Program Counter: 2
+2024/05/25 17:32:11 PID: 21 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:11 PID: 21 - FETCH - Program Counter: 3
+2024/05/25 17:32:11 PID: 21 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:11 PID: 21 - FETCH - Program Counter: 4
+2024/05/25 17:32:11 PID: 21 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:12 PID: 22 - FETCH - Program Counter: 0
+2024/05/25 17:32:12 PID: 22 - Ejecutando: SET - AX,1
+2024/05/25 17:32:12 PID: 22 - FETCH - Program Counter: 1
+2024/05/25 17:32:12 PID: 22 - Ejecutando: SET - BX,1
+2024/05/25 17:32:12 PID: 22 - FETCH - Program Counter: 2
+2024/05/25 17:32:12 PID: 22 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:12 PID: 22 - FETCH - Program Counter: 3
+2024/05/25 17:32:12 PID: 22 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:12 PID: 22 - FETCH - Program Counter: 4
+2024/05/25 17:32:12 PID: 22 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:12 PID: 23 - FETCH - Program Counter: 0
+2024/05/25 17:32:12 PID: 23 - Ejecutando: SET - AX,1
+2024/05/25 17:32:12 PID: 23 - FETCH - Program Counter: 1
+2024/05/25 17:32:12 PID: 23 - Ejecutando: SET - BX,1
+2024/05/25 17:32:12 PID: 23 - FETCH - Program Counter: 2
+2024/05/25 17:32:12 PID: 23 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:12 PID: 23 - FETCH - Program Counter: 3
+2024/05/25 17:32:12 PID: 23 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:12 PID: 23 - FETCH - Program Counter: 4
+2024/05/25 17:32:12 PID: 23 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:12 PID: 24 - FETCH - Program Counter: 0
+2024/05/25 17:32:12 PID: 24 - Ejecutando: SET - AX,1
+2024/05/25 17:32:12 PID: 24 - FETCH - Program Counter: 1
+2024/05/25 17:32:12 PID: 24 - Ejecutando: SET - BX,1
+2024/05/25 17:32:12 PID: 24 - FETCH - Program Counter: 2
+2024/05/25 17:32:12 PID: 24 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:12 PID: 24 - FETCH - Program Counter: 3
+2024/05/25 17:32:12 PID: 24 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:12 PID: 24 - FETCH - Program Counter: 4
+2024/05/25 17:32:12 PID: 24 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:13 PID: 25 - FETCH - Program Counter: 0
+2024/05/25 17:32:13 PID: 25 - Ejecutando: SET - AX,1
+2024/05/25 17:32:13 PID: 25 - FETCH - Program Counter: 1
+2024/05/25 17:32:13 PID: 25 - Ejecutando: SET - BX,1
+2024/05/25 17:32:13 PID: 25 - FETCH - Program Counter: 2
+2024/05/25 17:32:13 PID: 25 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:13 PID: 25 - FETCH - Program Counter: 3
+2024/05/25 17:32:13 PID: 25 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:13 PID: 25 - FETCH - Program Counter: 4
+2024/05/25 17:32:13 PID: 25 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:13 PID: 26 - FETCH - Program Counter: 0
+2024/05/25 17:32:13 PID: 26 - Ejecutando: SET - AX,1
+2024/05/25 17:32:13 PID: 26 - FETCH - Program Counter: 1
+2024/05/25 17:32:13 PID: 26 - Ejecutando: SET - BX,1
+2024/05/25 17:32:13 PID: 26 - FETCH - Program Counter: 2
+2024/05/25 17:32:13 PID: 26 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:13 PID: 26 - FETCH - Program Counter: 3
+2024/05/25 17:32:13 PID: 26 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:13 PID: 26 - FETCH - Program Counter: 4
+2024/05/25 17:32:13 PID: 26 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:14 PID: 17 - FETCH - Program Counter: 5
+2024/05/25 17:32:14 PID: 17 - Ejecutando: EXIT
+2024/05/25 17:32:14 PID: 27 - FETCH - Program Counter: 0
+2024/05/25 17:32:14 PID: 27 - Ejecutando: SET - AX,1
+2024/05/25 17:32:14 PID: 27 - FETCH - Program Counter: 1
+2024/05/25 17:32:14 PID: 27 - Ejecutando: SET - BX,1
+2024/05/25 17:32:14 PID: 27 - FETCH - Program Counter: 2
+2024/05/25 17:32:14 PID: 27 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:14 PID: 27 - FETCH - Program Counter: 3
+2024/05/25 17:32:14 PID: 27 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:14 PID: 27 - FETCH - Program Counter: 4
+2024/05/25 17:32:14 PID: 27 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:19 PID: 18 - FETCH - Program Counter: 5
+2024/05/25 17:32:19 PID: 18 - Ejecutando: EXIT
+2024/05/25 17:32:19 PID: 28 - FETCH - Program Counter: 0
+2024/05/25 17:32:19 PID: 28 - Ejecutando: SET - AX,1
+2024/05/25 17:32:19 PID: 28 - FETCH - Program Counter: 1
+2024/05/25 17:32:19 PID: 28 - Ejecutando: SET - BX,1
+2024/05/25 17:32:19 PID: 28 - FETCH - Program Counter: 2
+2024/05/25 17:32:19 PID: 28 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:19 PID: 28 - FETCH - Program Counter: 3
+2024/05/25 17:32:19 PID: 28 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:19 PID: 28 - FETCH - Program Counter: 4
+2024/05/25 17:32:19 PID: 28 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:24 PID: 19 - FETCH - Program Counter: 5
+2024/05/25 17:32:24 PID: 19 - Ejecutando: EXIT
+2024/05/25 17:32:24 PID: 29 - FETCH - Program Counter: 0
+2024/05/25 17:32:24 PID: 29 - Ejecutando: SET - AX,1
+2024/05/25 17:32:24 PID: 29 - FETCH - Program Counter: 1
+2024/05/25 17:32:24 PID: 29 - Ejecutando: SET - BX,1
+2024/05/25 17:32:24 PID: 29 - FETCH - Program Counter: 2
+2024/05/25 17:32:24 PID: 29 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:24 PID: 29 - FETCH - Program Counter: 3
+2024/05/25 17:32:24 PID: 29 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:24 PID: 29 - FETCH - Program Counter: 4
+2024/05/25 17:32:24 PID: 29 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:29 PID: 20 - FETCH - Program Counter: 5
+2024/05/25 17:32:29 PID: 20 - Ejecutando: EXIT
+2024/05/25 17:32:29 PID: 30 - FETCH - Program Counter: 0
+2024/05/25 17:32:29 PID: 30 - Ejecutando: SET - AX,1
+2024/05/25 17:32:29 PID: 30 - FETCH - Program Counter: 1
+2024/05/25 17:32:29 PID: 30 - Ejecutando: SET - BX,1
+2024/05/25 17:32:29 PID: 30 - FETCH - Program Counter: 2
+2024/05/25 17:32:29 PID: 30 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:29 PID: 30 - FETCH - Program Counter: 3
+2024/05/25 17:32:29 PID: 30 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:29 PID: 30 - FETCH - Program Counter: 4
+2024/05/25 17:32:29 PID: 30 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:34 PID: 21 - FETCH - Program Counter: 5
+2024/05/25 17:32:34 PID: 21 - Ejecutando: EXIT
+2024/05/25 17:32:34 PID: 31 - FETCH - Program Counter: 0
+2024/05/25 17:32:34 PID: 31 - Ejecutando: SET - AX,1
+2024/05/25 17:32:34 PID: 31 - FETCH - Program Counter: 1
+2024/05/25 17:32:34 PID: 31 - Ejecutando: SET - BX,1
+2024/05/25 17:32:34 PID: 31 - FETCH - Program Counter: 2
+2024/05/25 17:32:34 PID: 31 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:34 PID: 31 - FETCH - Program Counter: 3
+2024/05/25 17:32:34 PID: 31 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:34 PID: 31 - FETCH - Program Counter: 4
+2024/05/25 17:32:34 PID: 31 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:39 PID: 22 - FETCH - Program Counter: 5
+2024/05/25 17:32:39 PID: 22 - Ejecutando: EXIT
+2024/05/25 17:32:39 PID: 32 - FETCH - Program Counter: 0
+2024/05/25 17:32:39 PID: 32 - Ejecutando: SET - AX,1
+2024/05/25 17:32:39 PID: 32 - FETCH - Program Counter: 1
+2024/05/25 17:32:39 PID: 32 - Ejecutando: SET - BX,1
+2024/05/25 17:32:39 PID: 32 - FETCH - Program Counter: 2
+2024/05/25 17:32:39 PID: 32 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:39 PID: 32 - FETCH - Program Counter: 3
+2024/05/25 17:32:39 PID: 32 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:39 PID: 32 - FETCH - Program Counter: 4
+2024/05/25 17:32:39 PID: 32 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:44 PID: 23 - FETCH - Program Counter: 5
+2024/05/25 17:32:44 PID: 23 - Ejecutando: EXIT
+2024/05/25 17:32:44 PID: 33 - FETCH - Program Counter: 0
+2024/05/25 17:32:44 PID: 33 - Ejecutando: SET - AX,1
+2024/05/25 17:32:44 PID: 33 - FETCH - Program Counter: 1
+2024/05/25 17:32:44 PID: 33 - Ejecutando: SET - BX,1
+2024/05/25 17:32:44 PID: 33 - FETCH - Program Counter: 2
+2024/05/25 17:32:44 PID: 33 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:44 PID: 33 - FETCH - Program Counter: 3
+2024/05/25 17:32:44 PID: 33 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:44 PID: 33 - FETCH - Program Counter: 4
+2024/05/25 17:32:44 PID: 33 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:45 PID: 34 - FETCH - Program Counter: 0
+2024/05/25 17:32:45 PID: 34 - Ejecutando: SET - AX,1
+2024/05/25 17:32:45 PID: 34 - FETCH - Program Counter: 1
+2024/05/25 17:32:45 PID: 34 - Ejecutando: SET - BX,1
+2024/05/25 17:32:45 PID: 34 - FETCH - Program Counter: 2
+2024/05/25 17:32:45 PID: 34 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:45 PID: 34 - FETCH - Program Counter: 3
+2024/05/25 17:32:45 PID: 34 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:45 PID: 34 - FETCH - Program Counter: 4
+2024/05/25 17:32:45 PID: 34 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:45 PID: 35 - FETCH - Program Counter: 0
+2024/05/25 17:32:45 PID: 35 - Ejecutando: SET - AX,1
+2024/05/25 17:32:45 PID: 35 - FETCH - Program Counter: 1
+2024/05/25 17:32:45 PID: 35 - Ejecutando: SET - BX,1
+2024/05/25 17:32:45 PID: 35 - FETCH - Program Counter: 2
+2024/05/25 17:32:45 PID: 35 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:45 PID: 35 - FETCH - Program Counter: 3
+2024/05/25 17:32:45 PID: 35 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:45 PID: 36 - FETCH - Program Counter: 0
+2024/05/25 17:32:45 PID: 36 - Ejecutando: SET - AX,1
+2024/05/25 17:32:45 PID: 36 - FETCH - Program Counter: 1
+2024/05/25 17:32:45 PID: 36 - Ejecutando: SET - BX,1
+2024/05/25 17:32:45 PID: 36 - FETCH - Program Counter: 2
+2024/05/25 17:32:45 PID: 36 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:45 PID: 36 - FETCH - Program Counter: 3
+2024/05/25 17:32:45 PID: 36 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:45 PID: 37 - FETCH - Program Counter: 0
+2024/05/25 17:32:45 PID: 37 - Ejecutando: SET - AX,1
+2024/05/25 17:32:45 PID: 37 - FETCH - Program Counter: 1
+2024/05/25 17:32:45 PID: 37 - Ejecutando: SET - BX,1
+2024/05/25 17:32:45 PID: 37 - FETCH - Program Counter: 2
+2024/05/25 17:32:45 PID: 37 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:45 PID: 37 - FETCH - Program Counter: 3
+2024/05/25 17:32:45 PID: 37 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:45 PID: 37 - FETCH - Program Counter: 4
+2024/05/25 17:32:45 PID: 37 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:45 PID: 38 - FETCH - Program Counter: 0
+2024/05/25 17:32:45 PID: 38 - Ejecutando: SET - AX,1
+2024/05/25 17:32:45 PID: 38 - FETCH - Program Counter: 1
+2024/05/25 17:32:45 PID: 38 - Ejecutando: SET - BX,1
+2024/05/25 17:32:45 PID: 38 - FETCH - Program Counter: 2
+2024/05/25 17:32:45 PID: 38 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:45 PID: 38 - FETCH - Program Counter: 3
+2024/05/25 17:32:45 PID: 38 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:45 PID: 38 - FETCH - Program Counter: 4
+2024/05/25 17:32:45 PID: 38 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:45 PID: 39 - FETCH - Program Counter: 0
+2024/05/25 17:32:45 PID: 39 - Ejecutando: SET - AX,1
+2024/05/25 17:32:45 PID: 39 - FETCH - Program Counter: 1
+2024/05/25 17:32:45 PID: 39 - Ejecutando: SET - BX,1
+2024/05/25 17:32:45 PID: 39 - FETCH - Program Counter: 2
+2024/05/25 17:32:45 PID: 39 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:45 PID: 39 - FETCH - Program Counter: 3
+2024/05/25 17:32:45 PID: 39 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:45 PID: 39 - FETCH - Program Counter: 4
+2024/05/25 17:32:45 PID: 39 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:45 PID: 40 - FETCH - Program Counter: 0
+2024/05/25 17:32:45 PID: 40 - Ejecutando: SET - AX,1
+2024/05/25 17:32:45 PID: 40 - FETCH - Program Counter: 1
+2024/05/25 17:32:45 PID: 40 - Ejecutando: SET - BX,1
+2024/05/25 17:32:45 PID: 40 - FETCH - Program Counter: 2
+2024/05/25 17:32:45 PID: 40 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:45 PID: 41 - FETCH - Program Counter: 0
+2024/05/25 17:32:45 PID: 41 - Ejecutando: SET - AX,1
+2024/05/25 17:32:45 PID: 41 - FETCH - Program Counter: 1
+2024/05/25 17:32:45 PID: 41 - Ejecutando: SET - BX,1
+2024/05/25 17:32:45 PID: 41 - FETCH - Program Counter: 2
+2024/05/25 17:32:45 PID: 41 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:45 PID: 41 - FETCH - Program Counter: 3
+2024/05/25 17:32:45 PID: 41 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:45 PID: 41 - FETCH - Program Counter: 4
+2024/05/25 17:32:45 PID: 41 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:45 PID: 43 - FETCH - Program Counter: 0
+2024/05/25 17:32:45 PID: 43 - Ejecutando: SET - AX,1
+2024/05/25 17:32:45 PID: 43 - FETCH - Program Counter: 1
+2024/05/25 17:32:45 PID: 43 - Ejecutando: SET - BX,1
+2024/05/25 17:32:45 PID: 43 - FETCH - Program Counter: 2
+2024/05/25 17:32:45 PID: 43 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:45 PID: 44 - FETCH - Program Counter: 0
+2024/05/25 17:32:45 PID: 44 - Ejecutando: SET - AX,1
+2024/05/25 17:32:45 PID: 44 - FETCH - Program Counter: 1
+2024/05/25 17:32:45 PID: 44 - Ejecutando: SET - BX,1
+2024/05/25 17:32:45 PID: 44 - FETCH - Program Counter: 2
+2024/05/25 17:32:45 PID: 44 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:45 PID: 44 - FETCH - Program Counter: 3
+2024/05/25 17:32:45 PID: 44 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:45 PID: 44 - FETCH - Program Counter: 4
+2024/05/25 17:32:45 PID: 44 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:45 PID: 35 - FETCH - Program Counter: 4
+2024/05/25 17:32:45 PID: 35 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:45 PID: 36 - FETCH - Program Counter: 4
+2024/05/25 17:32:45 PID: 36 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:45 PID: 45 - FETCH - Program Counter: 0
+2024/05/25 17:32:45 PID: 45 - Ejecutando: SET - AX,1
+2024/05/25 17:32:45 PID: 45 - FETCH - Program Counter: 1
+2024/05/25 17:32:45 PID: 45 - Ejecutando: SET - BX,1
+2024/05/25 17:32:45 PID: 45 - FETCH - Program Counter: 2
+2024/05/25 17:32:45 PID: 45 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:45 PID: 46 - FETCH - Program Counter: 0
+2024/05/25 17:32:45 PID: 46 - Ejecutando: SET - AX,1
+2024/05/25 17:32:45 PID: 46 - FETCH - Program Counter: 1
+2024/05/25 17:32:45 PID: 46 - Ejecutando: SET - BX,1
+2024/05/25 17:32:45 PID: 46 - FETCH - Program Counter: 2
+2024/05/25 17:32:45 PID: 46 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:45 PID: 46 - FETCH - Program Counter: 3
+2024/05/25 17:32:45 PID: 46 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:45 PID: 46 - FETCH - Program Counter: 4
+2024/05/25 17:32:45 PID: 46 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:45 PID: 47 - FETCH - Program Counter: 0
+2024/05/25 17:32:45 PID: 47 - Ejecutando: SET - AX,1
+2024/05/25 17:32:45 PID: 47 - FETCH - Program Counter: 1
+2024/05/25 17:32:45 PID: 47 - Ejecutando: SET - BX,1
+2024/05/25 17:32:45 PID: 47 - FETCH - Program Counter: 2
+2024/05/25 17:32:45 PID: 47 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:45 PID: 47 - FETCH - Program Counter: 3
+2024/05/25 17:32:45 PID: 47 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:45 PID: 47 - FETCH - Program Counter: 4
+2024/05/25 17:32:45 PID: 47 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:46 PID: 40 - FETCH - Program Counter: 3
+2024/05/25 17:32:46 PID: 40 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:46 PID: 40 - FETCH - Program Counter: 4
+2024/05/25 17:32:46 PID: 40 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:46 PID: 48 - FETCH - Program Counter: 0
+2024/05/25 17:32:46 PID: 48 - Ejecutando: SET - AX,1
+2024/05/25 17:32:46 PID: 48 - FETCH - Program Counter: 1
+2024/05/25 17:32:46 PID: 48 - Ejecutando: SET - BX,1
+2024/05/25 17:32:46 PID: 48 - FETCH - Program Counter: 2
+2024/05/25 17:32:46 PID: 48 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:46 PID: 48 - FETCH - Program Counter: 3
+2024/05/25 17:32:46 PID: 48 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:46 PID: 48 - FETCH - Program Counter: 4
+2024/05/25 17:32:46 PID: 48 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:46 PID: 42 - FETCH - Program Counter: 0
+2024/05/25 17:32:46 PID: 42 - Ejecutando: SET - AX,1
+2024/05/25 17:32:46 PID: 42 - FETCH - Program Counter: 1
+2024/05/25 17:32:46 PID: 42 - Ejecutando: SET - BX,1
+2024/05/25 17:32:46 PID: 42 - FETCH - Program Counter: 2
+2024/05/25 17:32:46 PID: 42 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:46 PID: 42 - FETCH - Program Counter: 3
+2024/05/25 17:32:46 PID: 42 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:46 PID: 42 - FETCH - Program Counter: 4
+2024/05/25 17:32:46 PID: 42 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:46 PID: 43 - FETCH - Program Counter: 3
+2024/05/25 17:32:46 PID: 43 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:46 PID: 43 - FETCH - Program Counter: 4
+2024/05/25 17:32:46 PID: 43 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:46 PID: 49 - FETCH - Program Counter: 0
+2024/05/25 17:32:46 PID: 49 - Ejecutando: SET - AX,1
+2024/05/25 17:32:46 PID: 49 - FETCH - Program Counter: 1
+2024/05/25 17:32:46 PID: 49 - Ejecutando: SET - BX,1
+2024/05/25 17:32:46 PID: 50 - FETCH - Program Counter: 0
+2024/05/25 17:32:46 PID: 50 - Ejecutando: SET - AX,1
+2024/05/25 17:32:46 PID: 50 - FETCH - Program Counter: 1
+2024/05/25 17:32:46 PID: 50 - Ejecutando: SET - BX,1
+2024/05/25 17:32:46 PID: 50 - FETCH - Program Counter: 2
+2024/05/25 17:32:46 PID: 50 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:46 PID: 50 - FETCH - Program Counter: 3
+2024/05/25 17:32:46 PID: 50 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:46 PID: 50 - FETCH - Program Counter: 4
+2024/05/25 17:32:46 PID: 50 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:46 PID: 51 - FETCH - Program Counter: 0
+2024/05/25 17:32:46 PID: 51 - Ejecutando: SET - AX,1
+2024/05/25 17:32:46 PID: 51 - FETCH - Program Counter: 1
+2024/05/25 17:32:46 PID: 51 - Ejecutando: SET - BX,1
+2024/05/25 17:32:46 PID: 51 - FETCH - Program Counter: 2
+2024/05/25 17:32:46 PID: 51 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:46 PID: 51 - FETCH - Program Counter: 3
+2024/05/25 17:32:46 PID: 51 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:46 PID: 51 - FETCH - Program Counter: 4
+2024/05/25 17:32:46 PID: 51 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:46 PID: 45 - FETCH - Program Counter: 3
+2024/05/25 17:32:46 PID: 45 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:46 PID: 45 - FETCH - Program Counter: 4
+2024/05/25 17:32:46 PID: 45 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:46 PID: 52 - FETCH - Program Counter: 0
+2024/05/25 17:32:46 PID: 52 - Ejecutando: SET - AX,1
+2024/05/25 17:32:46 PID: 52 - FETCH - Program Counter: 1
+2024/05/25 17:32:46 PID: 52 - Ejecutando: SET - BX,1
+2024/05/25 17:32:46 PID: 52 - FETCH - Program Counter: 2
+2024/05/25 17:32:46 PID: 52 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:46 PID: 52 - FETCH - Program Counter: 3
+2024/05/25 17:32:46 PID: 52 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:46 PID: 52 - FETCH - Program Counter: 4
+2024/05/25 17:32:46 PID: 52 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:46 PID: 53 - FETCH - Program Counter: 0
+2024/05/25 17:32:46 PID: 53 - Ejecutando: SET - AX,1
+2024/05/25 17:32:46 PID: 53 - FETCH - Program Counter: 1
+2024/05/25 17:32:46 PID: 53 - Ejecutando: SET - BX,1
+2024/05/25 17:32:46 PID: 53 - FETCH - Program Counter: 2
+2024/05/25 17:32:46 PID: 53 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:46 PID: 53 - FETCH - Program Counter: 3
+2024/05/25 17:32:46 PID: 53 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:46 PID: 53 - FETCH - Program Counter: 4
+2024/05/25 17:32:46 PID: 53 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:46 PID: 54 - FETCH - Program Counter: 0
+2024/05/25 17:32:46 PID: 54 - Ejecutando: SET - AX,1
+2024/05/25 17:32:46 PID: 54 - FETCH - Program Counter: 1
+2024/05/25 17:32:46 PID: 54 - Ejecutando: SET - BX,1
+2024/05/25 17:32:46 PID: 54 - FETCH - Program Counter: 2
+2024/05/25 17:32:46 PID: 54 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:46 PID: 54 - FETCH - Program Counter: 3
+2024/05/25 17:32:46 PID: 54 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:46 PID: 54 - FETCH - Program Counter: 4
+2024/05/25 17:32:46 PID: 54 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:46 PID: 55 - FETCH - Program Counter: 0
+2024/05/25 17:32:46 PID: 55 - Ejecutando: SET - AX,1
+2024/05/25 17:32:46 PID: 55 - FETCH - Program Counter: 1
+2024/05/25 17:32:46 PID: 55 - Ejecutando: SET - BX,1
+2024/05/25 17:32:46 PID: 55 - FETCH - Program Counter: 2
+2024/05/25 17:32:46 PID: 55 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:46 PID: 55 - FETCH - Program Counter: 3
+2024/05/25 17:32:46 PID: 55 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:46 PID: 56 - FETCH - Program Counter: 0
+2024/05/25 17:32:46 PID: 56 - Ejecutando: SET - AX,1
+2024/05/25 17:32:46 PID: 56 - FETCH - Program Counter: 1
+2024/05/25 17:32:46 PID: 56 - Ejecutando: SET - BX,1
+2024/05/25 17:32:46 PID: 56 - FETCH - Program Counter: 2
+2024/05/25 17:32:46 PID: 56 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:46 PID: 56 - FETCH - Program Counter: 3
+2024/05/25 17:32:46 PID: 56 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:46 PID: 56 - FETCH - Program Counter: 4
+2024/05/25 17:32:46 PID: 56 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:46 PID: 57 - FETCH - Program Counter: 0
+2024/05/25 17:32:46 PID: 57 - Ejecutando: SET - AX,1
+2024/05/25 17:32:46 PID: 57 - FETCH - Program Counter: 1
+2024/05/25 17:32:46 PID: 57 - Ejecutando: SET - BX,1
+2024/05/25 17:32:46 PID: 57 - FETCH - Program Counter: 2
+2024/05/25 17:32:46 PID: 57 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:46 PID: 57 - FETCH - Program Counter: 3
+2024/05/25 17:32:46 PID: 57 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:46 PID: 57 - FETCH - Program Counter: 4
+2024/05/25 17:32:46 PID: 57 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:46 PID: 49 - FETCH - Program Counter: 2
+2024/05/25 17:32:46 PID: 49 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:46 PID: 49 - FETCH - Program Counter: 3
+2024/05/25 17:32:46 PID: 49 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:46 PID: 49 - FETCH - Program Counter: 4
+2024/05/25 17:32:46 PID: 49 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:46 PID: 58 - FETCH - Program Counter: 0
+2024/05/25 17:32:46 PID: 58 - Ejecutando: SET - AX,1
+2024/05/25 17:32:46 PID: 59 - FETCH - Program Counter: 0
+2024/05/25 17:32:46 PID: 59 - Ejecutando: SET - AX,1
+2024/05/25 17:32:46 PID: 59 - FETCH - Program Counter: 1
+2024/05/25 17:32:46 PID: 59 - Ejecutando: SET - BX,1
+2024/05/25 17:32:46 PID: 59 - FETCH - Program Counter: 2
+2024/05/25 17:32:46 PID: 59 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:46 PID: 59 - FETCH - Program Counter: 3
+2024/05/25 17:32:46 PID: 59 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:46 PID: 59 - FETCH - Program Counter: 4
+2024/05/25 17:32:46 PID: 59 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:46 PID: 60 - FETCH - Program Counter: 0
+2024/05/25 17:32:46 PID: 60 - Ejecutando: SET - AX,1
+2024/05/25 17:32:46 PID: 60 - FETCH - Program Counter: 1
+2024/05/25 17:32:46 PID: 60 - Ejecutando: SET - BX,1
+2024/05/25 17:32:46 PID: 60 - FETCH - Program Counter: 2
+2024/05/25 17:32:46 PID: 60 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:46 PID: 60 - FETCH - Program Counter: 3
+2024/05/25 17:32:46 PID: 60 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:46 PID: 60 - FETCH - Program Counter: 4
+2024/05/25 17:32:46 PID: 60 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:46 PID: 61 - FETCH - Program Counter: 0
+2024/05/25 17:32:46 PID: 61 - Ejecutando: SET - AX,1
+2024/05/25 17:32:46 PID: 61 - FETCH - Program Counter: 1
+2024/05/25 17:32:46 PID: 61 - Ejecutando: SET - BX,1
+2024/05/25 17:32:46 PID: 61 - FETCH - Program Counter: 2
+2024/05/25 17:32:46 PID: 61 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:46 PID: 61 - FETCH - Program Counter: 3
+2024/05/25 17:32:46 PID: 61 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:46 PID: 61 - FETCH - Program Counter: 4
+2024/05/25 17:32:46 PID: 61 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:46 PID: 55 - FETCH - Program Counter: 4
+2024/05/25 17:32:46 PID: 55 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:32:46 PID: 58 - FETCH - Program Counter: 1
+2024/05/25 17:32:46 PID: 58 - Ejecutando: SET - BX,1
+2024/05/25 17:32:46 PID: 58 - FETCH - Program Counter: 2
+2024/05/25 17:32:46 PID: 58 - Ejecutando: SUM - AX,BX
+2024/05/25 17:32:46 PID: 58 - FETCH - Program Counter: 3
+2024/05/25 17:32:46 PID: 58 - Ejecutando: SUB - AX,BX
+2024/05/25 17:32:46 PID: 58 - FETCH - Program Counter: 4
+2024/05/25 17:32:46 PID: 58 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:34:37 PID: 62 - FETCH - Program Counter: 0
+2024/05/25 17:34:37 PID: 62 - Ejecutando: SET - AX,1
+2024/05/25 17:34:37 PID: 62 - FETCH - Program Counter: 1
+2024/05/25 17:34:37 PID: 62 - Ejecutando: SET - BX,1
+2024/05/25 17:34:37 PID: 62 - FETCH - Program Counter: 2
+2024/05/25 17:34:37 PID: 62 - Ejecutando: SUM - AX,BX
+2024/05/25 17:34:37 PID: 62 - FETCH - Program Counter: 3
+2024/05/25 17:34:37 PID: 62 - Ejecutando: SUB - AX,BX
+2024/05/25 17:34:37 PID: 62 - FETCH - Program Counter: 4
+2024/05/25 17:34:37 PID: 62 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:34:37 PID: 63 - FETCH - Program Counter: 0
+2024/05/25 17:34:37 PID: 63 - Ejecutando: SET - AX,1
+2024/05/25 17:34:37 PID: 63 - FETCH - Program Counter: 1
+2024/05/25 17:34:37 PID: 63 - Ejecutando: SET - BX,1
+2024/05/25 17:34:37 PID: 63 - FETCH - Program Counter: 2
+2024/05/25 17:34:37 PID: 63 - Ejecutando: SUM - AX,BX
+2024/05/25 17:34:37 PID: 63 - FETCH - Program Counter: 3
+2024/05/25 17:34:37 PID: 63 - Ejecutando: SUB - AX,BX
+2024/05/25 17:34:37 PID: 63 - FETCH - Program Counter: 4
+2024/05/25 17:34:37 PID: 63 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:34:38 PID: 64 - FETCH - Program Counter: 0
+2024/05/25 17:34:38 PID: 64 - Ejecutando: SET - AX,1
+2024/05/25 17:34:38 PID: 64 - FETCH - Program Counter: 1
+2024/05/25 17:34:38 PID: 64 - Ejecutando: SET - BX,1
+2024/05/25 17:34:38 PID: 64 - FETCH - Program Counter: 2
+2024/05/25 17:34:38 PID: 64 - Ejecutando: SUM - AX,BX
+2024/05/25 17:34:38 PID: 64 - FETCH - Program Counter: 3
+2024/05/25 17:34:38 PID: 64 - Ejecutando: SUB - AX,BX
+2024/05/25 17:34:38 PID: 64 - FETCH - Program Counter: 4
+2024/05/25 17:34:38 PID: 64 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:34:39 PID: 65 - FETCH - Program Counter: 0
+2024/05/25 17:34:39 PID: 65 - Ejecutando: SET - AX,1
+2024/05/25 17:34:39 PID: 65 - FETCH - Program Counter: 1
+2024/05/25 17:34:39 PID: 65 - Ejecutando: SET - BX,1
+2024/05/25 17:34:39 PID: 65 - FETCH - Program Counter: 2
+2024/05/25 17:34:39 PID: 65 - Ejecutando: SUM - AX,BX
+2024/05/25 17:34:39 PID: 65 - FETCH - Program Counter: 3
+2024/05/25 17:34:39 PID: 65 - Ejecutando: SUB - AX,BX
+2024/05/25 17:34:39 PID: 65 - FETCH - Program Counter: 4
+2024/05/25 17:34:39 PID: 65 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:34:39 PID: 66 - FETCH - Program Counter: 0
+2024/05/25 17:34:39 PID: 66 - Ejecutando: SET - AX,1
+2024/05/25 17:34:39 PID: 66 - FETCH - Program Counter: 1
+2024/05/25 17:34:39 PID: 66 - Ejecutando: SET - BX,1
+2024/05/25 17:34:39 PID: 66 - FETCH - Program Counter: 2
+2024/05/25 17:34:39 PID: 66 - Ejecutando: SUM - AX,BX
+2024/05/25 17:34:39 PID: 66 - FETCH - Program Counter: 3
+2024/05/25 17:34:39 PID: 66 - Ejecutando: SUB - AX,BX
+2024/05/25 17:34:39 PID: 66 - FETCH - Program Counter: 4
+2024/05/25 17:34:39 PID: 66 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:34:40 PID: 67 - FETCH - Program Counter: 0
+2024/05/25 17:34:40 PID: 67 - Ejecutando: SET - AX,1
+2024/05/25 17:34:40 PID: 67 - FETCH - Program Counter: 1
+2024/05/25 17:34:40 PID: 67 - Ejecutando: SET - BX,1
+2024/05/25 17:34:40 PID: 67 - FETCH - Program Counter: 2
+2024/05/25 17:34:40 PID: 67 - Ejecutando: SUM - AX,BX
+2024/05/25 17:34:40 PID: 67 - FETCH - Program Counter: 3
+2024/05/25 17:34:40 PID: 67 - Ejecutando: SUB - AX,BX
+2024/05/25 17:34:40 PID: 67 - FETCH - Program Counter: 4
+2024/05/25 17:34:40 PID: 67 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:34:40 PID: 68 - FETCH - Program Counter: 0
+2024/05/25 17:34:40 PID: 68 - Ejecutando: SET - AX,1
+2024/05/25 17:34:40 PID: 68 - FETCH - Program Counter: 1
+2024/05/25 17:34:40 PID: 68 - Ejecutando: SET - BX,1
+2024/05/25 17:34:40 PID: 68 - FETCH - Program Counter: 2
+2024/05/25 17:34:40 PID: 68 - Ejecutando: SUM - AX,BX
+2024/05/25 17:34:40 PID: 68 - FETCH - Program Counter: 3
+2024/05/25 17:34:40 PID: 68 - Ejecutando: SUB - AX,BX
+2024/05/25 17:34:40 PID: 68 - FETCH - Program Counter: 4
+2024/05/25 17:34:40 PID: 68 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:34:40 PID: 69 - FETCH - Program Counter: 0
+2024/05/25 17:34:40 PID: 69 - Ejecutando: SET - AX,1
+2024/05/25 17:34:40 PID: 69 - FETCH - Program Counter: 1
+2024/05/25 17:34:40 PID: 69 - Ejecutando: SET - BX,1
+2024/05/25 17:34:40 PID: 69 - FETCH - Program Counter: 2
+2024/05/25 17:34:40 PID: 69 - Ejecutando: SUM - AX,BX
+2024/05/25 17:34:40 PID: 69 - FETCH - Program Counter: 3
+2024/05/25 17:34:40 PID: 69 - Ejecutando: SUB - AX,BX
+2024/05/25 17:34:40 PID: 69 - FETCH - Program Counter: 4
+2024/05/25 17:34:40 PID: 69 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:34:41 PID: 70 - FETCH - Program Counter: 0
+2024/05/25 17:34:41 PID: 70 - Ejecutando: SET - AX,1
+2024/05/25 17:34:41 PID: 70 - FETCH - Program Counter: 1
+2024/05/25 17:34:41 PID: 70 - Ejecutando: SET - BX,1
+2024/05/25 17:34:41 PID: 70 - FETCH - Program Counter: 2
+2024/05/25 17:34:41 PID: 70 - Ejecutando: SUM - AX,BX
+2024/05/25 17:34:41 PID: 70 - FETCH - Program Counter: 3
+2024/05/25 17:34:41 PID: 70 - Ejecutando: SUB - AX,BX
+2024/05/25 17:34:41 PID: 70 - FETCH - Program Counter: 4
+2024/05/25 17:34:41 PID: 70 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:34:41 PID: 71 - FETCH - Program Counter: 0
+2024/05/25 17:34:41 PID: 71 - Ejecutando: SET - AX,1
+2024/05/25 17:34:41 PID: 71 - FETCH - Program Counter: 1
+2024/05/25 17:34:41 PID: 71 - Ejecutando: SET - BX,1
+2024/05/25 17:34:41 PID: 71 - FETCH - Program Counter: 2
+2024/05/25 17:34:41 PID: 71 - Ejecutando: SUM - AX,BX
+2024/05/25 17:34:41 PID: 71 - FETCH - Program Counter: 3
+2024/05/25 17:34:41 PID: 71 - Ejecutando: SUB - AX,BX
+2024/05/25 17:34:41 PID: 71 - FETCH - Program Counter: 4
+2024/05/25 17:34:41 PID: 71 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:34:42 PID: 62 - FETCH - Program Counter: 5
+2024/05/25 17:34:42 PID: 62 - Ejecutando: EXIT
+2024/05/25 17:34:42 PID: 72 - FETCH - Program Counter: 0
+2024/05/25 17:34:42 PID: 72 - Ejecutando: SET - AX,1
+2024/05/25 17:34:42 PID: 72 - FETCH - Program Counter: 1
+2024/05/25 17:34:42 PID: 72 - Ejecutando: SET - BX,1
+2024/05/25 17:34:42 PID: 72 - FETCH - Program Counter: 2
+2024/05/25 17:34:42 PID: 72 - Ejecutando: SUM - AX,BX
+2024/05/25 17:34:42 PID: 72 - FETCH - Program Counter: 3
+2024/05/25 17:34:42 PID: 72 - Ejecutando: SUB - AX,BX
+2024/05/25 17:34:42 PID: 72 - FETCH - Program Counter: 4
+2024/05/25 17:34:42 PID: 72 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:34:47 PID: 63 - FETCH - Program Counter: 5
+2024/05/25 17:34:47 PID: 63 - Ejecutando: EXIT
+2024/05/25 17:34:47 PID: 73 - FETCH - Program Counter: 0
+2024/05/25 17:34:47 PID: 73 - Ejecutando: SET - AX,1
+2024/05/25 17:34:47 PID: 73 - FETCH - Program Counter: 1
+2024/05/25 17:34:47 PID: 73 - Ejecutando: SET - BX,1
+2024/05/25 17:34:47 PID: 73 - FETCH - Program Counter: 2
+2024/05/25 17:34:47 PID: 73 - Ejecutando: SUM - AX,BX
+2024/05/25 17:34:47 PID: 73 - FETCH - Program Counter: 3
+2024/05/25 17:34:47 PID: 73 - Ejecutando: SUB - AX,BX
+2024/05/25 17:34:47 PID: 73 - FETCH - Program Counter: 4
+2024/05/25 17:34:47 PID: 73 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:34:52 PID: 64 - FETCH - Program Counter: 5
+2024/05/25 17:34:52 PID: 64 - Ejecutando: EXIT
+2024/05/25 17:34:52 PID: 74 - FETCH - Program Counter: 0
+2024/05/25 17:34:52 PID: 74 - Ejecutando: SET - AX,1
+2024/05/25 17:34:52 PID: 74 - FETCH - Program Counter: 1
+2024/05/25 17:34:52 PID: 74 - Ejecutando: SET - BX,1
+2024/05/25 17:34:52 PID: 74 - FETCH - Program Counter: 2
+2024/05/25 17:34:52 PID: 74 - Ejecutando: SUM - AX,BX
+2024/05/25 17:34:52 PID: 74 - FETCH - Program Counter: 3
+2024/05/25 17:34:52 PID: 74 - Ejecutando: SUB - AX,BX
+2024/05/25 17:34:52 PID: 74 - FETCH - Program Counter: 4
+2024/05/25 17:34:52 PID: 74 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:34:57 PID: 65 - FETCH - Program Counter: 5
+2024/05/25 17:34:57 PID: 65 - Ejecutando: EXIT
+2024/05/25 17:34:57 PID: 75 - FETCH - Program Counter: 0
+2024/05/25 17:34:57 PID: 75 - Ejecutando: SET - AX,1
+2024/05/25 17:34:57 PID: 75 - FETCH - Program Counter: 1
+2024/05/25 17:34:57 PID: 75 - Ejecutando: SET - BX,1
+2024/05/25 17:34:57 PID: 75 - FETCH - Program Counter: 2
+2024/05/25 17:34:57 PID: 75 - Ejecutando: SUM - AX,BX
+2024/05/25 17:34:57 PID: 75 - FETCH - Program Counter: 3
+2024/05/25 17:34:57 PID: 75 - Ejecutando: SUB - AX,BX
+2024/05/25 17:34:57 PID: 75 - FETCH - Program Counter: 4
+2024/05/25 17:34:57 PID: 75 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 17:35:02 PID: 66 - FETCH - Program Counter: 5
+2024/05/25 17:35:02 PID: 66 - Ejecutando: EXIT
+2024/05/25 17:35:02 PID: 76 - FETCH - Program Counter: 0
+2024/05/25 17:35:02 PID: 76 - Ejecutando: SET - AX,1
+2024/05/25 17:35:02 PID: 76 - FETCH - Program Counter: 1
+2024/05/25 17:35:02 PID: 76 - Ejecutando: SET - BX,1
+2024/05/25 17:35:02 PID: 76 - FETCH - Program Counter: 2
+2024/05/25 17:35:02 PID: 76 - Ejecutando: SUM - AX,BX
+2024/05/25 17:35:02 PID: 76 - FETCH - Program Counter: 3
+2024/05/25 17:35:02 PID: 76 - Ejecutando: SUB - AX,BX
+2024/05/25 17:35:02 PID: 76 - FETCH - Program Counter: 4
+2024/05/25 17:35:02 PID: 76 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:17:09 PID: 0 - FETCH - Program Counter: 0
+2024/05/25 18:17:09 PID: 0 - Ejecutando: SET - AX,1
+2024/05/25 18:17:09 PID: 0 - FETCH - Program Counter: 1
+2024/05/25 18:17:09 PID: 0 - Ejecutando: SET - BX,1
+2024/05/25 18:17:09 PID: 0 - FETCH - Program Counter: 2
+2024/05/25 18:17:09 PID: 0 - Ejecutando: SUM - AX,BX
+2024/05/25 18:17:09 PID: 0 - FETCH - Program Counter: 3
+2024/05/25 18:17:09 PID: 0 - Ejecutando: SUB - AX,BX
+2024/05/25 18:17:09 PID: 0 - FETCH - Program Counter: 4
+2024/05/25 18:17:09 PID: 0 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:17:10 PID: 1 - FETCH - Program Counter: 0
+2024/05/25 18:17:10 PID: 1 - Ejecutando: SET - AX,1
+2024/05/25 18:17:10 PID: 1 - FETCH - Program Counter: 1
+2024/05/25 18:17:10 PID: 1 - Ejecutando: SET - BX,1
+2024/05/25 18:17:10 PID: 1 - FETCH - Program Counter: 2
+2024/05/25 18:17:10 PID: 1 - Ejecutando: SUM - AX,BX
+2024/05/25 18:17:10 PID: 1 - FETCH - Program Counter: 3
+2024/05/25 18:17:10 PID: 1 - Ejecutando: SUB - AX,BX
+2024/05/25 18:17:10 PID: 1 - FETCH - Program Counter: 4
+2024/05/25 18:17:10 PID: 1 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:17:10 PID: 2 - FETCH - Program Counter: 0
+2024/05/25 18:17:10 PID: 2 - Ejecutando: SET - AX,1
+2024/05/25 18:17:10 PID: 2 - FETCH - Program Counter: 1
+2024/05/25 18:17:10 PID: 2 - Ejecutando: SET - BX,1
+2024/05/25 18:17:10 PID: 2 - FETCH - Program Counter: 2
+2024/05/25 18:17:10 PID: 2 - Ejecutando: SUM - AX,BX
+2024/05/25 18:17:10 PID: 2 - FETCH - Program Counter: 3
+2024/05/25 18:17:10 PID: 2 - Ejecutando: SUB - AX,BX
+2024/05/25 18:17:10 PID: 2 - FETCH - Program Counter: 4
+2024/05/25 18:17:10 PID: 2 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:17:11 PID: 3 - FETCH - Program Counter: 0
+2024/05/25 18:17:11 PID: 3 - Ejecutando: SET - AX,1
+2024/05/25 18:17:11 PID: 3 - FETCH - Program Counter: 1
+2024/05/25 18:17:11 PID: 3 - Ejecutando: SET - BX,1
+2024/05/25 18:17:11 PID: 3 - FETCH - Program Counter: 2
+2024/05/25 18:17:11 PID: 3 - Ejecutando: SUM - AX,BX
+2024/05/25 18:17:11 PID: 3 - FETCH - Program Counter: 3
+2024/05/25 18:17:11 PID: 3 - Ejecutando: SUB - AX,BX
+2024/05/25 18:17:11 PID: 3 - FETCH - Program Counter: 4
+2024/05/25 18:17:11 PID: 3 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:17:12 PID: 4 - FETCH - Program Counter: 0
+2024/05/25 18:17:12 PID: 4 - Ejecutando: SET - AX,1
+2024/05/25 18:17:12 PID: 4 - FETCH - Program Counter: 1
+2024/05/25 18:17:12 PID: 4 - Ejecutando: SET - BX,1
+2024/05/25 18:17:12 PID: 4 - FETCH - Program Counter: 2
+2024/05/25 18:17:12 PID: 4 - Ejecutando: SUM - AX,BX
+2024/05/25 18:17:12 PID: 4 - FETCH - Program Counter: 3
+2024/05/25 18:17:12 PID: 4 - Ejecutando: SUB - AX,BX
+2024/05/25 18:17:12 PID: 4 - FETCH - Program Counter: 4
+2024/05/25 18:17:12 PID: 4 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:17:12 PID: 5 - FETCH - Program Counter: 0
+2024/05/25 18:17:12 PID: 5 - Ejecutando: SET - AX,1
+2024/05/25 18:17:12 PID: 5 - FETCH - Program Counter: 1
+2024/05/25 18:17:12 PID: 5 - Ejecutando: SET - BX,1
+2024/05/25 18:17:12 PID: 5 - FETCH - Program Counter: 2
+2024/05/25 18:17:12 PID: 5 - Ejecutando: SUM - AX,BX
+2024/05/25 18:17:12 PID: 5 - FETCH - Program Counter: 3
+2024/05/25 18:17:12 PID: 5 - Ejecutando: SUB - AX,BX
+2024/05/25 18:17:12 PID: 5 - FETCH - Program Counter: 4
+2024/05/25 18:17:12 PID: 5 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:17:13 PID: 6 - FETCH - Program Counter: 0
+2024/05/25 18:17:13 PID: 6 - Ejecutando: SET - AX,1
+2024/05/25 18:17:13 PID: 6 - FETCH - Program Counter: 1
+2024/05/25 18:17:13 PID: 6 - Ejecutando: SET - BX,1
+2024/05/25 18:17:13 PID: 6 - FETCH - Program Counter: 2
+2024/05/25 18:17:13 PID: 6 - Ejecutando: SUM - AX,BX
+2024/05/25 18:17:13 PID: 6 - FETCH - Program Counter: 3
+2024/05/25 18:17:13 PID: 6 - Ejecutando: SUB - AX,BX
+2024/05/25 18:17:13 PID: 6 - FETCH - Program Counter: 4
+2024/05/25 18:17:13 PID: 6 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:17:13 PID: 7 - FETCH - Program Counter: 0
+2024/05/25 18:17:13 PID: 7 - Ejecutando: SET - AX,1
+2024/05/25 18:17:13 PID: 7 - FETCH - Program Counter: 1
+2024/05/25 18:17:13 PID: 7 - Ejecutando: SET - BX,1
+2024/05/25 18:17:13 PID: 7 - FETCH - Program Counter: 2
+2024/05/25 18:17:13 PID: 7 - Ejecutando: SUM - AX,BX
+2024/05/25 18:17:13 PID: 7 - FETCH - Program Counter: 3
+2024/05/25 18:17:13 PID: 7 - Ejecutando: SUB - AX,BX
+2024/05/25 18:17:13 PID: 7 - FETCH - Program Counter: 4
+2024/05/25 18:17:13 PID: 7 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:17:14 PID: 8 - FETCH - Program Counter: 0
+2024/05/25 18:17:14 PID: 8 - Ejecutando: SET - AX,1
+2024/05/25 18:17:14 PID: 8 - FETCH - Program Counter: 1
+2024/05/25 18:17:14 PID: 8 - Ejecutando: SET - BX,1
+2024/05/25 18:17:14 PID: 8 - FETCH - Program Counter: 2
+2024/05/25 18:17:14 PID: 8 - Ejecutando: SUM - AX,BX
+2024/05/25 18:17:14 PID: 8 - FETCH - Program Counter: 3
+2024/05/25 18:17:14 PID: 8 - Ejecutando: SUB - AX,BX
+2024/05/25 18:17:14 PID: 8 - FETCH - Program Counter: 4
+2024/05/25 18:17:14 PID: 8 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:17:14 PID: 9 - FETCH - Program Counter: 0
+2024/05/25 18:17:14 PID: 9 - Ejecutando: SET - AX,1
+2024/05/25 18:17:14 PID: 9 - FETCH - Program Counter: 1
+2024/05/25 18:17:14 PID: 9 - Ejecutando: SET - BX,1
+2024/05/25 18:17:14 PID: 9 - FETCH - Program Counter: 2
+2024/05/25 18:17:14 PID: 9 - Ejecutando: SUM - AX,BX
+2024/05/25 18:17:14 PID: 9 - FETCH - Program Counter: 3
+2024/05/25 18:17:14 PID: 9 - Ejecutando: SUB - AX,BX
+2024/05/25 18:17:14 PID: 9 - FETCH - Program Counter: 4
+2024/05/25 18:17:14 PID: 9 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:21:08 PID: 0 - FETCH - Program Counter: 0
+2024/05/25 18:21:08 PID: 0 - Ejecutando: SET - AX,1
+2024/05/25 18:21:08 PID: 0 - FETCH - Program Counter: 1
+2024/05/25 18:21:08 PID: 0 - Ejecutando: SET - BX,1
+2024/05/25 18:21:08 PID: 0 - FETCH - Program Counter: 2
+2024/05/25 18:21:08 PID: 0 - Ejecutando: SUM - AX,BX
+2024/05/25 18:21:08 PID: 0 - FETCH - Program Counter: 3
+2024/05/25 18:21:08 PID: 0 - Ejecutando: SUB - AX,BX
+2024/05/25 18:21:08 PID: 0 - FETCH - Program Counter: 4
+2024/05/25 18:21:08 PID: 0 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:21:09 PID: 1 - FETCH - Program Counter: 0
+2024/05/25 18:21:09 PID: 1 - Ejecutando: SET - AX,1
+2024/05/25 18:21:09 PID: 1 - FETCH - Program Counter: 1
+2024/05/25 18:21:09 PID: 1 - Ejecutando: SET - BX,1
+2024/05/25 18:21:09 PID: 1 - FETCH - Program Counter: 2
+2024/05/25 18:21:09 PID: 1 - Ejecutando: SUM - AX,BX
+2024/05/25 18:21:09 PID: 1 - FETCH - Program Counter: 3
+2024/05/25 18:21:09 PID: 1 - Ejecutando: SUB - AX,BX
+2024/05/25 18:21:09 PID: 1 - FETCH - Program Counter: 4
+2024/05/25 18:21:09 PID: 1 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:21:09 PID: 2 - FETCH - Program Counter: 0
+2024/05/25 18:21:09 PID: 2 - Ejecutando: SET - AX,1
+2024/05/25 18:21:09 PID: 2 - FETCH - Program Counter: 1
+2024/05/25 18:21:09 PID: 2 - Ejecutando: SET - BX,1
+2024/05/25 18:21:09 PID: 2 - FETCH - Program Counter: 2
+2024/05/25 18:21:09 PID: 2 - Ejecutando: SUM - AX,BX
+2024/05/25 18:21:09 PID: 2 - FETCH - Program Counter: 3
+2024/05/25 18:21:09 PID: 2 - Ejecutando: SUB - AX,BX
+2024/05/25 18:21:09 PID: 2 - FETCH - Program Counter: 4
+2024/05/25 18:21:09 PID: 2 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:21:10 PID: 3 - FETCH - Program Counter: 0
+2024/05/25 18:21:10 PID: 3 - Ejecutando: SET - AX,1
+2024/05/25 18:21:10 PID: 3 - FETCH - Program Counter: 1
+2024/05/25 18:21:10 PID: 3 - Ejecutando: SET - BX,1
+2024/05/25 18:21:10 PID: 3 - FETCH - Program Counter: 2
+2024/05/25 18:21:10 PID: 3 - Ejecutando: SUM - AX,BX
+2024/05/25 18:21:10 PID: 3 - FETCH - Program Counter: 3
+2024/05/25 18:21:10 PID: 3 - Ejecutando: SUB - AX,BX
+2024/05/25 18:21:10 PID: 3 - FETCH - Program Counter: 4
+2024/05/25 18:21:10 PID: 3 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:21:10 PID: 4 - FETCH - Program Counter: 0
+2024/05/25 18:21:10 PID: 4 - Ejecutando: SET - AX,1
+2024/05/25 18:21:10 PID: 4 - FETCH - Program Counter: 1
+2024/05/25 18:21:10 PID: 4 - Ejecutando: SET - BX,1
+2024/05/25 18:21:10 PID: 4 - FETCH - Program Counter: 2
+2024/05/25 18:21:10 PID: 4 - Ejecutando: SUM - AX,BX
+2024/05/25 18:21:10 PID: 4 - FETCH - Program Counter: 3
+2024/05/25 18:21:10 PID: 4 - Ejecutando: SUB - AX,BX
+2024/05/25 18:21:10 PID: 4 - FETCH - Program Counter: 4
+2024/05/25 18:21:10 PID: 4 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:21:11 PID: 5 - FETCH - Program Counter: 0
+2024/05/25 18:21:11 PID: 5 - Ejecutando: SET - AX,1
+2024/05/25 18:21:11 PID: 5 - FETCH - Program Counter: 1
+2024/05/25 18:21:11 PID: 5 - Ejecutando: SET - BX,1
+2024/05/25 18:21:11 PID: 5 - FETCH - Program Counter: 2
+2024/05/25 18:21:11 PID: 5 - Ejecutando: SUM - AX,BX
+2024/05/25 18:21:11 PID: 5 - FETCH - Program Counter: 3
+2024/05/25 18:21:11 PID: 5 - Ejecutando: SUB - AX,BX
+2024/05/25 18:21:11 PID: 5 - FETCH - Program Counter: 4
+2024/05/25 18:21:11 PID: 5 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:21:11 PID: 6 - FETCH - Program Counter: 0
+2024/05/25 18:21:11 PID: 6 - Ejecutando: SET - AX,1
+2024/05/25 18:21:11 PID: 6 - FETCH - Program Counter: 1
+2024/05/25 18:21:11 PID: 6 - Ejecutando: SET - BX,1
+2024/05/25 18:21:11 PID: 6 - FETCH - Program Counter: 2
+2024/05/25 18:21:11 PID: 6 - Ejecutando: SUM - AX,BX
+2024/05/25 18:21:11 PID: 6 - FETCH - Program Counter: 3
+2024/05/25 18:21:11 PID: 6 - Ejecutando: SUB - AX,BX
+2024/05/25 18:21:11 PID: 6 - FETCH - Program Counter: 4
+2024/05/25 18:21:11 PID: 6 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:21:12 PID: 7 - FETCH - Program Counter: 0
+2024/05/25 18:21:12 PID: 7 - Ejecutando: SET - AX,1
+2024/05/25 18:21:12 PID: 7 - FETCH - Program Counter: 1
+2024/05/25 18:21:12 PID: 7 - Ejecutando: SET - BX,1
+2024/05/25 18:21:12 PID: 7 - FETCH - Program Counter: 2
+2024/05/25 18:21:12 PID: 7 - Ejecutando: SUM - AX,BX
+2024/05/25 18:21:12 PID: 7 - FETCH - Program Counter: 3
+2024/05/25 18:21:12 PID: 7 - Ejecutando: SUB - AX,BX
+2024/05/25 18:21:12 PID: 7 - FETCH - Program Counter: 4
+2024/05/25 18:21:12 PID: 7 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:21:12 PID: 8 - FETCH - Program Counter: 0
+2024/05/25 18:21:12 PID: 8 - Ejecutando: SET - AX,1
+2024/05/25 18:21:12 PID: 8 - FETCH - Program Counter: 1
+2024/05/25 18:21:12 PID: 8 - Ejecutando: SET - BX,1
+2024/05/25 18:21:12 PID: 8 - FETCH - Program Counter: 2
+2024/05/25 18:21:12 PID: 8 - Ejecutando: SUM - AX,BX
+2024/05/25 18:21:12 PID: 8 - FETCH - Program Counter: 3
+2024/05/25 18:21:12 PID: 8 - Ejecutando: SUB - AX,BX
+2024/05/25 18:21:12 PID: 8 - FETCH - Program Counter: 4
+2024/05/25 18:21:12 PID: 8 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:21:13 PID: 9 - FETCH - Program Counter: 0
+2024/05/25 18:21:13 PID: 9 - Ejecutando: SET - AX,1
+2024/05/25 18:21:13 PID: 9 - FETCH - Program Counter: 1
+2024/05/25 18:21:13 PID: 9 - Ejecutando: SET - BX,1
+2024/05/25 18:21:13 PID: 9 - FETCH - Program Counter: 2
+2024/05/25 18:21:13 PID: 9 - Ejecutando: SUM - AX,BX
+2024/05/25 18:21:13 PID: 9 - FETCH - Program Counter: 3
+2024/05/25 18:21:13 PID: 9 - Ejecutando: SUB - AX,BX
+2024/05/25 18:21:13 PID: 9 - FETCH - Program Counter: 4
+2024/05/25 18:21:13 PID: 9 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:21:52 PID: 0 - FETCH - Program Counter: 0
+2024/05/25 18:21:52 PID: 0 - Ejecutando: SET - AX,1
+2024/05/25 18:21:52 PID: 0 - FETCH - Program Counter: 1
+2024/05/25 18:21:52 PID: 0 - Ejecutando: SET - BX,1
+2024/05/25 18:21:52 PID: 0 - FETCH - Program Counter: 2
+2024/05/25 18:21:52 PID: 0 - Ejecutando: SUM - AX,BX
+2024/05/25 18:21:52 PID: 0 - FETCH - Program Counter: 3
+2024/05/25 18:21:52 PID: 0 - Ejecutando: SUB - AX,BX
+2024/05/25 18:21:52 PID: 0 - FETCH - Program Counter: 4
+2024/05/25 18:21:52 PID: 0 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:21:53 PID: 1 - FETCH - Program Counter: 0
+2024/05/25 18:21:53 PID: 1 - Ejecutando: SET - AX,1
+2024/05/25 18:21:53 PID: 1 - FETCH - Program Counter: 1
+2024/05/25 18:21:53 PID: 1 - Ejecutando: SET - BX,1
+2024/05/25 18:21:53 PID: 1 - FETCH - Program Counter: 2
+2024/05/25 18:21:53 PID: 1 - Ejecutando: SUM - AX,BX
+2024/05/25 18:21:53 PID: 1 - FETCH - Program Counter: 3
+2024/05/25 18:21:53 PID: 1 - Ejecutando: SUB - AX,BX
+2024/05/25 18:21:53 PID: 1 - FETCH - Program Counter: 4
+2024/05/25 18:21:53 PID: 1 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:21:53 PID: 2 - FETCH - Program Counter: 0
+2024/05/25 18:21:53 PID: 2 - Ejecutando: SET - AX,1
+2024/05/25 18:21:53 PID: 2 - FETCH - Program Counter: 1
+2024/05/25 18:21:53 PID: 2 - Ejecutando: SET - BX,1
+2024/05/25 18:21:53 PID: 2 - FETCH - Program Counter: 2
+2024/05/25 18:21:53 PID: 2 - Ejecutando: SUM - AX,BX
+2024/05/25 18:21:53 PID: 2 - FETCH - Program Counter: 3
+2024/05/25 18:21:53 PID: 2 - Ejecutando: SUB - AX,BX
+2024/05/25 18:21:53 PID: 2 - FETCH - Program Counter: 4
+2024/05/25 18:21:53 PID: 2 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:21:54 PID: 3 - FETCH - Program Counter: 0
+2024/05/25 18:21:54 PID: 3 - Ejecutando: SET - AX,1
+2024/05/25 18:21:54 PID: 3 - FETCH - Program Counter: 1
+2024/05/25 18:21:54 PID: 3 - Ejecutando: SET - BX,1
+2024/05/25 18:21:54 PID: 3 - FETCH - Program Counter: 2
+2024/05/25 18:21:54 PID: 3 - Ejecutando: SUM - AX,BX
+2024/05/25 18:21:54 PID: 3 - FETCH - Program Counter: 3
+2024/05/25 18:21:54 PID: 3 - Ejecutando: SUB - AX,BX
+2024/05/25 18:21:54 PID: 3 - FETCH - Program Counter: 4
+2024/05/25 18:21:54 PID: 3 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:21:55 PID: 4 - FETCH - Program Counter: 0
+2024/05/25 18:21:55 PID: 4 - Ejecutando: SET - AX,1
+2024/05/25 18:21:55 PID: 4 - FETCH - Program Counter: 1
+2024/05/25 18:21:55 PID: 4 - Ejecutando: SET - BX,1
+2024/05/25 18:21:55 PID: 4 - FETCH - Program Counter: 2
+2024/05/25 18:21:55 PID: 4 - Ejecutando: SUM - AX,BX
+2024/05/25 18:21:55 PID: 4 - FETCH - Program Counter: 3
+2024/05/25 18:21:55 PID: 4 - Ejecutando: SUB - AX,BX
+2024/05/25 18:21:55 PID: 4 - FETCH - Program Counter: 4
+2024/05/25 18:21:55 PID: 4 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:21:55 PID: 5 - FETCH - Program Counter: 0
+2024/05/25 18:21:55 PID: 5 - Ejecutando: SET - AX,1
+2024/05/25 18:21:55 PID: 5 - FETCH - Program Counter: 1
+2024/05/25 18:21:55 PID: 5 - Ejecutando: SET - BX,1
+2024/05/25 18:21:55 PID: 5 - FETCH - Program Counter: 2
+2024/05/25 18:21:55 PID: 5 - Ejecutando: SUM - AX,BX
+2024/05/25 18:21:55 PID: 5 - FETCH - Program Counter: 3
+2024/05/25 18:21:55 PID: 5 - Ejecutando: SUB - AX,BX
+2024/05/25 18:21:55 PID: 5 - FETCH - Program Counter: 4
+2024/05/25 18:21:55 PID: 5 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:21:56 PID: 6 - FETCH - Program Counter: 0
+2024/05/25 18:21:56 PID: 6 - Ejecutando: SET - AX,1
+2024/05/25 18:21:56 PID: 6 - FETCH - Program Counter: 1
+2024/05/25 18:21:56 PID: 6 - Ejecutando: SET - BX,1
+2024/05/25 18:21:56 PID: 6 - FETCH - Program Counter: 2
+2024/05/25 18:21:56 PID: 6 - Ejecutando: SUM - AX,BX
+2024/05/25 18:21:56 PID: 6 - FETCH - Program Counter: 3
+2024/05/25 18:21:56 PID: 6 - Ejecutando: SUB - AX,BX
+2024/05/25 18:21:56 PID: 6 - FETCH - Program Counter: 4
+2024/05/25 18:21:56 PID: 6 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:21:56 PID: 7 - FETCH - Program Counter: 0
+2024/05/25 18:21:56 PID: 7 - Ejecutando: SET - AX,1
+2024/05/25 18:21:56 PID: 7 - FETCH - Program Counter: 1
+2024/05/25 18:21:56 PID: 7 - Ejecutando: SET - BX,1
+2024/05/25 18:21:56 PID: 7 - FETCH - Program Counter: 2
+2024/05/25 18:21:56 PID: 7 - Ejecutando: SUM - AX,BX
+2024/05/25 18:21:56 PID: 7 - FETCH - Program Counter: 3
+2024/05/25 18:21:56 PID: 7 - Ejecutando: SUB - AX,BX
+2024/05/25 18:21:56 PID: 7 - FETCH - Program Counter: 4
+2024/05/25 18:21:56 PID: 7 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:21:57 PID: 8 - FETCH - Program Counter: 0
+2024/05/25 18:21:57 PID: 8 - Ejecutando: SET - AX,1
+2024/05/25 18:21:57 PID: 8 - FETCH - Program Counter: 1
+2024/05/25 18:21:57 PID: 8 - Ejecutando: SET - BX,1
+2024/05/25 18:21:57 PID: 8 - FETCH - Program Counter: 2
+2024/05/25 18:21:57 PID: 8 - Ejecutando: SUM - AX,BX
+2024/05/25 18:21:57 PID: 8 - FETCH - Program Counter: 3
+2024/05/25 18:21:57 PID: 8 - Ejecutando: SUB - AX,BX
+2024/05/25 18:21:57 PID: 8 - FETCH - Program Counter: 4
+2024/05/25 18:21:57 PID: 8 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:21:57 PID: 9 - FETCH - Program Counter: 0
+2024/05/25 18:21:57 PID: 9 - Ejecutando: SET - AX,1
+2024/05/25 18:21:57 PID: 9 - FETCH - Program Counter: 1
+2024/05/25 18:21:57 PID: 9 - Ejecutando: SET - BX,1
+2024/05/25 18:21:57 PID: 9 - FETCH - Program Counter: 2
+2024/05/25 18:21:57 PID: 9 - Ejecutando: SUM - AX,BX
+2024/05/25 18:21:57 PID: 9 - FETCH - Program Counter: 3
+2024/05/25 18:21:57 PID: 9 - Ejecutando: SUB - AX,BX
+2024/05/25 18:21:57 PID: 9 - FETCH - Program Counter: 4
+2024/05/25 18:21:57 PID: 9 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:28:08 PID: 0 - FETCH - Program Counter: 0
+2024/05/25 18:28:08 PID: 0 - Ejecutando: SET - AX,1
+2024/05/25 18:28:08 PID: 0 - FETCH - Program Counter: 1
+2024/05/25 18:28:08 PID: 0 - Ejecutando: SET - BX,1
+2024/05/25 18:28:08 PID: 0 - FETCH - Program Counter: 2
+2024/05/25 18:28:08 PID: 0 - Ejecutando: SUM - AX,BX
+2024/05/25 18:28:08 PID: 0 - FETCH - Program Counter: 3
+2024/05/25 18:28:08 PID: 0 - Ejecutando: SUB - AX,BX
+2024/05/25 18:28:08 PID: 0 - FETCH - Program Counter: 4
+2024/05/25 18:28:08 PID: 0 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:28:08 PID: 1 - FETCH - Program Counter: 0
+2024/05/25 18:28:08 PID: 1 - Ejecutando: SET - AX,1
+2024/05/25 18:28:08 PID: 1 - FETCH - Program Counter: 1
+2024/05/25 18:28:08 PID: 1 - Ejecutando: SET - BX,1
+2024/05/25 18:28:08 PID: 1 - FETCH - Program Counter: 2
+2024/05/25 18:28:08 PID: 1 - Ejecutando: SUM - AX,BX
+2024/05/25 18:28:08 PID: 1 - FETCH - Program Counter: 3
+2024/05/25 18:28:08 PID: 1 - Ejecutando: SUB - AX,BX
+2024/05/25 18:28:08 PID: 1 - FETCH - Program Counter: 4
+2024/05/25 18:28:08 PID: 1 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:28:09 PID: 2 - FETCH - Program Counter: 0
+2024/05/25 18:28:09 PID: 2 - Ejecutando: SET - AX,1
+2024/05/25 18:28:09 PID: 2 - FETCH - Program Counter: 1
+2024/05/25 18:28:09 PID: 2 - Ejecutando: SET - BX,1
+2024/05/25 18:28:09 PID: 2 - FETCH - Program Counter: 2
+2024/05/25 18:28:09 PID: 2 - Ejecutando: SUM - AX,BX
+2024/05/25 18:28:09 PID: 2 - FETCH - Program Counter: 3
+2024/05/25 18:28:09 PID: 2 - Ejecutando: SUB - AX,BX
+2024/05/25 18:28:09 PID: 2 - FETCH - Program Counter: 4
+2024/05/25 18:28:09 PID: 2 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:28:10 PID: 3 - FETCH - Program Counter: 0
+2024/05/25 18:28:10 PID: 3 - Ejecutando: SET - AX,1
+2024/05/25 18:28:10 PID: 3 - FETCH - Program Counter: 1
+2024/05/25 18:28:10 PID: 3 - Ejecutando: SET - BX,1
+2024/05/25 18:28:10 PID: 3 - FETCH - Program Counter: 2
+2024/05/25 18:28:10 PID: 3 - Ejecutando: SUM - AX,BX
+2024/05/25 18:28:10 PID: 3 - FETCH - Program Counter: 3
+2024/05/25 18:28:10 PID: 3 - Ejecutando: SUB - AX,BX
+2024/05/25 18:28:10 PID: 3 - FETCH - Program Counter: 4
+2024/05/25 18:28:10 PID: 3 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:28:10 PID: 4 - FETCH - Program Counter: 0
+2024/05/25 18:28:10 PID: 4 - Ejecutando: SET - AX,1
+2024/05/25 18:28:10 PID: 4 - FETCH - Program Counter: 1
+2024/05/25 18:28:10 PID: 4 - Ejecutando: SET - BX,1
+2024/05/25 18:28:10 PID: 4 - FETCH - Program Counter: 2
+2024/05/25 18:28:10 PID: 4 - Ejecutando: SUM - AX,BX
+2024/05/25 18:28:10 PID: 4 - FETCH - Program Counter: 3
+2024/05/25 18:28:10 PID: 4 - Ejecutando: SUB - AX,BX
+2024/05/25 18:28:10 PID: 4 - FETCH - Program Counter: 4
+2024/05/25 18:28:10 PID: 4 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:28:11 PID: 5 - FETCH - Program Counter: 0
+2024/05/25 18:28:11 PID: 5 - Ejecutando: SET - AX,1
+2024/05/25 18:28:11 PID: 5 - FETCH - Program Counter: 1
+2024/05/25 18:28:11 PID: 5 - Ejecutando: SET - BX,1
+2024/05/25 18:28:11 PID: 5 - FETCH - Program Counter: 2
+2024/05/25 18:28:11 PID: 5 - Ejecutando: SUM - AX,BX
+2024/05/25 18:28:11 PID: 5 - FETCH - Program Counter: 3
+2024/05/25 18:28:11 PID: 5 - Ejecutando: SUB - AX,BX
+2024/05/25 18:28:11 PID: 5 - FETCH - Program Counter: 4
+2024/05/25 18:28:11 PID: 5 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:28:11 PID: 6 - FETCH - Program Counter: 0
+2024/05/25 18:28:11 PID: 6 - Ejecutando: SET - AX,1
+2024/05/25 18:28:11 PID: 6 - FETCH - Program Counter: 1
+2024/05/25 18:28:11 PID: 6 - Ejecutando: SET - BX,1
+2024/05/25 18:28:11 PID: 6 - FETCH - Program Counter: 2
+2024/05/25 18:28:11 PID: 6 - Ejecutando: SUM - AX,BX
+2024/05/25 18:28:11 PID: 6 - FETCH - Program Counter: 3
+2024/05/25 18:28:11 PID: 6 - Ejecutando: SUB - AX,BX
+2024/05/25 18:28:11 PID: 6 - FETCH - Program Counter: 4
+2024/05/25 18:28:11 PID: 6 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:28:12 PID: 7 - FETCH - Program Counter: 0
+2024/05/25 18:28:12 PID: 7 - Ejecutando: SET - AX,1
+2024/05/25 18:28:12 PID: 7 - FETCH - Program Counter: 1
+2024/05/25 18:28:12 PID: 7 - Ejecutando: SET - BX,1
+2024/05/25 18:28:12 PID: 7 - FETCH - Program Counter: 2
+2024/05/25 18:28:12 PID: 7 - Ejecutando: SUM - AX,BX
+2024/05/25 18:28:12 PID: 7 - FETCH - Program Counter: 3
+2024/05/25 18:28:12 PID: 7 - Ejecutando: SUB - AX,BX
+2024/05/25 18:28:12 PID: 7 - FETCH - Program Counter: 4
+2024/05/25 18:28:12 PID: 7 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:28:12 PID: 8 - FETCH - Program Counter: 0
+2024/05/25 18:28:12 PID: 8 - Ejecutando: SET - AX,1
+2024/05/25 18:28:12 PID: 8 - FETCH - Program Counter: 1
+2024/05/25 18:28:12 PID: 8 - Ejecutando: SET - BX,1
+2024/05/25 18:28:12 PID: 8 - FETCH - Program Counter: 2
+2024/05/25 18:28:12 PID: 8 - Ejecutando: SUM - AX,BX
+2024/05/25 18:28:12 PID: 8 - FETCH - Program Counter: 3
+2024/05/25 18:28:12 PID: 8 - Ejecutando: SUB - AX,BX
+2024/05/25 18:28:12 PID: 8 - FETCH - Program Counter: 4
+2024/05/25 18:28:12 PID: 8 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:28:13 PID: 9 - FETCH - Program Counter: 0
+2024/05/25 18:28:13 PID: 9 - Ejecutando: SET - AX,1
+2024/05/25 18:28:13 PID: 9 - FETCH - Program Counter: 1
+2024/05/25 18:28:13 PID: 9 - Ejecutando: SET - BX,1
+2024/05/25 18:28:13 PID: 9 - FETCH - Program Counter: 2
+2024/05/25 18:28:13 PID: 9 - Ejecutando: SUM - AX,BX
+2024/05/25 18:28:13 PID: 9 - FETCH - Program Counter: 3
+2024/05/25 18:28:13 PID: 9 - Ejecutando: SUB - AX,BX
+2024/05/25 18:28:13 PID: 9 - FETCH - Program Counter: 4
+2024/05/25 18:28:13 PID: 9 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:28:13 PID: 0 - FETCH - Program Counter: 5
+2024/05/25 18:28:13 PID: 0 - Ejecutando: EXIT
+2024/05/25 18:28:13 PID: 10 - FETCH - Program Counter: 0
+2024/05/25 18:28:13 PID: 10 - Ejecutando: SET - AX,1
+2024/05/25 18:28:13 PID: 10 - FETCH - Program Counter: 1
+2024/05/25 18:28:13 PID: 10 - Ejecutando: SET - BX,1
+2024/05/25 18:28:13 PID: 10 - FETCH - Program Counter: 2
+2024/05/25 18:28:13 PID: 10 - Ejecutando: SUM - AX,BX
+2024/05/25 18:28:13 PID: 10 - FETCH - Program Counter: 3
+2024/05/25 18:28:13 PID: 10 - Ejecutando: SUB - AX,BX
+2024/05/25 18:28:13 PID: 10 - FETCH - Program Counter: 4
+2024/05/25 18:28:13 PID: 10 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:28:18 PID: 1 - FETCH - Program Counter: 5
+2024/05/25 18:28:18 PID: 1 - Ejecutando: EXIT
+2024/05/25 18:28:18 PID: 11 - FETCH - Program Counter: 0
+2024/05/25 18:28:18 PID: 11 - Ejecutando: SET - AX,1
+2024/05/25 18:28:18 PID: 11 - FETCH - Program Counter: 1
+2024/05/25 18:28:18 PID: 11 - Ejecutando: SET - BX,1
+2024/05/25 18:28:18 PID: 11 - FETCH - Program Counter: 2
+2024/05/25 18:28:18 PID: 11 - Ejecutando: SUM - AX,BX
+2024/05/25 18:28:18 PID: 11 - FETCH - Program Counter: 3
+2024/05/25 18:28:18 PID: 11 - Ejecutando: SUB - AX,BX
+2024/05/25 18:28:18 PID: 11 - FETCH - Program Counter: 4
+2024/05/25 18:28:18 PID: 11 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:28:23 PID: 2 - FETCH - Program Counter: 5
+2024/05/25 18:28:23 PID: 2 - Ejecutando: EXIT
+2024/05/25 18:28:23 PID: 12 - FETCH - Program Counter: 0
+2024/05/25 18:28:23 PID: 12 - Ejecutando: SET - AX,1
+2024/05/25 18:28:23 PID: 12 - FETCH - Program Counter: 1
+2024/05/25 18:28:23 PID: 12 - Ejecutando: SET - BX,1
+2024/05/25 18:28:23 PID: 12 - FETCH - Program Counter: 2
+2024/05/25 18:28:23 PID: 12 - Ejecutando: SUM - AX,BX
+2024/05/25 18:28:23 PID: 12 - FETCH - Program Counter: 3
+2024/05/25 18:28:23 PID: 12 - Ejecutando: SUB - AX,BX
+2024/05/25 18:28:23 PID: 12 - FETCH - Program Counter: 4
+2024/05/25 18:28:23 PID: 12 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:28:28 PID: 3 - FETCH - Program Counter: 5
+2024/05/25 18:28:28 PID: 3 - Ejecutando: EXIT
+2024/05/25 18:28:28 PID: 13 - FETCH - Program Counter: 0
+2024/05/25 18:28:28 PID: 13 - Ejecutando: SET - AX,1
+2024/05/25 18:28:28 PID: 13 - FETCH - Program Counter: 1
+2024/05/25 18:28:28 PID: 13 - Ejecutando: SET - BX,1
+2024/05/25 18:28:28 PID: 13 - FETCH - Program Counter: 2
+2024/05/25 18:28:28 PID: 13 - Ejecutando: SUM - AX,BX
+2024/05/25 18:28:28 PID: 13 - FETCH - Program Counter: 3
+2024/05/25 18:28:28 PID: 13 - Ejecutando: SUB - AX,BX
+2024/05/25 18:28:28 PID: 13 - FETCH - Program Counter: 4
+2024/05/25 18:28:28 PID: 13 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:28:33 PID: 4 - FETCH - Program Counter: 5
+2024/05/25 18:28:33 PID: 4 - Ejecutando: EXIT
+2024/05/25 18:28:33 PID: 14 - FETCH - Program Counter: 0
+2024/05/25 18:28:33 PID: 14 - Ejecutando: SET - AX,1
+2024/05/25 18:28:33 PID: 14 - FETCH - Program Counter: 1
+2024/05/25 18:28:33 PID: 14 - Ejecutando: SET - BX,1
+2024/05/25 18:28:33 PID: 14 - FETCH - Program Counter: 2
+2024/05/25 18:28:33 PID: 14 - Ejecutando: SUM - AX,BX
+2024/05/25 18:28:33 PID: 14 - FETCH - Program Counter: 3
+2024/05/25 18:28:33 PID: 14 - Ejecutando: SUB - AX,BX
+2024/05/25 18:28:33 PID: 14 - FETCH - Program Counter: 4
+2024/05/25 18:28:33 PID: 14 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:29:23 PID: 5 - FETCH - Program Counter: 5
+2024/05/25 18:29:23 PID: 5 - Ejecutando: EXIT
+2024/05/25 18:29:23 PID: 15 - FETCH - Program Counter: 0
+2024/05/25 18:29:23 PID: 15 - Ejecutando: SET - AX,1
+2024/05/25 18:29:23 PID: 15 - FETCH - Program Counter: 1
+2024/05/25 18:29:23 PID: 15 - Ejecutando: SET - BX,1
+2024/05/25 18:29:23 PID: 15 - FETCH - Program Counter: 2
+2024/05/25 18:29:23 PID: 15 - Ejecutando: SUM - AX,BX
+2024/05/25 18:29:23 PID: 15 - FETCH - Program Counter: 3
+2024/05/25 18:29:23 PID: 15 - Ejecutando: SUB - AX,BX
+2024/05/25 18:29:23 PID: 15 - FETCH - Program Counter: 4
+2024/05/25 18:29:23 PID: 15 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:29:28 PID: 6 - FETCH - Program Counter: 5
+2024/05/25 18:29:28 PID: 6 - Ejecutando: EXIT
+2024/05/25 18:29:28 PID: 16 - FETCH - Program Counter: 0
+2024/05/25 18:29:28 PID: 16 - Ejecutando: SET - AX,1
+2024/05/25 18:29:28 PID: 16 - FETCH - Program Counter: 1
+2024/05/25 18:29:28 PID: 16 - Ejecutando: SET - BX,1
+2024/05/25 18:29:28 PID: 16 - FETCH - Program Counter: 2
+2024/05/25 18:29:28 PID: 16 - Ejecutando: SUM - AX,BX
+2024/05/25 18:29:28 PID: 16 - FETCH - Program Counter: 3
+2024/05/25 18:29:28 PID: 16 - Ejecutando: SUB - AX,BX
+2024/05/25 18:29:28 PID: 16 - FETCH - Program Counter: 4
+2024/05/25 18:29:28 PID: 16 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:29:33 PID: 7 - FETCH - Program Counter: 5
+2024/05/25 18:29:33 PID: 7 - Ejecutando: EXIT
+2024/05/25 18:29:33 PID: 17 - FETCH - Program Counter: 0
+2024/05/25 18:29:33 PID: 17 - Ejecutando: SET - AX,1
+2024/05/25 18:29:33 PID: 17 - FETCH - Program Counter: 1
+2024/05/25 18:29:33 PID: 17 - Ejecutando: SET - BX,1
+2024/05/25 18:29:33 PID: 17 - FETCH - Program Counter: 2
+2024/05/25 18:29:33 PID: 17 - Ejecutando: SUM - AX,BX
+2024/05/25 18:29:33 PID: 17 - FETCH - Program Counter: 3
+2024/05/25 18:29:33 PID: 17 - Ejecutando: SUB - AX,BX
+2024/05/25 18:29:33 PID: 17 - FETCH - Program Counter: 4
+2024/05/25 18:29:33 PID: 17 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:29:40 PID: 8 - FETCH - Program Counter: 5
+2024/05/25 18:29:40 PID: 8 - Ejecutando: EXIT
+2024/05/25 18:29:40 PID: 18 - FETCH - Program Counter: 0
+2024/05/25 18:29:40 PID: 18 - Ejecutando: SET - AX,1
+2024/05/25 18:29:40 PID: 18 - FETCH - Program Counter: 1
+2024/05/25 18:29:40 PID: 18 - Ejecutando: SET - BX,1
+2024/05/25 18:29:40 PID: 18 - FETCH - Program Counter: 2
+2024/05/25 18:29:40 PID: 18 - Ejecutando: SUM - AX,BX
+2024/05/25 18:29:40 PID: 18 - FETCH - Program Counter: 3
+2024/05/25 18:29:40 PID: 18 - Ejecutando: SUB - AX,BX
+2024/05/25 18:29:40 PID: 18 - FETCH - Program Counter: 4
+2024/05/25 18:29:40 PID: 18 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:29:45 PID: 9 - FETCH - Program Counter: 5
+2024/05/25 18:29:45 PID: 9 - Ejecutando: EXIT
+2024/05/25 18:29:45 PID: 19 - FETCH - Program Counter: 0
+2024/05/25 18:29:45 PID: 19 - Ejecutando: SET - AX,1
+2024/05/25 18:29:45 PID: 19 - FETCH - Program Counter: 1
+2024/05/25 18:29:45 PID: 19 - Ejecutando: SET - BX,1
+2024/05/25 18:29:45 PID: 19 - FETCH - Program Counter: 2
+2024/05/25 18:29:45 PID: 19 - Ejecutando: SUM - AX,BX
+2024/05/25 18:29:45 PID: 19 - FETCH - Program Counter: 3
+2024/05/25 18:29:45 PID: 19 - Ejecutando: SUB - AX,BX
+2024/05/25 18:29:45 PID: 19 - FETCH - Program Counter: 4
+2024/05/25 18:29:45 PID: 19 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:29:50 PID: 10 - FETCH - Program Counter: 5
+2024/05/25 18:29:50 PID: 10 - Ejecutando: EXIT
+2024/05/25 18:29:50 PID: 20 - FETCH - Program Counter: 0
+2024/05/25 18:29:50 PID: 20 - Ejecutando: SET - AX,1
+2024/05/25 18:29:50 PID: 20 - FETCH - Program Counter: 1
+2024/05/25 18:29:50 PID: 20 - Ejecutando: SET - BX,1
+2024/05/25 18:29:50 PID: 20 - FETCH - Program Counter: 2
+2024/05/25 18:29:50 PID: 20 - Ejecutando: SUM - AX,BX
+2024/05/25 18:29:50 PID: 20 - FETCH - Program Counter: 3
+2024/05/25 18:29:50 PID: 20 - Ejecutando: SUB - AX,BX
+2024/05/25 18:29:50 PID: 20 - FETCH - Program Counter: 4
+2024/05/25 18:29:50 PID: 20 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:29:55 PID: 11 - FETCH - Program Counter: 5
+2024/05/25 18:29:55 PID: 11 - Ejecutando: EXIT
+2024/05/25 18:29:55 PID: 21 - FETCH - Program Counter: 0
+2024/05/25 18:29:55 PID: 21 - Ejecutando: SET - AX,1
+2024/05/25 18:29:55 PID: 21 - FETCH - Program Counter: 1
+2024/05/25 18:29:55 PID: 21 - Ejecutando: SET - BX,1
+2024/05/25 18:29:55 PID: 21 - FETCH - Program Counter: 2
+2024/05/25 18:29:55 PID: 21 - Ejecutando: SUM - AX,BX
+2024/05/25 18:29:55 PID: 21 - FETCH - Program Counter: 3
+2024/05/25 18:29:55 PID: 21 - Ejecutando: SUB - AX,BX
+2024/05/25 18:29:55 PID: 21 - FETCH - Program Counter: 4
+2024/05/25 18:29:55 PID: 21 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:30:00 PID: 12 - FETCH - Program Counter: 5
+2024/05/25 18:30:00 PID: 12 - Ejecutando: EXIT
+2024/05/25 18:30:00 PID: 22 - FETCH - Program Counter: 0
+2024/05/25 18:30:00 PID: 22 - Ejecutando: SET - AX,1
+2024/05/25 18:30:00 PID: 22 - FETCH - Program Counter: 1
+2024/05/25 18:30:00 PID: 22 - Ejecutando: SET - BX,1
+2024/05/25 18:30:00 PID: 22 - FETCH - Program Counter: 2
+2024/05/25 18:30:00 PID: 22 - Ejecutando: SUM - AX,BX
+2024/05/25 18:30:00 PID: 22 - FETCH - Program Counter: 3
+2024/05/25 18:30:00 PID: 22 - Ejecutando: SUB - AX,BX
+2024/05/25 18:30:00 PID: 22 - FETCH - Program Counter: 4
+2024/05/25 18:30:00 PID: 22 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:30:05 PID: 13 - FETCH - Program Counter: 5
+2024/05/25 18:30:05 PID: 13 - Ejecutando: EXIT
+2024/05/25 18:30:05 PID: 23 - FETCH - Program Counter: 0
+2024/05/25 18:30:05 PID: 23 - Ejecutando: SET - AX,1
+2024/05/25 18:30:05 PID: 23 - FETCH - Program Counter: 1
+2024/05/25 18:30:05 PID: 23 - Ejecutando: SET - BX,1
+2024/05/25 18:30:05 PID: 23 - FETCH - Program Counter: 2
+2024/05/25 18:30:05 PID: 23 - Ejecutando: SUM - AX,BX
+2024/05/25 18:30:05 PID: 23 - FETCH - Program Counter: 3
+2024/05/25 18:30:05 PID: 23 - Ejecutando: SUB - AX,BX
+2024/05/25 18:30:05 PID: 23 - FETCH - Program Counter: 4
+2024/05/25 18:30:05 PID: 23 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:30:10 PID: 14 - FETCH - Program Counter: 5
+2024/05/25 18:30:10 PID: 14 - Ejecutando: EXIT
+2024/05/25 18:30:10 PID: 24 - FETCH - Program Counter: 0
+2024/05/25 18:30:10 PID: 24 - Ejecutando: SET - AX,1
+2024/05/25 18:30:10 PID: 24 - FETCH - Program Counter: 1
+2024/05/25 18:30:10 PID: 24 - Ejecutando: SET - BX,1
+2024/05/25 18:30:10 PID: 24 - FETCH - Program Counter: 2
+2024/05/25 18:30:10 PID: 24 - Ejecutando: SUM - AX,BX
+2024/05/25 18:30:10 PID: 24 - FETCH - Program Counter: 3
+2024/05/25 18:30:10 PID: 24 - Ejecutando: SUB - AX,BX
+2024/05/25 18:30:10 PID: 24 - FETCH - Program Counter: 4
+2024/05/25 18:30:10 PID: 24 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:30:15 PID: 15 - FETCH - Program Counter: 5
+2024/05/25 18:30:15 PID: 15 - Ejecutando: EXIT
+2024/05/25 18:30:15 PID: 25 - FETCH - Program Counter: 0
+2024/05/25 18:30:15 PID: 25 - Ejecutando: SET - AX,1
+2024/05/25 18:30:15 PID: 25 - FETCH - Program Counter: 1
+2024/05/25 18:30:15 PID: 25 - Ejecutando: SET - BX,1
+2024/05/25 18:30:15 PID: 25 - FETCH - Program Counter: 2
+2024/05/25 18:30:15 PID: 25 - Ejecutando: SUM - AX,BX
+2024/05/25 18:30:15 PID: 25 - FETCH - Program Counter: 3
+2024/05/25 18:30:15 PID: 25 - Ejecutando: SUB - AX,BX
+2024/05/25 18:30:15 PID: 25 - FETCH - Program Counter: 4
+2024/05/25 18:30:15 PID: 25 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:30:20 PID: 16 - FETCH - Program Counter: 5
+2024/05/25 18:30:20 PID: 16 - Ejecutando: EXIT
+2024/05/25 18:30:20 PID: 26 - FETCH - Program Counter: 0
+2024/05/25 18:30:20 PID: 26 - Ejecutando: SET - AX,1
+2024/05/25 18:30:20 PID: 26 - FETCH - Program Counter: 1
+2024/05/25 18:30:20 PID: 26 - Ejecutando: SET - BX,1
+2024/05/25 18:30:20 PID: 26 - FETCH - Program Counter: 2
+2024/05/25 18:30:20 PID: 26 - Ejecutando: SUM - AX,BX
+2024/05/25 18:30:20 PID: 26 - FETCH - Program Counter: 3
+2024/05/25 18:30:20 PID: 26 - Ejecutando: SUB - AX,BX
+2024/05/25 18:30:20 PID: 26 - FETCH - Program Counter: 4
+2024/05/25 18:30:20 PID: 26 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:30:25 PID: 17 - FETCH - Program Counter: 5
+2024/05/25 18:30:25 PID: 17 - Ejecutando: EXIT
+2024/05/25 18:30:25 PID: 27 - FETCH - Program Counter: 0
+2024/05/25 18:30:25 PID: 27 - Ejecutando: SET - AX,1
+2024/05/25 18:30:25 PID: 27 - FETCH - Program Counter: 1
+2024/05/25 18:30:25 PID: 27 - Ejecutando: SET - BX,1
+2024/05/25 18:30:25 PID: 27 - FETCH - Program Counter: 2
+2024/05/25 18:30:25 PID: 27 - Ejecutando: SUM - AX,BX
+2024/05/25 18:30:25 PID: 27 - FETCH - Program Counter: 3
+2024/05/25 18:30:25 PID: 27 - Ejecutando: SUB - AX,BX
+2024/05/25 18:30:25 PID: 27 - FETCH - Program Counter: 4
+2024/05/25 18:30:25 PID: 27 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:30:30 PID: 18 - FETCH - Program Counter: 5
+2024/05/25 18:30:30 PID: 18 - Ejecutando: EXIT
+2024/05/25 18:30:30 PID: 28 - FETCH - Program Counter: 0
+2024/05/25 18:30:30 PID: 28 - Ejecutando: SET - AX,1
+2024/05/25 18:30:30 PID: 28 - FETCH - Program Counter: 1
+2024/05/25 18:30:30 PID: 28 - Ejecutando: SET - BX,1
+2024/05/25 18:30:30 PID: 28 - FETCH - Program Counter: 2
+2024/05/25 18:30:30 PID: 28 - Ejecutando: SUM - AX,BX
+2024/05/25 18:30:30 PID: 28 - FETCH - Program Counter: 3
+2024/05/25 18:30:30 PID: 28 - Ejecutando: SUB - AX,BX
+2024/05/25 18:30:30 PID: 28 - FETCH - Program Counter: 4
+2024/05/25 18:30:30 PID: 28 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:30:35 PID: 19 - FETCH - Program Counter: 5
+2024/05/25 18:30:35 PID: 19 - Ejecutando: EXIT
+2024/05/25 18:30:35 PID: 29 - FETCH - Program Counter: 0
+2024/05/25 18:30:35 PID: 29 - Ejecutando: SET - AX,1
+2024/05/25 18:30:35 PID: 29 - FETCH - Program Counter: 1
+2024/05/25 18:30:35 PID: 29 - Ejecutando: SET - BX,1
+2024/05/25 18:30:35 PID: 29 - FETCH - Program Counter: 2
+2024/05/25 18:30:35 PID: 29 - Ejecutando: SUM - AX,BX
+2024/05/25 18:30:35 PID: 29 - FETCH - Program Counter: 3
+2024/05/25 18:30:35 PID: 29 - Ejecutando: SUB - AX,BX
+2024/05/25 18:30:35 PID: 29 - FETCH - Program Counter: 4
+2024/05/25 18:30:35 PID: 29 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:30:40 PID: 20 - FETCH - Program Counter: 5
+2024/05/25 18:30:40 PID: 20 - Ejecutando: EXIT
+2024/05/25 18:30:40 PID: 30 - FETCH - Program Counter: 0
+2024/05/25 18:30:40 PID: 30 - Ejecutando: SET - AX,1
+2024/05/25 18:30:40 PID: 30 - FETCH - Program Counter: 1
+2024/05/25 18:30:40 PID: 30 - Ejecutando: SET - BX,1
+2024/05/25 18:30:40 PID: 30 - FETCH - Program Counter: 2
+2024/05/25 18:30:40 PID: 30 - Ejecutando: SUM - AX,BX
+2024/05/25 18:30:40 PID: 30 - FETCH - Program Counter: 3
+2024/05/25 18:30:40 PID: 30 - Ejecutando: SUB - AX,BX
+2024/05/25 18:30:40 PID: 30 - FETCH - Program Counter: 4
+2024/05/25 18:30:40 PID: 30 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:30:45 PID: 21 - FETCH - Program Counter: 5
+2024/05/25 18:30:45 PID: 21 - Ejecutando: EXIT
+2024/05/25 18:30:45 PID: 31 - FETCH - Program Counter: 0
+2024/05/25 18:30:45 PID: 31 - Ejecutando: SET - AX,1
+2024/05/25 18:30:45 PID: 31 - FETCH - Program Counter: 1
+2024/05/25 18:30:45 PID: 31 - Ejecutando: SET - BX,1
+2024/05/25 18:30:45 PID: 31 - FETCH - Program Counter: 2
+2024/05/25 18:30:45 PID: 31 - Ejecutando: SUM - AX,BX
+2024/05/25 18:30:45 PID: 31 - FETCH - Program Counter: 3
+2024/05/25 18:30:45 PID: 31 - Ejecutando: SUB - AX,BX
+2024/05/25 18:30:45 PID: 31 - FETCH - Program Counter: 4
+2024/05/25 18:30:45 PID: 31 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:37:14 PID: 0 - FETCH - Program Counter: 0
+2024/05/25 18:37:14 PID: 0 - Ejecutando: SET - AX,1
+2024/05/25 18:37:14 PID: 0 - FETCH - Program Counter: 1
+2024/05/25 18:37:14 PID: 0 - Ejecutando: SET - BX,1
+2024/05/25 18:37:14 PID: 0 - FETCH - Program Counter: 2
+2024/05/25 18:37:14 PID: 0 - Ejecutando: SUM - AX,BX
+2024/05/25 18:37:14 PID: 0 - FETCH - Program Counter: 3
+2024/05/25 18:37:14 PID: 0 - Ejecutando: SUB - AX,BX
+2024/05/25 18:37:14 PID: 0 - FETCH - Program Counter: 4
+2024/05/25 18:37:14 PID: 0 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:37:15 PID: 1 - FETCH - Program Counter: 0
+2024/05/25 18:37:15 PID: 1 - Ejecutando: SET - AX,1
+2024/05/25 18:37:15 PID: 1 - FETCH - Program Counter: 1
+2024/05/25 18:37:15 PID: 1 - Ejecutando: SET - BX,1
+2024/05/25 18:37:15 PID: 1 - FETCH - Program Counter: 2
+2024/05/25 18:37:15 PID: 1 - Ejecutando: SUM - AX,BX
+2024/05/25 18:37:15 PID: 1 - FETCH - Program Counter: 3
+2024/05/25 18:37:15 PID: 1 - Ejecutando: SUB - AX,BX
+2024/05/25 18:37:15 PID: 1 - FETCH - Program Counter: 4
+2024/05/25 18:37:15 PID: 1 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:37:16 PID: 2 - FETCH - Program Counter: 0
+2024/05/25 18:37:16 PID: 2 - Ejecutando: SET - AX,1
+2024/05/25 18:37:16 PID: 2 - FETCH - Program Counter: 1
+2024/05/25 18:37:16 PID: 2 - Ejecutando: SET - BX,1
+2024/05/25 18:37:16 PID: 2 - FETCH - Program Counter: 2
+2024/05/25 18:37:16 PID: 2 - Ejecutando: SUM - AX,BX
+2024/05/25 18:37:16 PID: 2 - FETCH - Program Counter: 3
+2024/05/25 18:37:16 PID: 2 - Ejecutando: SUB - AX,BX
+2024/05/25 18:37:16 PID: 2 - FETCH - Program Counter: 4
+2024/05/25 18:37:16 PID: 2 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:37:16 PID: 3 - FETCH - Program Counter: 0
+2024/05/25 18:37:16 PID: 3 - Ejecutando: SET - AX,1
+2024/05/25 18:37:16 PID: 3 - FETCH - Program Counter: 1
+2024/05/25 18:37:16 PID: 3 - Ejecutando: SET - BX,1
+2024/05/25 18:37:16 PID: 3 - FETCH - Program Counter: 2
+2024/05/25 18:37:16 PID: 3 - Ejecutando: SUM - AX,BX
+2024/05/25 18:37:16 PID: 3 - FETCH - Program Counter: 3
+2024/05/25 18:37:16 PID: 3 - Ejecutando: SUB - AX,BX
+2024/05/25 18:37:16 PID: 3 - FETCH - Program Counter: 4
+2024/05/25 18:37:16 PID: 3 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:37:17 PID: 4 - FETCH - Program Counter: 0
+2024/05/25 18:37:17 PID: 4 - Ejecutando: SET - AX,1
+2024/05/25 18:37:17 PID: 4 - FETCH - Program Counter: 1
+2024/05/25 18:37:17 PID: 4 - Ejecutando: SET - BX,1
+2024/05/25 18:37:17 PID: 4 - FETCH - Program Counter: 2
+2024/05/25 18:37:17 PID: 4 - Ejecutando: SUM - AX,BX
+2024/05/25 18:37:17 PID: 4 - FETCH - Program Counter: 3
+2024/05/25 18:37:17 PID: 4 - Ejecutando: SUB - AX,BX
+2024/05/25 18:37:17 PID: 4 - FETCH - Program Counter: 4
+2024/05/25 18:37:17 PID: 4 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:37:17 PID: 5 - FETCH - Program Counter: 0
+2024/05/25 18:37:17 PID: 5 - Ejecutando: SET - AX,1
+2024/05/25 18:37:17 PID: 5 - FETCH - Program Counter: 1
+2024/05/25 18:37:17 PID: 5 - Ejecutando: SET - BX,1
+2024/05/25 18:37:17 PID: 5 - FETCH - Program Counter: 2
+2024/05/25 18:37:17 PID: 5 - Ejecutando: SUM - AX,BX
+2024/05/25 18:37:17 PID: 5 - FETCH - Program Counter: 3
+2024/05/25 18:37:17 PID: 5 - Ejecutando: SUB - AX,BX
+2024/05/25 18:37:17 PID: 5 - FETCH - Program Counter: 4
+2024/05/25 18:37:17 PID: 5 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:37:18 PID: 6 - FETCH - Program Counter: 0
+2024/05/25 18:37:18 PID: 6 - Ejecutando: SET - AX,1
+2024/05/25 18:37:18 PID: 6 - FETCH - Program Counter: 1
+2024/05/25 18:37:18 PID: 6 - Ejecutando: SET - BX,1
+2024/05/25 18:37:18 PID: 6 - FETCH - Program Counter: 2
+2024/05/25 18:37:18 PID: 6 - Ejecutando: SUM - AX,BX
+2024/05/25 18:37:18 PID: 6 - FETCH - Program Counter: 3
+2024/05/25 18:37:18 PID: 6 - Ejecutando: SUB - AX,BX
+2024/05/25 18:37:18 PID: 6 - FETCH - Program Counter: 4
+2024/05/25 18:37:18 PID: 6 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:37:18 PID: 7 - FETCH - Program Counter: 0
+2024/05/25 18:37:18 PID: 7 - Ejecutando: SET - AX,1
+2024/05/25 18:37:18 PID: 7 - FETCH - Program Counter: 1
+2024/05/25 18:37:18 PID: 7 - Ejecutando: SET - BX,1
+2024/05/25 18:37:18 PID: 7 - FETCH - Program Counter: 2
+2024/05/25 18:37:18 PID: 7 - Ejecutando: SUM - AX,BX
+2024/05/25 18:37:18 PID: 7 - FETCH - Program Counter: 3
+2024/05/25 18:37:18 PID: 7 - Ejecutando: SUB - AX,BX
+2024/05/25 18:37:18 PID: 7 - FETCH - Program Counter: 4
+2024/05/25 18:37:18 PID: 7 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:37:19 PID: 8 - FETCH - Program Counter: 0
+2024/05/25 18:37:19 PID: 8 - Ejecutando: SET - AX,1
+2024/05/25 18:37:19 PID: 8 - FETCH - Program Counter: 1
+2024/05/25 18:37:19 PID: 8 - Ejecutando: SET - BX,1
+2024/05/25 18:37:19 PID: 8 - FETCH - Program Counter: 2
+2024/05/25 18:37:19 PID: 8 - Ejecutando: SUM - AX,BX
+2024/05/25 18:37:19 PID: 8 - FETCH - Program Counter: 3
+2024/05/25 18:37:19 PID: 8 - Ejecutando: SUB - AX,BX
+2024/05/25 18:37:19 PID: 8 - FETCH - Program Counter: 4
+2024/05/25 18:37:19 PID: 8 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:37:19 PID: 9 - FETCH - Program Counter: 0
+2024/05/25 18:37:19 PID: 9 - Ejecutando: SET - AX,1
+2024/05/25 18:37:19 PID: 9 - FETCH - Program Counter: 1
+2024/05/25 18:37:19 PID: 9 - Ejecutando: SET - BX,1
+2024/05/25 18:37:19 PID: 9 - FETCH - Program Counter: 2
+2024/05/25 18:37:19 PID: 9 - Ejecutando: SUM - AX,BX
+2024/05/25 18:37:19 PID: 9 - FETCH - Program Counter: 3
+2024/05/25 18:37:19 PID: 9 - Ejecutando: SUB - AX,BX
+2024/05/25 18:37:19 PID: 9 - FETCH - Program Counter: 4
+2024/05/25 18:37:19 PID: 9 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:37:19 PID: 0 - FETCH - Program Counter: 5
+2024/05/25 18:37:19 PID: 0 - Ejecutando: EXIT
+2024/05/25 18:37:20 PID: 10 - FETCH - Program Counter: 0
+2024/05/25 18:37:20 PID: 10 - Ejecutando: SET - AX,1
+2024/05/25 18:37:20 PID: 10 - FETCH - Program Counter: 1
+2024/05/25 18:37:20 PID: 10 - Ejecutando: SET - BX,1
+2024/05/25 18:37:20 PID: 10 - FETCH - Program Counter: 2
+2024/05/25 18:37:20 PID: 10 - Ejecutando: SUM - AX,BX
+2024/05/25 18:37:20 PID: 10 - FETCH - Program Counter: 3
+2024/05/25 18:37:20 PID: 10 - Ejecutando: SUB - AX,BX
+2024/05/25 18:37:20 PID: 10 - FETCH - Program Counter: 4
+2024/05/25 18:37:20 PID: 10 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:37:24 PID: 1 - FETCH - Program Counter: 5
+2024/05/25 18:37:24 PID: 1 - Ejecutando: EXIT
+2024/05/25 18:37:24 PID: 11 - FETCH - Program Counter: 0
+2024/05/25 18:37:24 PID: 11 - Ejecutando: SET - AX,1
+2024/05/25 18:37:24 PID: 11 - FETCH - Program Counter: 1
+2024/05/25 18:37:24 PID: 11 - Ejecutando: SET - BX,1
+2024/05/25 18:37:24 PID: 11 - FETCH - Program Counter: 2
+2024/05/25 18:37:24 PID: 11 - Ejecutando: SUM - AX,BX
+2024/05/25 18:37:24 PID: 11 - FETCH - Program Counter: 3
+2024/05/25 18:37:24 PID: 11 - Ejecutando: SUB - AX,BX
+2024/05/25 18:37:24 PID: 11 - FETCH - Program Counter: 4
+2024/05/25 18:37:24 PID: 11 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:37:29 PID: 2 - FETCH - Program Counter: 5
+2024/05/25 18:37:29 PID: 2 - Ejecutando: EXIT
+2024/05/25 18:37:29 PID: 12 - FETCH - Program Counter: 0
+2024/05/25 18:37:29 PID: 12 - Ejecutando: SET - AX,1
+2024/05/25 18:37:29 PID: 12 - FETCH - Program Counter: 1
+2024/05/25 18:37:29 PID: 12 - Ejecutando: SET - BX,1
+2024/05/25 18:37:29 PID: 12 - FETCH - Program Counter: 2
+2024/05/25 18:37:29 PID: 12 - Ejecutando: SUM - AX,BX
+2024/05/25 18:37:29 PID: 12 - FETCH - Program Counter: 3
+2024/05/25 18:37:29 PID: 12 - Ejecutando: SUB - AX,BX
+2024/05/25 18:37:29 PID: 12 - FETCH - Program Counter: 4
+2024/05/25 18:37:29 PID: 12 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:37:34 PID: 3 - FETCH - Program Counter: 5
+2024/05/25 18:37:34 PID: 3 - Ejecutando: EXIT
+2024/05/25 18:37:34 PID: 13 - FETCH - Program Counter: 0
+2024/05/25 18:37:34 PID: 13 - Ejecutando: SET - AX,1
+2024/05/25 18:37:34 PID: 13 - FETCH - Program Counter: 1
+2024/05/25 18:37:34 PID: 13 - Ejecutando: SET - BX,1
+2024/05/25 18:37:34 PID: 13 - FETCH - Program Counter: 2
+2024/05/25 18:37:34 PID: 13 - Ejecutando: SUM - AX,BX
+2024/05/25 18:37:34 PID: 13 - FETCH - Program Counter: 3
+2024/05/25 18:37:34 PID: 13 - Ejecutando: SUB - AX,BX
+2024/05/25 18:37:34 PID: 13 - FETCH - Program Counter: 4
+2024/05/25 18:37:34 PID: 13 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:37:39 PID: 4 - FETCH - Program Counter: 5
+2024/05/25 18:37:39 PID: 4 - Ejecutando: EXIT
+2024/05/25 18:37:39 PID: 14 - FETCH - Program Counter: 0
+2024/05/25 18:37:39 PID: 14 - Ejecutando: SET - AX,1
+2024/05/25 18:37:39 PID: 14 - FETCH - Program Counter: 1
+2024/05/25 18:37:39 PID: 14 - Ejecutando: SET - BX,1
+2024/05/25 18:37:39 PID: 14 - FETCH - Program Counter: 2
+2024/05/25 18:37:39 PID: 14 - Ejecutando: SUM - AX,BX
+2024/05/25 18:37:39 PID: 14 - FETCH - Program Counter: 3
+2024/05/25 18:37:39 PID: 14 - Ejecutando: SUB - AX,BX
+2024/05/25 18:37:39 PID: 14 - FETCH - Program Counter: 4
+2024/05/25 18:37:39 PID: 14 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:37:44 PID: 5 - FETCH - Program Counter: 5
+2024/05/25 18:37:44 PID: 5 - Ejecutando: EXIT
+2024/05/25 18:37:44 PID: 15 - FETCH - Program Counter: 0
+2024/05/25 18:37:44 PID: 15 - Ejecutando: SET - AX,1
+2024/05/25 18:37:44 PID: 15 - FETCH - Program Counter: 1
+2024/05/25 18:37:44 PID: 15 - Ejecutando: SET - BX,1
+2024/05/25 18:37:44 PID: 15 - FETCH - Program Counter: 2
+2024/05/25 18:37:44 PID: 15 - Ejecutando: SUM - AX,BX
+2024/05/25 18:37:45 PID: 15 - FETCH - Program Counter: 3
+2024/05/25 18:37:45 PID: 15 - Ejecutando: SUB - AX,BX
+2024/05/25 18:37:45 PID: 15 - FETCH - Program Counter: 4
+2024/05/25 18:37:45 PID: 15 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:37:49 PID: 6 - FETCH - Program Counter: 5
+2024/05/25 18:37:49 PID: 6 - Ejecutando: EXIT
+2024/05/25 18:37:49 PID: 16 - FETCH - Program Counter: 0
+2024/05/25 18:37:50 PID: 16 - Ejecutando: SET - AX,1
+2024/05/25 18:37:50 PID: 16 - FETCH - Program Counter: 1
+2024/05/25 18:37:50 PID: 16 - Ejecutando: SET - BX,1
+2024/05/25 18:37:50 PID: 16 - FETCH - Program Counter: 2
+2024/05/25 18:37:50 PID: 16 - Ejecutando: SUM - AX,BX
+2024/05/25 18:37:50 PID: 16 - FETCH - Program Counter: 3
+2024/05/25 18:37:50 PID: 16 - Ejecutando: SUB - AX,BX
+2024/05/25 18:37:50 PID: 16 - FETCH - Program Counter: 4
+2024/05/25 18:37:50 PID: 16 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:37:55 PID: 7 - FETCH - Program Counter: 5
+2024/05/25 18:37:55 PID: 7 - Ejecutando: EXIT
+2024/05/25 18:37:55 PID: 17 - FETCH - Program Counter: 0
+2024/05/25 18:37:55 PID: 17 - Ejecutando: SET - AX,1
+2024/05/25 18:37:55 PID: 17 - FETCH - Program Counter: 1
+2024/05/25 18:37:55 PID: 17 - Ejecutando: SET - BX,1
+2024/05/25 18:37:55 PID: 17 - FETCH - Program Counter: 2
+2024/05/25 18:37:55 PID: 17 - Ejecutando: SUM - AX,BX
+2024/05/25 18:37:55 PID: 17 - FETCH - Program Counter: 3
+2024/05/25 18:37:55 PID: 17 - Ejecutando: SUB - AX,BX
+2024/05/25 18:37:55 PID: 17 - FETCH - Program Counter: 4
+2024/05/25 18:37:55 PID: 17 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:38:00 PID: 8 - FETCH - Program Counter: 5
+2024/05/25 18:38:00 PID: 8 - Ejecutando: EXIT
+2024/05/25 18:38:00 PID: 18 - FETCH - Program Counter: 0
+2024/05/25 18:38:00 PID: 18 - Ejecutando: SET - AX,1
+2024/05/25 18:38:00 PID: 18 - FETCH - Program Counter: 1
+2024/05/25 18:38:00 PID: 18 - Ejecutando: SET - BX,1
+2024/05/25 18:38:00 PID: 18 - FETCH - Program Counter: 2
+2024/05/25 18:38:00 PID: 18 - Ejecutando: SUM - AX,BX
+2024/05/25 18:38:00 PID: 18 - FETCH - Program Counter: 3
+2024/05/25 18:38:00 PID: 18 - Ejecutando: SUB - AX,BX
+2024/05/25 18:38:00 PID: 18 - FETCH - Program Counter: 4
+2024/05/25 18:38:00 PID: 18 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:43:59 PID: 0 - FETCH - Program Counter: 0
+2024/05/25 18:43:59 PID: 0 - Ejecutando: SET - AX,1
+2024/05/25 18:43:59 PID: 0 - FETCH - Program Counter: 1
+2024/05/25 18:43:59 PID: 0 - Ejecutando: SET - BX,1
+2024/05/25 18:43:59 PID: 0 - FETCH - Program Counter: 2
+2024/05/25 18:43:59 PID: 0 - Ejecutando: SUM - AX,BX
+2024/05/25 18:43:59 PID: 0 - FETCH - Program Counter: 3
+2024/05/25 18:43:59 PID: 0 - Ejecutando: SUB - AX,BX
+2024/05/25 18:45:13 PID: 0 - FETCH - Program Counter: 0
+2024/05/25 18:45:13 PID: 0 - Ejecutando: SET - AX,1
+2024/05/25 18:45:13 PID: 0 - FETCH - Program Counter: 1
+2024/05/25 18:45:13 PID: 0 - Ejecutando: SET - BX,1
+2024/05/25 18:45:13 PID: 0 - FETCH - Program Counter: 2
+2024/05/25 18:45:13 PID: 0 - Ejecutando: SUM - AX,BX
+2024/05/25 18:45:13 PID: 0 - FETCH - Program Counter: 3
+2024/05/25 18:45:13 PID: 0 - Ejecutando: SUB - AX,BX
+2024/05/25 18:45:13 PID: 0 - FETCH - Program Counter: 4
+2024/05/25 18:45:13 PID: 0 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:45:21 PID: 1 - FETCH - Program Counter: 0
+2024/05/25 18:45:21 PID: 1 - Ejecutando: SET - AX,1
+2024/05/25 18:45:21 PID: 1 - FETCH - Program Counter: 1
+2024/05/25 18:45:21 PID: 1 - Ejecutando: SET - BX,1
+2024/05/25 18:45:21 PID: 1 - FETCH - Program Counter: 2
+2024/05/25 18:45:21 PID: 1 - Ejecutando: SUM - AX,BX
+2024/05/25 18:45:21 PID: 1 - FETCH - Program Counter: 3
+2024/05/25 18:45:21 PID: 1 - Ejecutando: SUB - AX,BX
+2024/05/25 18:45:21 PID: 1 - FETCH - Program Counter: 4
+2024/05/25 18:45:21 PID: 1 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:45:25 PID: 2 - FETCH - Program Counter: 0
+2024/05/25 18:45:25 PID: 2 - Ejecutando: SET - AX,1
+2024/05/25 18:45:25 PID: 2 - FETCH - Program Counter: 1
+2024/05/25 18:45:25 PID: 2 - Ejecutando: SET - BX,1
+2024/05/25 18:45:25 PID: 2 - FETCH - Program Counter: 2
+2024/05/25 18:45:25 PID: 2 - Ejecutando: SUM - AX,BX
+2024/05/25 18:45:25 PID: 2 - FETCH - Program Counter: 3
+2024/05/25 18:45:25 PID: 2 - Ejecutando: SUB - AX,BX
+2024/05/25 18:45:26 PID: 3 - FETCH - Program Counter: 0
+2024/05/25 18:45:26 PID: 3 - Ejecutando: SET - AX,1
+2024/05/25 18:45:26 PID: 3 - FETCH - Program Counter: 1
+2024/05/25 18:45:26 PID: 3 - Ejecutando: SET - BX,1
+2024/05/25 18:45:26 PID: 3 - FETCH - Program Counter: 2
+2024/05/25 18:45:26 PID: 3 - Ejecutando: SUM - AX,BX
+2024/05/25 18:45:26 PID: 3 - FETCH - Program Counter: 3
+2024/05/25 18:45:26 PID: 3 - Ejecutando: SUB - AX,BX
+2024/05/25 18:45:26 PID: 3 - FETCH - Program Counter: 4
+2024/05/25 18:45:26 PID: 3 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:45:26 PID: 4 - FETCH - Program Counter: 0
+2024/05/25 18:45:26 PID: 4 - Ejecutando: SET - AX,1
+2024/05/25 18:45:26 PID: 4 - FETCH - Program Counter: 1
+2024/05/25 18:45:26 PID: 4 - Ejecutando: SET - BX,1
+2024/05/25 18:45:26 PID: 4 - FETCH - Program Counter: 2
+2024/05/25 18:45:26 PID: 4 - Ejecutando: SUM - AX,BX
+2024/05/25 18:45:27 PID: 5 - FETCH - Program Counter: 0
+2024/05/25 18:45:27 PID: 5 - Ejecutando: SET - AX,1
+2024/05/25 18:45:27 PID: 5 - FETCH - Program Counter: 1
+2024/05/25 18:45:27 PID: 5 - Ejecutando: SET - BX,1
+2024/05/25 18:45:27 PID: 5 - FETCH - Program Counter: 2
+2024/05/25 18:45:27 PID: 5 - Ejecutando: SUM - AX,BX
+2024/05/25 18:45:27 PID: 5 - FETCH - Program Counter: 3
+2024/05/25 18:45:27 PID: 5 - Ejecutando: SUB - AX,BX
+2024/05/25 18:45:27 PID: 5 - FETCH - Program Counter: 4
+2024/05/25 18:45:27 PID: 5 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:45:27 PID: 6 - FETCH - Program Counter: 0
+2024/05/25 18:45:27 PID: 6 - Ejecutando: SET - AX,1
+2024/05/25 18:45:27 PID: 6 - FETCH - Program Counter: 1
+2024/05/25 18:45:27 PID: 6 - Ejecutando: SET - BX,1
+2024/05/25 18:45:27 PID: 6 - FETCH - Program Counter: 2
+2024/05/25 18:45:27 PID: 6 - Ejecutando: SUM - AX,BX
+2024/05/25 18:45:27 PID: 6 - FETCH - Program Counter: 3
+2024/05/25 18:45:27 PID: 6 - Ejecutando: SUB - AX,BX
+2024/05/25 18:45:27 PID: 6 - FETCH - Program Counter: 4
+2024/05/25 18:45:27 PID: 6 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:45:28 PID: 7 - FETCH - Program Counter: 0
+2024/05/25 18:45:28 PID: 7 - Ejecutando: SET - AX,1
+2024/05/25 18:45:28 PID: 7 - FETCH - Program Counter: 1
+2024/05/25 18:45:28 PID: 7 - Ejecutando: SET - BX,1
+2024/05/25 18:45:28 PID: 7 - FETCH - Program Counter: 2
+2024/05/25 18:45:28 PID: 7 - Ejecutando: SUM - AX,BX
+2024/05/25 18:45:28 PID: 7 - FETCH - Program Counter: 3
+2024/05/25 18:45:28 PID: 7 - Ejecutando: SUB - AX,BX
+2024/05/25 18:45:28 PID: 7 - FETCH - Program Counter: 4
+2024/05/25 18:45:28 PID: 7 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:45:28 PID: 8 - FETCH - Program Counter: 0
+2024/05/25 18:45:28 PID: 8 - Ejecutando: SET - AX,1
+2024/05/25 18:45:28 PID: 8 - FETCH - Program Counter: 1
+2024/05/25 18:45:28 PID: 8 - Ejecutando: SET - BX,1
+2024/05/25 18:45:28 PID: 8 - FETCH - Program Counter: 2
+2024/05/25 18:45:28 PID: 8 - Ejecutando: SUM - AX,BX
+2024/05/25 18:45:28 PID: 8 - FETCH - Program Counter: 3
+2024/05/25 18:45:28 PID: 8 - Ejecutando: SUB - AX,BX
+2024/05/25 18:45:28 PID: 8 - FETCH - Program Counter: 4
+2024/05/25 18:45:28 PID: 8 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:45:29 PID: 9 - FETCH - Program Counter: 0
+2024/05/25 18:45:29 PID: 9 - Ejecutando: SET - AX,1
+2024/05/25 18:45:29 PID: 9 - FETCH - Program Counter: 1
+2024/05/25 18:45:29 PID: 9 - Ejecutando: SET - BX,1
+2024/05/25 18:45:29 PID: 9 - FETCH - Program Counter: 2
+2024/05/25 18:45:29 PID: 9 - Ejecutando: SUM - AX,BX
+2024/05/25 18:45:29 PID: 9 - FETCH - Program Counter: 3
+2024/05/25 18:45:29 PID: 9 - Ejecutando: SUB - AX,BX
+2024/05/25 18:45:29 PID: 10 - FETCH - Program Counter: 0
+2024/05/25 18:45:29 PID: 10 - Ejecutando: SET - AX,1
+2024/05/25 18:45:29 PID: 10 - FETCH - Program Counter: 1
+2024/05/25 18:45:29 PID: 10 - Ejecutando: SET - BX,1
+2024/05/25 18:45:29 PID: 10 - FETCH - Program Counter: 2
+2024/05/25 18:45:29 PID: 10 - Ejecutando: SUM - AX,BX
+2024/05/25 18:45:29 PID: 10 - FETCH - Program Counter: 3
+2024/05/25 18:45:29 PID: 10 - Ejecutando: SUB - AX,BX
+2024/05/25 18:45:29 PID: 10 - FETCH - Program Counter: 4
+2024/05/25 18:45:29 PID: 10 - Ejecutando: IO_GEN_SLEEP - Teclado,20
+2024/05/25 18:45:30 PID: 11 - FETCH - Program Counter: 0
+2024/05/25 18:45:30 PID: 11 - Ejecutando: SET - AX,1
+2024/05/25 18:45:30 PID: 11 - FETCH - Program Counter: 1
+2024/05/25 18:45:30 PID: 11 - Ejecutando: SET - BX,1
+2024/05/25 18:45:30 PID: 11 - FETCH - Program Counter: 2
+2024/05/25 18:45:30 PID: 11 - Ejecutando: SUM - AX,BX
+2024/05/25 18:45:30 PID: 11 - FETCH - Program Counter: 3
+2024/05/25 18:45:30 PID: 11 - Ejecutando: SUB - AX,BX

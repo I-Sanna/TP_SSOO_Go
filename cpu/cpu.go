@@ -8,17 +8,22 @@ import (
 )
 
 func main() {
-	//utils.ConfigurarLogger()
+	utils.ConfigurarLogger()
 
 	globals.ClientConfig = utils.IniciarConfiguracion("config.json")
 
 	mux := http.NewServeMux()
-	mux.HandleFunc("GET /probar", utils.ProbarCPU)
 	mux.HandleFunc("POST /PCB", utils.RecibirProceso)
-	//mux.HandleFunc("GET /RecibirPseudo{pseudocodigo", utils.LeerPseudo)
+
+	go muxInterrupciones(mux)
 
 	err := http.ListenAndServe(":"+strconv.Itoa(globals.ClientConfig.Port), mux)
 	if err != nil {
 		panic(err)
 	}
+}
+
+func muxInterrupciones(mux *http.ServeMux) {
+	mux.HandleFunc("GET /quantum/{pid}", utils.FinDeQuantum)
+	mux.HandleFunc("GET /desalojar/{pid}", utils.Desalojar)
 }

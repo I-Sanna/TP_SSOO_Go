@@ -20,7 +20,6 @@ func main() {
 	mux.HandleFunc("PUT /process", utils.CrearProceso)
 	mux.HandleFunc("GET /instruccion/{pid}/{pc}", utils.DevolverInstruccion)
 	mux.HandleFunc("GET /pagina/{pagina}", utils.BuscarMarco)
-	mux.HandleFunc("PUT /enviarPresudo/{pesudocodigo}", utils.EnviarPresudo)
 
 	err := http.ListenAndServe(":"+strconv.Itoa(globals.ClientConfig.Port), mux)
 	if err != nil {

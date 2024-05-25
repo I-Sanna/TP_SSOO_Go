@@ -11,6 +11,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"sync"
 )
 
 type PCB struct {
@@ -45,6 +46,8 @@ const (
 	Exit  ProcessState = "EXIT"
 )
 
+var mutexMensaje sync.Mutex
+
 var procesoActual PCB
 var interrupcion bool
 
@@ -63,6 +66,15 @@ func IniciarConfiguracion(filePath string) *globals.Config {
 	return config
 }
 
+func ConfigurarLogger() {
+	logFile, err := os.OpenFile("logs/cpu.log", os.O_CREATE|os.O_APPEND|os.O_RDWR, 0666)
+	if err != nil {
+		panic(err)
+	}
+	mw := io.MultiWriter(os.Stdout, logFile)
+	log.SetOutput(mw)
+}
+
 type BodyReqExec struct {
 	Pcb     PCB    `json:"pcb"`
 	Mensaje string `json:"mensaje"`
@@ -73,6 +85,7 @@ var resultadoEjecucion BodyReqExec
 func RecibirProceso(w http.ResponseWriter, r *http.Request) {
 	var paquete PCB
 	interrupcion = false
+	resultadoEjecucion.Mensaje = ""
 
 	err := json.NewDecoder(r.Body).Decode(&paquete)
 	if err != nil {
@@ -82,12 +95,10 @@ func RecibirProceso(w http.ResponseWriter, r *http.Request) {
 
 	procesoActual = paquete
 
-	log.Println("me llegó un Proceso")
-	log.Printf("%+v\n", paquete)
-
 	//Ejecutar las instrucciones
 
 	for !interrupcion {
+		log.Printf("PID: %d - FETCH - Program Counter: %d", procesoActual.PID, procesoActual.ProgramCounter)
 		instruccion := SolicitarInstruccion(procesoActual.PID, procesoActual.ProgramCounter)
 		decoYExecInstru(instruccion)
 		procesoActual.ProgramCounter++
@@ -105,12 +116,6 @@ func RecibirProceso(w http.ResponseWriter, r *http.Request) {
 	w.Write(respuesta)
 }
 
-func ProbarCPU(w http.ResponseWriter, r *http.Request) {
-	IO_GEN_SLEEP(1, "Teclado", 1000)
-	IO_GEN_SLEEP(2, "Teclado", 1000)
-	IO_GEN_SLEEP(3, "Teclado", 1000)
-}
-
 func SET(nombreRegistro string, valor int) {
 	if strlen(nombreRegistro) == 2 && strings.Contains(nombreRegistro, "X") {
 		var registro *uint8 = ObtenerRegistro8Bits(nombreRegistro)
@@ -119,7 +124,6 @@ func SET(nombreRegistro string, valor int) {
 		var registro *uint32 = ObtenerRegistro32Bits(nombreRegistro)
 		*registro = uint32(valor)
 	}
-	log.Printf("%+v\n", procesoActual)
 }
 
 func SUM(nombreRegistroDestino string, nombreRegistroOrigen string) {
@@ -132,7 +136,6 @@ func SUM(nombreRegistroDestino string, nombreRegistroOrigen string) {
 		var registroOrigen *uint32 = ObtenerRegistro32Bits(nombreRegistroOrigen)
 		*registroDestino = *registroDestino + *registroOrigen
 	}
-	log.Printf("%+v\n", procesoActual)
 }
 
 func SUB(nombreRegistroDestino string, nombreRegistroOrigen string) {
@@ -145,7 +148,6 @@ func SUB(nombreRegistroDestino string, nombreRegistroOrigen string) {
 		var registroOrigen *uint32 = ObtenerRegistro32Bits(nombreRegistroOrigen)
 		*registroDestino = *registroDestino - *registroOrigen
 	}
-	log.Printf("%+v\n", procesoActual)
 }
 
 func JNZ(nombreRegistro string, valor int) {
@@ -160,7 +162,6 @@ func JNZ(nombreRegistro string, valor int) {
 			procesoActual.RegistrosCPU.PC = uint32(valor)
 		}
 	}
-	log.Printf("%+v\n", procesoActual)
 }
 
 func strlen(str string) int {
@@ -210,12 +211,12 @@ type BodyRequestTime struct {
 	Instruccion string `json:"instruccion"`
 }
 
-func IO_GEN_SLEEP(pid int, nombre string, tiempo int) {
+func IO_GEN_SLEEP(nombre string, tiempo int) {
 	var sending BodyRequestTime
 
 	sending.Dispositivo = nombre
 	sending.CantidadIO = tiempo
-	sending.PID = pid
+	sending.PID = procesoActual.PID
 	sending.Instruccion = "SLEEP"
 
 	body, err := json.Marshal(sending)
@@ -230,21 +231,19 @@ func IO_GEN_SLEEP(pid int, nombre string, tiempo int) {
 		log.Printf("error enviando: %s", err.Error())
 		return
 	}
-
+	mutexMensaje.Lock()
 	if resp.StatusCode != http.StatusOK {
 		resultadoEjecucion.Mensaje = "EXIT INVALID_IO"
 	} else {
 		resultadoEjecucion.Mensaje = "BLOCKED " + sending.Dispositivo
 	}
+	mutexMensaje.Unlock()
 	interrupcion = true
-
-	log.Printf("respuesta del servidor: %s", resp.Status)
 }
 
 func decoYExecInstru(instrucciones string) {
 	//"Decodificar" instruccion
 	instru := strings.Split(strings.TrimRight(instrucciones, "\x00"), " ")
-
 	//Ejecutar instruccion
 	switch instru[0] {
 	case "SET":
@@ -253,12 +252,16 @@ func decoYExecInstru(instrucciones string) {
 			log.Printf("error enviando: %s", err.Error())
 			return
 		}
+		log.Printf("PID: %d - Ejecutando: %v - %v,%v", procesoActual.PID, instru[0], instru[1], instru[2])
 		SET(instru[1], valor)
 	case "SUM":
+		log.Printf("PID: %d - Ejecutando: %v - %v,%v", procesoActual.PID, instru[0], instru[1], instru[2])
 		SUM(instru[1], instru[2])
 	case "SUB":
+		log.Printf("PID: %d - Ejecutando: %v - %v,%v", procesoActual.PID, instru[0], instru[1], instru[2])
 		SUB(instru[1], instru[2])
 	case "JNZ":
+		log.Printf("PID: %d - Ejecutando: %v - %v,%v", procesoActual.PID, instru[0], instru[1], instru[2])
 		valor, err := strconv.Atoi(instru[2])
 		if err != nil {
 			log.Printf("error enviando: %s", err.Error())
@@ -266,15 +269,19 @@ func decoYExecInstru(instrucciones string) {
 		}
 		JNZ(instru[1], valor)
 	case "EXIT":
+		log.Printf("PID: %d - Ejecutando: %v", procesoActual.PID, instru[0])
+		mutexMensaje.Lock()
 		resultadoEjecucion.Mensaje = "EXIT SUCCESS"
+		mutexMensaje.Unlock()
 		interrupcion = true
 	case "IO_GEN_SLEEP":
+		log.Printf("PID: %d - Ejecutando: %v - %v,%v", procesoActual.PID, instru[0], instru[1], instru[2])
 		valor, err := strconv.Atoi(instru[2])
 		if err != nil {
 			log.Printf("error enviando: %s", err.Error())
 			return
 		}
-		IO_GEN_SLEEP(procesoActual.PID, instru[1], valor)
+		IO_GEN_SLEEP(instru[1], valor)
 	}
 }
 
@@ -311,8 +318,42 @@ func SolicitarInstruccion(pid int, pc int) string {
 	return instruccion
 }
 
-func LeerPseudo(w http.ResponseWriter, r *http.Request) {
-	//var paquete PCB
+func FinDeQuantum(w http.ResponseWriter, r *http.Request) {
+	pid := r.PathValue("pid")
 
-	//err := json.NewDecoder(r.Body).Decode(&paquete)
+	pidInt, err := strconv.Atoi(pid)
+	if err != nil {
+		http.Error(w, "Error al convertir de string a Int", 0)
+		return
+	}
+
+	if procesoActual.PID == pidInt {
+		mutexMensaje.Lock()
+		motivo := strings.Split(strings.TrimRight(resultadoEjecucion.Mensaje, "\x00"), " ")
+
+		if motivo[0] == "BLOCKED" || motivo[0] == "EXIT" {
+			mutexMensaje.Unlock()
+			return
+		} else {
+			resultadoEjecucion.Mensaje = "READY QUANTUM"
+		}
+		mutexMensaje.Unlock()
+		interrupcion = true
+	}
+
+}
+
+func Desalojar(w http.ResponseWriter, r *http.Request) {
+	pid := r.PathValue("pid")
+
+	pidInt, err := strconv.Atoi(pid)
+	if err != nil {
+		http.Error(w, "Error al convertir de string a Int", 0)
+		return
+	}
+
+	if procesoActual.PID == pidInt {
+		interrupcion = true
+	}
+
 }
