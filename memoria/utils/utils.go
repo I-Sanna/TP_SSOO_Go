@@ -15,6 +15,8 @@ var memoria []byte
 
 var tablaPaginas map[int]int
 
+var contadorPID int
+var instruccionesPID []int
 var instruccionesProcesos [][]string
 
 type BodyRequest struct {
@@ -46,8 +48,8 @@ func ConfigurarLogger() {
 }
 
 func InicializarMemoriaYTablas() {
+	contadorPID = 0
 	memoria = make([]byte, globals.ClientConfig.MemorySize)
-
 	tablaPaginas = make(map[int]int)
 }
 
@@ -88,15 +90,6 @@ func BuscarMarco(w http.ResponseWriter, r *http.Request) {
 	w.Write(respuesta)
 }
 
-/*
-	 func allocateMemory(w http.ResponseWriter, r *http.Request) {
-		address := len(memory)
-		memory[address] = "DATA"
-
-		fmt.Fprintf(w, "Memory allocated at address %d", address)
-	}
-*/
-
 func CrearProceso(w http.ResponseWriter, r *http.Request) {
 	var request BodyRequest
 
@@ -107,7 +100,10 @@ func CrearProceso(w http.ResponseWriter, r *http.Request) {
 	}
 
 	instrucciones := readFile(request.Path)
+	instruccionesPID = append(instruccionesPID, contadorPID)
 	instruccionesProcesos = append(instruccionesProcesos, instrucciones)
+
+	contadorPID++
 
 	w.WriteHeader(http.StatusOK)
 }
@@ -116,11 +112,21 @@ func DevolverInstruccion(w http.ResponseWriter, r *http.Request) {
 	pid := r.PathValue("pid")
 	pc := r.PathValue("pc")
 
-	indice, err := strconv.Atoi(pid)
+	var indice int
+
+	pidInt, err := strconv.Atoi(pid)
 	if err != nil {
 		http.Error(w, "Error al convertir de json a Int", http.StatusInternalServerError)
 		return
 	}
+
+	for index, valor := range instruccionesPID {
+		if valor == pidInt {
+			indice = index
+			break
+		}
+	}
+
 	subindice, err := strconv.Atoi(pc)
 	if err != nil {
 		http.Error(w, "Error al convertir de json a Int", http.StatusInternalServerError)

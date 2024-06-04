@@ -18,7 +18,7 @@ func main() {
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("PUT /process", utils.IniciarProceso)
-	//mux.HandleFunc("DELETE /process/{pid}", utils.FinalizarProceso)
+	mux.HandleFunc("DELETE /process/{pid}", utils.FinalizarProceso)
 	mux.HandleFunc("GET /process/{pid}", utils.EstadoProceso)
 	mux.HandleFunc("PUT /plani", utils.IniciarPlanificacion)
 	mux.HandleFunc("DELETE /plani", utils.DetenerPlanificacion)

@@ -42,6 +42,7 @@ var planificadorCortoPlazo sync.Mutex
 var planificadorLargoPlazo sync.Mutex
 var dispositivoGenerico sync.Mutex
 var mutexColaListos sync.Mutex
+var mutexColaListosQuantum sync.Mutex
 var mutexColaBlocked sync.Mutex
 var mutexColaNuevos sync.Mutex
 var mutexMapaEstados sync.Mutex
@@ -54,6 +55,7 @@ var contadorPID int
 var planificando bool
 var colaDeNuevos []PCB
 var colaDeListos []PCB
+var colaDeListosQuantum []PCB
 var colaDeBlocked []PCB
 var estadosProcesos map[int]string
 var recursos map[string]int
@@ -134,6 +136,8 @@ func InicializarPlanificador() {
 		go planificarFIFO()
 	case "RR":
 		go planificarRR()
+	case "VRR":
+		go planificarVRR()
 	}
 }
 
@@ -154,7 +158,7 @@ func planificarFIFO() {
 		planificadorCortoPlazo.Unlock()
 		planificadorCortoPlazo.Lock() //Estos semaforos es por si se ejecuto "detenerPlanificacion"
 
-		ManejarInterrupcion(mensaje, proceso)
+		ManejarInterrupcion(mensaje, proceso, false)
 
 		planificadorCortoPlazo.Unlock()
 	}
@@ -177,7 +181,7 @@ func planificarRR() {
 
 		// Enviar el proceso a la CPU para su ejecución
 
-		go quantum(proceso.PID)
+		go quantum(proceso.PID, proceso.Quantum)
 		mensaje := EnviarProcesoACPU(&proceso)
 
 		if mensaje == "error" {
@@ -187,57 +191,67 @@ func planificarRR() {
 		// Manejar la interrupción y la actualización de la cola de listos
 		planificadorCortoPlazo.Unlock()
 		planificadorCortoPlazo.Lock()
-		ManejarInterrupcion(mensaje, proceso)
+		ManejarInterrupcion(mensaje, proceso, false)
 
 		planificadorCortoPlazo.Unlock()
 	}
 }
 
-/*
 func planificarVRR() {
 	for {
 		<-semProcesosListos
 
 		planificadorCortoPlazo.Lock()
 
+		var proceso PCB
+		var colaVRR bool = false
+
 		// Selecciona el primer proceso en la lista de procesos
 		mutexColaListos.Lock()
-		proceso := colaDeListos[0]
+		mutexColaListosQuantum.Lock()
+		if len(colaDeListosQuantum) != 0 {
+			proceso = colaDeListosQuantum[0]
+			colaVRR = true
+		} else {
+			proceso = colaDeListos[0]
+		}
 		mutexColaListos.Unlock()
+		mutexColaListosQuantum.Unlock()
 
 		// Cambia el estado del proceso a EXEC
 		cambiarEstado(proceso.Estado, "EXEC", &proceso)
 
 		// Enviar el proceso a la CPU para su ejecución
+		go quantum(proceso.PID, proceso.Quantum)
+
 		start := time.Now()
 		mensaje := EnviarProcesoACPU(&proceso)
 		elapsed := time.Since(start)
-		if mensaje != "error" {
-			log.Printf("Proceso %d ejecutando con mensaje: %s", proceso.PID, mensaje)
-		} else {
+
+		if mensaje == "error" {
 			log.Printf("Error ejecutando el proceso %d", proceso.PID)
 		}
 
-		proceso.Quantum = proceso.Quantum - int(elapsed) //Le restamos lo que tardo en ejecutar o le reseteamos el quantum si fue desalojado por ello
-		// Simula la ejecución durante el quantum
-		time.Sleep(time.Duration(globals.ClientConfig.Quantum) * time.Millisecond)
-
-		if proceso.Estado != "EXIT" {
-			log.Printf("\nfin de quantum\n")
+		//Le restamos lo que tardo en ejecutar o le reseteamos el quantum si fue desalojado por ello
+		if int(int(elapsed)/1000000) < proceso.Quantum {
+			proceso.Quantum = proceso.Quantum - int(int(elapsed)/1000000) //Time.Since me devuelve un tiempo con 6 decimales de precision
+		} else {
+			proceso.Quantum = globals.ClientConfig.Quantum
 		}
+
+		// Simula la ejecución durante el quantum
 
 		// Manejar la interrupción y la actualización de la cola de listos
 		planificadorCortoPlazo.Unlock()
-		planificadorCortoPlazo.Lock()
-		ManejarInterrupcion(mensaje, proceso)
 
+		planificadorCortoPlazo.Lock()
+		ManejarInterrupcion(mensaje, proceso, colaVRR)
 		planificadorCortoPlazo.Unlock()
 	}
 }
-*/
 
-func quantum(PID int) {
-	time.Sleep(time.Duration(globals.ClientConfig.Quantum) * time.Millisecond)
+func quantum(PID int, quantum int) {
+	time.Sleep(time.Duration(quantum) * time.Millisecond)
 	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortCPU) + "/quantum/" + strconv.Itoa(PID)
 
 	_, err := http.Get(url)
@@ -350,6 +364,7 @@ func agregarProcesosALaColaListos() {
 
 func rehabilitarProcesoBlocked(PID int) {
 	mutexColaListos.Lock()
+	mutexColaListosQuantum.Lock()
 	mutexColaBlocked.Lock()
 	planificadorLargoPlazo.Lock()
 
@@ -366,7 +381,11 @@ func rehabilitarProcesoBlocked(PID int) {
 		if proceso.PID == PID {
 			cambiarEstado(proceso.Estado, "READY", &proceso)
 			colaDeBlocked = removerIndex(colaDeBlocked, contador)
-			colaDeListos = append(colaDeListos, proceso)
+			if proceso.Quantum == globals.ClientConfig.Quantum {
+				colaDeListos = append(colaDeListos, proceso)
+			} else {
+				colaDeListosQuantum = append(colaDeListosQuantum, proceso)
+			}
 			semProcesosListos <- 0
 			break
 		} else {
@@ -376,6 +395,7 @@ func rehabilitarProcesoBlocked(PID int) {
 
 	planificadorLargoPlazo.Unlock()
 	mutexColaBlocked.Unlock()
+	mutexColaListosQuantum.Unlock()
 	mutexColaListos.Unlock()
 }
 
@@ -417,11 +437,17 @@ func EnviarProcesoACPU(pcb *PCB) string {
 	return resultadoCPU.Mensaje
 }
 
-func ManejarInterrupcion(interrupcion string, proceso PCB) {
+func ManejarInterrupcion(interrupcion string, proceso PCB, colaVRR bool) {
 	motivo := strings.Split(strings.TrimRight(interrupcion, "\x00"), " ")
 
 	mutexColaListos.Lock()
-	colaDeListos = colaDeListos[1:]
+	if colaVRR {
+		mutexColaListosQuantum.Lock()
+		colaDeListosQuantum = colaDeListosQuantum[1:]
+		mutexColaListosQuantum.Unlock()
+	} else {
+		colaDeListos = colaDeListos[1:]
+	}
 
 	if killProcess {
 		mutexColaListos.Unlock()
@@ -436,12 +462,24 @@ func ManejarInterrupcion(interrupcion string, proceso PCB) {
 
 		log.Printf("Finaliza el proceso %d - Motivo: %v", proceso.PID, "Se solicito finalizar el proceso")
 
+		killProcess = false
+
 		agregarProcesosALaColaListos()
 
 		return
 	}
 
 	switch motivo[0] {
+	case "error":
+		mutexColaListos.Unlock()
+
+		mutexMapaEstados.Lock()
+		delete(estadosProcesos, proceso.PID)
+		mutexMapaEstados.Unlock()
+
+		log.Printf("Finaliza el proceso %d - Motivo: %v", proceso.PID, "Ocurrio un error durante la ejecución")
+
+		agregarProcesosALaColaListos()
 	case "EXIT":
 		mutexColaListos.Unlock()
 
@@ -539,6 +577,7 @@ func FinalizarProceso(w http.ResponseWriter, r *http.Request) {
 	mutexColaListos.Lock()
 	mutexColaBlocked.Lock()
 	mutexColaNuevos.Lock()
+	mutexColaListosQuantum.Lock()
 	planificadorLargoPlazo.Lock()
 	mutexMapaEstados.Lock()
 	estado, ok := estadosProcesos[pidInt]
@@ -547,6 +586,7 @@ func FinalizarProceso(w http.ResponseWriter, r *http.Request) {
 		mutexColaListos.Unlock()
 		mutexColaBlocked.Unlock()
 		mutexColaNuevos.Unlock()
+		mutexColaListosQuantum.Unlock()
 		planificadorLargoPlazo.Unlock()
 
 		respuesta, err := json.Marshal("No existe el proceso a eliminar")
@@ -562,6 +602,7 @@ func FinalizarProceso(w http.ResponseWriter, r *http.Request) {
 	switch estado {
 	case "NEW":
 		mutexColaListos.Unlock()
+		mutexColaListosQuantum.Unlock()
 		mutexColaBlocked.Unlock()
 		removerProcesoDeLista(&colaDeNuevos, pidInt, "Se solicito finalizar el proceso")
 		mutexColaNuevos.Unlock()
@@ -569,16 +610,20 @@ func FinalizarProceso(w http.ResponseWriter, r *http.Request) {
 		mutexColaBlocked.Unlock()
 		mutexColaNuevos.Unlock()
 		removerProcesoDeLista(&colaDeListos, pidInt, "Se solicito finalizar el proceso")
+		removerProcesoDeLista(&colaDeListosQuantum, pidInt, "Se solicito finalizar el proceso")
 		mutexColaListos.Unlock()
+		mutexColaListosQuantum.Unlock()
 		agregarProcesosALaColaListos()
 	case "BLOCKED":
 		mutexColaListos.Unlock()
+		mutexColaListosQuantum.Unlock()
 		mutexColaNuevos.Unlock()
 		removerProcesoDeLista(&colaDeBlocked, pidInt, "Se solicito finalizar el proceso")
 		mutexColaBlocked.Unlock()
 		agregarProcesosALaColaListos()
 	case "EXEC":
 		mutexColaListos.Unlock()
+		mutexColaListosQuantum.Unlock()
 		mutexColaBlocked.Unlock()
 		mutexColaNuevos.Unlock()
 		killProcess = true

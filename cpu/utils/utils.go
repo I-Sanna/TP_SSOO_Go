@@ -154,12 +154,12 @@ func JNZ(nombreRegistro string, valor int) {
 	if strlen(nombreRegistro) == 2 && strings.Contains(nombreRegistro, "X") {
 		var registro *uint8 = ObtenerRegistro8Bits(nombreRegistro)
 		if *registro != uint8(0) {
-			procesoActual.RegistrosCPU.PC = uint32(valor)
+			procesoActual.ProgramCounter = valor - 2
 		}
 	} else {
 		var registro *uint32 = ObtenerRegistro32Bits(nombreRegistro)
 		if *registro != uint32(0) {
-			procesoActual.RegistrosCPU.PC = uint32(valor)
+			procesoActual.ProgramCounter = valor - 2
 		}
 	}
 }
