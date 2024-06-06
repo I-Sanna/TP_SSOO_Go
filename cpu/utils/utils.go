@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"cpu/globals"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io"
 	"log"
@@ -13,6 +14,16 @@ import (
 	"strings"
 	"sync"
 )
+
+type TLB struct {
+	PID         int
+	PageNumber  int
+	FrameNumber int
+}
+
+var tlb []TLB
+
+var memoria = make(map[uint32]uint32)
 
 type PCB struct {
 	PID            int          `json:"pid"`
@@ -47,6 +58,8 @@ const (
 )
 
 var mutexMensaje sync.Mutex
+var mutex sync.Mutex
+var tlbLock sync.Mutex
 
 var procesoActual PCB
 var interrupcion bool
@@ -162,6 +175,76 @@ func JNZ(nombreRegistro string, valor int) {
 			procesoActual.ProgramCounter = valor - 2
 		}
 	}
+}
+
+// MOV_IN (Registro Datos, Registro Dirección)
+func MOV_IN(registroDatos, registroDireccion string) {
+	regDatos := ObtenerRegistro32Bits(registroDatos)
+	regDireccion := ObtenerRegistro32Bits(registroDireccion)
+
+	direccionFisica, err := mmu(procesoActual.PID, *regDireccion)
+	if err != nil {
+		log.Printf("Error al traducir dirección: %s", err.Error())
+		return
+	}
+
+	valor := leerDeMemoria(direccionFisica)
+
+	*regDatos = valor
+}
+
+// MOV_OUT (Registro Dirección, Registro Datos)
+func MOV_OUT(registroDireccion, registroDatos string) {
+	regDireccion := ObtenerRegistro32Bits(registroDireccion)
+	regDatos := ObtenerRegistro32Bits(registroDatos)
+
+	direccionFisica, err := mmu(procesoActual.PID, *regDireccion)
+	if err != nil {
+		log.Printf("Error al traducir dirección: %s", err.Error())
+		return
+	}
+
+	valor := *regDatos
+	escribirEnMemoria(direccionFisica, valor)
+}
+
+// Función para traducir direcciones lógicas a direcciones físicas
+func mmu(pid int, direccionLogica uint32) (uint32, error) {
+	numeroPagina := direccionLogica / PageSize //nose cual seria el tamaño de pagina supongo que es 16 pero tendria que traerlo de memoria
+	desplazamiento := direccionLogica % PageSize
+
+	// Buscar en la TLB primero
+	tlbLock.Lock()
+	for _, entrada := range tlb {
+		if entrada.PID == pid && entrada.PageNumber == int(numeroPagina) {
+			tlbLock.Unlock()
+			return uint32(entrada.FrameNumber)*PageSize + desplazamiento, nil
+		}
+	}
+	tlbLock.Unlock()
+
+	// TLB Miss, buscar en la tabla de páginas a través del módulo de Memoria
+	pageTableEntry, err := obtenerEntradaTablaDePaginas(pid, int(numeroPagina)) //falta obtener la tabla en memoria
+	if err != nil {
+		return 0, err
+	}
+	if !pageTableEntry.Valid {
+		return 0, errors.New("entrada no válida en la tabla de páginas")
+	}
+
+	// Añadir la entrada a la TLB
+	// Solo FIFO hay que agregar LRU
+	tlbLock.Lock()
+	if len(tlb) >= globals.ClientConfig.NumberFellingTbl {
+		// Remover la entrada más antigua (FIFO)
+		tlb = tlb[1:]
+	}
+	tlb = append(tlb, TLB{PID: pid, PageNumber: int(numeroPagina), FrameNumber: pageTableEntry.FrameNumber})
+	tlbLock.Unlock()
+
+	// Calcular la dirección física
+	direccionFisica := uint32(pageTableEntry.FrameNumber)*PageSize + desplazamiento
+	return direccionFisica, nil
 }
 
 func strlen(str string) int {
