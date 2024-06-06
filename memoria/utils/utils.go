@@ -100,9 +100,9 @@ func BuscarMarco(w http.ResponseWriter, r *http.Request) {
 					http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
 					return
 				}
-
 				w.WriteHeader(http.StatusBadRequest)
 				w.Write(respuesta)
+				return
 			}
 		}
 	}
@@ -113,6 +113,7 @@ func BuscarMarco(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	log.Printf("PID: %d - Pagina: %d - Marco: %d", pidInt, numeroPagina, marco)
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
 }
@@ -134,12 +135,17 @@ func ReservarMemoria(w http.ResponseWriter, r *http.Request) {
 	}
 
 	cantidadPaginas := tamaño / globals.ClientConfig.PageSize //Se asume que la instruccion RESIZE pasa un valor divisible por el tamaño de las paginas
-	log.Printf("Cantidad paginas: %d", cantidadPaginas)
 
 	var tablaPaginas map[int]int
 
 	index := obtenerIndexProceso(pidInt)
 	tablaPaginas = tablasPaginasProcesos[index]
+
+	if tamaño > len(tablaPaginas)*globals.ClientConfig.PageSize {
+		log.Printf("PID: %d - Tamaño Actual: %d - Tamaño a Ampliar: %d", pidInt, len(tablaPaginas)*globals.ClientConfig.PageSize, tamaño)
+	} else {
+		log.Printf("PID: %d - Tamaño Actual: %d - Tamaño a Reducir: %d", pidInt, len(tablaPaginas)*globals.ClientConfig.PageSize, tamaño)
+	}
 
 	paginasNecesarias := cantidadPaginas - len(tablaPaginas) //Si es positivo se agregan paginas, si es negativo es que se quitan
 
@@ -163,7 +169,6 @@ func ReservarMemoria(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	log.Printf("listaPID: %v \n instru: %v \n tablas: %v", listaPID, instruccionesProcesos, tablasPaginasProcesos)
 	w.WriteHeader(http.StatusOK)
 }
 
@@ -200,7 +205,7 @@ func CrearProceso(w http.ResponseWriter, r *http.Request) {
 	tablasPaginasProcesos = append(tablasPaginasProcesos, tablaPaginas)
 
 	contadorPID++
-	log.Printf("listaPID: %v \n instru: %v \n tablas: %v", listaPID, instruccionesProcesos, tablasPaginasProcesos)
+	log.Printf("PID: %d - Tamaño: %d", contadorPID, globals.ClientConfig.MemorySize/globals.ClientConfig.PageSize)
 	w.WriteHeader(http.StatusOK)
 }
 
@@ -253,7 +258,6 @@ func LiberarRecursos(w http.ResponseWriter, r *http.Request) {
 	liberarPaginas(tablasPaginasProcesos[index])
 	tablasPaginasProcesos = removerIndexMap(tablasPaginasProcesos, index)
 
-	log.Printf("listaPID: %v \n instru: %v \n tablas: %v", listaPID, instruccionesProcesos, tablasPaginasProcesos)
 	w.WriteHeader(http.StatusOK)
 }
 
@@ -301,7 +305,7 @@ func EscribirMemoria(w http.ResponseWriter, r *http.Request) {
 	desplazamiento := request.Direccion % globals.ClientConfig.PageSize
 	infoBytes := []byte(request.Info)
 
-	log.Printf("Marco: %d, desplazamiento: %d", marco, desplazamiento)
+	log.Printf("PID: %d - Accion: Escribir - Direccion fisica: %d - Tamaño a escribir: %d", request.PID, request.Direccion, request.Tamaño)
 
 	contador := len(infoBytes)
 	marcosNecesarios := 0
@@ -314,7 +318,6 @@ func EscribirMemoria(w http.ResponseWriter, r *http.Request) {
 			contador = contador - globals.ClientConfig.PageSize
 		}
 		marcosNecesarios++
-		log.Printf("Marcos necesarios: %d", marcosNecesarios)
 	}
 
 	contador = 0
@@ -333,7 +336,6 @@ func EscribirMemoria(w http.ResponseWriter, r *http.Request) {
 			infoBytesArray = append(infoBytesArray, infoBytes[globals.ClientConfig.PageSize*i-desplazamiento:globals.ClientConfig.PageSize*(i+1)-desplazamiento])
 		}
 	}
-	log.Printf("Array: %v", infoBytesArray)
 
 	index := obtenerIndexProceso(request.PID)
 	inicio := false
@@ -393,7 +395,7 @@ func LeerMemoria(w http.ResponseWriter, r *http.Request) {
 	desplazamiento := request.Direccion % globals.ClientConfig.PageSize
 	infoBytes := make([]byte, 0, request.Tamaño)
 
-	log.Printf("Marco: %d, desplazamiento: %d", marco, desplazamiento)
+	log.Printf("PID: %d - Accion: Leer - Direccion fisica: %d - Tamaño a escribir: %d", request.PID, request.Direccion, request.Tamaño)
 
 	contador := request.Tamaño
 	marcosNecesarios := 0
@@ -406,7 +408,6 @@ func LeerMemoria(w http.ResponseWriter, r *http.Request) {
 			contador = contador - globals.ClientConfig.PageSize
 		}
 		marcosNecesarios++
-		log.Printf("Marcos necesarios: %d", marcosNecesarios)
 	}
 
 	index := obtenerIndexProceso(request.PID)
@@ -442,15 +443,12 @@ func LeerMemoria(w http.ResponseWriter, r *http.Request) {
 				tamañoRestante = tamañoRestante - (globals.ClientConfig.PageSize - desplazamiento)
 				desplazamiento = 0
 			}
-			log.Printf("infoBytes: %v \n listaBytes: %v", infoBytes, listaBytes)
 			infoBytes = append(infoBytes, listaBytes...)
 		}
 		if fin {
 			break
 		}
 	}
-
-	log.Printf("Array: %v", infoBytes)
 
 	mensaje := string(infoBytes)
 
@@ -475,7 +473,6 @@ func leerPagina(marco int, desplazamiento int, tamaño int) []byte {
 	var lista = make([]byte, tamaño)
 	posicionInicial := marco*globals.ClientConfig.PageSize + desplazamiento
 	copy(lista, memoria[posicionInicial:posicionInicial+tamaño])
-	log.Printf("lista: %v", lista)
 	return lista
 }
 
