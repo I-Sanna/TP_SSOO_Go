@@ -80,6 +80,34 @@ func IO_GEN_SLEEP(w http.ResponseWriter, r *http.Request) {
 	w.Write(respuesta)
 }
 
+func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
+	//quedarse esperando que el alumno ingrese un texto por teclado.
+	//Este texto se va a guardar en la memoria a partir de la dirección física indicada en la petición que recibió por parte del Kernel.
+	direcFisica := r.PathValue("dir")
+
+	direccion, err := strconv.Atoi(direcFisica)
+	if err != nil {
+		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+		return
+	}
+
+	log.Printf("Direc fisica: %d - Operación: IO_STDIN_READ", direccion)
+
+}
+
+func IO_STDOUT_WRITE(w http.ResponseWriter, r *http.Request) {
+	//se conectan a memoria para leer una dirección física y mostrar el resultado
+	//Consumir una unidad de unit_work_time.
+	direcFisica := r.PathValue("dir")
+
+	direccion, err := strconv.Atoi(direcFisica)
+	if err != nil {
+		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+		return
+	}
+	log.Printf("Direc fisica: %d - Operación: IO_STDOUT_WRITE", direccion)
+}
+
 type BodyRequestIO struct {
 	NombreDispositivo    string `json:"nombre_dispositivo"`
 	PuertoDispositivo    int    `json:"puerto_dispositivo"`
