@@ -290,6 +290,7 @@ func IniciarProceso(w http.ResponseWriter, r *http.Request) {
 	req.Header.Set("Content-Type", "application/json")
 	resp, err := cliente.Do(req)
 	if err != nil {
+		planificadorLargoPlazo.Unlock()
 		log.Printf("error enviando el Path: %s", err.Error())
 		return
 	}
@@ -464,6 +465,7 @@ func ManejarInterrupcion(interrupcion string, proceso PCB, colaVRR bool) {
 
 		killProcess = false
 
+		liberarRecursosProceso(proceso.PID)
 		agregarProcesosALaColaListos()
 
 		return
@@ -479,6 +481,7 @@ func ManejarInterrupcion(interrupcion string, proceso PCB, colaVRR bool) {
 
 		log.Printf("Finaliza el proceso %d - Motivo: %v", proceso.PID, "Ocurrio un error durante la ejecución")
 
+		liberarRecursosProceso(proceso.PID)
 		agregarProcesosALaColaListos()
 	case "EXIT":
 		mutexColaListos.Unlock()
@@ -494,6 +497,7 @@ func ManejarInterrupcion(interrupcion string, proceso PCB, colaVRR bool) {
 
 		log.Printf("Finaliza el proceso %d - Motivo: %v", proceso.PID, mensaje)
 
+		liberarRecursosProceso(proceso.PID)
 		agregarProcesosALaColaListos()
 	case "READY":
 		cambiarEstado(string(proceso.Estado), "READY", &proceso)
@@ -537,6 +541,27 @@ func cambiarEstado(estadoAnterior string, estadoNuevo string, proceso *PCB) {
 	mutexMapaEstados.Unlock()
 
 	log.Printf("PID: %d - Estado Anterior: %v - Estado Actual: %v", proceso.PID, estadoAnterior, estadoNuevo)
+}
+
+func liberarRecursosProceso(pid int) {
+	cliente := &http.Client{}
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/process/" + strconv.Itoa(pid)
+	req, err := http.NewRequest("DELETE", url, nil)
+	if err != nil {
+		return
+	}
+
+	req.Header.Set("Content-Type", "application/json")
+	resp, err := cliente.Do(req)
+	if err != nil {
+		log.Printf("error enviando el Path: %s", err.Error())
+		return
+	}
+
+	if resp.StatusCode != http.StatusOK {
+		log.Printf("error en la respuesta de la consulta: %s", resp.Status)
+		return
+	}
 }
 
 func EstadoProceso(w http.ResponseWriter, r *http.Request) {
@@ -798,6 +823,7 @@ func removerProcesoDeLista(lista *[]PCB, PID int, motivo string) {
 	for _, elemento := range *lista {
 		if elemento.PID == PID {
 			*lista = removerIndex(*lista, contador)
+			liberarRecursosProceso(PID)
 			log.Printf("Finaliza el proceso %d - Motivo: %v", PID, motivo)
 			break
 		} else {
