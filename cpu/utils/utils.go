@@ -336,6 +336,8 @@ func buscarEnTLB(pid, numeroPagina int, tlb *TLB) (int, error) {
 	return 0, fmt.Errorf("TLB Miss")
 }
 
+
+//tengo muchas dudas con la tabla TLB xd (revisar)
 func actualizarTLB(pid, direccionLogica, marco int, tlb *TLB) {
 	// Reemplazar entrada usando FIFO o LRU según el algoritmo
 	// FALTA IMPLEMENTAR LRU
@@ -349,6 +351,7 @@ func actualizarTLB(pid, direccionLogica, marco int, tlb *TLB) {
 		Pagina: direccionLogica / pageSize,
 		Marco:  marco,
 	}
+	//aca seria un case FIFO y LRU que lo lea del globals
 	tlb.Entradas = append(tlb.Entradas[1:], nuevaEntrada)
 }
 
