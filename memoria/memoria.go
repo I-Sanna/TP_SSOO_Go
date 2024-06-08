@@ -24,6 +24,7 @@ func main() {
 	mux.HandleFunc("DELETE /process/{pid}", utils.LiberarRecursos)
 	mux.HandleFunc("POST /leer", utils.LeerMemoria)
 	mux.HandleFunc("POST /escribir", utils.EscribirMemoria)
+	mux.HandleFunc("GET /pageSize", utils.PageSize)
 
 	err := http.ListenAndServe(":"+strconv.Itoa(globals.ClientConfig.Port), mux)
 	if err != nil {

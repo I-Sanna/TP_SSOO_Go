@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"cpu/globals"
 	"encoding/json"
-	"errors"
 	"fmt"
 	"io"
 	"log"
@@ -15,15 +14,24 @@ import (
 	"sync"
 )
 
-type TLB struct {
-	PID         int
-	PageNumber  int
-	FrameNumber int
+type TLBEntry struct {
+	PID    int
+	Pagina int
+	Marco  int
 }
 
-var tlb []TLB
+type TLB struct {
+	Entradas []TLBEntry
+}
 
-var memoria = make(map[uint32]uint32)
+var TLBCPU *TLB
+
+// InicializarTLB inicializa una TLB con el número de entradas especificado.
+func InicializarTLB(numEntradas int) *TLB {
+	return &TLB{
+		Entradas: make([]TLBEntry, numEntradas),
+	}
+}
 
 type PCB struct {
 	PID            int          `json:"pid"`
@@ -177,6 +185,72 @@ func JNZ(nombreRegistro string, valor int) {
 	}
 }
 
+type BodyEscritura struct {
+	PID       int    `json:"pid"`
+	Info      string `json:"info"`
+	Tamaño    int    `json:"tamaño"`
+	Direccion int    `json:"direccion"`
+}
+
+func leerDeMemoria(pid int, direccion int, tamaño int) (string, error) {
+	request := BodyEscritura{
+		PID:       pid,
+		Direccion: direccion,
+		Tamaño:    tamaño,
+	}
+
+	body, err := json.Marshal(request)
+	if err != nil {
+		return "", fmt.Errorf("error al codificar solicitud: %v", err)
+	}
+
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/leer"
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
+	if err != nil {
+		return "", fmt.Errorf("error al enviar solicitud: %v", err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return "", fmt.Errorf("error en la respuesta de la consulta: %v", resp.Status)
+	}
+
+	var resultado string
+	err = json.NewDecoder(resp.Body).Decode(&resultado)
+	if err != nil {
+		return "", fmt.Errorf("error al decodificar respuesta: %v", err)
+	}
+
+	return resultado, nil
+}
+
+func escribirEnMemoria(pid int, direccionFisica int, datos string, tamaño int) error {
+	body := BodyEscritura{
+		PID:       pid,
+		Info:      datos,
+		Tamaño:    tamaño,
+		Direccion: direccionFisica,
+	}
+
+	bodyJSON, err := json.Marshal(body)
+	if err != nil {
+		return fmt.Errorf("error codificando la solicitud: %w", err)
+	}
+
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/escribir"
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(bodyJSON))
+	if err != nil {
+		return fmt.Errorf("error al enviar la solicitud: %w", err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return fmt.Errorf("error en la respuesta del servidor: %s", resp.Status)
+	}
+
+	return nil
+}
+
 // MOV_IN (Registro Datos, Registro Dirección)
 func MOV_IN(registroDatos, registroDireccion string) {
 	regDatos := ObtenerRegistro32Bits(registroDatos)
@@ -188,9 +262,19 @@ func MOV_IN(registroDatos, registroDireccion string) {
 		return
 	}
 
-	valor := leerDeMemoria(direccionFisica)
+	valor, err := leerDeMemoria(procesoActual.PID, direccionFisica, 4) // 4 porque el registro es de 32 bits (a chequear)
+	if err != nil {
+		log.Printf("Error al leer de memoria: %s", err.Error())
+		return
+	}
 
-	*regDatos = valor
+	// Convertir valor a uint32 antes de asignarlo a regDatos
+	valorUint32, err := strconv.ParseUint(valor, 10, 32)
+	if err != nil {
+		log.Printf("Error al convertir valor a uint32: %s", err.Error())
+		return
+	}
+	*regDatos = uint32(valorUint32)
 }
 
 // MOV_OUT (Registro Dirección, Registro Datos)
@@ -204,47 +288,109 @@ func MOV_OUT(registroDireccion, registroDatos string) {
 		return
 	}
 
-	valor := *regDatos
-	escribirEnMemoria(direccionFisica, valor)
+	datos := strconv.Itoa(int(*regDatos))
+	err = escribirEnMemoria(procesoActual.PID, direccionFisica, datos, 4)
+	if err != nil {
+		log.Printf("Error al escribir en memoria: %s", err.Error())
+	}
 }
 
-// Función para traducir direcciones lógicas a direcciones físicas
-func mmu(pid int, direccionLogica uint32) (uint32, error) {
-	numeroPagina := direccionLogica / PageSize //nose cual seria el tamaño de pagina supongo que es 16 pero tendria que traerlo de memoria
-	desplazamiento := direccionLogica % PageSize
+func mmu(pid int, direccionLogica uint32) (int, error) {
 
-	// Buscar en la TLB primero
-	tlbLock.Lock()
-	for _, entrada := range tlb {
-		if entrada.PID == pid && entrada.PageNumber == int(numeroPagina) {
-			tlbLock.Unlock()
-			return uint32(entrada.FrameNumber)*PageSize + desplazamiento, nil
+	// Obtener el tamaño de página
+	pageSize, err := ObtenerPageSize()
+	if err != nil {
+		return 0, fmt.Errorf("error al obtener el tamaño de página: %w", err)
+	}
+
+	// Consultar TLB
+	marcoTLB, err := buscarEnTLB(pid, int(direccionLogica), TLBCPU)
+	if err == nil {
+		return marcoTLB, nil // TLB Hit
+	}
+
+	// Calcular número de página y desplazamiento
+	numeroPagina := int(direccionLogica / uint32(pageSize))
+	desplazamiento := int(direccionLogica % uint32(pageSize))
+
+	// Consultar tabla de páginas en la memoria principal
+	marco, err := buscarEnMemoria(pid, numeroPagina)
+	if err != nil {
+		return 0, fmt.Errorf("error al buscar en memoria: %w", err)
+	}
+
+	// Actualizar TLB
+	actualizarTLB(pid, int(direccionLogica), marco, TLBCPU)
+
+	// Calcular dirección física
+	direccionFisica := marco*pageSize + desplazamiento
+	return direccionFisica, nil
+}
+
+func buscarEnTLB(pid, numeroPagina int, tlb *TLB) (int, error) {
+	for _, entry := range tlb.Entradas {
+		if entry.PID == pid && entry.Pagina == numeroPagina {
+			return entry.Marco, nil // TLB Hit
 		}
 	}
-	tlbLock.Unlock()
+	return 0, fmt.Errorf("TLB Miss")
+}
 
-	// TLB Miss, buscar en la tabla de páginas a través del módulo de Memoria
-	pageTableEntry, err := obtenerEntradaTablaDePaginas(pid, int(numeroPagina)) //falta obtener la tabla en memoria
+func actualizarTLB(pid, direccionLogica, marco int, tlb *TLB) {
+	// Reemplazar entrada usando FIFO o LRU según el algoritmo
+	// FALTA IMPLEMENTAR LRU
+	pageSize, err := ObtenerPageSize()
+	if err != nil {
+		return
+	}
+
+	nuevaEntrada := TLBEntry{
+		PID:    pid,
+		Pagina: direccionLogica / pageSize,
+		Marco:  marco,
+	}
+	tlb.Entradas = append(tlb.Entradas[1:], nuevaEntrada)
+}
+
+func buscarEnMemoria(pid int, numeroPagina int) (int, error) {
+
+	url := fmt.Sprintf("http://localhost:%d/pagina/%d/%d", globals.ClientConfig.PortMemory, pid, numeroPagina)
+
+	response, err := http.Get(url)
 	if err != nil {
 		return 0, err
 	}
-	if !pageTableEntry.Valid {
-		return 0, errors.New("entrada no válida en la tabla de páginas")
+	defer response.Body.Close()
+
+	if response.StatusCode != http.StatusOK {
+		return 0, err // Manejar el caso de respuesta no exitosa
 	}
 
-	// Añadir la entrada a la TLB
-	// Solo FIFO hay que agregar LRU
-	tlbLock.Lock()
-	if len(tlb) >= globals.ClientConfig.NumberFellingTbl {
-		// Remover la entrada más antigua (FIFO)
-		tlb = tlb[1:]
+	var marco int
+	err = json.NewDecoder(response.Body).Decode(&marco)
+	if err != nil {
+		return 0, err
 	}
-	tlb = append(tlb, TLB{PID: pid, PageNumber: int(numeroPagina), FrameNumber: pageTableEntry.FrameNumber})
-	tlbLock.Unlock()
 
-	// Calcular la dirección física
-	direccionFisica := uint32(pageTableEntry.FrameNumber)*PageSize + desplazamiento
-	return direccionFisica, nil
+	return marco, nil
+}
+
+func ObtenerPageSize() (int, error) {
+	response, err := http.Get("http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/page_size")
+	if err != nil {
+		return 0, err
+	}
+	defer response.Body.Close()
+	if response.StatusCode != http.StatusOK {
+		return 0, err
+	}
+	var pageSize int
+	err = json.NewDecoder(response.Body).Decode(&pageSize)
+	if err != nil {
+		return 0, err
+	}
+
+	return pageSize, nil
 }
 
 func strlen(str string) int {
