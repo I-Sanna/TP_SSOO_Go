@@ -374,6 +374,71 @@ func COPY_STRING(tamS string) {
 	log.Printf("PID: %d - COPY_STRING ejecutado: %d bytes copiados desde %d a %d", procesoActual.PID, tam, si, di)
 }
 
+type BodyRRSS struct {
+	PID     int    `json:"pid"`
+	Recurso string `json:"recurso"`
+}
+
+// WAIT (Recurso)
+func WAIT(recurso string) {
+	//creo un body para mandarle a kernel
+	body := BodyRRSS{
+		PID:     procesoActual.PID,
+		Recurso: recurso,
+	}
+
+	bodyJSON, err := json.Marshal(body)
+	if err != nil {
+		log.Printf("Error al codificar la solicitud: %s", err.Error())
+		return
+	}
+
+	//envio al kernel el body
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/wait"
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(bodyJSON))
+	if err != nil {
+		log.Printf("Error al enviar la solicitud: %s", err.Error())
+		return
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		log.Printf("Error en la respuesta del servidor: %s", resp.Status)
+		return
+	}
+
+	log.Printf("PID: %d - WAIT ejecutado para el recurso: %s", procesoActual.PID, recurso)
+}
+
+// SIGNAL (Recurso)
+func SIGNAL(recurso string) {
+	body := BodyRRSS{
+		PID:     procesoActual.PID,
+		Recurso: recurso,
+	}
+
+	bodyJSON, err := json.Marshal(body)
+	if err != nil {
+		log.Printf("Error al codificar la solicitud: %s", err.Error())
+		return
+	}
+
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/signal"
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(bodyJSON))
+	if err != nil {
+		log.Printf("Error al enviar la solicitud: %s", err.Error())
+		return
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		log.Printf("Error en la respuesta del servidor: %s", resp.Status)
+		return
+	}
+
+	log.Printf("PID: %d - SIGNAL ejecutado para el recurso: %s", procesoActual.PID, recurso)
+}
+
 func mmu(pid int, direccionLogica uint32) ([]int, error) {
 
 	// Obtener el tamaño de página
@@ -567,6 +632,12 @@ func decoYExecInstru(instrucciones string) {
 	instru := strings.Split(strings.TrimRight(instrucciones, "\x00"), " ")
 	//Ejecutar instruccion
 	switch instru[0] {
+	case "SIGNAL":
+		log.Printf("PID: %d - Ejecutando: %v - %v", procesoActual.PID, instru[0], instru[1])
+		SIGNAL(instru[1])
+	case "WAIT":
+		log.Printf("PID: %d - Ejecutando: %v - %v", procesoActual.PID, instru[0], instru[1])
+		WAIT(instru[1])
 	case "COPY_STRING":
 		log.Printf("PID: %d - Ejecutando: %v - %v", procesoActual.PID, instru[0], instru[1])
 		COPY_STRING(instru[1])

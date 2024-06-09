@@ -3,6 +3,7 @@ package utils
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"io"
 	"kernel/globals"
 	"log"
@@ -857,4 +858,31 @@ func RegistrarIO(w http.ResponseWriter, r *http.Request) {
 	case "Generico":
 		puertosDispGenericos[request.Nombre] = request.Puerto
 	}
+}
+
+type BodyRRSS struct {
+	PID     int    `json:"pid"`
+	Recurso string `json:"recurso"`
+}
+
+func wait(w http.ResponseWriter, r *http.Request) {
+	var request BodyRRSS
+	if err := json.NewDecoder(r.Body).Decode(&request); err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	pid := request.PID
+	recurso := request.Recurso
+
+	if err := AsignarRecurso(pid, recurso); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
+	fmt.Fprintf(w, "Recurso %s asignado a PID %d", recurso, pid)
+}
+
+func AsignarRecurso(pid int, recurso string) error {
 }
