@@ -304,6 +304,63 @@ func MOV_OUT(registroDireccion, registroDatos string) {
 	}
 }
 
+type BodyRequestResize struct {
+	PID int `json:"pid"`
+	Tam int `json:"tamaño"`
+}
+
+// RESIZE (tamS)
+func RESIZE(tamS string) {
+	//Convierto el Tamaño a tipo int
+	tam, err := strconv.Atoi(tamS)
+	if err != nil {
+		log.Printf("Error al convertir el tamaño a entero: %s", err.Error())
+		return
+	}
+
+	//Preparo la Solicitud
+	body := BodyRequestResize{
+		PID: procesoActual.PID,
+		Tam: tam,
+	}
+	bodyJSON, err := json.Marshal(body)
+	if err != nil {
+		log.Printf("Error al codificar la solicitud: %s", err.Error())
+		return
+	}
+
+	//Envio la solicitud a memoria
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/resize" //desarrollar resize en memoria supongo
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(bodyJSON))
+	if err != nil {
+		log.Printf("Error al enviar la solicitud: %s", err.Error())
+		return
+	}
+	defer resp.Body.Close()
+
+	//Manejo de la respuesta de enviar solicitud
+	if resp.StatusCode != http.StatusOK {
+		log.Printf("Error en la respuesta del servidor: %s", resp.Status)
+		if resp.StatusCode == http.StatusInsufficientStorage { // si da Out of Memory
+			mutexMensaje.Lock()
+			resultadoEjecucion.Mensaje = "EXIT OUT_OF_MEMORY"
+			mutexMensaje.Unlock()
+			interrupcion = true
+		}
+		return
+	}
+
+	var respuesta string
+	err = json.NewDecoder(resp.Body).Decode(&respuesta)
+
+	if err != nil {
+		log.Printf("Error al decodificar la respuesta: %s", err.Error())
+		return
+	}
+
+	log.Printf("Proceso redimensionado correctamente: %s", respuesta)
+}
+
 func mmu(pid int, direccionLogica uint32) ([]int, error) {
 
 	// Obtener el tamaño de página
@@ -497,6 +554,15 @@ func decoYExecInstru(instrucciones string) {
 	instru := strings.Split(strings.TrimRight(instrucciones, "\x00"), " ")
 	//Ejecutar instruccion
 	switch instru[0] {
+	case "RESIZE":
+		log.Printf("PID: %d - Ejecutando: %v - %v,%v", procesoActual.PID, instru[0], instru[1], instru[2])
+		RESIZE(instru[1])
+	case "MOV_IN":
+		log.Printf("PID: %d - Ejecutando: %v - %v,%v", procesoActual.PID, instru[0], instru[1], instru[2])
+		MOV_IN(instru[1], instru[2])
+	case "MOV_OUT":
+		log.Printf("PID: %d - Ejecutando: %v - %v,%v", procesoActual.PID, instru[0], instru[1], instru[2])
+		MOV_OUT(instru[1], instru[2])
 	case "SET":
 		valor, err := strconv.Atoi(instru[2])
 		if err != nil {

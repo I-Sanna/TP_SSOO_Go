@@ -484,3 +484,13 @@ func obtenerIndexProceso(pid int) int {
 	}
 	return -1
 }
+
+func PageSize(w http.ResponseWriter, r *http.Request) {
+	rta, err := json.Marshal(globals.ClientConfig.PageSize)
+	if err != nil {
+		http.Error(w, "Error al codificar el tamaño de la página como JSON", http.StatusInternalServerError)
+		return
+	}
+	w.WriteHeader(http.StatusOK)
+	w.Write(rta)
+}
