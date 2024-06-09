@@ -311,37 +311,23 @@ type BodyRequestResize struct {
 
 // RESIZE (tamS)
 func RESIZE(tamS string) {
-	//Convierto el Tamaño a tipo int
 	tam, err := strconv.Atoi(tamS)
 	if err != nil {
 		log.Printf("Error al convertir el tamaño a entero: %s", err.Error())
 		return
 	}
 
-	//Preparo la Solicitud
-	body := BodyRequestResize{
-		PID: procesoActual.PID,
-		Tam: tam,
-	}
-	bodyJSON, err := json.Marshal(body)
-	if err != nil {
-		log.Printf("Error al codificar la solicitud: %s", err.Error())
-		return
-	}
-
-	//Envio la solicitud a memoria
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/resize" //desarrollar resize en memoria supongo
-	resp, err := http.Post(url, "application/json", bytes.NewBuffer(bodyJSON))
+	url := fmt.Sprintf("http://localhost:%d/memoria/%d/%d", globals.ClientConfig.PortMemory, procesoActual.PID, tam)
+	resp, err := http.Get(url)
 	if err != nil {
 		log.Printf("Error al enviar la solicitud: %s", err.Error())
 		return
 	}
 	defer resp.Body.Close()
 
-	//Manejo de la respuesta de enviar solicitud
 	if resp.StatusCode != http.StatusOK {
 		log.Printf("Error en la respuesta del servidor: %s", resp.Status)
-		if resp.StatusCode == http.StatusInsufficientStorage { // si da Out of Memory
+		if resp.StatusCode == http.StatusInsufficientStorage { // Out of Memory
 			mutexMensaje.Lock()
 			resultadoEjecucion.Mensaje = "EXIT OUT_OF_MEMORY"
 			mutexMensaje.Unlock()
@@ -352,7 +338,6 @@ func RESIZE(tamS string) {
 
 	var respuesta string
 	err = json.NewDecoder(resp.Body).Decode(&respuesta)
-
 	if err != nil {
 		log.Printf("Error al decodificar la respuesta: %s", err.Error())
 		return
@@ -672,5 +657,4 @@ func Desalojar(w http.ResponseWriter, r *http.Request) {
 	if procesoActual.PID == pidInt {
 		interrupcion = true
 	}
-
 }
