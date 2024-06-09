@@ -5,6 +5,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"entradasalida/globals"
+	"fmt"
 	"io"
 	"log"
 	"net/http"
@@ -15,6 +16,17 @@ import (
 
 type BodyRequestTime struct {
 	TIME int `json:"tiempo"`
+}
+type BodyEscritura struct {
+	PID       int    `json:"pid"`
+	Info      string `json:"info"`
+	Tamaño    int    `json:"tamaño"`
+	Direccion int    `json:"direccion"`
+}
+
+type BodyRequest struct {
+	PID       int `json:"pid"`
+	Direccion int `json:"direccion"`
 }
 
 func IniciarConfiguracion(filePath string) *globals.Config {
@@ -81,31 +93,72 @@ func IO_GEN_SLEEP(w http.ResponseWriter, r *http.Request) {
 }
 
 func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
-	//quedarse esperando que el alumno ingrese un texto por teclado.
-	//Este texto se va a guardar en la memoria a partir de la dirección física indicada en la petición que recibió por parte del Kernel.
-	direcFisica := r.PathValue("dir")
+	var request BodyRequest
 
-	direccion, err := strconv.Atoi(direcFisica)
+	err := json.NewDecoder(r.Body).Decode(&request)
 	if err != nil {
-		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
+	fmt.Print("Esperando texto en consola... ")
+	textoIngresado := LeerConsola()
+	//if textoIngresado == "" {
+	//	http.Error(w, "No se ingreso texto en consola", http.StatusInternalServerError)
+	//	return
+	//}
+	fmt.Print("El texto ingresado es: ", textoIngresado)
+	//Este texto se va a guardar en la memoria a partir de la dirección física indicada en la petición que recibió por parte del Kernel.
+	fmt.Print("Guardando texto en memoria... ")
+	var requestBody = BodyEscritura{
+		PID:       request.PID,
+		Info:      textoIngresado,
+		Tamaño:    len(textoIngresado),
+		Direccion: request.Direccion,
+	}
+	body, err := json.Marshal(requestBody)
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/escribir"
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 
-	log.Printf("Direc fisica: %d - Operación: IO_STDIN_READ", direccion)
+	if err != nil {
+		log.Printf("Error guardando el texto ingresado", err.Error())
+		return
+	}
+	response := json.NewDecoder(r.Body).Decode(&resp)
+	log.Printf("Se guardo correctamente el texto ingresado", response)
+	log.Printf("Direccion: %d - Operación: IO_STDIN_READ", request.Direccion)
+	return
 
 }
 
 func IO_STDOUT_WRITE(w http.ResponseWriter, r *http.Request) {
 	//se conectan a memoria para leer una dirección física y mostrar el resultado
 	//Consumir una unidad de unit_work_time.
-	direcFisica := r.PathValue("dir")
-
-	direccion, err := strconv.Atoi(direcFisica)
+	var request BodyRequest
+	err := json.NewDecoder(r.Body).Decode(&request)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+	var requestBody = BodyEscritura{
+		PID:       request.PID,
+		Direccion: request.Direccion,
+	}
 	if err != nil {
 		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
 		return
 	}
-	log.Printf("Direc fisica: %d - Operación: IO_STDOUT_WRITE", direccion)
+	body, err := json.Marshal(requestBody)
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/leer"
+	fmt.Print("URL: ", url)
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
+	if err != nil {
+		log.Printf("error enviando: %s", err.Error())
+		fmt.Print("error enviando: %s", err.Error())
+		return
+	}
+	response := json.NewDecoder(r.Body).Decode(&resp)
+	log.Printf("Direc fisica: %d - Operación: IO_STDOUT_WRITE", request.Direccion)
+	log.Printf("El texto obtenido es:", response)
 }
 
 type BodyRequestIO struct {

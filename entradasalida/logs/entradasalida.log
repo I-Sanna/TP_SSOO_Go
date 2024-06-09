@@ -2138,3 +2138,27 @@ Configuracion cargada con exito!
 2024/06/06 16:33:27 
 Configuracion cargada con exito!
 2024/06/06 16:33:32 PID: 0 - Operación: IO_GEN_SLEEP
+2024/06/09 20:03:12 
+Configuracion cargada con exito!
+2024/06/09 20:03:12 error enviando: Post "http://localhost:8001/nuevoIO": dial tcp 127.0.0.1:8001: connect: connection refused
+2024/06/09 20:15:29 
+Configuracion cargada con exito!
+2024/06/09 20:15:29 error enviando: Post "http://localhost:8001/nuevoIO": dial tcp 127.0.0.1:8001: connect: connection refused
+2024/06/09 20:17:15 
+Configuracion cargada con exito!
+2024/06/09 20:17:15 error enviando: Post "http://localhost:8001/nuevoIO": dial tcp 127.0.0.1:8001: connect: connection refused
+2024/06/09 20:17:56 Se guardo correctamente el texto ingresado%!(EXTRA *errors.errorString=EOF)
+2024/06/09 20:17:56 Direccion: 1 - Operación: IO_STDIN_READ
+2024/06/09 20:19:16 Direc fisica: 1 - Operación: IO_STDOUT_WRITE
+2024/06/09 20:19:16 El texto obtenido es:%!(EXTRA *errors.errorString=EOF)
+2024/06/09 20:23:48 
+Configuracion cargada con exito!
+2024/06/09 20:23:48 error enviando: Post "http://localhost:8001/nuevoIO": dial tcp 127.0.0.1:8001: connect: connection refused
+2024/06/09 20:24:15 Se guardo correctamente el texto ingresado%!(EXTRA *errors.errorString=EOF)
+2024/06/09 20:24:15 Direccion: 1 - Operación: IO_STDIN_READ
+2024/06/09 20:26:07 Direc fisica: 1 - Operación: IO_STDOUT_WRITE
+2024/06/09 20:26:07 El texto obtenido es:%!(EXTRA *errors.errorString=EOF)
+2024/06/09 20:28:33 
+Configuracion cargada con exito!
+2024/06/09 20:28:33 error enviando: Post "http://localhost:8001/nuevoIO": dial tcp 127.0.0.1:8001: connect: connection refused
+2024/06/09 20:29:00 Error guardando el texto ingresado%!(EXTRA string=Post "http://localhost:8002/escribir": EOF)

@@ -9662,3 +9662,22 @@ created by net/http.(*Server).Serve in goroutine 1
  listaBytes: [72 72 72 72]
 2024/06/06 19:14:22 Array: [83 65 77 73 65 32 83 65 77 73 65 32 69 72 32 69 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 72 72 72 72]
 2024/06/06 19:14:22 SAMIA SAMIA EH E                HHHH
+2024/06/09 20:29:00 PID: 1 - Accion: Escribir - Direccion fisica: 1 - Tamaño a escribir: 6
+2024/06/09 20:29:00 http: panic serving 127.0.0.1:45350: runtime error: index out of range [-1]
+goroutine 6 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x69efe0?, 0xc00001a270?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.EscribirMemoria({0x733f40, 0xc0000ca700}, 0xc00009a480)
+	/home/utnso/Documents/TP-go/tp-2024-1c-EPIC/memoria/utils/utils.go:346 +0xb86
+net/http.HandlerFunc.ServeHTTP(0xc000088ea0?, {0x733f40?, 0xc0000ca700?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x733f40, 0xc0000ca700}, 0xc00009a480)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x7331d0?}, {0x733f40?, 0xc0000ca700?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c2120, {0x7344d0, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
