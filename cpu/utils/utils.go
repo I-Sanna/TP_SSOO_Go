@@ -346,6 +346,34 @@ func RESIZE(tamS string) {
 	log.Printf("Proceso redimensionado correctamente: %s", respuesta)
 }
 
+// COPY_STRING (Tamaño)
+func COPY_STRING(tamS string) {
+	tam, err := strconv.Atoi(tamS)
+	if err != nil {
+		log.Printf("Error al convertir el tamaño a entero: %s", err.Error())
+		return
+	}
+
+	si := procesoActual.RegistrosCPU.SI
+	di := procesoActual.RegistrosCPU.DI
+
+	// Leer el contenido de la memoria desde la dirección apuntada por SI
+	contenido, err := leerDeMemoria(procesoActual.PID, int(si), tam)
+	if err != nil {
+		log.Printf("Error al leer de memoria: %s", err.Error())
+		return
+	}
+
+	// Escribir este contenido en la memoria en la dirección apuntada por DI
+	err = escribirEnMemoria(procesoActual.PID, int(di), contenido, tam)
+	if err != nil {
+		log.Printf("Error al escribir en memoria: %s", err.Error())
+		return
+	}
+
+	log.Printf("PID: %d - COPY_STRING ejecutado: %d bytes copiados desde %d a %d", procesoActual.PID, tam, si, di)
+}
+
 func mmu(pid int, direccionLogica uint32) ([]int, error) {
 
 	// Obtener el tamaño de página
@@ -539,8 +567,11 @@ func decoYExecInstru(instrucciones string) {
 	instru := strings.Split(strings.TrimRight(instrucciones, "\x00"), " ")
 	//Ejecutar instruccion
 	switch instru[0] {
+	case "COPY_STRING":
+		log.Printf("PID: %d - Ejecutando: %v - %v", procesoActual.PID, instru[0], instru[1])
+		COPY_STRING(instru[1])
 	case "RESIZE":
-		log.Printf("PID: %d - Ejecutando: %v - %v,%v", procesoActual.PID, instru[0], instru[1], instru[2])
+		log.Printf("PID: %d - Ejecutando: %v - %v", procesoActual.PID, instru[0], instru[1])
 		RESIZE(instru[1])
 	case "MOV_IN":
 		log.Printf("PID: %d - Ejecutando: %v - %v,%v", procesoActual.PID, instru[0], instru[1], instru[2])
