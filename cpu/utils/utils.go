@@ -256,16 +256,21 @@ func MOV_IN(registroDatos, registroDireccion string) {
 	regDatos := ObtenerRegistro32Bits(registroDatos)
 	regDireccion := ObtenerRegistro32Bits(registroDireccion)
 
-	direccionFisica, err := mmu(procesoActual.PID, *regDireccion)
+	direccionesFisicas, err := mmu(procesoActual.PID, *regDireccion)
 	if err != nil {
 		log.Printf("Error al traducir dirección: %s", err.Error())
 		return
 	}
 
-	valor, err := leerDeMemoria(procesoActual.PID, direccionFisica, 4) // 4 porque el registro es de 32 bits (a chequear)
-	if err != nil {
-		log.Printf("Error al leer de memoria: %s", err.Error())
-		return
+	// Leer de memoria considerando la posibilidad de direcciones físicas múltiples
+	var valor string
+	for _, direccionFisica := range direccionesFisicas {
+		parte, err := leerDeMemoria(procesoActual.PID, direccionFisica, 4) // 4 porque el registro es de 32 bits (a chequear)
+		if err != nil {
+			log.Printf("Error al leer de memoria: %s", err.Error())
+			return
+		}
+		valor += parte
 	}
 
 	// Convertir valor a uint32 antes de asignarlo a regDatos
@@ -282,41 +287,45 @@ func MOV_OUT(registroDireccion, registroDatos string) {
 	regDireccion := ObtenerRegistro32Bits(registroDireccion)
 	regDatos := ObtenerRegistro32Bits(registroDatos)
 
-	direccionFisica, err := mmu(procesoActual.PID, *regDireccion)
+	direccionesFisicas, err := mmu(procesoActual.PID, *regDireccion)
 	if err != nil {
 		log.Printf("Error al traducir dirección: %s", err.Error())
 		return
 	}
 
 	datos := strconv.Itoa(int(*regDatos))
-	err = escribirEnMemoria(procesoActual.PID, direccionFisica, datos, 4)
-	if err != nil {
-		log.Printf("Error al escribir en memoria: %s", err.Error())
+	// Escribir en memoria considerando la posibilidad de direcciones físicas múltiples
+	for _, direccionFisica := range direccionesFisicas {
+		err = escribirEnMemoria(procesoActual.PID, direccionFisica, datos, 4)
+		if err != nil {
+			log.Printf("Error al escribir en memoria: %s", err.Error())
+			return
+		}
 	}
 }
 
-func mmu(pid int, direccionLogica uint32) (int, error) {
+func mmu(pid int, direccionLogica uint32) ([]int, error) {
 
 	// Obtener el tamaño de página
 	pageSize, err := ObtenerPageSize()
 	if err != nil {
-		return 0, fmt.Errorf("error al obtener el tamaño de página: %w", err)
+		return nil, fmt.Errorf("error al obtener el tamaño de página: %w", err)
 	}
+
+	numeroPagina := int(direccionLogica / uint32(pageSize))
+	desplazamiento := int(direccionLogica - uint32(numeroPagina)*uint32(pageSize))
 
 	// Consultar TLB
-	marcoTLB, err := buscarEnTLB(pid, int(direccionLogica), TLBCPU)
+	marcoTLB, err := buscarEnTLB(pid, numeroPagina, TLBCPU)
 	if err == nil {
-		return marcoTLB, nil // TLB Hit
+		direccionFisica := marcoTLB*pageSize + desplazamiento
+		return []int{direccionFisica}, nil // TLB Hit
 	}
-
-	// Calcular número de página y desplazamiento
-	numeroPagina := int(direccionLogica / uint32(pageSize))
-	desplazamiento := int(direccionLogica % uint32(pageSize))
 
 	// Consultar tabla de páginas en la memoria principal
 	marco, err := buscarEnMemoria(pid, numeroPagina)
 	if err != nil {
-		return 0, fmt.Errorf("error al buscar en memoria: %w", err)
+		return nil, fmt.Errorf("error al buscar en memoria: %w", err)
 	}
 
 	// Actualizar TLB
@@ -324,7 +333,20 @@ func mmu(pid int, direccionLogica uint32) (int, error) {
 
 	// Calcular dirección física
 	direccionFisica := marco*pageSize + desplazamiento
-	return direccionFisica, nil
+	direccionesFisicas := []int{direccionFisica}
+
+	// Verificar si el acceso cruza los límites de la página
+	if desplazamiento+4 > pageSize { // 4 bytes (32 bits)
+		siguientePagina := numeroPagina + 1
+		siguienteMarco, err := buscarEnMemoria(pid, siguientePagina)
+		if err != nil {
+			return nil, fmt.Errorf("error al buscar en memoria para la siguiente página: %w", err)
+		}
+		actualizarTLB(pid, siguientePagina, siguienteMarco, TLBCPU)
+		direccionesFisicas = append(direccionesFisicas, siguienteMarco*pageSize)
+	}
+
+	return direccionesFisicas, nil
 }
 
 func buscarEnTLB(pid, numeroPagina int, tlb *TLB) (int, error) {
@@ -336,8 +358,6 @@ func buscarEnTLB(pid, numeroPagina int, tlb *TLB) (int, error) {
 	return 0, fmt.Errorf("TLB Miss")
 }
 
-
-//tengo muchas dudas con la tabla TLB xd (revisar)
 func actualizarTLB(pid, direccionLogica, marco int, tlb *TLB) {
 	// Reemplazar entrada usando FIFO o LRU según el algoritmo
 	// FALTA IMPLEMENTAR LRU
@@ -351,7 +371,6 @@ func actualizarTLB(pid, direccionLogica, marco int, tlb *TLB) {
 		Pagina: direccionLogica / pageSize,
 		Marco:  marco,
 	}
-	//aca seria un case FIFO y LRU que lo lea del globals
 	tlb.Entradas = append(tlb.Entradas[1:], nuevaEntrada)
 }
 
