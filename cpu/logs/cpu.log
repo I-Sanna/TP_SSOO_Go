@@ -6141,3 +6141,103 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/06/06 17:08:03 PID: 9 - Ejecutando: SUB - AX,BX
 2024/06/06 17:08:03 PID: 9 - FETCH - Program Counter: 4
 2024/06/06 17:08:03 PID: 9 - Ejecutando: IO_GEN_SLEEP - Teclado,2000000
+2024/06/10 21:39:53 PID: 0 - FETCH - Program Counter: 0
+2024/06/10 21:39:53 PID: 0 - Ejecutando: SET - AX,1
+2024/06/10 21:39:53 PID: 0 - FETCH - Program Counter: 1
+2024/06/10 21:39:53 PID: 0 - Ejecutando: SET - BX,1
+2024/06/10 21:39:53 PID: 0 - FETCH - Program Counter: 2
+2024/06/10 21:39:53 PID: 0 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/10 21:39:53 holi 16 16 
+2024/06/10 21:39:53 http: panic serving 127.0.0.1:42194: runtime error: invalid memory address or nil pointer dereference
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6b6920?, 0x9468f0?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+cpu/utils.buscarEnTLB(0xc00007e120?, 0x0?)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:499 +0x19
+cpu/utils.mmu(0x0, 0x0)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:452 +0x198
+cpu/utils.MOV_IN({0xc000014b27?, 0x0?}, {0xc000014b2b?, 0xc00002b810?})
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:254 +0x19f
+cpu/utils.decoYExecInstru({0xc000014b20?, 0x2?})
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:678 +0xd14
+cpu/utils.RecibirProceso({0x789990, 0xc0000ca2a0}, 0xc00009c480)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:119 +0x2fe
+net/http.HandlerFunc.ServeHTTP(0xc000089040?, {0x789990?, 0xc0000ca2a0?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x789990, 0xc0000ca2a0}, 0xc00009c480)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x788978?}, {0x789990?, 0xc0000ca2a0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c6120, {0x789f50, 0xc00007ed50})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/10 21:45:53 Inicializando TLB con 32 entradas
+2024/06/10 21:46:36 PID: 0 - FETCH - Program Counter: 0
+2024/06/10 21:46:36 PID: 0 - Ejecutando: SET - AX,1
+2024/06/10 21:46:36 PID: 0 - FETCH - Program Counter: 1
+2024/06/10 21:46:36 PID: 0 - Ejecutando: SET - BX,1
+2024/06/10 21:46:36 PID: 0 - FETCH - Program Counter: 2
+2024/06/10 21:46:36 PID: 0 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/10 21:46:36 holi 16 16 
+2024/06/10 21:46:36 http: panic serving 127.0.0.1:43990: runtime error: invalid memory address or nil pointer dereference
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6b69e0?, 0x9468f0?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+cpu/utils.buscarEnTLB(0xc00007e120?, 0x0?)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:499 +0x19
+cpu/utils.mmu(0x0, 0x0)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:452 +0x198
+cpu/utils.MOV_IN({0xc000014b27?, 0x0?}, {0xc000014b2b?, 0xc00002b810?})
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:254 +0x19f
+cpu/utils.decoYExecInstru({0xc000014b20?, 0x2?})
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:678 +0xd14
+cpu/utils.RecibirProceso({0x789b30, 0xc0000cc2a0}, 0xc00009c480)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:119 +0x2fe
+net/http.HandlerFunc.ServeHTTP(0xc000089040?, {0x789b30?, 0xc0000cc2a0?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x789b30, 0xc0000cc2a0}, 0xc00009c480)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x788b18?}, {0x789b30?, 0xc0000cc2a0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c6120, {0x78a0f0, 0xc00007ed50})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/10 21:51:11 Inicializando TLB con 32 entradas
+2024/06/10 21:51:22 Inicializando TLB con 32 entradas
+2024/06/10 21:51:38 PID: 0 - FETCH - Program Counter: 0
+2024/06/10 21:51:38 PID: 0 - Ejecutando: SET - AX,1
+2024/06/10 21:51:38 PID: 0 - FETCH - Program Counter: 1
+2024/06/10 21:51:38 PID: 0 - Ejecutando: SET - BX,1
+2024/06/10 21:51:38 PID: 0 - FETCH - Program Counter: 2
+2024/06/10 21:51:38 PID: 0 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/10 21:51:38 holi 16 16 
+2024/06/10 21:51:38 Error: TLB no está inicializada
+2024/06/10 21:51:38 Error al convertir valor a uint32: strconv.ParseUint: parsing "": invalid syntax
+2024/06/10 21:51:38 PID: 0 - FETCH - Program Counter: 3
+2024/06/10 21:51:38 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/10 21:51:38 holi 16 16 
+2024/06/10 21:51:38 Error: TLB no está inicializada
+2024/06/10 21:51:38 direDatos: 9775768
+2024/06/10 21:51:38 PID: 0 - FETCH - Program Counter: 4
+2024/06/10 21:51:38 PID: 0 - Ejecutando: EXIT
+2024/06/10 22:01:50 Inicializando TLB con 32 entradas
+2024/06/10 22:02:08 PID: 0 - FETCH - Program Counter: 0
+2024/06/10 22:02:08 PID: 0 - Ejecutando: SET - AX,1
+2024/06/10 22:02:08 PID: 0 - FETCH - Program Counter: 1
+2024/06/10 22:02:08 PID: 0 - Ejecutando: SET - BX,1
+2024/06/10 22:02:08 PID: 0 - FETCH - Program Counter: 2
+2024/06/10 22:02:08 PID: 0 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/10 22:02:08 holi 16 16 
+2024/06/10 22:02:08 Error al convertir valor a uint32: strconv.ParseUint: parsing "": invalid syntax
+2024/06/10 22:02:08 PID: 0 - FETCH - Program Counter: 3
+2024/06/10 22:02:08 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/10 22:02:08 holi 16 16 
+2024/06/10 22:02:08 direDatos: 9775768
+2024/06/10 22:02:08 PID: 0 - FETCH - Program Counter: 4
+2024/06/10 22:02:08 PID: 0 - Ejecutando: EXIT

@@ -3,7 +3,6 @@ package utils
 import (
 	"bytes"
 	"encoding/json"
-	"fmt"
 	"io"
 	"kernel/globals"
 	"log"
@@ -865,6 +864,7 @@ type BodyRRSS struct {
 	Recurso string `json:"recurso"`
 }
 
+/*
 func wait(w http.ResponseWriter, r *http.Request) {
 	var request BodyRRSS
 	if err := json.NewDecoder(r.Body).Decode(&request); err != nil {
@@ -882,7 +882,5 @@ func wait(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	fmt.Fprintf(w, "Recurso %s asignado a PID %d", recurso, pid)
-}
-
 func AsignarRecurso(pid int, recurso string) error {
-}
+}*/

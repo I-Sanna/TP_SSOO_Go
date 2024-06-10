@@ -12,6 +12,8 @@ func main() {
 
 	globals.ClientConfig = utils.IniciarConfiguracion("config.json")
 
+	utils.InicializarTLB()
+
 	mux := http.NewServeMux()
 	mux.HandleFunc("POST /PCB", utils.RecibirProceso)
 

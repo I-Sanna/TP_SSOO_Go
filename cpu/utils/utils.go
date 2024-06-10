@@ -12,12 +12,14 @@ import (
 	"strconv"
 	"strings"
 	"sync"
+	"time"
 )
 
 type TLBEntry struct {
-	PID    int
-	Pagina int
-	Marco  int
+	PID     int
+	Pagina  int
+	Marco   int
+	LastUse int64 // Para LRU
 }
 
 type TLB struct {
@@ -25,13 +27,6 @@ type TLB struct {
 }
 
 var TLBCPU *TLB
-
-// InicializarTLB inicializa una TLB con el número de entradas especificado.
-func InicializarTLB(numEntradas int) *TLB {
-	return &TLB{
-		Entradas: make([]TLBEntry, numEntradas),
-	}
-}
 
 type PCB struct {
 	PID            int          `json:"pid"`
@@ -302,6 +297,7 @@ func MOV_OUT(registroDireccion, registroDatos string) {
 			return
 		}
 	}
+	log.Printf("direDatos: %d", regDatos)
 }
 
 type BodyRequestResize struct {
@@ -452,8 +448,12 @@ func mmu(pid int, direccionLogica uint32) ([]int, error) {
 	numeroPagina := int(direccionLogica / uint32(pageSize))
 	desplazamiento := int(direccionLogica - uint32(numeroPagina)*uint32(pageSize))
 
+	if TLBCPU == nil {
+		log.Printf("Error: TLB no está inicializada")
+		return nil, err
+	}
 	// Consultar TLB
-	marcoTLB, err := buscarEnTLB(pid, numeroPagina, TLBCPU)
+	marcoTLB, err := buscarEnTLB(pid, numeroPagina)
 	if err == nil {
 		direccionFisica := marcoTLB*pageSize + desplazamiento
 		return []int{direccionFisica}, nil // TLB Hit
@@ -466,7 +466,7 @@ func mmu(pid int, direccionLogica uint32) ([]int, error) {
 	}
 
 	// Actualizar TLB
-	actualizarTLB(pid, int(direccionLogica), marco, TLBCPU)
+	actualizarTLB(pid, int(direccionLogica), marco)
 
 	// Calcular dirección física
 	direccionFisica := marco*pageSize + desplazamiento
@@ -479,36 +479,65 @@ func mmu(pid int, direccionLogica uint32) ([]int, error) {
 		if err != nil {
 			return nil, fmt.Errorf("error al buscar en memoria para la siguiente página: %w", err)
 		}
-		actualizarTLB(pid, siguientePagina, siguienteMarco, TLBCPU)
+		actualizarTLB(pid, siguientePagina, siguienteMarco)
 		direccionesFisicas = append(direccionesFisicas, siguienteMarco*pageSize)
 	}
 
 	return direccionesFisicas, nil
 }
 
-func buscarEnTLB(pid, numeroPagina int, tlb *TLB) (int, error) {
-	for _, entry := range tlb.Entradas {
+func InicializarTLB() {
+
+	numEntradas := globals.ClientConfig.NumberFellingTbl
+
+	TLBCPU = &TLB{Entradas: make([]TLBEntry, 0, numEntradas)}
+
+	log.Printf("Inicializando TLB con %d entradas", numEntradas)
+
+}
+
+func buscarEnTLB(pid, numeroPagina int) (int, error) {
+
+	for i, entry := range TLBCPU.Entradas {
 		if entry.PID == pid && entry.Pagina == numeroPagina {
+			if globals.ClientConfig.AlgorithmTbl == "LRU" {
+				TLBCPU.Entradas[i].LastUse = time.Now().UnixNano()
+			}
 			return entry.Marco, nil // TLB Hit
 		}
 	}
 	return 0, fmt.Errorf("TLB Miss")
 }
 
-func actualizarTLB(pid, direccionLogica, marco int, tlb *TLB) {
-	// Reemplazar entrada usando FIFO o LRU según el algoritmo
-	// FALTA IMPLEMENTAR LRU
-	pageSize, err := ObtenerPageSize()
-	if err != nil {
-		return
+func actualizarTLB(pid, numeroPagina, marco int) {
+
+	if len(TLBCPU.Entradas) >= globals.ClientConfig.NumberFellingTbl {
+		if globals.ClientConfig.AlgorithmTbl == "FIFO" {
+
+			TLBCPU.Entradas = TLBCPU.Entradas[1:] // Elimina la entrada más antigua
+		} else if globals.ClientConfig.AlgorithmTbl == "LRU" {
+
+			// Encuentra la entrada menos recientemente utilizada
+			lruIndex := 0
+			lruTime := TLBCPU.Entradas[0].LastUse
+			for i, entry := range TLBCPU.Entradas {
+				if entry.LastUse < lruTime {
+					lruIndex = i
+					lruTime = entry.LastUse
+				}
+			}
+			TLBCPU.Entradas = append(TLBCPU.Entradas[:lruIndex], TLBCPU.Entradas[lruIndex+1:]...)
+		}
 	}
 
 	nuevaEntrada := TLBEntry{
-		PID:    pid,
-		Pagina: direccionLogica / pageSize,
-		Marco:  marco,
+		PID:     pid,
+		Pagina:  numeroPagina,
+		Marco:   marco,
+		LastUse: time.Now().UnixNano(),
 	}
-	tlb.Entradas = append(tlb.Entradas[1:], nuevaEntrada)
+
+	TLBCPU.Entradas = append(TLBCPU.Entradas, nuevaEntrada)
 }
 
 func buscarEnMemoria(pid int, numeroPagina int) (int, error) {

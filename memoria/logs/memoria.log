@@ -9681,3 +9681,17 @@ net/http.(*conn).serve(0xc0000c2120, {0x7344d0, 0xc00007eed0})
 	/usr/local/go/src/net/http/server.go:2039 +0x5e8
 created by net/http.(*Server).Serve in goroutine 1
 	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/10 21:39:53 PID: 1 - Tamaño: 256
+2024/06/10 21:39:53 aa 16
+2024/06/10 21:46:36 PID: 1 - Tamaño: 256
+2024/06/10 21:46:36 aa 16
+2024/06/10 21:51:38 PID: 1 - Tamaño: 256
+2024/06/10 21:51:38 aa 16
+2024/06/10 21:51:38 aa 16
+2024/06/10 22:02:08 PID: 1 - Tamaño: 256
+2024/06/10 22:02:08 aa 16
+2024/06/10 22:02:08 http: superfluous response.WriteHeader call from memoria/utils.BuscarMarco (utils.go:103)
+2024/06/10 22:02:08 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/10 22:02:08 
+2024/06/10 22:02:08 aa 16
+2024/06/10 22:02:08 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
