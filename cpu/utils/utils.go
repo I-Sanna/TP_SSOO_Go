@@ -447,6 +447,8 @@ func mmu(pid int, direccionLogica uint32) ([]int, error) {
 		return nil, fmt.Errorf("error al obtener el tamaño de página: %w", err)
 	}
 
+	log.Printf("holi %d %d ", pageSize, uint32(pageSize))
+
 	numeroPagina := int(direccionLogica / uint32(pageSize))
 	desplazamiento := int(direccionLogica - uint32(numeroPagina)*uint32(pageSize))
 
@@ -533,7 +535,7 @@ func buscarEnMemoria(pid int, numeroPagina int) (int, error) {
 }
 
 func ObtenerPageSize() (int, error) {
-	response, err := http.Get("http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/page_size")
+	response, err := http.Get("http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/pageSize")
 	if err != nil {
 		return 0, err
 	}

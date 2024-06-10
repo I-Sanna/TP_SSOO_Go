@@ -2,7 +2,6 @@ package utils
 
 import (
 	"encoding/json"
-	"fmt"
 	"io"
 	"log"
 	"memoria/globals"
@@ -294,7 +293,6 @@ type BodyEscritura struct {
 }
 
 func EscribirMemoria(w http.ResponseWriter, r *http.Request) {
-	fmt.Print("Se solicito escribir algo en memoria")
 	var request BodyEscritura
 
 	err := json.NewDecoder(r.Body).Decode(&request)
@@ -385,7 +383,6 @@ func EscribirMemoria(w http.ResponseWriter, r *http.Request) {
 }
 
 func LeerMemoria(w http.ResponseWriter, r *http.Request) {
-	fmt.Print("Se solicito leer algo de memoria")
 	var request BodyEscritura
 
 	err := json.NewDecoder(r.Body).Decode(&request)
@@ -489,11 +486,12 @@ func obtenerIndexProceso(pid int) int {
 }
 
 func PageSize(w http.ResponseWriter, r *http.Request) {
-	rta, err := json.Marshal(globals.ClientConfig.PageSize)
+	log.Printf("aa %d", globals.ClientConfig.PageSize)
+	respuesta, err := json.Marshal(globals.ClientConfig.PageSize)
 	if err != nil {
 		http.Error(w, "Error al codificar el tamaño de la página como JSON", http.StatusInternalServerError)
 		return
 	}
 	w.WriteHeader(http.StatusOK)
-	w.Write(rta)
+	w.Write(respuesta)
 }
