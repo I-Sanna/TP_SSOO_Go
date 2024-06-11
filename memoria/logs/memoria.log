@@ -9695,3 +9695,40 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/06/10 22:02:08 
 2024/06/10 22:02:08 aa 16
 2024/06/10 22:02:08 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/11 17:49:50 PID: 1 - Tamaño: 256
+2024/06/11 17:57:19 http: panic serving [::1]:49638: runtime error: index out of range [-1]
+goroutine 12 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x69ffe0?, 0xc00001a300?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.ReservarMemoria({0x734ee0, 0xc0000ca9a0}, 0xc00009ab40)
+	/home/utnso/Documents/TP-go/tp-2024-1c-EPIC/memoria/utils/utils.go:142 +0x6e5
+net/http.HandlerFunc.ServeHTTP(0xc000089110?, {0x734ee0?, 0xc0000ca9a0?}, 0x63015a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x734ee0, 0xc0000ca9a0}, 0xc00009ab40)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00007f590?}, {0x734ee0?, 0xc0000ca9a0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c2630, {0x735448, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/11 17:59:37 http: panic serving [::1]:57758: runtime error: index out of range [-1]
+goroutine 15 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x69ffe0?, 0xc00001a348?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.ReservarMemoria({0x734ee0, 0xc0000caa80}, 0xc00009ad80)
+	/home/utnso/Documents/TP-go/tp-2024-1c-EPIC/memoria/utils/utils.go:142 +0x6e5
+net/http.HandlerFunc.ServeHTTP(0xc000089110?, {0x734ee0?, 0xc0000caa80?}, 0x63015a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x734ee0, 0xc0000caa80}, 0xc00009ad80)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00007f800?}, {0x734ee0?, 0xc0000caa80?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c2870, {0x735448, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4

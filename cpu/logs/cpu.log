@@ -6241,3 +6241,25 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/06/10 22:02:08 direDatos: 9775768
 2024/06/10 22:02:08 PID: 0 - FETCH - Program Counter: 4
 2024/06/10 22:02:08 PID: 0 - Ejecutando: EXIT
+2024/06/11 17:27:51 Inicializando TLB con 32 entradas
+2024/06/11 17:49:50 PID: 0 - FETCH - Program Counter: 0
+2024/06/11 17:49:50 http: panic serving 127.0.0.1:33630: runtime error: index out of range [2] with length 2
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6e73a0?, 0xc00001a4e0?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+cpu/utils.decoYExecInstru({0xc000014c20?, 0x0?})
+	/home/utnso/Documents/TP-go/tp-2024-1c-EPIC/cpu/utils/utils.go:713 +0x15a5
+cpu/utils.RecibirProceso({0x789b50, 0xc0000c8460}, 0xc00009ad80)
+	/home/utnso/Documents/TP-go/tp-2024-1c-EPIC/cpu/utils/utils.go:119 +0x2fe
+net/http.HandlerFunc.ServeHTTP(0xc000089040?, {0x789b50?, 0xc0000c8460?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x789b50, 0xc0000c8460}, 0xc00009ad80)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x788b38?}, {0x789b50?, 0xc0000c8460?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c2120, {0x78a110, 0xc00007ed50})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
