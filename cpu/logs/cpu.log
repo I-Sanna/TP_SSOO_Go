@@ -6241,6 +6241,7 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/06/10 22:02:08 direDatos: 9775768
 2024/06/10 22:02:08 PID: 0 - FETCH - Program Counter: 4
 2024/06/10 22:02:08 PID: 0 - Ejecutando: EXIT
+<<<<<<< Updated upstream
 2024/06/11 17:27:51 Inicializando TLB con 32 entradas
 2024/06/11 17:49:50 PID: 0 - FETCH - Program Counter: 0
 2024/06/11 17:49:50 http: panic serving 127.0.0.1:33630: runtime error: index out of range [2] with length 2
@@ -6263,3 +6264,327 @@ net/http.(*conn).serve(0xc0000c2120, {0x78a110, 0xc00007ed50})
 	/usr/local/go/src/net/http/server.go:2039 +0x5e8
 created by net/http.(*Server).Serve in goroutine 1
 	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+=======
+2024/06/11 19:24:23 Inicializando TLB con 32 entradas
+2024/06/11 19:25:14 PID: 0 - FETCH - Program Counter: 0
+2024/06/11 19:25:14 PID: 0 - Ejecutando: SET - AX,1
+2024/06/11 19:25:14 PID: 0 - FETCH - Program Counter: 1
+2024/06/11 19:25:14 PID: 0 - Ejecutando: SET - ECX,2
+2024/06/11 19:25:14 PID: 0 - FETCH - Program Counter: 2
+2024/06/11 19:25:14 PID: 0 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/11 19:25:14 holi 16 16 
+2024/06/11 19:25:14 Error al convertir valor a uint32: strconv.ParseUint: parsing "": invalid syntax
+2024/06/11 19:25:14 PID: 0 - FETCH - Program Counter: 3
+2024/06/11 19:25:14 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/11 19:25:14 holi 16 16 
+2024/06/11 19:25:14 direDatos: 9775768
+2024/06/11 19:25:14 PID: 0 - FETCH - Program Counter: 4
+2024/06/11 19:25:14 PID: 0 - Ejecutando: EXIT
+2024/06/11 19:36:57 Inicializando TLB con 32 entradas
+2024/06/11 19:37:06 PID: 1 - FETCH - Program Counter: 0
+2024/06/11 19:37:06 PID: 1 - Ejecutando: SET - AX,1
+2024/06/11 19:37:06 PID: 1 - FETCH - Program Counter: 1
+2024/06/11 19:37:06 PID: 1 - Ejecutando: SET - ECX,2
+2024/06/11 19:37:06 PID: 1 - FETCH - Program Counter: 2
+2024/06/11 19:37:06 PID: 1 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/11 19:37:06 Error al leer de memoria: error al enviar solicitud: Post "http://localhost:8002/leer": EOF
+2024/06/11 19:37:06 PID: 1 - FETCH - Program Counter: 3
+2024/06/11 19:37:06 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/11 19:37:06 direDatos: 2
+2024/06/11 19:37:06 Error al escribir en memoria: error al enviar la solicitud: Post "http://localhost:8002/escribir": EOF
+2024/06/11 19:37:06 PID: 1 - FETCH - Program Counter: 4
+2024/06/11 19:37:06 PID: 1 - Ejecutando: EXIT
+2024/06/11 19:38:03 Inicializando TLB con 32 entradas
+2024/06/11 19:38:11 PID: 0 - FETCH - Program Counter: 0
+2024/06/11 19:38:11 PID: 0 - Ejecutando: SET - AX,1
+2024/06/11 19:38:11 PID: 0 - FETCH - Program Counter: 1
+2024/06/11 19:38:11 PID: 0 - Ejecutando: SET - ECX,2
+2024/06/11 19:38:11 PID: 0 - FETCH - Program Counter: 2
+2024/06/11 19:38:11 PID: 0 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/11 19:38:11 Error al convertir valor a uint32: strconv.ParseUint: parsing "": invalid syntax
+2024/06/11 19:38:11 PID: 0 - FETCH - Program Counter: 3
+2024/06/11 19:38:11 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/11 19:38:11 direDatos: 2
+2024/06/11 19:38:11 direDatos: 9775768
+2024/06/11 19:38:11 PID: 0 - FETCH - Program Counter: 4
+2024/06/11 19:38:11 PID: 0 - Ejecutando: EXIT
+2024/06/11 19:38:43 Inicializando TLB con 32 entradas
+2024/06/11 19:38:53 PID: 0 - FETCH - Program Counter: 0
+2024/06/11 19:38:53 PID: 0 - Ejecutando: SET - AX,1
+2024/06/11 19:38:53 PID: 0 - FETCH - Program Counter: 1
+2024/06/11 19:38:53 PID: 0 - Ejecutando: SET - ECX,2
+2024/06/11 19:38:53 PID: 0 - FETCH - Program Counter: 2
+2024/06/11 19:38:53 PID: 0 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/11 19:38:53 Resultado leído de la memoria: ''
+2024/06/11 19:38:53 Error al convertir valor a uint32: strconv.ParseUint: parsing "": invalid syntax
+2024/06/11 19:38:53 PID: 0 - FETCH - Program Counter: 3
+2024/06/11 19:38:53 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/11 19:38:53 direDatos: 9775768
+2024/06/11 19:38:53 PID: 0 - FETCH - Program Counter: 4
+2024/06/11 19:38:53 PID: 0 - Ejecutando: EXIT
+2024/06/11 19:46:12 Inicializando TLB con 32 entradas
+2024/06/11 19:46:18 PID: 0 - FETCH - Program Counter: 0
+2024/06/11 19:46:18 PID: 0 - Ejecutando: SET - AX,1
+2024/06/11 19:46:18 PID: 0 - FETCH - Program Counter: 1
+2024/06/11 19:46:18 PID: 0 - Ejecutando: SET - ECX,2
+2024/06/11 19:46:18 PID: 0 - FETCH - Program Counter: 2
+2024/06/11 19:46:18 PID: 0 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/11 19:46:18 Resultado leído de la memoria: ''
+2024/06/11 19:46:18 PID: 0 - Acción: LEER - Dirección Física: 2 - Valor: 
+2024/06/11 19:46:18 Error al convertir valor a uint32: strconv.ParseUint: parsing "": invalid syntax
+2024/06/11 19:46:18 PID: 0 - FETCH - Program Counter: 3
+2024/06/11 19:46:18 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/11 19:46:18 direDatos: 9775768
+2024/06/11 19:46:18 PID: 0 - FETCH - Program Counter: 4
+2024/06/11 19:46:18 PID: 0 - Ejecutando: EXIT
+2024/06/11 19:50:21 Inicializando TLB con 32 entradas
+2024/06/11 19:50:27 PID: 0 - FETCH - Program Counter: 0
+2024/06/11 19:50:27 PID: 0 - Ejecutando: SET - AX,1
+2024/06/11 19:50:27 PID: 0 - FETCH - Program Counter: 1
+2024/06/11 19:50:27 PID: 0 - Ejecutando: SET - ECX,2
+2024/06/11 19:50:27 PID: 0 - FETCH - Program Counter: 2
+2024/06/11 19:50:27 PID: 0 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/11 19:50:27 Resultado leído de la memoria: ''
+2024/06/11 19:50:27 PID: 0 - Acción: LEER - Dirección Física: 2 - Valor: 
+2024/06/11 19:50:27 Error al convertir valor a uint32: strconv.ParseUint: parsing "": invalid syntax
+2024/06/11 19:50:27 PID: 0 - FETCH - Program Counter: 3
+2024/06/11 19:50:27 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/11 19:50:27 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 2
+2024/06/11 19:50:27 direDatos: 9779864
+2024/06/11 19:50:27 PID: 0 - FETCH - Program Counter: 4
+2024/06/11 19:50:27 PID: 0 - Ejecutando: EXIT
+2024/06/11 19:51:26 Inicializando TLB con 32 entradas
+2024/06/11 19:51:37 PID: 0 - FETCH - Program Counter: 0
+2024/06/11 19:51:37 PID: 0 - Ejecutando: SET - AX,1
+2024/06/11 19:51:37 PID: 0 - FETCH - Program Counter: 1
+2024/06/11 19:51:37 PID: 0 - Ejecutando: SET - ECX,36
+2024/06/11 19:51:37 PID: 0 - FETCH - Program Counter: 2
+2024/06/11 19:51:37 PID: 0 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/11 19:51:37 Resultado leído de la memoria: ''
+2024/06/11 19:51:37 PID: 0 - Acción: LEER - Dirección Física: 4 - Valor: 
+2024/06/11 19:51:37 Error al convertir valor a uint32: strconv.ParseUint: parsing "": invalid syntax
+2024/06/11 19:51:37 PID: 0 - FETCH - Program Counter: 3
+2024/06/11 19:51:37 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/11 19:51:37 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36
+2024/06/11 19:51:37 direDatos: 9779864
+2024/06/11 19:51:37 PID: 0 - FETCH - Program Counter: 4
+2024/06/11 19:51:37 PID: 0 - Ejecutando: EXIT
+2024/06/11 19:52:47 Inicializando TLB con 32 entradas
+2024/06/11 19:52:55 PID: 0 - FETCH - Program Counter: 0
+2024/06/11 19:52:55 PID: 0 - Ejecutando: SET - AX,1
+2024/06/11 19:52:55 PID: 0 - FETCH - Program Counter: 1
+2024/06/11 19:52:55 PID: 0 - Ejecutando: SET - ECX,36
+2024/06/11 19:52:55 PID: 0 - FETCH - Program Counter: 2
+2024/06/11 19:52:55 PID: 0 - Ejecutando: SET - EDX,15
+2024/06/11 19:52:55 PID: 0 - FETCH - Program Counter: 3
+2024/06/11 19:52:55 PID: 0 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/11 19:52:55 Resultado leído de la memoria: ''
+2024/06/11 19:52:55 PID: 0 - Acción: LEER - Dirección Física: 4 - Valor: 
+2024/06/11 19:52:55 Error al convertir valor a uint32: strconv.ParseUint: parsing "": invalid syntax
+2024/06/11 19:52:55 PID: 0 - FETCH - Program Counter: 4
+2024/06/11 19:52:55 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/11 19:52:55 PID: 0 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 36
+2024/06/11 19:52:55 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36
+2024/06/11 19:52:55 direDatos: 9779864
+2024/06/11 19:52:55 PID: 0 - FETCH - Program Counter: 5
+2024/06/11 19:52:55 PID: 0 - Ejecutando: EXIT
+2024/06/11 20:08:44 Inicializando TLB con 32 entradas
+2024/06/11 20:08:54 PID: 0 - FETCH - Program Counter: 0
+2024/06/11 20:08:54 PID: 0 - Ejecutando: SET - AX,1
+2024/06/11 20:08:54 PID: 0 - FETCH - Program Counter: 1
+2024/06/11 20:08:54 PID: 0 - Ejecutando: SET - ECX,36
+2024/06/11 20:08:54 PID: 0 - FETCH - Program Counter: 2
+2024/06/11 20:08:54 PID: 0 - Ejecutando: SET - EDX,15
+2024/06/11 20:08:54 PID: 0 - FETCH - Program Counter: 3
+2024/06/11 20:08:54 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/11 20:08:54 PID: 0 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 36
+2024/06/11 20:08:54 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36
+2024/06/11 20:08:54 direDatos: 9779864
+2024/06/11 20:08:54 PID: 0 - FETCH - Program Counter: 4
+2024/06/11 20:08:54 PID: 0 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/11 20:08:54 Resultado leído de la memoria: ''
+2024/06/11 20:08:54 PID: 0 - Acción: LEER - Dirección Física: 4 - Valor: 
+2024/06/11 20:08:54 Error al convertir valor a uint32: strconv.ParseUint: parsing "": invalid syntax
+2024/06/11 20:08:54 PID: 0 - FETCH - Program Counter: 5
+2024/06/11 20:08:54 PID: 0 - Ejecutando: EXIT
+2024/06/11 20:12:34 Inicializando TLB con 32 entradas
+2024/06/11 20:12:46 PID: 0 - FETCH - Program Counter: 0
+2024/06/11 20:12:46 PID: 0 - Ejecutando: SET - AX,1
+2024/06/11 20:12:46 PID: 0 - FETCH - Program Counter: 1
+2024/06/11 20:12:46 PID: 0 - Ejecutando: SET - ECX,36
+2024/06/11 20:12:46 PID: 0 - FETCH - Program Counter: 2
+2024/06/11 20:12:46 PID: 0 - Ejecutando: SET - EDX,15
+2024/06/11 20:12:46 PID: 0 - FETCH - Program Counter: 3
+2024/06/11 20:12:46 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/11 20:12:46 PID: 0 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 36
+2024/06/11 20:12:46 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36
+2024/06/11 20:12:46 direDatos: 9783960
+2024/06/11 20:12:46 PID: 0 - FETCH - Program Counter: 4
+2024/06/11 20:12:46 PID: 0 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/11 20:12:46 PID: 0 - Acción: ESCRIBIR - Dirección Física: 4 - Valor: culo
+2024/06/11 20:12:46 Resultado leído de la memoria: ''
+2024/06/11 20:12:46 PID: 0 - Acción: LEER - Dirección Física: 4 - Valor: 
+2024/06/11 20:12:46 Error al convertir valor a uint32: strconv.ParseUint: parsing "": invalid syntax
+2024/06/11 20:12:46 PID: 0 - FETCH - Program Counter: 5
+2024/06/11 20:12:46 PID: 0 - Ejecutando: EXIT
+2024/06/11 20:13:49 Inicializando TLB con 32 entradas
+2024/06/11 20:13:59 PID: 0 - FETCH - Program Counter: 0
+2024/06/11 20:13:59 PID: 0 - Ejecutando: SET - AX,1
+2024/06/11 20:13:59 PID: 0 - FETCH - Program Counter: 1
+2024/06/11 20:13:59 PID: 0 - Ejecutando: SET - ECX,36
+2024/06/11 20:13:59 PID: 0 - FETCH - Program Counter: 2
+2024/06/11 20:13:59 PID: 0 - Ejecutando: SET - EDX,15
+2024/06/11 20:13:59 PID: 0 - FETCH - Program Counter: 3
+2024/06/11 20:13:59 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/11 20:13:59 PID: 0 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 36
+2024/06/11 20:13:59 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36
+2024/06/11 20:13:59 direDatos: 9783960
+2024/06/11 20:13:59 PID: 0 - FETCH - Program Counter: 4
+2024/06/11 20:13:59 PID: 0 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/11 20:13:59 PID: 0 - Acción: ESCRIBIR - Dirección Física: 4 - Valor: culo
+2024/06/11 20:13:59 Resultado leído de la memoria: ''
+2024/06/11 20:13:59 PID: 0 - Acción: LEER - Dirección Física: 4 - Valor: 
+2024/06/11 20:13:59 Error al convertir valor a uint32: strconv.ParseUint: parsing "": invalid syntax
+2024/06/11 20:13:59 PID: 0 - FETCH - Program Counter: 5
+2024/06/11 20:13:59 PID: 0 - Ejecutando: EXIT
+2024/06/11 20:17:58 Inicializando TLB con 32 entradas
+2024/06/11 20:18:09 PID: 0 - FETCH - Program Counter: 0
+2024/06/11 20:18:09 PID: 0 - Ejecutando: SET - AX,1
+2024/06/11 20:18:09 PID: 0 - FETCH - Program Counter: 1
+2024/06/11 20:18:09 PID: 0 - Ejecutando: SET - ECX,36
+2024/06/11 20:18:09 PID: 0 - FETCH - Program Counter: 2
+2024/06/11 20:18:09 PID: 0 - Ejecutando: SET - EDX,15
+2024/06/11 20:18:09 PID: 0 - FETCH - Program Counter: 3
+2024/06/11 20:18:09 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/11 20:18:09 PID: 0 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 36
+2024/06/11 20:18:09 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36
+2024/06/11 20:18:09 direDatos: 9783960
+2024/06/11 20:18:09 PID: 0 - FETCH - Program Counter: 4
+2024/06/11 20:18:09 PID: 0 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/11 20:18:09 PID: 0 - Acción: ESCRIBIR - Dirección Física: 4 - Valor: culo
+2024/06/11 20:18:09 Resultado leído de la memoria: ''
+2024/06/11 20:18:09 PID: 0 - Acción: LEER - Dirección Física: 4 - Valor: 
+2024/06/11 20:18:09 Error al convertir valor a uint32: strconv.ParseUint: parsing "": invalid syntax
+2024/06/11 20:18:09 PID: 0 - FETCH - Program Counter: 5
+2024/06/11 20:18:09 PID: 0 - Ejecutando: EXIT
+2024/06/11 20:27:38 Inicializando TLB con 32 entradas
+2024/06/11 20:28:07 PID: 0 - FETCH - Program Counter: 0
+2024/06/11 20:28:07 PID: 0 - Ejecutando: SET - AX,1
+2024/06/11 20:28:07 PID: 0 - FETCH - Program Counter: 1
+2024/06/11 20:28:07 PID: 0 - Ejecutando: SET - ECX,36
+2024/06/11 20:28:07 PID: 0 - FETCH - Program Counter: 2
+2024/06/11 20:28:07 PID: 0 - Ejecutando: SET - EDX,15
+2024/06/11 20:28:07 PID: 0 - FETCH - Program Counter: 3
+2024/06/11 20:28:07 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/11 20:28:07 PID: 0 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 36
+2024/06/11 20:28:07 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36
+2024/06/11 20:28:07 direDatos: 9783960
+2024/06/11 20:28:07 PID: 0 - FETCH - Program Counter: 4
+2024/06/11 20:28:07 PID: 0 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/11 20:28:07 PID: 0 - Acción: ESCRIBIR - Dirección Física: 4 - Valor: culo
+2024/06/11 20:28:07 Resultado leído de la memoria: ''
+2024/06/11 20:28:07 PID: 0 - Acción: LEER - Dirección Física: 4 - Valor: 
+2024/06/11 20:28:07 Error al convertir valor a uint32: strconv.ParseUint: parsing "": invalid syntax
+2024/06/11 20:28:07 PID: 0 - FETCH - Program Counter: 5
+2024/06/11 20:28:07 PID: 0 - Ejecutando: EXIT
+2024/06/11 20:34:02 Inicializando TLB con 32 entradas
+2024/06/11 20:34:14 PID: 0 - FETCH - Program Counter: 0
+2024/06/11 20:34:14 PID: 0 - Ejecutando: SET - AX,1
+2024/06/11 20:34:14 PID: 0 - FETCH - Program Counter: 1
+2024/06/11 20:34:14 PID: 0 - Ejecutando: SET - ECX,36
+2024/06/11 20:34:14 PID: 0 - FETCH - Program Counter: 2
+2024/06/11 20:34:14 PID: 0 - Ejecutando: SET - EDX,15
+2024/06/11 20:34:14 PID: 0 - FETCH - Program Counter: 3
+2024/06/11 20:34:14 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/11 20:34:14 PID: 0 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 36
+2024/06/11 20:34:14 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36
+2024/06/11 20:34:14 direDatos: 9783960
+2024/06/11 20:34:14 PID: 0 - FETCH - Program Counter: 4
+2024/06/11 20:34:14 PID: 0 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/11 20:34:14 PID: 0 - Acción: ESCRIBIR - Dirección Física: 4 - Valor: 1234
+2024/06/11 20:34:14 Resultado leído de la memoria: ''
+2024/06/11 20:34:14 PID: 0 - Acción: LEER - Dirección Física: 4 - Valor: 
+2024/06/11 20:34:14 Error al convertir valor a uint32: strconv.ParseUint: parsing "": invalid syntax
+2024/06/11 20:34:14 PID: 0 - FETCH - Program Counter: 5
+2024/06/11 20:34:14 PID: 0 - Ejecutando: EXIT
+2024/06/11 20:46:19 Inicializando TLB con 32 entradas
+2024/06/11 20:46:28 PID: 0 - FETCH - Program Counter: 0
+2024/06/11 20:46:28 PID: 0 - Ejecutando: SET - AX,1
+2024/06/11 20:46:28 PID: 0 - FETCH - Program Counter: 1
+2024/06/11 20:46:28 PID: 0 - Ejecutando: SET - ECX,36
+2024/06/11 20:46:28 PID: 0 - FETCH - Program Counter: 2
+2024/06/11 20:46:28 PID: 0 - Ejecutando: SET - EDX,15
+2024/06/11 20:46:28 PID: 0 - FETCH - Program Counter: 3
+2024/06/11 20:46:28 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/11 20:46:28 PID: 0 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 36
+2024/06/11 20:46:28 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36
+2024/06/11 20:46:28 direDatos: 9779864
+2024/06/11 20:46:28 PID: 0 - FETCH - Program Counter: 4
+2024/06/11 20:46:28 PID: 0 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/11 20:46:28 Resultado leído de la memoria: ''
+2024/06/11 20:46:28 PID: 0 - Acción: LEER - Dirección Física: 4 - Valor: 
+2024/06/11 20:46:28 Error al convertir valor a uint32: strconv.ParseUint: parsing "": invalid syntax
+2024/06/11 20:46:29 PID: 0 - FETCH - Program Counter: 5
+2024/06/11 20:46:29 PID: 0 - Ejecutando: EXIT
+2024/06/11 21:00:15 Inicializando TLB con 32 entradas
+2024/06/11 21:00:26 PID: 0 - FETCH - Program Counter: 0
+2024/06/11 21:00:26 PID: 0 - Ejecutando: SET - AX,1
+2024/06/11 21:00:26 PID: 0 - FETCH - Program Counter: 1
+2024/06/11 21:00:26 PID: 0 - Ejecutando: SET - ECX,36
+2024/06/11 21:00:26 PID: 0 - FETCH - Program Counter: 2
+2024/06/11 21:00:26 PID: 0 - Ejecutando: SET - EDX,15
+2024/06/11 21:00:26 PID: 0 - FETCH - Program Counter: 3
+2024/06/11 21:00:26 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/11 21:00:26 PID: 0 - TLB MISS - Pagina: 0
+2024/06/11 21:00:26 PID: 0 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 36
+2024/06/11 21:00:26 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36
+2024/06/11 21:00:26 direDatos: 9783960
+2024/06/11 21:00:26 PID: 0 - FETCH - Program Counter: 4
+2024/06/11 21:00:26 PID: 0 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/11 21:00:26 PID: 0 - TLB MISS - Pagina: 2
+2024/06/11 21:00:26 Resultado leído de la memoria: ''
+2024/06/11 21:00:26 PID: 0 - Acción: LEER - Dirección Física: 4 - Valor: 
+2024/06/11 21:00:26 Error al convertir valor a uint32: strconv.ParseUint: parsing "": invalid syntax
+2024/06/11 21:00:26 PID: 0 - FETCH - Program Counter: 5
+2024/06/11 21:00:26 PID: 0 - Ejecutando: EXIT
+2024/06/11 21:01:25 PID: 1 - FETCH - Program Counter: 0
+2024/06/11 21:01:25 PID: 1 - Ejecutando: SET - AX,1
+2024/06/11 21:01:25 PID: 1 - FETCH - Program Counter: 1
+2024/06/11 21:01:25 PID: 1 - Ejecutando: SET - ECX,36
+2024/06/11 21:01:25 PID: 1 - FETCH - Program Counter: 2
+2024/06/11 21:01:25 PID: 1 - Ejecutando: SET - EDX,15
+2024/06/11 21:01:25 PID: 1 - FETCH - Program Counter: 3
+2024/06/11 21:01:25 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/11 21:01:25 PID: 1 - TLB MISS - Pagina: 0
+2024/06/11 21:01:25 PID: 1 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 36
+2024/06/11 21:01:25 PID: 1 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36
+2024/06/11 21:01:25 direDatos: 9783960
+2024/06/11 21:01:25 PID: 1 - FETCH - Program Counter: 4
+2024/06/11 21:01:25 PID: 1 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/11 21:01:25 PID: 1 - TLB MISS - Pagina: 2
+2024/06/11 21:01:25 Resultado leído de la memoria: ''
+2024/06/11 21:01:25 PID: 1 - Acción: LEER - Dirección Física: 4 - Valor: 
+2024/06/11 21:01:25 Error al convertir valor a uint32: strconv.ParseUint: parsing "": invalid syntax
+2024/06/11 21:01:25 PID: 1 - FETCH - Program Counter: 5
+2024/06/11 21:01:25 PID: 1 - Ejecutando: EXIT
+2024/06/11 21:02:05 PID: 2 - FETCH - Program Counter: 0
+2024/06/11 21:02:05 PID: 2 - Ejecutando: SET - AX,1
+2024/06/11 21:02:05 PID: 2 - FETCH - Program Counter: 1
+2024/06/11 21:02:05 PID: 2 - Ejecutando: SET - ECX,36
+2024/06/11 21:02:05 PID: 2 - FETCH - Program Counter: 2
+2024/06/11 21:02:05 PID: 2 - Ejecutando: SET - EDX,15
+2024/06/11 21:02:05 PID: 2 - FETCH - Program Counter: 3
+2024/06/11 21:02:05 PID: 2 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/11 21:02:05 PID: 2 - TLB MISS - Pagina: 0
+2024/06/11 21:02:05 PID: 2 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 36
+2024/06/11 21:02:05 PID: 2 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36
+2024/06/11 21:02:05 direDatos: 9783960
+2024/06/11 21:02:05 PID: 2 - FETCH - Program Counter: 4
+2024/06/11 21:02:05 PID: 2 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/11 21:02:05 PID: 2 - TLB MISS - Pagina: 2
+2024/06/11 21:02:05 Resultado leído de la memoria: ''
+2024/06/11 21:02:05 PID: 2 - Acción: LEER - Dirección Física: 4 - Valor: 
+2024/06/11 21:02:05 Error al convertir valor a uint32: strconv.ParseUint: parsing "": invalid syntax
+2024/06/11 21:02:05 PID: 2 - FETCH - Program Counter: 5
+2024/06/11 21:02:05 PID: 2 - Ejecutando: EXIT
+>>>>>>> Stashed changes

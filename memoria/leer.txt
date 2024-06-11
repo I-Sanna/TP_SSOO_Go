@@ -1,2 +1,10 @@
+<<<<<<< Updated upstream
 IO_GEN_SLEEP STD
+=======
+SET AX 1
+SET ECX 36
+SET EDX 15
+MOV_OUT EDX ECX
+MOV_IN EDX ECX
+>>>>>>> Stashed changes
 EXIT

@@ -2168,8 +2168,14 @@ Configuracion cargada con exito!
 Configuracion cargada con exito!
 2024/06/10 22:02:03 
 Configuracion cargada con exito!
+<<<<<<< Updated upstream
 2024/06/11 17:26:02 
 Configuracion cargada con exito!
 2024/06/11 17:26:02 error enviando: Post "http://localhost:8001/nuevoIO": dial tcp 127.0.0.1:8001: connect: connection refused
 2024/06/11 17:28:19 
+=======
+2024/06/11 19:25:10 
+Configuracion cargada con exito!
+2024/06/11 20:28:03 
+>>>>>>> Stashed changes
 Configuracion cargada con exito!

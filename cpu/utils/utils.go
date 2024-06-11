@@ -187,7 +187,7 @@ type BodyEscritura struct {
 	Direccion int    `json:"direccion"`
 }
 
-func leerDeMemoria(pid int, direccion int, tamaño int) (string, error) {
+func LeerDeMemoria(pid int, direccion int, tamaño int) (string, error) {
 	request := BodyEscritura{
 		PID:       pid,
 		Direccion: direccion,
@@ -215,11 +215,14 @@ func leerDeMemoria(pid int, direccion int, tamaño int) (string, error) {
 	if err != nil {
 		return "", fmt.Errorf("error al decodificar respuesta: %v", err)
 	}
+	log.Printf("Resultado leído de la memoria: '%s'", resultado)
+
+	log.Printf("PID: %d - Acción: LEER - Dirección Física: %d - Valor: %s", pid, direccion, resultado)
 
 	return resultado, nil
 }
 
-func escribirEnMemoria(pid int, direccionFisica int, datos string, tamaño int) error {
+func EscribirEnMemoria(pid int, direccionFisica int, datos string, tamaño int) error {
 	body := BodyEscritura{
 		PID:       pid,
 		Info:      datos,
@@ -243,6 +246,8 @@ func escribirEnMemoria(pid int, direccionFisica int, datos string, tamaño int) 
 		return fmt.Errorf("error en la respuesta del servidor: %s", resp.Status)
 	}
 
+	log.Printf("PID: %d - Acción: ESCRIBIR - Dirección Física: %d - Valor: %s", pid, direccionFisica, datos)
+
 	return nil
 }
 
@@ -250,6 +255,11 @@ func escribirEnMemoria(pid int, direccionFisica int, datos string, tamaño int) 
 func MOV_IN(registroDatos, registroDireccion string) {
 	regDatos := ObtenerRegistro32Bits(registroDatos)
 	regDireccion := ObtenerRegistro32Bits(registroDireccion)
+
+	if regDatos == nil || regDireccion == nil {
+		log.Printf("Error: registro inválido")
+		return
+	}
 
 	direccionesFisicas, err := mmu(procesoActual.PID, *regDireccion)
 	if err != nil {
@@ -260,7 +270,7 @@ func MOV_IN(registroDatos, registroDireccion string) {
 	// Leer de memoria considerando la posibilidad de direcciones físicas múltiples
 	var valor string
 	for _, direccionFisica := range direccionesFisicas {
-		parte, err := leerDeMemoria(procesoActual.PID, direccionFisica, 4) // 4 porque el registro es de 32 bits (a chequear)
+		parte, err := LeerDeMemoria(procesoActual.PID, direccionFisica, 4) // 4 porque el registro es de 32 bits (a chequear)
 		if err != nil {
 			log.Printf("Error al leer de memoria: %s", err.Error())
 			return
@@ -291,7 +301,7 @@ func MOV_OUT(registroDireccion, registroDatos string) {
 	datos := strconv.Itoa(int(*regDatos))
 	// Escribir en memoria considerando la posibilidad de direcciones físicas múltiples
 	for _, direccionFisica := range direccionesFisicas {
-		err = escribirEnMemoria(procesoActual.PID, direccionFisica, datos, 4)
+		err = EscribirEnMemoria(procesoActual.PID, direccionFisica, datos, 4)
 		if err != nil {
 			log.Printf("Error al escribir en memoria: %s", err.Error())
 			return
@@ -354,14 +364,14 @@ func COPY_STRING(tamS string) {
 	di := procesoActual.RegistrosCPU.DI
 
 	// Leer el contenido de la memoria desde la dirección apuntada por SI
-	contenido, err := leerDeMemoria(procesoActual.PID, int(si), tam)
+	contenido, err := LeerDeMemoria(procesoActual.PID, int(si), tam)
 	if err != nil {
 		log.Printf("Error al leer de memoria: %s", err.Error())
 		return
 	}
 
 	// Escribir este contenido en la memoria en la dirección apuntada por DI
-	err = escribirEnMemoria(procesoActual.PID, int(di), contenido, tam)
+	err = EscribirEnMemoria(procesoActual.PID, int(di), contenido, tam)
 	if err != nil {
 		log.Printf("Error al escribir en memoria: %s", err.Error())
 		return
@@ -443,8 +453,6 @@ func mmu(pid int, direccionLogica uint32) ([]int, error) {
 		return nil, fmt.Errorf("error al obtener el tamaño de página: %w", err)
 	}
 
-	log.Printf("holi %d %d ", pageSize, uint32(pageSize))
-
 	numeroPagina := int(direccionLogica / uint32(pageSize))
 	desplazamiento := int(direccionLogica - uint32(numeroPagina)*uint32(pageSize))
 
@@ -456,6 +464,7 @@ func mmu(pid int, direccionLogica uint32) ([]int, error) {
 	marcoTLB, err := buscarEnTLB(pid, numeroPagina)
 	if err == nil {
 		direccionFisica := marcoTLB*pageSize + desplazamiento
+		log.Printf("PID: %d - TLB HIT - Pagina: %d", pid, numeroPagina)
 		return []int{direccionFisica}, nil // TLB Hit
 	}
 
@@ -504,8 +513,10 @@ func buscarEnTLB(pid, numeroPagina int) (int, error) {
 				TLBCPU.Entradas[i].LastUse = time.Now().UnixNano()
 			}
 			return entry.Marco, nil // TLB Hit
+
 		}
 	}
+	log.Printf("PID: %d - TLB MISS - Pagina: %d", pid, numeroPagina)
 	return 0, fmt.Errorf("TLB Miss")
 }
 
