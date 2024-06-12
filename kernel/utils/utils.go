@@ -3,6 +3,7 @@ package utils
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"io"
 	"kernel/globals"
 	"log"
@@ -864,8 +865,7 @@ type BodyRRSS struct {
 	Recurso string `json:"recurso"`
 }
 
-/*
-func wait(w http.ResponseWriter, r *http.Request) {
+func Wait(w http.ResponseWriter, r *http.Request) {
 	var request BodyRRSS
 	if err := json.NewDecoder(r.Body).Decode(&request); err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
@@ -882,5 +882,59 @@ func wait(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	fmt.Fprintf(w, "Recurso %s asignado a PID %d", recurso, pid)
+}
+
 func AsignarRecurso(pid int, recurso string) error {
-}*/
+
+	// Buscar el recurso
+	for i, r := range globals.ClientConfig.Resources {
+		if r == recurso {
+			// Verificar si hay instancias disponibles
+			if globals.ClientConfig.Resource_instances[i] > 0 {
+				globals.ClientConfig.Resource_instances[i]--
+				fmt.Printf("Recurso %s asignado al PID %d. Instancias restantes: %d\n", recurso, pid, globals.ClientConfig.Resource_instances[i])
+				return nil
+			} else {
+				return fmt.Errorf("no hay instancias disponibles del recurso %s", recurso)
+			}
+		}
+	}
+	return fmt.Errorf("recurso %s no encontrado", recurso)
+}
+
+func Signal(w http.ResponseWriter, r *http.Request) {
+	var request BodyRRSS
+	if err := json.NewDecoder(r.Body).Decode(&request); err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	pid := request.PID
+	recurso := request.Recurso
+
+	if err := AsignarRecurso(pid, recurso); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
+	fmt.Fprintf(w, "Recurso %s asignado a PID %d", recurso, pid)
+}
+
+func QuitarRecurso(pid int, recurso string) error {
+
+	// Buscar el recurso
+	for i, r := range globals.ClientConfig.Resources {
+		if r == recurso {
+			// Verificar si hay instancias disponibles
+			if globals.ClientConfig.Resource_instances[i] > 0 {
+				globals.ClientConfig.Resource_instances[i]++
+				fmt.Printf("Recurso %s quitado al PID %d. Instancias restantes: %d\n", recurso, pid, globals.ClientConfig.Resource_instances[i])
+				return nil
+			} else {
+				return fmt.Errorf("error al quitar recurso %s", recurso)
+			}
+		}
+	}
+	return fmt.Errorf("recurso %s no encontrado", recurso)
+}

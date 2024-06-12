@@ -123,12 +123,14 @@ func ReservarMemoria(w http.ResponseWriter, r *http.Request) {
 	tam := r.PathValue("tamaño")
 
 	pidInt, err := strconv.Atoi(pid)
+	log.Printf("%s %d\n\n\n\n", pid, pidInt)
 	if err != nil {
 		http.Error(w, "Error al convertir de json a Int", http.StatusInternalServerError)
 		return
 	}
 
 	tamaño, err := strconv.Atoi(tam)
+	log.Printf("%s %d\n\n\n\n", tam, tamaño)
 	if err != nil {
 		http.Error(w, "Error al convertir de json a Int", http.StatusInternalServerError)
 		return
@@ -137,8 +139,9 @@ func ReservarMemoria(w http.ResponseWriter, r *http.Request) {
 	cantidadPaginas := tamaño / globals.ClientConfig.PageSize //Se asume que la instruccion RESIZE pasa un valor divisible por el tamaño de las paginas
 
 	var tablaPaginas map[int]int
-
+	log.Printf("hola")
 	index := obtenerIndexProceso(pidInt)
+	log.Printf("chau %d", index)
 	tablaPaginas = tablasPaginasProcesos[index]
 
 	if tamaño > len(tablaPaginas)*globals.ClientConfig.PageSize {

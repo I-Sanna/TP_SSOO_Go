@@ -9999,3 +9999,283 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/06/11 21:02:05 PID: 2 - Accion: Leer - Direccion fisica: 4 - Tamaño a escribir: 4
 2024/06/11 21:02:05 
 >>>>>>> Stashed changes
+2024/06/12 18:58:02 PID: 1 - Tamaño: 256
+2024/06/12 18:58:02 aa 16
+2024/06/12 18:58:02 http: superfluous response.WriteHeader call from memoria/utils.BuscarMarco (utils.go:103)
+2024/06/12 18:58:02 http: superfluous response.WriteHeader call from memoria/utils.BuscarMarco (utils.go:103)
+2024/06/12 18:58:02 PID: 0 - Accion: Escribir - Direccion fisica: 15 - Tamaño a escribir: 4
+2024/06/12 18:58:02 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/12 18:58:02 aa 16
+2024/06/12 18:58:02 http: superfluous response.WriteHeader call from memoria/utils.BuscarMarco (utils.go:103)
+2024/06/12 18:58:02 PID: 0 - Accion: Leer - Direccion fisica: 4 - Tamaño a escribir: 4
+2024/06/12 18:58:02 
+2024/06/12 19:04:06 http: panic serving [::1]:51892: runtime error: index out of range [-1]
+goroutine 31 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x69ffe0?, 0xc00001a618?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.ReservarMemoria({0x734ee0, 0xc0000cfb20}, 0xc0000fa000)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:142 +0x6e5
+net/http.HandlerFunc.ServeHTTP(0xc000089040?, {0x734ee0?, 0xc0000cfb20?}, 0x63015a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x734ee0, 0xc0000cfb20}, 0xc0000fa000)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0000f64b0?}, {0x734ee0?, 0xc0000cfb20?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c7440, {0x735448, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/12 19:04:55 http: panic serving [::1]:34118: runtime error: index out of range [-1]
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x69ffe0?, 0xc00001a288?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.ReservarMemoria({0x734ee0, 0xc0000c4700}, 0xc0000925a0)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:142 +0x6e5
+net/http.HandlerFunc.ServeHTTP(0xc00007f110?, {0x734ee0?, 0xc0000c4700?}, 0x63015a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x734ee0, 0xc0000c4700}, 0xc0000925a0)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00007d0b0?}, {0x734ee0?, 0xc0000c4700?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000bc1b0, {0x735448, 0xc00007ced0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/12 19:05:29 http: panic serving [::1]:54882: runtime error: index out of range [-1]
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x69ffe0?, 0xc00001a288?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.ReservarMemoria({0x734ee0, 0xc0000ce700}, 0xc00009c5a0)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:142 +0x6e5
+net/http.HandlerFunc.ServeHTTP(0xc000089040?, {0x734ee0?, 0xc0000ce700?}, 0x63015a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x734ee0, 0xc0000ce700}, 0xc00009c5a0)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00007f0b0?}, {0x734ee0?, 0xc0000ce700?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c61b0, {0x735448, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/12 19:23:57 "0" 0
+
+
+
+2024/06/12 19:24:59 "0" 0
+
+
+
+2024/06/12 19:27:34 "0" 0
+
+
+
+2024/06/12 19:29:56 "0" 0
+
+
+
+2024/06/12 19:29:56 "256" 0
+
+
+
+2024/06/12 19:29:56 http: panic serving [::1]:34480: runtime error: index out of range [-1]
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x69ffe0?, 0xc00001a2a0?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.ReservarMemoria({0x734f20, 0xc0000ce700}, 0xc00009c5a0)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:145 +0x83c
+net/http.HandlerFunc.ServeHTTP(0xc000088f70?, {0x734f20?, 0xc0000ce700?}, 0x63015a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x734f20, 0xc0000ce700}, 0xc00009c5a0)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00007f0b0?}, {0x734f20?, 0xc0000ce700?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c61b0, {0x735488, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/12 19:30:25 "0" 0
+
+
+
+2024/06/12 19:30:25 "1" 0
+
+
+
+2024/06/12 19:30:25 http: panic serving [::1]:59362: runtime error: index out of range [-1]
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x69ffe0?, 0xc00001a2b8?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.ReservarMemoria({0x734f20, 0xc0000ce700}, 0xc00009c5a0)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:145 +0x83c
+net/http.HandlerFunc.ServeHTTP(0xc000088dd0?, {0x734f20?, 0xc0000ce700?}, 0x63015a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x734f20, 0xc0000ce700}, 0xc00009c5a0)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00007f0b0?}, {0x734f20?, 0xc0000ce700?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c61b0, {0x735488, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/12 19:30:56 "2" 0
+
+
+
+2024/06/12 19:30:56 "1" 0
+
+
+
+2024/06/12 19:30:56 http: panic serving [::1]:32810: runtime error: index out of range [-1]
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x69ffe0?, 0xc00001a2b8?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.ReservarMemoria({0x734f20, 0xc0000ce700}, 0xc00009c5a0)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:145 +0x83c
+net/http.HandlerFunc.ServeHTTP(0xc000089110?, {0x734f20?, 0xc0000ce700?}, 0x63015a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x734f20, 0xc0000ce700}, 0xc00009c5a0)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00007f0b0?}, {0x734f20?, 0xc0000ce700?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c61b0, {0x735488, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/12 19:32:12 2 2
+
+
+
+2024/06/12 19:32:12 1 1
+
+
+
+2024/06/12 19:32:12 http: panic serving [::1]:59320: runtime error: index out of range [-1]
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x69ffe0?, 0xc00001a288?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.ReservarMemoria({0x734f20, 0xc0000ce700}, 0xc00009c5a0)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:144 +0x8e5
+net/http.HandlerFunc.ServeHTTP(0xc000089040?, {0x734f20?, 0xc0000ce700?}, 0x63015a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x734f20, 0xc0000ce700}, 0xc00009c5a0)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00007f0b0?}, {0x734f20?, 0xc0000ce700?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c61b0, {0x735488, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/12 19:33:10 0 0
+
+
+
+2024/06/12 19:33:10 1 1
+
+
+
+2024/06/12 19:33:10 http: panic serving [::1]:54128: runtime error: index out of range [-1]
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x69ffe0?, 0xc00001a288?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.ReservarMemoria({0x734f20, 0xc0000ce700}, 0xc00009c5a0)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:144 +0x8e5
+net/http.HandlerFunc.ServeHTTP(0xc000088ea0?, {0x734f20?, 0xc0000ce700?}, 0x63015a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x734f20, 0xc0000ce700}, 0xc00009c5a0)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00007f0b0?}, {0x734f20?, 0xc0000ce700?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c61b0, {0x735488, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/12 19:35:53 PID: 1 - Tamaño: 256
+2024/06/12 19:35:53 aa 16
+2024/06/12 19:35:53 http: superfluous response.WriteHeader call from memoria/utils.BuscarMarco (utils.go:103)
+2024/06/12 19:35:53 http: superfluous response.WriteHeader call from memoria/utils.BuscarMarco (utils.go:103)
+2024/06/12 19:35:53 PID: 0 - Accion: Escribir - Direccion fisica: 15 - Tamaño a escribir: 4
+2024/06/12 19:35:53 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/12 19:35:53 aa 16
+2024/06/12 19:35:53 http: superfluous response.WriteHeader call from memoria/utils.BuscarMarco (utils.go:103)
+2024/06/12 19:35:53 PID: 0 - Accion: Leer - Direccion fisica: 4 - Tamaño a escribir: 4
+2024/06/12 19:35:53 
+2024/06/12 19:35:55 PID: 2 - Tamaño: 256
+2024/06/12 19:35:55 aa 16
+2024/06/12 19:35:55 http: superfluous response.WriteHeader call from memoria/utils.BuscarMarco (utils.go:103)
+2024/06/12 19:35:55 http: superfluous response.WriteHeader call from memoria/utils.BuscarMarco (utils.go:103)
+2024/06/12 19:35:55 PID: 1 - Accion: Escribir - Direccion fisica: 15 - Tamaño a escribir: 4
+2024/06/12 19:35:55 PID: 1 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/12 19:35:55 aa 16
+2024/06/12 19:35:55 http: superfluous response.WriteHeader call from memoria/utils.BuscarMarco (utils.go:103)
+2024/06/12 19:35:55 PID: 1 - Accion: Leer - Direccion fisica: 4 - Tamaño a escribir: 4
+2024/06/12 19:35:55 
+2024/06/12 19:36:42 1 1
+
+
+
+2024/06/12 19:36:42 1 1
+
+
+
+2024/06/12 19:36:42 http: panic serving [::1]:45350: runtime error: index out of range [-1]
+goroutine 52 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x69ffe0?, 0xc00001a768?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.ReservarMemoria({0x734f20, 0xc0000fc8c0}, 0xc0000faea0)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:144 +0x8e5
+net/http.HandlerFunc.ServeHTTP(0xc000088f70?, {0x734f20?, 0xc0000fc8c0?}, 0x63015a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x734f20, 0xc0000fc8c0}, 0xc0000faea0)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0000f73b0?}, {0x734f20?, 0xc0000fc8c0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000fe360, {0x735488, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/12 19:39:10 1 1
+
+
+
+2024/06/12 19:39:10 1 1
+
+
+
+2024/06/12 19:39:10 hola
+2024/06/12 19:39:10 chau -1
+2024/06/12 19:39:10 http: panic serving [::1]:47724: runtime error: index out of range [-1]
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x69ffe0?, 0xc00001a288?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.ReservarMemoria({0x734f80, 0xc0000ce700}, 0xc00009c6c0)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:145 +0x9fb
+net/http.HandlerFunc.ServeHTTP(0xc000088f70?, {0x734f80?, 0xc0000ce700?}, 0x63015a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x734f80, 0xc0000ce700}, 0xc00009c6c0)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00007f0b0?}, {0x734f80?, 0xc0000ce700?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c61b0, {0x7354e8, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4

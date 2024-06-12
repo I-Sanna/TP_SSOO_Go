@@ -6588,3 +6588,68 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/06/11 21:02:05 PID: 2 - FETCH - Program Counter: 5
 2024/06/11 21:02:05 PID: 2 - Ejecutando: EXIT
 >>>>>>> Stashed changes
+2024/06/12 18:57:12 Inicializando TLB con 32 entradas
+2024/06/12 18:58:02 PID: 0 - FETCH - Program Counter: 0
+2024/06/12 18:58:02 PID: 0 - Ejecutando: SET - AX,1
+2024/06/12 18:58:02 PID: 0 - FETCH - Program Counter: 1
+2024/06/12 18:58:02 PID: 0 - Ejecutando: SET - ECX,36
+2024/06/12 18:58:02 PID: 0 - FETCH - Program Counter: 2
+2024/06/12 18:58:02 PID: 0 - Ejecutando: SET - EDX,15
+2024/06/12 18:58:02 PID: 0 - FETCH - Program Counter: 3
+2024/06/12 18:58:02 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/12 18:58:02 PID: 0 - TLB MISS - Pagina: 0
+2024/06/12 18:58:02 PID: 0 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 36
+2024/06/12 18:58:02 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36
+2024/06/12 18:58:02 direDatos: 9783960
+2024/06/12 18:58:02 PID: 0 - FETCH - Program Counter: 4
+2024/06/12 18:58:02 PID: 0 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/12 18:58:02 PID: 0 - TLB MISS - Pagina: 2
+2024/06/12 18:58:02 Resultado leído de la memoria: ''
+2024/06/12 18:58:02 PID: 0 - Acción: LEER - Dirección Física: 4 - Valor: 
+2024/06/12 18:58:02 Error al convertir valor a uint32: strconv.ParseUint: parsing "": invalid syntax
+2024/06/12 18:58:02 PID: 0 - FETCH - Program Counter: 5
+2024/06/12 18:58:02 PID: 0 - Ejecutando: EXIT
+2024/06/12 19:04:25 Inicializando TLB con 32 entradas
+2024/06/12 19:18:46 Inicializando TLB con 32 entradas
+2024/06/12 19:35:46 Inicializando TLB con 32 entradas
+2024/06/12 19:35:53 PID: 0 - FETCH - Program Counter: 0
+2024/06/12 19:35:53 PID: 0 - Ejecutando: SET - AX,1
+2024/06/12 19:35:53 PID: 0 - FETCH - Program Counter: 1
+2024/06/12 19:35:53 PID: 0 - Ejecutando: SET - ECX,36
+2024/06/12 19:35:53 PID: 0 - FETCH - Program Counter: 2
+2024/06/12 19:35:53 PID: 0 - Ejecutando: SET - EDX,15
+2024/06/12 19:35:53 PID: 0 - FETCH - Program Counter: 3
+2024/06/12 19:35:53 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/12 19:35:53 PID: 0 - TLB MISS - Pagina: 0
+2024/06/12 19:35:53 PID: 0 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 36
+2024/06/12 19:35:53 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36
+2024/06/12 19:35:53 direDatos: 9783960
+2024/06/12 19:35:53 PID: 0 - FETCH - Program Counter: 4
+2024/06/12 19:35:53 PID: 0 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/12 19:35:53 PID: 0 - TLB MISS - Pagina: 2
+2024/06/12 19:35:53 Resultado leído de la memoria: ''
+2024/06/12 19:35:53 PID: 0 - Acción: LEER - Dirección Física: 4 - Valor: 
+2024/06/12 19:35:53 Error al convertir valor a uint32: strconv.ParseUint: parsing "": invalid syntax
+2024/06/12 19:35:53 PID: 0 - FETCH - Program Counter: 5
+2024/06/12 19:35:53 PID: 0 - Ejecutando: EXIT
+2024/06/12 19:35:55 PID: 1 - FETCH - Program Counter: 0
+2024/06/12 19:35:55 PID: 1 - Ejecutando: SET - AX,1
+2024/06/12 19:35:55 PID: 1 - FETCH - Program Counter: 1
+2024/06/12 19:35:55 PID: 1 - Ejecutando: SET - ECX,36
+2024/06/12 19:35:55 PID: 1 - FETCH - Program Counter: 2
+2024/06/12 19:35:55 PID: 1 - Ejecutando: SET - EDX,15
+2024/06/12 19:35:55 PID: 1 - FETCH - Program Counter: 3
+2024/06/12 19:35:55 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/12 19:35:55 PID: 1 - TLB MISS - Pagina: 0
+2024/06/12 19:35:55 PID: 1 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 36
+2024/06/12 19:35:55 PID: 1 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36
+2024/06/12 19:35:55 direDatos: 9783960
+2024/06/12 19:35:55 PID: 1 - FETCH - Program Counter: 4
+2024/06/12 19:35:55 PID: 1 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/12 19:35:55 PID: 1 - TLB MISS - Pagina: 2
+2024/06/12 19:35:55 Resultado leído de la memoria: ''
+2024/06/12 19:35:55 PID: 1 - Acción: LEER - Dirección Física: 4 - Valor: 
+2024/06/12 19:35:55 Error al convertir valor a uint32: strconv.ParseUint: parsing "": invalid syntax
+2024/06/12 19:35:55 PID: 1 - FETCH - Program Counter: 5
+2024/06/12 19:35:55 PID: 1 - Ejecutando: EXIT
+2024/06/12 19:45:05 Inicializando TLB con 32 entradas
