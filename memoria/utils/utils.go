@@ -207,8 +207,9 @@ func CrearProceso(w http.ResponseWriter, r *http.Request) {
 	instruccionesProcesos = append(instruccionesProcesos, instrucciones)
 	tablasPaginasProcesos = append(tablasPaginasProcesos, tablaPaginas)
 
-	contadorPID++
 	log.Printf("PID: %d - Tamaño: %d", contadorPID, globals.ClientConfig.MemorySize/globals.ClientConfig.PageSize)
+
+	contadorPID++
 	w.WriteHeader(http.StatusOK)
 }
 

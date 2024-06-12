@@ -10279,3 +10279,293 @@ net/http.(*conn).serve(0xc0000c61b0, {0x7354e8, 0xc00007eed0})
 	/usr/local/go/src/net/http/server.go:2039 +0x5e8
 created by net/http.(*Server).Serve in goroutine 1
 	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/12 21:18:54 PID: 1 - Tamaño: 256
+2024/06/12 21:19:41 0 0
+
+
+
+2024/06/12 21:19:41 256 256
+
+
+
+2024/06/12 21:19:41 hola
+2024/06/12 21:19:41 chau 0
+2024/06/12 21:19:41 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/12 21:21:26 0 0
+
+
+
+2024/06/12 21:21:26 128 128
+
+
+
+2024/06/12 21:21:26 hola
+2024/06/12 21:21:26 chau 0
+2024/06/12 21:21:26 PID: 0 - Tamaño Actual: 256 - Tamaño a Reducir: 128
+2024/06/12 21:25:57 PID: 2 - Tamaño: 256
+2024/06/12 21:25:57 1 1
+
+
+
+2024/06/12 21:25:57 256 256
+
+
+
+2024/06/12 21:25:57 hola
+2024/06/12 21:25:57 chau 1
+2024/06/12 21:25:57 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/12 21:25:57 aa 16
+2024/06/12 21:25:57 PID: 1 - Pagina: 0 - Marco: 8
+2024/06/12 21:25:57 PID: 1 - Pagina: 1 - Marco: 9
+2024/06/12 21:25:57 PID: 1 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 21:25:57 PID: 1 - Accion: Escribir - Direccion fisica: 144 - Tamaño a escribir: 4
+2024/06/12 21:25:57 aa 16
+2024/06/12 21:25:57 PID: 1 - Pagina: 2 - Marco: 10
+2024/06/12 21:25:57 PID: 1 - Accion: Leer - Direccion fisica: 164 - Tamaño a escribir: 4
+2024/06/12 21:25:57     
+2024/06/12 22:03:54 PID: 3 - Tamaño: 256
+2024/06/12 22:03:54 2 2
+
+
+
+2024/06/12 22:03:54 256 256
+
+
+
+2024/06/12 22:03:54 hola
+2024/06/12 22:03:54 chau 1
+2024/06/12 22:03:54 PID: 2 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/12 22:03:54 aa 16
+2024/06/12 22:03:54 PID: 2 - Pagina: 0 - Marco: 8
+2024/06/12 22:03:54 PID: 2 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:03:54 aa 16
+2024/06/12 22:03:54 PID: 2 - Pagina: 2 - Marco: 10
+2024/06/12 22:03:54 PID: 2 - Accion: Leer - Direccion fisica: 164 - Tamaño a escribir: 4
+2024/06/12 22:03:54     
+2024/06/12 22:08:12 PID: 4 - Tamaño: 256
+2024/06/12 22:08:12 3 3
+
+
+
+2024/06/12 22:08:12 256 256
+
+
+
+2024/06/12 22:08:12 hola
+2024/06/12 22:08:12 chau 1
+2024/06/12 22:08:12 PID: 3 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/12 22:08:12 aa 16
+2024/06/12 22:08:12 PID: 3 - Pagina: 0 - Marco: 8
+2024/06/12 22:08:12 PID: 3 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:08:12 aa 16
+2024/06/12 22:08:12 PID: 3 - Pagina: 0 - Marco: 8
+2024/06/12 22:08:12 PID: 3 - Accion: Leer - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:08:12 36  
+2024/06/12 22:17:05 PID: 5 - Tamaño: 256
+2024/06/12 22:17:05 4 4
+
+
+
+2024/06/12 22:17:05 256 256
+
+
+
+2024/06/12 22:17:05 hola
+2024/06/12 22:17:05 chau 1
+2024/06/12 22:17:05 PID: 4 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/12 22:17:05 aa 16
+2024/06/12 22:17:05 PID: 4 - Pagina: 0 - Marco: 8
+2024/06/12 22:17:05 PID: 4 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:17:05 aa 16
+2024/06/12 22:17:05 PID: 4 - Pagina: 0 - Marco: 8
+2024/06/12 22:17:05 PID: 4 - Accion: Leer - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:17:05 36  
+2024/06/12 22:17:05 aa 16
+2024/06/12 22:17:05 PID: 4 - Pagina: 0 - Marco: 8
+2024/06/12 22:17:05 PID: 4 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:17:05 aa 16
+2024/06/12 22:17:05 PID: 4 - Pagina: 0 - Marco: 8
+2024/06/12 22:17:05 PID: 4 - Accion: Leer - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:17:05 36  
+2024/06/12 22:19:15 PID: 6 - Tamaño: 256
+2024/06/12 22:19:15 5 5
+
+
+
+2024/06/12 22:19:15 256 256
+
+
+
+2024/06/12 22:19:15 hola
+2024/06/12 22:19:15 chau 1
+2024/06/12 22:19:15 PID: 5 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/12 22:19:15 aa 16
+2024/06/12 22:19:15 PID: 5 - Pagina: 0 - Marco: 8
+2024/06/12 22:19:15 PID: 5 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:19:15 aa 16
+2024/06/12 22:19:15 PID: 5 - Pagina: 0 - Marco: 8
+2024/06/12 22:19:15 PID: 5 - Accion: Leer - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:19:15 3600
+2024/06/12 22:19:15 aa 16
+2024/06/12 22:19:15 PID: 5 - Pagina: 0 - Marco: 8
+2024/06/12 22:19:15 PID: 5 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:19:15 aa 16
+2024/06/12 22:19:15 PID: 5 - Pagina: 0 - Marco: 8
+2024/06/12 22:19:15 PID: 5 - Accion: Leer - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:19:15 3   
+2024/06/12 22:20:32 PID: 7 - Tamaño: 256
+2024/06/12 22:20:32 6 6
+
+
+
+2024/06/12 22:20:32 256 256
+
+
+
+2024/06/12 22:20:32 hola
+2024/06/12 22:20:32 chau 1
+2024/06/12 22:20:32 PID: 6 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/12 22:20:32 aa 16
+2024/06/12 22:20:32 PID: 6 - Pagina: 0 - Marco: 8
+2024/06/12 22:20:32 PID: 6 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:20:32 aa 16
+2024/06/12 22:20:32 PID: 6 - Pagina: 0 - Marco: 8
+2024/06/12 22:20:32 PID: 6 - Accion: Leer - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:20:32 3600
+2024/06/12 22:20:32 aa 16
+2024/06/12 22:20:32 PID: 6 - Pagina: 0 - Marco: 8
+2024/06/12 22:20:32 PID: 6 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:20:32 aa 16
+2024/06/12 22:20:32 PID: 6 - Pagina: 0 - Marco: 8
+2024/06/12 22:20:32 PID: 6 - Accion: Leer - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:20:32 3600
+2024/06/12 22:21:08 PID: 8 - Tamaño: 256
+2024/06/12 22:21:08 7 7
+
+
+
+2024/06/12 22:21:08 256 256
+
+
+
+2024/06/12 22:21:08 hola
+2024/06/12 22:21:08 chau 1
+2024/06/12 22:21:08 PID: 7 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/12 22:21:08 aa 16
+2024/06/12 22:21:08 PID: 7 - Pagina: 0 - Marco: 8
+2024/06/12 22:21:08 PID: 7 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:21:08 aa 16
+2024/06/12 22:21:08 PID: 7 - Pagina: 0 - Marco: 8
+2024/06/12 22:21:08 PID: 7 - Accion: Leer - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:21:08 3600
+2024/06/12 22:21:08 aa 16
+2024/06/12 22:21:08 PID: 7 - Pagina: 0 - Marco: 8
+2024/06/12 22:21:08 PID: 7 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:21:08 aa 16
+2024/06/12 22:21:08 PID: 7 - Pagina: 0 - Marco: 8
+2024/06/12 22:21:08 PID: 7 - Accion: Leer - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:21:08 3600
+2024/06/12 22:21:42 PID: 9 - Tamaño: 256
+2024/06/12 22:21:42 8 8
+
+
+
+2024/06/12 22:21:42 256 256
+
+
+
+2024/06/12 22:21:42 hola
+2024/06/12 22:21:42 chau 1
+2024/06/12 22:21:42 PID: 8 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/12 22:21:42 aa 16
+2024/06/12 22:21:42 PID: 8 - Pagina: 0 - Marco: 8
+2024/06/12 22:21:42 PID: 8 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:21:42 aa 16
+2024/06/12 22:21:42 PID: 8 - Pagina: 0 - Marco: 8
+2024/06/12 22:21:42 PID: 8 - Accion: Leer - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:21:42 3600
+2024/06/12 22:21:42 aa 16
+2024/06/12 22:21:42 PID: 8 - Pagina: 0 - Marco: 8
+2024/06/12 22:21:42 PID: 8 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:21:42 aa 16
+2024/06/12 22:21:42 PID: 8 - Pagina: 0 - Marco: 8
+2024/06/12 22:21:42 PID: 8 - Accion: Leer - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:21:42 3600
+2024/06/12 22:24:03 PID: 10 - Tamaño: 256
+2024/06/12 22:24:03 9 9
+
+
+
+2024/06/12 22:24:03 256 256
+
+
+
+2024/06/12 22:24:03 hola
+2024/06/12 22:24:03 chau 1
+2024/06/12 22:24:03 PID: 9 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/12 22:24:03 aa 16
+2024/06/12 22:24:03 PID: 9 - Pagina: 0 - Marco: 8
+2024/06/12 22:24:03 PID: 9 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:24:03 aa 16
+2024/06/12 22:24:03 PID: 9 - Pagina: 0 - Marco: 8
+2024/06/12 22:24:03 PID: 9 - Accion: Leer - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:24:03 366 
+2024/06/12 22:24:03 aa 16
+2024/06/12 22:24:03 PID: 9 - Pagina: 0 - Marco: 8
+2024/06/12 22:24:03 PID: 9 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:24:03 aa 16
+2024/06/12 22:24:03 PID: 9 - Pagina: 0 - Marco: 8
+2024/06/12 22:24:03 PID: 9 - Accion: Leer - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:24:03 366 
+2024/06/12 22:24:21 PID: 11 - Tamaño: 256
+2024/06/12 22:24:21 10 10
+
+
+
+2024/06/12 22:24:21 256 256
+
+
+
+2024/06/12 22:24:21 hola
+2024/06/12 22:24:21 chau 1
+2024/06/12 22:24:21 PID: 10 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/12 22:24:21 aa 16
+2024/06/12 22:24:21 PID: 10 - Pagina: 0 - Marco: 8
+2024/06/12 22:24:21 PID: 10 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:24:21 aa 16
+2024/06/12 22:24:21 PID: 10 - Pagina: 0 - Marco: 8
+2024/06/12 22:24:21 PID: 10 - Accion: Leer - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:24:21 3600
+2024/06/12 22:24:21 aa 16
+2024/06/12 22:24:21 PID: 10 - Pagina: 0 - Marco: 8
+2024/06/12 22:24:21 PID: 10 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:24:21 aa 16
+2024/06/12 22:24:21 PID: 10 - Pagina: 0 - Marco: 8
+2024/06/12 22:24:21 PID: 10 - Accion: Leer - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:24:21 3
+2024/06/12 22:26:48 PID: 12 - Tamaño: 256
+2024/06/12 22:26:48 11 11
+
+
+
+2024/06/12 22:26:48 256 256
+
+
+
+2024/06/12 22:26:48 hola
+2024/06/12 22:26:48 chau 1
+2024/06/12 22:26:48 PID: 11 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/12 22:26:48 aa 16
+2024/06/12 22:26:48 PID: 11 - Pagina: 0 - Marco: 8
+2024/06/12 22:26:48 PID: 11 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:26:48 aa 16
+2024/06/12 22:26:48 PID: 11 - Pagina: 0 - Marco: 8
+2024/06/12 22:26:48 PID: 11 - Accion: Leer - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:26:48 3600
+2024/06/12 22:26:48 aa 16
+2024/06/12 22:26:48 PID: 11 - Pagina: 0 - Marco: 8
+2024/06/12 22:26:48 PID: 11 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:26:48 aa 16
+2024/06/12 22:26:48 PID: 11 - Pagina: 0 - Marco: 8
+2024/06/12 22:26:48 PID: 11 - Accion: Leer - Direccion fisica: 143 - Tamaño a escribir: 4
+2024/06/12 22:26:48 3600

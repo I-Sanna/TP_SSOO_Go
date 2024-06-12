@@ -6653,3 +6653,458 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/06/12 19:35:55 PID: 1 - FETCH - Program Counter: 5
 2024/06/12 19:35:55 PID: 1 - Ejecutando: EXIT
 2024/06/12 19:45:05 Inicializando TLB con 32 entradas
+2024/06/12 21:17:04 Inicializando TLB con 32 entradas
+2024/06/12 21:18:55 PID: 0 - FETCH - Program Counter: 0
+2024/06/12 21:18:55 PID: 0 - Ejecutando: SET - AX,1
+2024/06/12 21:18:55 PID: 0 - FETCH - Program Counter: 1
+2024/06/12 21:18:55 PID: 0 - Ejecutando: SET - BX,1
+2024/06/12 21:18:55 PID: 0 - FETCH - Program Counter: 2
+2024/06/12 21:18:55 PID: 0 - Ejecutando: SUM - AX,BX
+2024/06/12 21:18:55 PID: 0 - FETCH - Program Counter: 3
+2024/06/12 21:18:55 PID: 0 - Ejecutando: SUB - AX,BX
+2024/06/12 21:18:55 PID: 0 - FETCH - Program Counter: 4
+2024/06/12 21:18:55 PID: 0 - Ejecutando: JNZ - AX,10
+2024/06/12 21:18:55 PID: 0 - FETCH - Program Counter: 9
+2024/06/12 21:18:55 PID: 0 - Ejecutando: SET - BX,1
+2024/06/12 21:18:55 PID: 0 - FETCH - Program Counter: 10
+2024/06/12 21:18:55 PID: 0 - Ejecutando: SUM - AX,BX
+2024/06/12 21:18:55 PID: 0 - FETCH - Program Counter: 11
+2024/06/12 21:18:55 PID: 0 - Ejecutando: IO_GEN_SLEEP - Mouse,2000000
+2024/06/12 21:25:57 PID: 1 - FETCH - Program Counter: 0
+2024/06/12 21:25:57 PID: 1 - Ejecutando: SET - AX,1
+2024/06/12 21:25:57 PID: 1 - FETCH - Program Counter: 1
+2024/06/12 21:25:57 PID: 1 - Ejecutando: SET - ECX,36
+2024/06/12 21:25:57 PID: 1 - FETCH - Program Counter: 2
+2024/06/12 21:25:57 PID: 1 - Ejecutando: SET - EDX,15
+2024/06/12 21:25:57 PID: 1 - FETCH - Program Counter: 3
+2024/06/12 21:25:57 PID: 1 - Ejecutando: RESIZE - 256
+2024/06/12 21:25:57 Error al decodificar la respuesta: EOF
+2024/06/12 21:25:57 PID: 1 - FETCH - Program Counter: 4
+2024/06/12 21:25:57 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/12 21:25:57 PID: 1 - TLB MISS - Pagina: 0
+2024/06/12 21:25:57 PID: 1 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 36
+2024/06/12 21:25:57 PID: 1 - Acción: ESCRIBIR - Dirección Física: 144 - Valor: 36
+2024/06/12 21:25:57 direDatos: 9783960
+2024/06/12 21:25:57 PID: 1 - FETCH - Program Counter: 5
+2024/06/12 21:25:57 PID: 1 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/12 21:25:57 PID: 1 - TLB MISS - Pagina: 2
+2024/06/12 21:25:57 Resultado leído de la memoria: '    '
+2024/06/12 21:25:57 PID: 1 - Acción: LEER - Dirección Física: 164 - Valor:     
+2024/06/12 21:25:57 Error al convertir valor a uint32: strconv.ParseUint: parsing "\x00\x00\x00\x00": invalid syntax
+2024/06/12 21:25:57 PID: 1 - FETCH - Program Counter: 6
+2024/06/12 21:25:57 PID: 1 - Ejecutando: EXIT
+2024/06/12 22:03:47 Inicializando TLB con 32 entradas
+2024/06/12 22:03:54 PID: 2 - FETCH - Program Counter: 0
+2024/06/12 22:03:54 PID: 2 - Ejecutando: SET - AX,1
+2024/06/12 22:03:54 PID: 2 - FETCH - Program Counter: 1
+2024/06/12 22:03:54 PID: 2 - Ejecutando: SET - ECX,36
+2024/06/12 22:03:54 PID: 2 - FETCH - Program Counter: 2
+2024/06/12 22:03:54 PID: 2 - Ejecutando: SET - EDX,15
+2024/06/12 22:03:54 PID: 2 - FETCH - Program Counter: 3
+2024/06/12 22:03:54 PID: 2 - Ejecutando: RESIZE - 256
+2024/06/12 22:03:54 PID: 2 - FETCH - Program Counter: 4
+2024/06/12 22:03:54 PID: 2 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/12 22:03:54 Tamaño pagina: 16
+2024/06/12 22:03:54 Num pagina: 0
+2024/06/12 22:03:54 Desplazamiento: 15
+2024/06/12 22:03:54 PID: 2 - TLB MISS - Pagina: 0
+2024/06/12 22:03:54 Usted conoce a: 36
+2024/06/12 22:03:54 Body: {2 36 4 143}
+2024/06/12 22:03:54 PID: 2 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 36
+2024/06/12 22:03:54 PID: 2 - FETCH - Program Counter: 5
+2024/06/12 22:03:54 PID: 2 - Ejecutando: MOV_IN - EDX,ECX
+2024/06/12 22:03:54 Tamaño pagina: 16
+2024/06/12 22:03:54 Num pagina: 2
+2024/06/12 22:03:54 Desplazamiento: 4
+2024/06/12 22:03:54 PID: 2 - TLB MISS - Pagina: 2
+2024/06/12 22:03:54 Resultado leído de la memoria: '    '
+2024/06/12 22:03:54 PID: 2 - Acción: LEER - Dirección Física: 164 - Valor:     
+2024/06/12 22:03:54 Error al convertir valor a uint32: strconv.ParseUint: parsing "\x00\x00\x00\x00": invalid syntax
+2024/06/12 22:03:54 PID: 2 - FETCH - Program Counter: 6
+2024/06/12 22:03:54 PID: 2 - Ejecutando: EXIT
+2024/06/12 22:08:12 PID: 3 - FETCH - Program Counter: 0
+2024/06/12 22:08:12 PID: 3 - Ejecutando: SET - AX,1
+2024/06/12 22:08:12 PID: 3 - FETCH - Program Counter: 1
+2024/06/12 22:08:12 PID: 3 - Ejecutando: SET - ECX,36
+2024/06/12 22:08:12 PID: 3 - FETCH - Program Counter: 2
+2024/06/12 22:08:12 PID: 3 - Ejecutando: SET - EDX,15
+2024/06/12 22:08:12 PID: 3 - FETCH - Program Counter: 3
+2024/06/12 22:08:12 PID: 3 - Ejecutando: RESIZE - 256
+2024/06/12 22:08:12 PID: 3 - FETCH - Program Counter: 4
+2024/06/12 22:08:12 PID: 3 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/12 22:08:12 Tamaño pagina: 16
+2024/06/12 22:08:12 Num pagina: 0
+2024/06/12 22:08:12 Desplazamiento: 15
+2024/06/12 22:08:12 PID: 3 - TLB MISS - Pagina: 0
+2024/06/12 22:08:12 Usted conoce a: 36
+2024/06/12 22:08:12 Body: {3 36 4 143}
+2024/06/12 22:08:12 PID: 3 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 36
+2024/06/12 22:08:12 PID: 3 - FETCH - Program Counter: 5
+2024/06/12 22:08:12 PID: 3 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/12 22:08:12 Tamaño pagina: 16
+2024/06/12 22:08:12 Num pagina: 0
+2024/06/12 22:08:12 Desplazamiento: 15
+2024/06/12 22:08:12 PID: 3 - TLB MISS - Pagina: 0
+2024/06/12 22:08:12 Resultado leído de la memoria: '36  '
+2024/06/12 22:08:12 PID: 3 - Acción: LEER - Dirección Física: 143 - Valor: 36  
+2024/06/12 22:08:12 Error al convertir valor a uint32: strconv.ParseUint: parsing "36\x00\x00": invalid syntax
+2024/06/12 22:08:12 PID: 3 - FETCH - Program Counter: 6
+2024/06/12 22:08:12 PID: 3 - Ejecutando: EXIT
+2024/06/12 22:16:36 Inicializando TLB con 32 entradas
+2024/06/12 22:17:05 PID: 4 - FETCH - Program Counter: 0
+2024/06/12 22:17:05 PID: 4 - Ejecutando: SET - AX,1
+2024/06/12 22:17:05 PID: 4 - FETCH - Program Counter: 1
+2024/06/12 22:17:05 PID: 4 - Ejecutando: SET - ECX,36
+2024/06/12 22:17:05 PID: 4 - FETCH - Program Counter: 2
+2024/06/12 22:17:05 PID: 4 - Ejecutando: SET - EDX,15
+2024/06/12 22:17:05 PID: 4 - FETCH - Program Counter: 3
+2024/06/12 22:17:05 PID: 4 - Ejecutando: RESIZE - 256
+2024/06/12 22:17:05 PID: 4 - FETCH - Program Counter: 4
+2024/06/12 22:17:05 PID: 4 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/12 22:17:05 Tamaño pagina: 16
+2024/06/12 22:17:05 Num pagina: 0
+2024/06/12 22:17:05 Desplazamiento: 15
+2024/06/12 22:17:05 PID: 4 - TLB MISS - Pagina: 0
+2024/06/12 22:17:05 Usted conoce a: 36
+2024/06/12 22:17:05 Body: {4 36 4 143}
+2024/06/12 22:17:05 PID: 4 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 36
+2024/06/12 22:17:05 PID: 4 - FETCH - Program Counter: 5
+2024/06/12 22:17:05 PID: 4 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/12 22:17:05 Tamaño pagina: 16
+2024/06/12 22:17:05 Num pagina: 0
+2024/06/12 22:17:05 Desplazamiento: 15
+2024/06/12 22:17:05 PID: 4 - TLB MISS - Pagina: 0
+2024/06/12 22:17:05 Resultado leído de la memoria: '36  '
+2024/06/12 22:17:05 PID: 4 - Acción: LEER - Dirección Física: 143 - Valor: 36  
+2024/06/12 22:17:05 Error al convertir valor a uint32: strconv.ParseUint: parsing "36\x00\x00": invalid syntax
+2024/06/12 22:17:05 PID: 4 - FETCH - Program Counter: 6
+2024/06/12 22:17:05 PID: 4 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/12 22:17:05 Tamaño pagina: 16
+2024/06/12 22:17:05 Num pagina: 0
+2024/06/12 22:17:05 Desplazamiento: 15
+2024/06/12 22:17:05 PID: 4 - TLB MISS - Pagina: 0
+2024/06/12 22:17:05 Usted conoce a: 36
+2024/06/12 22:17:05 Body: {4 36 4 143}
+2024/06/12 22:17:05 PID: 4 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 36
+2024/06/12 22:17:05 PID: 4 - FETCH - Program Counter: 7
+2024/06/12 22:17:05 PID: 4 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/12 22:17:05 Tamaño pagina: 16
+2024/06/12 22:17:05 Num pagina: 0
+2024/06/12 22:17:05 Desplazamiento: 15
+2024/06/12 22:17:05 PID: 4 - TLB MISS - Pagina: 0
+2024/06/12 22:17:05 Resultado leído de la memoria: '36  '
+2024/06/12 22:17:05 PID: 4 - Acción: LEER - Dirección Física: 143 - Valor: 36  
+2024/06/12 22:17:05 Error al convertir valor a uint32: strconv.ParseUint: parsing "36\x00\x00": invalid syntax
+2024/06/12 22:17:05 PID: 4 - FETCH - Program Counter: 8
+2024/06/12 22:17:05 PID: 4 - Ejecutando: EXIT
+2024/06/12 22:19:15 PID: 5 - FETCH - Program Counter: 0
+2024/06/12 22:19:15 PID: 5 - Ejecutando: SET - AX,1
+2024/06/12 22:19:15 PID: 5 - FETCH - Program Counter: 1
+2024/06/12 22:19:15 PID: 5 - Ejecutando: SET - ECX,3600
+2024/06/12 22:19:15 PID: 5 - FETCH - Program Counter: 2
+2024/06/12 22:19:15 PID: 5 - Ejecutando: SET - EDX,15
+2024/06/12 22:19:15 PID: 5 - FETCH - Program Counter: 3
+2024/06/12 22:19:15 PID: 5 - Ejecutando: RESIZE - 256
+2024/06/12 22:19:15 PID: 5 - FETCH - Program Counter: 4
+2024/06/12 22:19:15 PID: 5 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/12 22:19:15 Tamaño pagina: 16
+2024/06/12 22:19:15 Num pagina: 0
+2024/06/12 22:19:15 Desplazamiento: 15
+2024/06/12 22:19:15 PID: 5 - TLB MISS - Pagina: 0
+2024/06/12 22:19:15 Usted conoce a: 3600
+2024/06/12 22:19:15 Body: {5 3600 4 143}
+2024/06/12 22:19:15 PID: 5 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 3600
+2024/06/12 22:19:15 PID: 5 - FETCH - Program Counter: 5
+2024/06/12 22:19:15 PID: 5 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/12 22:19:15 Tamaño pagina: 16
+2024/06/12 22:19:15 Num pagina: 0
+2024/06/12 22:19:15 Desplazamiento: 15
+2024/06/12 22:19:15 PID: 5 - TLB MISS - Pagina: 0
+2024/06/12 22:19:15 Resultado leído de la memoria: '3600'
+2024/06/12 22:19:15 PID: 5 - Acción: LEER - Dirección Física: 143 - Valor: 3600
+2024/06/12 22:19:15 PID: 5 - FETCH - Program Counter: 6
+2024/06/12 22:19:15 PID: 5 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/12 22:19:15 Tamaño pagina: 16
+2024/06/12 22:19:15 Num pagina: 0
+2024/06/12 22:19:15 Desplazamiento: 15
+2024/06/12 22:19:15 PID: 5 - TLB MISS - Pagina: 0
+2024/06/12 22:19:15 Usted conoce a: 3600
+2024/06/12 22:19:15 Body: {5 3600 4 143}
+2024/06/12 22:19:15 PID: 5 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 3600
+2024/06/12 22:19:15 PID: 5 - FETCH - Program Counter: 7
+2024/06/12 22:19:15 PID: 5 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/12 22:19:15 Tamaño pagina: 16
+2024/06/12 22:19:15 Num pagina: 0
+2024/06/12 22:19:15 Desplazamiento: 15
+2024/06/12 22:19:15 PID: 5 - TLB MISS - Pagina: 0
+2024/06/12 22:19:15 Resultado leído de la memoria: '3   '
+2024/06/12 22:19:15 PID: 5 - Acción: LEER - Dirección Física: 143 - Valor: 3   
+2024/06/12 22:19:15 Error al convertir valor a uint32: strconv.ParseUint: parsing "3\x00\x00\x00": invalid syntax
+2024/06/12 22:19:15 PID: 5 - FETCH - Program Counter: 8
+2024/06/12 22:19:15 PID: 5 - Ejecutando: EXIT
+2024/06/12 22:20:32 PID: 6 - FETCH - Program Counter: 0
+2024/06/12 22:20:32 PID: 6 - Ejecutando: SET - AX,1
+2024/06/12 22:20:32 PID: 6 - FETCH - Program Counter: 1
+2024/06/12 22:20:32 PID: 6 - Ejecutando: SET - ECX,3600
+2024/06/12 22:20:32 PID: 6 - FETCH - Program Counter: 2
+2024/06/12 22:20:32 PID: 6 - Ejecutando: SET - EDX,15
+2024/06/12 22:20:32 PID: 6 - FETCH - Program Counter: 3
+2024/06/12 22:20:32 PID: 6 - Ejecutando: RESIZE - 256
+2024/06/12 22:20:32 PID: 6 - FETCH - Program Counter: 4
+2024/06/12 22:20:32 PID: 6 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/12 22:20:32 Tamaño pagina: 16
+2024/06/12 22:20:32 Num pagina: 0
+2024/06/12 22:20:32 Desplazamiento: 15
+2024/06/12 22:20:32 PID: 6 - TLB MISS - Pagina: 0
+2024/06/12 22:20:32 Usted conoce a: 3600
+2024/06/12 22:20:32 Body: {6 3600 4 143}
+2024/06/12 22:20:32 PID: 6 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 3600
+2024/06/12 22:20:32 PID: 6 - FETCH - Program Counter: 5
+2024/06/12 22:20:32 PID: 6 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/12 22:20:32 Tamaño pagina: 16
+2024/06/12 22:20:32 Num pagina: 0
+2024/06/12 22:20:32 Desplazamiento: 15
+2024/06/12 22:20:32 PID: 6 - TLB MISS - Pagina: 0
+2024/06/12 22:20:32 Resultado leído de la memoria: '3600'
+2024/06/12 22:20:32 PID: 6 - Acción: LEER - Dirección Física: 143 - Valor: 3600
+2024/06/12 22:20:32 PID: 6 - FETCH - Program Counter: 6
+2024/06/12 22:20:32 PID: 6 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/12 22:20:32 Tamaño pagina: 16
+2024/06/12 22:20:32 Num pagina: 0
+2024/06/12 22:20:32 Desplazamiento: 15
+2024/06/12 22:20:32 PID: 6 - TLB MISS - Pagina: 0
+2024/06/12 22:20:32 Usted conoce a: 3600
+2024/06/12 22:20:32 Body: {6 3600 4 143}
+2024/06/12 22:20:32 PID: 6 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 3600
+2024/06/12 22:20:32 PID: 6 - FETCH - Program Counter: 7
+2024/06/12 22:20:32 PID: 6 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/12 22:20:32 Tamaño pagina: 16
+2024/06/12 22:20:32 Num pagina: 0
+2024/06/12 22:20:32 Desplazamiento: 15
+2024/06/12 22:20:32 PID: 6 - TLB MISS - Pagina: 0
+2024/06/12 22:20:32 Resultado leído de la memoria: '3600'
+2024/06/12 22:20:32 PID: 6 - Acción: LEER - Dirección Física: 143 - Valor: 3600
+2024/06/12 22:20:32 PID: 6 - FETCH - Program Counter: 8
+2024/06/12 22:20:32 PID: 6 - Ejecutando: EXIT
+2024/06/12 22:21:08 PID: 7 - FETCH - Program Counter: 0
+2024/06/12 22:21:08 PID: 7 - Ejecutando: SET - AX,1
+2024/06/12 22:21:08 PID: 7 - FETCH - Program Counter: 1
+2024/06/12 22:21:08 PID: 7 - Ejecutando: SET - ECX,36
+2024/06/12 22:21:08 PID: 7 - FETCH - Program Counter: 2
+2024/06/12 22:21:08 PID: 7 - Ejecutando: SET - EDX,15
+2024/06/12 22:21:08 PID: 7 - FETCH - Program Counter: 3
+2024/06/12 22:21:08 PID: 7 - Ejecutando: RESIZE - 256
+2024/06/12 22:21:08 PID: 7 - FETCH - Program Counter: 4
+2024/06/12 22:21:08 PID: 7 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/12 22:21:08 Tamaño pagina: 16
+2024/06/12 22:21:08 Num pagina: 0
+2024/06/12 22:21:08 Desplazamiento: 15
+2024/06/12 22:21:08 PID: 7 - TLB MISS - Pagina: 0
+2024/06/12 22:21:08 Usted conoce a: 36
+2024/06/12 22:21:08 Body: {7 36 4 143}
+2024/06/12 22:21:08 PID: 7 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 36
+2024/06/12 22:21:08 PID: 7 - FETCH - Program Counter: 5
+2024/06/12 22:21:08 PID: 7 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/12 22:21:08 Tamaño pagina: 16
+2024/06/12 22:21:08 Num pagina: 0
+2024/06/12 22:21:08 Desplazamiento: 15
+2024/06/12 22:21:08 PID: 7 - TLB MISS - Pagina: 0
+2024/06/12 22:21:08 Resultado leído de la memoria: '3600'
+2024/06/12 22:21:08 PID: 7 - Acción: LEER - Dirección Física: 143 - Valor: 3600
+2024/06/12 22:21:08 PID: 7 - FETCH - Program Counter: 6
+2024/06/12 22:21:08 PID: 7 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/12 22:21:08 Tamaño pagina: 16
+2024/06/12 22:21:08 Num pagina: 0
+2024/06/12 22:21:08 Desplazamiento: 15
+2024/06/12 22:21:08 PID: 7 - TLB MISS - Pagina: 0
+2024/06/12 22:21:08 Usted conoce a: 3600
+2024/06/12 22:21:08 Body: {7 3600 4 143}
+2024/06/12 22:21:08 PID: 7 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 3600
+2024/06/12 22:21:08 PID: 7 - FETCH - Program Counter: 7
+2024/06/12 22:21:08 PID: 7 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/12 22:21:08 Tamaño pagina: 16
+2024/06/12 22:21:08 Num pagina: 0
+2024/06/12 22:21:08 Desplazamiento: 15
+2024/06/12 22:21:08 PID: 7 - TLB MISS - Pagina: 0
+2024/06/12 22:21:08 Resultado leído de la memoria: '3600'
+2024/06/12 22:21:08 PID: 7 - Acción: LEER - Dirección Física: 143 - Valor: 3600
+2024/06/12 22:21:08 PID: 7 - FETCH - Program Counter: 8
+2024/06/12 22:21:08 PID: 7 - Ejecutando: EXIT
+2024/06/12 22:21:42 PID: 8 - FETCH - Program Counter: 0
+2024/06/12 22:21:42 PID: 8 - Ejecutando: SET - AX,1
+2024/06/12 22:21:42 PID: 8 - FETCH - Program Counter: 1
+2024/06/12 22:21:42 PID: 8 - Ejecutando: SET - ECX,3600
+2024/06/12 22:21:42 PID: 8 - FETCH - Program Counter: 2
+2024/06/12 22:21:42 PID: 8 - Ejecutando: SET - EDX,15
+2024/06/12 22:21:42 PID: 8 - FETCH - Program Counter: 3
+2024/06/12 22:21:42 PID: 8 - Ejecutando: RESIZE - 256
+2024/06/12 22:21:42 PID: 8 - FETCH - Program Counter: 4
+2024/06/12 22:21:42 PID: 8 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/12 22:21:42 Tamaño pagina: 16
+2024/06/12 22:21:42 Num pagina: 0
+2024/06/12 22:21:42 Desplazamiento: 15
+2024/06/12 22:21:42 PID: 8 - TLB MISS - Pagina: 0
+2024/06/12 22:21:42 Usted conoce a: 3600
+2024/06/12 22:21:42 Body: {8 3600 4 143}
+2024/06/12 22:21:42 PID: 8 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 3600
+2024/06/12 22:21:42 PID: 8 - FETCH - Program Counter: 5
+2024/06/12 22:21:42 PID: 8 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/12 22:21:42 Tamaño pagina: 16
+2024/06/12 22:21:42 Num pagina: 0
+2024/06/12 22:21:42 Desplazamiento: 15
+2024/06/12 22:21:42 PID: 8 - TLB MISS - Pagina: 0
+2024/06/12 22:21:42 Resultado leído de la memoria: '3600'
+2024/06/12 22:21:42 PID: 8 - Acción: LEER - Dirección Física: 143 - Valor: 3600
+2024/06/12 22:21:42 PID: 8 - FETCH - Program Counter: 6
+2024/06/12 22:21:42 PID: 8 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/12 22:21:42 Tamaño pagina: 16
+2024/06/12 22:21:42 Num pagina: 0
+2024/06/12 22:21:42 Desplazamiento: 15
+2024/06/12 22:21:42 PID: 8 - TLB MISS - Pagina: 0
+2024/06/12 22:21:42 Usted conoce a: 3600
+2024/06/12 22:21:42 Body: {8 3600 4 143}
+2024/06/12 22:21:42 PID: 8 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 3600
+2024/06/12 22:21:42 PID: 8 - FETCH - Program Counter: 7
+2024/06/12 22:21:42 PID: 8 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/12 22:21:42 Tamaño pagina: 16
+2024/06/12 22:21:42 Num pagina: 0
+2024/06/12 22:21:42 Desplazamiento: 15
+2024/06/12 22:21:42 PID: 8 - TLB MISS - Pagina: 0
+2024/06/12 22:21:42 Resultado leído de la memoria: '3600'
+2024/06/12 22:21:42 PID: 8 - Acción: LEER - Dirección Física: 143 - Valor: 3600
+2024/06/12 22:21:42 PID: 8 - FETCH - Program Counter: 8
+2024/06/12 22:21:42 PID: 8 - Ejecutando: EXIT
+2024/06/12 22:24:03 PID: 9 - FETCH - Program Counter: 0
+2024/06/12 22:24:03 PID: 9 - Ejecutando: SET - AX,1
+2024/06/12 22:24:03 PID: 9 - FETCH - Program Counter: 1
+2024/06/12 22:24:03 PID: 9 - Ejecutando: SET - ECX,36
+2024/06/12 22:24:03 PID: 9 - FETCH - Program Counter: 2
+2024/06/12 22:24:03 PID: 9 - Ejecutando: SET - EDX,15
+2024/06/12 22:24:03 PID: 9 - FETCH - Program Counter: 3
+2024/06/12 22:24:03 PID: 9 - Ejecutando: RESIZE - 256
+2024/06/12 22:24:03 PID: 9 - FETCH - Program Counter: 4
+2024/06/12 22:24:03 PID: 9 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/12 22:24:03 Tamaño pagina: 16
+2024/06/12 22:24:03 Num pagina: 0
+2024/06/12 22:24:03 Desplazamiento: 15
+2024/06/12 22:24:03 PID: 9 - TLB MISS - Pagina: 0
+2024/06/12 22:24:03 Usted conoce a: 36
+2024/06/12 22:24:03 Body: {9 36 4 143}
+2024/06/12 22:24:03 PID: 9 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 36
+2024/06/12 22:24:03 PID: 9 - FETCH - Program Counter: 5
+2024/06/12 22:24:03 PID: 9 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/12 22:24:03 Tamaño pagina: 16
+2024/06/12 22:24:03 Num pagina: 0
+2024/06/12 22:24:03 Desplazamiento: 15
+2024/06/12 22:24:03 PID: 9 - TLB MISS - Pagina: 0
+2024/06/12 22:24:03 Resultado leído de la memoria: '366 '
+2024/06/12 22:24:03 PID: 9 - Acción: LEER - Dirección Física: 143 - Valor: 366 
+2024/06/12 22:24:03 Error al convertir valor a uint32: strconv.ParseUint: parsing "366\x00": invalid syntax
+2024/06/12 22:24:03 PID: 9 - FETCH - Program Counter: 6
+2024/06/12 22:24:03 PID: 9 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/12 22:24:03 Tamaño pagina: 16
+2024/06/12 22:24:03 Num pagina: 0
+2024/06/12 22:24:03 Desplazamiento: 15
+2024/06/12 22:24:03 PID: 9 - TLB MISS - Pagina: 0
+2024/06/12 22:24:03 Usted conoce a: 36
+2024/06/12 22:24:03 Body: {9 36 4 143}
+2024/06/12 22:24:03 PID: 9 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 36
+2024/06/12 22:24:03 PID: 9 - FETCH - Program Counter: 7
+2024/06/12 22:24:03 PID: 9 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/12 22:24:03 Tamaño pagina: 16
+2024/06/12 22:24:03 Num pagina: 0
+2024/06/12 22:24:03 Desplazamiento: 15
+2024/06/12 22:24:03 PID: 9 - TLB MISS - Pagina: 0
+2024/06/12 22:24:03 Resultado leído de la memoria: '366 '
+2024/06/12 22:24:03 PID: 9 - Acción: LEER - Dirección Física: 143 - Valor: 366 
+2024/06/12 22:24:03 Error al convertir valor a uint32: strconv.ParseUint: parsing "366\x00": invalid syntax
+2024/06/12 22:24:03 PID: 9 - FETCH - Program Counter: 8
+2024/06/12 22:24:03 PID: 9 - Ejecutando: EXIT
+2024/06/12 22:24:21 PID: 10 - FETCH - Program Counter: 0
+2024/06/12 22:24:21 PID: 10 - Ejecutando: SET - AX,1
+2024/06/12 22:24:21 PID: 10 - FETCH - Program Counter: 1
+2024/06/12 22:24:21 PID: 10 - Ejecutando: SET - ECX,36
+2024/06/12 22:24:21 PID: 10 - FETCH - Program Counter: 2
+2024/06/12 22:24:21 PID: 10 - Ejecutando: SET - EDX,15
+2024/06/12 22:24:21 PID: 10 - FETCH - Program Counter: 3
+2024/06/12 22:24:21 PID: 10 - Ejecutando: RESIZE - 256
+2024/06/12 22:24:21 PID: 10 - FETCH - Program Counter: 4
+2024/06/12 22:24:21 PID: 10 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/12 22:24:21 Tamaño pagina: 16
+2024/06/12 22:24:21 Num pagina: 0
+2024/06/12 22:24:21 Desplazamiento: 15
+2024/06/12 22:24:21 PID: 10 - TLB MISS - Pagina: 0
+2024/06/12 22:24:21 Usted conoce a: 36
+2024/06/12 22:24:21 Body: {10 36 4 143}
+2024/06/12 22:24:21 PID: 10 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 36
+2024/06/12 22:24:21 PID: 10 - FETCH - Program Counter: 5
+2024/06/12 22:24:21 PID: 10 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/12 22:24:21 Tamaño pagina: 16
+2024/06/12 22:24:21 Num pagina: 0
+2024/06/12 22:24:21 Desplazamiento: 15
+2024/06/12 22:24:21 PID: 10 - TLB MISS - Pagina: 0
+2024/06/12 22:24:21 Resultado leído de la memoria: '3600'
+2024/06/12 22:24:21 PID: 10 - Acción: LEER - Dirección Física: 143 - Valor: 3600
+2024/06/12 22:24:21 PID: 10 - FETCH - Program Counter: 6
+2024/06/12 22:24:21 PID: 10 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/12 22:24:21 Tamaño pagina: 16
+2024/06/12 22:24:21 Num pagina: 0
+2024/06/12 22:24:21 Desplazamiento: 15
+2024/06/12 22:24:21 PID: 10 - TLB MISS - Pagina: 0
+2024/06/12 22:24:21 Usted conoce a: 3600
+2024/06/12 22:24:21 Body: {10 3600 4 143}
+2024/06/12 22:24:21 PID: 10 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 3600
+2024/06/12 22:24:21 PID: 10 - FETCH - Program Counter: 7
+2024/06/12 22:24:21 PID: 10 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/12 22:24:21 Tamaño pagina: 16
+2024/06/12 22:24:21 Num pagina: 0
+2024/06/12 22:24:21 Desplazamiento: 15
+2024/06/12 22:24:21 PID: 10 - TLB MISS - Pagina: 0
+2024/06/12 22:24:21 Resultado leído de la memoria: '3'
+2024/06/12 22:24:21 PID: 10 - Acción: LEER - Dirección Física: 143 - Valor: 3
+2024/06/12 22:24:21 PID: 10 - FETCH - Program Counter: 8
+2024/06/12 22:24:21 PID: 10 - Ejecutando: EXIT
+2024/06/12 22:26:48 PID: 11 - FETCH - Program Counter: 0
+2024/06/12 22:26:48 PID: 11 - Ejecutando: SET - AX,1
+2024/06/12 22:26:48 PID: 11 - FETCH - Program Counter: 1
+2024/06/12 22:26:48 PID: 11 - Ejecutando: SET - ECX,36000
+2024/06/12 22:26:48 PID: 11 - FETCH - Program Counter: 2
+2024/06/12 22:26:48 PID: 11 - Ejecutando: SET - EDX,15
+2024/06/12 22:26:48 PID: 11 - FETCH - Program Counter: 3
+2024/06/12 22:26:48 PID: 11 - Ejecutando: RESIZE - 256
+2024/06/12 22:26:48 PID: 11 - FETCH - Program Counter: 4
+2024/06/12 22:26:48 PID: 11 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/12 22:26:48 Tamaño pagina: 16
+2024/06/12 22:26:48 Num pagina: 0
+2024/06/12 22:26:48 Desplazamiento: 15
+2024/06/12 22:26:48 PID: 11 - TLB MISS - Pagina: 0
+2024/06/12 22:26:48 Usted conoce a: 36000
+2024/06/12 22:26:48 Body: {11 36000 4 143}
+2024/06/12 22:26:48 PID: 11 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 36000
+2024/06/12 22:26:48 PID: 11 - FETCH - Program Counter: 5
+2024/06/12 22:26:48 PID: 11 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/12 22:26:48 Tamaño pagina: 16
+2024/06/12 22:26:48 Num pagina: 0
+2024/06/12 22:26:48 Desplazamiento: 15
+2024/06/12 22:26:48 PID: 11 - TLB MISS - Pagina: 0
+2024/06/12 22:26:48 Resultado leído de la memoria: '3600'
+2024/06/12 22:26:48 PID: 11 - Acción: LEER - Dirección Física: 143 - Valor: 3600
+2024/06/12 22:26:48 PID: 11 - FETCH - Program Counter: 6
+2024/06/12 22:26:48 PID: 11 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/12 22:26:48 Tamaño pagina: 16
+2024/06/12 22:26:48 Num pagina: 0
+2024/06/12 22:26:48 Desplazamiento: 15
+2024/06/12 22:26:48 PID: 11 - TLB MISS - Pagina: 0
+2024/06/12 22:26:48 Usted conoce a: 3600
+2024/06/12 22:26:48 Body: {11 3600 4 143}
+2024/06/12 22:26:48 PID: 11 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 3600
+2024/06/12 22:26:48 PID: 11 - FETCH - Program Counter: 7
+2024/06/12 22:26:48 PID: 11 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/12 22:26:48 Tamaño pagina: 16
+2024/06/12 22:26:48 Num pagina: 0
+2024/06/12 22:26:48 Desplazamiento: 15
+2024/06/12 22:26:48 PID: 11 - TLB MISS - Pagina: 0
+2024/06/12 22:26:48 Resultado leído de la memoria: '3600'
+2024/06/12 22:26:48 PID: 11 - Acción: LEER - Dirección Física: 143 - Valor: 3600
+2024/06/12 22:26:48 PID: 11 - FETCH - Program Counter: 8
+2024/06/12 22:26:48 PID: 11 - Ejecutando: EXIT
