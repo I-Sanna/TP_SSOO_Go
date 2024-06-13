@@ -10569,3 +10569,2812 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/06/12 22:26:48 PID: 11 - Pagina: 0 - Marco: 8
 2024/06/12 22:26:48 PID: 11 - Accion: Leer - Direccion fisica: 143 - Tamaño a escribir: 4
 2024/06/12 22:26:48 3600
+2024/06/13 12:31:57 div: 3
+2024/06/13 12:34:11 div: 4
+2024/06/13 12:48:32 PID: 0 - Tamaño: 256
+2024/06/13 12:50:18 0 0
+
+
+
+2024/06/13 12:50:18 128 128
+
+
+
+2024/06/13 12:50:18 hola
+2024/06/13 12:50:18 chau 0
+2024/06/13 12:50:18 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/06/13 12:51:42 infoBytes: [0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:51:42 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 12
+2024/06/13 12:52:07 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 12
+2024/06/13 12:52:07 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:52:19 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 12
+2024/06/13 12:52:19 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:52:39 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 13
+2024/06/13 12:52:39 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:52:44 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 15
+2024/06/13 12:52:44 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:52:49 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 19
+2024/06/13 12:52:49 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:53:00 infoBytes: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:53:00 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 52
+2024/06/13 12:53:06 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 52
+2024/06/13 12:53:06 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:53:08 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 52
+2024/06/13 12:53:08 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:53:09 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 52
+2024/06/13 12:53:09 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:53:09 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 52
+2024/06/13 12:53:09 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:53:10 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 52
+2024/06/13 12:53:10 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:53:11 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 52
+2024/06/13 12:53:11 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:53:13 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 52
+2024/06/13 12:53:13 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:53:15 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 52
+2024/06/13 12:53:15 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:53:17 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 52
+2024/06/13 12:53:17 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:53:20 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 52
+2024/06/13 12:53:20 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:53:22 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 52
+2024/06/13 12:53:22 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:53:23 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 52
+2024/06/13 12:53:23 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:53:25 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 52
+2024/06/13 12:53:25 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:53:26 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 52
+2024/06/13 12:53:26 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:53:35 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 52
+2024/06/13 12:53:35 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:57:00 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 52
+2024/06/13 12:57:00 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:57:02 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 52
+2024/06/13 12:57:02 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:57:04 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a escribir: 52
+2024/06/13 12:57:04 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 12:59:13 open : no such file or directory
+2024/06/13 12:59:42 PID: 0 - Tamaño: 256
+2024/06/13 13:00:02 0 0
+
+
+
+2024/06/13 13:00:02 256 256
+
+
+
+2024/06/13 13:00:02 hola
+2024/06/13 13:00:02 chau 0
+2024/06/13 13:00:02 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/13 13:00:18 infoBytes: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:18 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 52
+2024/06/13 13:00:23 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:23 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:24 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:24 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:25 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:25 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:25 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:25 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:26 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:26 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:27 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:27 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:27 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:27 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:28 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:28 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:28 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:28 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:29 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:29 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:29 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:29 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:30 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:30 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:31 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:31 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:31 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:31 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:33 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:33 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:34 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:34 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:35 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:35 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:36 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:36 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:37 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:37 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:38 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:38 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:40 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:40 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:41 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:41 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:42 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:42 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:43 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:43 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:44 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:44 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:46 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:46 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:47 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:47 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:48 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:48 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:49 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:49 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:51 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:51 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:00:52 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:00:52 Mensaje: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:01:14 infoBytes: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:01:14 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 52
+2024/06/13 13:01:31 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 52
+2024/06/13 13:01:31 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:01:39 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 53
+2024/06/13 13:01:39 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:01:45 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:01:45 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:01:47 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:01:47 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:01:48 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:01:48 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:01:49 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:01:49 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:01:50 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:01:50 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:01:51 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:01:51 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:01:52 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:01:52 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:01:53 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:01:53 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:01:55 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:01:55 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:01:57 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:01:57 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:02:57 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:02:57 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:02:58 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:02:58 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:02:59 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:02:59 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:00 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:00 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:00 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:00 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:01 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:01 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:02 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:02 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:02 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:02 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:03 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:03 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:04 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:04 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:04 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:04 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:05 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:05 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:06 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:06 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:06 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:06 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:07 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:07 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:08 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:08 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:08 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:08 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:09 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:09 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:10 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:10 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:10 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:10 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:11 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:11 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:12 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:12 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:12 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:12 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:13 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:13 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:14 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:14 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:14 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:14 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:15 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:15 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:16 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:16 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:16 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:16 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:17 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:17 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:18 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:18 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:18 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:18 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:19 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:19 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:19 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:19 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:20 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:20 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:21 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:21 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:22 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:22 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:23 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:23 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:23 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:23 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:24 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:24 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:25 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:25 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:03:25 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:03:25 Mensaje: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:08:06 PID: 0 - Tamaño: 256
+2024/06/13 13:08:21 0 0
+
+
+
+2024/06/13 13:08:21 256 256
+
+
+
+2024/06/13 13:08:21 hola
+2024/06/13 13:08:21 chau 0
+2024/06/13 13:08:21 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/13 13:08:40 infoBytes: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:08:40 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 54
+2024/06/13 13:09:02 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:09:02 Marcos necesarios: 4
+2024/06/13 13:09:02 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:09:02 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:09:02 Tamaño restante: 38
+2024/06/13 13:09:02 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:09:02 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:09:02 Tamaño restante: 22
+2024/06/13 13:09:02 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:09:02 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:09:02 Tamaño restante: 6
+2024/06/13 13:09:02 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:09:02 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:09:02 Tamaño restante: 6
+2024/06/13 13:09:03 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:09:03 Marcos necesarios: 4
+2024/06/13 13:09:03 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:09:03 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:09:03 Tamaño restante: 38
+2024/06/13 13:09:03 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:09:03 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:09:03 Tamaño restante: 22
+2024/06/13 13:09:03 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:09:03 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:09:03 Tamaño restante: 6
+2024/06/13 13:09:03 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:09:03 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:09:03 Tamaño restante: 6
+2024/06/13 13:09:04 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:09:04 Marcos necesarios: 4
+2024/06/13 13:09:04 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:09:04 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:09:04 Tamaño restante: 38
+2024/06/13 13:09:04 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:09:04 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:09:04 Tamaño restante: 22
+2024/06/13 13:09:04 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:09:04 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:09:04 Tamaño restante: 6
+2024/06/13 13:09:04 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:09:04 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:09:04 Tamaño restante: 6
+2024/06/13 13:09:05 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:09:05 Marcos necesarios: 4
+2024/06/13 13:09:05 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:09:05 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:09:05 Tamaño restante: 38
+2024/06/13 13:09:05 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:09:05 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:09:05 Tamaño restante: 22
+2024/06/13 13:09:05 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:09:05 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:09:05 Tamaño restante: 6
+2024/06/13 13:11:20 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:11:20 Marcos necesarios: 4
+2024/06/13 13:11:20 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:11:20 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:11:20 Tamaño restante: 38
+2024/06/13 13:11:20 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:11:20 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:11:20 Tamaño restante: 22
+2024/06/13 13:11:20 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:11:20 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:11:20 Tamaño restante: 6
+2024/06/13 13:11:20 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:11:20 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:11:20 Tamaño restante: 6
+2024/06/13 13:11:21 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:11:21 Marcos necesarios: 4
+2024/06/13 13:11:21 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:11:21 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:11:21 Tamaño restante: 38
+2024/06/13 13:11:21 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:11:21 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:11:21 Tamaño restante: 22
+2024/06/13 13:11:21 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:11:21 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:11:21 Tamaño restante: 6
+2024/06/13 13:11:21 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:11:21 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:11:21 Tamaño restante: 6
+2024/06/13 13:11:22 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:11:22 Marcos necesarios: 4
+2024/06/13 13:11:22 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:11:22 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:11:22 Tamaño restante: 38
+2024/06/13 13:11:22 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:11:22 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:11:22 Tamaño restante: 22
+2024/06/13 13:11:22 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:11:22 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:11:22 Tamaño restante: 6
+2024/06/13 13:11:22 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:11:22 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:11:22 Tamaño restante: 6
+2024/06/13 13:11:23 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:11:23 Marcos necesarios: 4
+2024/06/13 13:11:23 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:11:23 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:11:23 Tamaño restante: 38
+2024/06/13 13:11:23 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:11:23 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:11:23 Tamaño restante: 22
+2024/06/13 13:11:23 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:11:23 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:11:23 Tamaño restante: 6
+2024/06/13 13:11:23 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:11:23 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:11:23 Tamaño restante: 6
+2024/06/13 13:11:23 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:11:23 Marcos necesarios: 4
+2024/06/13 13:11:23 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:11:23 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:11:23 Tamaño restante: 38
+2024/06/13 13:11:23 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:11:23 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:11:23 Tamaño restante: 22
+2024/06/13 13:11:23 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:11:23 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:11:23 Tamaño restante: 6
+2024/06/13 13:11:23 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:11:23 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:11:23 Tamaño restante: 6
+2024/06/13 13:11:24 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:11:24 Marcos necesarios: 4
+2024/06/13 13:11:24 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:11:24 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:11:24 Tamaño restante: 38
+2024/06/13 13:11:24 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:11:24 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:11:24 Tamaño restante: 22
+2024/06/13 13:11:24 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:11:24 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:11:24 Tamaño restante: 6
+2024/06/13 13:11:24 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:11:24 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:11:24 Tamaño restante: 6
+2024/06/13 13:11:25 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:11:25 Marcos necesarios: 4
+2024/06/13 13:11:25 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:11:25 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:11:25 Tamaño restante: 38
+2024/06/13 13:15:18 PID: 0 - Tamaño: 256
+2024/06/13 13:15:31 0 0
+
+
+
+2024/06/13 13:15:31 256 256
+
+
+
+2024/06/13 13:15:31 hola
+2024/06/13 13:15:31 chau 0
+2024/06/13 13:15:31 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/13 13:15:41 infoBytes: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:41 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 54
+2024/06/13 13:15:52 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:15:52 Marcos necesarios: 4
+2024/06/13 13:15:52 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:52 No termine
+2024/06/13 13:15:52 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:15:52 Tamaño restante: 38
+2024/06/13 13:15:52 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:52 No termine
+2024/06/13 13:15:52 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:15:52 Tamaño restante: 22
+2024/06/13 13:15:52 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:52 No termine
+2024/06/13 13:15:52 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:15:52 Tamaño restante: 6
+2024/06/13 13:15:52 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:15:52 Termine
+2024/06/13 13:15:52 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:15:52 Tamaño restante: 6
+2024/06/13 13:15:53 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:15:53 Marcos necesarios: 4
+2024/06/13 13:15:53 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:53 No termine
+2024/06/13 13:15:53 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:15:53 Tamaño restante: 38
+2024/06/13 13:15:53 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:53 No termine
+2024/06/13 13:15:53 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:15:53 Tamaño restante: 22
+2024/06/13 13:15:53 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:53 No termine
+2024/06/13 13:15:53 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:15:53 Tamaño restante: 6
+2024/06/13 13:15:53 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:15:53 Termine
+2024/06/13 13:15:53 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:15:53 Tamaño restante: 6
+2024/06/13 13:15:53 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:15:53 Marcos necesarios: 4
+2024/06/13 13:15:53 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:53 No termine
+2024/06/13 13:15:53 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:15:53 Tamaño restante: 38
+2024/06/13 13:15:53 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:53 No termine
+2024/06/13 13:15:53 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:15:53 Tamaño restante: 22
+2024/06/13 13:15:53 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:53 No termine
+2024/06/13 13:15:53 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:15:53 Tamaño restante: 6
+2024/06/13 13:15:53 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:15:53 Termine
+2024/06/13 13:15:53 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:15:53 Tamaño restante: 6
+2024/06/13 13:15:54 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:15:54 Marcos necesarios: 4
+2024/06/13 13:15:54 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:54 No termine
+2024/06/13 13:15:54 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:15:54 Tamaño restante: 38
+2024/06/13 13:15:54 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:54 No termine
+2024/06/13 13:15:54 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:15:54 Tamaño restante: 22
+2024/06/13 13:15:54 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:54 No termine
+2024/06/13 13:15:54 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:15:54 Tamaño restante: 6
+2024/06/13 13:15:54 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:15:54 Termine
+2024/06/13 13:15:54 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:15:54 Tamaño restante: 6
+2024/06/13 13:15:55 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:15:55 Marcos necesarios: 4
+2024/06/13 13:15:55 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:55 No termine
+2024/06/13 13:15:55 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:15:55 Tamaño restante: 38
+2024/06/13 13:15:55 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:55 No termine
+2024/06/13 13:15:55 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:15:55 Tamaño restante: 22
+2024/06/13 13:15:55 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:55 No termine
+2024/06/13 13:15:55 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:15:55 Tamaño restante: 6
+2024/06/13 13:15:55 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:15:55 Termine
+2024/06/13 13:15:55 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:15:55 Tamaño restante: 6
+2024/06/13 13:15:56 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:15:56 Marcos necesarios: 4
+2024/06/13 13:15:56 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:56 No termine
+2024/06/13 13:15:56 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:15:56 Tamaño restante: 38
+2024/06/13 13:15:56 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:56 No termine
+2024/06/13 13:15:56 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:15:56 Tamaño restante: 22
+2024/06/13 13:15:56 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:56 No termine
+2024/06/13 13:15:56 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:15:56 Tamaño restante: 6
+2024/06/13 13:15:56 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:15:56 Termine
+2024/06/13 13:15:56 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:15:56 Tamaño restante: 6
+2024/06/13 13:15:56 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:15:56 Marcos necesarios: 4
+2024/06/13 13:15:56 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:56 No termine
+2024/06/13 13:15:56 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:15:56 Tamaño restante: 38
+2024/06/13 13:15:56 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:56 No termine
+2024/06/13 13:15:56 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:15:56 Tamaño restante: 22
+2024/06/13 13:15:56 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:56 No termine
+2024/06/13 13:15:56 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:15:56 Tamaño restante: 6
+2024/06/13 13:15:56 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:15:56 Termine
+2024/06/13 13:15:56 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:15:56 Tamaño restante: 6
+2024/06/13 13:15:57 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:15:57 Marcos necesarios: 4
+2024/06/13 13:15:57 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:57 No termine
+2024/06/13 13:15:57 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:15:57 Tamaño restante: 38
+2024/06/13 13:15:57 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:57 No termine
+2024/06/13 13:15:57 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:15:57 Tamaño restante: 22
+2024/06/13 13:15:57 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:57 No termine
+2024/06/13 13:15:57 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:15:57 Tamaño restante: 6
+2024/06/13 13:15:57 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:15:57 Termine
+2024/06/13 13:15:57 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:15:57 Tamaño restante: 6
+2024/06/13 13:15:58 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:15:58 Marcos necesarios: 4
+2024/06/13 13:15:58 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:58 No termine
+2024/06/13 13:15:58 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:15:58 Tamaño restante: 38
+2024/06/13 13:15:58 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:58 No termine
+2024/06/13 13:15:58 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:15:58 Tamaño restante: 22
+2024/06/13 13:15:58 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:58 No termine
+2024/06/13 13:15:58 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:15:58 Tamaño restante: 6
+2024/06/13 13:15:58 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:15:58 Termine
+2024/06/13 13:15:58 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:15:58 Tamaño restante: 6
+2024/06/13 13:15:59 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:15:59 Marcos necesarios: 4
+2024/06/13 13:15:59 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:59 No termine
+2024/06/13 13:15:59 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:15:59 Tamaño restante: 38
+2024/06/13 13:15:59 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:59 No termine
+2024/06/13 13:15:59 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:15:59 Tamaño restante: 22
+2024/06/13 13:15:59 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:15:59 No termine
+2024/06/13 13:15:59 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:15:59 Tamaño restante: 6
+2024/06/13 13:15:59 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:15:59 Termine
+2024/06/13 13:15:59 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:15:59 Tamaño restante: 6
+2024/06/13 13:16:00 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:16:00 Marcos necesarios: 4
+2024/06/13 13:16:00 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:00 No termine
+2024/06/13 13:16:00 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:16:00 Tamaño restante: 38
+2024/06/13 13:16:00 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:00 No termine
+2024/06/13 13:16:00 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:16:00 Tamaño restante: 22
+2024/06/13 13:16:00 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:00 No termine
+2024/06/13 13:16:00 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:16:00 Tamaño restante: 6
+2024/06/13 13:16:00 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:16:00 Termine
+2024/06/13 13:16:00 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:16:00 Tamaño restante: 6
+2024/06/13 13:16:00 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:16:00 Marcos necesarios: 4
+2024/06/13 13:16:00 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:00 No termine
+2024/06/13 13:16:00 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:16:00 Tamaño restante: 38
+2024/06/13 13:16:00 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:00 No termine
+2024/06/13 13:16:00 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:16:00 Tamaño restante: 22
+2024/06/13 13:16:00 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:00 No termine
+2024/06/13 13:16:00 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:16:00 Tamaño restante: 6
+2024/06/13 13:16:00 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:16:00 Termine
+2024/06/13 13:16:00 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:16:00 Tamaño restante: 6
+2024/06/13 13:16:01 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:16:01 Marcos necesarios: 4
+2024/06/13 13:16:01 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:01 No termine
+2024/06/13 13:16:01 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:16:01 Tamaño restante: 38
+2024/06/13 13:16:01 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:01 No termine
+2024/06/13 13:16:01 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:16:01 Tamaño restante: 22
+2024/06/13 13:16:01 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:01 No termine
+2024/06/13 13:16:01 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:16:01 Tamaño restante: 6
+2024/06/13 13:16:01 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:16:01 Termine
+2024/06/13 13:16:01 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:16:01 Tamaño restante: 6
+2024/06/13 13:16:02 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:16:02 Marcos necesarios: 4
+2024/06/13 13:16:02 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:02 No termine
+2024/06/13 13:16:02 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:16:02 Tamaño restante: 38
+2024/06/13 13:16:02 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:02 No termine
+2024/06/13 13:16:02 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:16:02 Tamaño restante: 22
+2024/06/13 13:16:02 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:02 No termine
+2024/06/13 13:16:02 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:16:02 Tamaño restante: 6
+2024/06/13 13:16:02 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:16:02 Termine
+2024/06/13 13:16:02 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:16:02 Tamaño restante: 6
+2024/06/13 13:16:03 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:16:03 Marcos necesarios: 4
+2024/06/13 13:16:03 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:03 No termine
+2024/06/13 13:16:03 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:16:03 Tamaño restante: 38
+2024/06/13 13:16:03 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:03 No termine
+2024/06/13 13:16:03 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:16:03 Tamaño restante: 22
+2024/06/13 13:16:03 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:03 No termine
+2024/06/13 13:16:03 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:16:03 Tamaño restante: 6
+2024/06/13 13:16:03 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:16:03 Termine
+2024/06/13 13:16:03 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:16:03 Tamaño restante: 6
+2024/06/13 13:16:03 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:16:03 Marcos necesarios: 4
+2024/06/13 13:16:03 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:03 No termine
+2024/06/13 13:16:03 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:16:03 Tamaño restante: 38
+2024/06/13 13:16:03 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:03 No termine
+2024/06/13 13:16:03 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:16:03 Tamaño restante: 22
+2024/06/13 13:16:03 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:03 No termine
+2024/06/13 13:16:03 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:16:03 Tamaño restante: 6
+2024/06/13 13:16:03 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:16:03 Termine
+2024/06/13 13:16:03 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:16:03 Tamaño restante: 6
+2024/06/13 13:16:04 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:16:04 Marcos necesarios: 4
+2024/06/13 13:16:04 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:04 No termine
+2024/06/13 13:16:04 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:16:04 Tamaño restante: 38
+2024/06/13 13:16:04 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:04 No termine
+2024/06/13 13:16:04 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:16:04 Tamaño restante: 22
+2024/06/13 13:16:04 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:04 No termine
+2024/06/13 13:16:04 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:16:04 Tamaño restante: 6
+2024/06/13 13:16:04 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:16:04 Termine
+2024/06/13 13:16:04 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:16:04 Tamaño restante: 6
+2024/06/13 13:16:05 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:16:05 Marcos necesarios: 4
+2024/06/13 13:16:05 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:05 No termine
+2024/06/13 13:16:05 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:16:05 Tamaño restante: 38
+2024/06/13 13:16:05 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:05 No termine
+2024/06/13 13:16:05 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:16:05 Tamaño restante: 22
+2024/06/13 13:16:05 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:05 No termine
+2024/06/13 13:16:05 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:16:05 Tamaño restante: 6
+2024/06/13 13:16:05 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:16:05 Termine
+2024/06/13 13:16:05 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:16:05 Tamaño restante: 6
+2024/06/13 13:16:05 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:16:05 Marcos necesarios: 4
+2024/06/13 13:16:05 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:05 No termine
+2024/06/13 13:16:05 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:16:05 Tamaño restante: 38
+2024/06/13 13:16:05 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:05 No termine
+2024/06/13 13:16:05 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:16:05 Tamaño restante: 22
+2024/06/13 13:16:05 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:05 No termine
+2024/06/13 13:16:05 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:16:05 Tamaño restante: 6
+2024/06/13 13:16:05 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:16:05 Termine
+2024/06/13 13:16:05 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:16:05 Tamaño restante: 6
+2024/06/13 13:16:06 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:16:06 Marcos necesarios: 4
+2024/06/13 13:16:06 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:06 No termine
+2024/06/13 13:16:06 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:16:06 Tamaño restante: 38
+2024/06/13 13:16:06 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:06 No termine
+2024/06/13 13:16:06 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:16:06 Tamaño restante: 22
+2024/06/13 13:16:06 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:06 No termine
+2024/06/13 13:16:06 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:16:06 Tamaño restante: 6
+2024/06/13 13:16:06 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:16:06 Termine
+2024/06/13 13:16:06 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:16:06 Tamaño restante: 6
+2024/06/13 13:16:07 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:16:07 Marcos necesarios: 4
+2024/06/13 13:16:07 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:07 No termine
+2024/06/13 13:16:07 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:16:07 Tamaño restante: 38
+2024/06/13 13:16:07 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:07 No termine
+2024/06/13 13:16:07 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:16:07 Tamaño restante: 22
+2024/06/13 13:16:07 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:07 No termine
+2024/06/13 13:16:07 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:16:07 Tamaño restante: 6
+2024/06/13 13:16:07 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:16:07 Termine
+2024/06/13 13:16:07 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:16:07 Tamaño restante: 6
+2024/06/13 13:16:08 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:16:08 Marcos necesarios: 4
+2024/06/13 13:16:08 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:08 No termine
+2024/06/13 13:16:08 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:16:08 Tamaño restante: 38
+2024/06/13 13:16:08 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:08 No termine
+2024/06/13 13:16:08 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:16:08 Tamaño restante: 22
+2024/06/13 13:16:08 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:08 No termine
+2024/06/13 13:16:08 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:16:08 Tamaño restante: 6
+2024/06/13 13:16:08 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:16:08 Termine
+2024/06/13 13:16:08 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:16:08 Tamaño restante: 6
+2024/06/13 13:16:08 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:16:08 Marcos necesarios: 4
+2024/06/13 13:16:08 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:08 No termine
+2024/06/13 13:16:08 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:16:08 Tamaño restante: 38
+2024/06/13 13:16:08 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:08 No termine
+2024/06/13 13:16:08 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:16:08 Tamaño restante: 22
+2024/06/13 13:16:08 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:08 No termine
+2024/06/13 13:16:08 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:16:08 Tamaño restante: 6
+2024/06/13 13:16:08 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:16:08 Termine
+2024/06/13 13:16:08 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:16:08 Tamaño restante: 6
+2024/06/13 13:16:09 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:16:09 Marcos necesarios: 4
+2024/06/13 13:16:09 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:09 No termine
+2024/06/13 13:16:09 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:16:09 Tamaño restante: 38
+2024/06/13 13:16:09 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:09 No termine
+2024/06/13 13:16:09 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:16:09 Tamaño restante: 22
+2024/06/13 13:16:09 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:09 No termine
+2024/06/13 13:16:09 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:16:09 Tamaño restante: 6
+2024/06/13 13:16:09 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:16:09 Termine
+2024/06/13 13:16:09 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:16:09 Tamaño restante: 6
+2024/06/13 13:16:10 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:16:10 Marcos necesarios: 4
+2024/06/13 13:16:10 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:10 No termine
+2024/06/13 13:16:10 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:16:10 Tamaño restante: 38
+2024/06/13 13:16:10 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:10 No termine
+2024/06/13 13:16:10 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:16:10 Tamaño restante: 22
+2024/06/13 13:16:10 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:10 No termine
+2024/06/13 13:16:10 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:16:10 Tamaño restante: 6
+2024/06/13 13:16:10 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:16:10 Termine
+2024/06/13 13:16:10 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:16:10 Tamaño restante: 6
+2024/06/13 13:16:10 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:16:10 Marcos necesarios: 4
+2024/06/13 13:16:10 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:10 No termine
+2024/06/13 13:16:10 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:16:10 Tamaño restante: 38
+2024/06/13 13:16:10 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:10 No termine
+2024/06/13 13:16:10 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:16:10 Tamaño restante: 22
+2024/06/13 13:16:10 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:10 No termine
+2024/06/13 13:16:10 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:16:10 Tamaño restante: 6
+2024/06/13 13:16:10 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:16:10 Termine
+2024/06/13 13:16:10 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:16:10 Tamaño restante: 6
+2024/06/13 13:16:11 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:16:11 Marcos necesarios: 4
+2024/06/13 13:16:11 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:11 No termine
+2024/06/13 13:16:11 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:16:11 Tamaño restante: 38
+2024/06/13 13:16:11 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:11 No termine
+2024/06/13 13:16:11 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:16:11 Tamaño restante: 22
+2024/06/13 13:16:11 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:11 No termine
+2024/06/13 13:16:11 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:16:11 Tamaño restante: 6
+2024/06/13 13:16:11 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:16:11 Termine
+2024/06/13 13:16:11 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:16:11 Tamaño restante: 6
+2024/06/13 13:16:11 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:16:11 Marcos necesarios: 4
+2024/06/13 13:16:11 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:11 No termine
+2024/06/13 13:16:11 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:16:11 Tamaño restante: 38
+2024/06/13 13:16:11 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:11 No termine
+2024/06/13 13:16:11 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:16:11 Tamaño restante: 22
+2024/06/13 13:16:11 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:11 No termine
+2024/06/13 13:16:11 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:16:11 Tamaño restante: 6
+2024/06/13 13:16:11 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:16:11 Termine
+2024/06/13 13:16:11 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:16:11 Tamaño restante: 6
+2024/06/13 13:16:12 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:16:12 Marcos necesarios: 4
+2024/06/13 13:16:12 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:12 No termine
+2024/06/13 13:16:12 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:16:12 Tamaño restante: 38
+2024/06/13 13:16:12 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:12 No termine
+2024/06/13 13:16:12 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:16:12 Tamaño restante: 22
+2024/06/13 13:16:12 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:12 No termine
+2024/06/13 13:16:12 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:16:12 Tamaño restante: 6
+2024/06/13 13:16:12 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:16:12 Termine
+2024/06/13 13:16:12 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:16:12 Tamaño restante: 6
+2024/06/13 13:16:13 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:16:13 Marcos necesarios: 4
+2024/06/13 13:16:13 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:13 No termine
+2024/06/13 13:16:13 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:16:13 Tamaño restante: 38
+2024/06/13 13:16:13 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:13 No termine
+2024/06/13 13:16:13 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:16:13 Tamaño restante: 22
+2024/06/13 13:16:13 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:13 No termine
+2024/06/13 13:16:13 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:16:13 Tamaño restante: 6
+2024/06/13 13:16:13 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:16:13 Termine
+2024/06/13 13:16:13 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:16:13 Tamaño restante: 6
+2024/06/13 13:16:13 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:16:13 Marcos necesarios: 4
+2024/06/13 13:16:13 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:13 No termine
+2024/06/13 13:16:13 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:16:13 Tamaño restante: 38
+2024/06/13 13:16:13 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:13 No termine
+2024/06/13 13:16:13 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:16:13 Tamaño restante: 22
+2024/06/13 13:16:14 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:16:14 Marcos necesarios: 4
+2024/06/13 13:16:14 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:14 No termine
+2024/06/13 13:16:14 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:16:14 Tamaño restante: 38
+2024/06/13 13:16:14 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:16:14 No termine
+2024/06/13 13:16:14 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:16:14 Tamaño restante: 22
+2024/06/13 13:21:37 PID: 0 - Tamaño: 256
+2024/06/13 13:21:49 0 0
+
+
+
+2024/06/13 13:21:49 256 256
+
+
+
+2024/06/13 13:21:49 hola
+2024/06/13 13:21:49 chau 0
+2024/06/13 13:21:49 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/13 13:21:59 infoBytes: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:21:59 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 54
+2024/06/13 13:22:04 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:22:04 Marcos necesarios: 4
+2024/06/13 13:22:04 Pagina: 11 - Marco: 11
+2024/06/13 13:22:04 Pagina: 14 - Marco: 14
+2024/06/13 13:22:04 Pagina: 3 - Marco: 3
+2024/06/13 13:22:04 Pagina: 5 - Marco: 5
+2024/06/13 13:22:04 Pagina: 6 - Marco: 6
+2024/06/13 13:22:04 Pagina: 8 - Marco: 8
+2024/06/13 13:22:04 Pagina: 9 - Marco: 9
+2024/06/13 13:22:04 Pagina: 13 - Marco: 13
+2024/06/13 13:22:04 Pagina: 15 - Marco: 15
+2024/06/13 13:22:04 Pagina: 0 - Marco: 0
+2024/06/13 13:22:04 Iniciamos
+2024/06/13 13:22:04 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:22:04 No termine
+2024/06/13 13:22:04 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:22:04 Tamaño restante: 38
+2024/06/13 13:22:04 Pagina: 4 - Marco: 4
+2024/06/13 13:22:04 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:22:04 No termine
+2024/06/13 13:22:04 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:22:04 Tamaño restante: 22
+2024/06/13 13:22:04 Pagina: 7 - Marco: 7
+2024/06/13 13:22:04 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:22:04 No termine
+2024/06/13 13:22:04 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:22:04 Tamaño restante: 6
+2024/06/13 13:22:04 Pagina: 1 - Marco: 1
+2024/06/13 13:22:04 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:22:04 Termine
+2024/06/13 13:22:04 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:22:04 Tamaño restante: 6
+2024/06/13 13:22:04 Terminamos al fin
+2024/06/13 13:22:06 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:22:06 Marcos necesarios: 4
+2024/06/13 13:22:06 Pagina: 9 - Marco: 9
+2024/06/13 13:22:06 Pagina: 13 - Marco: 13
+2024/06/13 13:22:06 Pagina: 15 - Marco: 15
+2024/06/13 13:22:06 Pagina: 3 - Marco: 3
+2024/06/13 13:22:06 Pagina: 5 - Marco: 5
+2024/06/13 13:22:06 Pagina: 6 - Marco: 6
+2024/06/13 13:22:06 Pagina: 8 - Marco: 8
+2024/06/13 13:22:06 Pagina: 0 - Marco: 0
+2024/06/13 13:22:06 Iniciamos
+2024/06/13 13:22:06 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:22:06 No termine
+2024/06/13 13:22:06 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:22:06 Tamaño restante: 38
+2024/06/13 13:22:06 Pagina: 4 - Marco: 4
+2024/06/13 13:22:06 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:22:06 No termine
+2024/06/13 13:22:06 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:22:06 Tamaño restante: 22
+2024/06/13 13:22:06 Pagina: 7 - Marco: 7
+2024/06/13 13:22:06 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:22:06 No termine
+2024/06/13 13:22:06 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:22:06 Tamaño restante: 6
+2024/06/13 13:22:06 Pagina: 1 - Marco: 1
+2024/06/13 13:22:06 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:22:06 Termine
+2024/06/13 13:22:06 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:22:06 Tamaño restante: 6
+2024/06/13 13:22:06 Terminamos al fin
+2024/06/13 13:22:06 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:22:06 Marcos necesarios: 4
+2024/06/13 13:22:06 Pagina: 11 - Marco: 11
+2024/06/13 13:22:06 Pagina: 14 - Marco: 14
+2024/06/13 13:22:06 Pagina: 3 - Marco: 3
+2024/06/13 13:22:06 Pagina: 5 - Marco: 5
+2024/06/13 13:22:06 Pagina: 6 - Marco: 6
+2024/06/13 13:22:06 Pagina: 8 - Marco: 8
+2024/06/13 13:22:06 Pagina: 9 - Marco: 9
+2024/06/13 13:22:06 Pagina: 13 - Marco: 13
+2024/06/13 13:22:06 Pagina: 15 - Marco: 15
+2024/06/13 13:22:06 Pagina: 0 - Marco: 0
+2024/06/13 13:22:06 Iniciamos
+2024/06/13 13:22:06 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:22:06 No termine
+2024/06/13 13:22:06 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:22:06 Tamaño restante: 38
+2024/06/13 13:22:06 Pagina: 4 - Marco: 4
+2024/06/13 13:22:06 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:22:06 No termine
+2024/06/13 13:22:06 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:22:06 Tamaño restante: 22
+2024/06/13 13:22:06 Pagina: 7 - Marco: 7
+2024/06/13 13:22:06 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:22:06 No termine
+2024/06/13 13:22:06 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:22:06 Tamaño restante: 6
+2024/06/13 13:22:06 Pagina: 1 - Marco: 1
+2024/06/13 13:22:06 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:22:06 Termine
+2024/06/13 13:22:06 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:22:06 Tamaño restante: 6
+2024/06/13 13:22:06 Terminamos al fin
+2024/06/13 13:22:07 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:22:07 Marcos necesarios: 4
+2024/06/13 13:22:07 Pagina: 12 - Marco: 12
+2024/06/13 13:22:07 Pagina: 1 - Marco: 1
+2024/06/13 13:22:07 Pagina: 2 - Marco: 2
+2024/06/13 13:22:07 Pagina: 10 - Marco: 10
+2024/06/13 13:22:07 Pagina: 11 - Marco: 11
+2024/06/13 13:22:07 Pagina: 14 - Marco: 14
+2024/06/13 13:22:07 Pagina: 8 - Marco: 8
+2024/06/13 13:22:07 Pagina: 9 - Marco: 9
+2024/06/13 13:22:07 Pagina: 13 - Marco: 13
+2024/06/13 13:22:07 Pagina: 15 - Marco: 15
+2024/06/13 13:22:07 Pagina: 3 - Marco: 3
+2024/06/13 13:22:07 Pagina: 5 - Marco: 5
+2024/06/13 13:22:07 Pagina: 6 - Marco: 6
+2024/06/13 13:22:07 Pagina: 0 - Marco: 0
+2024/06/13 13:22:07 Iniciamos
+2024/06/13 13:22:07 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:22:07 No termine
+2024/06/13 13:22:07 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:22:07 Tamaño restante: 38
+2024/06/13 13:22:07 Pagina: 4 - Marco: 4
+2024/06/13 13:22:07 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:22:07 No termine
+2024/06/13 13:22:07 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:22:07 Tamaño restante: 22
+2024/06/13 13:22:07 Pagina: 7 - Marco: 7
+2024/06/13 13:22:07 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:22:07 No termine
+2024/06/13 13:22:07 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:22:07 Tamaño restante: 6
+2024/06/13 13:39:37 PID: 0 - Tamaño: 256
+2024/06/13 13:39:47 0 0
+
+
+
+2024/06/13 13:39:47 256 256
+
+
+
+2024/06/13 13:39:47 hola
+2024/06/13 13:39:47 chau 0
+2024/06/13 13:39:47 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/13 13:40:08 infoBytes: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:08 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 54
+2024/06/13 13:40:13 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:40:13 Marcos necesarios: 4
+2024/06/13 13:40:13 Pagina: 0 - Marco: 0
+2024/06/13 13:40:13 Iniciamos
+2024/06/13 13:40:13 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:13 No termine
+2024/06/13 13:40:13 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:40:13 Tamaño restante: 38
+2024/06/13 13:40:13 Pagina: 1 - Marco: 1
+2024/06/13 13:40:13 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:13 No termine
+2024/06/13 13:40:13 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:40:13 Tamaño restante: 22
+2024/06/13 13:40:13 Pagina: 2 - Marco: 2
+2024/06/13 13:40:13 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:13 No termine
+2024/06/13 13:40:13 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:40:13 Tamaño restante: 6
+2024/06/13 13:40:13 Pagina: 3 - Marco: 3
+2024/06/13 13:40:13 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:40:13 Termine
+2024/06/13 13:40:13 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:40:13 Tamaño restante: 6
+2024/06/13 13:40:13 Terminamos al fin
+2024/06/13 13:40:56 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:40:56 Marcos necesarios: 4
+2024/06/13 13:40:56 Pagina: 0 - Marco: 0
+2024/06/13 13:40:56 Iniciamos
+2024/06/13 13:40:56 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:56 No termine
+2024/06/13 13:40:56 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:40:56 Tamaño restante: 38
+2024/06/13 13:40:56 Pagina: 1 - Marco: 1
+2024/06/13 13:40:56 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:56 No termine
+2024/06/13 13:40:56 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:40:56 Tamaño restante: 22
+2024/06/13 13:40:56 Pagina: 2 - Marco: 2
+2024/06/13 13:40:56 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:56 No termine
+2024/06/13 13:40:56 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:40:56 Tamaño restante: 6
+2024/06/13 13:40:56 Pagina: 3 - Marco: 3
+2024/06/13 13:40:56 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:40:56 Termine
+2024/06/13 13:40:56 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:40:56 Tamaño restante: 6
+2024/06/13 13:40:56 Terminamos al fin
+2024/06/13 13:40:57 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:40:57 Marcos necesarios: 4
+2024/06/13 13:40:57 Pagina: 0 - Marco: 0
+2024/06/13 13:40:57 Iniciamos
+2024/06/13 13:40:57 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:57 No termine
+2024/06/13 13:40:57 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:40:57 Tamaño restante: 38
+2024/06/13 13:40:57 Pagina: 1 - Marco: 1
+2024/06/13 13:40:57 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:57 No termine
+2024/06/13 13:40:57 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:40:57 Tamaño restante: 22
+2024/06/13 13:40:57 Pagina: 2 - Marco: 2
+2024/06/13 13:40:57 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:57 No termine
+2024/06/13 13:40:57 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:40:57 Tamaño restante: 6
+2024/06/13 13:40:57 Pagina: 3 - Marco: 3
+2024/06/13 13:40:57 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:40:57 Termine
+2024/06/13 13:40:57 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:40:57 Tamaño restante: 6
+2024/06/13 13:40:57 Terminamos al fin
+2024/06/13 13:40:57 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:40:57 Marcos necesarios: 4
+2024/06/13 13:40:57 Pagina: 0 - Marco: 0
+2024/06/13 13:40:57 Iniciamos
+2024/06/13 13:40:57 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:57 No termine
+2024/06/13 13:40:57 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:40:57 Tamaño restante: 38
+2024/06/13 13:40:57 Pagina: 1 - Marco: 1
+2024/06/13 13:40:57 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:57 No termine
+2024/06/13 13:40:57 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:40:57 Tamaño restante: 22
+2024/06/13 13:40:57 Pagina: 2 - Marco: 2
+2024/06/13 13:40:57 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:57 No termine
+2024/06/13 13:40:57 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:40:57 Tamaño restante: 6
+2024/06/13 13:40:57 Pagina: 3 - Marco: 3
+2024/06/13 13:40:57 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:40:57 Termine
+2024/06/13 13:40:57 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:40:57 Tamaño restante: 6
+2024/06/13 13:40:57 Terminamos al fin
+2024/06/13 13:40:58 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:40:58 Marcos necesarios: 4
+2024/06/13 13:40:58 Pagina: 0 - Marco: 0
+2024/06/13 13:40:58 Iniciamos
+2024/06/13 13:40:58 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:58 No termine
+2024/06/13 13:40:58 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:40:58 Tamaño restante: 38
+2024/06/13 13:40:58 Pagina: 1 - Marco: 1
+2024/06/13 13:40:58 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:58 No termine
+2024/06/13 13:40:58 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:40:58 Tamaño restante: 22
+2024/06/13 13:40:58 Pagina: 2 - Marco: 2
+2024/06/13 13:40:58 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:58 No termine
+2024/06/13 13:40:58 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:40:58 Tamaño restante: 6
+2024/06/13 13:40:58 Pagina: 3 - Marco: 3
+2024/06/13 13:40:58 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:40:58 Termine
+2024/06/13 13:40:58 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:40:58 Tamaño restante: 6
+2024/06/13 13:40:58 Terminamos al fin
+2024/06/13 13:40:58 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:40:58 Marcos necesarios: 4
+2024/06/13 13:40:58 Pagina: 0 - Marco: 0
+2024/06/13 13:40:58 Iniciamos
+2024/06/13 13:40:58 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:58 No termine
+2024/06/13 13:40:58 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:40:58 Tamaño restante: 38
+2024/06/13 13:40:58 Pagina: 1 - Marco: 1
+2024/06/13 13:40:58 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:58 No termine
+2024/06/13 13:40:58 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:40:58 Tamaño restante: 22
+2024/06/13 13:40:58 Pagina: 2 - Marco: 2
+2024/06/13 13:40:58 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:58 No termine
+2024/06/13 13:40:58 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:40:58 Tamaño restante: 6
+2024/06/13 13:40:58 Pagina: 3 - Marco: 3
+2024/06/13 13:40:58 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:40:58 Termine
+2024/06/13 13:40:58 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:40:58 Tamaño restante: 6
+2024/06/13 13:40:58 Terminamos al fin
+2024/06/13 13:40:59 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:40:59 Marcos necesarios: 4
+2024/06/13 13:40:59 Pagina: 0 - Marco: 0
+2024/06/13 13:40:59 Iniciamos
+2024/06/13 13:40:59 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:59 No termine
+2024/06/13 13:40:59 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:40:59 Tamaño restante: 38
+2024/06/13 13:40:59 Pagina: 1 - Marco: 1
+2024/06/13 13:40:59 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:59 No termine
+2024/06/13 13:40:59 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:40:59 Tamaño restante: 22
+2024/06/13 13:40:59 Pagina: 2 - Marco: 2
+2024/06/13 13:40:59 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:59 No termine
+2024/06/13 13:40:59 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:40:59 Tamaño restante: 6
+2024/06/13 13:40:59 Pagina: 3 - Marco: 3
+2024/06/13 13:40:59 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:40:59 Termine
+2024/06/13 13:40:59 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:40:59 Tamaño restante: 6
+2024/06/13 13:40:59 Terminamos al fin
+2024/06/13 13:40:59 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:40:59 Marcos necesarios: 4
+2024/06/13 13:40:59 Pagina: 0 - Marco: 0
+2024/06/13 13:40:59 Iniciamos
+2024/06/13 13:40:59 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:59 No termine
+2024/06/13 13:40:59 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:40:59 Tamaño restante: 38
+2024/06/13 13:40:59 Pagina: 1 - Marco: 1
+2024/06/13 13:40:59 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:59 No termine
+2024/06/13 13:40:59 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:40:59 Tamaño restante: 22
+2024/06/13 13:40:59 Pagina: 2 - Marco: 2
+2024/06/13 13:40:59 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:59 No termine
+2024/06/13 13:40:59 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:40:59 Tamaño restante: 6
+2024/06/13 13:40:59 Pagina: 3 - Marco: 3
+2024/06/13 13:40:59 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:40:59 Termine
+2024/06/13 13:40:59 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:40:59 Tamaño restante: 6
+2024/06/13 13:40:59 Terminamos al fin
+2024/06/13 13:40:59 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:40:59 Marcos necesarios: 4
+2024/06/13 13:40:59 Pagina: 0 - Marco: 0
+2024/06/13 13:40:59 Iniciamos
+2024/06/13 13:40:59 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:59 No termine
+2024/06/13 13:40:59 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:40:59 Tamaño restante: 38
+2024/06/13 13:40:59 Pagina: 1 - Marco: 1
+2024/06/13 13:40:59 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:59 No termine
+2024/06/13 13:40:59 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:40:59 Tamaño restante: 22
+2024/06/13 13:40:59 Pagina: 2 - Marco: 2
+2024/06/13 13:40:59 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:40:59 No termine
+2024/06/13 13:40:59 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:40:59 Tamaño restante: 6
+2024/06/13 13:40:59 Pagina: 3 - Marco: 3
+2024/06/13 13:40:59 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:40:59 Termine
+2024/06/13 13:40:59 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:40:59 Tamaño restante: 6
+2024/06/13 13:40:59 Terminamos al fin
+2024/06/13 13:41:00 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:00 Marcos necesarios: 4
+2024/06/13 13:41:00 Pagina: 0 - Marco: 0
+2024/06/13 13:41:00 Iniciamos
+2024/06/13 13:41:00 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:00 No termine
+2024/06/13 13:41:00 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:00 Tamaño restante: 38
+2024/06/13 13:41:00 Pagina: 1 - Marco: 1
+2024/06/13 13:41:00 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:00 No termine
+2024/06/13 13:41:00 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:00 Tamaño restante: 22
+2024/06/13 13:41:00 Pagina: 2 - Marco: 2
+2024/06/13 13:41:00 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:00 No termine
+2024/06/13 13:41:00 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:00 Tamaño restante: 6
+2024/06/13 13:41:00 Pagina: 3 - Marco: 3
+2024/06/13 13:41:00 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:00 Termine
+2024/06/13 13:41:00 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:00 Tamaño restante: 6
+2024/06/13 13:41:00 Terminamos al fin
+2024/06/13 13:41:00 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:00 Marcos necesarios: 4
+2024/06/13 13:41:00 Pagina: 0 - Marco: 0
+2024/06/13 13:41:00 Iniciamos
+2024/06/13 13:41:00 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:00 No termine
+2024/06/13 13:41:00 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:00 Tamaño restante: 38
+2024/06/13 13:41:00 Pagina: 1 - Marco: 1
+2024/06/13 13:41:00 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:00 No termine
+2024/06/13 13:41:00 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:00 Tamaño restante: 22
+2024/06/13 13:41:00 Pagina: 2 - Marco: 2
+2024/06/13 13:41:00 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:00 No termine
+2024/06/13 13:41:00 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:00 Tamaño restante: 6
+2024/06/13 13:41:00 Pagina: 3 - Marco: 3
+2024/06/13 13:41:00 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:00 Termine
+2024/06/13 13:41:00 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:00 Tamaño restante: 6
+2024/06/13 13:41:00 Terminamos al fin
+2024/06/13 13:41:01 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:01 Marcos necesarios: 4
+2024/06/13 13:41:01 Pagina: 0 - Marco: 0
+2024/06/13 13:41:01 Iniciamos
+2024/06/13 13:41:01 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:01 No termine
+2024/06/13 13:41:01 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:01 Tamaño restante: 38
+2024/06/13 13:41:01 Pagina: 1 - Marco: 1
+2024/06/13 13:41:01 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:01 No termine
+2024/06/13 13:41:01 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:01 Tamaño restante: 22
+2024/06/13 13:41:01 Pagina: 2 - Marco: 2
+2024/06/13 13:41:01 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:01 No termine
+2024/06/13 13:41:01 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:01 Tamaño restante: 6
+2024/06/13 13:41:01 Pagina: 3 - Marco: 3
+2024/06/13 13:41:01 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:01 Termine
+2024/06/13 13:41:01 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:01 Tamaño restante: 6
+2024/06/13 13:41:01 Terminamos al fin
+2024/06/13 13:41:01 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:01 Marcos necesarios: 4
+2024/06/13 13:41:01 Pagina: 0 - Marco: 0
+2024/06/13 13:41:01 Iniciamos
+2024/06/13 13:41:01 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:01 No termine
+2024/06/13 13:41:01 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:01 Tamaño restante: 38
+2024/06/13 13:41:01 Pagina: 1 - Marco: 1
+2024/06/13 13:41:01 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:01 No termine
+2024/06/13 13:41:01 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:01 Tamaño restante: 22
+2024/06/13 13:41:01 Pagina: 2 - Marco: 2
+2024/06/13 13:41:01 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:01 No termine
+2024/06/13 13:41:01 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:01 Tamaño restante: 6
+2024/06/13 13:41:01 Pagina: 3 - Marco: 3
+2024/06/13 13:41:01 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:01 Termine
+2024/06/13 13:41:01 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:01 Tamaño restante: 6
+2024/06/13 13:41:01 Terminamos al fin
+2024/06/13 13:41:02 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:02 Marcos necesarios: 4
+2024/06/13 13:41:02 Pagina: 0 - Marco: 0
+2024/06/13 13:41:02 Iniciamos
+2024/06/13 13:41:02 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:02 No termine
+2024/06/13 13:41:02 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:02 Tamaño restante: 38
+2024/06/13 13:41:02 Pagina: 1 - Marco: 1
+2024/06/13 13:41:02 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:02 No termine
+2024/06/13 13:41:02 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:02 Tamaño restante: 22
+2024/06/13 13:41:02 Pagina: 2 - Marco: 2
+2024/06/13 13:41:02 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:02 No termine
+2024/06/13 13:41:02 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:02 Tamaño restante: 6
+2024/06/13 13:41:02 Pagina: 3 - Marco: 3
+2024/06/13 13:41:02 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:02 Termine
+2024/06/13 13:41:02 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:02 Tamaño restante: 6
+2024/06/13 13:41:02 Terminamos al fin
+2024/06/13 13:41:02 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:02 Marcos necesarios: 4
+2024/06/13 13:41:02 Pagina: 0 - Marco: 0
+2024/06/13 13:41:02 Iniciamos
+2024/06/13 13:41:02 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:02 No termine
+2024/06/13 13:41:02 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:02 Tamaño restante: 38
+2024/06/13 13:41:02 Pagina: 1 - Marco: 1
+2024/06/13 13:41:02 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:02 No termine
+2024/06/13 13:41:02 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:02 Tamaño restante: 22
+2024/06/13 13:41:02 Pagina: 2 - Marco: 2
+2024/06/13 13:41:02 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:02 No termine
+2024/06/13 13:41:02 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:02 Tamaño restante: 6
+2024/06/13 13:41:02 Pagina: 3 - Marco: 3
+2024/06/13 13:41:02 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:02 Termine
+2024/06/13 13:41:02 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:02 Tamaño restante: 6
+2024/06/13 13:41:02 Terminamos al fin
+2024/06/13 13:41:02 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:02 Marcos necesarios: 4
+2024/06/13 13:41:02 Pagina: 0 - Marco: 0
+2024/06/13 13:41:02 Iniciamos
+2024/06/13 13:41:02 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:02 No termine
+2024/06/13 13:41:02 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:02 Tamaño restante: 38
+2024/06/13 13:41:02 Pagina: 1 - Marco: 1
+2024/06/13 13:41:02 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:02 No termine
+2024/06/13 13:41:02 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:02 Tamaño restante: 22
+2024/06/13 13:41:02 Pagina: 2 - Marco: 2
+2024/06/13 13:41:02 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:02 No termine
+2024/06/13 13:41:02 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:02 Tamaño restante: 6
+2024/06/13 13:41:02 Pagina: 3 - Marco: 3
+2024/06/13 13:41:02 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:02 Termine
+2024/06/13 13:41:02 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:02 Tamaño restante: 6
+2024/06/13 13:41:02 Terminamos al fin
+2024/06/13 13:41:03 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:03 Marcos necesarios: 4
+2024/06/13 13:41:03 Pagina: 0 - Marco: 0
+2024/06/13 13:41:03 Iniciamos
+2024/06/13 13:41:03 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:03 No termine
+2024/06/13 13:41:03 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:03 Tamaño restante: 38
+2024/06/13 13:41:03 Pagina: 1 - Marco: 1
+2024/06/13 13:41:03 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:03 No termine
+2024/06/13 13:41:03 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:03 Tamaño restante: 22
+2024/06/13 13:41:03 Pagina: 2 - Marco: 2
+2024/06/13 13:41:03 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:03 No termine
+2024/06/13 13:41:03 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:03 Tamaño restante: 6
+2024/06/13 13:41:03 Pagina: 3 - Marco: 3
+2024/06/13 13:41:03 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:03 Termine
+2024/06/13 13:41:03 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:03 Tamaño restante: 6
+2024/06/13 13:41:03 Terminamos al fin
+2024/06/13 13:41:03 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:03 Marcos necesarios: 4
+2024/06/13 13:41:03 Pagina: 0 - Marco: 0
+2024/06/13 13:41:03 Iniciamos
+2024/06/13 13:41:03 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:03 No termine
+2024/06/13 13:41:03 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:03 Tamaño restante: 38
+2024/06/13 13:41:03 Pagina: 1 - Marco: 1
+2024/06/13 13:41:03 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:03 No termine
+2024/06/13 13:41:03 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:03 Tamaño restante: 22
+2024/06/13 13:41:03 Pagina: 2 - Marco: 2
+2024/06/13 13:41:03 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:03 No termine
+2024/06/13 13:41:03 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:03 Tamaño restante: 6
+2024/06/13 13:41:03 Pagina: 3 - Marco: 3
+2024/06/13 13:41:03 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:03 Termine
+2024/06/13 13:41:03 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:03 Tamaño restante: 6
+2024/06/13 13:41:03 Terminamos al fin
+2024/06/13 13:41:04 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:04 Marcos necesarios: 4
+2024/06/13 13:41:04 Pagina: 0 - Marco: 0
+2024/06/13 13:41:04 Iniciamos
+2024/06/13 13:41:04 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:04 No termine
+2024/06/13 13:41:04 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:04 Tamaño restante: 38
+2024/06/13 13:41:04 Pagina: 1 - Marco: 1
+2024/06/13 13:41:04 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:04 No termine
+2024/06/13 13:41:04 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:04 Tamaño restante: 22
+2024/06/13 13:41:04 Pagina: 2 - Marco: 2
+2024/06/13 13:41:04 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:04 No termine
+2024/06/13 13:41:04 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:04 Tamaño restante: 6
+2024/06/13 13:41:04 Pagina: 3 - Marco: 3
+2024/06/13 13:41:04 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:04 Termine
+2024/06/13 13:41:04 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:04 Tamaño restante: 6
+2024/06/13 13:41:04 Terminamos al fin
+2024/06/13 13:41:04 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:04 Marcos necesarios: 4
+2024/06/13 13:41:04 Pagina: 0 - Marco: 0
+2024/06/13 13:41:04 Iniciamos
+2024/06/13 13:41:04 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:04 No termine
+2024/06/13 13:41:04 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:04 Tamaño restante: 38
+2024/06/13 13:41:04 Pagina: 1 - Marco: 1
+2024/06/13 13:41:04 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:04 No termine
+2024/06/13 13:41:04 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:04 Tamaño restante: 22
+2024/06/13 13:41:04 Pagina: 2 - Marco: 2
+2024/06/13 13:41:04 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:04 No termine
+2024/06/13 13:41:04 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:04 Tamaño restante: 6
+2024/06/13 13:41:04 Pagina: 3 - Marco: 3
+2024/06/13 13:41:04 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:04 Termine
+2024/06/13 13:41:04 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:04 Tamaño restante: 6
+2024/06/13 13:41:04 Terminamos al fin
+2024/06/13 13:41:04 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:04 Marcos necesarios: 4
+2024/06/13 13:41:04 Pagina: 0 - Marco: 0
+2024/06/13 13:41:04 Iniciamos
+2024/06/13 13:41:04 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:04 No termine
+2024/06/13 13:41:04 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:04 Tamaño restante: 38
+2024/06/13 13:41:04 Pagina: 1 - Marco: 1
+2024/06/13 13:41:04 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:04 No termine
+2024/06/13 13:41:04 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:04 Tamaño restante: 22
+2024/06/13 13:41:04 Pagina: 2 - Marco: 2
+2024/06/13 13:41:04 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:04 No termine
+2024/06/13 13:41:04 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:04 Tamaño restante: 6
+2024/06/13 13:41:04 Pagina: 3 - Marco: 3
+2024/06/13 13:41:04 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:04 Termine
+2024/06/13 13:41:04 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:04 Tamaño restante: 6
+2024/06/13 13:41:04 Terminamos al fin
+2024/06/13 13:41:05 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:05 Marcos necesarios: 4
+2024/06/13 13:41:05 Pagina: 0 - Marco: 0
+2024/06/13 13:41:05 Iniciamos
+2024/06/13 13:41:05 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:05 No termine
+2024/06/13 13:41:05 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:05 Tamaño restante: 38
+2024/06/13 13:41:05 Pagina: 1 - Marco: 1
+2024/06/13 13:41:05 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:05 No termine
+2024/06/13 13:41:05 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:05 Tamaño restante: 22
+2024/06/13 13:41:05 Pagina: 2 - Marco: 2
+2024/06/13 13:41:05 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:05 No termine
+2024/06/13 13:41:05 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:05 Tamaño restante: 6
+2024/06/13 13:41:05 Pagina: 3 - Marco: 3
+2024/06/13 13:41:05 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:05 Termine
+2024/06/13 13:41:05 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:05 Tamaño restante: 6
+2024/06/13 13:41:05 Terminamos al fin
+2024/06/13 13:41:05 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:05 Marcos necesarios: 4
+2024/06/13 13:41:05 Pagina: 0 - Marco: 0
+2024/06/13 13:41:05 Iniciamos
+2024/06/13 13:41:05 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:05 No termine
+2024/06/13 13:41:05 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:05 Tamaño restante: 38
+2024/06/13 13:41:05 Pagina: 1 - Marco: 1
+2024/06/13 13:41:05 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:05 No termine
+2024/06/13 13:41:05 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:05 Tamaño restante: 22
+2024/06/13 13:41:05 Pagina: 2 - Marco: 2
+2024/06/13 13:41:05 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:05 No termine
+2024/06/13 13:41:05 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:05 Tamaño restante: 6
+2024/06/13 13:41:05 Pagina: 3 - Marco: 3
+2024/06/13 13:41:05 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:05 Termine
+2024/06/13 13:41:05 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:05 Tamaño restante: 6
+2024/06/13 13:41:05 Terminamos al fin
+2024/06/13 13:41:06 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:06 Marcos necesarios: 4
+2024/06/13 13:41:06 Pagina: 0 - Marco: 0
+2024/06/13 13:41:06 Iniciamos
+2024/06/13 13:41:06 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:06 No termine
+2024/06/13 13:41:06 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:06 Tamaño restante: 38
+2024/06/13 13:41:06 Pagina: 1 - Marco: 1
+2024/06/13 13:41:06 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:06 No termine
+2024/06/13 13:41:06 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:06 Tamaño restante: 22
+2024/06/13 13:41:06 Pagina: 2 - Marco: 2
+2024/06/13 13:41:06 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:06 No termine
+2024/06/13 13:41:06 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:06 Tamaño restante: 6
+2024/06/13 13:41:06 Pagina: 3 - Marco: 3
+2024/06/13 13:41:06 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:06 Termine
+2024/06/13 13:41:06 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:06 Tamaño restante: 6
+2024/06/13 13:41:06 Terminamos al fin
+2024/06/13 13:41:06 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:06 Marcos necesarios: 4
+2024/06/13 13:41:06 Pagina: 0 - Marco: 0
+2024/06/13 13:41:06 Iniciamos
+2024/06/13 13:41:06 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:06 No termine
+2024/06/13 13:41:06 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:06 Tamaño restante: 38
+2024/06/13 13:41:06 Pagina: 1 - Marco: 1
+2024/06/13 13:41:06 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:06 No termine
+2024/06/13 13:41:06 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:06 Tamaño restante: 22
+2024/06/13 13:41:06 Pagina: 2 - Marco: 2
+2024/06/13 13:41:06 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:06 No termine
+2024/06/13 13:41:06 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:06 Tamaño restante: 6
+2024/06/13 13:41:06 Pagina: 3 - Marco: 3
+2024/06/13 13:41:06 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:06 Termine
+2024/06/13 13:41:06 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:06 Tamaño restante: 6
+2024/06/13 13:41:06 Terminamos al fin
+2024/06/13 13:41:06 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:06 Marcos necesarios: 4
+2024/06/13 13:41:06 Pagina: 0 - Marco: 0
+2024/06/13 13:41:06 Iniciamos
+2024/06/13 13:41:06 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:06 No termine
+2024/06/13 13:41:06 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:06 Tamaño restante: 38
+2024/06/13 13:41:06 Pagina: 1 - Marco: 1
+2024/06/13 13:41:06 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:06 No termine
+2024/06/13 13:41:06 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:06 Tamaño restante: 22
+2024/06/13 13:41:06 Pagina: 2 - Marco: 2
+2024/06/13 13:41:06 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:06 No termine
+2024/06/13 13:41:06 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:06 Tamaño restante: 6
+2024/06/13 13:41:06 Pagina: 3 - Marco: 3
+2024/06/13 13:41:06 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:06 Termine
+2024/06/13 13:41:06 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:06 Tamaño restante: 6
+2024/06/13 13:41:06 Terminamos al fin
+2024/06/13 13:41:07 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:07 Marcos necesarios: 4
+2024/06/13 13:41:07 Pagina: 0 - Marco: 0
+2024/06/13 13:41:07 Iniciamos
+2024/06/13 13:41:07 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:07 No termine
+2024/06/13 13:41:07 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:07 Tamaño restante: 38
+2024/06/13 13:41:07 Pagina: 1 - Marco: 1
+2024/06/13 13:41:07 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:07 No termine
+2024/06/13 13:41:07 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:07 Tamaño restante: 22
+2024/06/13 13:41:07 Pagina: 2 - Marco: 2
+2024/06/13 13:41:07 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:07 No termine
+2024/06/13 13:41:07 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:07 Tamaño restante: 6
+2024/06/13 13:41:07 Pagina: 3 - Marco: 3
+2024/06/13 13:41:07 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:07 Termine
+2024/06/13 13:41:07 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:07 Tamaño restante: 6
+2024/06/13 13:41:07 Terminamos al fin
+2024/06/13 13:41:07 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:07 Marcos necesarios: 4
+2024/06/13 13:41:07 Pagina: 0 - Marco: 0
+2024/06/13 13:41:07 Iniciamos
+2024/06/13 13:41:07 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:07 No termine
+2024/06/13 13:41:07 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:07 Tamaño restante: 38
+2024/06/13 13:41:07 Pagina: 1 - Marco: 1
+2024/06/13 13:41:07 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:07 No termine
+2024/06/13 13:41:07 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:07 Tamaño restante: 22
+2024/06/13 13:41:07 Pagina: 2 - Marco: 2
+2024/06/13 13:41:07 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:07 No termine
+2024/06/13 13:41:07 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:07 Tamaño restante: 6
+2024/06/13 13:41:07 Pagina: 3 - Marco: 3
+2024/06/13 13:41:07 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:07 Termine
+2024/06/13 13:41:07 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:07 Tamaño restante: 6
+2024/06/13 13:41:07 Terminamos al fin
+2024/06/13 13:41:08 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:08 Marcos necesarios: 4
+2024/06/13 13:41:08 Pagina: 0 - Marco: 0
+2024/06/13 13:41:08 Iniciamos
+2024/06/13 13:41:08 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:08 No termine
+2024/06/13 13:41:08 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:08 Tamaño restante: 38
+2024/06/13 13:41:08 Pagina: 1 - Marco: 1
+2024/06/13 13:41:08 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:08 No termine
+2024/06/13 13:41:08 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:08 Tamaño restante: 22
+2024/06/13 13:41:08 Pagina: 2 - Marco: 2
+2024/06/13 13:41:08 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:08 No termine
+2024/06/13 13:41:08 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:08 Tamaño restante: 6
+2024/06/13 13:41:08 Pagina: 3 - Marco: 3
+2024/06/13 13:41:08 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:08 Termine
+2024/06/13 13:41:08 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:08 Tamaño restante: 6
+2024/06/13 13:41:08 Terminamos al fin
+2024/06/13 13:41:08 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:08 Marcos necesarios: 4
+2024/06/13 13:41:08 Pagina: 0 - Marco: 0
+2024/06/13 13:41:08 Iniciamos
+2024/06/13 13:41:08 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:08 No termine
+2024/06/13 13:41:08 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:08 Tamaño restante: 38
+2024/06/13 13:41:08 Pagina: 1 - Marco: 1
+2024/06/13 13:41:08 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:08 No termine
+2024/06/13 13:41:08 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:08 Tamaño restante: 22
+2024/06/13 13:41:08 Pagina: 2 - Marco: 2
+2024/06/13 13:41:08 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:08 No termine
+2024/06/13 13:41:08 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:08 Tamaño restante: 6
+2024/06/13 13:41:08 Pagina: 3 - Marco: 3
+2024/06/13 13:41:08 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:08 Termine
+2024/06/13 13:41:08 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:08 Tamaño restante: 6
+2024/06/13 13:41:08 Terminamos al fin
+2024/06/13 13:41:08 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:08 Marcos necesarios: 4
+2024/06/13 13:41:08 Pagina: 0 - Marco: 0
+2024/06/13 13:41:08 Iniciamos
+2024/06/13 13:41:08 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:08 No termine
+2024/06/13 13:41:08 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:08 Tamaño restante: 38
+2024/06/13 13:41:08 Pagina: 1 - Marco: 1
+2024/06/13 13:41:08 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:08 No termine
+2024/06/13 13:41:08 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:08 Tamaño restante: 22
+2024/06/13 13:41:08 Pagina: 2 - Marco: 2
+2024/06/13 13:41:08 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:08 No termine
+2024/06/13 13:41:08 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:08 Tamaño restante: 6
+2024/06/13 13:41:08 Pagina: 3 - Marco: 3
+2024/06/13 13:41:08 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:08 Termine
+2024/06/13 13:41:08 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:08 Tamaño restante: 6
+2024/06/13 13:41:08 Terminamos al fin
+2024/06/13 13:41:09 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:09 Marcos necesarios: 4
+2024/06/13 13:41:09 Pagina: 0 - Marco: 0
+2024/06/13 13:41:09 Iniciamos
+2024/06/13 13:41:09 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:09 No termine
+2024/06/13 13:41:09 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:09 Tamaño restante: 38
+2024/06/13 13:41:09 Pagina: 1 - Marco: 1
+2024/06/13 13:41:09 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:09 No termine
+2024/06/13 13:41:09 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:09 Tamaño restante: 22
+2024/06/13 13:41:09 Pagina: 2 - Marco: 2
+2024/06/13 13:41:09 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:09 No termine
+2024/06/13 13:41:09 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:09 Tamaño restante: 6
+2024/06/13 13:41:09 Pagina: 3 - Marco: 3
+2024/06/13 13:41:09 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:09 Termine
+2024/06/13 13:41:09 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:09 Tamaño restante: 6
+2024/06/13 13:41:09 Terminamos al fin
+2024/06/13 13:41:09 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:09 Marcos necesarios: 4
+2024/06/13 13:41:09 Pagina: 0 - Marco: 0
+2024/06/13 13:41:09 Iniciamos
+2024/06/13 13:41:09 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:09 No termine
+2024/06/13 13:41:09 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:09 Tamaño restante: 38
+2024/06/13 13:41:09 Pagina: 1 - Marco: 1
+2024/06/13 13:41:09 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:09 No termine
+2024/06/13 13:41:09 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:09 Tamaño restante: 22
+2024/06/13 13:41:09 Pagina: 2 - Marco: 2
+2024/06/13 13:41:09 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:09 No termine
+2024/06/13 13:41:09 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:09 Tamaño restante: 6
+2024/06/13 13:41:09 Pagina: 3 - Marco: 3
+2024/06/13 13:41:09 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:09 Termine
+2024/06/13 13:41:09 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:09 Tamaño restante: 6
+2024/06/13 13:41:09 Terminamos al fin
+2024/06/13 13:41:10 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:10 Marcos necesarios: 4
+2024/06/13 13:41:10 Pagina: 0 - Marco: 0
+2024/06/13 13:41:10 Iniciamos
+2024/06/13 13:41:10 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:10 No termine
+2024/06/13 13:41:10 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:10 Tamaño restante: 38
+2024/06/13 13:41:10 Pagina: 1 - Marco: 1
+2024/06/13 13:41:10 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:10 No termine
+2024/06/13 13:41:10 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:10 Tamaño restante: 22
+2024/06/13 13:41:10 Pagina: 2 - Marco: 2
+2024/06/13 13:41:10 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:10 No termine
+2024/06/13 13:41:10 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:10 Tamaño restante: 6
+2024/06/13 13:41:10 Pagina: 3 - Marco: 3
+2024/06/13 13:41:10 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:10 Termine
+2024/06/13 13:41:10 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:10 Tamaño restante: 6
+2024/06/13 13:41:10 Terminamos al fin
+2024/06/13 13:41:10 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:10 Marcos necesarios: 4
+2024/06/13 13:41:10 Pagina: 0 - Marco: 0
+2024/06/13 13:41:10 Iniciamos
+2024/06/13 13:41:10 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:10 No termine
+2024/06/13 13:41:10 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:10 Tamaño restante: 38
+2024/06/13 13:41:10 Pagina: 1 - Marco: 1
+2024/06/13 13:41:10 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:10 No termine
+2024/06/13 13:41:10 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:10 Tamaño restante: 22
+2024/06/13 13:41:10 Pagina: 2 - Marco: 2
+2024/06/13 13:41:10 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:10 No termine
+2024/06/13 13:41:10 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:10 Tamaño restante: 6
+2024/06/13 13:41:10 Pagina: 3 - Marco: 3
+2024/06/13 13:41:10 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:10 Termine
+2024/06/13 13:41:10 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:10 Tamaño restante: 6
+2024/06/13 13:41:10 Terminamos al fin
+2024/06/13 13:41:10 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:10 Marcos necesarios: 4
+2024/06/13 13:41:10 Pagina: 0 - Marco: 0
+2024/06/13 13:41:10 Iniciamos
+2024/06/13 13:41:10 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:10 No termine
+2024/06/13 13:41:10 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:10 Tamaño restante: 38
+2024/06/13 13:41:10 Pagina: 1 - Marco: 1
+2024/06/13 13:41:10 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:10 No termine
+2024/06/13 13:41:10 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:10 Tamaño restante: 22
+2024/06/13 13:41:10 Pagina: 2 - Marco: 2
+2024/06/13 13:41:10 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:10 No termine
+2024/06/13 13:41:10 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:10 Tamaño restante: 6
+2024/06/13 13:41:10 Pagina: 3 - Marco: 3
+2024/06/13 13:41:10 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:10 Termine
+2024/06/13 13:41:10 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:10 Tamaño restante: 6
+2024/06/13 13:41:10 Terminamos al fin
+2024/06/13 13:41:11 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:11 Marcos necesarios: 4
+2024/06/13 13:41:11 Pagina: 0 - Marco: 0
+2024/06/13 13:41:11 Iniciamos
+2024/06/13 13:41:11 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:11 No termine
+2024/06/13 13:41:11 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:11 Tamaño restante: 38
+2024/06/13 13:41:11 Pagina: 1 - Marco: 1
+2024/06/13 13:41:11 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:11 No termine
+2024/06/13 13:41:11 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:11 Tamaño restante: 22
+2024/06/13 13:41:11 Pagina: 2 - Marco: 2
+2024/06/13 13:41:11 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:11 No termine
+2024/06/13 13:41:11 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:11 Tamaño restante: 6
+2024/06/13 13:41:11 Pagina: 3 - Marco: 3
+2024/06/13 13:41:11 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:11 Termine
+2024/06/13 13:41:11 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:11 Tamaño restante: 6
+2024/06/13 13:41:11 Terminamos al fin
+2024/06/13 13:41:11 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:11 Marcos necesarios: 4
+2024/06/13 13:41:11 Pagina: 0 - Marco: 0
+2024/06/13 13:41:11 Iniciamos
+2024/06/13 13:41:11 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:11 No termine
+2024/06/13 13:41:11 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:11 Tamaño restante: 38
+2024/06/13 13:41:11 Pagina: 1 - Marco: 1
+2024/06/13 13:41:11 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:11 No termine
+2024/06/13 13:41:11 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:11 Tamaño restante: 22
+2024/06/13 13:41:11 Pagina: 2 - Marco: 2
+2024/06/13 13:41:11 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:11 No termine
+2024/06/13 13:41:11 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:11 Tamaño restante: 6
+2024/06/13 13:41:11 Pagina: 3 - Marco: 3
+2024/06/13 13:41:11 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:11 Termine
+2024/06/13 13:41:11 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:11 Tamaño restante: 6
+2024/06/13 13:41:11 Terminamos al fin
+2024/06/13 13:41:12 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:12 Marcos necesarios: 4
+2024/06/13 13:41:12 Pagina: 0 - Marco: 0
+2024/06/13 13:41:12 Iniciamos
+2024/06/13 13:41:12 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:12 No termine
+2024/06/13 13:41:12 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:12 Tamaño restante: 38
+2024/06/13 13:41:12 Pagina: 1 - Marco: 1
+2024/06/13 13:41:12 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:12 No termine
+2024/06/13 13:41:12 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:12 Tamaño restante: 22
+2024/06/13 13:41:12 Pagina: 2 - Marco: 2
+2024/06/13 13:41:12 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:12 No termine
+2024/06/13 13:41:12 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:12 Tamaño restante: 6
+2024/06/13 13:41:12 Pagina: 3 - Marco: 3
+2024/06/13 13:41:12 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:12 Termine
+2024/06/13 13:41:12 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:12 Tamaño restante: 6
+2024/06/13 13:41:12 Terminamos al fin
+2024/06/13 13:41:12 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:12 Marcos necesarios: 4
+2024/06/13 13:41:12 Pagina: 0 - Marco: 0
+2024/06/13 13:41:12 Iniciamos
+2024/06/13 13:41:12 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:12 No termine
+2024/06/13 13:41:12 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:12 Tamaño restante: 38
+2024/06/13 13:41:12 Pagina: 1 - Marco: 1
+2024/06/13 13:41:12 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:12 No termine
+2024/06/13 13:41:12 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:12 Tamaño restante: 22
+2024/06/13 13:41:12 Pagina: 2 - Marco: 2
+2024/06/13 13:41:12 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:12 No termine
+2024/06/13 13:41:12 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:12 Tamaño restante: 6
+2024/06/13 13:41:12 Pagina: 3 - Marco: 3
+2024/06/13 13:41:12 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:12 Termine
+2024/06/13 13:41:12 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:12 Tamaño restante: 6
+2024/06/13 13:41:12 Terminamos al fin
+2024/06/13 13:41:12 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:12 Marcos necesarios: 4
+2024/06/13 13:41:12 Pagina: 0 - Marco: 0
+2024/06/13 13:41:12 Iniciamos
+2024/06/13 13:41:12 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:12 No termine
+2024/06/13 13:41:12 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:12 Tamaño restante: 38
+2024/06/13 13:41:12 Pagina: 1 - Marco: 1
+2024/06/13 13:41:12 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:12 No termine
+2024/06/13 13:41:12 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:12 Tamaño restante: 22
+2024/06/13 13:41:12 Pagina: 2 - Marco: 2
+2024/06/13 13:41:12 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:12 No termine
+2024/06/13 13:41:12 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:12 Tamaño restante: 6
+2024/06/13 13:41:12 Pagina: 3 - Marco: 3
+2024/06/13 13:41:12 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:12 Termine
+2024/06/13 13:41:12 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:12 Tamaño restante: 6
+2024/06/13 13:41:12 Terminamos al fin
+2024/06/13 13:41:13 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:13 Marcos necesarios: 4
+2024/06/13 13:41:13 Pagina: 0 - Marco: 0
+2024/06/13 13:41:13 Iniciamos
+2024/06/13 13:41:13 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:13 No termine
+2024/06/13 13:41:13 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:13 Tamaño restante: 38
+2024/06/13 13:41:13 Pagina: 1 - Marco: 1
+2024/06/13 13:41:13 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:13 No termine
+2024/06/13 13:41:13 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:13 Tamaño restante: 22
+2024/06/13 13:41:13 Pagina: 2 - Marco: 2
+2024/06/13 13:41:13 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:13 No termine
+2024/06/13 13:41:13 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:13 Tamaño restante: 6
+2024/06/13 13:41:13 Pagina: 3 - Marco: 3
+2024/06/13 13:41:13 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:13 Termine
+2024/06/13 13:41:13 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:13 Tamaño restante: 6
+2024/06/13 13:41:13 Terminamos al fin
+2024/06/13 13:41:13 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:13 Marcos necesarios: 4
+2024/06/13 13:41:13 Pagina: 0 - Marco: 0
+2024/06/13 13:41:13 Iniciamos
+2024/06/13 13:41:13 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:13 No termine
+2024/06/13 13:41:13 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:13 Tamaño restante: 38
+2024/06/13 13:41:13 Pagina: 1 - Marco: 1
+2024/06/13 13:41:13 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:13 No termine
+2024/06/13 13:41:13 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:13 Tamaño restante: 22
+2024/06/13 13:41:13 Pagina: 2 - Marco: 2
+2024/06/13 13:41:13 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:13 No termine
+2024/06/13 13:41:13 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:13 Tamaño restante: 6
+2024/06/13 13:41:13 Pagina: 3 - Marco: 3
+2024/06/13 13:41:13 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:13 Termine
+2024/06/13 13:41:13 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:13 Tamaño restante: 6
+2024/06/13 13:41:13 Terminamos al fin
+2024/06/13 13:41:14 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:14 Marcos necesarios: 4
+2024/06/13 13:41:14 Pagina: 0 - Marco: 0
+2024/06/13 13:41:14 Iniciamos
+2024/06/13 13:41:14 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:14 No termine
+2024/06/13 13:41:14 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:14 Tamaño restante: 38
+2024/06/13 13:41:14 Pagina: 1 - Marco: 1
+2024/06/13 13:41:14 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:14 No termine
+2024/06/13 13:41:14 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:14 Tamaño restante: 22
+2024/06/13 13:41:14 Pagina: 2 - Marco: 2
+2024/06/13 13:41:14 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:14 No termine
+2024/06/13 13:41:14 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:14 Tamaño restante: 6
+2024/06/13 13:41:14 Pagina: 3 - Marco: 3
+2024/06/13 13:41:14 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:14 Termine
+2024/06/13 13:41:14 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:14 Tamaño restante: 6
+2024/06/13 13:41:14 Terminamos al fin
+2024/06/13 13:41:14 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:14 Marcos necesarios: 4
+2024/06/13 13:41:14 Pagina: 0 - Marco: 0
+2024/06/13 13:41:14 Iniciamos
+2024/06/13 13:41:14 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:14 No termine
+2024/06/13 13:41:14 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:14 Tamaño restante: 38
+2024/06/13 13:41:14 Pagina: 1 - Marco: 1
+2024/06/13 13:41:14 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:14 No termine
+2024/06/13 13:41:14 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:14 Tamaño restante: 22
+2024/06/13 13:41:14 Pagina: 2 - Marco: 2
+2024/06/13 13:41:14 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:14 No termine
+2024/06/13 13:41:14 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:14 Tamaño restante: 6
+2024/06/13 13:41:14 Pagina: 3 - Marco: 3
+2024/06/13 13:41:14 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:14 Termine
+2024/06/13 13:41:14 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:14 Tamaño restante: 6
+2024/06/13 13:41:14 Terminamos al fin
+2024/06/13 13:41:14 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:14 Marcos necesarios: 4
+2024/06/13 13:41:14 Pagina: 0 - Marco: 0
+2024/06/13 13:41:14 Iniciamos
+2024/06/13 13:41:14 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:14 No termine
+2024/06/13 13:41:14 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:14 Tamaño restante: 38
+2024/06/13 13:41:14 Pagina: 1 - Marco: 1
+2024/06/13 13:41:14 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:14 No termine
+2024/06/13 13:41:14 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:14 Tamaño restante: 22
+2024/06/13 13:41:14 Pagina: 2 - Marco: 2
+2024/06/13 13:41:14 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:14 No termine
+2024/06/13 13:41:14 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:14 Tamaño restante: 6
+2024/06/13 13:41:14 Pagina: 3 - Marco: 3
+2024/06/13 13:41:14 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:14 Termine
+2024/06/13 13:41:14 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:14 Tamaño restante: 6
+2024/06/13 13:41:14 Terminamos al fin
+2024/06/13 13:41:15 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:15 Marcos necesarios: 4
+2024/06/13 13:41:15 Pagina: 0 - Marco: 0
+2024/06/13 13:41:15 Iniciamos
+2024/06/13 13:41:15 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:15 No termine
+2024/06/13 13:41:15 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:15 Tamaño restante: 38
+2024/06/13 13:41:15 Pagina: 1 - Marco: 1
+2024/06/13 13:41:15 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:15 No termine
+2024/06/13 13:41:15 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:15 Tamaño restante: 22
+2024/06/13 13:41:15 Pagina: 2 - Marco: 2
+2024/06/13 13:41:15 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:15 No termine
+2024/06/13 13:41:15 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:15 Tamaño restante: 6
+2024/06/13 13:41:15 Pagina: 3 - Marco: 3
+2024/06/13 13:41:15 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:15 Termine
+2024/06/13 13:41:15 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:15 Tamaño restante: 6
+2024/06/13 13:41:15 Terminamos al fin
+2024/06/13 13:41:15 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:15 Marcos necesarios: 4
+2024/06/13 13:41:15 Pagina: 0 - Marco: 0
+2024/06/13 13:41:15 Iniciamos
+2024/06/13 13:41:15 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:15 No termine
+2024/06/13 13:41:15 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:15 Tamaño restante: 38
+2024/06/13 13:41:15 Pagina: 1 - Marco: 1
+2024/06/13 13:41:15 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:15 No termine
+2024/06/13 13:41:15 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:15 Tamaño restante: 22
+2024/06/13 13:41:15 Pagina: 2 - Marco: 2
+2024/06/13 13:41:15 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:15 No termine
+2024/06/13 13:41:15 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:15 Tamaño restante: 6
+2024/06/13 13:41:15 Pagina: 3 - Marco: 3
+2024/06/13 13:41:15 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:15 Termine
+2024/06/13 13:41:15 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:15 Tamaño restante: 6
+2024/06/13 13:41:15 Terminamos al fin
+2024/06/13 13:41:16 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:16 Marcos necesarios: 4
+2024/06/13 13:41:16 Pagina: 0 - Marco: 0
+2024/06/13 13:41:16 Iniciamos
+2024/06/13 13:41:16 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:16 No termine
+2024/06/13 13:41:16 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:16 Tamaño restante: 38
+2024/06/13 13:41:16 Pagina: 1 - Marco: 1
+2024/06/13 13:41:16 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:16 No termine
+2024/06/13 13:41:16 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:16 Tamaño restante: 22
+2024/06/13 13:41:16 Pagina: 2 - Marco: 2
+2024/06/13 13:41:16 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:16 No termine
+2024/06/13 13:41:16 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:16 Tamaño restante: 6
+2024/06/13 13:41:16 Pagina: 3 - Marco: 3
+2024/06/13 13:41:16 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:16 Termine
+2024/06/13 13:41:16 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:16 Tamaño restante: 6
+2024/06/13 13:41:16 Terminamos al fin
+2024/06/13 13:41:16 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:16 Marcos necesarios: 4
+2024/06/13 13:41:16 Pagina: 0 - Marco: 0
+2024/06/13 13:41:16 Iniciamos
+2024/06/13 13:41:16 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:16 No termine
+2024/06/13 13:41:16 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:16 Tamaño restante: 38
+2024/06/13 13:41:16 Pagina: 1 - Marco: 1
+2024/06/13 13:41:16 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:16 No termine
+2024/06/13 13:41:16 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:16 Tamaño restante: 22
+2024/06/13 13:41:16 Pagina: 2 - Marco: 2
+2024/06/13 13:41:16 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:16 No termine
+2024/06/13 13:41:16 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:16 Tamaño restante: 6
+2024/06/13 13:41:16 Pagina: 3 - Marco: 3
+2024/06/13 13:41:16 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:16 Termine
+2024/06/13 13:41:16 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:16 Tamaño restante: 6
+2024/06/13 13:41:16 Terminamos al fin
+2024/06/13 13:41:16 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:16 Marcos necesarios: 4
+2024/06/13 13:41:16 Pagina: 0 - Marco: 0
+2024/06/13 13:41:16 Iniciamos
+2024/06/13 13:41:16 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:16 No termine
+2024/06/13 13:41:16 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:16 Tamaño restante: 38
+2024/06/13 13:41:16 Pagina: 1 - Marco: 1
+2024/06/13 13:41:16 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:16 No termine
+2024/06/13 13:41:16 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:16 Tamaño restante: 22
+2024/06/13 13:41:16 Pagina: 2 - Marco: 2
+2024/06/13 13:41:16 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:16 No termine
+2024/06/13 13:41:16 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:16 Tamaño restante: 6
+2024/06/13 13:41:16 Pagina: 3 - Marco: 3
+2024/06/13 13:41:16 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:16 Termine
+2024/06/13 13:41:16 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:16 Tamaño restante: 6
+2024/06/13 13:41:16 Terminamos al fin
+2024/06/13 13:41:17 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:17 Marcos necesarios: 4
+2024/06/13 13:41:17 Pagina: 0 - Marco: 0
+2024/06/13 13:41:17 Iniciamos
+2024/06/13 13:41:17 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:17 No termine
+2024/06/13 13:41:17 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:17 Tamaño restante: 38
+2024/06/13 13:41:17 Pagina: 1 - Marco: 1
+2024/06/13 13:41:17 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:17 No termine
+2024/06/13 13:41:17 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:17 Tamaño restante: 22
+2024/06/13 13:41:17 Pagina: 2 - Marco: 2
+2024/06/13 13:41:17 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:17 No termine
+2024/06/13 13:41:17 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:17 Tamaño restante: 6
+2024/06/13 13:41:17 Pagina: 3 - Marco: 3
+2024/06/13 13:41:17 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:17 Termine
+2024/06/13 13:41:17 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:17 Tamaño restante: 6
+2024/06/13 13:41:17 Terminamos al fin
+2024/06/13 13:41:17 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:17 Marcos necesarios: 4
+2024/06/13 13:41:17 Pagina: 0 - Marco: 0
+2024/06/13 13:41:17 Iniciamos
+2024/06/13 13:41:17 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:17 No termine
+2024/06/13 13:41:17 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:17 Tamaño restante: 38
+2024/06/13 13:41:17 Pagina: 1 - Marco: 1
+2024/06/13 13:41:17 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:17 No termine
+2024/06/13 13:41:17 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:17 Tamaño restante: 22
+2024/06/13 13:41:17 Pagina: 2 - Marco: 2
+2024/06/13 13:41:17 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:17 No termine
+2024/06/13 13:41:17 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:17 Tamaño restante: 6
+2024/06/13 13:41:17 Pagina: 3 - Marco: 3
+2024/06/13 13:41:17 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:17 Termine
+2024/06/13 13:41:17 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:17 Tamaño restante: 6
+2024/06/13 13:41:17 Terminamos al fin
+2024/06/13 13:41:18 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:18 Marcos necesarios: 4
+2024/06/13 13:41:18 Pagina: 0 - Marco: 0
+2024/06/13 13:41:18 Iniciamos
+2024/06/13 13:41:18 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:18 No termine
+2024/06/13 13:41:18 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:18 Tamaño restante: 38
+2024/06/13 13:41:18 Pagina: 1 - Marco: 1
+2024/06/13 13:41:18 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:18 No termine
+2024/06/13 13:41:18 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:18 Tamaño restante: 22
+2024/06/13 13:41:18 Pagina: 2 - Marco: 2
+2024/06/13 13:41:18 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:18 No termine
+2024/06/13 13:41:18 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:18 Tamaño restante: 6
+2024/06/13 13:41:18 Pagina: 3 - Marco: 3
+2024/06/13 13:41:18 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:18 Termine
+2024/06/13 13:41:18 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:18 Tamaño restante: 6
+2024/06/13 13:41:18 Terminamos al fin
+2024/06/13 13:41:18 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:18 Marcos necesarios: 4
+2024/06/13 13:41:18 Pagina: 0 - Marco: 0
+2024/06/13 13:41:18 Iniciamos
+2024/06/13 13:41:18 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:18 No termine
+2024/06/13 13:41:18 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:18 Tamaño restante: 38
+2024/06/13 13:41:18 Pagina: 1 - Marco: 1
+2024/06/13 13:41:18 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:18 No termine
+2024/06/13 13:41:18 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:18 Tamaño restante: 22
+2024/06/13 13:41:18 Pagina: 2 - Marco: 2
+2024/06/13 13:41:18 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:18 No termine
+2024/06/13 13:41:18 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:18 Tamaño restante: 6
+2024/06/13 13:41:18 Pagina: 3 - Marco: 3
+2024/06/13 13:41:18 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:18 Termine
+2024/06/13 13:41:18 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:18 Tamaño restante: 6
+2024/06/13 13:41:18 Terminamos al fin
+2024/06/13 13:41:18 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:18 Marcos necesarios: 4
+2024/06/13 13:41:18 Pagina: 0 - Marco: 0
+2024/06/13 13:41:18 Iniciamos
+2024/06/13 13:41:18 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:18 No termine
+2024/06/13 13:41:18 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:18 Tamaño restante: 38
+2024/06/13 13:41:18 Pagina: 1 - Marco: 1
+2024/06/13 13:41:18 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:18 No termine
+2024/06/13 13:41:18 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:18 Tamaño restante: 22
+2024/06/13 13:41:18 Pagina: 2 - Marco: 2
+2024/06/13 13:41:18 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:18 No termine
+2024/06/13 13:41:18 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:18 Tamaño restante: 6
+2024/06/13 13:41:18 Pagina: 3 - Marco: 3
+2024/06/13 13:41:18 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:18 Termine
+2024/06/13 13:41:18 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:18 Tamaño restante: 6
+2024/06/13 13:41:18 Terminamos al fin
+2024/06/13 13:41:19 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:19 Marcos necesarios: 4
+2024/06/13 13:41:19 Pagina: 0 - Marco: 0
+2024/06/13 13:41:19 Iniciamos
+2024/06/13 13:41:19 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:19 No termine
+2024/06/13 13:41:19 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:19 Tamaño restante: 38
+2024/06/13 13:41:19 Pagina: 1 - Marco: 1
+2024/06/13 13:41:19 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:19 No termine
+2024/06/13 13:41:19 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:19 Tamaño restante: 22
+2024/06/13 13:41:19 Pagina: 2 - Marco: 2
+2024/06/13 13:41:19 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:19 No termine
+2024/06/13 13:41:19 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:19 Tamaño restante: 6
+2024/06/13 13:41:19 Pagina: 3 - Marco: 3
+2024/06/13 13:41:19 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:19 Termine
+2024/06/13 13:41:19 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:19 Tamaño restante: 6
+2024/06/13 13:41:19 Terminamos al fin
+2024/06/13 13:41:19 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:19 Marcos necesarios: 4
+2024/06/13 13:41:19 Pagina: 0 - Marco: 0
+2024/06/13 13:41:19 Iniciamos
+2024/06/13 13:41:19 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:19 No termine
+2024/06/13 13:41:19 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:19 Tamaño restante: 38
+2024/06/13 13:41:19 Pagina: 1 - Marco: 1
+2024/06/13 13:41:19 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:19 No termine
+2024/06/13 13:41:19 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:19 Tamaño restante: 22
+2024/06/13 13:41:19 Pagina: 2 - Marco: 2
+2024/06/13 13:41:19 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:19 No termine
+2024/06/13 13:41:19 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:19 Tamaño restante: 6
+2024/06/13 13:41:19 Pagina: 3 - Marco: 3
+2024/06/13 13:41:19 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:19 Termine
+2024/06/13 13:41:19 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:19 Tamaño restante: 6
+2024/06/13 13:41:19 Terminamos al fin
+2024/06/13 13:41:20 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:20 Marcos necesarios: 4
+2024/06/13 13:41:20 Pagina: 0 - Marco: 0
+2024/06/13 13:41:20 Iniciamos
+2024/06/13 13:41:20 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:20 No termine
+2024/06/13 13:41:20 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:20 Tamaño restante: 38
+2024/06/13 13:41:20 Pagina: 1 - Marco: 1
+2024/06/13 13:41:20 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:20 No termine
+2024/06/13 13:41:20 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:20 Tamaño restante: 22
+2024/06/13 13:41:20 Pagina: 2 - Marco: 2
+2024/06/13 13:41:20 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:20 No termine
+2024/06/13 13:41:20 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:20 Tamaño restante: 6
+2024/06/13 13:41:20 Pagina: 3 - Marco: 3
+2024/06/13 13:41:20 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:20 Termine
+2024/06/13 13:41:20 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:20 Tamaño restante: 6
+2024/06/13 13:41:20 Terminamos al fin
+2024/06/13 13:41:20 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:20 Marcos necesarios: 4
+2024/06/13 13:41:20 Pagina: 0 - Marco: 0
+2024/06/13 13:41:20 Iniciamos
+2024/06/13 13:41:20 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:20 No termine
+2024/06/13 13:41:20 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:20 Tamaño restante: 38
+2024/06/13 13:41:20 Pagina: 1 - Marco: 1
+2024/06/13 13:41:20 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:20 No termine
+2024/06/13 13:41:20 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:20 Tamaño restante: 22
+2024/06/13 13:41:20 Pagina: 2 - Marco: 2
+2024/06/13 13:41:20 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:20 No termine
+2024/06/13 13:41:20 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:20 Tamaño restante: 6
+2024/06/13 13:41:20 Pagina: 3 - Marco: 3
+2024/06/13 13:41:20 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:20 Termine
+2024/06/13 13:41:20 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:20 Tamaño restante: 6
+2024/06/13 13:41:20 Terminamos al fin
+2024/06/13 13:41:20 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:20 Marcos necesarios: 4
+2024/06/13 13:41:20 Pagina: 0 - Marco: 0
+2024/06/13 13:41:20 Iniciamos
+2024/06/13 13:41:20 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:20 No termine
+2024/06/13 13:41:20 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:20 Tamaño restante: 38
+2024/06/13 13:41:20 Pagina: 1 - Marco: 1
+2024/06/13 13:41:20 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:20 No termine
+2024/06/13 13:41:20 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:20 Tamaño restante: 22
+2024/06/13 13:41:20 Pagina: 2 - Marco: 2
+2024/06/13 13:41:20 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:20 No termine
+2024/06/13 13:41:20 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:20 Tamaño restante: 6
+2024/06/13 13:41:20 Pagina: 3 - Marco: 3
+2024/06/13 13:41:20 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:20 Termine
+2024/06/13 13:41:20 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:20 Tamaño restante: 6
+2024/06/13 13:41:20 Terminamos al fin
+2024/06/13 13:41:21 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:21 Marcos necesarios: 4
+2024/06/13 13:41:21 Pagina: 0 - Marco: 0
+2024/06/13 13:41:21 Iniciamos
+2024/06/13 13:41:21 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:21 No termine
+2024/06/13 13:41:21 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:21 Tamaño restante: 38
+2024/06/13 13:41:21 Pagina: 1 - Marco: 1
+2024/06/13 13:41:21 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:21 No termine
+2024/06/13 13:41:21 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:21 Tamaño restante: 22
+2024/06/13 13:41:21 Pagina: 2 - Marco: 2
+2024/06/13 13:41:21 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:21 No termine
+2024/06/13 13:41:21 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:21 Tamaño restante: 6
+2024/06/13 13:41:21 Pagina: 3 - Marco: 3
+2024/06/13 13:41:21 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:21 Termine
+2024/06/13 13:41:21 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:21 Tamaño restante: 6
+2024/06/13 13:41:21 Terminamos al fin
+2024/06/13 13:41:21 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:21 Marcos necesarios: 4
+2024/06/13 13:41:21 Pagina: 0 - Marco: 0
+2024/06/13 13:41:21 Iniciamos
+2024/06/13 13:41:21 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:21 No termine
+2024/06/13 13:41:21 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:21 Tamaño restante: 38
+2024/06/13 13:41:21 Pagina: 1 - Marco: 1
+2024/06/13 13:41:21 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:21 No termine
+2024/06/13 13:41:21 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:21 Tamaño restante: 22
+2024/06/13 13:41:21 Pagina: 2 - Marco: 2
+2024/06/13 13:41:21 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:21 No termine
+2024/06/13 13:41:21 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:21 Tamaño restante: 6
+2024/06/13 13:41:21 Pagina: 3 - Marco: 3
+2024/06/13 13:41:21 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:21 Termine
+2024/06/13 13:41:21 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:21 Tamaño restante: 6
+2024/06/13 13:41:21 Terminamos al fin
+2024/06/13 13:41:22 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:22 Marcos necesarios: 4
+2024/06/13 13:41:22 Pagina: 0 - Marco: 0
+2024/06/13 13:41:22 Iniciamos
+2024/06/13 13:41:22 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:22 No termine
+2024/06/13 13:41:22 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:22 Tamaño restante: 38
+2024/06/13 13:41:22 Pagina: 1 - Marco: 1
+2024/06/13 13:41:22 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:22 No termine
+2024/06/13 13:41:22 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:22 Tamaño restante: 22
+2024/06/13 13:41:22 Pagina: 2 - Marco: 2
+2024/06/13 13:41:22 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:22 No termine
+2024/06/13 13:41:22 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:22 Tamaño restante: 6
+2024/06/13 13:41:22 Pagina: 3 - Marco: 3
+2024/06/13 13:41:22 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:22 Termine
+2024/06/13 13:41:22 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:22 Tamaño restante: 6
+2024/06/13 13:41:22 Terminamos al fin
+2024/06/13 13:41:22 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:22 Marcos necesarios: 4
+2024/06/13 13:41:22 Pagina: 0 - Marco: 0
+2024/06/13 13:41:22 Iniciamos
+2024/06/13 13:41:22 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:22 No termine
+2024/06/13 13:41:22 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:22 Tamaño restante: 38
+2024/06/13 13:41:22 Pagina: 1 - Marco: 1
+2024/06/13 13:41:22 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:22 No termine
+2024/06/13 13:41:22 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:22 Tamaño restante: 22
+2024/06/13 13:41:22 Pagina: 2 - Marco: 2
+2024/06/13 13:41:22 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:22 No termine
+2024/06/13 13:41:22 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:22 Tamaño restante: 6
+2024/06/13 13:41:22 Pagina: 3 - Marco: 3
+2024/06/13 13:41:22 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:22 Termine
+2024/06/13 13:41:22 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:22 Tamaño restante: 6
+2024/06/13 13:41:22 Terminamos al fin
+2024/06/13 13:41:23 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:23 Marcos necesarios: 4
+2024/06/13 13:41:23 Pagina: 0 - Marco: 0
+2024/06/13 13:41:23 Iniciamos
+2024/06/13 13:41:23 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:23 No termine
+2024/06/13 13:41:23 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:23 Tamaño restante: 38
+2024/06/13 13:41:23 Pagina: 1 - Marco: 1
+2024/06/13 13:41:23 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:23 No termine
+2024/06/13 13:41:23 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:23 Tamaño restante: 22
+2024/06/13 13:41:23 Pagina: 2 - Marco: 2
+2024/06/13 13:41:23 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:23 No termine
+2024/06/13 13:41:23 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:23 Tamaño restante: 6
+2024/06/13 13:41:23 Pagina: 3 - Marco: 3
+2024/06/13 13:41:23 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:23 Termine
+2024/06/13 13:41:23 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:23 Tamaño restante: 6
+2024/06/13 13:41:23 Terminamos al fin
+2024/06/13 13:41:23 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 54
+2024/06/13 13:41:23 Marcos necesarios: 4
+2024/06/13 13:41:23 Pagina: 0 - Marco: 0
+2024/06/13 13:41:23 Iniciamos
+2024/06/13 13:41:23 Lista copiada: [14 28 59 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:23 No termine
+2024/06/13 13:41:23 Tamaño lectura: 16 - Tamaño total: 16
+2024/06/13 13:41:23 Tamaño restante: 38
+2024/06/13 13:41:23 Pagina: 1 - Marco: 1
+2024/06/13 13:41:23 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:23 No termine
+2024/06/13 13:41:23 Tamaño lectura: 16 - Tamaño total: 32
+2024/06/13 13:41:23 Tamaño restante: 22
+2024/06/13 13:41:23 Pagina: 2 - Marco: 2
+2024/06/13 13:41:23 Lista copiada: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/06/13 13:41:23 No termine
+2024/06/13 13:41:23 Tamaño lectura: 16 - Tamaño total: 48
+2024/06/13 13:41:23 Tamaño restante: 6
+2024/06/13 13:41:23 Pagina: 3 - Marco: 3
+2024/06/13 13:41:23 Lista copiada: [0 0 0 0 0 0]
+2024/06/13 13:41:23 Termine
+2024/06/13 13:41:23 Tamaño lectura: 6 - Tamaño total: 54
+2024/06/13 13:41:23 Tamaño restante: 6
+2024/06/13 13:41:23 Terminamos al fin
+2024/06/13 13:47:30 Conversion: [72 111 108 97 32 32 32 32 32 32 32 32]
+2024/06/13 13:47:30 div: 4
+2024/06/13 13:48:05 PID: 0 - Tamaño: 256
+2024/06/13 13:48:21 0 0
+
+
+
+2024/06/13 13:48:21 256 256
+
+
+
+2024/06/13 13:48:21 hola
+2024/06/13 13:48:21 chau 0
+2024/06/13 13:48:21 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/13 13:48:50 infoBytes: [14 28 59 32 32 32 32 32]
+2024/06/13 13:48:50 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 8
+2024/06/13 13:48:56 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 8
+2024/06/13 13:48:56 Marcos necesarios: 1
+2024/06/13 13:48:56 Pagina: 0 - Marco: 0
+2024/06/13 13:48:56 Iniciamos
+2024/06/13 13:48:56 Lista copiada: [14 28 59 32 32 32 32 32]
+2024/06/13 13:48:56 Termine
+2024/06/13 13:48:56 Tamaño lectura: 8 - Tamaño total: 8
+2024/06/13 13:48:56 Tamaño restante: 8
+2024/06/13 13:48:56 Terminamos al fin
+2024/06/13 13:50:29 infoBytes: [72 111 108 97 32 32 32 32 32 32 32 32]
+2024/06/13 13:50:29 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 12
+2024/06/13 13:50:33 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 12
+2024/06/13 13:50:33 Marcos necesarios: 1
+2024/06/13 13:50:33 Pagina: 0 - Marco: 0
+2024/06/13 13:50:33 Iniciamos
+2024/06/13 13:50:33 Lista copiada: [72 111 108 97 32 32 32 32 32 32 32 32]
+2024/06/13 13:50:33 Termine
+2024/06/13 13:50:33 Tamaño lectura: 12 - Tamaño total: 12
+2024/06/13 13:50:33 Tamaño restante: 12
+2024/06/13 13:50:33 Terminamos al fin
+2024/06/13 13:55:10 PID: 0 - Tamaño: 256
+2024/06/13 13:55:20 0 0
+
+
+
+2024/06/13 13:55:20 256 256
+
+
+
+2024/06/13 13:55:20 hola
+2024/06/13 13:55:20 chau 0
+2024/06/13 13:55:20 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/13 13:55:32 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 12
+2024/06/13 13:55:55 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 12
+2024/06/13 13:55:55 Lista copiada: [72 111 108 97 32 32 32 32 32 32 32 32]
+2024/06/13 13:55:55 Mensaje: Hola        
+2024/06/13 14:07:31 PID: 0 - Tamaño: 256
+2024/06/13 14:07:44 0 0
+
+
+
+2024/06/13 14:07:44 256 256
+
+
+
+2024/06/13 14:07:44 hola
+2024/06/13 14:07:44 chau 0
+2024/06/13 14:07:44 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256

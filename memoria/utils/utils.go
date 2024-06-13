@@ -7,8 +7,10 @@ import (
 	"memoria/globals"
 	"net/http"
 	"os"
+	"slices"
 	"strconv"
 	"strings"
+	"time"
 )
 
 var memoria []byte
@@ -51,7 +53,6 @@ func InicializarMemoriaYTablas() {
 	contadorPID = 0
 	memoria = make([]byte, globals.ClientConfig.MemorySize)
 	bitArray = make([]int, globals.ClientConfig.MemorySize/globals.ClientConfig.PageSize)
-	//tablaPaginas = make(map[int]int)
 }
 
 func readFile(fileName string) []string {
@@ -71,6 +72,7 @@ func readFile(fileName string) []string {
 }
 
 func BuscarMarco(w http.ResponseWriter, r *http.Request) {
+	delayMemoria()
 	pid := r.PathValue("pid")
 	pagina := r.PathValue("pagina")
 
@@ -119,6 +121,7 @@ func BuscarMarco(w http.ResponseWriter, r *http.Request) {
 }
 
 func ReservarMemoria(w http.ResponseWriter, r *http.Request) {
+	delayMemoria()
 	pid := r.PathValue("pid")
 	tam := r.PathValue("tamaño")
 
@@ -137,6 +140,9 @@ func ReservarMemoria(w http.ResponseWriter, r *http.Request) {
 	}
 
 	cantidadPaginas := tamaño / globals.ClientConfig.PageSize //Se asume que la instruccion RESIZE pasa un valor divisible por el tamaño de las paginas
+	if tamaño%globals.ClientConfig.PageSize != 0 {
+		cantidadPaginas++
+	}
 
 	var tablaPaginas map[int]int
 	log.Printf("hola")
@@ -192,6 +198,7 @@ func obtenerMarcoLibre() int {
 }
 
 func CrearProceso(w http.ResponseWriter, r *http.Request) {
+	delayMemoria()
 	var request BodyRequest
 
 	err := json.NewDecoder(r.Body).Decode(&request)
@@ -214,6 +221,7 @@ func CrearProceso(w http.ResponseWriter, r *http.Request) {
 }
 
 func DevolverInstruccion(w http.ResponseWriter, r *http.Request) {
+	delayMemoria()
 	pid := r.PathValue("pid")
 	pc := r.PathValue("pc")
 
@@ -248,6 +256,7 @@ func DevolverInstruccion(w http.ResponseWriter, r *http.Request) {
 }
 
 func LiberarRecursos(w http.ResponseWriter, r *http.Request) {
+	delayMemoria()
 	pid := r.PathValue("pid")
 
 	pidInt, err := strconv.Atoi(pid)
@@ -291,12 +300,13 @@ func removerIndexMap(s []map[int]int, index int) []map[int]int {
 
 type BodyEscritura struct {
 	PID       int    `json:"pid"`
-	Info      string `json:"info"`
+	Info      []byte `json:"info"`
 	Tamaño    int    `json:"tamaño"`
 	Direccion int    `json:"direccion"`
 }
 
 func EscribirMemoria(w http.ResponseWriter, r *http.Request) {
+	delayMemoria()
 	var request BodyEscritura
 
 	err := json.NewDecoder(r.Body).Decode(&request)
@@ -305,13 +315,14 @@ func EscribirMemoria(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	marco := int(request.Direccion / globals.ClientConfig.PageSize)
+	marco := request.Direccion / globals.ClientConfig.PageSize
 	desplazamiento := request.Direccion % globals.ClientConfig.PageSize
-	infoBytes := []byte(request.Info)
+	infoBytes := make([]byte, request.Tamaño)
+	copy(infoBytes[0:len(request.Info)], request.Info)
 
 	log.Printf("PID: %d - Accion: Escribir - Direccion fisica: %d - Tamaño a escribir: %d", request.PID, request.Direccion, request.Tamaño)
 
-	contador := len(infoBytes)
+	contador := request.Tamaño
 	marcosNecesarios := 0
 	desplazamientoTemp := desplazamiento
 	for contador > 0 {
@@ -344,12 +355,13 @@ func EscribirMemoria(w http.ResponseWriter, r *http.Request) {
 	index := obtenerIndexProceso(request.PID)
 	inicio := false
 	fin := false
+	tablaProceso := tablasPaginasProcesos[index]
 	marcosModificados := 0
-	for key, value := range tablasPaginasProcesos[index] {
-		if value == marco {
+	for pagina := 0; pagina < len(tablaProceso); pagina++ {
+		if tablaProceso[pagina] == marco {
 			inicio = true
 			// Interpreto que la info se carga en paginas contiguas y que no vuelvo a la primera pagina si llego a la ultima
-			if len(tablasPaginasProcesos[index])-key < marcosNecesarios {
+			if len(tablaProceso)-pagina < marcosNecesarios {
 				http.Error(w, "Error: no hay suficientes paginas contiguas", http.StatusInternalServerError)
 
 				respuesta, err := json.Marshal("Error: Out of Memory")
@@ -364,7 +376,7 @@ func EscribirMemoria(w http.ResponseWriter, r *http.Request) {
 			}
 		}
 		if inicio {
-			llenarPagina(value, desplazamiento, infoBytesArray[marcosModificados])
+			llenarPagina(tablaProceso[pagina], desplazamiento, infoBytesArray[marcosModificados])
 			marcosModificados++
 			desplazamiento = 0
 			if marcosModificados == len(infoBytesArray) {
@@ -387,6 +399,7 @@ func EscribirMemoria(w http.ResponseWriter, r *http.Request) {
 }
 
 func LeerMemoria(w http.ResponseWriter, r *http.Request) {
+	delayMemoria()
 	var request BodyEscritura
 
 	err := json.NewDecoder(r.Body).Decode(&request)
@@ -395,11 +408,11 @@ func LeerMemoria(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	marco := int(request.Direccion / globals.ClientConfig.PageSize)
+	marco := request.Direccion / globals.ClientConfig.PageSize
 	desplazamiento := request.Direccion % globals.ClientConfig.PageSize
 	infoBytes := make([]byte, 0, request.Tamaño)
 
-	log.Printf("PID: %d - Accion: Leer - Direccion fisica: %d - Tamaño a escribir: %d", request.PID, request.Direccion, request.Tamaño)
+	log.Printf("PID: %d - Accion: Leer - Direccion fisica: %d - Tamaño a leer: %d", request.PID, request.Direccion, request.Tamaño)
 
 	contador := request.Tamaño
 	marcosNecesarios := 0
@@ -419,12 +432,13 @@ func LeerMemoria(w http.ResponseWriter, r *http.Request) {
 	fin := false
 	tamañoRestante := request.Tamaño
 	var listaBytes []byte
+	tablaProceso := tablasPaginasProcesos[index]
 
-	for key, value := range tablasPaginasProcesos[index] {
-		if value == marco {
+	for pagina := 0; pagina < len(tablaProceso); pagina++ {
+		if tablaProceso[pagina] == marco {
 			inicio = true
 			// Interpreto que la info se carga en paginas contiguas y que no vuelvo a la primera pagina si llego a la ultima
-			if len(tablasPaginasProcesos[index])-key < marcosNecesarios {
+			if len(tablaProceso)-pagina < marcosNecesarios {
 				http.Error(w, "Error: no hay suficientes paginas contiguas", http.StatusInternalServerError)
 
 				respuesta, err := json.Marshal("Error: Out of Memory")
@@ -440,25 +454,21 @@ func LeerMemoria(w http.ResponseWriter, r *http.Request) {
 		}
 		if inicio {
 			if tamañoRestante < globals.ClientConfig.PageSize-desplazamiento {
-				listaBytes = leerPagina(value, desplazamiento, tamañoRestante)
+				listaBytes = leerPagina(tablaProceso[pagina], desplazamiento, tamañoRestante)
 				fin = true
 			} else {
-				listaBytes = leerPagina(value, desplazamiento, globals.ClientConfig.PageSize-desplazamiento)
+				listaBytes = leerPagina(tablaProceso[pagina], desplazamiento, globals.ClientConfig.PageSize-desplazamiento)
 				tamañoRestante = tamañoRestante - (globals.ClientConfig.PageSize - desplazamiento)
 				desplazamiento = 0
 			}
-			infoBytes = append(infoBytes, listaBytes...)
+			infoBytes = slices.Concat(infoBytes, listaBytes)
 		}
 		if fin {
 			break
 		}
 	}
 
-	mensaje := string(infoBytes)
-
-	log.Print(mensaje)
-
-	respuesta, err := json.Marshal(mensaje)
+	respuesta, err := json.Marshal(infoBytes)
 	if err != nil {
 		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
 		return
@@ -490,12 +500,18 @@ func obtenerIndexProceso(pid int) int {
 }
 
 func PageSize(w http.ResponseWriter, r *http.Request) {
+	delayMemoria()
 	log.Printf("aa %d", globals.ClientConfig.PageSize)
 	respuesta, err := json.Marshal(globals.ClientConfig.PageSize)
 	if err != nil {
 		http.Error(w, "Error al codificar el tamaño de la página como JSON", http.StatusInternalServerError)
 		return
 	}
+
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
+}
+
+func delayMemoria() { //Retardo memoria ante cada peticion
+	time.Sleep(time.Duration(globals.ClientConfig.DelayResponse) * time.Millisecond)
 }
