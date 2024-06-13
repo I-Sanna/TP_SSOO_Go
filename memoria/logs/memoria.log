@@ -13378,3 +13378,285 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/06/13 14:07:44 hola
 2024/06/13 14:07:44 chau 0
 2024/06/13 14:07:44 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/13 21:24:49 PID: 0 - Tamaño: 256
+2024/06/13 21:24:54 0 0
+
+
+
+2024/06/13 21:24:54 256 256
+
+
+
+2024/06/13 21:24:54 hola
+2024/06/13 21:24:54 chau 0
+2024/06/13 21:24:54 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/13 21:24:56 aa 16
+2024/06/13 21:24:57 PID: 0 - Pagina: 0 - Marco: 0
+2024/06/13 21:24:58 PID: 0 - Accion: Escribir - Direccion fisica: 15 - Tamaño a escribir: 4
+2024/06/13 21:25:00 aa 16
+2024/06/13 21:25:01 PID: 0 - Pagina: 0 - Marco: 0
+2024/06/13 21:25:02 PID: 0 - Accion: Leer - Direccion fisica: 15 - Tamaño a leer: 4
+2024/06/13 21:25:04 aa 16
+2024/06/13 21:25:05 PID: 0 - Pagina: 0 - Marco: 0
+2024/06/13 21:25:06 PID: 0 - Accion: Escribir - Direccion fisica: 15 - Tamaño a escribir: 4
+2024/06/13 21:25:08 aa 16
+2024/06/13 21:25:09 PID: 0 - Pagina: 0 - Marco: 0
+2024/06/13 21:25:10 PID: 0 - Accion: Leer - Direccion fisica: 15 - Tamaño a leer: 4
+2024/06/13 21:27:40 PID: 1 - Tamaño: 256
+2024/06/13 21:27:45 1 1
+
+
+
+2024/06/13 21:27:45 256 256
+
+
+
+2024/06/13 21:27:45 hola
+2024/06/13 21:27:45 chau 0
+2024/06/13 21:27:45 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/13 21:27:47 aa 16
+2024/06/13 21:27:48 PID: 1 - Pagina: 0 - Marco: 0
+2024/06/13 21:27:49 PID: 1 - Accion: Escribir - Direccion fisica: 15 - Tamaño a escribir: 4
+2024/06/13 21:27:51 aa 16
+2024/06/13 21:27:52 PID: 1 - Pagina: 0 - Marco: 0
+2024/06/13 21:27:53 PID: 1 - Accion: Leer - Direccion fisica: 15 - Tamaño a leer: 4
+2024/06/13 21:27:55 aa 16
+2024/06/13 21:27:56 PID: 1 - Pagina: 0 - Marco: 0
+2024/06/13 21:27:57 PID: 1 - Accion: Escribir - Direccion fisica: 15 - Tamaño a escribir: 4
+2024/06/13 21:27:59 aa 16
+2024/06/13 21:28:00 PID: 1 - Pagina: 0 - Marco: 0
+2024/06/13 21:28:01 PID: 1 - Accion: Leer - Direccion fisica: 15 - Tamaño a leer: 4
+2024/06/13 21:31:05 PID: 2 - Tamaño: 256
+2024/06/13 21:31:10 2 2
+
+
+
+2024/06/13 21:31:10 256 256
+
+
+
+2024/06/13 21:31:10 hola
+2024/06/13 21:31:10 chau 0
+2024/06/13 21:31:10 PID: 2 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/13 21:31:12 aa 16
+2024/06/13 21:31:13 PID: 2 - Pagina: 0 - Marco: 0
+2024/06/13 21:31:14 PID: 2 - Accion: Escribir - Direccion fisica: 15 - Tamaño a escribir: 4
+2024/06/13 21:31:16 aa 16
+2024/06/13 21:31:17 PID: 2 - Pagina: 0 - Marco: 0
+2024/06/13 21:31:18 PID: 2 - Accion: Leer - Direccion fisica: 15 - Tamaño a leer: 4
+2024/06/13 21:31:20 aa 16
+2024/06/13 21:31:21 PID: 2 - Pagina: 0 - Marco: 0
+2024/06/13 21:31:22 PID: 2 - Accion: Escribir - Direccion fisica: 15 - Tamaño a escribir: 4
+2024/06/13 21:31:24 aa 16
+2024/06/13 21:31:25 PID: 2 - Pagina: 0 - Marco: 0
+2024/06/13 21:31:26 PID: 2 - Accion: Leer - Direccion fisica: 15 - Tamaño a leer: 4
+2024/06/13 21:36:24 PID: 3 - Tamaño: 256
+2024/06/13 21:36:29 3 3
+
+
+
+2024/06/13 21:36:29 256 256
+
+
+
+2024/06/13 21:36:29 hola
+2024/06/13 21:36:29 chau 0
+2024/06/13 21:36:29 PID: 3 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/13 21:36:31 aa 16
+2024/06/13 21:36:32 PID: 3 - Pagina: 0 - Marco: 0
+2024/06/13 21:36:33 PID: 3 - Accion: Escribir - Direccion fisica: 15 - Tamaño a escribir: 4
+2024/06/13 21:36:35 aa 16
+2024/06/13 21:36:36 PID: 3 - Pagina: 0 - Marco: 0
+2024/06/13 21:36:37 PID: 3 - Accion: Leer - Direccion fisica: 15 - Tamaño a leer: 4
+2024/06/13 21:36:39 aa 16
+2024/06/13 21:36:40 PID: 3 - Pagina: 0 - Marco: 0
+2024/06/13 21:36:41 PID: 3 - Accion: Escribir - Direccion fisica: 15 - Tamaño a escribir: 4
+2024/06/13 21:36:43 aa 16
+2024/06/13 21:36:44 PID: 3 - Pagina: 0 - Marco: 0
+2024/06/13 21:36:45 PID: 3 - Accion: Leer - Direccion fisica: 15 - Tamaño a leer: 4
+2024/06/13 21:38:32 PID: 4 - Tamaño: 256
+2024/06/13 21:38:46 PID: 5 - Tamaño: 256
+2024/06/13 21:38:51 0 0
+
+
+
+2024/06/13 21:38:51 256 256
+
+
+
+2024/06/13 21:38:51 hola
+2024/06/13 21:38:51 chau -1
+2024/06/13 21:38:51 http: panic serving 127.0.0.1:39374: runtime error: index out of range [-1]
+goroutine 124 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x69ffc0?, 0xc00001b1e8?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.ReservarMemoria({0x734f80, 0xc00011e2a0}, 0xc000120000)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:151 +0xa5b
+net/http.HandlerFunc.ServeHTTP(0xc000088ea0?, {0x734f80?, 0xc00011e2a0?}, 0x63001a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x734f80, 0xc00011e2a0}, 0xc000120000)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00011c180?}, {0x734f80?, 0xc00011e2a0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000115320, {0x7354e8, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/13 21:38:52 0 0
+
+
+
+2024/06/13 21:38:52 256 256
+
+
+
+2024/06/13 21:38:52 hola
+2024/06/13 21:38:52 chau -1
+2024/06/13 21:38:52 http: panic serving 127.0.0.1:47002: runtime error: index out of range [-1]
+goroutine 130 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x69ffc0?, 0xc00001b218?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.ReservarMemoria({0x734f80, 0xc00011e380}, 0xc000120120)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:151 +0xa5b
+net/http.HandlerFunc.ServeHTTP(0xc000088ea0?, {0x734f80?, 0xc00011e380?}, 0x63001a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x734f80, 0xc00011e380}, 0xc000120120)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00011c540?}, {0x734f80?, 0xc00011e380?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000115710, {0x7354e8, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/13 21:38:54 aa 16
+2024/06/13 21:38:55 PID: 0 - Pagina: 0 - Marco: 0
+2024/06/13 21:38:56 PID: 0 - Accion: Escribir - Direccion fisica: 15 - Tamaño a escribir: 4
+2024/06/13 21:38:56 http: panic serving 127.0.0.1:47012: runtime error: index out of range [-1]
+goroutine 132 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x69ffc0?, 0xc00001b2f0?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.EscribirMemoria({0x734f80, 0xc00011e700}, 0xc0001205a0)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:358 +0xad8
+net/http.HandlerFunc.ServeHTTP(0xc000088ea0?, {0x734f80?, 0xc00011e700?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x734f80, 0xc00011e700}, 0xc0001205a0)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x734210?}, {0x734f80?, 0xc00011e700?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0001158c0, {0x7354e8, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/13 21:38:58 aa 16
+2024/06/13 21:38:59 PID: 0 - Pagina: 0 - Marco: 0
+2024/06/13 21:39:00 PID: 0 - Accion: Leer - Direccion fisica: 15 - Tamaño a leer: 4
+2024/06/13 21:39:00 http: panic serving 127.0.0.1:47024: runtime error: index out of range [-1]
+goroutine 137 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x69ffc0?, 0xc00001b3c8?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.LeerMemoria({0x734f80, 0xc00011ea80}, 0xc000120a20)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:435 +0xabc
+net/http.HandlerFunc.ServeHTTP(0xc000088ea0?, {0x734f80?, 0xc00011ea80?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x734f80, 0xc00011ea80}, 0xc000120a20)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x734210?}, {0x734f80?, 0xc00011ea80?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000115c20, {0x7354e8, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/13 21:39:01 http: panic serving 127.0.0.1:39372: runtime error: slice bounds out of range [:-1]
+goroutine 122 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x69ffc0?, 0xc00001b3e0?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.removerIndexInt(...)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:285
+memoria/utils.LiberarRecursos({0x734f80, 0xc00011eb60}, 0xc000120b40)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:269 +0x7eb
+net/http.HandlerFunc.ServeHTTP(0xc000088ea0?, {0x734f80?, 0xc00011eb60?}, 0x63001a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x734f80, 0xc00011eb60}, 0xc000120b40)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000109f50?}, {0x734f80?, 0xc00011eb60?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0001150e0, {0x7354e8, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/13 21:39:23 PID: 0 - Tamaño: 256
+2024/06/13 21:39:28 0 0
+
+
+
+2024/06/13 21:39:28 256 256
+
+
+
+2024/06/13 21:39:28 hola
+2024/06/13 21:39:28 chau 0
+2024/06/13 21:39:28 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/13 21:39:30 aa 16
+2024/06/13 21:39:31 PID: 0 - Pagina: 0 - Marco: 0
+2024/06/13 21:39:32 PID: 0 - Accion: Escribir - Direccion fisica: 15 - Tamaño a escribir: 4
+2024/06/13 21:39:34 aa 16
+2024/06/13 21:39:35 PID: 0 - Pagina: 0 - Marco: 0
+2024/06/13 21:39:36 PID: 0 - Accion: Leer - Direccion fisica: 15 - Tamaño a leer: 4
+2024/06/13 21:39:38 aa 16
+2024/06/13 21:39:39 PID: 0 - Pagina: 0 - Marco: 0
+2024/06/13 21:39:40 PID: 0 - Accion: Escribir - Direccion fisica: 15 - Tamaño a escribir: 4
+2024/06/13 21:39:42 aa 16
+2024/06/13 21:39:43 PID: 0 - Pagina: 0 - Marco: 0
+2024/06/13 21:39:44 PID: 0 - Accion: Leer - Direccion fisica: 15 - Tamaño a leer: 4
+2024/06/13 21:49:56 PID: 1 - Tamaño: 256
+2024/06/13 21:50:01 1 1
+
+
+
+2024/06/13 21:50:01 256 256
+
+
+
+2024/06/13 21:50:01 hola
+2024/06/13 21:50:01 chau 0
+2024/06/13 21:50:01 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/13 21:50:03 aa 16
+2024/06/13 21:50:04 PID: 1 - Pagina: 0 - Marco: 0
+2024/06/13 21:50:05 PID: 1 - Accion: Escribir - Direccion fisica: 15 - Tamaño a escribir: 4
+2024/06/13 21:50:07 aa 16
+2024/06/13 21:50:08 PID: 1 - Accion: Leer - Direccion fisica: 15 - Tamaño a leer: 4
+2024/06/13 21:50:10 aa 16
+2024/06/13 21:50:11 PID: 1 - Accion: Escribir - Direccion fisica: 15 - Tamaño a escribir: 4
+2024/06/13 21:50:13 aa 16
+2024/06/13 21:50:14 PID: 1 - Accion: Leer - Direccion fisica: 15 - Tamaño a leer: 4
+2024/06/13 21:50:46 PID: 2 - Tamaño: 256
+2024/06/13 21:50:51 2 2
+
+
+
+2024/06/13 21:50:51 256 256
+
+
+
+2024/06/13 21:50:51 hola
+2024/06/13 21:50:51 chau 0
+2024/06/13 21:50:51 PID: 2 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/13 21:50:53 aa 16
+2024/06/13 21:50:54 PID: 2 - Pagina: 0 - Marco: 0
+2024/06/13 21:50:55 PID: 2 - Accion: Escribir - Direccion fisica: 15 - Tamaño a escribir: 4
+2024/06/13 21:50:57 aa 16
+2024/06/13 21:50:58 PID: 2 - Accion: Leer - Direccion fisica: 15 - Tamaño a leer: 4
+2024/06/13 21:51:00 aa 16
+2024/06/13 21:51:01 PID: 2 - Accion: Escribir - Direccion fisica: 15 - Tamaño a escribir: 4
+2024/06/13 21:51:03 aa 16
+2024/06/13 21:51:04 PID: 2 - Accion: Leer - Direccion fisica: 15 - Tamaño a leer: 4

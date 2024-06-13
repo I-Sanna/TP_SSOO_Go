@@ -7253,3 +7253,375 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/06/13 14:07:39 PID: 8 - Ejecutando: SUM - AX,BX
 2024/06/13 14:07:39 PID: 8 - FETCH - Program Counter: 11
 2024/06/13 14:07:40 PID: 8 - Ejecutando: IO_GEN_SLEEP - Mouse,2000000
+2024/06/13 21:24:27 Inicializando TLB con 32 entradas
+2024/06/13 21:24:49 PID: 0 - FETCH - Program Counter: 0
+2024/06/13 21:24:50 PID: 0 - Ejecutando: SET - AX,1
+2024/06/13 21:24:50 PID: 0 - FETCH - Program Counter: 1
+2024/06/13 21:24:51 PID: 0 - Ejecutando: SET - ECX,36000
+2024/06/13 21:24:51 PID: 0 - FETCH - Program Counter: 2
+2024/06/13 21:24:52 PID: 0 - Ejecutando: SET - EDX,15
+2024/06/13 21:24:52 PID: 0 - FETCH - Program Counter: 3
+2024/06/13 21:24:53 PID: 0 - Ejecutando: RESIZE - 256
+2024/06/13 21:24:54 PID: 0 - FETCH - Program Counter: 4
+2024/06/13 21:24:55 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/13 21:24:56 Tamaño pagina: 16
+2024/06/13 21:24:56 Num pagina: 0
+2024/06/13 21:24:56 Desplazamiento: 15
+2024/06/13 21:24:56 PID: 0 - TLB MISS - Pagina: 0
+2024/06/13 21:24:57 direccion fisica 0
+2024/06/13 21:24:57 Body: {0 [160 140 0 0] 4 15}
+2024/06/13 21:24:58 PID: 0 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: ��  
+2024/06/13 21:24:58 PID: 0 - FETCH - Program Counter: 5
+2024/06/13 21:24:59 PID: 0 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/13 21:25:00 Tamaño pagina: 16
+2024/06/13 21:25:00 Num pagina: 0
+2024/06/13 21:25:00 Desplazamiento: 15
+2024/06/13 21:25:00 PID: 0 - TLB MISS - Pagina: 0
+2024/06/13 21:25:01 direccion fisica 0
+2024/06/13 21:25:02 Resultado leído de la memoria: '��  '
+2024/06/13 21:25:02 PID: 0 - Acción: LEER - Dirección Física: 15 - Valor: ��  
+2024/06/13 21:25:02 PID: 0 - FETCH - Program Counter: 6
+2024/06/13 21:25:03 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/13 21:25:04 Tamaño pagina: 16
+2024/06/13 21:25:04 Num pagina: 0
+2024/06/13 21:25:04 Desplazamiento: 15
+2024/06/13 21:25:04 PID: 0 - TLB MISS - Pagina: 0
+2024/06/13 21:25:05 direccion fisica 0
+2024/06/13 21:25:05 Body: {0 [160 140 0 0] 4 15}
+2024/06/13 21:25:06 PID: 0 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: ��  
+2024/06/13 21:25:06 PID: 0 - FETCH - Program Counter: 7
+2024/06/13 21:25:07 PID: 0 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/13 21:25:08 Tamaño pagina: 16
+2024/06/13 21:25:08 Num pagina: 0
+2024/06/13 21:25:08 Desplazamiento: 15
+2024/06/13 21:25:08 PID: 0 - TLB MISS - Pagina: 0
+2024/06/13 21:25:09 direccion fisica 0
+2024/06/13 21:25:10 Resultado leído de la memoria: '��  '
+2024/06/13 21:25:10 PID: 0 - Acción: LEER - Dirección Física: 15 - Valor: ��  
+2024/06/13 21:25:10 PID: 0 - FETCH - Program Counter: 8
+2024/06/13 21:25:11 PID: 0 - Ejecutando: EXIT
+2024/06/13 21:27:36 Inicializando TLB con 32 entradas
+2024/06/13 21:27:40 PID: 1 - FETCH - Program Counter: 0
+2024/06/13 21:27:41 PID: 1 - Ejecutando: SET - AX,1
+2024/06/13 21:27:41 PID: 1 - FETCH - Program Counter: 1
+2024/06/13 21:27:42 PID: 1 - Ejecutando: SET - ECX,36000
+2024/06/13 21:27:42 PID: 1 - FETCH - Program Counter: 2
+2024/06/13 21:27:43 PID: 1 - Ejecutando: SET - EDX,15
+2024/06/13 21:27:43 PID: 1 - FETCH - Program Counter: 3
+2024/06/13 21:27:44 PID: 1 - Ejecutando: RESIZE - 256
+2024/06/13 21:27:45 PID: 1 - FETCH - Program Counter: 4
+2024/06/13 21:27:46 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/13 21:27:47 Tamaño pagina: 16
+2024/06/13 21:27:47 Num pagina: 0
+2024/06/13 21:27:47 Desplazamiento: 15
+2024/06/13 21:27:47 PID: 1 - TLB MISS - Pagina: 0
+2024/06/13 21:27:48 direccion fisica 0
+2024/06/13 21:27:48 Valor a escribir en memoria: [160 140 0 0]
+2024/06/13 21:27:48 Body: {1 [160 140 0 0] 4 15}
+2024/06/13 21:27:49 PID: 1 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: ��  
+2024/06/13 21:27:49 PID: 1 - FETCH - Program Counter: 5
+2024/06/13 21:27:50 PID: 1 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/13 21:27:51 Tamaño pagina: 16
+2024/06/13 21:27:51 Num pagina: 0
+2024/06/13 21:27:51 Desplazamiento: 15
+2024/06/13 21:27:51 PID: 1 - TLB MISS - Pagina: 0
+2024/06/13 21:27:52 direccion fisica 0
+2024/06/13 21:27:52 Bytes recibidos antes de decodificar: {"pid":1,"info":null,"tamaño":4,"direccion":15}
+2024/06/13 21:27:53 Resultado leído de la memoria: '��  '
+2024/06/13 21:27:53 PID: 1 - Acción: LEER - Dirección Física: 15 - Valor: ��  
+2024/06/13 21:27:53 Bytes leídos de memoria: [160 140 0 0]
+2024/06/13 21:27:53 PID: 1 - FETCH - Program Counter: 6
+2024/06/13 21:27:54 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/13 21:27:55 Tamaño pagina: 16
+2024/06/13 21:27:55 Num pagina: 0
+2024/06/13 21:27:55 Desplazamiento: 15
+2024/06/13 21:27:55 PID: 1 - TLB MISS - Pagina: 0
+2024/06/13 21:27:56 direccion fisica 0
+2024/06/13 21:27:56 Valor a escribir en memoria: [160 140 0 0]
+2024/06/13 21:27:56 Body: {1 [160 140 0 0] 4 15}
+2024/06/13 21:27:57 PID: 1 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: ��  
+2024/06/13 21:27:57 PID: 1 - FETCH - Program Counter: 7
+2024/06/13 21:27:58 PID: 1 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/13 21:27:59 Tamaño pagina: 16
+2024/06/13 21:27:59 Num pagina: 0
+2024/06/13 21:27:59 Desplazamiento: 15
+2024/06/13 21:27:59 PID: 1 - TLB MISS - Pagina: 0
+2024/06/13 21:28:00 direccion fisica 0
+2024/06/13 21:28:00 Bytes recibidos antes de decodificar: {"pid":1,"info":null,"tamaño":4,"direccion":15}
+2024/06/13 21:28:01 Resultado leído de la memoria: '��  '
+2024/06/13 21:28:01 PID: 1 - Acción: LEER - Dirección Física: 15 - Valor: ��  
+2024/06/13 21:28:01 Bytes leídos de memoria: [160 140 0 0]
+2024/06/13 21:28:01 PID: 1 - FETCH - Program Counter: 8
+2024/06/13 21:28:02 PID: 1 - Ejecutando: EXIT
+2024/06/13 21:31:02 Inicializando TLB con 32 entradas
+2024/06/13 21:31:05 PID: 2 - FETCH - Program Counter: 0
+2024/06/13 21:31:06 PID: 2 - Ejecutando: SET - AX,1
+2024/06/13 21:31:06 PID: 2 - FETCH - Program Counter: 1
+2024/06/13 21:31:07 PID: 2 - Ejecutando: SET - ECX,36000
+2024/06/13 21:31:07 PID: 2 - FETCH - Program Counter: 2
+2024/06/13 21:31:08 PID: 2 - Ejecutando: SET - EDX,15
+2024/06/13 21:31:08 PID: 2 - FETCH - Program Counter: 3
+2024/06/13 21:31:09 PID: 2 - Ejecutando: RESIZE - 256
+2024/06/13 21:31:10 PID: 2 - FETCH - Program Counter: 4
+2024/06/13 21:31:11 PID: 2 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/13 21:31:12 Tamaño pagina: 16
+2024/06/13 21:31:12 Num pagina: 0
+2024/06/13 21:31:12 Desplazamiento: 15
+2024/06/13 21:31:12 PID: 2 - TLB MISS - Pagina: 0
+2024/06/13 21:31:13 direccion fisica 0
+2024/06/13 21:31:13 Valor a escribir en memoria: [160 140 0 0]
+2024/06/13 21:31:13 Body: {2 [160 140 0 0] 4 15}
+2024/06/13 21:31:14 PID: 2 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: ��  
+2024/06/13 21:31:14 PID: 2 - FETCH - Program Counter: 5
+2024/06/13 21:31:15 PID: 2 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/13 21:31:16 Tamaño pagina: 16
+2024/06/13 21:31:16 Num pagina: 0
+2024/06/13 21:31:16 Desplazamiento: 15
+2024/06/13 21:31:16 PID: 2 - TLB MISS - Pagina: 0
+2024/06/13 21:31:17 direccion fisica 0
+2024/06/13 21:31:17 Bytes recibidos antes de decodificar: {"pid":2,"info":null,"tamaño":4,"direccion":15}
+2024/06/13 21:31:18 Resultado leído de la memoria: '��  '
+2024/06/13 21:31:18 PID: 2 - Acción: LEER - Dirección Física: 15 - Valor: ��  
+2024/06/13 21:31:18 Valor leído de memoria (uint32): 36000
+2024/06/13 21:31:18 PID: 2 - FETCH - Program Counter: 6
+2024/06/13 21:31:19 PID: 2 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/13 21:31:20 Tamaño pagina: 16
+2024/06/13 21:31:20 Num pagina: 0
+2024/06/13 21:31:20 Desplazamiento: 15
+2024/06/13 21:31:20 PID: 2 - TLB MISS - Pagina: 0
+2024/06/13 21:31:21 direccion fisica 0
+2024/06/13 21:31:21 Valor a escribir en memoria: [160 140 0 0]
+2024/06/13 21:31:21 Body: {2 [160 140 0 0] 4 15}
+2024/06/13 21:31:22 PID: 2 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: ��  
+2024/06/13 21:31:22 PID: 2 - FETCH - Program Counter: 7
+2024/06/13 21:31:23 PID: 2 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/13 21:31:24 Tamaño pagina: 16
+2024/06/13 21:31:24 Num pagina: 0
+2024/06/13 21:31:24 Desplazamiento: 15
+2024/06/13 21:31:24 PID: 2 - TLB MISS - Pagina: 0
+2024/06/13 21:31:25 direccion fisica 0
+2024/06/13 21:31:25 Bytes recibidos antes de decodificar: {"pid":2,"info":null,"tamaño":4,"direccion":15}
+2024/06/13 21:31:26 Resultado leído de la memoria: '��  '
+2024/06/13 21:31:26 PID: 2 - Acción: LEER - Dirección Física: 15 - Valor: ��  
+2024/06/13 21:31:26 Valor leído de memoria (uint32): 36000
+2024/06/13 21:31:26 PID: 2 - FETCH - Program Counter: 8
+2024/06/13 21:31:27 PID: 2 - Ejecutando: EXIT
+2024/06/13 21:36:19 Inicializando TLB con 32 entradas
+2024/06/13 21:36:24 PID: 3 - FETCH - Program Counter: 0
+2024/06/13 21:36:25 PID: 3 - Ejecutando: SET - AX,1
+2024/06/13 21:36:25 PID: 3 - FETCH - Program Counter: 1
+2024/06/13 21:36:26 PID: 3 - Ejecutando: SET - ECX,36000
+2024/06/13 21:36:26 PID: 3 - FETCH - Program Counter: 2
+2024/06/13 21:36:27 PID: 3 - Ejecutando: SET - EDX,15
+2024/06/13 21:36:27 PID: 3 - FETCH - Program Counter: 3
+2024/06/13 21:36:28 PID: 3 - Ejecutando: RESIZE - 256
+2024/06/13 21:36:29 PID: 3 - FETCH - Program Counter: 4
+2024/06/13 21:36:30 PID: 3 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/13 21:36:31 Tamaño pagina: 16
+2024/06/13 21:36:31 Num pagina: 0
+2024/06/13 21:36:31 Desplazamiento: 15
+2024/06/13 21:36:31 PID: 3 - TLB MISS - Pagina: 0
+2024/06/13 21:36:32 direccion fisica 0
+2024/06/13 21:36:32 Valor a escribir en memoria: [160 140 0 0]
+2024/06/13 21:36:32 Body: {3 [160 140 0 0] 4 15}
+2024/06/13 21:36:33 PID: 3 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: ��  
+2024/06/13 21:36:33 PID: 3 - FETCH - Program Counter: 5
+2024/06/13 21:36:34 PID: 3 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/13 21:36:35 Tamaño pagina: 16
+2024/06/13 21:36:35 Num pagina: 0
+2024/06/13 21:36:35 Desplazamiento: 15
+2024/06/13 21:36:35 PID: 3 - TLB MISS - Pagina: 0
+2024/06/13 21:36:36 direccion fisica 0
+2024/06/13 21:36:36 Bytes recibidos antes de decodificar: {"pid":3,"info":null,"tamaño":4,"direccion":15}
+2024/06/13 21:36:37 Resultado leído de la memoria: '36000'
+2024/06/13 21:36:37 PID: 3 - Acción: LEER - Dirección Física: 15 - Valor: 36000
+2024/06/13 21:36:37 Valor leído de memoria (uint32): 36000
+2024/06/13 21:36:37 PID: 3 - FETCH - Program Counter: 6
+2024/06/13 21:36:38 PID: 3 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/13 21:36:39 Tamaño pagina: 16
+2024/06/13 21:36:39 Num pagina: 0
+2024/06/13 21:36:39 Desplazamiento: 15
+2024/06/13 21:36:39 PID: 3 - TLB MISS - Pagina: 0
+2024/06/13 21:36:40 direccion fisica 0
+2024/06/13 21:36:40 Valor a escribir en memoria: [160 140 0 0]
+2024/06/13 21:36:40 Body: {3 [160 140 0 0] 4 15}
+2024/06/13 21:36:41 PID: 3 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: ��  
+2024/06/13 21:36:41 PID: 3 - FETCH - Program Counter: 7
+2024/06/13 21:36:42 PID: 3 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/13 21:36:43 Tamaño pagina: 16
+2024/06/13 21:36:43 Num pagina: 0
+2024/06/13 21:36:43 Desplazamiento: 15
+2024/06/13 21:36:43 PID: 3 - TLB MISS - Pagina: 0
+2024/06/13 21:36:44 direccion fisica 0
+2024/06/13 21:36:44 Bytes recibidos antes de decodificar: {"pid":3,"info":null,"tamaño":4,"direccion":15}
+2024/06/13 21:36:45 Resultado leído de la memoria: '36000'
+2024/06/13 21:36:45 PID: 3 - Acción: LEER - Dirección Física: 15 - Valor: 36000
+2024/06/13 21:36:45 Valor leído de memoria (uint32): 36000
+2024/06/13 21:36:45 PID: 3 - FETCH - Program Counter: 8
+2024/06/13 21:36:46 PID: 3 - Ejecutando: EXIT
+2024/06/13 21:38:35 Inicializando TLB con 32 entradas
+2024/06/13 21:38:46 PID: 0 - FETCH - Program Counter: 0
+2024/06/13 21:38:47 PID: 0 - Ejecutando: SET - AX,1
+2024/06/13 21:38:47 PID: 0 - FETCH - Program Counter: 1
+2024/06/13 21:38:48 PID: 0 - Ejecutando: SET - ECX,36000
+2024/06/13 21:38:48 PID: 0 - FETCH - Program Counter: 2
+2024/06/13 21:38:49 PID: 0 - Ejecutando: SET - EDX,15
+2024/06/13 21:38:49 PID: 0 - FETCH - Program Counter: 3
+2024/06/13 21:38:50 PID: 0 - Ejecutando: RESIZE - 256
+2024/06/13 21:38:52 Error al enviar la solicitud: Get "http://localhost:8002/memoria/0/256": EOF
+2024/06/13 21:38:52 PID: 0 - FETCH - Program Counter: 4
+2024/06/13 21:38:53 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/13 21:38:54 Tamaño pagina: 16
+2024/06/13 21:38:54 Num pagina: 0
+2024/06/13 21:38:54 Desplazamiento: 15
+2024/06/13 21:38:54 PID: 0 - TLB MISS - Pagina: 0
+2024/06/13 21:38:55 direccion fisica 0
+2024/06/13 21:38:55 Valor a escribir en memoria: [160 140 0 0]
+2024/06/13 21:38:55 Body: {0 [160 140 0 0] 4 15}
+2024/06/13 21:38:56 Error al escribir memoria: error al enviar la solicitud: Post "http://localhost:8002/escribir": EOF
+2024/06/13 21:38:56 PID: 0 - FETCH - Program Counter: 5
+2024/06/13 21:38:57 PID: 0 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/13 21:38:58 Tamaño pagina: 16
+2024/06/13 21:38:58 Num pagina: 0
+2024/06/13 21:38:58 Desplazamiento: 15
+2024/06/13 21:38:58 PID: 0 - TLB MISS - Pagina: 0
+2024/06/13 21:38:59 direccion fisica 0
+2024/06/13 21:38:59 Bytes recibidos antes de decodificar: {"pid":0,"info":null,"tamaño":4,"direccion":15}
+2024/06/13 21:39:01 Inicializando TLB con 32 entradas
+2024/06/13 21:39:23 PID: 0 - FETCH - Program Counter: 0
+2024/06/13 21:39:24 PID: 0 - Ejecutando: SET - AX,1
+2024/06/13 21:39:24 PID: 0 - FETCH - Program Counter: 1
+2024/06/13 21:39:25 PID: 0 - Ejecutando: SET - ECX,36000
+2024/06/13 21:39:25 PID: 0 - FETCH - Program Counter: 2
+2024/06/13 21:39:26 PID: 0 - Ejecutando: SET - EDX,15
+2024/06/13 21:39:26 PID: 0 - FETCH - Program Counter: 3
+2024/06/13 21:39:27 PID: 0 - Ejecutando: RESIZE - 256
+2024/06/13 21:39:28 PID: 0 - FETCH - Program Counter: 4
+2024/06/13 21:39:29 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/13 21:39:30 Tamaño pagina: 16
+2024/06/13 21:39:30 Num pagina: 0
+2024/06/13 21:39:30 Desplazamiento: 15
+2024/06/13 21:39:30 PID: 0 - TLB MISS - Pagina: 0
+2024/06/13 21:39:31 direccion fisica 0
+2024/06/13 21:39:31 Valor a escribir en memoria: [160 140 0 0]
+2024/06/13 21:39:31 Body: {0 [160 140 0 0] 4 15}
+2024/06/13 21:39:32 PID: 0 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 36000
+2024/06/13 21:39:32 PID: 0 - FETCH - Program Counter: 5
+2024/06/13 21:39:33 PID: 0 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/13 21:39:34 Tamaño pagina: 16
+2024/06/13 21:39:34 Num pagina: 0
+2024/06/13 21:39:34 Desplazamiento: 15
+2024/06/13 21:39:34 PID: 0 - TLB MISS - Pagina: 0
+2024/06/13 21:39:35 direccion fisica 0
+2024/06/13 21:39:35 Bytes recibidos antes de decodificar: {"pid":0,"info":null,"tamaño":4,"direccion":15}
+2024/06/13 21:39:36 PID: 0 - Acción: LEER - Dirección Física: 15 - Valor: 36000
+2024/06/13 21:39:36 Valor leído de memoria (uint32): 36000
+2024/06/13 21:39:36 PID: 0 - FETCH - Program Counter: 6
+2024/06/13 21:39:37 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/13 21:39:38 Tamaño pagina: 16
+2024/06/13 21:39:38 Num pagina: 0
+2024/06/13 21:39:38 Desplazamiento: 15
+2024/06/13 21:39:38 PID: 0 - TLB MISS - Pagina: 0
+2024/06/13 21:39:39 direccion fisica 0
+2024/06/13 21:39:39 Valor a escribir en memoria: [160 140 0 0]
+2024/06/13 21:39:39 Body: {0 [160 140 0 0] 4 15}
+2024/06/13 21:39:40 PID: 0 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 36000
+2024/06/13 21:39:40 PID: 0 - FETCH - Program Counter: 7
+2024/06/13 21:39:41 PID: 0 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/13 21:39:42 Tamaño pagina: 16
+2024/06/13 21:39:42 Num pagina: 0
+2024/06/13 21:39:42 Desplazamiento: 15
+2024/06/13 21:39:42 PID: 0 - TLB MISS - Pagina: 0
+2024/06/13 21:39:43 direccion fisica 0
+2024/06/13 21:39:43 Bytes recibidos antes de decodificar: {"pid":0,"info":null,"tamaño":4,"direccion":15}
+2024/06/13 21:39:44 PID: 0 - Acción: LEER - Dirección Física: 15 - Valor: 36000
+2024/06/13 21:39:44 Valor leído de memoria (uint32): 36000
+2024/06/13 21:39:44 PID: 0 - FETCH - Program Counter: 8
+2024/06/13 21:39:45 PID: 0 - Ejecutando: EXIT
+2024/06/13 21:49:50 Inicializando TLB con 32 entradas
+2024/06/13 21:49:56 PID: 1 - FETCH - Program Counter: 0
+2024/06/13 21:49:57 PID: 1 - Ejecutando: SET - AX,1
+2024/06/13 21:49:57 PID: 1 - FETCH - Program Counter: 1
+2024/06/13 21:49:58 PID: 1 - Ejecutando: SET - ECX,36000
+2024/06/13 21:49:58 PID: 1 - FETCH - Program Counter: 2
+2024/06/13 21:49:59 PID: 1 - Ejecutando: SET - EDX,15
+2024/06/13 21:49:59 PID: 1 - FETCH - Program Counter: 3
+2024/06/13 21:50:00 PID: 1 - Ejecutando: RESIZE - 256
+2024/06/13 21:50:01 PID: 1 - FETCH - Program Counter: 4
+2024/06/13 21:50:02 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/13 21:50:03 Tamaño pagina: 16
+2024/06/13 21:50:03 Num pagina: 0
+2024/06/13 21:50:03 Desplazamiento: 15
+2024/06/13 21:50:03 PID: 1 - TLB MISS - Pagina: 0
+2024/06/13 21:50:04 direccion fisica 0
+2024/06/13 21:50:04 Valor a escribir en memoria: [160 140 0 0]
+2024/06/13 21:50:04 Body: {1 [160 140 0 0] 4 15}
+2024/06/13 21:50:05 PID: 1 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 36000
+2024/06/13 21:50:05 PID: 1 - FETCH - Program Counter: 5
+2024/06/13 21:50:06 PID: 1 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/13 21:50:07 Tamaño pagina: 16
+2024/06/13 21:50:07 Num pagina: 0
+2024/06/13 21:50:07 Desplazamiento: 15
+2024/06/13 21:50:07 PID: 1 - TLB HIT - Pagina: 0
+2024/06/13 21:50:08 PID: 1 - Acción: LEER - Dirección Física: 15 - Valor: 36000
+2024/06/13 21:50:08 PID: 1 - FETCH - Program Counter: 6
+2024/06/13 21:50:09 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/13 21:50:10 Tamaño pagina: 16
+2024/06/13 21:50:10 Num pagina: 0
+2024/06/13 21:50:10 Desplazamiento: 15
+2024/06/13 21:50:10 PID: 1 - TLB HIT - Pagina: 0
+2024/06/13 21:50:10 Valor a escribir en memoria: [160 140 0 0]
+2024/06/13 21:50:10 Body: {1 [160 140 0 0] 4 15}
+2024/06/13 21:50:11 PID: 1 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 36000
+2024/06/13 21:50:11 PID: 1 - FETCH - Program Counter: 7
+2024/06/13 21:50:12 PID: 1 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/13 21:50:13 Tamaño pagina: 16
+2024/06/13 21:50:13 Num pagina: 0
+2024/06/13 21:50:13 Desplazamiento: 15
+2024/06/13 21:50:13 PID: 1 - TLB HIT - Pagina: 0
+2024/06/13 21:50:14 PID: 1 - Acción: LEER - Dirección Física: 15 - Valor: 36000
+2024/06/13 21:50:14 PID: 1 - FETCH - Program Counter: 8
+2024/06/13 21:50:15 PID: 1 - Ejecutando: EXIT
+2024/06/13 21:50:46 PID: 2 - FETCH - Program Counter: 0
+2024/06/13 21:50:47 PID: 2 - Ejecutando: SET - AX,1
+2024/06/13 21:50:47 PID: 2 - FETCH - Program Counter: 1
+2024/06/13 21:50:48 PID: 2 - Ejecutando: SET - ECX,36000
+2024/06/13 21:50:48 PID: 2 - FETCH - Program Counter: 2
+2024/06/13 21:50:49 PID: 2 - Ejecutando: SET - EDX,15
+2024/06/13 21:50:49 PID: 2 - FETCH - Program Counter: 3
+2024/06/13 21:50:50 PID: 2 - Ejecutando: RESIZE - 256
+2024/06/13 21:50:51 PID: 2 - FETCH - Program Counter: 4
+2024/06/13 21:50:52 PID: 2 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/13 21:50:53 Tamaño pagina: 16
+2024/06/13 21:50:53 Num pagina: 0
+2024/06/13 21:50:53 Desplazamiento: 15
+2024/06/13 21:50:53 PID: 2 - TLB MISS - Pagina: 0
+2024/06/13 21:50:54 direccion fisica 0
+2024/06/13 21:50:54 Valor a escribir en memoria: [160 140 0 0]
+2024/06/13 21:50:54 Body: {2 [160 140 0 0] 4 15}
+2024/06/13 21:50:55 PID: 2 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 36000
+2024/06/13 21:50:55 PID: 2 - FETCH - Program Counter: 5
+2024/06/13 21:50:56 PID: 2 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/13 21:50:57 Tamaño pagina: 16
+2024/06/13 21:50:57 Num pagina: 0
+2024/06/13 21:50:57 Desplazamiento: 15
+2024/06/13 21:50:57 PID: 2 - TLB HIT - Pagina: 0
+2024/06/13 21:50:58 PID: 2 - Acción: LEER - Dirección Física: 15 - Valor: 36000
+2024/06/13 21:50:58 PID: 2 - FETCH - Program Counter: 6
+2024/06/13 21:50:59 PID: 2 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/13 21:51:00 Tamaño pagina: 16
+2024/06/13 21:51:00 Num pagina: 0
+2024/06/13 21:51:00 Desplazamiento: 15
+2024/06/13 21:51:00 PID: 2 - TLB HIT - Pagina: 0
+2024/06/13 21:51:00 Valor a escribir en memoria: [160 140 0 0]
+2024/06/13 21:51:00 Body: {2 [160 140 0 0] 4 15}
+2024/06/13 21:51:01 PID: 2 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 36000
+2024/06/13 21:51:01 PID: 2 - FETCH - Program Counter: 7
+2024/06/13 21:51:02 PID: 2 - Ejecutando: MOV_IN - ECX,EDX
+2024/06/13 21:51:03 Tamaño pagina: 16
+2024/06/13 21:51:03 Num pagina: 0
+2024/06/13 21:51:03 Desplazamiento: 15
+2024/06/13 21:51:03 PID: 2 - TLB HIT - Pagina: 0
+2024/06/13 21:51:04 PID: 2 - Acción: LEER - Dirección Física: 15 - Valor: 36000
+2024/06/13 21:51:04 PID: 2 - FETCH - Program Counter: 8
+2024/06/13 21:51:05 PID: 2 - Ejecutando: EXIT

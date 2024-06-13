@@ -3,6 +3,7 @@ package utils
 import (
 	"bytes"
 	"cpu/globals"
+	"encoding/binary"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -182,12 +183,12 @@ func JNZ(nombreRegistro string, valor int) {
 
 type BodyEscritura struct {
 	PID       int    `json:"pid"`
-	Info      string `json:"info"`
+	Info      []byte `json:"info"`
 	Tamaño    int    `json:"tamaño"`
 	Direccion int    `json:"direccion"`
 }
 
-func LeerDeMemoria(pid int, direccion int, tamaño int) (string, error) {
+func LeerDeMemoria(pid int, direccion int, tamaño int) ([]byte, error) {
 	request := BodyEscritura{
 		PID:       pid,
 		Direccion: direccion,
@@ -196,33 +197,34 @@ func LeerDeMemoria(pid int, direccion int, tamaño int) (string, error) {
 
 	body, err := json.Marshal(request)
 	if err != nil {
-		return "", fmt.Errorf("error al codificar solicitud: %v", err)
+		return nil, fmt.Errorf("error al codificar solicitud: %v", err)
 	}
 
 	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/leer"
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
-		return "", fmt.Errorf("error al enviar solicitud: %v", err)
+		return nil, fmt.Errorf("error al enviar solicitud: %v", err)
 	}
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
-		return "", fmt.Errorf("error en la respuesta de la consulta: %v", resp.Status)
+		return nil, fmt.Errorf("error en la respuesta de la consulta: %v", resp.Status)
 	}
 
-	var resultado string
+	var resultado []byte
 	err = json.NewDecoder(resp.Body).Decode(&resultado)
 	if err != nil {
-		return "", fmt.Errorf("error al decodificar respuesta: %v", err)
+		return nil, fmt.Errorf("error al decodificar respuesta: %v", err)
 	}
-	log.Printf("Resultado leído de la memoria: '%s'", resultado)
 
-	log.Printf("PID: %d - Acción: LEER - Dirección Física: %d - Valor: %s", pid, direccion, resultado)
+	valorUint32 := binary.LittleEndian.Uint32(resultado)
+
+	log.Printf("PID: %d - Acción: LEER - Dirección Física: %d - Valor: %d", pid, direccion, valorUint32)
 
 	return resultado, nil
 }
 
-func EscribirEnMemoria(pid int, direccionFisica int, datos string, tamaño int) error {
+func EscribirEnMemoria(pid int, direccionFisica int, datos []byte, tamaño int) error {
 	body := BodyEscritura{
 		PID:       pid,
 		Info:      datos,
@@ -248,7 +250,9 @@ func EscribirEnMemoria(pid int, direccionFisica int, datos string, tamaño int) 
 		return fmt.Errorf("error en la respuesta del servidor: %s", resp.Status)
 	}
 
-	log.Printf("PID: %d - Acción: ESCRIBIR - Dirección Física: %d - Valor: %s", pid, direccionFisica, datos)
+	valorUint32 := binary.LittleEndian.Uint32(datos)
+
+	log.Printf("PID: %d - Acción: ESCRIBIR - Dirección Física: %d - Valor: %d", pid, direccionFisica, valorUint32)
 
 	return nil
 }
@@ -269,24 +273,22 @@ func MOV_IN(registroDatos, registroDireccion string) {
 		return
 	}
 
-	// Leer de memoria considerando la posibilidad de direcciones físicas múltiples
-	var valor string
-
-	valor, err = LeerDeMemoria(procesoActual.PID, direccionFisica, 4) // 4 porque el registro es de 32 bits (a chequear)
+	var bytesLeidos []byte
+	bytesLeidos, err = LeerDeMemoria(procesoActual.PID, direccionFisica, 4) // Leer 4 bytes
 	if err != nil {
 		log.Printf("Error al leer de memoria: %s", err.Error())
 		return
 	}
 
-	// Convertir valor a uint32 antes de asignarlo a regDatos
-	valorUint64, err := strconv.ParseUint(valor, 10, 32)
-	if err != nil {
-		log.Printf("Error al convertir valor a uint64: %s", err.Error())
+	// Convertir bytes a uint32
+	if len(bytesLeidos) != 4 {
+		log.Printf("Error: se esperaban 4 bytes, pero se recibieron %d", len(bytesLeidos))
 		return
 	}
-	valorUint32 := uint32(valorUint64)
 
-	*regDatos = uint32(valorUint32)
+	valorUint32 := binary.LittleEndian.Uint32(bytesLeidos)
+	// Asignar valorUint32 a regDatos
+	*regDatos = valorUint32
 }
 
 // MOV_OUT (Registro Dirección, Registro Datos)
@@ -294,15 +296,22 @@ func MOV_OUT(registroDireccion, registroDatos string) {
 	regDireccion := ObtenerRegistro32Bits(registroDireccion)
 	regDatos := ObtenerRegistro32Bits(registroDatos)
 
+	if regDireccion == nil || regDatos == nil {
+		log.Printf("Error: registro inválido")
+		return
+	}
+
 	direccionFisica, err := mmu(procesoActual.PID, *regDireccion)
 	if err != nil {
 		log.Printf("Error al traducir dirección: %s", err.Error())
 		return
 	}
 
-	datos := strconv.Itoa(int(*regDatos))
-	log.Printf("Usted conoce a: %v", datos)
+	// Convertir el valor del registro a []byte
+	datos := make([]byte, 4)
+	binary.LittleEndian.PutUint32(datos, *regDatos)
 
+	log.Printf("Valor a escribir en memoria: %v", datos)
 	// Escribir en memoria considerando la posibilidad de direcciones físicas múltiples
 	err = EscribirEnMemoria(procesoActual.PID, direccionFisica, datos, 4)
 	if err != nil {
@@ -477,6 +486,8 @@ func mmu(pid int, direccionLogica uint32) (int, error) {
 	// Calcular dirección física
 	direccionFisica := marco*pageSize + desplazamiento
 
+	log.Printf("direccion fisica %d", marcoTLB)
+
 	return direccionFisica, nil
 }
 
@@ -493,7 +504,7 @@ func InicializarTLB() {
 func buscarEnTLB(pid, numeroPagina int) (int, error) {
 
 	for i, entry := range TLBCPU.Entradas {
-		if entry.PID == pid && entry.Pagina == numeroPagina {
+		if entry.PID == pid && entry.Marco == numeroPagina {
 			if globals.ClientConfig.AlgorithmTbl == "LRU" {
 				TLBCPU.Entradas[i].LastUse = time.Now().UnixNano()
 			}
