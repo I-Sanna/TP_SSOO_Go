@@ -889,14 +889,8 @@ func AsignarRecurso(pid int, recurso string) error {
 	// Buscar el recurso
 	for i, r := range globals.ClientConfig.Resources {
 		if r == recurso {
-			// Verificar si hay instancias disponibles
-			if globals.ClientConfig.Resource_instances[i] > 0 {
-				globals.ClientConfig.Resource_instances[i]--
-				fmt.Printf("Recurso %s asignado al PID %d. Instancias restantes: %d\n", recurso, pid, globals.ClientConfig.Resource_instances[i])
-				return nil
-			} else {
-				return fmt.Errorf("no hay instancias disponibles del recurso %s", recurso)
-			}
+			globals.ClientConfig.Resource_instances[i]--
+
 		}
 	}
 	return fmt.Errorf("recurso %s no encontrado", recurso)
@@ -912,7 +906,7 @@ func Signal(w http.ResponseWriter, r *http.Request) {
 	pid := request.PID
 	recurso := request.Recurso
 
-	if err := AsignarRecurso(pid, recurso); err != nil {
+	if err := DesasignarRecurso(pid, recurso); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
@@ -921,19 +915,13 @@ func Signal(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Recurso %s asignado a PID %d", recurso, pid)
 }
 
-func QuitarRecurso(pid int, recurso string) error {
+func DesasignarRecurso(pid int, recurso string) error {
 
 	// Buscar el recurso
 	for i, r := range globals.ClientConfig.Resources {
 		if r == recurso {
-			// Verificar si hay instancias disponibles
-			if globals.ClientConfig.Resource_instances[i] > 0 {
-				globals.ClientConfig.Resource_instances[i]++
-				fmt.Printf("Recurso %s quitado al PID %d. Instancias restantes: %d\n", recurso, pid, globals.ClientConfig.Resource_instances[i])
-				return nil
-			} else {
-				return fmt.Errorf("error al quitar recurso %s", recurso)
-			}
+			globals.ClientConfig.Resource_instances[i]++
+
 		}
 	}
 	return fmt.Errorf("recurso %s no encontrado", recurso)
