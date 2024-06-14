@@ -8143,3 +8143,14 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/06/14 13:36:37 PID: 5 - Acción: LEER - Dirección Física: 16 - Valor: 36000
 2024/06/14 13:36:37 PID: 5 - FETCH - Program Counter: 8
 2024/06/14 13:36:38 PID: 5 - Ejecutando: EXIT
+2024/06/14 18:29:43 Inicializando TLB con 32 entradas
+2024/06/14 18:35:19 PID: 0 - FETCH - Program Counter: 0
+2024/06/14 18:35:20 PID: 0 - Ejecutando: SET - AX,1
+2024/06/14 18:35:20 PID: 0 - FETCH - Program Counter: 1
+2024/06/14 18:35:21 PID: 0 - Ejecutando: SET - ECX,36000
+2024/06/14 18:35:21 PID: 0 - FETCH - Program Counter: 2
+2024/06/14 18:35:22 PID: 0 - Ejecutando: SET - EDX,16
+2024/06/14 18:35:22 PID: 0 - FETCH - Program Counter: 3
+2024/06/14 18:35:23 PID: 0 - Ejecutando: RESIZE - 256
+2024/06/14 18:35:24 PID: 0 - FETCH - Program Counter: 4
+2024/06/14 18:35:25 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX

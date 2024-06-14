@@ -19,7 +19,7 @@ type BodyRequestTime struct {
 }
 type BodyEscritura struct {
 	PID       int    `json:"pid"`
-	Info      string `json:"info"`
+	Info      []byte `json:"info"`
 	Tamaño    int    `json:"tamaño"`
 	Direccion int    `json:"direccion"`
 }
@@ -107,7 +107,8 @@ func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
 	}
 	fmt.Print("Esperando texto en consola... ")
 	textoIngresado := LeerConsola()
-	if len(textoIngresado) > request.Tamaño {
+	textoBytes := []byte(textoIngresado)
+	if len(textoBytes) > request.Tamaño {
 		http.Error(w, "El texto ingresado por consola excede el tamaño en bytes", http.StatusInternalServerError)
 		return
 	}
@@ -115,7 +116,7 @@ func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
 	fmt.Print("Guardando texto en memoria... ")
 	var requestBody = BodyEscritura{
 		PID:       request.PID,
-		Info:      textoIngresado,
+		Info:      textoBytes,
 		Tamaño:    request.Tamaño,
 		Direccion: request.Direccion,
 	}
@@ -127,10 +128,14 @@ func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Error guardando el texto ingresado", err.Error())
 		return
 	}
-	response := json.NewDecoder(r.Body).Decode(&resp)
-	log.Printf("Se guardo correctamente el texto ingresado", response)
+	//err = json.NewDecoder(resp.Body).Decode(&resp)
+	if resp.StatusCode != http.StatusOK {
+		log.Printf("Error al guardar el mensaje", resp.Status)
+		return
+	} else {
+		log.Printf("Se guardo correctamente el mensaje")
+	}
 	log.Printf("Direccion: %d - Operación: IO_STDIN_READ", request.Direccion)
-	return
 
 }
 
@@ -150,7 +155,7 @@ func IO_STDOUT_WRITE(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
 		return
 	}
-	globals.ClientConfig.UnitWorkTime--
+
 	body, err := json.Marshal(requestBody)
 	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/leer"
 	fmt.Print("URL: ", url)
@@ -160,9 +165,16 @@ func IO_STDOUT_WRITE(w http.ResponseWriter, r *http.Request) {
 		fmt.Print("error enviando: %s", err.Error())
 		return
 	}
-	response := json.NewDecoder(r.Body).Decode(&resp)
+	response := make([]byte, 0, request.Tamaño)
+	err = json.NewDecoder(resp.Body).Decode(&response)
+	if err != nil {
+		log.Printf("Error al decodificar mensaje: %s\n", err.Error())
+		return
+	}
+	time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
+	respString := string(response)
 	log.Printf("Direc fisica: %d - Operación: IO_STDOUT_WRITE", request.Direccion)
-	log.Printf("El texto obtenido es:", response)
+	log.Printf("El texto leido es:", respString)
 }
 
 func EstablecerConexion(nombre string, puerto int) {

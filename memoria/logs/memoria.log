@@ -13870,3 +13870,55 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/06/14 13:36:34 PID: 5 - Accion: Escribir - Direccion fisica: 16 - Tamaño a escribir: 4
 2024/06/14 13:36:36 aa 16
 2024/06/14 13:36:37 PID: 5 - Accion: Leer - Direccion fisica: 16 - Tamaño a leer: 4
+2024/06/14 18:35:19 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/14 18:35:19 PID: 0 - Tamaño: 256
+2024/06/14 18:35:24 256 256
+
+
+
+2024/06/14 18:35:24 tabla de paginas-------map[]
+2024/06/14 18:35:24 tabla GLOBAL de paginas------map[]
+2024/06/14 18:35:24 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/14 18:35:41 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/14 18:35:41 PID: 1 - Tamaño: 256
+2024/06/14 18:35:50 10 10
+
+
+
+2024/06/14 18:35:50 http: panic serving [::1]:60074: runtime error: index out of range [-1]
+goroutine 20 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6a0020?, 0xc00001a3a8?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.ReservarMemoria({0x735060, 0xc0000cafc0}, 0xc00009b440)
+	/home/utnso/Documents/TP-go/tp-2024-1c-EPIC/memoria/utils/utils.go:151 +0x9a5
+net/http.HandlerFunc.ServeHTTP(0xc000088ea0?, {0x735060?, 0xc0000cafc0?}, 0x63001a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x735060, 0xc0000cafc0}, 0xc00009b440)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00007f9e0?}, {0x735060?, 0xc0000cafc0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c2b40, {0x7355c8, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/14 18:42:26 PID: 1 - Accion: Escribir - Direccion fisica: 1 - Tamaño a escribir: 10
+2024/06/14 18:42:26 http: panic serving 127.0.0.1:58552: runtime error: index out of range [-1]
+goroutine 22 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6a0020?, 0xc00001a3f0?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.EscribirMemoria({0x735060, 0xc0000cb0a0}, 0xc00009b680)
+	/home/utnso/Documents/TP-go/tp-2024-1c-EPIC/memoria/utils/utils.go:361 +0xad8
+net/http.HandlerFunc.ServeHTTP(0xc000088ea0?, {0x735060?, 0xc0000cb0a0?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x735060, 0xc0000cb0a0}, 0xc00009b680)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x7342f0?}, {0x735060?, 0xc0000cb0a0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c2cf0, {0x7355c8, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
