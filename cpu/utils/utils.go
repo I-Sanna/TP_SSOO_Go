@@ -28,6 +28,8 @@ type TLB struct {
 }
 
 var TLBCPU *TLB
+var mu sync.Mutex
+var muTLB sync.Mutex
 
 type PCB struct {
 	PID            int          `json:"pid"`
@@ -267,7 +269,10 @@ func MOV_IN(registroDatos, registroDireccion string) {
 		return
 	}
 
+	mu.Unlock()
 	direccionFisica, err := mmu(procesoActual.PID, *regDireccion)
+	mu.Unlock()
+
 	if err != nil {
 		log.Printf("Error al traducir dirección: %s", err.Error())
 		return
@@ -301,7 +306,10 @@ func MOV_OUT(registroDireccion, registroDatos string) {
 		return
 	}
 
+	mu.Unlock()
 	direccionFisica, err := mmu(procesoActual.PID, *regDireccion)
+	mu.Unlock()
+
 	if err != nil {
 		log.Printf("Error al traducir dirección: %s", err.Error())
 		return
@@ -466,8 +474,12 @@ func mmu(pid int, direccionLogica uint32) (int, error) {
 		log.Printf("Error: TLB no está inicializada")
 		return 0, err
 	}
+
+	muTLB.Lock()
 	// Consultar TLB
 	marcoTLB, err := buscarEnTLB(pid, numeroPagina)
+	muTLB.Unlock()
+
 	if err == nil {
 		direccionFisica := marcoTLB*pageSize + desplazamiento
 		log.Printf("PID: %d - TLB HIT - Pagina: %d", pid, numeroPagina)
@@ -481,8 +493,9 @@ func mmu(pid int, direccionLogica uint32) (int, error) {
 	}
 
 	// Actualizar TLB
-	actualizarTLB(pid, int(direccionLogica), marco)
-
+	muTLB.Lock()
+	actualizarTLB(pid, numeroPagina, marco)
+	muTLB.Unlock()
 	// Calcular dirección física
 	direccionFisica := marco*pageSize + desplazamiento
 
@@ -566,6 +579,8 @@ func buscarEnMemoria(pid int, numeroPagina int) (int, error) {
 	if err != nil {
 		return 0, err
 	}
+
+	log.Printf("PID: %d - OBTENER MARCO - Página: %d - Marco: %d", pid, numeroPagina, marco)
 
 	return marco, nil
 }

@@ -890,7 +890,20 @@ func AsignarRecurso(pid int, recurso string) error {
 	for i, r := range globals.ClientConfig.Resources {
 		if r == recurso {
 			globals.ClientConfig.Resource_instances[i]--
+			if globals.ClientConfig.Resource_instances[i] < 0 {
+				// Cambiar el estado del proceso a "BLOCKED"
+				proceso := colaDeNuevos[0]
+				cambiarEstado(string(proceso.Estado), "BLOCKED", &proceso)
 
+				// Agregar el proceso a la lista de espera de recursos
+				if listaEsperaRecursos == nil {
+					listaEsperaRecursos = make(map[string][]int)
+				}
+				listaEsperaRecursos[recurso] = append(listaEsperaRecursos[recurso], pid)
+
+				return fmt.Errorf("el proceso %d está bloqueado esperando el recurso %s", pid, recurso)
+			}
+			return nil
 		}
 	}
 	return fmt.Errorf("recurso %s no encontrado", recurso)
@@ -915,13 +928,36 @@ func Signal(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Recurso %s asignado a PID %d", recurso, pid)
 }
 
+func quitarPIDDeLista(lista []int, pid int) []int {
+	resultado := make([]int, 0)
+
+	for _, p := range lista {
+		if p != pid {
+			resultado = append(resultado, p)
+		}
+	}
+
+	return resultado
+}
+
 func DesasignarRecurso(pid int, recurso string) error {
 
 	// Buscar el recurso
 	for i, r := range globals.ClientConfig.Resources {
 		if r == recurso {
 			globals.ClientConfig.Resource_instances[i]++
+			if globals.ClientConfig.Resource_instances[i] > 0 {
+				// Cambiar el estado del proceso a "EXEC" si se liberó el recurso
+				proceso := colaDeNuevos[0] // Suponiendo que tienes una cola de procesos nuevos
+				cambiarEstado(proceso.Estado, "EXEC", &proceso)
 
+				// Quitar el proceso de la lista de espera de recursos
+				if listaEsperaRecursos != nil {
+					listaEsperaRecursos[recurso] = quitarPIDDeLista(listaEsperaRecursos[recurso], pid)
+				}
+
+				return nil
+			}
 		}
 	}
 	return fmt.Errorf("recurso %s no encontrado", recurso)

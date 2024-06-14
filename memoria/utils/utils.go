@@ -126,7 +126,7 @@ func ReservarMemoria(w http.ResponseWriter, r *http.Request) {
 	tam := r.PathValue("tamaño")
 
 	pidInt, err := strconv.Atoi(pid)
-	log.Printf("%s %d\n\n\n\n", pid, pidInt)
+	//log.Printf("%s %d\n\n\n\n", pid, pidInt)
 	if err != nil {
 		http.Error(w, "Error al convertir de json a Int", http.StatusInternalServerError)
 		return
@@ -145,10 +145,12 @@ func ReservarMemoria(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var tablaPaginas map[int]int
-	log.Printf("hola")
+	//log.Printf("hola")
 	index := obtenerIndexProceso(pidInt)
-	log.Printf("chau %d", index)
+	//log.Printf("chau %d", index)
 	tablaPaginas = tablasPaginasProcesos[index]
+	log.Printf("tabla de paginas-------%v", tablaPaginas)
+	log.Printf("tabla GLOBAL de paginas------%v", tablasPaginasProcesos[index])
 
 	if tamaño > len(tablaPaginas)*globals.ClientConfig.PageSize {
 		log.Printf("PID: %d - Tamaño Actual: %d - Tamaño a Ampliar: %d", pidInt, len(tablaPaginas)*globals.ClientConfig.PageSize, tamaño)
@@ -213,6 +215,7 @@ func CrearProceso(w http.ResponseWriter, r *http.Request) {
 	listaPID = append(listaPID, contadorPID)
 	instruccionesProcesos = append(instruccionesProcesos, instrucciones)
 	tablasPaginasProcesos = append(tablasPaginasProcesos, tablaPaginas)
+	log.Printf("tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- %v", tablasPaginasProcesos)
 
 	log.Printf("PID: %d - Tamaño: %d", contadorPID, globals.ClientConfig.MemorySize/globals.ClientConfig.PageSize)
 
