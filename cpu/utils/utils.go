@@ -28,8 +28,6 @@ type TLB struct {
 }
 
 var TLBCPU *TLB
-var mu sync.Mutex
-var muTLB sync.Mutex
 
 type PCB struct {
 	PID            int          `json:"pid"`
@@ -64,8 +62,6 @@ const (
 )
 
 var mutexMensaje sync.Mutex
-var mutex sync.Mutex
-var tlbLock sync.Mutex
 
 var procesoActual PCB
 var interrupcion bool
@@ -264,14 +260,14 @@ func MOV_IN(registroDatos, registroDireccion string) {
 	regDatos := ObtenerRegistro32Bits(registroDatos)
 	regDireccion := ObtenerRegistro32Bits(registroDireccion)
 
+	dirLogica := int(*regDireccion)
+
 	if regDatos == nil || regDireccion == nil {
 		log.Printf("Error: registro inválido")
 		return
 	}
 
-	mu.Unlock()
-	direccionFisica, err := mmu(procesoActual.PID, *regDireccion)
-	mu.Unlock()
+	direccionFisica, err := mmu(procesoActual.PID, dirLogica)
 
 	if err != nil {
 		log.Printf("Error al traducir dirección: %s", err.Error())
@@ -301,14 +297,14 @@ func MOV_OUT(registroDireccion, registroDatos string) {
 	regDireccion := ObtenerRegistro32Bits(registroDireccion)
 	regDatos := ObtenerRegistro32Bits(registroDatos)
 
+	dirLogica := int(*regDireccion)
+
 	if regDireccion == nil || regDatos == nil {
 		log.Printf("Error: registro inválido")
 		return
 	}
 
-	mu.Unlock()
-	direccionFisica, err := mmu(procesoActual.PID, *regDireccion)
-	mu.Unlock()
+	direccionFisica, err := mmu(procesoActual.PID, dirLogica)
 
 	if err != nil {
 		log.Printf("Error al traducir dirección: %s", err.Error())
@@ -454,7 +450,7 @@ func SIGNAL(recurso string) {
 	log.Printf("PID: %d - SIGNAL ejecutado para el recurso: %s", procesoActual.PID, recurso)
 }
 
-func mmu(pid int, direccionLogica uint32) (int, error) {
+func mmu(pid int, direccionLogica int) (int, error) {
 
 	// Obtener el tamaño de página
 	pageSize, err := ObtenerPageSize()
@@ -464,8 +460,8 @@ func mmu(pid int, direccionLogica uint32) (int, error) {
 
 	log.Printf("Tamaño pagina: %d", pageSize)
 
-	numeroPagina := int(direccionLogica / uint32(pageSize))
-	desplazamiento := int(direccionLogica - uint32(numeroPagina)*uint32(pageSize))
+	numeroPagina := direccionLogica / pageSize
+	desplazamiento := direccionLogica - numeroPagina*pageSize
 
 	log.Printf("Num pagina: %d", numeroPagina)
 	log.Printf("Desplazamiento: %d", desplazamiento)
@@ -475,10 +471,8 @@ func mmu(pid int, direccionLogica uint32) (int, error) {
 		return 0, err
 	}
 
-	muTLB.Lock()
 	// Consultar TLB
 	marcoTLB, err := buscarEnTLB(pid, numeroPagina)
-	muTLB.Unlock()
 
 	if err == nil {
 		direccionFisica := marcoTLB*pageSize + desplazamiento
@@ -493,9 +487,7 @@ func mmu(pid int, direccionLogica uint32) (int, error) {
 	}
 
 	// Actualizar TLB
-	muTLB.Lock()
 	actualizarTLB(pid, numeroPagina, marco)
-	muTLB.Unlock()
 	// Calcular dirección física
 	direccionFisica := marco*pageSize + desplazamiento
 
@@ -517,7 +509,7 @@ func InicializarTLB() {
 func buscarEnTLB(pid, numeroPagina int) (int, error) {
 
 	for i, entry := range TLBCPU.Entradas {
-		if entry.PID == pid && entry.Marco == numeroPagina {
+		if entry.PID == pid && entry.Pagina == numeroPagina {
 			if globals.ClientConfig.AlgorithmTbl == "LRU" {
 				TLBCPU.Entradas[i].LastUse = time.Now().UnixNano()
 			}
