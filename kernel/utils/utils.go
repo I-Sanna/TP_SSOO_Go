@@ -807,7 +807,7 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 		datosSTD.Tamaño = request.Tamaño
 		datosSTD.Direccion = request.Direccion
 
-		fmt.Println("Datos en READ %s", request.PID, request.Tamaño, request.Direccion)
+		fmt.Println("Datos en READ ", request.PID, request.Tamaño, request.Direccion)
 		dispositivoLectura.Lock() //Habria que hacer un semaforo por dispostivo
 		puerto, ok := puertosDispSTDIN[request.Dispositivo]
 
@@ -823,8 +823,8 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("Entró en el case de write en kernel")
 		var datosSTD BodySTD
 		datosSTD.PID = request.PID
-		datosSTD.Tamaño = request.CantidadIO
-		datosSTD.Direccion = request.CantidadIO
+		datosSTD.Tamaño = request.Tamaño
+		datosSTD.Direccion = request.Direccion
 
 		dispositivoEscritura.Lock() //Habria que hacer un semaforo por dispostivo
 		puerto, ok := puertosDispSTDOUT[request.Dispositivo]

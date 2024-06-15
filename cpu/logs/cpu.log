@@ -11261,3 +11261,124 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/06/15 16:40:25 PID: 0 - Ejecutando: SUM - AX,BX
 2024/06/15 16:40:25 PID: 0 - FETCH - Program Counter: 13
 2024/06/15 16:40:26 PID: 0 - Ejecutando: IO_GEN_SLEEP - Mouse,200000
+2024/06/15 20:57:20 Inicializando TLB con 4 entradas
+2024/06/15 20:58:03 PID: 0 - FETCH - Program Counter: 0
+2024/06/15 20:58:05 PID: 0 - Ejecutando: RESIZE - 256
+2024/06/15 20:58:06 PID: 0 - FETCH - Program Counter: 1
+2024/06/15 20:58:07 PID: 0 - Ejecutando: SET - AX,1
+2024/06/15 20:58:07 PID: 0 - FETCH - Program Counter: 2
+2024/06/15 20:58:08 PID: 0 - Ejecutando: SET - BX,1
+2024/06/15 20:58:08 PID: 0 - FETCH - Program Counter: 3
+2024/06/15 20:58:09 PID: 0 - Ejecutando: SUM - AX,BX
+2024/06/15 20:58:09 PID: 0 - FETCH - Program Counter: 4
+2024/06/15 20:58:10 PID: 0 - Ejecutando: IO_STDIN_READ - Teclado , 10 , 3
+2024/06/15 21:02:46 PID: 0 - FETCH - Program Counter: 0
+2024/06/15 21:02:47 PID: 0 - Ejecutando: RESIZE - 256
+2024/06/15 21:02:49 Error al enviar la solicitud: Get "http://localhost:8002/memoria/0/256": EOF
+2024/06/15 21:02:49 PID: 0 - FETCH - Program Counter: 1
+2024/06/15 21:02:50 PID: 0 - Ejecutando: SET - AX,1
+2024/06/15 21:02:50 PID: 0 - FETCH - Program Counter: 2
+2024/06/15 21:02:51 PID: 0 - Ejecutando: SET - BX,1
+2024/06/15 21:02:51 PID: 0 - FETCH - Program Counter: 3
+2024/06/15 21:02:52 PID: 0 - Ejecutando: SUM - AX,BX
+2024/06/15 21:02:52 PID: 0 - FETCH - Program Counter: 4
+2024/06/15 21:02:53 PID: 0 - Ejecutando: IO_STDIN_READ - Teclado , 10 , 3
+2024/06/15 21:06:15 PID: 0 - FETCH - Program Counter: 0
+2024/06/15 21:06:16 PID: 0 - Ejecutando: RESIZE - 256
+2024/06/15 21:06:18 Error al enviar la solicitud: Get "http://localhost:8002/memoria/0/256": EOF
+2024/06/15 21:06:18 PID: 0 - FETCH - Program Counter: 1
+2024/06/15 21:06:19 PID: 0 - Ejecutando: SET - AX,1
+2024/06/15 21:06:20 PID: 0 - FETCH - Program Counter: 2
+2024/06/15 21:06:21 PID: 0 - Ejecutando: SET - BX,1
+2024/06/15 21:06:21 PID: 0 - FETCH - Program Counter: 3
+2024/06/15 21:06:22 PID: 0 - Ejecutando: SUM - AX,BX
+2024/06/15 21:06:22 PID: 0 - FETCH - Program Counter: 4
+2024/06/15 21:06:23 PID: 0 - Ejecutando: IO_STDIN_READ - Teclado , 10 , 3
+2024/06/15 21:07:10 PID: 0 - FETCH - Program Counter: 5
+2024/06/15 21:07:11 PID: 0 - Ejecutando: SET - AX,1
+2024/06/15 21:07:11 PID: 0 - FETCH - Program Counter: 6
+2024/06/15 21:07:12 PID: 0 - Ejecutando: IO_STDOUT_WRITE - Mouse , 10 , 3
+2024/06/15 21:08:20 PID: 1 - FETCH - Program Counter: 0
+2024/06/15 21:08:21 PID: 1 - Ejecutando: RESIZE - 256
+2024/06/15 21:08:22 PID: 1 - FETCH - Program Counter: 1
+2024/06/15 21:08:23 PID: 1 - Ejecutando: SET - AX,1
+2024/06/15 21:08:23 PID: 1 - FETCH - Program Counter: 2
+2024/06/15 21:08:24 PID: 1 - Ejecutando: SET - BX,1
+2024/06/15 21:08:24 PID: 1 - FETCH - Program Counter: 3
+2024/06/15 21:08:25 PID: 1 - Ejecutando: SUM - AX,BX
+2024/06/15 21:08:25 PID: 1 - FETCH - Program Counter: 4
+2024/06/15 21:08:26 PID: 1 - Ejecutando: IO_STDIN_READ - Teclado , 10 , 3
+2024/06/15 21:08:43 PID: 1 - FETCH - Program Counter: 5
+2024/06/15 21:08:44 PID: 1 - Ejecutando: SET - AX,1
+2024/06/15 21:08:44 PID: 1 - FETCH - Program Counter: 6
+2024/06/15 21:08:45 PID: 1 - Ejecutando: IO_STDOUT_WRITE - Mouse , 10 , 3
+2024/06/15 21:11:26 PID: 2 - FETCH - Program Counter: 0
+2024/06/15 21:11:27 PID: 2 - Ejecutando: RESIZE - 256
+2024/06/15 21:11:28 PID: 2 - FETCH - Program Counter: 1
+2024/06/15 21:11:29 PID: 2 - Ejecutando: SET - AX,1
+2024/06/15 21:11:29 PID: 2 - FETCH - Program Counter: 2
+2024/06/15 21:11:30 PID: 2 - Ejecutando: SET - BX,1
+2024/06/15 21:11:30 PID: 2 - FETCH - Program Counter: 3
+2024/06/15 21:11:31 PID: 2 - Ejecutando: SUM - AX,BX
+2024/06/15 21:11:31 PID: 2 - FETCH - Program Counter: 4
+2024/06/15 21:11:32 PID: 2 - Ejecutando: IO_STDIN_READ - Teclado , 10 , 3
+2024/06/15 21:12:04 PID: 2 - FETCH - Program Counter: 5
+2024/06/15 21:12:05 PID: 2 - Ejecutando: SET - AX,1
+2024/06/15 21:12:05 PID: 2 - FETCH - Program Counter: 6
+2024/06/15 21:12:06 PID: 2 - Ejecutando: IO_STDOUT_WRITE - Mouse , 10 , 3
+2024/06/15 21:12:08 PID: 2 - FETCH - Program Counter: 7
+2024/06/15 21:12:09 PID: 2 - Ejecutando: SET - BX,1
+2024/06/15 21:12:09 PID: 2 - FETCH - Program Counter: 8
+2024/06/15 21:12:10 PID: 2 - Ejecutando: SUM - AX,BX
+2024/06/15 21:12:10 PID: 2 - FETCH - Program Counter: 9
+2024/06/15 21:12:11 PID: 2 - Ejecutando: SIGNAL - RA
+2024/06/15 21:12:11 PID: 2 - FETCH - Program Counter: 10
+2024/06/15 21:12:12 PID: 2 - Ejecutando: SUB - AX,BX
+2024/06/15 21:12:12 PID: 2 - FETCH - Program Counter: 11
+2024/06/15 21:12:13 PID: 2 - Ejecutando: EXIT
+2024/06/15 21:14:55 PID: 0 - FETCH - Program Counter: 0
+2024/06/15 21:14:56 PID: 0 - Ejecutando: RESIZE - 256
+2024/06/15 21:14:58 Error al enviar la solicitud: Get "http://localhost:8002/memoria/0/256": EOF
+2024/06/15 21:14:58 PID: 0 - FETCH - Program Counter: 1
+2024/06/15 21:14:59 PID: 0 - Ejecutando: SET - AX,1
+2024/06/15 21:14:59 PID: 0 - FETCH - Program Counter: 2
+2024/06/15 21:15:00 PID: 0 - Ejecutando: SET - BX,1
+2024/06/15 21:15:00 PID: 0 - FETCH - Program Counter: 3
+2024/06/15 21:15:01 PID: 0 - Ejecutando: SUM - AX,BX
+2024/06/15 21:15:01 PID: 0 - FETCH - Program Counter: 4
+2024/06/15 21:15:02 PID: 0 - Ejecutando: IO_STDIN_READ - Teclado , 10 , 3
+2024/06/15 21:20:37 PID: 1 - FETCH - Program Counter: 0
+2024/06/15 21:20:39 PID: 1 - Ejecutando: RESIZE - 256
+2024/06/15 21:20:41 Error al enviar la solicitud: Get "http://localhost:8002/memoria/1/256": EOF
+2024/06/15 21:20:41 PID: 1 - FETCH - Program Counter: 1
+2024/06/15 21:20:42 PID: 1 - Ejecutando: SET - AX,1
+2024/06/15 21:20:42 PID: 1 - FETCH - Program Counter: 2
+2024/06/15 21:20:43 PID: 1 - Ejecutando: SET - BX,1
+2024/06/15 21:20:43 PID: 1 - FETCH - Program Counter: 3
+2024/06/15 21:20:44 PID: 1 - Ejecutando: SUM - AX,BX
+2024/06/15 21:20:44 PID: 1 - FETCH - Program Counter: 4
+2024/06/15 21:20:45 PID: 1 - Ejecutando: IO_STDIN_READ - Teclado , 10 , 3
+2024/06/15 21:24:10 PID: 0 - FETCH - Program Counter: 0
+2024/06/15 21:24:11 PID: 0 - Ejecutando: RESIZE - 256
+2024/06/15 21:24:12 PID: 0 - FETCH - Program Counter: 1
+2024/06/15 21:24:13 PID: 0 - Ejecutando: SET - AX,1
+2024/06/15 21:24:13 PID: 0 - FETCH - Program Counter: 2
+2024/06/15 21:24:14 PID: 0 - Ejecutando: SET - BX,1
+2024/06/15 21:24:14 PID: 0 - FETCH - Program Counter: 3
+2024/06/15 21:24:15 PID: 0 - Ejecutando: SUM - AX,BX
+2024/06/15 21:24:15 PID: 0 - FETCH - Program Counter: 4
+2024/06/15 21:24:16 PID: 0 - Ejecutando: IO_STDIN_READ - Teclado , 10 , 3
+2024/06/15 21:24:43 PID: 0 - FETCH - Program Counter: 5
+2024/06/15 21:24:44 PID: 0 - Ejecutando: SET - AX,1
+2024/06/15 21:24:44 PID: 0 - FETCH - Program Counter: 6
+2024/06/15 21:24:45 PID: 0 - Ejecutando: IO_STDOUT_WRITE - Mouse , 10 , 3
+2024/06/15 21:24:47 PID: 0 - FETCH - Program Counter: 7
+2024/06/15 21:24:48 PID: 0 - Ejecutando: SET - BX,1
+2024/06/15 21:24:48 PID: 0 - FETCH - Program Counter: 8
+2024/06/15 21:24:49 PID: 0 - Ejecutando: SUM - AX,BX
+2024/06/15 21:24:49 PID: 0 - FETCH - Program Counter: 9
+2024/06/15 21:24:50 PID: 0 - Ejecutando: SIGNAL - RA
+2024/06/15 21:24:50 PID: 0 - FETCH - Program Counter: 10
+2024/06/15 21:24:51 PID: 0 - Ejecutando: SUB - AX,BX
+2024/06/15 21:24:51 PID: 0 - FETCH - Program Counter: 11
+2024/06/15 21:24:52 PID: 0 - Ejecutando: EXIT
