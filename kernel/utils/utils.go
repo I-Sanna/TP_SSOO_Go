@@ -797,7 +797,7 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 		datosSTD.Direccion = request.CantidadIO
 
 		dispositivoLectura.Lock() //Habria que hacer un semaforo por dispostivo
-		puerto, ok := puertosDispGenericos[request.Dispositivo]
+		puerto, ok := puertosDispSTDIN[request.Dispositivo]
 
 		if ok && validarConexionIO(puerto) {
 			go agregarElemAListaSTDIN(request.Dispositivo, puerto, datosSTD)
@@ -814,7 +814,7 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 		datosSTD.Direccion = request.CantidadIO
 
 		dispositivoEscritura.Lock() //Habria que hacer un semaforo por dispostivo
-		puerto, ok := puertosDispGenericos[request.Dispositivo]
+		puerto, ok := puertosDispSTDOUT[request.Dispositivo]
 
 		if ok && validarConexionIO(puerto) {
 			go agregarElemAListaSTDOUT(request.Dispositivo, puerto, datosSTD)
@@ -1053,6 +1053,10 @@ func RegistrarIO(w http.ResponseWriter, r *http.Request) {
 	switch request.Categoria {
 	case "Generico":
 		puertosDispGenericos[request.Nombre] = request.Puerto
+	case "STDIN":
+		puertosDispSTDIN[request.Nombre] = request.Puerto
+	case "STDOUT":
+		puertosDispSTDOUT[request.Nombre] = request.Puerto
 	}
 }
 
