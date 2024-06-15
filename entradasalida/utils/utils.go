@@ -98,27 +98,40 @@ func IO_GEN_SLEEP(w http.ResponseWriter, r *http.Request) {
 }
 
 func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
-	var request BodyRequest
+	pid := r.PathValue("pid")
+	tamaño := r.PathValue("tamaño")
+	direccion := r.PathValue("direccion")
 
-	err := json.NewDecoder(r.Body).Decode(&request)
+	pidInt, err := strconv.Atoi(pid)
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusBadRequest)
+		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
 		return
 	}
+	tamañoInt, err := strconv.Atoi(tamaño)
+	if err != nil {
+		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+		return
+	}
+	direccionInt, err := strconv.Atoi(direccion)
+	if err != nil {
+		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+		return
+	}
+
 	fmt.Print("Esperando texto en consola... ")
 	textoIngresado := LeerConsola()
 	textoBytes := []byte(textoIngresado)
-	if len(textoBytes) > request.Tamaño {
+	if len(textoBytes) > tamañoInt {
 		http.Error(w, "El texto ingresado por consola excede el tamaño en bytes", http.StatusInternalServerError)
 		return
 	}
 	fmt.Print("El texto ingresado es: ", textoIngresado)
 	fmt.Print("Guardando texto en memoria... ")
 	var requestBody = BodyEscritura{
-		PID:       request.PID,
+		PID:       pidInt,
 		Info:      textoBytes,
-		Tamaño:    request.Tamaño,
-		Direccion: request.Direccion,
+		Tamaño:    tamañoInt,
+		Direccion: direccionInt,
 	}
 	body, err := json.Marshal(requestBody)
 	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/escribir"
@@ -135,21 +148,34 @@ func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
 	} else {
 		log.Printf("Se guardo correctamente el mensaje")
 	}
-	log.Printf("Direccion: %d - Operación: IO_STDIN_READ", request.Direccion)
+	log.Printf("Direccion: %d - Operación: IO_STDIN_READ", direccion)
 
 }
 
 func IO_STDOUT_WRITE(w http.ResponseWriter, r *http.Request) {
-	var request BodyRequest
-	err := json.NewDecoder(r.Body).Decode(&request)
+	pid := r.PathValue("pid")
+	tamaño := r.PathValue("tamaño")
+	direccion := r.PathValue("direccion")
+
+	pidInt, err := strconv.Atoi(pid)
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusBadRequest)
+		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+		return
+	}
+	tamañoInt, err := strconv.Atoi(tamaño)
+	if err != nil {
+		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+		return
+	}
+	direccionInt, err := strconv.Atoi(direccion)
+	if err != nil {
+		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
 		return
 	}
 	var requestBody = BodyEscritura{
-		PID:       request.PID,
-		Tamaño:    request.Tamaño,
-		Direccion: request.Direccion,
+		PID:       pidInt,
+		Tamaño:    tamañoInt,
+		Direccion: direccionInt,
 	}
 	if err != nil {
 		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
@@ -165,7 +191,7 @@ func IO_STDOUT_WRITE(w http.ResponseWriter, r *http.Request) {
 		fmt.Print("error enviando: %s", err.Error())
 		return
 	}
-	response := make([]byte, 0, request.Tamaño)
+	response := make([]byte, 0, tamañoInt)
 	err = json.NewDecoder(resp.Body).Decode(&response)
 	if err != nil {
 		log.Printf("Error al decodificar mensaje: %s\n", err.Error())
@@ -173,7 +199,7 @@ func IO_STDOUT_WRITE(w http.ResponseWriter, r *http.Request) {
 	}
 	time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
 	respString := string(response)
-	log.Printf("Direc fisica: %d - Operación: IO_STDOUT_WRITE", request.Direccion)
+	log.Printf("Direc fisica: %d - Operación: IO_STDOUT_WRITE", direccion)
 	log.Printf("El texto leido es:", respString)
 }
 
