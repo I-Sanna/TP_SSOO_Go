@@ -654,6 +654,16 @@ type BodyRequestTime struct {
 	Dispositivo string `json:"dispositivo"`
 	CantidadIO  int    `json:"cantidad_io"`
 	PID         int    `json:"pid"`
+	Tamaño      int    `json:"tamaño"`
+	Direccion   int    `json:"direccion"`
+	Instruccion string `json:"instruccion"`
+}
+
+type BodyRequestSTD struct {
+	Dispositivo string `json:"dispositivo"`
+	PID         int    `json:"pid"`
+	Tamaño      int    `json:"tamaño"`
+	Direccion   int    `json:"direccion"`
 	Instruccion string `json:"instruccion"`
 }
 
@@ -687,12 +697,13 @@ func IO_GEN_SLEEP(nombre string, tiempo int) {
 	interrupcion = true
 }
 
-func IO_STDIN_READ(nombre string, tiempo int) {
-	var sending BodyRequestTime
+func IO_STDIN_READ(nombre string, tamaño int, direccion int) {
+	var sending BodyRequestSTD
 
 	sending.Dispositivo = nombre
-	sending.CantidadIO = tiempo
 	sending.PID = procesoActual.PID
+	sending.Tamaño = tamaño
+	sending.Direccion = direccion
 	sending.Instruccion = "READ"
 
 	body, err := json.Marshal(sending)
@@ -717,12 +728,13 @@ func IO_STDIN_READ(nombre string, tiempo int) {
 	interrupcion = true
 }
 
-func IO_STDOUT_WRITE(nombre string, tiempo int) {
-	var sending BodyRequestTime
+func IO_STDOUT_WRITE(nombre string, tamaño int, direccion int) {
+	var sending BodyRequestSTD
 
 	sending.Dispositivo = nombre
-	sending.CantidadIO = tiempo
 	sending.PID = procesoActual.PID
+	sending.Tamaño = tamaño
+	sending.Direccion = direccion
 	sending.Instruccion = "WRITE"
 
 	body, err := json.Marshal(sending)
@@ -807,21 +819,23 @@ func decoYExecInstru(instrucciones string) {
 		}
 		IO_GEN_SLEEP(instru[1], valor)
 	case "IO_STDIN_READ":
-		log.Printf("PID: %d - Ejecutando: %v - %v,%v", procesoActual.PID, instru[0], instru[1], instru[2])
-		valor, err := strconv.Atoi(instru[2])
+		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3])
+		tamaño, err := strconv.Atoi(instru[2])
+		direccion, err := strconv.Atoi(instru[3])
 		if err != nil {
 			log.Printf("error enviando: %s", err.Error())
 			return
 		}
-		IO_STDIN_READ(instru[1], valor)
+		IO_STDIN_READ(instru[1], tamaño, direccion)
 	case "IO_STDOUT_WRITE":
-		log.Printf("PID: %d - Ejecutando: %v - %v,%v", procesoActual.PID, instru[0], instru[1], instru[2])
-		valor, err := strconv.Atoi(instru[2])
+		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3])
+		tamaño, err := strconv.Atoi(instru[2])
+		direccion, err := strconv.Atoi(instru[3])
 		if err != nil {
 			log.Printf("error enviando: %s", err.Error())
 			return
 		}
-		IO_STDOUT_WRITE(instru[1], valor)
+		IO_STDOUT_WRITE(instru[1], tamaño, direccion)
 	}
 }
 

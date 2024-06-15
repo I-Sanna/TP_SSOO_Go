@@ -98,6 +98,7 @@ func IO_GEN_SLEEP(w http.ResponseWriter, r *http.Request) {
 }
 
 func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("Se solicitó STDIN")
 	pid := r.PathValue("pid")
 	tamaño := r.PathValue("tamaño")
 	direccion := r.PathValue("direccion")
@@ -112,6 +113,7 @@ func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
 		return
 	}
+	//fmt.Print("El tamaño pedido es: ", tamañoInt)
 	direccionInt, err := strconv.Atoi(direccion)
 	if err != nil {
 		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
@@ -121,6 +123,7 @@ func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
 	fmt.Print("Esperando texto en consola... ")
 	textoIngresado := LeerConsola()
 	textoBytes := []byte(textoIngresado)
+	//fmt.Print("El tamaño en bytes ingresado es: ", textoBytes)
 	if len(textoBytes) > tamañoInt {
 		http.Error(w, "El texto ingresado por consola excede el tamaño en bytes", http.StatusInternalServerError)
 		return
@@ -138,21 +141,22 @@ func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 
 	if err != nil {
-		log.Printf("Error guardando el texto ingresado", err.Error())
+		log.Printf("Error guardando el texto ingresado ", err.Error())
 		return
 	}
 	//err = json.NewDecoder(resp.Body).Decode(&resp)
 	if resp.StatusCode != http.StatusOK {
-		log.Printf("Error al guardar el mensaje", resp.Status)
+		log.Printf("Error al guardar el mensaje ", resp.Status)
 		return
 	} else {
 		log.Printf("Se guardo correctamente el mensaje")
 	}
-	log.Printf("Direccion: %d - Operación: IO_STDIN_READ", direccion)
+	log.Printf("Direccion: %s - Operación: IO_STDIN_READ", direccion)
 
 }
 
 func IO_STDOUT_WRITE(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("Se solicitó STDOUT")
 	pid := r.PathValue("pid")
 	tamaño := r.PathValue("tamaño")
 	direccion := r.PathValue("direccion")
@@ -199,8 +203,8 @@ func IO_STDOUT_WRITE(w http.ResponseWriter, r *http.Request) {
 	}
 	time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
 	respString := string(response)
-	log.Printf("Direc fisica: %d - Operación: IO_STDOUT_WRITE", direccion)
-	log.Printf("El texto leido es:", respString)
+	log.Printf("Direc fisica: %s - Operación: IO_STDOUT_WRITE", direccion)
+	log.Printf("El texto leido es: %s", respString)
 }
 
 func EstablecerConexion(nombre string, puerto int) {

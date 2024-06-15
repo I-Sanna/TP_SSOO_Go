@@ -3,6 +3,7 @@ package utils
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"io"
 	"kernel/globals"
 	"log"
@@ -760,6 +761,15 @@ type BodyRequestTime struct {
 	Dispositivo string `json:"dispositivo"`
 	CantidadIO  int    `json:"cantidad_io"`
 	PID         int    `json:"pid"`
+	Tamaño      int    `json:"tamaño"`
+	Direccion   int    `json:"direccion"`
+	Instruccion string `json:"instruccion"`
+}
+type BodyRequestSTD struct {
+	Dispositivo string `json:"dispositivo"`
+	PID         int    `json:"pid"`
+	Tamaño      int    `json:"tamaño"`
+	Direccion   int    `json:"direccion"`
 	Instruccion string `json:"instruccion"`
 }
 
@@ -781,7 +791,7 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 
 		dispositivoGenerico.Lock() //Habria que hacer un semaforo por dispostivo
 		puerto, ok := puertosDispGenericos[request.Dispositivo]
-
+		fmt.Println("Sleep por validar conexionIO")
 		if ok && validarConexionIO(puerto) {
 			go agregarElemAListaGenericos(request.Dispositivo, puerto, datosIO)
 		} else {
@@ -791,11 +801,13 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 		}
 		dispositivoGenerico.Unlock()
 	case "READ":
+		fmt.Println("Entró en el case de read en kernel")
 		var datosSTD BodySTD
 		datosSTD.PID = request.PID
-		datosSTD.Tamaño = request.CantidadIO
-		datosSTD.Direccion = request.CantidadIO
+		datosSTD.Tamaño = request.Tamaño
+		datosSTD.Direccion = request.Direccion
 
+		fmt.Println("Datos en READ %s", request.PID, request.Tamaño, request.Direccion)
 		dispositivoLectura.Lock() //Habria que hacer un semaforo por dispostivo
 		puerto, ok := puertosDispSTDIN[request.Dispositivo]
 
@@ -808,6 +820,7 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 		}
 		dispositivoLectura.Unlock()
 	case "WRITE":
+		fmt.Println("Entró en el case de write en kernel")
 		var datosSTD BodySTD
 		datosSTD.PID = request.PID
 		datosSTD.Tamaño = request.CantidadIO

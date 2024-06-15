@@ -2168,16 +2168,9 @@ Configuracion cargada con exito!
 Configuracion cargada con exito!
 2024/06/10 22:02:03 
 Configuracion cargada con exito!
-<<<<<<< Updated upstream
-2024/06/11 17:26:02 
-Configuracion cargada con exito!
-2024/06/11 17:26:02 error enviando: Post "http://localhost:8001/nuevoIO": dial tcp 127.0.0.1:8001: connect: connection refused
-2024/06/11 17:28:19 
-=======
 2024/06/11 19:25:10 
 Configuracion cargada con exito!
 2024/06/11 20:28:03 
->>>>>>> Stashed changes
 Configuracion cargada con exito!
 2024/06/12 18:57:58 
 Configuracion cargada con exito!
@@ -2234,15 +2227,33 @@ Configuracion cargada con exito!
 Configuracion cargada con exito!
 2024/06/15 14:39:04 PID: 0 - Operación: IO_GEN_SLEEP
 2024/06/15 14:39:23 PID: 1 - Operación: IO_GEN_SLEEP
-2024/06/15 15:34:20 
+2024/06/15 15:16:00 
 Configuracion cargada con exito!
-2024/06/15 15:52:00 
+2024/06/15 15:30:58 
 Configuracion cargada con exito!
-2024/06/15 15:53:42 
+2024/06/15 15:31:39 PID: 0 - Operación: IO_GEN_SLEEP
+2024/06/15 15:40:50 Error guardando el texto ingresado%!(EXTRA string=Post "http://localhost:0/escribir": dial tcp 127.0.0.1:0: connect: connection refused)
+2024/06/15 15:42:52 
 Configuracion cargada con exito!
-2024/06/15 16:38:30 
+2024/06/15 15:43:47 
 Configuracion cargada con exito!
-2024/06/15 17:41:40 
+2024/06/15 15:44:42 Error guardando el texto ingresado%!(EXTRA string=Post "http://localhost:0/escribir": dial tcp 127.0.0.1:0: connect: connection refused)
+2024/06/15 15:53:07 
 Configuracion cargada con exito!
-2024/06/15 17:50:35 
+2024/06/15 15:53:41 Se guardo correctamente el mensaje
+2024/06/15 15:53:41 Direccion: %!d(string=3) - Operación: IO_STDIN_READ
+2024/06/15 15:55:23 Direc fisica: %!d(string=3) - Operación: IO_STDOUT_WRITE
+2024/06/15 15:55:23 El texto leido es:%!(EXTRA string=bye       )
+2024/06/15 15:58:01 
+Configuracion cargada con exito!
+2024/06/15 15:58:57 Se guardo correctamente el mensaje
+2024/06/15 15:58:57 Direccion: 3 - Operación: IO_STDIN_READ
+2024/06/15 15:59:09 Direc fisica: 3 - Operación: IO_STDOUT_WRITE
+2024/06/15 15:59:09 El texto leido es: lol       
+2024/06/15 16:17:33 Se guardo correctamente el mensaje
+2024/06/15 16:17:33 Direccion: 3 - Operación: IO_STDIN_READ
+2024/06/15 16:18:16 Direc fisica: 3 - Operación: IO_STDOUT_WRITE
+2024/06/15 16:18:16 El texto leido es: xd        
+2024/06/15 16:19:30 open c2.config: no such file or directory
+2024/06/15 16:19:42 
 Configuracion cargada con exito!
