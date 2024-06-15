@@ -29,8 +29,8 @@ func main() {
 	utils.EstablecerConexion(nombreDispositivo, globals.ClientConfig.Port)
 
 	http.HandleFunc("GET /sleep/{units}/{pid}", utils.IO_GEN_SLEEP)
-	http.HandleFunc("POST /read/{pid}/{tamaño}/{direccion}", utils.IO_STDIN_READ)
-	http.HandleFunc("POST /write/{pid}/{tamaño}/{direccion}", utils.IO_STDOUT_WRITE)
+	http.HandleFunc("GET /read/{pid}/{tamaño}/{direccion}", utils.IO_STDIN_READ)
+	http.HandleFunc("GET /write/{pid}/{tamaño}/{direccion}", utils.IO_STDOUT_WRITE)
 	http.HandleFunc("GET /validar", utils.ValidarConexion)
 
 	log.Fatal(http.ListenAndServe(":"+strconv.Itoa(globals.ClientConfig.Port), nil))

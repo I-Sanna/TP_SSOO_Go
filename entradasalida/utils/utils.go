@@ -98,7 +98,6 @@ func IO_GEN_SLEEP(w http.ResponseWriter, r *http.Request) {
 }
 
 func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("Se solicitó STDIN")
 	pid := r.PathValue("pid")
 	tamaño := r.PathValue("tamaño")
 	direccion := r.PathValue("direccion")
@@ -120,16 +119,15 @@ func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fmt.Print("Esperando texto en consola... ")
+	fmt.Print("\nEsperando texto en consola... ")
 	textoIngresado := LeerConsola()
 	textoBytes := []byte(textoIngresado)
-	//fmt.Print("El tamaño en bytes ingresado es: ", textoBytes)
 	if len(textoBytes) > tamañoInt {
 		http.Error(w, "El texto ingresado por consola excede el tamaño en bytes", http.StatusInternalServerError)
 		return
 	}
-	fmt.Print("El texto ingresado es: ", textoIngresado)
-	fmt.Print("Guardando texto en memoria... ")
+	fmt.Print("\nEl texto ingresado es: ", textoIngresado)
+	fmt.Print("\nGuardando texto en memoria... ")
 	var requestBody = BodyEscritura{
 		PID:       pidInt,
 		Info:      textoBytes,
@@ -144,19 +142,25 @@ func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Error guardando el texto ingresado ", err.Error())
 		return
 	}
-	//err = json.NewDecoder(resp.Body).Decode(&resp)
 	if resp.StatusCode != http.StatusOK {
 		log.Printf("Error al guardar el mensaje ", resp.Status)
 		return
 	} else {
 		log.Printf("Se guardo correctamente el mensaje")
 	}
+	respuesta, err := json.Marshal("OK")
+	if err != nil {
+		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
+	w.Write(respuesta)
 	log.Printf("Direccion: %s - Operación: IO_STDIN_READ", direccion)
 
 }
 
 func IO_STDOUT_WRITE(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("Se solicitó STDOUT")
 	pid := r.PathValue("pid")
 	tamaño := r.PathValue("tamaño")
 	direccion := r.PathValue("direccion")
@@ -203,7 +207,7 @@ func IO_STDOUT_WRITE(w http.ResponseWriter, r *http.Request) {
 	}
 	time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
 	respString := string(response)
-	log.Printf("Direc fisica: %s - Operación: IO_STDOUT_WRITE", direccion)
+	log.Printf("Direccion: %s - Operación: IO_STDOUT_WRITE", direccion)
 	log.Printf("El texto leido es: %s", respString)
 }
 

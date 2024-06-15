@@ -2257,3 +2257,30 @@ Configuracion cargada con exito!
 2024/06/15 16:19:30 open c2.config: no such file or directory
 2024/06/15 16:19:42 
 Configuracion cargada con exito!
+2024/06/15 20:56:42 open c2.config: no such file or directory
+2024/06/15 20:56:54 
+Configuracion cargada con exito!
+2024/06/15 20:56:54 error enviando: Post "http://localhost:8001/nuevoIO": dial tcp 127.0.0.1:8001: connect: connection refused
+2024/06/15 20:57:42 
+Configuracion cargada con exito!
+2024/06/15 21:02:25 
+Configuracion cargada con exito!
+2024/06/15 21:05:42 
+Configuracion cargada con exito!
+2024/06/15 21:07:10 Error guardando el texto ingresado %!(EXTRA string=Post "http://localhost:8002/escribir": EOF)
+2024/06/15 21:08:43 Se guardo correctamente el mensaje
+2024/06/15 21:08:43 Direccion: 3 - Operación: IO_STDIN_READ
+2024/06/15 21:10:59 
+Configuracion cargada con exito!
+2024/06/15 21:12:04 Se guardo correctamente el mensaje
+2024/06/15 21:12:04 Direccion: 3 - Operación: IO_STDIN_READ
+2024/06/15 21:12:08 Direc fisica: 0 - Operación: IO_STDOUT_WRITE
+2024/06/15 21:12:08 El texto leido es: 
+2024/06/15 21:23:33 
+Configuracion cargada con exito!
+2024/06/15 21:23:53 
+Configuracion cargada con exito!
+2024/06/15 21:24:43 Se guardo correctamente el mensaje
+2024/06/15 21:24:43 Direccion: 3 - Operación: IO_STDIN_READ
+2024/06/15 21:24:47 Direc fisica: 3 - Operación: IO_STDOUT_WRITE
+2024/06/15 21:24:47 El texto leido es: stdin     
