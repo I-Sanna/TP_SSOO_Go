@@ -129,8 +129,8 @@ func InicializarVariables() {
 	puertosDispSTDOUT = make(map[string]int)
 	listaEsperaRecursos = make(map[string][]int)
 	listaEsperaGenericos = make(map[string][]BodyIO)
-	listaEsperaSTDIN = make(map[string][]int)
-	listaEsperaSTDOUT = make(map[string][]int)
+	listaEsperaSTDIN = make(map[string][]BodySTD)
+	listaEsperaSTDOUT = make(map[string][]BodySTD)
 
 	for i := 0; i < len(globals.ClientConfig.Resources); i++ {
 		recursos[globals.ClientConfig.Resources[i]] = globals.ClientConfig.Resource_instances[i]
@@ -837,7 +837,7 @@ func agregarElemAListaGenericos(dispositivo string, puerto int, datosIO BodyIO) 
 	}
 }
 
-func agregarElemAListaSTDIN(dispositivo string, puerto int, datosIO BodySTD) {
+func agregarElemAListaSTDIN(dispositivo string, puerto int, datosSTD BodySTD) {
 	<-semProcesoBloqueado
 	listaEsperaSTDIN[dispositivo] = append(listaEsperaSTDIN[dispositivo], datosSTD)
 	if len(listaEsperaSTDIN[dispositivo]) == 1 {
@@ -845,7 +845,7 @@ func agregarElemAListaSTDIN(dispositivo string, puerto int, datosIO BodySTD) {
 	}
 }
 
-func agregarElemAListaSTDOUT(dispositivo string, puerto int, datosIO BodySTD) {
+func agregarElemAListaSTDOUT(dispositivo string, puerto int, datosSTD BodySTD) {
 	<-semProcesoBloqueado
 	listaEsperaSTDOUT[dispositivo] = append(listaEsperaSTDOUT[dispositivo], datosSTD)
 	if len(listaEsperaSTDOUT[dispositivo]) == 1 {
