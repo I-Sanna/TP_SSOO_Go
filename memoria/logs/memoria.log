@@ -14903,3 +14903,702 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/06/15 14:38:49 tabla de paginas-------map[]
 2024/06/15 14:38:49 tabla GLOBAL de paginas------map[]
 2024/06/15 14:38:49 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/15 15:46:02 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 15:46:02 PID: 0 - Tamaño: 256
+2024/06/15 15:46:06 128 128
+
+
+
+2024/06/15 15:46:06 tabla de paginas-------map[]
+2024/06/15 15:46:06 tabla GLOBAL de paginas------map[]
+2024/06/15 15:46:06 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/06/15 15:46:09 aa 16
+2024/06/15 15:46:10 PID: 0 - Pagina: 0 - Marco: 0
+2024/06/15 15:46:11 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/15 15:46:14 aa 16
+2024/06/15 15:46:15 PID: 0 - Pagina: 1 - Marco: 1
+2024/06/15 15:46:16 PID: 0 - Accion: Escribir - Direccion fisica: 16 - Tamaño a escribir: 4
+2024/06/15 15:46:19 aa 16
+2024/06/15 15:46:20 PID: 0 - Pagina: 2 - Marco: 2
+2024/06/15 15:46:21 PID: 0 - Accion: Escribir - Direccion fisica: 32 - Tamaño a escribir: 4
+2024/06/15 15:46:24 aa 16
+2024/06/15 15:46:25 PID: 0 - Pagina: 3 - Marco: 3
+2024/06/15 15:46:26 PID: 0 - Accion: Escribir - Direccion fisica: 48 - Tamaño a escribir: 4
+2024/06/15 15:46:29 aa 16
+2024/06/15 15:46:30 PID: 0 - Pagina: 4 - Marco: 4
+2024/06/15 15:46:31 PID: 0 - Accion: Escribir - Direccion fisica: 64 - Tamaño a escribir: 4
+2024/06/15 15:46:34 aa 16
+2024/06/15 15:46:35 PID: 0 - Pagina: 5 - Marco: 5
+2024/06/15 15:46:36 PID: 0 - Accion: Escribir - Direccion fisica: 80 - Tamaño a escribir: 4
+2024/06/15 15:46:39 aa 16
+2024/06/15 15:46:40 PID: 0 - Pagina: 6 - Marco: 6
+2024/06/15 15:46:41 PID: 0 - Accion: Escribir - Direccion fisica: 96 - Tamaño a escribir: 4
+2024/06/15 15:46:44 aa 16
+2024/06/15 15:46:45 PID: 0 - Pagina: 7 - Marco: 7
+2024/06/15 15:46:46 PID: 0 - Accion: Escribir - Direccion fisica: 112 - Tamaño a escribir: 4
+2024/06/15 15:49:13 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 15:49:13 PID: 1 - Tamaño: 256
+2024/06/15 15:49:17 128 128
+
+
+
+2024/06/15 15:49:17 tabla de paginas-------map[]
+2024/06/15 15:49:17 tabla GLOBAL de paginas------map[]
+2024/06/15 15:49:17 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/06/15 15:49:20 aa 16
+2024/06/15 15:49:21 PID: 1 - Pagina: 0 - Marco: 0
+2024/06/15 15:49:22 PID: 1 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/15 15:49:25 aa 16
+2024/06/15 15:49:26 PID: 1 - Pagina: 1 - Marco: 1
+2024/06/15 15:49:27 PID: 1 - Accion: Escribir - Direccion fisica: 16 - Tamaño a escribir: 4
+2024/06/15 15:49:30 aa 16
+2024/06/15 15:49:31 PID: 1 - Pagina: 2 - Marco: 2
+2024/06/15 15:49:32 PID: 1 - Accion: Escribir - Direccion fisica: 32 - Tamaño a escribir: 4
+2024/06/15 15:49:35 aa 16
+2024/06/15 15:49:36 PID: 1 - Pagina: 3 - Marco: 3
+2024/06/15 15:49:37 PID: 1 - Accion: Escribir - Direccion fisica: 48 - Tamaño a escribir: 4
+2024/06/15 15:49:40 aa 16
+2024/06/15 15:49:41 PID: 1 - Pagina: 4 - Marco: 4
+2024/06/15 15:49:42 PID: 1 - Accion: Escribir - Direccion fisica: 64 - Tamaño a escribir: 4
+2024/06/15 15:49:45 aa 16
+2024/06/15 15:49:46 PID: 1 - Pagina: 5 - Marco: 5
+2024/06/15 15:49:47 PID: 1 - Accion: Escribir - Direccion fisica: 80 - Tamaño a escribir: 4
+2024/06/15 15:49:50 aa 16
+2024/06/15 15:49:51 PID: 1 - Pagina: 6 - Marco: 6
+2024/06/15 15:49:52 PID: 1 - Accion: Escribir - Direccion fisica: 96 - Tamaño a escribir: 4
+2024/06/15 15:49:55 aa 16
+2024/06/15 15:49:56 PID: 1 - Pagina: 7 - Marco: 7
+2024/06/15 15:49:57 PID: 1 - Accion: Escribir - Direccion fisica: 112 - Tamaño a escribir: 4
+2024/06/15 15:51:09 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 15:51:09 PID: 0 - Tamaño: 256
+2024/06/15 15:51:13 128 128
+
+
+
+2024/06/15 15:51:13 http: panic serving 127.0.0.1:59972: runtime error: index out of range [-1]
+goroutine 8 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6a0020?, 0xc00001a2e8?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.ReservarMemoria({0x735060, 0xc0000cea80}, 0xc00009cc60)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:151 +0x9a5
+net/http.HandlerFunc.ServeHTTP(0xc000089040?, {0x735060?, 0xc0000cea80?}, 0x63001a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x735060, 0xc0000cea80}, 0xc00009cc60)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00007f2f0?}, {0x735060?, 0xc0000cea80?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c6360, {0x7355c8, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/15 15:51:14 128 128
+
+
+
+2024/06/15 15:51:14 http: panic serving 127.0.0.1:38426: runtime error: index out of range [-1]
+goroutine 13 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6a0020?, 0xc00001a318?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.ReservarMemoria({0x735060, 0xc0000ceb60}, 0xc00009cd80)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:151 +0x9a5
+net/http.HandlerFunc.ServeHTTP(0xc000089040?, {0x735060?, 0xc0000ceb60?}, 0x63001a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x735060, 0xc0000ceb60}, 0xc00009cd80)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00007f650?}, {0x735060?, 0xc0000ceb60?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c66c0, {0x7355c8, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/15 15:51:17 aa 16
+2024/06/15 15:51:18 PID: 2 - Pagina: 0 - Marco: 0
+2024/06/15 15:51:19 PID: 2 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/15 15:51:19 http: panic serving 127.0.0.1:38432: runtime error: index out of range [-1]
+goroutine 15 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6a0020?, 0xc00001a3f0?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.EscribirMemoria({0x735060, 0xc0000cefc0}, 0xc00009d320)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:361 +0xad8
+net/http.HandlerFunc.ServeHTTP(0xc000089040?, {0x735060?, 0xc0000cefc0?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x735060, 0xc0000cefc0}, 0xc00009d320)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x7342f0?}, {0x735060?, 0xc0000cefc0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c6870, {0x7355c8, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/15 15:51:22 aa 16
+2024/06/15 15:51:23 PID: 2 - Pagina: 1 - Marco: 0
+2024/06/15 15:51:24 PID: 2 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/15 15:51:24 http: panic serving 127.0.0.1:38436: runtime error: index out of range [-1]
+goroutine 22 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6a0020?, 0xc00001a4e0?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.EscribirMemoria({0x735060, 0xc0000cf420}, 0xc00009d9e0)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:361 +0xad8
+net/http.HandlerFunc.ServeHTTP(0xc000089040?, {0x735060?, 0xc0000cf420?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x735060, 0xc0000cf420}, 0xc00009d9e0)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x7342f0?}, {0x735060?, 0xc0000cf420?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c6d80, {0x7355c8, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/15 15:51:27 aa 16
+2024/06/15 15:51:28 PID: 2 - Pagina: 2 - Marco: 0
+2024/06/15 15:51:29 PID: 2 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/15 15:51:29 http: panic serving 127.0.0.1:35302: runtime error: index out of range [-1]
+goroutine 28 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6a0020?, 0xc00001a5d0?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.EscribirMemoria({0x735060, 0xc0000cf880}, 0xc0000f8000)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:361 +0xad8
+net/http.HandlerFunc.ServeHTTP(0xc000089040?, {0x735060?, 0xc0000cf880?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x735060, 0xc0000cf880}, 0xc0000f8000)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x7342f0?}, {0x735060?, 0xc0000cf880?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c7170, {0x7355c8, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/15 15:51:32 aa 16
+2024/06/15 15:51:33 PID: 2 - Pagina: 3 - Marco: 0
+2024/06/15 15:51:34 PID: 2 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/15 15:51:34 http: panic serving 127.0.0.1:35316: runtime error: index out of range [-1]
+goroutine 34 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6a0020?, 0xc00001a6d8?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.EscribirMemoria({0x735060, 0xc0000cfce0}, 0xc0000f85a0)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:361 +0xad8
+net/http.HandlerFunc.ServeHTTP(0xc000089040?, {0x735060?, 0xc0000cfce0?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x735060, 0xc0000cfce0}, 0xc0000f85a0)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x7342f0?}, {0x735060?, 0xc0000cfce0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c7560, {0x7355c8, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/15 15:51:34 http: panic serving 127.0.0.1:59966: runtime error: slice bounds out of range [:-1]
+goroutine 6 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6a0020?, 0xc00001a6f0?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.removerIndexInt(...)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:288
+memoria/utils.LiberarRecursos({0x735060, 0xc0000cfdc0}, 0xc0000f86c0)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:272 +0x7eb
+net/http.HandlerFunc.ServeHTTP(0xc000089040?, {0x735060?, 0xc0000cfdc0?}, 0x63001a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x735060, 0xc0000cfdc0}, 0xc0000f86c0)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00007efc0?}, {0x735060?, 0xc0000cfdc0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c6120, {0x7355c8, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/15 15:52:06 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 15:52:06 PID: 0 - Tamaño: 256
+2024/06/15 15:52:10 128 128
+
+
+
+2024/06/15 15:52:10 tabla de paginas-------map[]
+2024/06/15 15:52:10 tabla GLOBAL de paginas------map[]
+2024/06/15 15:52:10 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/06/15 15:52:13 aa 16
+2024/06/15 15:52:14 PID: 0 - Pagina: 0 - Marco: 0
+2024/06/15 15:52:15 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/15 15:52:18 aa 16
+2024/06/15 15:52:19 PID: 0 - Pagina: 1 - Marco: 1
+2024/06/15 15:52:20 PID: 0 - Accion: Escribir - Direccion fisica: 16 - Tamaño a escribir: 4
+2024/06/15 15:52:23 aa 16
+2024/06/15 15:52:24 PID: 0 - Pagina: 2 - Marco: 2
+2024/06/15 15:52:25 PID: 0 - Accion: Escribir - Direccion fisica: 32 - Tamaño a escribir: 4
+2024/06/15 15:52:28 aa 16
+2024/06/15 15:52:29 PID: 0 - Pagina: 3 - Marco: 3
+2024/06/15 15:52:30 PID: 0 - Accion: Escribir - Direccion fisica: 48 - Tamaño a escribir: 4
+2024/06/15 15:52:33 aa 16
+2024/06/15 15:52:34 PID: 0 - Pagina: 4 - Marco: 4
+2024/06/15 15:52:35 PID: 0 - Accion: Escribir - Direccion fisica: 64 - Tamaño a escribir: 4
+2024/06/15 15:52:38 aa 16
+2024/06/15 15:52:39 PID: 0 - Pagina: 5 - Marco: 5
+2024/06/15 15:52:40 PID: 0 - Accion: Escribir - Direccion fisica: 80 - Tamaño a escribir: 4
+2024/06/15 15:52:43 aa 16
+2024/06/15 15:52:44 PID: 0 - Pagina: 6 - Marco: 6
+2024/06/15 15:52:45 PID: 0 - Accion: Escribir - Direccion fisica: 96 - Tamaño a escribir: 4
+2024/06/15 15:52:48 aa 16
+2024/06/15 15:52:49 PID: 0 - Pagina: 7 - Marco: 7
+2024/06/15 15:52:50 PID: 0 - Accion: Escribir - Direccion fisica: 112 - Tamaño a escribir: 4
+2024/06/15 15:53:46 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 15:53:46 PID: 0 - Tamaño: 256
+2024/06/15 15:53:50 128 128
+
+
+
+2024/06/15 15:53:50 tabla de paginas-------map[]
+2024/06/15 15:53:50 tabla GLOBAL de paginas------map[]
+2024/06/15 15:53:50 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/06/15 15:53:53 aa 16
+2024/06/15 15:53:54 PID: 0 - Pagina: 0 - Marco: 0
+2024/06/15 15:53:55 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/15 15:53:58 aa 16
+2024/06/15 15:53:59 PID: 0 - Pagina: 1 - Marco: 1
+2024/06/15 15:54:00 PID: 0 - Accion: Escribir - Direccion fisica: 16 - Tamaño a escribir: 4
+2024/06/15 15:54:03 aa 16
+2024/06/15 15:54:04 PID: 0 - Pagina: 2 - Marco: 2
+2024/06/15 15:54:05 PID: 0 - Accion: Escribir - Direccion fisica: 32 - Tamaño a escribir: 4
+2024/06/15 15:54:08 aa 16
+2024/06/15 15:54:09 PID: 0 - Pagina: 3 - Marco: 3
+2024/06/15 15:54:10 PID: 0 - Accion: Escribir - Direccion fisica: 48 - Tamaño a escribir: 4
+2024/06/15 15:54:13 aa 16
+2024/06/15 15:54:14 PID: 0 - Pagina: 4 - Marco: 4
+2024/06/15 15:54:15 PID: 0 - Accion: Escribir - Direccion fisica: 64 - Tamaño a escribir: 4
+2024/06/15 15:54:18 aa 16
+2024/06/15 15:54:19 PID: 0 - Pagina: 5 - Marco: 5
+2024/06/15 15:54:20 PID: 0 - Accion: Escribir - Direccion fisica: 80 - Tamaño a escribir: 4
+2024/06/15 15:54:23 aa 16
+2024/06/15 15:54:24 PID: 0 - Pagina: 6 - Marco: 6
+2024/06/15 15:54:25 PID: 0 - Accion: Escribir - Direccion fisica: 96 - Tamaño a escribir: 4
+2024/06/15 15:54:28 aa 16
+2024/06/15 15:54:29 PID: 0 - Pagina: 7 - Marco: 7
+2024/06/15 15:54:30 PID: 0 - Accion: Escribir - Direccion fisica: 112 - Tamaño a escribir: 4
+2024/06/15 16:28:32 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 16:28:32 PID: 1 - Tamaño: 256
+2024/06/15 16:28:36 128 128
+
+
+
+2024/06/15 16:28:36 tabla de paginas-------map[]
+2024/06/15 16:28:36 tabla GLOBAL de paginas------map[]
+2024/06/15 16:28:36 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/06/15 16:28:39 aa 16
+2024/06/15 16:28:40 PID: 1 - Pagina: 0 - Marco: 0
+2024/06/15 16:28:41 PID: 1 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 1
+2024/06/15 16:29:36 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 16:29:36 PID: 2 - Tamaño: 256
+2024/06/15 16:29:40 128 128
+
+
+
+2024/06/15 16:29:40 tabla de paginas-------map[]
+2024/06/15 16:29:40 tabla GLOBAL de paginas------map[]
+2024/06/15 16:29:40 PID: 2 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/06/15 16:29:43 aa 16
+2024/06/15 16:29:44 PID: 2 - Pagina: 0 - Marco: 0
+2024/06/15 16:29:45 PID: 2 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 1
+2024/06/15 16:37:28 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 16:37:28 PID: 0 - Tamaño: 256
+2024/06/15 16:37:32 128 128
+
+
+
+2024/06/15 16:37:32 tabla de paginas-------map[]
+2024/06/15 16:37:32 tabla GLOBAL de paginas------map[]
+2024/06/15 16:37:32 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/06/15 16:37:35 aa 16
+2024/06/15 16:37:36 PID: 0 - Pagina: 0 - Marco: 0
+2024/06/15 16:37:37 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 1
+2024/06/15 16:38:34 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 16:38:34 PID: 0 - Tamaño: 256
+2024/06/15 16:38:39 128 128
+
+
+
+2024/06/15 16:38:39 tabla de paginas-------map[]
+2024/06/15 16:38:39 tabla GLOBAL de paginas------map[]
+2024/06/15 16:38:39 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/06/15 16:38:42 aa 16
+2024/06/15 16:38:43 PID: 0 - Pagina: 0 - Marco: 0
+2024/06/15 16:38:44 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 1
+2024/06/15 16:41:00 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 16:41:00 PID: 1 - Tamaño: 256
+2024/06/15 16:41:22 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 16:41:22 PID: 0 - Tamaño: 256
+2024/06/15 16:41:26 128 128
+
+
+
+2024/06/15 16:41:26 tabla de paginas-------map[]
+2024/06/15 16:41:26 tabla GLOBAL de paginas------map[]
+2024/06/15 16:41:26 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/06/15 16:41:29 aa 16
+2024/06/15 16:41:30 PID: 0 - Pagina: 0 - Marco: 0
+2024/06/15 16:41:31 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 1
+2024/06/15 16:41:34 aa 16
+2024/06/15 16:41:35 PID: 0 - Pagina: 1 - Marco: 1
+2024/06/15 16:41:36 PID: 0 - Accion: Escribir - Direccion fisica: 16 - Tamaño a escribir: 4
+2024/06/15 16:41:39 aa 16
+2024/06/15 16:41:40 PID: 0 - Pagina: 2 - Marco: 2
+2024/06/15 16:41:41 PID: 0 - Accion: Escribir - Direccion fisica: 32 - Tamaño a escribir: 4
+2024/06/15 16:41:44 aa 16
+2024/06/15 16:41:45 PID: 0 - Pagina: 3 - Marco: 3
+2024/06/15 16:41:46 PID: 0 - Accion: Escribir - Direccion fisica: 48 - Tamaño a escribir: 4
+2024/06/15 16:41:49 aa 16
+2024/06/15 16:41:50 PID: 0 - Pagina: 4 - Marco: 4
+2024/06/15 16:41:51 PID: 0 - Accion: Escribir - Direccion fisica: 64 - Tamaño a escribir: 4
+2024/06/15 16:41:54 aa 16
+2024/06/15 16:41:55 PID: 0 - Pagina: 5 - Marco: 5
+2024/06/15 16:41:56 PID: 0 - Accion: Escribir - Direccion fisica: 80 - Tamaño a escribir: 4
+2024/06/15 16:41:59 aa 16
+2024/06/15 16:42:00 PID: 0 - Pagina: 6 - Marco: 6
+2024/06/15 16:42:01 PID: 0 - Accion: Escribir - Direccion fisica: 96 - Tamaño a escribir: 4
+2024/06/15 16:42:04 aa 16
+2024/06/15 16:42:05 PID: 0 - Pagina: 7 - Marco: 7
+2024/06/15 16:42:06 PID: 0 - Accion: Escribir - Direccion fisica: 112 - Tamaño a escribir: 4
+2024/06/15 17:09:57 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 17:09:57 PID: 1 - Tamaño: 256
+2024/06/15 17:10:01 128 128
+
+
+
+2024/06/15 17:10:01 tabla de paginas-------map[]
+2024/06/15 17:10:01 tabla GLOBAL de paginas------map[]
+2024/06/15 17:10:01 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/06/15 17:10:04 aa 16
+2024/06/15 17:10:05 PID: 1 - Pagina: 0 - Marco: 0
+2024/06/15 17:10:06 PID: 1 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 1
+2024/06/15 17:10:09 aa 16
+2024/06/15 17:10:10 PID: 1 - Pagina: 1 - Marco: 1
+2024/06/15 17:10:11 PID: 1 - Accion: Escribir - Direccion fisica: 16 - Tamaño a escribir: 4
+2024/06/15 17:10:14 aa 16
+2024/06/15 17:10:15 PID: 1 - Pagina: 2 - Marco: 2
+2024/06/15 17:10:16 PID: 1 - Accion: Escribir - Direccion fisica: 32 - Tamaño a escribir: 4
+2024/06/15 17:10:19 aa 16
+2024/06/15 17:10:20 PID: 1 - Pagina: 3 - Marco: 3
+2024/06/15 17:10:21 PID: 1 - Accion: Escribir - Direccion fisica: 48 - Tamaño a escribir: 4
+2024/06/15 17:10:24 aa 16
+2024/06/15 17:10:25 PID: 1 - Pagina: 4 - Marco: 4
+2024/06/15 17:10:26 PID: 1 - Accion: Escribir - Direccion fisica: 64 - Tamaño a escribir: 4
+2024/06/15 17:10:29 aa 16
+2024/06/15 17:10:30 PID: 1 - Pagina: 5 - Marco: 5
+2024/06/15 17:10:31 PID: 1 - Accion: Escribir - Direccion fisica: 80 - Tamaño a escribir: 4
+2024/06/15 17:10:34 aa 16
+2024/06/15 17:10:35 PID: 1 - Pagina: 6 - Marco: 6
+2024/06/15 17:10:36 PID: 1 - Accion: Escribir - Direccion fisica: 96 - Tamaño a escribir: 4
+2024/06/15 17:10:39 aa 16
+2024/06/15 17:10:40 PID: 1 - Pagina: 7 - Marco: 7
+2024/06/15 17:10:41 PID: 1 - Accion: Escribir - Direccion fisica: 112 - Tamaño a escribir: 4
+2024/06/15 17:19:23 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 17:19:23 PID: 0 - Tamaño: 256
+2024/06/15 17:19:27 128 128
+
+
+
+2024/06/15 17:19:27 tabla de paginas-------map[]
+2024/06/15 17:19:27 tabla GLOBAL de paginas------map[]
+2024/06/15 17:19:27 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/06/15 17:19:30 aa 16
+2024/06/15 17:19:31 PID: 0 - Pagina: 0 - Marco: 0
+2024/06/15 17:19:49 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 17:19:49 PID: 0 - Tamaño: 256
+2024/06/15 17:19:53 128 128
+
+
+
+2024/06/15 17:19:53 tabla de paginas-------map[]
+2024/06/15 17:19:53 tabla GLOBAL de paginas------map[]
+2024/06/15 17:19:53 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/06/15 17:19:56 aa 16
+2024/06/15 17:19:57 PID: 0 - Pagina: 0 - Marco: 0
+2024/06/15 17:19:58 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/15 17:20:01 aa 16
+2024/06/15 17:20:02 PID: 0 - Pagina: 1 - Marco: 1
+2024/06/15 17:20:03 PID: 0 - Accion: Escribir - Direccion fisica: 16 - Tamaño a escribir: 4
+2024/06/15 17:20:06 aa 16
+2024/06/15 17:20:07 PID: 0 - Pagina: 2 - Marco: 2
+2024/06/15 17:20:08 PID: 0 - Accion: Escribir - Direccion fisica: 32 - Tamaño a escribir: 4
+2024/06/15 17:20:11 aa 16
+2024/06/15 17:20:12 PID: 0 - Pagina: 3 - Marco: 3
+2024/06/15 17:20:13 PID: 0 - Accion: Escribir - Direccion fisica: 48 - Tamaño a escribir: 4
+2024/06/15 17:20:16 aa 16
+2024/06/15 17:20:17 PID: 0 - Pagina: 4 - Marco: 4
+2024/06/15 17:20:18 PID: 0 - Accion: Escribir - Direccion fisica: 64 - Tamaño a escribir: 4
+2024/06/15 17:20:21 aa 16
+2024/06/15 17:20:22 PID: 0 - Pagina: 5 - Marco: 5
+2024/06/15 17:20:23 PID: 0 - Accion: Escribir - Direccion fisica: 80 - Tamaño a escribir: 4
+2024/06/15 17:20:26 aa 16
+2024/06/15 17:20:27 PID: 0 - Pagina: 6 - Marco: 6
+2024/06/15 17:20:28 PID: 0 - Accion: Escribir - Direccion fisica: 96 - Tamaño a escribir: 4
+2024/06/15 17:20:31 aa 16
+2024/06/15 17:20:32 PID: 0 - Pagina: 7 - Marco: 7
+2024/06/15 17:20:33 PID: 0 - Accion: Escribir - Direccion fisica: 112 - Tamaño a escribir: 4
+2024/06/15 17:25:43 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 17:25:43 PID: 0 - Tamaño: 256
+2024/06/15 17:25:47 128 128
+
+
+
+2024/06/15 17:25:47 http: panic serving 127.0.0.1:41304: runtime error: index out of range [-1]
+goroutine 8 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6a0020?, 0xc00001a2e8?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.ReservarMemoria({0x735060, 0xc0000cea80}, 0xc00009cb40)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:151 +0x9a5
+net/http.HandlerFunc.ServeHTTP(0xc000088f70?, {0x735060?, 0xc0000cea80?}, 0x63001a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x735060, 0xc0000cea80}, 0xc00009cb40)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00007f2f0?}, {0x735060?, 0xc0000cea80?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c6360, {0x7355c8, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/15 17:25:48 128 128
+
+
+
+2024/06/15 17:25:48 http: panic serving 127.0.0.1:41320: runtime error: index out of range [-1]
+goroutine 13 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6a0020?, 0xc00001a318?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.ReservarMemoria({0x735060, 0xc0000ceb60}, 0xc00009cc60)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:151 +0x9a5
+net/http.HandlerFunc.ServeHTTP(0xc000088f70?, {0x735060?, 0xc0000ceb60?}, 0x63001a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x735060, 0xc0000ceb60}, 0xc00009cc60)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00007f650?}, {0x735060?, 0xc0000ceb60?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c66c0, {0x7355c8, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/15 17:25:50 aa 16
+2024/06/15 17:25:51 PID: 1 - Pagina: 0 - Marco: 0
+2024/06/15 17:25:52 PID: 1 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/15 17:25:52 http: panic serving 127.0.0.1:41330: runtime error: index out of range [-1]
+goroutine 15 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6a0020?, 0xc00001a3d8?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.EscribirMemoria({0x735060, 0xc0000ceee0}, 0xc00009d0e0)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:361 +0xad8
+net/http.HandlerFunc.ServeHTTP(0xc000088f70?, {0x735060?, 0xc0000ceee0?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x735060, 0xc0000ceee0}, 0xc00009d0e0)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x7342f0?}, {0x735060?, 0xc0000ceee0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c6870, {0x7355c8, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/15 17:25:54 http: panic serving 127.0.0.1:41300: runtime error: slice bounds out of range [:-1]
+goroutine 6 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6a0020?, 0xc00001a438?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.removerIndexInt(...)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:288
+memoria/utils.LiberarRecursos({0x735060, 0xc0000cf180}, 0xc00009d560)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:272 +0x7eb
+net/http.HandlerFunc.ServeHTTP(0xc000088f70?, {0x735060?, 0xc0000cf180?}, 0x63001a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x735060, 0xc0000cf180}, 0xc00009d560)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00007efc0?}, {0x735060?, 0xc0000cf180?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c6120, {0x7355c8, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/15 17:26:15 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 17:26:15 PID: 0 - Tamaño: 256
+2024/06/15 17:26:19 128 128
+
+
+
+2024/06/15 17:26:19 tabla de paginas-------map[]
+2024/06/15 17:26:19 tabla GLOBAL de paginas------map[]
+2024/06/15 17:26:19 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/06/15 17:26:21 aa 16
+2024/06/15 17:26:22 PID: 0 - Pagina: 0 - Marco: 0
+2024/06/15 17:26:23 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/15 17:26:26 aa 16
+2024/06/15 17:26:27 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/15 17:26:31 aa 16
+2024/06/15 17:26:32 PID: 0 - Pagina: 2 - Marco: 2
+2024/06/15 17:26:33 PID: 0 - Accion: Escribir - Direccion fisica: 32 - Tamaño a escribir: 1
+2024/06/15 17:26:37 aa 16
+2024/06/15 17:26:38 PID: 0 - Pagina: 3 - Marco: 3
+2024/06/15 17:26:39 PID: 0 - Accion: Escribir - Direccion fisica: 48 - Tamaño a escribir: 1
+2024/06/15 17:32:27 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 17:32:27 PID: 1 - Tamaño: 256
+2024/06/15 17:32:31 128 128
+
+
+
+2024/06/15 17:32:31 tabla de paginas-------map[]
+2024/06/15 17:32:31 tabla GLOBAL de paginas------map[]
+2024/06/15 17:32:31 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/06/15 17:32:33 aa 16
+2024/06/15 17:32:34 PID: 1 - Pagina: 0 - Marco: 0
+2024/06/15 17:32:35 PID: 1 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/15 17:32:38 aa 16
+2024/06/15 17:32:39 PID: 1 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/15 17:32:43 aa 16
+2024/06/15 17:32:44 PID: 1 - Pagina: 2 - Marco: 2
+2024/06/15 17:32:45 PID: 1 - Accion: Escribir - Direccion fisica: 32 - Tamaño a escribir: 1
+2024/06/15 17:32:49 aa 16
+2024/06/15 17:32:50 PID: 1 - Pagina: 3 - Marco: 3
+2024/06/15 17:32:51 PID: 1 - Accion: Escribir - Direccion fisica: 48 - Tamaño a escribir: 1
+2024/06/15 17:35:23 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 17:35:23 PID: 2 - Tamaño: 256
+2024/06/15 17:35:41 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 17:35:41 PID: 0 - Tamaño: 256
+2024/06/15 17:35:45 128 128
+
+
+
+2024/06/15 17:35:45 tabla de paginas-------map[]
+2024/06/15 17:35:45 tabla GLOBAL de paginas------map[]
+2024/06/15 17:35:45 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/06/15 17:35:47 aa 16
+2024/06/15 17:35:48 PID: 0 - Pagina: 0 - Marco: 0
+2024/06/15 17:35:49 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/15 17:35:52 aa 16
+2024/06/15 17:35:53 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/15 17:35:57 aa 16
+2024/06/15 17:35:58 PID: 0 - Pagina: 2 - Marco: 2
+2024/06/15 17:35:59 PID: 0 - Accion: Escribir - Direccion fisica: 32 - Tamaño a escribir: 1
+2024/06/15 17:36:03 aa 16
+2024/06/15 17:36:04 PID: 0 - Pagina: 3 - Marco: 3
+2024/06/15 17:36:05 PID: 0 - Accion: Escribir - Direccion fisica: 48 - Tamaño a escribir: 1
+2024/06/15 17:38:44 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 17:38:44 PID: 1 - Tamaño: 256
+2024/06/15 17:38:48 128 128
+
+
+
+2024/06/15 17:38:48 tabla de paginas-------map[]
+2024/06/15 17:38:48 tabla GLOBAL de paginas------map[]
+2024/06/15 17:38:48 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/06/15 17:38:50 aa 16
+2024/06/15 17:38:51 PID: 1 - Pagina: 2 - Marco: 2
+2024/06/15 17:38:52 PID: 1 - Accion: Escribir - Direccion fisica: 32 - Tamaño a escribir: 4
+2024/06/15 17:38:55 aa 16
+2024/06/15 17:38:56 PID: 1 - Pagina: 1 - Marco: 1
+2024/06/15 17:38:57 PID: 1 - Accion: Escribir - Direccion fisica: 16 - Tamaño a escribir: 4
+2024/06/15 17:39:01 aa 16
+2024/06/15 17:39:02 PID: 1 - Accion: Escribir - Direccion fisica: 32 - Tamaño a escribir: 1
+2024/06/15 17:39:06 aa 16
+2024/06/15 17:39:07 PID: 1 - Pagina: 3 - Marco: 3
+2024/06/15 17:39:08 PID: 1 - Accion: Escribir - Direccion fisica: 48 - Tamaño a escribir: 1
+2024/06/15 17:41:46 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 17:41:46 PID: 0 - Tamaño: 256
+2024/06/15 17:41:50 128 128
+
+
+
+2024/06/15 17:41:50 tabla de paginas-------map[]
+2024/06/15 17:41:50 tabla GLOBAL de paginas------map[]
+2024/06/15 17:41:50 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/06/15 17:41:52 aa 16
+2024/06/15 17:41:53 PID: 0 - Pagina: 2 - Marco: 2
+2024/06/15 17:41:54 PID: 0 - Accion: Escribir - Direccion fisica: 32 - Tamaño a escribir: 4
+2024/06/15 17:41:57 aa 16
+2024/06/15 17:41:58 PID: 0 - Pagina: 1 - Marco: 1
+2024/06/15 17:41:59 PID: 0 - Accion: Escribir - Direccion fisica: 16 - Tamaño a escribir: 4
+2024/06/15 17:42:03 aa 16
+2024/06/15 17:42:04 PID: 0 - Accion: Escribir - Direccion fisica: 32 - Tamaño a escribir: 1
+2024/06/15 17:42:09 aa 16
+2024/06/15 17:42:10 PID: 0 - Pagina: 3 - Marco: 3
+2024/06/15 17:42:11 PID: 0 - Accion: Escribir - Direccion fisica: 48 - Tamaño a escribir: 1
+2024/06/15 17:42:14 aa 16
+2024/06/15 17:42:15 PID: 0 - Accion: Leer - Direccion fisica: 32 - Tamaño a leer: 1
+2024/06/15 17:50:42 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 17:50:42 PID: 0 - Tamaño: 256
+2024/06/15 17:50:46 128 128
+
+
+
+2024/06/15 17:50:46 tabla de paginas-------map[]
+2024/06/15 17:50:46 tabla GLOBAL de paginas------map[]
+2024/06/15 17:50:46 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/06/15 17:50:48 aa 16
+2024/06/15 17:50:49 PID: 0 - Pagina: 0 - Marco: 0
+2024/06/15 17:50:50 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/15 17:50:53 aa 16
+2024/06/15 17:50:54 PID: 0 - Pagina: 1 - Marco: 1
+2024/06/15 17:50:55 PID: 0 - Accion: Escribir - Direccion fisica: 16 - Tamaño a escribir: 4
+2024/06/15 17:50:59 aa 16
+2024/06/15 17:51:00 PID: 0 - Pagina: 2 - Marco: 2
+2024/06/15 17:51:01 PID: 0 - Accion: Escribir - Direccion fisica: 32 - Tamaño a escribir: 1
+2024/06/15 17:51:05 aa 16
+2024/06/15 17:51:06 PID: 0 - Pagina: 7 - Marco: 7
+2024/06/15 17:51:07 PID: 0 - Accion: Escribir - Direccion fisica: 112 - Tamaño a escribir: 1
+2024/06/15 17:51:10 aa 16
+2024/06/15 17:51:11 PID: 0 - Pagina: 3 - Marco: 3
+2024/06/15 17:51:12 PID: 0 - Accion: Escribir - Direccion fisica: 48 - Tamaño a escribir: 4
+2024/06/15 17:51:15 aa 16
+2024/06/15 17:51:16 PID: 0 - Accion: Escribir - Direccion fisica: 32 - Tamaño a escribir: 4
+2024/06/15 17:51:19 aa 16
+2024/06/15 17:51:20 PID: 0 - Accion: Escribir - Direccion fisica: 112 - Tamaño a escribir: 4
+2024/06/15 17:51:23 aa 16
+2024/06/15 17:51:24 PID: 0 - Accion: Escribir - Direccion fisica: 16 - Tamaño a escribir: 4
+2024/06/15 17:51:27 aa 16
+2024/06/15 17:51:28 PID: 0 - Pagina: 0 - Marco: 0
+2024/06/15 17:51:29 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/15 17:58:12 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 17:58:12 PID: 1 - Tamaño: 256
+2024/06/15 17:58:16 128 128
+
+
+
+2024/06/15 17:58:16 tabla de paginas-------map[]
+2024/06/15 17:58:16 tabla GLOBAL de paginas------map[]
+2024/06/15 17:58:16 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/06/15 17:58:18 aa 16
+2024/06/15 17:58:19 PID: 1 - Pagina: 0 - Marco: 0
+2024/06/15 17:58:20 PID: 1 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4
+2024/06/15 17:58:23 aa 16
+2024/06/15 17:58:24 PID: 1 - Pagina: 1 - Marco: 1
+2024/06/15 17:58:25 PID: 1 - Accion: Escribir - Direccion fisica: 16 - Tamaño a escribir: 4
+2024/06/15 17:58:29 aa 16
+2024/06/15 17:58:30 PID: 1 - Pagina: 2 - Marco: 2
+2024/06/15 17:58:31 PID: 1 - Accion: Escribir - Direccion fisica: 32 - Tamaño a escribir: 1
+2024/06/15 17:58:35 aa 16
+2024/06/15 17:58:36 PID: 1 - Pagina: 7 - Marco: 7
+2024/06/15 17:58:37 PID: 1 - Accion: Escribir - Direccion fisica: 112 - Tamaño a escribir: 1
+2024/06/15 17:58:40 aa 16
+2024/06/15 17:58:41 PID: 1 - Pagina: 3 - Marco: 3
+2024/06/15 17:58:42 PID: 1 - Accion: Escribir - Direccion fisica: 48 - Tamaño a escribir: 4
+2024/06/15 17:58:45 aa 16
+2024/06/15 17:58:46 PID: 1 - Accion: Escribir - Direccion fisica: 32 - Tamaño a escribir: 4
+2024/06/15 17:58:49 aa 16
+2024/06/15 17:58:50 PID: 1 - Accion: Escribir - Direccion fisica: 112 - Tamaño a escribir: 4
+2024/06/15 17:58:53 aa 16
+2024/06/15 17:58:54 PID: 1 - Accion: Escribir - Direccion fisica: 16 - Tamaño a escribir: 4
+2024/06/15 17:58:57 aa 16
+2024/06/15 17:58:58 PID: 1 - Pagina: 0 - Marco: 0
+2024/06/15 17:58:59 PID: 1 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 4

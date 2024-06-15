@@ -11067,3 +11067,1110 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/06/15 14:39:33 PID: 1 - Ejecutando: SUB - AX,BX
 2024/06/15 14:39:33 PID: 1 - FETCH - Program Counter: 20
 2024/06/15 14:39:34 PID: 1 - Ejecutando: EXIT
+2024/06/15 15:33:30 Inicializando TLB con 32 entradas
+2024/06/15 15:46:02 PID: 0 - FETCH - Program Counter: 0
+2024/06/15 15:46:03 PID: 0 - Ejecutando: SET - AX,1
+2024/06/15 15:46:03 PID: 0 - FETCH - Program Counter: 1
+2024/06/15 15:46:04 PID: 0 - Ejecutando: SET - ECX,36000
+2024/06/15 15:46:04 PID: 0 - FETCH - Program Counter: 2
+2024/06/15 15:46:05 PID: 0 - Ejecutando: RESIZE - 128
+2024/06/15 15:46:06 PID: 0 - FETCH - Program Counter: 3
+2024/06/15 15:46:07 PID: 0 - Ejecutando: SET - EDX,0
+2024/06/15 15:46:07 PID: 0 - FETCH - Program Counter: 4
+2024/06/15 15:46:08 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:46:09 Tamaño pagina: 16
+2024/06/15 15:46:09 Num pagina: 0
+2024/06/15 15:46:09 Desplazamiento: 0
+2024/06/15 15:46:09 PID: 0 - TLB MISS - Pagina: 0
+2024/06/15 15:46:10 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/06/15 15:46:10 direccion fisica 0
+2024/06/15 15:46:10 Valor a escribir en memoria: [160 140 0 0]
+2024/06/15 15:46:10 Body: {0 [160 140 0 0] 4 0}
+2024/06/15 15:46:11 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36000
+2024/06/15 15:46:11 PID: 0 - FETCH - Program Counter: 5
+2024/06/15 15:46:12 PID: 0 - Ejecutando: SET - EDX,16
+2024/06/15 15:46:12 PID: 0 - FETCH - Program Counter: 6
+2024/06/15 15:46:13 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:46:14 Tamaño pagina: 16
+2024/06/15 15:46:14 Num pagina: 1
+2024/06/15 15:46:14 Desplazamiento: 0
+2024/06/15 15:46:14 PID: 0 - TLB MISS - Pagina: 1
+2024/06/15 15:46:15 PID: 0 - OBTENER MARCO - Página: 1 - Marco: 1
+2024/06/15 15:46:15 direccion fisica 0
+2024/06/15 15:46:15 Valor a escribir en memoria: [160 140 0 0]
+2024/06/15 15:46:15 Body: {0 [160 140 0 0] 4 16}
+2024/06/15 15:46:16 PID: 0 - Acción: ESCRIBIR - Dirección Física: 16 - Valor: 36000
+2024/06/15 15:46:16 PID: 0 - FETCH - Program Counter: 7
+2024/06/15 15:46:17 PID: 0 - Ejecutando: SET - EDX,32
+2024/06/15 15:46:17 PID: 0 - FETCH - Program Counter: 8
+2024/06/15 15:46:18 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:46:19 Tamaño pagina: 16
+2024/06/15 15:46:19 Num pagina: 2
+2024/06/15 15:46:19 Desplazamiento: 0
+2024/06/15 15:46:19 PID: 0 - TLB MISS - Pagina: 2
+2024/06/15 15:46:20 PID: 0 - OBTENER MARCO - Página: 2 - Marco: 2
+2024/06/15 15:46:20 direccion fisica 0
+2024/06/15 15:46:20 Valor a escribir en memoria: [160 140 0 0]
+2024/06/15 15:46:20 Body: {0 [160 140 0 0] 4 32}
+2024/06/15 15:46:21 PID: 0 - Acción: ESCRIBIR - Dirección Física: 32 - Valor: 36000
+2024/06/15 15:46:21 PID: 0 - FETCH - Program Counter: 9
+2024/06/15 15:46:22 PID: 0 - Ejecutando: SET - EDX,48
+2024/06/15 15:46:22 PID: 0 - FETCH - Program Counter: 10
+2024/06/15 15:46:23 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:46:24 Tamaño pagina: 16
+2024/06/15 15:46:24 Num pagina: 3
+2024/06/15 15:46:24 Desplazamiento: 0
+2024/06/15 15:46:24 PID: 0 - TLB MISS - Pagina: 3
+2024/06/15 15:46:25 PID: 0 - OBTENER MARCO - Página: 3 - Marco: 3
+2024/06/15 15:46:25 direccion fisica 0
+2024/06/15 15:46:25 Valor a escribir en memoria: [160 140 0 0]
+2024/06/15 15:46:25 Body: {0 [160 140 0 0] 4 48}
+2024/06/15 15:46:26 PID: 0 - Acción: ESCRIBIR - Dirección Física: 48 - Valor: 36000
+2024/06/15 15:46:26 PID: 0 - FETCH - Program Counter: 11
+2024/06/15 15:46:27 PID: 0 - Ejecutando: SET - EDX,64
+2024/06/15 15:46:27 PID: 0 - FETCH - Program Counter: 12
+2024/06/15 15:46:28 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:46:29 Tamaño pagina: 16
+2024/06/15 15:46:29 Num pagina: 4
+2024/06/15 15:46:29 Desplazamiento: 0
+2024/06/15 15:46:29 PID: 0 - TLB MISS - Pagina: 4
+2024/06/15 15:46:30 PID: 0 - OBTENER MARCO - Página: 4 - Marco: 4
+2024/06/15 15:46:30 direccion fisica 0
+2024/06/15 15:46:30 Valor a escribir en memoria: [160 140 0 0]
+2024/06/15 15:46:30 Body: {0 [160 140 0 0] 4 64}
+2024/06/15 15:46:31 PID: 0 - Acción: ESCRIBIR - Dirección Física: 64 - Valor: 36000
+2024/06/15 15:46:31 PID: 0 - FETCH - Program Counter: 13
+2024/06/15 15:46:32 PID: 0 - Ejecutando: SET - EDX,80
+2024/06/15 15:46:32 PID: 0 - FETCH - Program Counter: 14
+2024/06/15 15:46:33 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:46:34 Tamaño pagina: 16
+2024/06/15 15:46:34 Num pagina: 5
+2024/06/15 15:46:34 Desplazamiento: 0
+2024/06/15 15:46:34 PID: 0 - TLB MISS - Pagina: 5
+2024/06/15 15:46:35 PID: 0 - OBTENER MARCO - Página: 5 - Marco: 5
+2024/06/15 15:46:35 direccion fisica 0
+2024/06/15 15:46:35 Valor a escribir en memoria: [160 140 0 0]
+2024/06/15 15:46:35 Body: {0 [160 140 0 0] 4 80}
+2024/06/15 15:46:36 PID: 0 - Acción: ESCRIBIR - Dirección Física: 80 - Valor: 36000
+2024/06/15 15:46:36 PID: 0 - FETCH - Program Counter: 15
+2024/06/15 15:46:37 PID: 0 - Ejecutando: SET - EDX,96
+2024/06/15 15:46:37 PID: 0 - FETCH - Program Counter: 16
+2024/06/15 15:46:38 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:46:39 Tamaño pagina: 16
+2024/06/15 15:46:39 Num pagina: 6
+2024/06/15 15:46:39 Desplazamiento: 0
+2024/06/15 15:46:39 PID: 0 - TLB MISS - Pagina: 6
+2024/06/15 15:46:40 PID: 0 - OBTENER MARCO - Página: 6 - Marco: 6
+2024/06/15 15:46:40 direccion fisica 0
+2024/06/15 15:46:40 Valor a escribir en memoria: [160 140 0 0]
+2024/06/15 15:46:40 Body: {0 [160 140 0 0] 4 96}
+2024/06/15 15:46:41 PID: 0 - Acción: ESCRIBIR - Dirección Física: 96 - Valor: 36000
+2024/06/15 15:46:41 PID: 0 - FETCH - Program Counter: 17
+2024/06/15 15:46:42 PID: 0 - Ejecutando: SET - EDX,112
+2024/06/15 15:46:42 PID: 0 - FETCH - Program Counter: 18
+2024/06/15 15:46:43 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:46:44 Tamaño pagina: 16
+2024/06/15 15:46:44 Num pagina: 7
+2024/06/15 15:46:44 Desplazamiento: 0
+2024/06/15 15:46:44 PID: 0 - TLB MISS - Pagina: 7
+2024/06/15 15:46:45 PID: 0 - OBTENER MARCO - Página: 7 - Marco: 7
+2024/06/15 15:46:45 direccion fisica 0
+2024/06/15 15:46:45 Valor a escribir en memoria: [160 140 0 0]
+2024/06/15 15:46:45 Body: {0 [160 140 0 0] 4 112}
+2024/06/15 15:46:46 PID: 0 - Acción: ESCRIBIR - Dirección Física: 112 - Valor: 36000
+2024/06/15 15:46:46 PID: 0 - FETCH - Program Counter: 19
+2024/06/15 15:46:47 PID: 0 - Ejecutando: EXIT
+2024/06/15 15:49:09 Inicializando TLB con 32 entradas
+2024/06/15 15:49:13 PID: 1 - FETCH - Program Counter: 0
+2024/06/15 15:49:14 PID: 1 - Ejecutando: SET - AX,1
+2024/06/15 15:49:14 PID: 1 - FETCH - Program Counter: 1
+2024/06/15 15:49:15 PID: 1 - Ejecutando: SET - ECX,36000
+2024/06/15 15:49:15 PID: 1 - FETCH - Program Counter: 2
+2024/06/15 15:49:16 PID: 1 - Ejecutando: RESIZE - 128
+2024/06/15 15:49:17 PID: 1 - FETCH - Program Counter: 3
+2024/06/15 15:49:18 PID: 1 - Ejecutando: SET - EDX,0
+2024/06/15 15:49:18 PID: 1 - FETCH - Program Counter: 4
+2024/06/15 15:49:19 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:49:20 PID: 1 - TLB MISS - Pagina: 0
+2024/06/15 15:49:21 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/06/15 15:49:22 PID: 1 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36000
+2024/06/15 15:49:22 PID: 1 - FETCH - Program Counter: 5
+2024/06/15 15:49:23 PID: 1 - Ejecutando: SET - EDX,16
+2024/06/15 15:49:23 PID: 1 - FETCH - Program Counter: 6
+2024/06/15 15:49:24 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:49:25 PID: 1 - TLB MISS - Pagina: 1
+2024/06/15 15:49:26 PID: 1 - OBTENER MARCO - Página: 1 - Marco: 1
+2024/06/15 15:49:27 PID: 1 - Acción: ESCRIBIR - Dirección Física: 16 - Valor: 36000
+2024/06/15 15:49:27 PID: 1 - FETCH - Program Counter: 7
+2024/06/15 15:49:28 PID: 1 - Ejecutando: SET - EDX,32
+2024/06/15 15:49:28 PID: 1 - FETCH - Program Counter: 8
+2024/06/15 15:49:29 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:49:30 PID: 1 - TLB MISS - Pagina: 2
+2024/06/15 15:49:31 PID: 1 - OBTENER MARCO - Página: 2 - Marco: 2
+2024/06/15 15:49:32 PID: 1 - Acción: ESCRIBIR - Dirección Física: 32 - Valor: 36000
+2024/06/15 15:49:32 PID: 1 - FETCH - Program Counter: 9
+2024/06/15 15:49:33 PID: 1 - Ejecutando: SET - EDX,48
+2024/06/15 15:49:33 PID: 1 - FETCH - Program Counter: 10
+2024/06/15 15:49:34 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:49:35 PID: 1 - TLB MISS - Pagina: 3
+2024/06/15 15:49:36 PID: 1 - OBTENER MARCO - Página: 3 - Marco: 3
+2024/06/15 15:49:37 PID: 1 - Acción: ESCRIBIR - Dirección Física: 48 - Valor: 36000
+2024/06/15 15:49:37 PID: 1 - FETCH - Program Counter: 11
+2024/06/15 15:49:38 PID: 1 - Ejecutando: SET - EDX,64
+2024/06/15 15:49:38 PID: 1 - FETCH - Program Counter: 12
+2024/06/15 15:49:39 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:49:40 PID: 1 - TLB MISS - Pagina: 4
+2024/06/15 15:49:41 PID: 1 - OBTENER MARCO - Página: 4 - Marco: 4
+2024/06/15 15:49:42 PID: 1 - Acción: ESCRIBIR - Dirección Física: 64 - Valor: 36000
+2024/06/15 15:49:42 PID: 1 - FETCH - Program Counter: 13
+2024/06/15 15:49:43 PID: 1 - Ejecutando: SET - EDX,80
+2024/06/15 15:49:43 PID: 1 - FETCH - Program Counter: 14
+2024/06/15 15:49:44 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:49:45 PID: 1 - TLB MISS - Pagina: 5
+2024/06/15 15:49:46 PID: 1 - OBTENER MARCO - Página: 5 - Marco: 5
+2024/06/15 15:49:47 PID: 1 - Acción: ESCRIBIR - Dirección Física: 80 - Valor: 36000
+2024/06/15 15:49:47 PID: 1 - FETCH - Program Counter: 15
+2024/06/15 15:49:48 PID: 1 - Ejecutando: SET - EDX,96
+2024/06/15 15:49:48 PID: 1 - FETCH - Program Counter: 16
+2024/06/15 15:49:49 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:49:50 PID: 1 - TLB MISS - Pagina: 6
+2024/06/15 15:49:51 PID: 1 - OBTENER MARCO - Página: 6 - Marco: 6
+2024/06/15 15:49:52 PID: 1 - Acción: ESCRIBIR - Dirección Física: 96 - Valor: 36000
+2024/06/15 15:49:52 PID: 1 - FETCH - Program Counter: 17
+2024/06/15 15:49:53 PID: 1 - Ejecutando: SET - EDX,112
+2024/06/15 15:49:53 PID: 1 - FETCH - Program Counter: 18
+2024/06/15 15:49:54 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:49:55 PID: 1 - TLB MISS - Pagina: 7
+2024/06/15 15:49:56 PID: 1 - OBTENER MARCO - Página: 7 - Marco: 7
+2024/06/15 15:49:57 PID: 1 - Acción: ESCRIBIR - Dirección Física: 112 - Valor: 36000
+2024/06/15 15:49:57 PID: 1 - FETCH - Program Counter: 19
+2024/06/15 15:49:58 PID: 1 - Ejecutando: EXIT
+2024/06/15 15:51:02 Inicializando TLB con 32 entradas
+2024/06/15 15:51:09 PID: 2 - FETCH - Program Counter: 0
+2024/06/15 15:51:10 PID: 2 - Ejecutando: SET - AX,1
+2024/06/15 15:51:10 PID: 2 - FETCH - Program Counter: 1
+2024/06/15 15:51:11 PID: 2 - Ejecutando: SET - ECX,36000
+2024/06/15 15:51:11 PID: 2 - FETCH - Program Counter: 2
+2024/06/15 15:51:12 PID: 2 - Ejecutando: RESIZE - 128
+2024/06/15 15:51:14 Error al enviar la solicitud: Get "http://localhost:8002/memoria/2/128": EOF
+2024/06/15 15:51:14 PID: 2 - FETCH - Program Counter: 3
+2024/06/15 15:51:15 PID: 2 - Ejecutando: SET - EDX,0
+2024/06/15 15:51:15 PID: 2 - FETCH - Program Counter: 4
+2024/06/15 15:51:16 PID: 2 - Ejecutando: MOV_OUT - EDX,AX
+2024/06/15 15:51:17 PID: 2 - TLB MISS - Pagina: 0
+2024/06/15 15:51:18 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/06/15 15:51:19 Error al escribir memoria: error al enviar la solicitud: Post "http://localhost:8002/escribir": EOF
+2024/06/15 15:51:19 PID: 2 - FETCH - Program Counter: 5
+2024/06/15 15:51:20 PID: 2 - Ejecutando: SET - EDX,16
+2024/06/15 15:51:20 PID: 2 - FETCH - Program Counter: 6
+2024/06/15 15:51:21 PID: 2 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:51:22 PID: 2 - TLB MISS - Pagina: 1
+2024/06/15 15:51:23 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 0
+2024/06/15 15:51:24 Error al escribir memoria: error al enviar la solicitud: Post "http://localhost:8002/escribir": EOF
+2024/06/15 15:51:24 PID: 2 - FETCH - Program Counter: 7
+2024/06/15 15:51:25 PID: 2 - Ejecutando: SET - EDX,32
+2024/06/15 15:51:25 PID: 2 - FETCH - Program Counter: 8
+2024/06/15 15:51:26 PID: 2 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:51:27 PID: 2 - TLB MISS - Pagina: 2
+2024/06/15 15:51:28 PID: 2 - OBTENER MARCO - Página: 2 - Marco: 0
+2024/06/15 15:51:29 Error al escribir memoria: error al enviar la solicitud: Post "http://localhost:8002/escribir": EOF
+2024/06/15 15:51:29 PID: 2 - FETCH - Program Counter: 9
+2024/06/15 15:51:30 PID: 2 - Ejecutando: SET - EDX,48
+2024/06/15 15:51:30 PID: 2 - FETCH - Program Counter: 10
+2024/06/15 15:51:31 PID: 2 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:51:32 PID: 2 - TLB MISS - Pagina: 3
+2024/06/15 15:51:33 PID: 2 - OBTENER MARCO - Página: 3 - Marco: 0
+2024/06/15 15:51:46 Inicializando TLB con 32 entradas
+2024/06/15 15:52:06 PID: 0 - FETCH - Program Counter: 0
+2024/06/15 15:52:07 PID: 0 - Ejecutando: SET - AX,1
+2024/06/15 15:52:07 PID: 0 - FETCH - Program Counter: 1
+2024/06/15 15:52:08 PID: 0 - Ejecutando: SET - ECX,36000
+2024/06/15 15:52:08 PID: 0 - FETCH - Program Counter: 2
+2024/06/15 15:52:09 PID: 0 - Ejecutando: RESIZE - 128
+2024/06/15 15:52:10 PID: 0 - FETCH - Program Counter: 3
+2024/06/15 15:52:11 PID: 0 - Ejecutando: SET - EDX,0
+2024/06/15 15:52:11 PID: 0 - FETCH - Program Counter: 4
+2024/06/15 15:52:12 PID: 0 - Ejecutando: MOV_OUT - EDX,AX
+2024/06/15 15:52:13 PID: 0 - TLB MISS - Pagina: 0
+2024/06/15 15:52:14 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/06/15 15:52:15 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 0
+2024/06/15 15:52:15 PID: 0 - FETCH - Program Counter: 5
+2024/06/15 15:52:16 PID: 0 - Ejecutando: SET - EDX,16
+2024/06/15 15:52:16 PID: 0 - FETCH - Program Counter: 6
+2024/06/15 15:52:17 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:52:18 PID: 0 - TLB MISS - Pagina: 1
+2024/06/15 15:52:19 PID: 0 - OBTENER MARCO - Página: 1 - Marco: 1
+2024/06/15 15:52:20 PID: 0 - Acción: ESCRIBIR - Dirección Física: 16 - Valor: 36000
+2024/06/15 15:52:20 PID: 0 - FETCH - Program Counter: 7
+2024/06/15 15:52:21 PID: 0 - Ejecutando: SET - EDX,32
+2024/06/15 15:52:21 PID: 0 - FETCH - Program Counter: 8
+2024/06/15 15:52:22 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:52:23 PID: 0 - TLB MISS - Pagina: 2
+2024/06/15 15:52:24 PID: 0 - OBTENER MARCO - Página: 2 - Marco: 2
+2024/06/15 15:52:25 PID: 0 - Acción: ESCRIBIR - Dirección Física: 32 - Valor: 36000
+2024/06/15 15:52:25 PID: 0 - FETCH - Program Counter: 9
+2024/06/15 15:52:26 PID: 0 - Ejecutando: SET - EDX,48
+2024/06/15 15:52:26 PID: 0 - FETCH - Program Counter: 10
+2024/06/15 15:52:27 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:52:28 PID: 0 - TLB MISS - Pagina: 3
+2024/06/15 15:52:29 PID: 0 - OBTENER MARCO - Página: 3 - Marco: 3
+2024/06/15 15:52:30 PID: 0 - Acción: ESCRIBIR - Dirección Física: 48 - Valor: 36000
+2024/06/15 15:52:30 PID: 0 - FETCH - Program Counter: 11
+2024/06/15 15:52:31 PID: 0 - Ejecutando: SET - EDX,64
+2024/06/15 15:52:31 PID: 0 - FETCH - Program Counter: 12
+2024/06/15 15:52:32 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:52:33 PID: 0 - TLB MISS - Pagina: 4
+2024/06/15 15:52:34 PID: 0 - OBTENER MARCO - Página: 4 - Marco: 4
+2024/06/15 15:52:35 PID: 0 - Acción: ESCRIBIR - Dirección Física: 64 - Valor: 36000
+2024/06/15 15:52:35 PID: 0 - FETCH - Program Counter: 13
+2024/06/15 15:52:36 PID: 0 - Ejecutando: SET - EDX,80
+2024/06/15 15:52:36 PID: 0 - FETCH - Program Counter: 14
+2024/06/15 15:52:37 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:52:38 PID: 0 - TLB MISS - Pagina: 5
+2024/06/15 15:52:39 PID: 0 - OBTENER MARCO - Página: 5 - Marco: 5
+2024/06/15 15:52:40 PID: 0 - Acción: ESCRIBIR - Dirección Física: 80 - Valor: 36000
+2024/06/15 15:52:40 PID: 0 - FETCH - Program Counter: 15
+2024/06/15 15:52:41 PID: 0 - Ejecutando: SET - EDX,96
+2024/06/15 15:52:41 PID: 0 - FETCH - Program Counter: 16
+2024/06/15 15:52:42 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:52:43 PID: 0 - TLB MISS - Pagina: 6
+2024/06/15 15:52:44 PID: 0 - OBTENER MARCO - Página: 6 - Marco: 6
+2024/06/15 15:52:45 PID: 0 - Acción: ESCRIBIR - Dirección Física: 96 - Valor: 36000
+2024/06/15 15:52:45 PID: 0 - FETCH - Program Counter: 17
+2024/06/15 15:52:46 PID: 0 - Ejecutando: SET - EDX,112
+2024/06/15 15:52:46 PID: 0 - FETCH - Program Counter: 18
+2024/06/15 15:52:47 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:52:48 PID: 0 - TLB MISS - Pagina: 7
+2024/06/15 15:52:49 PID: 0 - OBTENER MARCO - Página: 7 - Marco: 7
+2024/06/15 15:52:50 PID: 0 - Acción: ESCRIBIR - Dirección Física: 112 - Valor: 36000
+2024/06/15 15:52:50 PID: 0 - FETCH - Program Counter: 19
+2024/06/15 15:52:51 PID: 0 - Ejecutando: EXIT
+2024/06/15 15:53:27 Inicializando TLB con 32 entradas
+2024/06/15 15:53:46 PID: 0 - FETCH - Program Counter: 0
+2024/06/15 15:53:47 PID: 0 - Ejecutando: SET - AX,16
+2024/06/15 15:53:47 PID: 0 - FETCH - Program Counter: 1
+2024/06/15 15:53:48 PID: 0 - Ejecutando: SET - ECX,36000
+2024/06/15 15:53:48 PID: 0 - FETCH - Program Counter: 2
+2024/06/15 15:53:49 PID: 0 - Ejecutando: RESIZE - 128
+2024/06/15 15:53:50 PID: 0 - FETCH - Program Counter: 3
+2024/06/15 15:53:51 PID: 0 - Ejecutando: SET - EDX,0
+2024/06/15 15:53:51 PID: 0 - FETCH - Program Counter: 4
+2024/06/15 15:53:52 PID: 0 - Ejecutando: MOV_OUT - EDX,AX
+2024/06/15 15:53:53 PID: 0 - TLB MISS - Pagina: 0
+2024/06/15 15:53:54 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/06/15 15:53:55 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 0
+2024/06/15 15:53:55 PID: 0 - FETCH - Program Counter: 5
+2024/06/15 15:53:56 PID: 0 - Ejecutando: SET - EDX,16
+2024/06/15 15:53:56 PID: 0 - FETCH - Program Counter: 6
+2024/06/15 15:53:57 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:53:58 PID: 0 - TLB MISS - Pagina: 1
+2024/06/15 15:53:59 PID: 0 - OBTENER MARCO - Página: 1 - Marco: 1
+2024/06/15 15:54:00 PID: 0 - Acción: ESCRIBIR - Dirección Física: 16 - Valor: 36000
+2024/06/15 15:54:00 PID: 0 - FETCH - Program Counter: 7
+2024/06/15 15:54:01 PID: 0 - Ejecutando: SET - EDX,32
+2024/06/15 15:54:01 PID: 0 - FETCH - Program Counter: 8
+2024/06/15 15:54:02 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:54:03 PID: 0 - TLB MISS - Pagina: 2
+2024/06/15 15:54:04 PID: 0 - OBTENER MARCO - Página: 2 - Marco: 2
+2024/06/15 15:54:05 PID: 0 - Acción: ESCRIBIR - Dirección Física: 32 - Valor: 36000
+2024/06/15 15:54:05 PID: 0 - FETCH - Program Counter: 9
+2024/06/15 15:54:06 PID: 0 - Ejecutando: SET - EDX,48
+2024/06/15 15:54:06 PID: 0 - FETCH - Program Counter: 10
+2024/06/15 15:54:07 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:54:08 PID: 0 - TLB MISS - Pagina: 3
+2024/06/15 15:54:09 PID: 0 - OBTENER MARCO - Página: 3 - Marco: 3
+2024/06/15 15:54:10 PID: 0 - Acción: ESCRIBIR - Dirección Física: 48 - Valor: 36000
+2024/06/15 15:54:10 PID: 0 - FETCH - Program Counter: 11
+2024/06/15 15:54:11 PID: 0 - Ejecutando: SET - EDX,64
+2024/06/15 15:54:11 PID: 0 - FETCH - Program Counter: 12
+2024/06/15 15:54:12 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:54:13 PID: 0 - TLB MISS - Pagina: 4
+2024/06/15 15:54:14 PID: 0 - OBTENER MARCO - Página: 4 - Marco: 4
+2024/06/15 15:54:15 PID: 0 - Acción: ESCRIBIR - Dirección Física: 64 - Valor: 36000
+2024/06/15 15:54:15 PID: 0 - FETCH - Program Counter: 13
+2024/06/15 15:54:16 PID: 0 - Ejecutando: SET - EDX,80
+2024/06/15 15:54:16 PID: 0 - FETCH - Program Counter: 14
+2024/06/15 15:54:17 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:54:18 PID: 0 - TLB MISS - Pagina: 5
+2024/06/15 15:54:19 PID: 0 - OBTENER MARCO - Página: 5 - Marco: 5
+2024/06/15 15:54:20 PID: 0 - Acción: ESCRIBIR - Dirección Física: 80 - Valor: 36000
+2024/06/15 15:54:20 PID: 0 - FETCH - Program Counter: 15
+2024/06/15 15:54:21 PID: 0 - Ejecutando: SET - EDX,96
+2024/06/15 15:54:21 PID: 0 - FETCH - Program Counter: 16
+2024/06/15 15:54:22 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:54:23 PID: 0 - TLB MISS - Pagina: 6
+2024/06/15 15:54:24 PID: 0 - OBTENER MARCO - Página: 6 - Marco: 6
+2024/06/15 15:54:25 PID: 0 - Acción: ESCRIBIR - Dirección Física: 96 - Valor: 36000
+2024/06/15 15:54:25 PID: 0 - FETCH - Program Counter: 17
+2024/06/15 15:54:26 PID: 0 - Ejecutando: SET - EDX,112
+2024/06/15 15:54:26 PID: 0 - FETCH - Program Counter: 18
+2024/06/15 15:54:27 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 15:54:28 PID: 0 - TLB MISS - Pagina: 7
+2024/06/15 15:54:29 PID: 0 - OBTENER MARCO - Página: 7 - Marco: 7
+2024/06/15 15:54:30 PID: 0 - Acción: ESCRIBIR - Dirección Física: 112 - Valor: 36000
+2024/06/15 15:54:30 PID: 0 - FETCH - Program Counter: 19
+2024/06/15 15:54:31 PID: 0 - Ejecutando: EXIT
+2024/06/15 16:28:29 Inicializando TLB con 32 entradas
+2024/06/15 16:28:32 PID: 1 - FETCH - Program Counter: 0
+2024/06/15 16:28:33 PID: 1 - Ejecutando: SET - AX,16
+2024/06/15 16:28:33 PID: 1 - FETCH - Program Counter: 1
+2024/06/15 16:28:34 PID: 1 - Ejecutando: SET - ECX,36000
+2024/06/15 16:28:34 PID: 1 - FETCH - Program Counter: 2
+2024/06/15 16:28:35 PID: 1 - Ejecutando: RESIZE - 128
+2024/06/15 16:28:36 PID: 1 - FETCH - Program Counter: 3
+2024/06/15 16:28:37 PID: 1 - Ejecutando: SET - EDX,0
+2024/06/15 16:28:37 PID: 1 - FETCH - Program Counter: 4
+2024/06/15 16:28:38 PID: 1 - Ejecutando: MOV_OUT - EDX,AX
+2024/06/15 16:28:39 PID: 1 - TLB MISS - Pagina: 0
+2024/06/15 16:28:40 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/06/15 16:28:41 http: panic serving 127.0.0.1:60798: runtime error: index out of range [3] with length 1
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6e8260?, 0xc00001a618?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+encoding/binary.littleEndian.Uint32(...)
+	/usr/local/go/src/encoding/binary/binary.go:84
+cpu/utils.EscribirEnMemoria(0x1, 0x0, {0xc000014ee8, 0x1, 0xc00007e120?}, 0x4ef820?)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:247 +0x46b
+cpu/utils.MOV_OUT({0xc000014e78?, 0x0?}, {0xc000014e7c, 0x2})
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:328 +0x238
+cpu/utils.decoYExecInstru({0xc000014e70?, 0x4?})
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:700 +0x1199
+cpu/utils.RecibirProceso({0x78ab50, 0xc0000ce9a0}, 0xc00009db00)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:116 +0x2fe
+net/http.HandlerFunc.ServeHTTP(0xc000089110?, {0x78ab50?, 0xc0000ce9a0?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x78ab50, 0xc0000ce9a0}, 0xc00009db00)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x789b38?}, {0x78ab50?, 0xc0000ce9a0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c6120, {0x78b110, 0xc00007ed50})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/15 16:29:32 Inicializando TLB con 32 entradas
+2024/06/15 16:29:36 PID: 2 - FETCH - Program Counter: 0
+2024/06/15 16:29:37 PID: 2 - Ejecutando: SET - AX,16
+2024/06/15 16:29:37 PID: 2 - FETCH - Program Counter: 1
+2024/06/15 16:29:38 PID: 2 - Ejecutando: SET - ECX,36000
+2024/06/15 16:29:38 PID: 2 - FETCH - Program Counter: 2
+2024/06/15 16:29:39 PID: 2 - Ejecutando: RESIZE - 128
+2024/06/15 16:29:40 PID: 2 - FETCH - Program Counter: 3
+2024/06/15 16:29:41 PID: 2 - Ejecutando: SET - EDX,0
+2024/06/15 16:29:41 PID: 2 - FETCH - Program Counter: 4
+2024/06/15 16:29:42 PID: 2 - Ejecutando: MOV_OUT - EDX,AX
+2024/06/15 16:29:43 PID: 2 - TLB MISS - Pagina: 0
+2024/06/15 16:29:44 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/06/15 16:29:45 http: panic serving 127.0.0.1:36440: runtime error: index out of range [3] with length 1
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6e8260?, 0xc00001a618?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+encoding/binary.littleEndian.Uint32(...)
+	/usr/local/go/src/encoding/binary/binary.go:84
+cpu/utils.EscribirEnMemoria(0x2, 0x0, {0xc000014ee8, 0x1, 0xc00007e120?}, 0x4ef820?)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:247 +0x46b
+cpu/utils.MOV_OUT({0xc000014e78?, 0x0?}, {0xc000014e7c, 0x2})
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:327 +0x233
+cpu/utils.decoYExecInstru({0xc000014e70?, 0x4?})
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:699 +0x1199
+cpu/utils.RecibirProceso({0x78ab50, 0xc0000ce9a0}, 0xc00009db00)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:116 +0x2fe
+net/http.HandlerFunc.ServeHTTP(0xc000089110?, {0x78ab50?, 0xc0000ce9a0?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x78ab50, 0xc0000ce9a0}, 0xc00009db00)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x789b38?}, {0x78ab50?, 0xc0000ce9a0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c6120, {0x78b110, 0xc00007ed50})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/15 16:37:09 Inicializando TLB con 32 entradas
+2024/06/15 16:37:28 PID: 0 - FETCH - Program Counter: 0
+2024/06/15 16:37:29 PID: 0 - Ejecutando: SET - AX,16
+2024/06/15 16:37:29 PID: 0 - FETCH - Program Counter: 1
+2024/06/15 16:37:30 PID: 0 - Ejecutando: SET - ECX,36000
+2024/06/15 16:37:30 PID: 0 - FETCH - Program Counter: 2
+2024/06/15 16:37:31 PID: 0 - Ejecutando: RESIZE - 128
+2024/06/15 16:37:32 PID: 0 - FETCH - Program Counter: 3
+2024/06/15 16:37:33 PID: 0 - Ejecutando: SET - EDX,0
+2024/06/15 16:37:33 PID: 0 - FETCH - Program Counter: 4
+2024/06/15 16:37:34 PID: 0 - Ejecutando: MOV_OUT - EDX,AX
+2024/06/15 16:37:35 PID: 0 - TLB MISS - Pagina: 0
+2024/06/15 16:37:36 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/06/15 16:37:37 http: panic serving 127.0.0.1:33184: runtime error: index out of range [3] with length 1
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6e8260?, 0xc00001a618?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+encoding/binary.littleEndian.Uint32(...)
+	/usr/local/go/src/encoding/binary/binary.go:84
+cpu/utils.EscribirEnMemoria(0x0, 0x0, {0xc000014e3e, 0x1, 0x953b60?}, 0x4ef7c0?)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:247 +0x46b
+cpu/utils.MOV_OUT({0xc000014e78?, 0x0?}, {0xc000014e7c, 0x2})
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:335 +0x23c
+cpu/utils.decoYExecInstru({0xc000014e70?, 0x4?})
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:708 +0x1199
+cpu/utils.RecibirProceso({0x78ab50, 0xc0000ce9a0}, 0xc00009db00)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:116 +0x2fe
+net/http.HandlerFunc.ServeHTTP(0xc000089040?, {0x78ab50?, 0xc0000ce9a0?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x78ab50, 0xc0000ce9a0}, 0xc00009db00)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x789b38?}, {0x78ab50?, 0xc0000ce9a0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c6120, {0x78b110, 0xc00007ed50})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/15 16:38:14 Inicializando TLB con 32 entradas
+2024/06/15 16:38:34 PID: 0 - FETCH - Program Counter: 0
+2024/06/15 16:38:36 PID: 0 - Ejecutando: SET - AX,16
+2024/06/15 16:38:36 PID: 0 - FETCH - Program Counter: 1
+2024/06/15 16:38:37 PID: 0 - Ejecutando: SET - ECX,36000
+2024/06/15 16:38:37 PID: 0 - FETCH - Program Counter: 2
+2024/06/15 16:38:38 PID: 0 - Ejecutando: RESIZE - 128
+2024/06/15 16:38:39 PID: 0 - FETCH - Program Counter: 3
+2024/06/15 16:38:40 PID: 0 - Ejecutando: SET - EDX,0
+2024/06/15 16:38:40 PID: 0 - FETCH - Program Counter: 4
+2024/06/15 16:38:41 PID: 0 - Ejecutando: MOV_OUT - EDX,AX
+2024/06/15 16:38:42 PID: 0 - TLB MISS - Pagina: 0
+2024/06/15 16:38:43 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/06/15 16:38:44 http: panic serving 127.0.0.1:45900: runtime error: index out of range [3] with length 1
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6e8260?, 0xc00001a618?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+encoding/binary.littleEndian.Uint32(...)
+	/usr/local/go/src/encoding/binary/binary.go:84
+cpu/utils.EscribirEnMemoria(0x0, 0x0, {0xc000014e3e, 0x1, 0x953b60?}, 0x4ef7c0?)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:247 +0x46b
+cpu/utils.MOV_OUT({0xc000014e78?, 0x0?}, {0xc000014e7c, 0x2})
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:335 +0x23c
+cpu/utils.decoYExecInstru({0xc000014e70?, 0x4?})
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:708 +0x1199
+cpu/utils.RecibirProceso({0x78ab50, 0xc0000ce9a0}, 0xc00009dc20)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/cpu/utils/utils.go:116 +0x2fe
+net/http.HandlerFunc.ServeHTTP(0xc000089110?, {0x78ab50?, 0xc0000ce9a0?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x78ab50, 0xc0000ce9a0}, 0xc00009dc20)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x789b38?}, {0x78ab50?, 0xc0000ce9a0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c6120, {0x78b110, 0xc00007ed50})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/06/15 16:40:57 Inicializando TLB con 32 entradas
+2024/06/15 16:41:00 PID: 1 - FETCH - Program Counter: 0
+2024/06/15 16:41:01 PID: 1 - Ejecutando: SET - AX,16
+2024/06/15 16:41:01 PID: 1 - FETCH - Program Counter: 1
+2024/06/15 16:41:13 Inicializando TLB con 32 entradas
+2024/06/15 16:41:22 PID: 0 - FETCH - Program Counter: 0
+2024/06/15 16:41:23 PID: 0 - Ejecutando: SET - AX,16
+2024/06/15 16:41:23 PID: 0 - FETCH - Program Counter: 1
+2024/06/15 16:41:24 PID: 0 - Ejecutando: SET - ECX,36000
+2024/06/15 16:41:24 PID: 0 - FETCH - Program Counter: 2
+2024/06/15 16:41:25 PID: 0 - Ejecutando: RESIZE - 128
+2024/06/15 16:41:26 PID: 0 - FETCH - Program Counter: 3
+2024/06/15 16:41:27 PID: 0 - Ejecutando: SET - EDX,0
+2024/06/15 16:41:27 PID: 0 - FETCH - Program Counter: 4
+2024/06/15 16:41:28 PID: 0 - Ejecutando: MOV_OUT - EDX,AX
+2024/06/15 16:41:29 PID: 0 - TLB MISS - Pagina: 0
+2024/06/15 16:41:30 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/06/15 16:41:31 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 0
+2024/06/15 16:41:31 PID: 0 - FETCH - Program Counter: 5
+2024/06/15 16:41:32 PID: 0 - Ejecutando: SET - EDX,16
+2024/06/15 16:41:32 PID: 0 - FETCH - Program Counter: 6
+2024/06/15 16:41:33 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 16:41:34 PID: 0 - TLB MISS - Pagina: 1
+2024/06/15 16:41:35 PID: 0 - OBTENER MARCO - Página: 1 - Marco: 1
+2024/06/15 16:41:36 PID: 0 - Acción: ESCRIBIR - Dirección Física: 16 - Valor: 36000
+2024/06/15 16:41:36 PID: 0 - FETCH - Program Counter: 7
+2024/06/15 16:41:37 PID: 0 - Ejecutando: SET - EDX,32
+2024/06/15 16:41:37 PID: 0 - FETCH - Program Counter: 8
+2024/06/15 16:41:38 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 16:41:39 PID: 0 - TLB MISS - Pagina: 2
+2024/06/15 16:41:40 PID: 0 - OBTENER MARCO - Página: 2 - Marco: 2
+2024/06/15 16:41:41 PID: 0 - Acción: ESCRIBIR - Dirección Física: 32 - Valor: 36000
+2024/06/15 16:41:41 PID: 0 - FETCH - Program Counter: 9
+2024/06/15 16:41:42 PID: 0 - Ejecutando: SET - EDX,48
+2024/06/15 16:41:42 PID: 0 - FETCH - Program Counter: 10
+2024/06/15 16:41:43 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 16:41:44 PID: 0 - TLB MISS - Pagina: 3
+2024/06/15 16:41:45 PID: 0 - OBTENER MARCO - Página: 3 - Marco: 3
+2024/06/15 16:41:46 PID: 0 - Acción: ESCRIBIR - Dirección Física: 48 - Valor: 36000
+2024/06/15 16:41:46 PID: 0 - FETCH - Program Counter: 11
+2024/06/15 16:41:47 PID: 0 - Ejecutando: SET - EDX,64
+2024/06/15 16:41:47 PID: 0 - FETCH - Program Counter: 12
+2024/06/15 16:41:48 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 16:41:49 PID: 0 - TLB MISS - Pagina: 4
+2024/06/15 16:41:50 PID: 0 - OBTENER MARCO - Página: 4 - Marco: 4
+2024/06/15 16:41:51 PID: 0 - Acción: ESCRIBIR - Dirección Física: 64 - Valor: 36000
+2024/06/15 16:41:51 PID: 0 - FETCH - Program Counter: 13
+2024/06/15 16:41:52 PID: 0 - Ejecutando: SET - EDX,80
+2024/06/15 16:41:52 PID: 0 - FETCH - Program Counter: 14
+2024/06/15 16:41:53 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 16:41:54 PID: 0 - TLB MISS - Pagina: 5
+2024/06/15 16:41:55 PID: 0 - OBTENER MARCO - Página: 5 - Marco: 5
+2024/06/15 16:41:56 PID: 0 - Acción: ESCRIBIR - Dirección Física: 80 - Valor: 36000
+2024/06/15 16:41:56 PID: 0 - FETCH - Program Counter: 15
+2024/06/15 16:41:57 PID: 0 - Ejecutando: SET - EDX,96
+2024/06/15 16:41:57 PID: 0 - FETCH - Program Counter: 16
+2024/06/15 16:41:58 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 16:41:59 PID: 0 - TLB MISS - Pagina: 6
+2024/06/15 16:42:00 PID: 0 - OBTENER MARCO - Página: 6 - Marco: 6
+2024/06/15 16:42:01 PID: 0 - Acción: ESCRIBIR - Dirección Física: 96 - Valor: 36000
+2024/06/15 16:42:01 PID: 0 - FETCH - Program Counter: 17
+2024/06/15 16:42:02 PID: 0 - Ejecutando: SET - EDX,112
+2024/06/15 16:42:02 PID: 0 - FETCH - Program Counter: 18
+2024/06/15 16:42:03 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 16:42:04 PID: 0 - TLB MISS - Pagina: 7
+2024/06/15 16:42:05 PID: 0 - OBTENER MARCO - Página: 7 - Marco: 7
+2024/06/15 16:42:06 PID: 0 - Acción: ESCRIBIR - Dirección Física: 112 - Valor: 36000
+2024/06/15 16:42:06 PID: 0 - FETCH - Program Counter: 19
+2024/06/15 16:42:07 PID: 0 - Ejecutando: EXIT
+2024/06/15 17:09:54 Inicializando TLB con 32 entradas
+2024/06/15 17:09:57 PID: 1 - FETCH - Program Counter: 0
+2024/06/15 17:09:58 PID: 1 - Ejecutando: SET - AX,16
+2024/06/15 17:09:58 PID: 1 - FETCH - Program Counter: 1
+2024/06/15 17:09:59 PID: 1 - Ejecutando: SET - ECX,36000
+2024/06/15 17:09:59 PID: 1 - FETCH - Program Counter: 2
+2024/06/15 17:10:00 PID: 1 - Ejecutando: RESIZE - 128
+2024/06/15 17:10:01 PID: 1 - FETCH - Program Counter: 3
+2024/06/15 17:10:02 PID: 1 - Ejecutando: SET - EDX,0
+2024/06/15 17:10:02 PID: 1 - FETCH - Program Counter: 4
+2024/06/15 17:10:03 PID: 1 - Ejecutando: MOV_OUT - EDX,AX
+2024/06/15 17:10:04 PID: 1 - TLB MISS - Pagina: 0
+2024/06/15 17:10:05 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/06/15 17:10:06 PID: 1 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 16
+2024/06/15 17:10:06 PID: 1 - FETCH - Program Counter: 5
+2024/06/15 17:10:07 PID: 1 - Ejecutando: SET - EDX,16
+2024/06/15 17:10:07 PID: 1 - FETCH - Program Counter: 6
+2024/06/15 17:10:08 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 17:10:09 PID: 1 - TLB MISS - Pagina: 1
+2024/06/15 17:10:10 PID: 1 - OBTENER MARCO - Página: 1 - Marco: 1
+2024/06/15 17:10:11 PID: 1 - Acción: ESCRIBIR - Dirección Física: 16 - Valor: 36000
+2024/06/15 17:10:11 PID: 1 - FETCH - Program Counter: 7
+2024/06/15 17:10:12 PID: 1 - Ejecutando: SET - EDX,32
+2024/06/15 17:10:12 PID: 1 - FETCH - Program Counter: 8
+2024/06/15 17:10:13 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 17:10:14 PID: 1 - TLB MISS - Pagina: 2
+2024/06/15 17:10:15 PID: 1 - OBTENER MARCO - Página: 2 - Marco: 2
+2024/06/15 17:10:16 PID: 1 - Acción: ESCRIBIR - Dirección Física: 32 - Valor: 36000
+2024/06/15 17:10:16 PID: 1 - FETCH - Program Counter: 9
+2024/06/15 17:10:17 PID: 1 - Ejecutando: SET - EDX,48
+2024/06/15 17:10:17 PID: 1 - FETCH - Program Counter: 10
+2024/06/15 17:10:18 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 17:10:19 PID: 1 - TLB MISS - Pagina: 3
+2024/06/15 17:10:20 PID: 1 - OBTENER MARCO - Página: 3 - Marco: 3
+2024/06/15 17:10:21 PID: 1 - Acción: ESCRIBIR - Dirección Física: 48 - Valor: 36000
+2024/06/15 17:10:21 PID: 1 - FETCH - Program Counter: 11
+2024/06/15 17:10:22 PID: 1 - Ejecutando: SET - EDX,64
+2024/06/15 17:10:22 PID: 1 - FETCH - Program Counter: 12
+2024/06/15 17:10:23 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 17:10:24 PID: 1 - TLB MISS - Pagina: 4
+2024/06/15 17:10:25 PID: 1 - OBTENER MARCO - Página: 4 - Marco: 4
+2024/06/15 17:10:26 PID: 1 - Acción: ESCRIBIR - Dirección Física: 64 - Valor: 36000
+2024/06/15 17:10:26 PID: 1 - FETCH - Program Counter: 13
+2024/06/15 17:10:27 PID: 1 - Ejecutando: SET - EDX,80
+2024/06/15 17:10:27 PID: 1 - FETCH - Program Counter: 14
+2024/06/15 17:10:28 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 17:10:29 PID: 1 - TLB MISS - Pagina: 5
+2024/06/15 17:10:30 PID: 1 - OBTENER MARCO - Página: 5 - Marco: 5
+2024/06/15 17:10:31 PID: 1 - Acción: ESCRIBIR - Dirección Física: 80 - Valor: 36000
+2024/06/15 17:10:31 PID: 1 - FETCH - Program Counter: 15
+2024/06/15 17:10:32 PID: 1 - Ejecutando: SET - EDX,96
+2024/06/15 17:10:32 PID: 1 - FETCH - Program Counter: 16
+2024/06/15 17:10:33 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 17:10:34 PID: 1 - TLB MISS - Pagina: 6
+2024/06/15 17:10:35 PID: 1 - OBTENER MARCO - Página: 6 - Marco: 6
+2024/06/15 17:10:36 PID: 1 - Acción: ESCRIBIR - Dirección Física: 96 - Valor: 36000
+2024/06/15 17:10:36 PID: 1 - FETCH - Program Counter: 17
+2024/06/15 17:10:37 PID: 1 - Ejecutando: SET - EDX,112
+2024/06/15 17:10:37 PID: 1 - FETCH - Program Counter: 18
+2024/06/15 17:10:38 PID: 1 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 17:10:39 PID: 1 - TLB MISS - Pagina: 7
+2024/06/15 17:10:40 PID: 1 - OBTENER MARCO - Página: 7 - Marco: 7
+2024/06/15 17:10:41 PID: 1 - Acción: ESCRIBIR - Dirección Física: 112 - Valor: 36000
+2024/06/15 17:10:41 PID: 1 - FETCH - Program Counter: 19
+2024/06/15 17:10:42 PID: 1 - Ejecutando: EXIT
+2024/06/15 17:19:19 Inicializando TLB con 32 entradas
+2024/06/15 17:19:23 PID: 0 - FETCH - Program Counter: 0
+2024/06/15 17:19:24 PID: 0 - Ejecutando: SET - AX,16
+2024/06/15 17:19:24 PID: 0 - FETCH - Program Counter: 1
+2024/06/15 17:19:25 PID: 0 - Ejecutando: SET - ECX,36000
+2024/06/15 17:19:25 PID: 0 - FETCH - Program Counter: 2
+2024/06/15 17:19:26 PID: 0 - Ejecutando: RESIZE - 128
+2024/06/15 17:19:27 PID: 0 - FETCH - Program Counter: 3
+2024/06/15 17:19:28 PID: 0 - Ejecutando: SET - EDX,0
+2024/06/15 17:19:28 PID: 0 - FETCH - Program Counter: 4
+2024/06/15 17:19:29 PID: 0 - Ejecutando: MOV_OUT - EDX,AX
+2024/06/15 17:19:30 PID: 0 - TLB MISS - Pagina: 0
+2024/06/15 17:19:36 Inicializando TLB con 32 entradas
+2024/06/15 17:19:49 PID: 0 - FETCH - Program Counter: 0
+2024/06/15 17:19:50 PID: 0 - Ejecutando: SET - AX,1
+2024/06/15 17:19:50 PID: 0 - FETCH - Program Counter: 1
+2024/06/15 17:19:51 PID: 0 - Ejecutando: SET - ECX,36000
+2024/06/15 17:19:51 PID: 0 - FETCH - Program Counter: 2
+2024/06/15 17:19:52 PID: 0 - Ejecutando: RESIZE - 128
+2024/06/15 17:19:53 PID: 0 - FETCH - Program Counter: 3
+2024/06/15 17:19:54 PID: 0 - Ejecutando: SET - EDX,0
+2024/06/15 17:19:54 PID: 0 - FETCH - Program Counter: 4
+2024/06/15 17:19:55 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 17:19:56 PID: 0 - TLB MISS - Pagina: 0
+2024/06/15 17:19:57 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/06/15 17:19:58 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36000
+2024/06/15 17:19:58 PID: 0 - FETCH - Program Counter: 5
+2024/06/15 17:19:59 PID: 0 - Ejecutando: SET - EDX,16
+2024/06/15 17:19:59 PID: 0 - FETCH - Program Counter: 6
+2024/06/15 17:20:00 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 17:20:01 PID: 0 - TLB MISS - Pagina: 1
+2024/06/15 17:20:02 PID: 0 - OBTENER MARCO - Página: 1 - Marco: 1
+2024/06/15 17:20:03 PID: 0 - Acción: ESCRIBIR - Dirección Física: 16 - Valor: 36000
+2024/06/15 17:20:03 PID: 0 - FETCH - Program Counter: 7
+2024/06/15 17:20:04 PID: 0 - Ejecutando: SET - EDX,32
+2024/06/15 17:20:04 PID: 0 - FETCH - Program Counter: 8
+2024/06/15 17:20:05 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 17:20:06 PID: 0 - TLB MISS - Pagina: 2
+2024/06/15 17:20:07 PID: 0 - OBTENER MARCO - Página: 2 - Marco: 2
+2024/06/15 17:20:08 PID: 0 - Acción: ESCRIBIR - Dirección Física: 32 - Valor: 36000
+2024/06/15 17:20:08 PID: 0 - FETCH - Program Counter: 9
+2024/06/15 17:20:09 PID: 0 - Ejecutando: SET - EDX,48
+2024/06/15 17:20:09 PID: 0 - FETCH - Program Counter: 10
+2024/06/15 17:20:10 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 17:20:11 PID: 0 - TLB MISS - Pagina: 3
+2024/06/15 17:20:12 PID: 0 - OBTENER MARCO - Página: 3 - Marco: 3
+2024/06/15 17:20:13 PID: 0 - Acción: ESCRIBIR - Dirección Física: 48 - Valor: 36000
+2024/06/15 17:20:13 PID: 0 - FETCH - Program Counter: 11
+2024/06/15 17:20:14 PID: 0 - Ejecutando: SET - EDX,64
+2024/06/15 17:20:14 PID: 0 - FETCH - Program Counter: 12
+2024/06/15 17:20:15 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 17:20:16 PID: 0 - TLB MISS - Pagina: 4
+2024/06/15 17:20:17 PID: 0 - OBTENER MARCO - Página: 4 - Marco: 4
+2024/06/15 17:20:18 PID: 0 - Acción: ESCRIBIR - Dirección Física: 64 - Valor: 36000
+2024/06/15 17:20:18 PID: 0 - FETCH - Program Counter: 13
+2024/06/15 17:20:19 PID: 0 - Ejecutando: SET - EDX,80
+2024/06/15 17:20:19 PID: 0 - FETCH - Program Counter: 14
+2024/06/15 17:20:20 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 17:20:21 PID: 0 - TLB MISS - Pagina: 5
+2024/06/15 17:20:22 PID: 0 - OBTENER MARCO - Página: 5 - Marco: 5
+2024/06/15 17:20:23 PID: 0 - Acción: ESCRIBIR - Dirección Física: 80 - Valor: 36000
+2024/06/15 17:20:23 PID: 0 - FETCH - Program Counter: 15
+2024/06/15 17:20:24 PID: 0 - Ejecutando: SET - EDX,96
+2024/06/15 17:20:24 PID: 0 - FETCH - Program Counter: 16
+2024/06/15 17:20:25 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 17:20:26 PID: 0 - TLB MISS - Pagina: 6
+2024/06/15 17:20:27 PID: 0 - OBTENER MARCO - Página: 6 - Marco: 6
+2024/06/15 17:20:28 PID: 0 - Acción: ESCRIBIR - Dirección Física: 96 - Valor: 36000
+2024/06/15 17:20:28 PID: 0 - FETCH - Program Counter: 17
+2024/06/15 17:20:29 PID: 0 - Ejecutando: SET - EDX,112
+2024/06/15 17:20:29 PID: 0 - FETCH - Program Counter: 18
+2024/06/15 17:20:30 PID: 0 - Ejecutando: MOV_OUT - EDX,ECX
+2024/06/15 17:20:31 PID: 0 - TLB MISS - Pagina: 7
+2024/06/15 17:20:32 PID: 0 - OBTENER MARCO - Página: 7 - Marco: 7
+2024/06/15 17:20:33 PID: 0 - Acción: ESCRIBIR - Dirección Física: 112 - Valor: 36000
+2024/06/15 17:20:33 PID: 0 - FETCH - Program Counter: 19
+2024/06/15 17:20:34 PID: 0 - Ejecutando: EXIT
+2024/06/15 17:25:36 Inicializando TLB con 32 entradas
+2024/06/15 17:25:43 PID: 1 - FETCH - Program Counter: 0
+2024/06/15 17:25:44 PID: 1 - Ejecutando: SET - AX,32
+2024/06/15 17:25:44 PID: 1 - FETCH - Program Counter: 1
+2024/06/15 17:25:45 PID: 1 - Ejecutando: SET - ECX,36000
+2024/06/15 17:25:45 PID: 1 - FETCH - Program Counter: 2
+2024/06/15 17:25:46 PID: 1 - Ejecutando: RESIZE - 128
+2024/06/15 17:25:48 Error al enviar la solicitud: Get "http://localhost:8002/memoria/1/128": EOF
+2024/06/15 17:25:48 PID: 1 - FETCH - Program Counter: 3
+2024/06/15 17:25:49 PID: 1 - Ejecutando: MOV_OUT - AX,ECX
+2024/06/15 17:25:50 PID: 1 - TLB MISS - Pagina: 0
+2024/06/15 17:25:51 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/06/15 17:25:52 Error al escribir memoria: error al enviar la solicitud: Post "http://localhost:8002/escribir": EOF
+2024/06/15 17:25:52 PID: 1 - FETCH - Program Counter: 4
+2024/06/15 17:25:53 PID: 1 - Ejecutando: SET - BX,16
+2024/06/15 17:25:53 PID: 1 - FETCH - Program Counter: 5
+2024/06/15 17:26:06 Inicializando TLB con 32 entradas
+2024/06/15 17:26:15 PID: 0 - FETCH - Program Counter: 0
+2024/06/15 17:26:16 PID: 0 - Ejecutando: SET - AX,32
+2024/06/15 17:26:16 PID: 0 - FETCH - Program Counter: 1
+2024/06/15 17:26:17 PID: 0 - Ejecutando: SET - ECX,36000
+2024/06/15 17:26:17 PID: 0 - FETCH - Program Counter: 2
+2024/06/15 17:26:18 PID: 0 - Ejecutando: RESIZE - 128
+2024/06/15 17:26:19 PID: 0 - FETCH - Program Counter: 3
+2024/06/15 17:26:20 PID: 0 - Ejecutando: MOV_OUT - AX,ECX
+2024/06/15 17:26:21 PID: 0 - TLB MISS - Pagina: 0
+2024/06/15 17:26:22 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/06/15 17:26:23 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36000
+2024/06/15 17:26:23 PID: 0 - FETCH - Program Counter: 4
+2024/06/15 17:26:24 PID: 0 - Ejecutando: SET - BX,16
+2024/06/15 17:26:24 PID: 0 - FETCH - Program Counter: 5
+2024/06/15 17:26:25 PID: 0 - Ejecutando: MOV_OUT - BX,ECX
+2024/06/15 17:26:26 PID: 0 - TLB HIT - Pagina: 0
+2024/06/15 17:26:27 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36000
+2024/06/15 17:26:27 PID: 0 - FETCH - Program Counter: 6
+2024/06/15 17:26:28 PID: 0 - Ejecutando: SET - EDX,32
+2024/06/15 17:26:28 PID: 0 - FETCH - Program Counter: 7
+2024/06/15 17:26:29 PID: 0 - Ejecutando: SET - AX,33
+2024/06/15 17:26:29 PID: 0 - FETCH - Program Counter: 8
+2024/06/15 17:26:30 PID: 0 - Ejecutando: MOV_OUT - EDX,AX
+2024/06/15 17:26:31 PID: 0 - TLB MISS - Pagina: 2
+2024/06/15 17:26:32 PID: 0 - OBTENER MARCO - Página: 2 - Marco: 2
+2024/06/15 17:26:33 PID: 0 - Acción: ESCRIBIR - Dirección Física: 32 - Valor: 33
+2024/06/15 17:26:33 PID: 0 - FETCH - Program Counter: 9
+2024/06/15 17:26:34 PID: 0 - Ejecutando: SET - AX,48
+2024/06/15 17:26:34 PID: 0 - FETCH - Program Counter: 10
+2024/06/15 17:26:35 PID: 0 - Ejecutando: SET - BX,33
+2024/06/15 17:26:35 PID: 0 - FETCH - Program Counter: 11
+2024/06/15 17:26:36 PID: 0 - Ejecutando: MOV_OUT - AX,BX
+2024/06/15 17:26:37 PID: 0 - TLB MISS - Pagina: 3
+2024/06/15 17:26:38 PID: 0 - OBTENER MARCO - Página: 3 - Marco: 3
+2024/06/15 17:26:39 PID: 0 - Acción: ESCRIBIR - Dirección Física: 48 - Valor: 33
+2024/06/15 17:26:39 PID: 0 - FETCH - Program Counter: 12
+2024/06/15 17:26:40 PID: 0 - Ejecutando: EXIT
+2024/06/15 17:32:24 Inicializando TLB con 32 entradas
+2024/06/15 17:32:27 PID: 1 - FETCH - Program Counter: 0
+2024/06/15 17:32:28 PID: 1 - Ejecutando: SET - AX,32
+2024/06/15 17:32:28 PID: 1 - FETCH - Program Counter: 1
+2024/06/15 17:32:29 PID: 1 - Ejecutando: SET - ECX,36000
+2024/06/15 17:32:29 PID: 1 - FETCH - Program Counter: 2
+2024/06/15 17:32:30 PID: 1 - Ejecutando: RESIZE - 128
+2024/06/15 17:32:31 PID: 1 - FETCH - Program Counter: 3
+2024/06/15 17:32:32 PID: 1 - Ejecutando: MOV_OUT - AX,ECX
+2024/06/15 17:32:33 PID: 1 - TLB MISS - Pagina: 0
+2024/06/15 17:32:34 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/06/15 17:32:35 PID: 1 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36000
+2024/06/15 17:32:35 PID: 1 - FETCH - Program Counter: 4
+2024/06/15 17:32:36 PID: 1 - Ejecutando: SET - BX,16
+2024/06/15 17:32:36 PID: 1 - FETCH - Program Counter: 5
+2024/06/15 17:32:37 PID: 1 - Ejecutando: MOV_OUT - BX,ECX
+2024/06/15 17:32:38 PID: 1 - TLB HIT - Pagina: 0
+2024/06/15 17:32:39 PID: 1 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36000
+2024/06/15 17:32:39 PID: 1 - FETCH - Program Counter: 6
+2024/06/15 17:32:40 PID: 1 - Ejecutando: SET - EDX,32
+2024/06/15 17:32:40 PID: 1 - FETCH - Program Counter: 7
+2024/06/15 17:32:41 PID: 1 - Ejecutando: SET - AX,33
+2024/06/15 17:32:41 PID: 1 - FETCH - Program Counter: 8
+2024/06/15 17:32:42 PID: 1 - Ejecutando: MOV_OUT - EDX,AX
+2024/06/15 17:32:42 aaaaaaaa 32
+2024/06/15 17:32:43 PID: 1 - TLB MISS - Pagina: 2
+2024/06/15 17:32:44 PID: 1 - OBTENER MARCO - Página: 2 - Marco: 2
+2024/06/15 17:32:45 PID: 1 - Acción: ESCRIBIR - Dirección Física: 32 - Valor: 33
+2024/06/15 17:32:45 PID: 1 - FETCH - Program Counter: 9
+2024/06/15 17:32:46 PID: 1 - Ejecutando: SET - AX,48
+2024/06/15 17:32:46 PID: 1 - FETCH - Program Counter: 10
+2024/06/15 17:32:47 PID: 1 - Ejecutando: SET - BX,33
+2024/06/15 17:32:47 PID: 1 - FETCH - Program Counter: 11
+2024/06/15 17:32:48 PID: 1 - Ejecutando: MOV_OUT - AX,BX
+2024/06/15 17:32:48 aaaaaaaa 48
+2024/06/15 17:32:49 PID: 1 - TLB MISS - Pagina: 3
+2024/06/15 17:32:50 PID: 1 - OBTENER MARCO - Página: 3 - Marco: 3
+2024/06/15 17:32:51 PID: 1 - Acción: ESCRIBIR - Dirección Física: 48 - Valor: 33
+2024/06/15 17:32:51 PID: 1 - FETCH - Program Counter: 12
+2024/06/15 17:32:52 PID: 1 - Ejecutando: EXIT
+2024/06/15 17:35:38 Inicializando TLB con 32 entradas
+2024/06/15 17:35:41 PID: 0 - FETCH - Program Counter: 0
+2024/06/15 17:35:42 PID: 0 - Ejecutando: SET - AX,32
+2024/06/15 17:35:42 PID: 0 - FETCH - Program Counter: 1
+2024/06/15 17:35:43 PID: 0 - Ejecutando: SET - ECX,36000
+2024/06/15 17:35:43 PID: 0 - FETCH - Program Counter: 2
+2024/06/15 17:35:44 PID: 0 - Ejecutando: RESIZE - 128
+2024/06/15 17:35:45 PID: 0 - FETCH - Program Counter: 3
+2024/06/15 17:35:46 PID: 0 - Ejecutando: MOV_OUT - AX,ECX
+2024/06/15 17:35:46 culo: 3
+2024/06/15 17:35:47 PID: 0 - TLB MISS - Pagina: 0
+2024/06/15 17:35:48 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/06/15 17:35:49 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36000
+2024/06/15 17:35:49 PID: 0 - FETCH - Program Counter: 4
+2024/06/15 17:35:50 PID: 0 - Ejecutando: SET - BX,16
+2024/06/15 17:35:50 PID: 0 - FETCH - Program Counter: 5
+2024/06/15 17:35:51 PID: 0 - Ejecutando: MOV_OUT - BX,ECX
+2024/06/15 17:35:51 culo: 3
+2024/06/15 17:35:52 PID: 0 - TLB HIT - Pagina: 0
+2024/06/15 17:35:53 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36000
+2024/06/15 17:35:53 PID: 0 - FETCH - Program Counter: 6
+2024/06/15 17:35:54 PID: 0 - Ejecutando: SET - EDX,32
+2024/06/15 17:35:54 PID: 0 - FETCH - Program Counter: 7
+2024/06/15 17:35:55 PID: 0 - Ejecutando: SET - AX,33
+2024/06/15 17:35:55 PID: 0 - FETCH - Program Counter: 8
+2024/06/15 17:35:56 PID: 0 - Ejecutando: MOV_OUT - EDX,AX
+2024/06/15 17:35:56 culo: 2
+2024/06/15 17:35:56 aaaaaaaa 32
+2024/06/15 17:35:57 PID: 0 - TLB MISS - Pagina: 2
+2024/06/15 17:35:58 PID: 0 - OBTENER MARCO - Página: 2 - Marco: 2
+2024/06/15 17:35:59 PID: 0 - Acción: ESCRIBIR - Dirección Física: 32 - Valor: 33
+2024/06/15 17:35:59 PID: 0 - FETCH - Program Counter: 9
+2024/06/15 17:36:00 PID: 0 - Ejecutando: SET - AX,48
+2024/06/15 17:36:00 PID: 0 - FETCH - Program Counter: 10
+2024/06/15 17:36:01 PID: 0 - Ejecutando: SET - BX,33
+2024/06/15 17:36:01 PID: 0 - FETCH - Program Counter: 11
+2024/06/15 17:36:02 PID: 0 - Ejecutando: MOV_OUT - AX,BX
+2024/06/15 17:36:02 culo: 2
+2024/06/15 17:36:02 aaaaaaaa 48
+2024/06/15 17:36:03 PID: 0 - TLB MISS - Pagina: 3
+2024/06/15 17:36:04 PID: 0 - OBTENER MARCO - Página: 3 - Marco: 3
+2024/06/15 17:36:05 PID: 0 - Acción: ESCRIBIR - Dirección Física: 48 - Valor: 33
+2024/06/15 17:36:05 PID: 0 - FETCH - Program Counter: 12
+2024/06/15 17:36:07 PID: 0 - Ejecutando: EXIT
+2024/06/15 17:38:40 Inicializando TLB con 32 entradas
+2024/06/15 17:38:44 PID: 1 - FETCH - Program Counter: 0
+2024/06/15 17:38:45 PID: 1 - Ejecutando: SET - AX,32
+2024/06/15 17:38:45 PID: 1 - FETCH - Program Counter: 1
+2024/06/15 17:38:46 PID: 1 - Ejecutando: SET - ECX,36000
+2024/06/15 17:38:46 PID: 1 - FETCH - Program Counter: 2
+2024/06/15 17:38:47 PID: 1 - Ejecutando: RESIZE - 128
+2024/06/15 17:38:48 PID: 1 - FETCH - Program Counter: 3
+2024/06/15 17:38:49 PID: 1 - Ejecutando: MOV_OUT - AX,ECX
+2024/06/15 17:38:49 culo: 3
+2024/06/15 17:38:50 PID: 1 - TLB MISS - Pagina: 2
+2024/06/15 17:38:51 PID: 1 - OBTENER MARCO - Página: 2 - Marco: 2
+2024/06/15 17:38:52 PID: 1 - Acción: ESCRIBIR - Dirección Física: 32 - Valor: 36000
+2024/06/15 17:38:52 PID: 1 - FETCH - Program Counter: 4
+2024/06/15 17:38:53 PID: 1 - Ejecutando: SET - BX,16
+2024/06/15 17:38:53 PID: 1 - FETCH - Program Counter: 5
+2024/06/15 17:38:54 PID: 1 - Ejecutando: MOV_OUT - BX,ECX
+2024/06/15 17:38:54 culo: 3
+2024/06/15 17:38:55 PID: 1 - TLB MISS - Pagina: 1
+2024/06/15 17:38:56 PID: 1 - OBTENER MARCO - Página: 1 - Marco: 1
+2024/06/15 17:38:57 PID: 1 - Acción: ESCRIBIR - Dirección Física: 16 - Valor: 36000
+2024/06/15 17:38:57 PID: 1 - FETCH - Program Counter: 6
+2024/06/15 17:38:58 PID: 1 - Ejecutando: SET - EDX,32
+2024/06/15 17:38:58 PID: 1 - FETCH - Program Counter: 7
+2024/06/15 17:38:59 PID: 1 - Ejecutando: SET - AX,33
+2024/06/15 17:38:59 PID: 1 - FETCH - Program Counter: 8
+2024/06/15 17:39:00 PID: 1 - Ejecutando: MOV_OUT - EDX,AX
+2024/06/15 17:39:00 culo: 2
+2024/06/15 17:39:00 aaaaaaaa 32
+2024/06/15 17:39:01 PID: 1 - TLB HIT - Pagina: 2
+2024/06/15 17:39:02 PID: 1 - Acción: ESCRIBIR - Dirección Física: 32 - Valor: 33
+2024/06/15 17:39:02 PID: 1 - FETCH - Program Counter: 9
+2024/06/15 17:39:03 PID: 1 - Ejecutando: SET - AX,48
+2024/06/15 17:39:03 PID: 1 - FETCH - Program Counter: 10
+2024/06/15 17:39:04 PID: 1 - Ejecutando: SET - BX,33
+2024/06/15 17:39:04 PID: 1 - FETCH - Program Counter: 11
+2024/06/15 17:39:05 PID: 1 - Ejecutando: MOV_OUT - AX,BX
+2024/06/15 17:39:05 culo: 2
+2024/06/15 17:39:05 aaaaaaaa 48
+2024/06/15 17:39:06 PID: 1 - TLB MISS - Pagina: 3
+2024/06/15 17:39:07 PID: 1 - OBTENER MARCO - Página: 3 - Marco: 3
+2024/06/15 17:39:08 PID: 1 - Acción: ESCRIBIR - Dirección Física: 48 - Valor: 33
+2024/06/15 17:39:08 PID: 1 - FETCH - Program Counter: 12
+2024/06/15 17:39:09 PID: 1 - Ejecutando: EXIT
+2024/06/15 17:41:01 Inicializando TLB con 32 entradas
+2024/06/15 17:41:23 Inicializando TLB con 32 entradas
+2024/06/15 17:41:46 PID: 0 - FETCH - Program Counter: 0
+2024/06/15 17:41:47 PID: 0 - Ejecutando: SET - AX,32
+2024/06/15 17:41:47 PID: 0 - FETCH - Program Counter: 1
+2024/06/15 17:41:48 PID: 0 - Ejecutando: SET - ECX,36000
+2024/06/15 17:41:48 PID: 0 - FETCH - Program Counter: 2
+2024/06/15 17:41:49 PID: 0 - Ejecutando: RESIZE - 128
+2024/06/15 17:41:50 PID: 0 - FETCH - Program Counter: 3
+2024/06/15 17:41:51 PID: 0 - Ejecutando: MOV_OUT - AX,ECX
+2024/06/15 17:41:51 culo: 3
+2024/06/15 17:41:52 PID: 0 - TLB MISS - Pagina: 2
+2024/06/15 17:41:53 PID: 0 - OBTENER MARCO - Página: 2 - Marco: 2
+2024/06/15 17:41:54 PID: 0 - Acción: ESCRIBIR - Dirección Física: 32 - Valor: 36000
+2024/06/15 17:41:54 PID: 0 - FETCH - Program Counter: 4
+2024/06/15 17:41:55 PID: 0 - Ejecutando: SET - BX,16
+2024/06/15 17:41:55 PID: 0 - FETCH - Program Counter: 5
+2024/06/15 17:41:56 PID: 0 - Ejecutando: MOV_OUT - BX,ECX
+2024/06/15 17:41:56 culo: 3
+2024/06/15 17:41:57 PID: 0 - TLB MISS - Pagina: 1
+2024/06/15 17:41:58 PID: 0 - OBTENER MARCO - Página: 1 - Marco: 1
+2024/06/15 17:41:59 PID: 0 - Acción: ESCRIBIR - Dirección Física: 16 - Valor: 36000
+2024/06/15 17:41:59 PID: 0 - FETCH - Program Counter: 6
+2024/06/15 17:42:00 PID: 0 - Ejecutando: SET - EDX,32
+2024/06/15 17:42:00 PID: 0 - FETCH - Program Counter: 7
+2024/06/15 17:42:01 PID: 0 - Ejecutando: SET - AX,33
+2024/06/15 17:42:01 PID: 0 - FETCH - Program Counter: 8
+2024/06/15 17:42:02 PID: 0 - Ejecutando: MOV_OUT - EDX,AX
+2024/06/15 17:42:02 culo: 2
+2024/06/15 17:42:02 aaaaaaaa 32
+2024/06/15 17:42:03 PID: 0 - TLB HIT - Pagina: 2
+2024/06/15 17:42:04 PID: 0 - Acción: ESCRIBIR - Dirección Física: 32 - Valor: 33
+2024/06/15 17:42:04 PID: 0 - FETCH - Program Counter: 9
+2024/06/15 17:42:05 PID: 0 - Ejecutando: SET - AX,48
+2024/06/15 17:42:05 PID: 0 - FETCH - Program Counter: 10
+2024/06/15 17:42:06 PID: 0 - Ejecutando: SET - BX,33
+2024/06/15 17:42:06 PID: 0 - FETCH - Program Counter: 11
+2024/06/15 17:42:08 PID: 0 - Ejecutando: MOV_OUT - AX,BX
+2024/06/15 17:42:08 culo: 2
+2024/06/15 17:42:08 aaaaaaaa 48
+2024/06/15 17:42:09 PID: 0 - TLB MISS - Pagina: 3
+2024/06/15 17:42:10 PID: 0 - OBTENER MARCO - Página: 3 - Marco: 3
+2024/06/15 17:42:11 PID: 0 - Acción: ESCRIBIR - Dirección Física: 48 - Valor: 33
+2024/06/15 17:42:11 PID: 0 - FETCH - Program Counter: 12
+2024/06/15 17:42:12 PID: 0 - Ejecutando: SET - AX,32
+2024/06/15 17:42:12 PID: 0 - FETCH - Program Counter: 13
+2024/06/15 17:42:13 PID: 0 - Ejecutando: MOV_IN - AX,EDX
+2024/06/15 17:42:14 PID: 0 - TLB HIT - Pagina: 2
+2024/06/15 17:42:15 PID: 0 - Acción: LEER - Dirección Física: 32 - Valor: 33
+2024/06/15 17:42:15 PID: 0 - FETCH - Program Counter: 14
+2024/06/15 17:42:16 PID: 0 - Ejecutando: EXIT
+2024/06/15 17:50:26 Inicializando TLB con 4 entradas
+2024/06/15 17:50:42 PID: 0 - FETCH - Program Counter: 0
+2024/06/15 17:50:43 PID: 0 - Ejecutando: SET - AX,0
+2024/06/15 17:50:43 PID: 0 - FETCH - Program Counter: 1
+2024/06/15 17:50:44 PID: 0 - Ejecutando: SET - ECX,36000
+2024/06/15 17:50:44 PID: 0 - FETCH - Program Counter: 2
+2024/06/15 17:50:45 PID: 0 - Ejecutando: RESIZE - 128
+2024/06/15 17:50:46 PID: 0 - FETCH - Program Counter: 3
+2024/06/15 17:50:47 PID: 0 - Ejecutando: MOV_OUT - AX,ECX
+2024/06/15 17:50:47 culo: 3
+2024/06/15 17:50:48 PID: 0 - TLB MISS - Pagina: 0
+2024/06/15 17:50:49 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/06/15 17:50:50 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36000
+2024/06/15 17:50:50 PID: 0 - FETCH - Program Counter: 4
+2024/06/15 17:50:51 PID: 0 - Ejecutando: SET - BX,16
+2024/06/15 17:50:51 PID: 0 - FETCH - Program Counter: 5
+2024/06/15 17:50:52 PID: 0 - Ejecutando: MOV_OUT - BX,ECX
+2024/06/15 17:50:52 culo: 3
+2024/06/15 17:50:53 PID: 0 - TLB MISS - Pagina: 1
+2024/06/15 17:50:54 PID: 0 - OBTENER MARCO - Página: 1 - Marco: 1
+2024/06/15 17:50:55 PID: 0 - Acción: ESCRIBIR - Dirección Física: 16 - Valor: 36000
+2024/06/15 17:50:55 PID: 0 - FETCH - Program Counter: 6
+2024/06/15 17:50:56 PID: 0 - Ejecutando: SET - EDX,32
+2024/06/15 17:50:56 PID: 0 - FETCH - Program Counter: 7
+2024/06/15 17:50:57 PID: 0 - Ejecutando: SET - AX,33
+2024/06/15 17:50:57 PID: 0 - FETCH - Program Counter: 8
+2024/06/15 17:50:58 PID: 0 - Ejecutando: MOV_OUT - EDX,AX
+2024/06/15 17:50:58 culo: 2
+2024/06/15 17:50:58 aaaaaaaa 32
+2024/06/15 17:50:59 PID: 0 - TLB MISS - Pagina: 2
+2024/06/15 17:51:00 PID: 0 - OBTENER MARCO - Página: 2 - Marco: 2
+2024/06/15 17:51:01 PID: 0 - Acción: ESCRIBIR - Dirección Física: 32 - Valor: 33
+2024/06/15 17:51:01 PID: 0 - FETCH - Program Counter: 9
+2024/06/15 17:51:02 PID: 0 - Ejecutando: SET - AX,112
+2024/06/15 17:51:02 PID: 0 - FETCH - Program Counter: 10
+2024/06/15 17:51:03 PID: 0 - Ejecutando: SET - BX,33
+2024/06/15 17:51:03 PID: 0 - FETCH - Program Counter: 11
+2024/06/15 17:51:04 PID: 0 - Ejecutando: MOV_OUT - AX,BX
+2024/06/15 17:51:04 culo: 2
+2024/06/15 17:51:04 aaaaaaaa 112
+2024/06/15 17:51:05 PID: 0 - TLB MISS - Pagina: 7
+2024/06/15 17:51:06 PID: 0 - OBTENER MARCO - Página: 7 - Marco: 7
+2024/06/15 17:51:07 PID: 0 - Acción: ESCRIBIR - Dirección Física: 112 - Valor: 33
+2024/06/15 17:51:07 PID: 0 - FETCH - Program Counter: 12
+2024/06/15 17:51:08 PID: 0 - Ejecutando: SET - BX,48
+2024/06/15 17:51:08 PID: 0 - FETCH - Program Counter: 13
+2024/06/15 17:51:09 PID: 0 - Ejecutando: MOV_OUT - BX,ECX
+2024/06/15 17:51:09 culo: 3
+2024/06/15 17:51:10 PID: 0 - TLB MISS - Pagina: 3
+2024/06/15 17:51:11 PID: 0 - OBTENER MARCO - Página: 3 - Marco: 3
+2024/06/15 17:51:12 PID: 0 - Acción: ESCRIBIR - Dirección Física: 48 - Valor: 36000
+2024/06/15 17:51:12 PID: 0 - FETCH - Program Counter: 14
+2024/06/15 17:51:13 PID: 0 - Ejecutando: SET - BX,32
+2024/06/15 17:51:13 PID: 0 - FETCH - Program Counter: 15
+2024/06/15 17:51:14 PID: 0 - Ejecutando: MOV_OUT - BX,ECX
+2024/06/15 17:51:14 culo: 3
+2024/06/15 17:51:15 PID: 0 - TLB HIT - Pagina: 2
+2024/06/15 17:51:16 PID: 0 - Acción: ESCRIBIR - Dirección Física: 32 - Valor: 36000
+2024/06/15 17:51:16 PID: 0 - FETCH - Program Counter: 16
+2024/06/15 17:51:17 PID: 0 - Ejecutando: SET - BX,112
+2024/06/15 17:51:17 PID: 0 - FETCH - Program Counter: 17
+2024/06/15 17:51:18 PID: 0 - Ejecutando: MOV_OUT - BX,ECX
+2024/06/15 17:51:18 culo: 3
+2024/06/15 17:51:19 PID: 0 - TLB HIT - Pagina: 7
+2024/06/15 17:51:20 PID: 0 - Acción: ESCRIBIR - Dirección Física: 112 - Valor: 36000
+2024/06/15 17:51:20 PID: 0 - FETCH - Program Counter: 18
+2024/06/15 17:51:21 PID: 0 - Ejecutando: SET - BX,16
+2024/06/15 17:51:21 PID: 0 - FETCH - Program Counter: 19
+2024/06/15 17:51:22 PID: 0 - Ejecutando: MOV_OUT - BX,ECX
+2024/06/15 17:51:22 culo: 3
+2024/06/15 17:51:23 PID: 0 - TLB HIT - Pagina: 1
+2024/06/15 17:51:24 PID: 0 - Acción: ESCRIBIR - Dirección Física: 16 - Valor: 36000
+2024/06/15 17:51:24 PID: 0 - FETCH - Program Counter: 20
+2024/06/15 17:51:25 PID: 0 - Ejecutando: SET - BX,0
+2024/06/15 17:51:25 PID: 0 - FETCH - Program Counter: 21
+2024/06/15 17:51:26 PID: 0 - Ejecutando: MOV_OUT - BX,ECX
+2024/06/15 17:51:26 culo: 3
+2024/06/15 17:51:27 PID: 0 - TLB MISS - Pagina: 0
+2024/06/15 17:51:28 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/06/15 17:51:29 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36000
+2024/06/15 17:51:29 PID: 0 - FETCH - Program Counter: 22
+2024/06/15 17:51:30 PID: 0 - Ejecutando: EXIT
+2024/06/15 17:58:01 Inicializando TLB con 4 entradas
+2024/06/15 17:58:12 PID: 1 - FETCH - Program Counter: 0
+2024/06/15 17:58:13 PID: 1 - Ejecutando: SET - AX,0
+2024/06/15 17:58:13 PID: 1 - FETCH - Program Counter: 1
+2024/06/15 17:58:14 PID: 1 - Ejecutando: SET - ECX,36000
+2024/06/15 17:58:14 PID: 1 - FETCH - Program Counter: 2
+2024/06/15 17:58:15 PID: 1 - Ejecutando: RESIZE - 128
+2024/06/15 17:58:16 PID: 1 - FETCH - Program Counter: 3
+2024/06/15 17:58:17 PID: 1 - Ejecutando: MOV_OUT - AX,ECX
+2024/06/15 17:58:17 culo: 3
+2024/06/15 17:58:18 PID: 1 - TLB MISS - Pagina: 0
+2024/06/15 17:58:19 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/06/15 17:58:20 PID: 1 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36000
+2024/06/15 17:58:20 PID: 1 - FETCH - Program Counter: 4
+2024/06/15 17:58:21 PID: 1 - Ejecutando: SET - BX,16
+2024/06/15 17:58:21 PID: 1 - FETCH - Program Counter: 5
+2024/06/15 17:58:22 PID: 1 - Ejecutando: MOV_OUT - BX,ECX
+2024/06/15 17:58:22 culo: 3
+2024/06/15 17:58:23 PID: 1 - TLB MISS - Pagina: 1
+2024/06/15 17:58:24 PID: 1 - OBTENER MARCO - Página: 1 - Marco: 1
+2024/06/15 17:58:25 PID: 1 - Acción: ESCRIBIR - Dirección Física: 16 - Valor: 36000
+2024/06/15 17:58:25 PID: 1 - FETCH - Program Counter: 6
+2024/06/15 17:58:26 PID: 1 - Ejecutando: SET - EDX,32
+2024/06/15 17:58:26 PID: 1 - FETCH - Program Counter: 7
+2024/06/15 17:58:27 PID: 1 - Ejecutando: SET - AX,33
+2024/06/15 17:58:27 PID: 1 - FETCH - Program Counter: 8
+2024/06/15 17:58:28 PID: 1 - Ejecutando: MOV_OUT - EDX,AX
+2024/06/15 17:58:28 culo: 2
+2024/06/15 17:58:28 aaaaaaaa 32
+2024/06/15 17:58:29 PID: 1 - TLB MISS - Pagina: 2
+2024/06/15 17:58:30 PID: 1 - OBTENER MARCO - Página: 2 - Marco: 2
+2024/06/15 17:58:31 PID: 1 - Acción: ESCRIBIR - Dirección Física: 32 - Valor: 33
+2024/06/15 17:58:31 PID: 1 - FETCH - Program Counter: 9
+2024/06/15 17:58:32 PID: 1 - Ejecutando: SET - AX,112
+2024/06/15 17:58:32 PID: 1 - FETCH - Program Counter: 10
+2024/06/15 17:58:33 PID: 1 - Ejecutando: SET - BX,33
+2024/06/15 17:58:33 PID: 1 - FETCH - Program Counter: 11
+2024/06/15 17:58:34 PID: 1 - Ejecutando: MOV_OUT - AX,BX
+2024/06/15 17:58:34 culo: 2
+2024/06/15 17:58:34 aaaaaaaa 112
+2024/06/15 17:58:35 PID: 1 - TLB MISS - Pagina: 7
+2024/06/15 17:58:36 PID: 1 - OBTENER MARCO - Página: 7 - Marco: 7
+2024/06/15 17:58:37 PID: 1 - Acción: ESCRIBIR - Dirección Física: 112 - Valor: 33
+2024/06/15 17:58:37 PID: 1 - FETCH - Program Counter: 12
+2024/06/15 17:58:38 PID: 1 - Ejecutando: SET - BX,48
+2024/06/15 17:58:38 PID: 1 - FETCH - Program Counter: 13
+2024/06/15 17:58:39 PID: 1 - Ejecutando: MOV_OUT - BX,ECX
+2024/06/15 17:58:39 culo: 3
+2024/06/15 17:58:40 PID: 1 - TLB MISS - Pagina: 3
+2024/06/15 17:58:41 PID: 1 - OBTENER MARCO - Página: 3 - Marco: 3
+2024/06/15 17:58:42 PID: 1 - Acción: ESCRIBIR - Dirección Física: 48 - Valor: 36000
+2024/06/15 17:58:42 PID: 1 - FETCH - Program Counter: 14
+2024/06/15 17:58:43 PID: 1 - Ejecutando: SET - BX,32
+2024/06/15 17:58:43 PID: 1 - FETCH - Program Counter: 15
+2024/06/15 17:58:44 PID: 1 - Ejecutando: MOV_OUT - BX,ECX
+2024/06/15 17:58:44 culo: 3
+2024/06/15 17:58:45 PID: 1 - TLB HIT - Pagina: 2
+2024/06/15 17:58:46 PID: 1 - Acción: ESCRIBIR - Dirección Física: 32 - Valor: 36000
+2024/06/15 17:58:46 PID: 1 - FETCH - Program Counter: 16
+2024/06/15 17:58:47 PID: 1 - Ejecutando: SET - BX,112
+2024/06/15 17:58:47 PID: 1 - FETCH - Program Counter: 17
+2024/06/15 17:58:48 PID: 1 - Ejecutando: MOV_OUT - BX,ECX
+2024/06/15 17:58:48 culo: 3
+2024/06/15 17:58:49 PID: 1 - TLB HIT - Pagina: 7
+2024/06/15 17:58:50 PID: 1 - Acción: ESCRIBIR - Dirección Física: 112 - Valor: 36000
+2024/06/15 17:58:50 PID: 1 - FETCH - Program Counter: 18
+2024/06/15 17:58:51 PID: 1 - Ejecutando: SET - BX,16
+2024/06/15 17:58:51 PID: 1 - FETCH - Program Counter: 19
+2024/06/15 17:58:52 PID: 1 - Ejecutando: MOV_OUT - BX,ECX
+2024/06/15 17:58:52 culo: 3
+2024/06/15 17:58:53 PID: 1 - TLB HIT - Pagina: 1
+2024/06/15 17:58:54 PID: 1 - Acción: ESCRIBIR - Dirección Física: 16 - Valor: 36000
+2024/06/15 17:58:54 PID: 1 - FETCH - Program Counter: 20
+2024/06/15 17:58:55 PID: 1 - Ejecutando: SET - BX,0
+2024/06/15 17:58:55 PID: 1 - FETCH - Program Counter: 21
+2024/06/15 17:58:56 PID: 1 - Ejecutando: MOV_OUT - BX,ECX
+2024/06/15 17:58:56 culo: 3
+2024/06/15 17:58:57 PID: 1 - TLB MISS - Pagina: 0
+2024/06/15 17:58:58 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/06/15 17:58:59 PID: 1 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 36000
+2024/06/15 17:58:59 PID: 1 - FETCH - Program Counter: 22
+2024/06/15 17:59:00 PID: 1 - Ejecutando: EXIT

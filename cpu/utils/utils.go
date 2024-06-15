@@ -13,14 +13,12 @@ import (
 	"strconv"
 	"strings"
 	"sync"
-	"time"
 )
 
 type TLBEntry struct {
-	PID     int
-	Pagina  int
-	Marco   int
-	LastUse int64 // Para LRU
+	PID    int
+	Pagina int
+	Marco  int
 }
 
 type TLB struct {
@@ -214,10 +212,15 @@ func LeerDeMemoria(pid int, direccion int, tamaño int) ([]byte, error) {
 	if err != nil {
 		return nil, fmt.Errorf("error al decodificar respuesta: %v", err)
 	}
-
-	valorUint32 := binary.LittleEndian.Uint32(resultado)
-
-	log.Printf("PID: %d - Acción: LEER - Dirección Física: %d - Valor: %d", pid, direccion, valorUint32)
+	if tamaño == 4 {
+		valorUint32 := binary.LittleEndian.Uint32(resultado)
+		log.Printf("PID: %d - Acción: LEER - Dirección Física: %d - Valor: %d", pid, direccion, valorUint32)
+	} else if tamaño == 1 {
+		valorUint8 := resultado[0]
+		log.Printf("PID: %d - Acción: LEER - Dirección Física: %d - Valor: %d", pid, direccion, valorUint8)
+	} else {
+		return nil, fmt.Errorf("tamaño de datos no soportado: %d bytes", tamaño)
+	}
 
 	return resultado, nil
 }
@@ -229,8 +232,6 @@ func EscribirEnMemoria(pid int, direccionFisica int, datos []byte, tamaño int) 
 		Tamaño:    tamaño,
 		Direccion: direccionFisica,
 	}
-
-	log.Printf("Body: %v", body)
 
 	bodyJSON, err := json.Marshal(body)
 	if err != nil {
@@ -248,79 +249,141 @@ func EscribirEnMemoria(pid int, direccionFisica int, datos []byte, tamaño int) 
 		return fmt.Errorf("error en la respuesta del servidor: %s", resp.Status)
 	}
 
-	valorUint32 := binary.LittleEndian.Uint32(datos)
-
-	log.Printf("PID: %d - Acción: ESCRIBIR - Dirección Física: %d - Valor: %d", pid, direccionFisica, valorUint32)
+	if tamaño == 4 {
+		valorUint32 := binary.LittleEndian.Uint32(datos)
+		log.Printf("PID: %d - Acción: ESCRIBIR - Dirección Física: %d - Valor: %d", pid, direccionFisica, valorUint32)
+	} else if tamaño == 1 {
+		// si el tamaño es de 1 byte interpreta el primer byte como uint8
+		valorUint8 := datos[0]
+		log.Printf("PID: %d - Acción: ESCRIBIR - Dirección Física: %d - Valor: %d", pid, direccionFisica, valorUint8)
+	} else {
+		return fmt.Errorf("tamaño de datos no soportado: %d bytes", tamaño)
+	}
 
 	return nil
 }
 
+func ObtenerValorRegistro(nombreRegistro string) int {
+	if len(nombreRegistro) == 2 && strings.Contains(nombreRegistro, "X") {
+		registro := ObtenerRegistro8Bits(nombreRegistro)
+		return int(*registro)
+	} else {
+		registro := ObtenerRegistro32Bits(nombreRegistro)
+		return int(*registro)
+	}
+}
+
 // MOV_IN (Registro Datos, Registro Dirección)
 func MOV_IN(registroDatos, registroDireccion string) {
-	regDatos := ObtenerRegistro32Bits(registroDatos)
-	regDireccion := ObtenerRegistro32Bits(registroDireccion)
-
-	dirLogica := int(*regDireccion)
-
-	if regDatos == nil || regDireccion == nil {
-		log.Printf("Error: registro inválido")
-		return
-	}
-
-	direccionFisica, err := mmu(procesoActual.PID, dirLogica)
-
-	if err != nil {
-		log.Printf("Error al traducir dirección: %s", err.Error())
-		return
-	}
-
 	var bytesLeidos []byte
-	bytesLeidos, err = LeerDeMemoria(procesoActual.PID, direccionFisica, 4) // Leer 4 bytes
-	if err != nil {
-		log.Printf("Error al leer de memoria: %s", err.Error())
-		return
-	}
 
-	// Convertir bytes a uint32
-	if len(bytesLeidos) != 4 {
-		log.Printf("Error: se esperaban 4 bytes, pero se recibieron %d", len(bytesLeidos))
-		return
-	}
+	if len(registroDatos) == 2 && strings.Contains(registroDatos, "X") {
+		regDatos8 := ObtenerRegistro8Bits(registroDatos)
+		if regDatos8 == nil {
+			log.Printf("Error: registro de 8 bits inválido")
+			return
+		}
 
-	valorUint32 := binary.LittleEndian.Uint32(bytesLeidos)
-	// Asignar valorUint32 a regDatos
-	*regDatos = valorUint32
+		// Leer 1 byte
+		dirLogica := ObtenerValorRegistro(registroDireccion)
+
+		direccionFisica, err := mmu(procesoActual.PID, dirLogica)
+		if err != nil {
+			log.Printf("Error al traducir dirección: %s", err.Error())
+			return
+		}
+
+		bytesLeidos, err = LeerDeMemoria(procesoActual.PID, direccionFisica, 1)
+		if err != nil {
+			log.Printf("Error al leer de memoria: %s", err.Error())
+			return
+		}
+
+		// Asignar valor leído a regDatos8
+		*regDatos8 = bytesLeidos[0]
+	} else {
+		regDatos32 := ObtenerRegistro32Bits(registroDatos)
+		if regDatos32 == nil {
+			log.Printf("Error: registro de 32 bits inválido")
+			return
+		}
+
+		// Leer 4 bytes
+		dirLogica := ObtenerValorRegistro(registroDireccion)
+		direccionFisica, err := mmu(procesoActual.PID, dirLogica)
+		if err != nil {
+			log.Printf("Error al traducir dirección: %s", err.Error())
+			return
+		}
+
+		bytesLeidos, err = LeerDeMemoria(procesoActual.PID, direccionFisica, 4)
+		if err != nil {
+			log.Printf("Error al leer de memoria: %s", err.Error())
+			return
+		}
+
+		// Convertir bytes a uint32
+		if len(bytesLeidos) != 4 {
+			log.Printf("Error: se esperaban 4 bytes, pero se recibieron %d", len(bytesLeidos))
+			return
+		}
+		*regDatos32 = binary.LittleEndian.Uint32(bytesLeidos)
+
+	}
 }
 
 // MOV_OUT (Registro Dirección, Registro Datos)
 func MOV_OUT(registroDireccion, registroDatos string) {
-	regDireccion := ObtenerRegistro32Bits(registroDireccion)
-	regDatos := ObtenerRegistro32Bits(registroDatos)
 
-	dirLogica := int(*regDireccion)
+	if len(registroDatos) == 2 && strings.Contains(registroDatos, "X") {
 
-	if regDireccion == nil || regDatos == nil {
-		log.Printf("Error: registro inválido")
-		return
-	}
+		regDatos8 := ObtenerRegistro8Bits(registroDatos)
+		if regDatos8 == nil {
+			log.Printf("Error: registro de 8 bits inválido")
+			return
+		}
 
-	direccionFisica, err := mmu(procesoActual.PID, dirLogica)
+		// Convertir el valor del registro de 8 bits a []byte
+		datos := []byte{*regDatos8}
 
-	if err != nil {
-		log.Printf("Error al traducir dirección: %s", err.Error())
-		return
-	}
+		// Escribir 1 byte en memoria
+		dirLogica := ObtenerValorRegistro(registroDireccion)
+		direccionFisica, err := mmu(procesoActual.PID, dirLogica)
+		if err != nil {
+			log.Printf("Error al traducir dirección: %s", err.Error())
+			return
+		}
 
-	// Convertir el valor del registro a []byte
-	datos := make([]byte, 4)
-	binary.LittleEndian.PutUint32(datos, *regDatos)
+		err = EscribirEnMemoria(procesoActual.PID, direccionFisica, datos, 1)
+		if err != nil {
+			log.Printf("Error al escribir memoria: %s", err.Error())
+			return
+		}
 
-	log.Printf("Valor a escribir en memoria: %v", datos)
-	// Escribir en memoria considerando la posibilidad de direcciones físicas múltiples
-	err = EscribirEnMemoria(procesoActual.PID, direccionFisica, datos, 4)
-	if err != nil {
-		log.Printf("Error al escribir memoria: %s", err.Error())
-		return
+	} else {
+		regDatos32 := ObtenerRegistro32Bits(registroDatos)
+		if regDatos32 == nil {
+			log.Printf("Error: registro de 32 bits inválido")
+			return
+		}
+
+		// Convertir el valor del registro a []byte
+		datos := make([]byte, 4)
+		binary.LittleEndian.PutUint32(datos, *regDatos32)
+
+		// Escribir 4 bytes en memoria
+		dirLogica := ObtenerValorRegistro(registroDireccion)
+		direccionFisica, err := mmu(procesoActual.PID, dirLogica)
+		if err != nil {
+			log.Printf("Error al traducir dirección: %s", err.Error())
+			return
+		}
+
+		err = EscribirEnMemoria(procesoActual.PID, direccionFisica, datos, 4)
+		if err != nil {
+			log.Printf("Error al escribir memoria: %s", err.Error())
+			return
+		}
 	}
 }
 
@@ -416,13 +479,8 @@ func mmu(pid int, direccionLogica int) (int, error) {
 		return 0, fmt.Errorf("error al obtener el tamaño de página: %w", err)
 	}
 
-	log.Printf("Tamaño pagina: %d", pageSize)
-
 	numeroPagina := direccionLogica / pageSize
 	desplazamiento := direccionLogica - numeroPagina*pageSize
-
-	log.Printf("Num pagina: %d", numeroPagina)
-	log.Printf("Desplazamiento: %d", desplazamiento)
 
 	if TLBCPU == nil {
 		log.Printf("Error: TLB no está inicializada")
@@ -449,8 +507,6 @@ func mmu(pid int, direccionLogica int) (int, error) {
 	// Calcular dirección física
 	direccionFisica := marco*pageSize + desplazamiento
 
-	log.Printf("direccion fisica %d", marcoTLB)
-
 	return direccionFisica, nil
 }
 
@@ -469,7 +525,8 @@ func buscarEnTLB(pid, numeroPagina int) (int, error) {
 	for i, entry := range TLBCPU.Entradas {
 		if entry.PID == pid && entry.Pagina == numeroPagina {
 			if globals.ClientConfig.AlgorithmTbl == "LRU" {
-				TLBCPU.Entradas[i].LastUse = time.Now().UnixNano()
+				TLBCPU.Entradas = append(TLBCPU.Entradas[:i], TLBCPU.Entradas[i+1:]...) // elimina la entrada encontrada
+				TLBCPU.Entradas = append(TLBCPU.Entradas, entry)                        // añade la entrada al final
 			}
 			return entry.Marco, nil // TLB Hit
 
@@ -479,35 +536,35 @@ func buscarEnTLB(pid, numeroPagina int) (int, error) {
 	return 0, fmt.Errorf("TLB Miss")
 }
 
+/*
+	func imprimirTLB() {
+		fmt.Println("Tabla de la TLB:")
+		fmt.Println("-----------------------------------------")
+		fmt.Printf("| %-5s | %-8s | %-5s | %-6s |\n", "Index", "PID", "Página", "Marco")
+		fmt.Println("-----------------------------------------")
+
+		for index, entry := range TLBCPU.Entradas {
+			fmt.Printf("| %-5d | %-8d | %-5d | %-6d |\n", index, entry.PID, entry.Pagina, entry.Marco)
+		}
+
+		fmt.Println("-----------------------------------------")
+	}
+*/
 func actualizarTLB(pid, numeroPagina, marco int) {
 
 	if len(TLBCPU.Entradas) >= globals.ClientConfig.NumberFellingTbl {
-		if globals.ClientConfig.AlgorithmTbl == "FIFO" {
-
-			TLBCPU.Entradas = TLBCPU.Entradas[1:] // Elimina la entrada más antigua
-		} else if globals.ClientConfig.AlgorithmTbl == "LRU" {
-
-			// Encuentra la entrada menos recientemente utilizada
-			lruIndex := 0
-			lruTime := TLBCPU.Entradas[0].LastUse
-			for i, entry := range TLBCPU.Entradas {
-				if entry.LastUse < lruTime {
-					lruIndex = i
-					lruTime = entry.LastUse
-				}
-			}
-			TLBCPU.Entradas = append(TLBCPU.Entradas[:lruIndex], TLBCPU.Entradas[lruIndex+1:]...)
-		}
+		TLBCPU.Entradas = TLBCPU.Entradas[1:] // Elimina la entrada más antigua
 	}
 
 	nuevaEntrada := TLBEntry{
-		PID:     pid,
-		Pagina:  numeroPagina,
-		Marco:   marco,
-		LastUse: time.Now().UnixNano(),
+		PID:    pid,
+		Pagina: numeroPagina,
+		Marco:  marco,
 	}
 
 	TLBCPU.Entradas = append(TLBCPU.Entradas, nuevaEntrada)
+	//imprimirTLB()
+
 }
 
 func buscarEnMemoria(pid int, numeroPagina int) (int, error) {
