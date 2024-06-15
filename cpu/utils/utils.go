@@ -392,62 +392,20 @@ type BodyRRSS struct {
 
 // WAIT (Recurso)
 func WAIT(recurso string) {
-	//creo un body para mandarle a kernel
-	body := BodyRRSS{
-		PID:     procesoActual.PID,
-		Recurso: recurso,
-	}
+	mutexMensaje.Lock()
+	resultadoEjecucion.Mensaje = "BLOCKED WAIT " + recurso
+	mutexMensaje.Unlock()
 
-	bodyJSON, err := json.Marshal(body)
-	if err != nil {
-		log.Printf("Error al codificar la solicitud: %s", err.Error())
-		return
-	}
-
-	//envio al kernel el body
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/wait"
-	resp, err := http.Post(url, "application/json", bytes.NewBuffer(bodyJSON))
-	if err != nil {
-		log.Printf("Error al enviar la solicitud: %s", err.Error())
-		return
-	}
-	defer resp.Body.Close()
-
-	if resp.StatusCode != http.StatusOK {
-		log.Printf("Error en la respuesta del servidor: %s", resp.Status)
-		return
-	}
-
-	log.Printf("PID: %d - WAIT ejecutado para el recurso: %s", procesoActual.PID, recurso)
+	interrupcion = true
 }
 
 // SIGNAL (Recurso)
 func SIGNAL(recurso string) {
-	body := BodyRRSS{
-		PID:     procesoActual.PID,
-		Recurso: recurso,
-	}
+	mutexMensaje.Lock()
+	resultadoEjecucion.Mensaje = "BLOCKED SIGNAL " + recurso
+	mutexMensaje.Unlock()
 
-	bodyJSON, err := json.Marshal(body)
-	if err != nil {
-		log.Printf("Error al codificar la solicitud: %s", err.Error())
-		return
-	}
-
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/signal"
-	resp, err := http.Post(url, "application/json", bytes.NewBuffer(bodyJSON))
-	if err != nil {
-		log.Printf("Error al enviar la solicitud: %s", err.Error())
-		return
-	}
-	defer resp.Body.Close()
-
-	if resp.StatusCode != http.StatusOK {
-		log.Printf("Error en la respuesta del servidor: %s", resp.Status)
-		return
-	}
-
-	log.Printf("PID: %d - SIGNAL ejecutado para el recurso: %s", procesoActual.PID, recurso)
+	interrupcion = true
 }
 
 func mmu(pid int, direccionLogica int) (int, error) {

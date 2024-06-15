@@ -3,7 +3,6 @@ package utils
 import (
 	"bytes"
 	"encoding/json"
-	"fmt"
 	"io"
 	"kernel/globals"
 	"log"
@@ -453,21 +452,13 @@ func ManejarInterrupcion(interrupcion string, proceso PCB, colaVRR bool) {
 
 	if killProcess {
 		mutexColaListos.Unlock()
+		eliminarProceso(proceso, "Se solicito finalizar el proceso")
 
-		mutexMapaEstados.Lock()
-		delete(estadosProcesos, proceso.PID)
-		mutexMapaEstados.Unlock()
-
-		if motivo[0] == "BLOCKED" {
+		if motivo[0] == "BLOCKED" && motivo[1] != "WAIT" && motivo[1] != "SIGNAL" {
 			semProcesoBloqueado <- 0
 		}
 
-		log.Printf("Finaliza el proceso %d - Motivo: %v", proceso.PID, "Se solicito finalizar el proceso")
-
 		killProcess = false
-
-		liberarRecursosProceso(proceso.PID)
-		agregarProcesosALaColaListos()
 
 		return
 	}
@@ -475,31 +466,10 @@ func ManejarInterrupcion(interrupcion string, proceso PCB, colaVRR bool) {
 	switch motivo[0] {
 	case "error":
 		mutexColaListos.Unlock()
-
-		mutexMapaEstados.Lock()
-		delete(estadosProcesos, proceso.PID)
-		mutexMapaEstados.Unlock()
-
-		log.Printf("Finaliza el proceso %d - Motivo: %v", proceso.PID, "Ocurrio un error durante la ejecución")
-
-		liberarRecursosProceso(proceso.PID)
-		agregarProcesosALaColaListos()
+		eliminarProceso(proceso, "Ocurrio un error durante la ejecución")
 	case "EXIT":
 		mutexColaListos.Unlock()
-
-		mutexMapaEstados.Lock()
-		delete(estadosProcesos, proceso.PID)
-		mutexMapaEstados.Unlock()
-
-		mensaje := ""
-		if len(motivo) > 1 {
-			mensaje = motivo[1]
-		}
-
-		log.Printf("Finaliza el proceso %d - Motivo: %v", proceso.PID, mensaje)
-
-		liberarRecursosProceso(proceso.PID)
-		agregarProcesosALaColaListos()
+		eliminarProceso(proceso, motivo[1])
 	case "READY":
 		cambiarEstado(string(proceso.Estado), "READY", &proceso)
 		colaDeListos = append(colaDeListos, proceso)
@@ -516,9 +486,63 @@ func ManejarInterrupcion(interrupcion string, proceso PCB, colaVRR bool) {
 
 		semProcesosListos <- 0
 	case "BLOCKED":
-		mutexColaListos.Unlock()
-
 		cambiarEstado(string(proceso.Estado), "BLOCKED", &proceso)
+
+		if motivo[1] == "WAIT" {
+			mutexColaListos.Unlock()
+			log.Printf("PID: %d - Recurso solicitado: %v", proceso.PID, motivo[2])
+			resultado := WAIT(proceso.PID, motivo[2])
+
+			if resultado == "OK" {
+				cambiarEstado(string(proceso.Estado), "READY", &proceso)
+				var listaTemp []PCB
+				listaTemp = append(listaTemp, proceso)
+				if proceso.Quantum == globals.ClientConfig.Quantum {
+					mutexColaListosQuantum.Lock()
+					listaTemp = append(listaTemp, colaDeListosQuantum...)
+					colaDeListosQuantum = listaTemp
+					mutexColaListosQuantum.Unlock()
+				} else {
+					mutexColaListos.Lock()
+					listaTemp = append(listaTemp, colaDeListos...)
+					colaDeListos = listaTemp
+					mutexColaListos.Unlock()
+				}
+				log.Printf("PID: %d - Recurso asignado: %v", proceso.PID, motivo[2])
+				semProcesosListos <- 0
+				return
+			} else if resultado == "NOT_FOUND" {
+				eliminarProceso(proceso, "INVALID_RESOURCE")
+				return
+			}
+		} else if motivo[1] == "SIGNAL" {
+			log.Printf("PID: %d - Recurso liberado: %v", proceso.PID, motivo[2])
+			mutexColaListos.Unlock()
+			resultado := SIGNAL(motivo[2])
+			if resultado == "NOT_FOUND" {
+				eliminarProceso(proceso, "INVALID_RESOURCE")
+				return
+			}
+			cambiarEstado(string(proceso.Estado), "READY", &proceso)
+			var listaTemp []PCB
+			listaTemp = append(listaTemp, proceso)
+			if proceso.Quantum == globals.ClientConfig.Quantum {
+				mutexColaListosQuantum.Lock()
+				listaTemp = append(listaTemp, colaDeListosQuantum...)
+				colaDeListosQuantum = listaTemp
+				mutexColaListosQuantum.Unlock()
+			} else {
+				mutexColaListos.Lock()
+				listaTemp = append(listaTemp, colaDeListos...)
+				colaDeListos = listaTemp
+				mutexColaListos.Unlock()
+			}
+			semProcesosListos <- 0
+			return
+		} else {
+			mutexColaListos.Unlock()
+			semProcesoBloqueado <- 0
+		}
 
 		mutexColaBlocked.Lock() // Lo devuelvo como estaba por la funcion Sleep que puede elminiar elementos de la lista
 		colaDeBlocked = append(colaDeBlocked, proceso)
@@ -530,8 +554,18 @@ func ManejarInterrupcion(interrupcion string, proceso PCB, colaVRR bool) {
 		}
 
 		log.Printf("PID: %d - Bloqueado por: %v", proceso.PID, mensaje)
-		semProcesoBloqueado <- 0
 	}
+}
+
+func eliminarProceso(proceso PCB, motivo string) {
+	mutexMapaEstados.Lock()
+	delete(estadosProcesos, proceso.PID)
+	mutexMapaEstados.Unlock()
+
+	log.Printf("Finaliza el proceso %d - Motivo: %v", proceso.PID, motivo)
+
+	liberarRecursosProceso(proceso.PID)
+	agregarProcesosALaColaListos()
 }
 
 func cambiarEstado(estadoAnterior string, estadoNuevo string, proceso *PCB) {
@@ -865,100 +899,37 @@ type BodyRRSS struct {
 	Recurso string `json:"recurso"`
 }
 
-func Wait(w http.ResponseWriter, r *http.Request) {
-	var request BodyRRSS
-	if err := json.NewDecoder(r.Body).Decode(&request); err != nil {
-		http.Error(w, err.Error(), http.StatusBadRequest)
-		return
-	}
-
-	pid := request.PID
-	recurso := request.Recurso
-
-	if err := AsignarRecurso(pid, recurso); err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-
-	w.WriteHeader(http.StatusOK)
-	fmt.Fprintf(w, "Recurso %s asignado a PID %d", recurso, pid)
-}
-
-func AsignarRecurso(pid int, recurso string) error {
+func WAIT(pid int, recurso string) string {
 
 	// Buscar el recurso
 	for i, r := range globals.ClientConfig.Resources {
 		if r == recurso {
 			globals.ClientConfig.Resource_instances[i]--
 			if globals.ClientConfig.Resource_instances[i] < 0 {
-				// Cambiar el estado del proceso a "BLOCKED"
-				proceso := colaDeNuevos[0]
-				cambiarEstado(string(proceso.Estado), "BLOCKED", &proceso)
-
 				// Agregar el proceso a la lista de espera de recursos
 				if listaEsperaRecursos == nil {
 					listaEsperaRecursos = make(map[string][]int)
 				}
 				listaEsperaRecursos[recurso] = append(listaEsperaRecursos[recurso], pid)
-
-				return fmt.Errorf("el proceso %d está bloqueado esperando el recurso %s", pid, recurso)
+				return "BLOCKED"
 			}
-			return nil
+			return "OK"
 		}
 	}
-	return fmt.Errorf("recurso %s no encontrado", recurso)
+	return "NOT_FOUND"
 }
 
-func Signal(w http.ResponseWriter, r *http.Request) {
-	var request BodyRRSS
-	if err := json.NewDecoder(r.Body).Decode(&request); err != nil {
-		http.Error(w, err.Error(), http.StatusBadRequest)
-		return
-	}
-
-	pid := request.PID
-	recurso := request.Recurso
-
-	if err := DesasignarRecurso(pid, recurso); err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-
-	w.WriteHeader(http.StatusOK)
-	fmt.Fprintf(w, "Recurso %s asignado a PID %d", recurso, pid)
-}
-
-func quitarPIDDeLista(lista []int, pid int) []int {
-	resultado := make([]int, 0)
-
-	for _, p := range lista {
-		if p != pid {
-			resultado = append(resultado, p)
-		}
-	}
-
-	return resultado
-}
-
-func DesasignarRecurso(pid int, recurso string) error {
-
+func SIGNAL(recurso string) string {
 	// Buscar el recurso
 	for i, r := range globals.ClientConfig.Resources {
 		if r == recurso {
 			globals.ClientConfig.Resource_instances[i]++
-			if globals.ClientConfig.Resource_instances[i] > 0 {
-				// Cambiar el estado del proceso a "EXEC" si se liberó el recurso
-				proceso := colaDeNuevos[0] // Suponiendo que tienes una cola de procesos nuevos
-				cambiarEstado(proceso.Estado, "EXEC", &proceso)
-
-				// Quitar el proceso de la lista de espera de recursos
-				if listaEsperaRecursos != nil {
-					listaEsperaRecursos[recurso] = quitarPIDDeLista(listaEsperaRecursos[recurso], pid)
-				}
-
-				return nil
+			if len(listaEsperaRecursos[recurso]) != 0 {
+				rehabilitarProcesoBlocked(listaEsperaRecursos[recurso][0])
+				listaEsperaRecursos[recurso] = listaEsperaRecursos[recurso][1:]
 			}
+			return "OK"
 		}
 	}
-	return fmt.Errorf("recurso %s no encontrado", recurso)
+	return "NOT_FOUND"
 }

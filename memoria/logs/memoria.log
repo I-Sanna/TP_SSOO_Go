@@ -14741,3 +14741,165 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/06/14 22:41:50 aa 16
 2024/06/14 22:41:51 PID: 12 - Pagina: 6 - Marco: 22
 2024/06/14 22:41:52 PID: 12 - Accion: Escribir - Direccion fisica: 352 - Tamaño a escribir: 4
+2024/06/15 13:48:18 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 13:48:18 PID: 0 - Tamaño: 256
+2024/06/15 13:48:20 256 256
+
+
+
+2024/06/15 13:48:20 tabla de paginas-------map[]
+2024/06/15 13:48:20 tabla GLOBAL de paginas------map[]
+2024/06/15 13:48:20 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/15 13:48:20 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1 2:2 3:3 4:4 5:5 6:6 7:7 8:8 9:9 10:10 11:11 12:12 13:13 14:14 15:15] map[]]
+2024/06/15 13:48:20 PID: 1 - Tamaño: 256
+2024/06/15 13:48:23 256 256
+
+
+
+2024/06/15 13:48:23 tabla de paginas-------map[]
+2024/06/15 13:48:23 tabla GLOBAL de paginas------map[]
+2024/06/15 13:48:23 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/15 13:57:01 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 13:57:01 PID: 0 - Tamaño: 256
+2024/06/15 13:57:03 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[]]
+2024/06/15 13:57:03 PID: 1 - Tamaño: 256
+2024/06/15 13:57:03 256 256
+
+
+
+2024/06/15 13:57:03 tabla de paginas-------map[]
+2024/06/15 13:57:03 tabla GLOBAL de paginas------map[]
+2024/06/15 13:57:03 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/15 13:57:10 256 256
+
+
+
+2024/06/15 13:57:10 tabla de paginas-------map[]
+2024/06/15 13:57:10 tabla GLOBAL de paginas------map[]
+2024/06/15 13:57:10 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/15 14:04:36 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 14:04:36 PID: 0 - Tamaño: 256
+2024/06/15 14:04:38 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[]]
+2024/06/15 14:04:38 PID: 1 - Tamaño: 256
+2024/06/15 14:04:38 256 256
+
+
+
+2024/06/15 14:04:38 tabla de paginas-------map[]
+2024/06/15 14:04:38 tabla GLOBAL de paginas------map[]
+2024/06/15 14:04:38 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/15 14:04:40 256 256
+
+
+
+2024/06/15 14:04:40 tabla de paginas-------map[]
+2024/06/15 14:04:40 tabla GLOBAL de paginas------map[]
+2024/06/15 14:04:40 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/15 14:09:21 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 14:09:21 PID: 0 - Tamaño: 256
+2024/06/15 14:09:22 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[]]
+2024/06/15 14:09:22 PID: 1 - Tamaño: 256
+2024/06/15 14:09:23 256 256
+
+
+
+2024/06/15 14:09:23 tabla de paginas-------map[]
+2024/06/15 14:09:23 tabla GLOBAL de paginas------map[]
+2024/06/15 14:09:23 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/15 14:09:25 256 256
+
+
+
+2024/06/15 14:09:25 tabla de paginas-------map[]
+2024/06/15 14:09:25 tabla GLOBAL de paginas------map[]
+2024/06/15 14:09:25 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/15 14:19:00 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 14:19:00 PID: 0 - Tamaño: 256
+2024/06/15 14:19:01 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[]]
+2024/06/15 14:19:01 PID: 1 - Tamaño: 256
+2024/06/15 14:19:02 256 256
+
+
+
+2024/06/15 14:19:02 tabla de paginas-------map[]
+2024/06/15 14:19:02 tabla GLOBAL de paginas------map[]
+2024/06/15 14:19:02 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/15 14:19:04 256 256
+
+
+
+2024/06/15 14:19:04 tabla de paginas-------map[]
+2024/06/15 14:19:04 tabla GLOBAL de paginas------map[]
+2024/06/15 14:19:04 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/15 14:21:53 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 14:21:53 PID: 0 - Tamaño: 256
+2024/06/15 14:21:54 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[]]
+2024/06/15 14:21:54 PID: 1 - Tamaño: 256
+2024/06/15 14:21:55 256 256
+
+
+
+2024/06/15 14:21:55 tabla de paginas-------map[]
+2024/06/15 14:21:55 tabla GLOBAL de paginas------map[]
+2024/06/15 14:21:55 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/15 14:21:57 256 256
+
+
+
+2024/06/15 14:21:57 tabla de paginas-------map[]
+2024/06/15 14:21:57 tabla GLOBAL de paginas------map[]
+2024/06/15 14:21:57 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/15 14:27:00 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 14:27:00 PID: 0 - Tamaño: 256
+2024/06/15 14:27:02 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[]]
+2024/06/15 14:27:02 PID: 1 - Tamaño: 256
+2024/06/15 14:27:02 256 256
+
+
+
+2024/06/15 14:27:02 tabla de paginas-------map[]
+2024/06/15 14:27:02 tabla GLOBAL de paginas------map[]
+2024/06/15 14:27:02 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/15 14:27:04 256 256
+
+
+
+2024/06/15 14:27:04 tabla de paginas-------map[]
+2024/06/15 14:27:04 tabla GLOBAL de paginas------map[]
+2024/06/15 14:27:04 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/15 14:35:10 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 14:35:10 PID: 0 - Tamaño: 256
+2024/06/15 14:35:11 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[]]
+2024/06/15 14:35:11 PID: 1 - Tamaño: 256
+2024/06/15 14:35:12 256 256
+
+
+
+2024/06/15 14:35:12 tabla de paginas-------map[]
+2024/06/15 14:35:12 tabla GLOBAL de paginas------map[]
+2024/06/15 14:35:12 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/15 14:35:14 256 256
+
+
+
+2024/06/15 14:35:14 tabla de paginas-------map[]
+2024/06/15 14:35:14 tabla GLOBAL de paginas------map[]
+2024/06/15 14:35:14 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/15 14:38:45 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/06/15 14:38:45 PID: 0 - Tamaño: 256
+2024/06/15 14:38:47 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[]]
+2024/06/15 14:38:47 PID: 1 - Tamaño: 256
+2024/06/15 14:38:47 256 256
+
+
+
+2024/06/15 14:38:47 tabla de paginas-------map[]
+2024/06/15 14:38:47 tabla GLOBAL de paginas------map[]
+2024/06/15 14:38:47 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/06/15 14:38:49 256 256
+
+
+
+2024/06/15 14:38:49 tabla de paginas-------map[]
+2024/06/15 14:38:49 tabla GLOBAL de paginas------map[]
+2024/06/15 14:38:49 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 256

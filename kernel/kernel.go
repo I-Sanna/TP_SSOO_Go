@@ -25,8 +25,6 @@ func main() {
 	mux.HandleFunc("GET /process", utils.ListarProcesos)
 	mux.HandleFunc("POST /io", utils.PedirIO)
 	mux.HandleFunc("POST /nuevoIO", utils.RegistrarIO)
-	mux.HandleFunc("POST /wait", utils.Wait)
-	mux.HandleFunc("POST /signal", utils.Signal)
 
 	err := http.ListenAndServe(":"+strconv.Itoa(globals.ClientConfig.PortKernel), mux)
 	if err != nil {
