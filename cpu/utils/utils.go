@@ -672,6 +672,66 @@ func IO_GEN_SLEEP(nombre string, tiempo int) {
 	interrupcion = true
 }
 
+func IO_STDIN_READ(nombre string, tiempo int) {
+	var sending BodyRequestTime
+
+	sending.Dispositivo = nombre
+	sending.CantidadIO = tiempo
+	sending.PID = procesoActual.PID
+	sending.Instruccion = "READ"
+
+	body, err := json.Marshal(sending)
+	if err != nil {
+		log.Printf("error codificando mensajes: %s", err.Error())
+		return
+	}
+
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
+	if err != nil {
+		log.Printf("error enviando: %s", err.Error())
+		return
+	}
+	mutexMensaje.Lock()
+	if resp.StatusCode != http.StatusOK {
+		resultadoEjecucion.Mensaje = "EXIT INVALID_IO"
+	} else {
+		resultadoEjecucion.Mensaje = "BLOCKED " + sending.Dispositivo
+	}
+	mutexMensaje.Unlock()
+	interrupcion = true
+}
+
+func IO_STDOUT_WRITE(nombre string, tiempo int) {
+	var sending BodyRequestTime
+
+	sending.Dispositivo = nombre
+	sending.CantidadIO = tiempo
+	sending.PID = procesoActual.PID
+	sending.Instruccion = "WRITE"
+
+	body, err := json.Marshal(sending)
+	if err != nil {
+		log.Printf("error codificando mensajes: %s", err.Error())
+		return
+	}
+
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
+	if err != nil {
+		log.Printf("error enviando: %s", err.Error())
+		return
+	}
+	mutexMensaje.Lock()
+	if resp.StatusCode != http.StatusOK {
+		resultadoEjecucion.Mensaje = "EXIT INVALID_IO"
+	} else {
+		resultadoEjecucion.Mensaje = "BLOCKED " + sending.Dispositivo
+	}
+	mutexMensaje.Unlock()
+	interrupcion = true
+}
+
 func decoYExecInstru(instrucciones string) {
 	//"Decodificar" instruccion
 	instru := strings.Split(strings.TrimRight(instrucciones, "\x00"), " ")
@@ -731,6 +791,22 @@ func decoYExecInstru(instrucciones string) {
 			return
 		}
 		IO_GEN_SLEEP(instru[1], valor)
+	case "IO_STDIN_READ":
+		log.Printf("PID: %d - Ejecutando: %v - %v,%v", procesoActual.PID, instru[0], instru[1], instru[2])
+		valor, err := strconv.Atoi(instru[2])
+		if err != nil {
+			log.Printf("error enviando: %s", err.Error())
+			return
+		}
+		IO_STDIN_READ(instru[1], valor)
+	case "IO_STDOUT_WRITE":
+		log.Printf("PID: %d - Ejecutando: %v - %v,%v", procesoActual.PID, instru[0], instru[1], instru[2])
+		valor, err := strconv.Atoi(instru[2])
+		if err != nil {
+			log.Printf("error enviando: %s", err.Error())
+			return
+		}
+		IO_STDOUT_WRITE(instru[1], valor)
 	}
 }
 
