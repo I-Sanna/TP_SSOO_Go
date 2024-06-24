@@ -118,7 +118,6 @@ func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
 		return
 	}
-
 	fmt.Print("\nEsperando texto en consola... ")
 	textoIngresado := LeerConsola()
 	textoBytes := []byte(textoIngresado)
@@ -156,7 +155,8 @@ func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
-	log.Printf("Direccion: %s - Operación: IO_STDIN_READ", direccion)
+	log.Printf("PID: %d - Operación: IO_STDIN_READ", pidInt)
+	//log.Printf("Direccion: %s - Operación: IO_STDIN_READ", direccion)
 
 }
 
@@ -170,6 +170,7 @@ func IO_STDOUT_WRITE(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
 		return
 	}
+
 	tamañoInt, err := strconv.Atoi(tamaño)
 	if err != nil {
 		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
@@ -180,6 +181,7 @@ func IO_STDOUT_WRITE(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
 		return
 	}
+
 	var requestBody = BodyEscritura{
 		PID:       pidInt,
 		Tamaño:    tamañoInt,
@@ -196,7 +198,6 @@ func IO_STDOUT_WRITE(w http.ResponseWriter, r *http.Request) {
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
 		log.Printf("error enviando: %s", err.Error())
-		fmt.Print("error enviando: %s", err.Error())
 		return
 	}
 	response := make([]byte, 0, tamañoInt)
@@ -207,8 +208,237 @@ func IO_STDOUT_WRITE(w http.ResponseWriter, r *http.Request) {
 	}
 	time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
 	respString := string(response)
-	log.Printf("Direccion: %s - Operación: IO_STDOUT_WRITE", direccion)
+	//log.Printf("Direccion: %s - Operación: IO_STDOUT_WRITE", direccion)
+	log.Printf("PID: %d - Operación: IO_STDOUT_WRITE", pidInt)
 	log.Printf("El texto leido es: %s", respString)
+}
+
+// DIAL FS
+func IO_FS_CREATE(w http.ResponseWriter, r *http.Request) {
+	pid := r.PathValue("pid")
+	nombreArchivo := r.PathValue("nombre")
+	pidInt, err := strconv.Atoi(pid)
+	if err != nil {
+		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+		return
+	}
+	log.Printf("PID: %d - Crear Archivo: %s", pidInt, nombreArchivo)
+	/*
+
+		var requestBody = BodyEscritura{
+			PID:       pidInt,
+			Tamaño:    tamañoInt,
+			Direccion: direccionInt,
+		}
+		if err != nil {
+			http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+			return
+		}
+
+		body, err := json.Marshal(requestBody)
+		url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/fscreate"
+		fmt.Print("URL: ", url)
+		resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
+		if err != nil {
+			log.Printf("error enviando: %s", err.Error())
+			fmt.Print("error enviando: %s", err.Error())
+			return
+		}
+		response := make([]byte, 0, tamañoInt)
+		err = json.NewDecoder(resp.Body).Decode(&response)
+		if err != nil {
+			log.Printf("Error al decodificar mensaje: %s\n", err.Error())
+			return
+		}
+		time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
+		respString := string(response)
+		log.Printf("Direccion: %s - Operación: IO_FS_CREATE", direccion)
+		log.Printf("El texto leido es: %s", respString)*/
+}
+func IO_FS_DELETE(w http.ResponseWriter, r *http.Request) {
+	pid := r.PathValue("pid")
+	nombreArchivo := r.PathValue("nombre")
+	pidInt, err := strconv.Atoi(pid)
+	if err != nil {
+		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+		return
+	}
+	log.Printf("PID: %d - Eliminar Archivo: %s", pidInt, nombreArchivo)
+	/*
+
+		var requestBody = BodyEscritura{
+			PID:       pidInt,
+			Tamaño:    tamañoInt,
+			Direccion: direccionInt,
+		}
+		if err != nil {
+			http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+			return
+		}
+
+		body, err := json.Marshal(requestBody)
+		url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/fscreate"
+		fmt.Print("URL: ", url)
+		resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
+		if err != nil {
+			log.Printf("error enviando: %s", err.Error())
+			fmt.Print("error enviando: %s", err.Error())
+			return
+		}
+		response := make([]byte, 0, tamañoInt)
+		err = json.NewDecoder(resp.Body).Decode(&response)
+		if err != nil {
+			log.Printf("Error al decodificar mensaje: %s\n", err.Error())
+			return
+		}
+		time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
+		respString := string(response)
+		log.Printf("Direccion: %s - Operación: IO_FS_CREATE", direccion)
+		log.Printf("El texto leido es: %s", respString)*/
+}
+func IO_FS_TRUNCATE(w http.ResponseWriter, r *http.Request) {
+	pid := r.PathValue("pid")
+	nombreArchivo := r.PathValue("nombre")
+	tamaño := r.PathValue("tamaño")
+	tamañoInt, err := strconv.Atoi(tamaño)
+	if err != nil {
+		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+		return
+	}
+	pidInt, err := strconv.Atoi(pid)
+	if err != nil {
+		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+		return
+	}
+	log.Printf("PID: %d - Truncar Archivo: %s Tamaño: %d", pidInt, nombreArchivo, tamañoInt)
+	/*
+
+		var requestBody = BodyEscritura{
+			PID:       pidInt,
+			Tamaño:    tamañoInt,
+			Direccion: direccionInt,
+		}
+		if err != nil {
+			http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+			return
+		}
+
+		body, err := json.Marshal(requestBody)
+		url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/fscreate"
+		fmt.Print("URL: ", url)
+		resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
+		if err != nil {
+			log.Printf("error enviando: %s", err.Error())
+			fmt.Print("error enviando: %s", err.Error())
+			return
+		}
+		response := make([]byte, 0, tamañoInt)
+		err = json.NewDecoder(resp.Body).Decode(&response)
+		if err != nil {
+			log.Printf("Error al decodificar mensaje: %s\n", err.Error())
+			return
+		}
+		time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
+		respString := string(response)
+		log.Printf("Direccion: %s - Operación: IO_FS_CREATE", direccion)
+		log.Printf("El texto leido es: %s", respString)*/
+}
+func IO_FS_WRITE(w http.ResponseWriter, r *http.Request) {
+	pid := r.PathValue("pid")
+	nombreArchivo := r.PathValue("nombre")
+	tamaño := r.PathValue("tamaño")
+	//Ver puntero si lo recibe o lo busca, y si lo trabaja como %s o %d
+	puntero := r.PathValue("puntero")
+	tamañoInt, err := strconv.Atoi(tamaño)
+	if err != nil {
+		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+		return
+	}
+	pidInt, err := strconv.Atoi(pid)
+	if err != nil {
+		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+		return
+	}
+	log.Printf("PID: %d - Leer Archivo: %s - Tamaño a Leer: %d - Puntero Archivo: %s", pidInt, nombreArchivo, tamañoInt, puntero)
+	/*
+
+		var requestBody = BodyEscritura{
+			PID:       pidInt,
+			Tamaño:    tamañoInt,
+			Direccion: direccionInt,
+		}
+		if err != nil {
+			http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+			return
+		}
+
+		body, err := json.Marshal(requestBody)
+		url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/fscreate"
+		fmt.Print("URL: ", url)
+		resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
+		if err != nil {
+			log.Printf("error enviando: %s", err.Error())
+			fmt.Print("error enviando: %s", err.Error())
+			return
+		}
+		response := make([]byte, 0, tamañoInt)
+		err = json.NewDecoder(resp.Body).Decode(&response)
+		if err != nil {
+			log.Printf("Error al decodificar mensaje: %s\n", err.Error())
+			return
+		}
+		time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
+		respString := string(response)
+		log.Printf("Direccion: %s - Operación: IO_FS_CREATE", direccion)
+		log.Printf("El texto leido es: %s", respString)*/
+}
+func IO_FS_READ(w http.ResponseWriter, r *http.Request) {
+	pid := r.PathValue("pid")
+	nombreArchivo := r.PathValue("nombre")
+	tamaño := r.PathValue("tamaño")
+	//Ver puntero si lo recibe o lo busca, y si lo trabaja como %s o %d
+	puntero := r.PathValue("puntero")
+	tamañoInt, err := strconv.Atoi(tamaño)
+	if err != nil {
+		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+		return
+	}
+	pidInt, err := strconv.Atoi(pid)
+	if err != nil {
+		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+		return
+	}
+	log.Printf("PID: %d - Escribir Archivo: %s - Tamaño a Escribir: %d - Puntero Archivo: %s", pidInt, nombreArchivo, tamañoInt, puntero)
+	/*
+		var requestBody = BodyEscritura{
+			PID:       pidInt,
+			Tamaño:    tamañoInt,
+			Direccion: direccionInt,
+		}
+		if err != nil {
+			http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
+			return
+		}
+
+		body, err := json.Marshal(requestBody)
+		url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/fscreate"
+		fmt.Print("URL: ", url)
+		resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
+		if err != nil {
+			log.Printf("error enviando: %s", err.Error())
+			fmt.Print("error enviando: %s", err.Error())
+			return
+		}
+		response := make([]byte, 0, tamañoInt)
+		err = json.NewDecoder(resp.Body).Decode(&response)
+		if err != nil {
+			log.Printf("Error al decodificar mensaje: %s\n", err.Error())
+			return
+		}
+		time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
+		respString := string(response)
+		log.Printf("Direccion: %s - Operación: IO_FS_CREATE", direccion)
+		log.Printf("El texto leido es: %s", respString)*/
 }
 
 func EstablecerConexion(nombre string, puerto int) {

@@ -759,6 +759,157 @@ func IO_STDOUT_WRITE(nombre string, tamaño int, direccion int) {
 	interrupcion = true
 }
 
+// Dial FS (modificar)
+func IO_FS_CREATE(nombre string, tamaño int, direccion int) {
+	var sending BodyRequestSTD
+
+	sending.Dispositivo = nombre
+	sending.PID = procesoActual.PID
+	sending.Tamaño = tamaño
+	sending.Direccion = direccion
+	sending.Instruccion = "CREATE"
+
+	body, err := json.Marshal(sending)
+	if err != nil {
+		log.Printf("error codificando mensajes: %s", err.Error())
+		return
+	}
+
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
+	if err != nil {
+		log.Printf("error enviando: %s", err.Error())
+		return
+	}
+	mutexMensaje.Lock()
+	if resp.StatusCode != http.StatusOK {
+		resultadoEjecucion.Mensaje = "EXIT INVALID_IO"
+	} else {
+		resultadoEjecucion.Mensaje = "BLOCKED " + sending.Dispositivo
+	}
+	mutexMensaje.Unlock()
+	interrupcion = true
+}
+func IO_FS_DELETE(nombre string, tamaño int, direccion int) {
+	var sending BodyRequestSTD
+
+	sending.Dispositivo = nombre
+	sending.PID = procesoActual.PID
+	sending.Tamaño = tamaño
+	sending.Direccion = direccion
+	sending.Instruccion = "DELETE"
+
+	body, err := json.Marshal(sending)
+	if err != nil {
+		log.Printf("error codificando mensajes: %s", err.Error())
+		return
+	}
+
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
+	if err != nil {
+		log.Printf("error enviando: %s", err.Error())
+		return
+	}
+	mutexMensaje.Lock()
+	if resp.StatusCode != http.StatusOK {
+		resultadoEjecucion.Mensaje = "EXIT INVALID_IO"
+	} else {
+		resultadoEjecucion.Mensaje = "BLOCKED " + sending.Dispositivo
+	}
+	mutexMensaje.Unlock()
+	interrupcion = true
+}
+func IO_FS_TRUNCATE(nombre string, tamaño int, direccion int) {
+	var sending BodyRequestSTD
+
+	sending.Dispositivo = nombre
+	sending.PID = procesoActual.PID
+	sending.Tamaño = tamaño
+	sending.Direccion = direccion
+	sending.Instruccion = "TRUNCATE"
+
+	body, err := json.Marshal(sending)
+	if err != nil {
+		log.Printf("error codificando mensajes: %s", err.Error())
+		return
+	}
+
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
+	if err != nil {
+		log.Printf("error enviando: %s", err.Error())
+		return
+	}
+	mutexMensaje.Lock()
+	if resp.StatusCode != http.StatusOK {
+		resultadoEjecucion.Mensaje = "EXIT INVALID_IO"
+	} else {
+		resultadoEjecucion.Mensaje = "BLOCKED " + sending.Dispositivo
+	}
+	mutexMensaje.Unlock()
+	interrupcion = true
+}
+func IO_FS_WRITE(nombre string, tamaño int, direccion int) {
+	var sending BodyRequestSTD
+
+	sending.Dispositivo = nombre
+	sending.PID = procesoActual.PID
+	sending.Tamaño = tamaño
+	sending.Direccion = direccion
+	sending.Instruccion = "FSWRITE"
+
+	body, err := json.Marshal(sending)
+	if err != nil {
+		log.Printf("error codificando mensajes: %s", err.Error())
+		return
+	}
+
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
+	if err != nil {
+		log.Printf("error enviando: %s", err.Error())
+		return
+	}
+	mutexMensaje.Lock()
+	if resp.StatusCode != http.StatusOK {
+		resultadoEjecucion.Mensaje = "EXIT INVALID_IO"
+	} else {
+		resultadoEjecucion.Mensaje = "BLOCKED " + sending.Dispositivo
+	}
+	mutexMensaje.Unlock()
+	interrupcion = true
+}
+func IO_FS_READ(nombre string, tamaño int, direccion int) {
+	var sending BodyRequestSTD
+
+	sending.Dispositivo = nombre
+	sending.PID = procesoActual.PID
+	sending.Tamaño = tamaño
+	sending.Direccion = direccion
+	sending.Instruccion = "FSREAD"
+
+	body, err := json.Marshal(sending)
+	if err != nil {
+		log.Printf("error codificando mensajes: %s", err.Error())
+		return
+	}
+
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
+	if err != nil {
+		log.Printf("error enviando: %s", err.Error())
+		return
+	}
+	mutexMensaje.Lock()
+	if resp.StatusCode != http.StatusOK {
+		resultadoEjecucion.Mensaje = "EXIT INVALID_IO"
+	} else {
+		resultadoEjecucion.Mensaje = "BLOCKED " + sending.Dispositivo
+	}
+	mutexMensaje.Unlock()
+	interrupcion = true
+}
 func decoYExecInstru(instrucciones string) {
 	//"Decodificar" instruccion
 	instru := strings.Split(strings.TrimRight(instrucciones, "\x00"), " ")
@@ -836,6 +987,51 @@ func decoYExecInstru(instrucciones string) {
 			return
 		}
 		IO_STDOUT_WRITE(instru[1], tamaño, direccion)
+	case "IO_FS_CREATE":
+		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3])
+		tamaño, err := strconv.Atoi(instru[2])
+		direccion, err := strconv.Atoi(instru[3])
+		if err != nil {
+			log.Printf("error enviando: %s", err.Error())
+			return
+		}
+		IO_FS_CREATE(instru[1], tamaño, direccion)
+	case "IO_FS_DELETE":
+		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3])
+		tamaño, err := strconv.Atoi(instru[2])
+		direccion, err := strconv.Atoi(instru[3])
+		if err != nil {
+			log.Printf("error enviando: %s", err.Error())
+			return
+		}
+		IO_FS_DELETE(instru[1], tamaño, direccion)
+	case "IO_FS_TRUNCATE":
+		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3])
+		tamaño, err := strconv.Atoi(instru[2])
+		direccion, err := strconv.Atoi(instru[3])
+		if err != nil {
+			log.Printf("error enviando: %s", err.Error())
+			return
+		}
+		IO_FS_TRUNCATE(instru[1], tamaño, direccion)
+	case "IO_FS_WRITE":
+		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3])
+		tamaño, err := strconv.Atoi(instru[2])
+		direccion, err := strconv.Atoi(instru[3])
+		if err != nil {
+			log.Printf("error enviando: %s", err.Error())
+			return
+		}
+		IO_FS_WRITE(instru[1], tamaño, direccion)
+	case "IO_FS_READ":
+		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3])
+		tamaño, err := strconv.Atoi(instru[2])
+		direccion, err := strconv.Atoi(instru[3])
+		if err != nil {
+			log.Printf("error enviando: %s", err.Error())
+			return
+		}
+		IO_FS_READ(instru[1], tamaño, direccion)
 	}
 }
 

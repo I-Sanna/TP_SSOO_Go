@@ -837,6 +837,96 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 		dispositivoEscritura.Unlock()
+	case "CREATE":
+		fmt.Println("Entró en el case de write en kernel")
+		var datosSTD BodySTD
+		datosSTD.PID = request.PID
+		datosSTD.Tamaño = request.Tamaño
+		datosSTD.Direccion = request.Direccion
+
+		dispositivoEscritura.Lock() //Habria que hacer un semaforo por dispostivo
+		puerto, ok := puertosDispSTDOUT[request.Dispositivo]
+
+		if ok && validarConexionIO(puerto) {
+			go agregarElemAListaSTDOUT(request.Dispositivo, puerto, datosSTD)
+		} else {
+			w.WriteHeader(http.StatusBadRequest)
+			dispositivoEscritura.Unlock()
+			return
+		}
+		dispositivoEscritura.Unlock()
+	case "DELETE":
+		fmt.Println("Entró en el case de write en kernel")
+		var datosSTD BodySTD
+		datosSTD.PID = request.PID
+		datosSTD.Tamaño = request.Tamaño
+		datosSTD.Direccion = request.Direccion
+
+		dispositivoEscritura.Lock() //Habria que hacer un semaforo por dispostivo
+		puerto, ok := puertosDispSTDOUT[request.Dispositivo]
+
+		if ok && validarConexionIO(puerto) {
+			go agregarElemAListaSTDOUT(request.Dispositivo, puerto, datosSTD)
+		} else {
+			w.WriteHeader(http.StatusBadRequest)
+			dispositivoEscritura.Unlock()
+			return
+		}
+		dispositivoEscritura.Unlock()
+	case "TRUNCATE":
+		fmt.Println("Entró en el case de write en kernel")
+		var datosSTD BodySTD
+		datosSTD.PID = request.PID
+		datosSTD.Tamaño = request.Tamaño
+		datosSTD.Direccion = request.Direccion
+
+		dispositivoEscritura.Lock() //Habria que hacer un semaforo por dispostivo
+		puerto, ok := puertosDispSTDOUT[request.Dispositivo]
+
+		if ok && validarConexionIO(puerto) {
+			go agregarElemAListaSTDOUT(request.Dispositivo, puerto, datosSTD)
+		} else {
+			w.WriteHeader(http.StatusBadRequest)
+			dispositivoEscritura.Unlock()
+			return
+		}
+		dispositivoEscritura.Unlock()
+	case "FSWRITE":
+		fmt.Println("Entró en el case de write en kernel")
+		var datosSTD BodySTD
+		datosSTD.PID = request.PID
+		datosSTD.Tamaño = request.Tamaño
+		datosSTD.Direccion = request.Direccion
+
+		dispositivoEscritura.Lock() //Habria que hacer un semaforo por dispostivo
+		puerto, ok := puertosDispSTDOUT[request.Dispositivo]
+
+		if ok && validarConexionIO(puerto) {
+			go agregarElemAListaSTDOUT(request.Dispositivo, puerto, datosSTD)
+		} else {
+			w.WriteHeader(http.StatusBadRequest)
+			dispositivoEscritura.Unlock()
+			return
+		}
+		dispositivoEscritura.Unlock()
+	case "FSREAD":
+		fmt.Println("Entró en el case de write en kernel")
+		var datosSTD BodySTD
+		datosSTD.PID = request.PID
+		datosSTD.Tamaño = request.Tamaño
+		datosSTD.Direccion = request.Direccion
+
+		dispositivoEscritura.Lock() //Habria que hacer un semaforo por dispostivo
+		puerto, ok := puertosDispSTDOUT[request.Dispositivo]
+
+		if ok && validarConexionIO(puerto) {
+			go agregarElemAListaSTDOUT(request.Dispositivo, puerto, datosSTD)
+		} else {
+			w.WriteHeader(http.StatusBadRequest)
+			dispositivoEscritura.Unlock()
+			return
+		}
+		dispositivoEscritura.Unlock()
 	}
 
 	w.WriteHeader(http.StatusOK)
@@ -1069,6 +1159,8 @@ func RegistrarIO(w http.ResponseWriter, r *http.Request) {
 	case "STDIN":
 		puertosDispSTDIN[request.Nombre] = request.Puerto
 	case "STDOUT":
+		puertosDispSTDOUT[request.Nombre] = request.Puerto
+	case "DIALFS":
 		puertosDispSTDOUT[request.Nombre] = request.Puerto
 	}
 }
