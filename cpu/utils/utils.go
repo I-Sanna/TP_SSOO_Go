@@ -759,67 +759,66 @@ func IO_STDOUT_WRITE(nombre string, tamaño int, direccion int) {
 	interrupcion = true
 }
 
-// Dial FS (modificar)
-func IO_FS_CREATE(nombre string, tamaño int, direccion int) {
-	var sending BodyRequestSTD
+func IO_FS_CREATE(interfaz string, nombreArchivo string) error {
+	// Preparar la URL para la solicitud al Kernel
 
-	sending.Dispositivo = nombre
-	sending.PID = procesoActual.PID
-	sending.Tamaño = tamaño
-	sending.Direccion = direccion
-	sending.Instruccion = "CREATE"
+	url := fmt.Sprintf("http://localhost:%d/fs/create", globals.ClientConfig.PortKernel)
 
-	body, err := json.Marshal(sending)
-	if err != nil {
-		log.Printf("error codificando mensajes: %s", err.Error())
-		return
+	// Crear el cuerpo de la solicitud
+	requestBody := map[string]string{
+		"interfaz":      interfaz,
+		"nombreArchivo": nombreArchivo,
 	}
 
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
+	body, err := json.Marshal(requestBody)
+	if err != nil {
+		return fmt.Errorf("error al codificar el cuerpo de la solicitud: %w", err)
+	}
+
+	// Enviar la solicitud al Kernel
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
-		log.Printf("error enviando: %s", err.Error())
-		return
+		return fmt.Errorf("error al enviar la solicitud al Kernel: %w", err)
 	}
-	mutexMensaje.Lock()
+	defer resp.Body.Close()
+
 	if resp.StatusCode != http.StatusOK {
-		resultadoEjecucion.Mensaje = "EXIT INVALID_IO"
-	} else {
-		resultadoEjecucion.Mensaje = "BLOCKED " + sending.Dispositivo
+		return fmt.Errorf("error del Kernel: %s", resp.Status)
 	}
-	mutexMensaje.Unlock()
-	interrupcion = true
+
+	log.Printf("\n\n\n\nArchivo '%s' creado en la interfaz '%s'", nombreArchivo, interfaz)
+	return nil
 }
-func IO_FS_DELETE(nombre string, tamaño int, direccion int) {
-	var sending BodyRequestSTD
 
-	sending.Dispositivo = nombre
-	sending.PID = procesoActual.PID
-	sending.Tamaño = tamaño
-	sending.Direccion = direccion
-	sending.Instruccion = "DELETE"
+func IO_FS_DELETE(interfaz, nombreArchivo string) error {
+	// Preparar la URL para la solicitud al Kernel
+	url := fmt.Sprintf("http://localhost:%d/fs/delete", globals.ClientConfig.PortKernel)
 
-	body, err := json.Marshal(sending)
+	// Crear el cuerpo de la solicitud
+	requestBody := map[string]string{
+		"interfaz":      interfaz,
+		"nombreArchivo": nombreArchivo,
+	}
+	body, err := json.Marshal(requestBody)
 	if err != nil {
-		log.Printf("error codificando mensajes: %s", err.Error())
-		return
+		return fmt.Errorf("error al codificar el cuerpo de la solicitud: %w", err)
 	}
 
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
+	// Enviar la solicitud al Kernel
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
-		log.Printf("error enviando: %s", err.Error())
-		return
+		return fmt.Errorf("error al enviar la solicitud al Kernel: %w", err)
 	}
-	mutexMensaje.Lock()
+	defer resp.Body.Close()
+
 	if resp.StatusCode != http.StatusOK {
-		resultadoEjecucion.Mensaje = "EXIT INVALID_IO"
-	} else {
-		resultadoEjecucion.Mensaje = "BLOCKED " + sending.Dispositivo
+		return fmt.Errorf("error del Kernel: %s", resp.Status)
 	}
-	mutexMensaje.Unlock()
-	interrupcion = true
+
+	log.Printf("Archivo '%s' eliminado en la interfaz '%s'", nombreArchivo, interfaz)
+	return nil
 }
+
 func IO_FS_TRUNCATE(nombre string, tamaño int, direccion int) {
 	var sending BodyRequestSTD
 
@@ -971,7 +970,11 @@ func decoYExecInstru(instrucciones string) {
 		IO_GEN_SLEEP(instru[1], valor)
 	case "IO_STDIN_READ":
 		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3])
-		tamaño, err := strconv.Atoi(instru[2])
+		tamaño, err1 := strconv.Atoi(instru[2])
+		if err1 != nil {
+			log.Printf("error enviando: %s", err1.Error())
+			return
+		}
 		direccion, err := strconv.Atoi(instru[3])
 		if err != nil {
 			log.Printf("error enviando: %s", err.Error())
@@ -980,7 +983,11 @@ func decoYExecInstru(instrucciones string) {
 		IO_STDIN_READ(instru[1], tamaño, direccion)
 	case "IO_STDOUT_WRITE":
 		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3])
-		tamaño, err := strconv.Atoi(instru[2])
+		tamaño, err1 := strconv.Atoi(instru[2])
+		if err1 != nil {
+			log.Printf("error enviando: %s", err1.Error())
+			return
+		}
 		direccion, err := strconv.Atoi(instru[3])
 		if err != nil {
 			log.Printf("error enviando: %s", err.Error())
@@ -988,47 +995,47 @@ func decoYExecInstru(instrucciones string) {
 		}
 		IO_STDOUT_WRITE(instru[1], tamaño, direccion)
 	case "IO_FS_CREATE":
-		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3])
-		tamaño, err := strconv.Atoi(instru[2])
-		direccion, err := strconv.Atoi(instru[3])
-		if err != nil {
-			log.Printf("error enviando: %s", err.Error())
-			return
-		}
-		IO_FS_CREATE(instru[1], tamaño, direccion)
+		log.Printf("PID: %d - Ejecutando: %v - %v , %v", procesoActual.PID, instru[0], instru[1], instru[2])
+		IO_FS_CREATE(instru[1], instru[2])
 	case "IO_FS_DELETE":
-		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3])
-		tamaño, err := strconv.Atoi(instru[2])
-		direccion, err := strconv.Atoi(instru[3])
-		if err != nil {
-			log.Printf("error enviando: %s", err.Error())
-			return
-		}
-		IO_FS_DELETE(instru[1], tamaño, direccion)
+		log.Printf("PID: %d - Ejecutando: %v - %v , %v", procesoActual.PID, instru[0], instru[1], instru[2])
+		IO_FS_DELETE(instru[1], instru[2])
 	case "IO_FS_TRUNCATE":
 		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3])
 		tamaño, err := strconv.Atoi(instru[2])
-		direccion, err := strconv.Atoi(instru[3])
 		if err != nil {
 			log.Printf("error enviando: %s", err.Error())
+			return
+		}
+		direccion, err1 := strconv.Atoi(instru[3])
+		if err1 != nil {
+			log.Printf("error enviando: %s", err1.Error())
 			return
 		}
 		IO_FS_TRUNCATE(instru[1], tamaño, direccion)
 	case "IO_FS_WRITE":
 		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3])
 		tamaño, err := strconv.Atoi(instru[2])
-		direccion, err := strconv.Atoi(instru[3])
 		if err != nil {
 			log.Printf("error enviando: %s", err.Error())
+			return
+		}
+		direccion, err1 := strconv.Atoi(instru[3])
+		if err1 != nil {
+			log.Printf("error enviando: %s", err1.Error())
 			return
 		}
 		IO_FS_WRITE(instru[1], tamaño, direccion)
 	case "IO_FS_READ":
 		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3])
 		tamaño, err := strconv.Atoi(instru[2])
-		direccion, err := strconv.Atoi(instru[3])
 		if err != nil {
 			log.Printf("error enviando: %s", err.Error())
+			return
+		}
+		direccion, err1 := strconv.Atoi(instru[3])
+		if err1 != nil {
+			log.Printf("error enviando: %s", err1.Error())
 			return
 		}
 		IO_FS_READ(instru[1], tamaño, direccion)

@@ -134,15 +134,19 @@ func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
 		Direccion: direccionInt,
 	}
 	body, err := json.Marshal(requestBody)
+	if err != nil {
+		log.Printf("Error guardando el texto ingresado %v", err)
+		return
+	}
 	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/escribir"
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 
 	if err != nil {
-		log.Printf("Error guardando el texto ingresado ", err.Error())
+		log.Printf("Error guardando el texto ingresado %v", err)
 		return
 	}
 	if resp.StatusCode != http.StatusOK {
-		log.Printf("Error al guardar el mensaje ", resp.Status)
+		log.Printf("Error al guardar el mensaje %s", resp.Status)
 		return
 	} else {
 		log.Printf("Se guardo correctamente el mensaje")
@@ -187,12 +191,12 @@ func IO_STDOUT_WRITE(w http.ResponseWriter, r *http.Request) {
 		Tamaño:    tamañoInt,
 		Direccion: direccionInt,
 	}
-	if err != nil {
-		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
-		return
-	}
 
 	body, err := json.Marshal(requestBody)
+	if err != nil {
+		log.Printf("Error guardando el texto ingresado %v", err)
+		return
+	}
 	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/leer"
 	fmt.Print("URL: ", url)
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
@@ -464,4 +468,216 @@ func EstablecerConexion(nombre string, puerto int) {
 
 func ValidarConexion(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
+}
+
+func PathHandler(w http.ResponseWriter, r *http.Request) {
+	configResponse := map[string]interface{}{
+		"path":       globals.ClientConfig.DialfsPath,
+		"tam_block":  globals.ClientConfig.DialfsBlockSize,
+		"cant_block": globals.ClientConfig.DialfsBlockCount,
+	}
+
+	response, err := json.Marshal(configResponse)
+	if err != nil {
+		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	w.Write(response)
+}
+
+type BodyFileRequest struct {
+	Interfaz      string `json:"interfaz"`
+	NombreArchivo string `json:"nombreArchivo"`
+}
+type Metadata struct {
+	InitialBlock int `json:"initial_block"`
+	Size         int `json:"size"`
+}
+
+func IO_FS_CREATE_Handler(w http.ResponseWriter, r *http.Request) {
+	var request BodyFileRequest
+	err := json.NewDecoder(r.Body).Decode(&request)
+	if err != nil {
+		http.Error(w, "Error al decodificar la solicitud", http.StatusBadRequest)
+		return
+	}
+
+	if request.Interfaz == "" || request.NombreArchivo == "" {
+		http.Error(w, "Parámetros inválidos", http.StatusBadRequest)
+		return
+	}
+	log.Printf("\n\n\nSE ENTRO IOFSCREATE EN IO FUNCION")
+	err = CrearArchivoFS(request.Interfaz, request.NombreArchivo)
+	if err != nil {
+		response := CreateFileResponse{
+			Status:  "Error",
+			Message: err.Error(),
+		}
+		w.WriteHeader(http.StatusInternalServerError)
+		json.NewEncoder(w).Encode(response)
+		return
+	}
+
+	// Responder con éxito
+	response := CreateFileResponse{
+		Status:  "OK",
+		Message: "Archivo creado correctamente",
+	}
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(response)
+	log.Printf("Archivo '%s' creado en la interfaz '%s'", request.NombreArchivo, request.Interfaz)
+}
+
+type CreateFileRequest struct {
+	Interfaz      string `json:"interfaz"`
+	NombreArchivo string `json:"nombreArchivo"`
+}
+
+type CreateFileResponse struct {
+	Status  string `json:"status"`
+	Message string `json:"message"`
+}
+
+func IO_FS_DELETE_Handler(w http.ResponseWriter, r *http.Request) {
+	var request BodyFileRequest
+	err := json.NewDecoder(r.Body).Decode(&request)
+	if err != nil {
+		http.Error(w, "Error al decodificar la solicitud", http.StatusBadRequest)
+		return
+	}
+
+	if request.Interfaz == "" || request.NombreArchivo == "" {
+		http.Error(w, "Parámetros inválidos", http.StatusBadRequest)
+		return
+	}
+
+	err = EliminarArchivoFS(request.Interfaz, request.NombreArchivo)
+	if err != nil {
+		http.Error(w, fmt.Sprintf("Error al eliminar el archivo: %s", err.Error()), http.StatusInternalServerError)
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode("Archivo eliminado correctamente")
+	log.Printf("Archivo '%s' eliminado en la interfaz '%s'", request.NombreArchivo, request.Interfaz)
+}
+
+type ConfigResponse struct {
+	Path       string `json:"path"`
+	BlockCount int    `json:"block_count"`
+	BlockSize  int    `json:"block_size"`
+}
+
+func CrearArchivoFS(interfaz, nombreArchivo string) error {
+	// Ruta al archivo de metadata
+	metadataPath := fmt.Sprintf("%s/%s", globals.ClientConfig.DialfsPath, nombreArchivo)
+
+	// Verificar si el archivo ya existe
+	if _, err := os.Stat(metadataPath); err == nil {
+		return fmt.Errorf("el archivo ya existe")
+	}
+
+	// Leer el archivo de bloques y el bitmap
+	bloquesPath := fmt.Sprintf("%s/bloques.dat", globals.ClientConfig.DialfsPath)
+	bitmapPath := fmt.Sprintf("%s/bitmap.dat", globals.ClientConfig.DialfsPath)
+
+	bloquesFile, err := os.OpenFile(bloquesPath, os.O_RDWR, 0644)
+	if err != nil {
+		return fmt.Errorf("no se pudo abrir el archivo de bloques: %s", err.Error())
+	}
+	defer bloquesFile.Close()
+
+	bitmapFile, err := os.OpenFile(bitmapPath, os.O_RDWR, 0644)
+	if err != nil {
+		return fmt.Errorf("no se pudo abrir el archivo de bitmap: %s", err.Error())
+	}
+	defer bitmapFile.Close()
+
+	// Leer el bitmap
+	bitmap := make([]byte, globals.ClientConfig.DialfsBlockCount)
+	_, err = bitmapFile.Read(bitmap)
+	if err != nil {
+		return fmt.Errorf("no se pudo leer el bitmap: %s", err.Error())
+	}
+
+	// Encontrar un bloque libre
+	var initialBlock int = -1
+	for i := 0; i < globals.ClientConfig.DialfsBlockCount; i++ {
+		if bitmap[i] == 0 {
+			initialBlock = i
+			break
+		}
+	}
+	if initialBlock == -1 {
+		return fmt.Errorf("no hay bloques libres disponibles")
+	}
+
+	// Marcar el bloque como ocupado en el bitmap
+	bitmap[initialBlock] = 1
+	_, err = bitmapFile.WriteAt(bitmap, 0)
+	if err != nil {
+		return fmt.Errorf("no se pudo actualizar el bitmap: %s", err.Error())
+	}
+
+	// Crear el archivo de metadata
+	metadata := map[string]interface{}{
+		"initial_block": initialBlock,
+		"size":          0,
+	}
+
+	metadataBytes, err := json.Marshal(metadata)
+	if err != nil {
+		return fmt.Errorf("no se pudo codificar la metadata: %s", err.Error())
+	}
+
+	err = os.WriteFile(metadataPath, metadataBytes, 0644)
+	if err != nil {
+		return fmt.Errorf("no se pudo crear el archivo de metadata: %s", err.Error())
+	}
+
+	return nil
+}
+
+func EliminarArchivoFS(interfaz, nombreArchivo string) error {
+	// Ruta al archivo de metadata
+	metadataPath := fmt.Sprintf("%s/%s", globals.ClientConfig.DialfsPath, nombreArchivo)
+
+	// Leer el archivo de metadata
+	metadataBytes, err := os.ReadFile(metadataPath)
+	if err != nil {
+		return fmt.Errorf("error al leer la metadata del archivo: %v", err)
+	}
+
+	var metadata Metadata
+	err = json.Unmarshal(metadataBytes, &metadata)
+	if err != nil {
+		return fmt.Errorf("error al decodificar la metadata del archivo: %v", err)
+	}
+
+	// Leer el archivo de bitmap
+	bitmapPath := fmt.Sprintf("%s/bitmap.dat", globals.ClientConfig.DialfsPath)
+	bitmap, err := os.ReadFile(bitmapPath)
+	if err != nil {
+		return fmt.Errorf("error al leer el bitmap: %v", err)
+	}
+
+	// Marcar el bloque como libre en el bitmap
+	initialBlock := metadata.InitialBlock
+	bitmap[initialBlock] = 0
+
+	err = os.WriteFile(bitmapPath, bitmap, 0644)
+	if err != nil {
+		return fmt.Errorf("error al actualizar el bitmap: %v", err)
+	}
+
+	// Eliminar el archivo de metadata
+	err = os.Remove(metadataPath)
+	if err != nil {
+		return fmt.Errorf("error al eliminar el archivo de metadata: %v", err)
+	}
+
+	return nil
 }

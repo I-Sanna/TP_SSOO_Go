@@ -38,6 +38,7 @@ func main() {
 	http.HandleFunc("GET /fswrite/{pid}/{nombre}/{tamaño}/{puntero}", utils.IO_FS_WRITE)
 	http.HandleFunc("GET /fsread/{pid}/{nombre}/{tamaño}/{puntero}", utils.IO_FS_READ)
 	http.HandleFunc("GET /validar", utils.ValidarConexion)
+	http.HandleFunc("POST /fs/create", utils.IO_FS_CREATE_Handler)
 
 	log.Fatal(http.ListenAndServe(":"+strconv.Itoa(globals.ClientConfig.Port), nil))
 }

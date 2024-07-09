@@ -11382,3 +11382,73 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/06/15 21:24:51 PID: 0 - Ejecutando: SUB - AX,BX
 2024/06/15 21:24:51 PID: 0 - FETCH - Program Counter: 11
 2024/06/15 21:24:52 PID: 0 - Ejecutando: EXIT
+2024/07/09 21:49:25 Inicializando TLB con 4 entradas
+2024/07/09 21:53:06 Inicializando TLB con 4 entradas
+2024/07/09 21:53:46 PID: 0 - FETCH - Program Counter: 0
+2024/07/09 21:53:47 PID: 0 - Ejecutando: SET - AX,0
+2024/07/09 21:53:47 PID: 0 - FETCH - Program Counter: 1
+2024/07/09 21:53:48 PID: 0 - Ejecutando: IO_FS_CREATE - Int4 , notas.txt
+2024/07/09 21:53:48 
+
+
+SE ENTRO IOFSCREATE EN CPU FUNCION
+2024/07/09 21:53:48 PID: 0 - FETCH - Program Counter: 2
+2024/07/09 21:53:49 PID: 0 - Ejecutando: EXIT
+2024/07/09 21:54:20 PID: 1 - FETCH - Program Counter: 0
+2024/07/09 21:54:21 PID: 1 - Ejecutando: SET - AX,0
+2024/07/09 21:54:21 PID: 1 - FETCH - Program Counter: 1
+2024/07/09 21:54:22 PID: 1 - Ejecutando: IO_FS_CREATE - Int4 , notas.txt
+2024/07/09 21:54:22 
+
+
+SE ENTRO IOFSCREATE EN CPU FUNCION
+2024/07/09 21:54:22 PID: 1 - FETCH - Program Counter: 2
+2024/07/09 21:54:23 PID: 1 - Ejecutando: EXIT
+2024/07/09 21:54:24 PID: 2 - FETCH - Program Counter: 0
+2024/07/09 21:54:25 PID: 2 - Ejecutando: SET - AX,0
+2024/07/09 21:54:25 PID: 2 - FETCH - Program Counter: 1
+2024/07/09 21:54:26 PID: 2 - Ejecutando: IO_FS_CREATE - Int4 , notas.txt
+2024/07/09 21:54:26 
+
+
+SE ENTRO IOFSCREATE EN CPU FUNCION
+2024/07/09 21:54:26 PID: 2 - FETCH - Program Counter: 2
+2024/07/09 21:54:27 PID: 2 - Ejecutando: EXIT
+2024/07/09 21:57:15 PID: 3 - FETCH - Program Counter: 0
+2024/07/09 21:57:16 PID: 3 - Ejecutando: SET - AX,0
+2024/07/09 21:57:16 PID: 3 - FETCH - Program Counter: 1
+2024/07/09 21:57:17 PID: 3 - Ejecutando: IO_FS_CREATE - Int4 , notas.txt
+2024/07/09 21:57:17 
+
+
+SE ENTRO IOFSCREATE EN CPU FUNCION
+2024/07/09 21:57:17 PID: 3 - FETCH - Program Counter: 2
+2024/07/09 21:57:18 PID: 3 - Ejecutando: EXIT
+2024/07/09 22:01:26 Inicializando TLB con 4 entradas
+2024/07/09 22:01:47 Inicializando TLB con 4 entradas
+2024/07/09 22:02:00 PID: 4 - FETCH - Program Counter: 0
+2024/07/09 22:02:01 PID: 4 - Ejecutando: SET - AX,0
+2024/07/09 22:02:01 PID: 4 - FETCH - Program Counter: 1
+2024/07/09 22:02:02 PID: 4 - Ejecutando: IO_FS_CREATE - Int4 , notas.txt
+2024/07/09 22:02:02 PID: 4 - FETCH - Program Counter: 2
+2024/07/09 22:02:03 PID: 4 - Ejecutando: EXIT
+2024/07/09 22:05:38 PID: 0 - FETCH - Program Counter: 0
+2024/07/09 22:05:39 PID: 0 - Ejecutando: SET - AX,0
+2024/07/09 22:05:39 PID: 0 - FETCH - Program Counter: 1
+2024/07/09 22:05:40 PID: 0 - Ejecutando: IO_FS_CREATE - Int4 , notas.txt
+2024/07/09 22:05:40 PID: 0 - FETCH - Program Counter: 2
+2024/07/09 22:05:41 PID: 0 - Ejecutando: EXIT
+2024/07/09 22:07:14 Inicializando TLB con 4 entradas
+2024/07/09 22:07:40 PID: 0 - FETCH - Program Counter: 0
+2024/07/09 22:07:41 PID: 0 - Ejecutando: SET - AX,0
+2024/07/09 22:07:41 PID: 0 - FETCH - Program Counter: 1
+2024/07/09 22:07:42 PID: 0 - Ejecutando: IO_FS_CREATE - Int4 , notas.txt
+2024/07/09 22:07:42 PID: 0 - FETCH - Program Counter: 2
+2024/07/09 22:07:43 PID: 0 - Ejecutando: EXIT
+2024/07/09 22:20:27 Inicializando TLB con 4 entradas
+2024/07/09 22:20:57 PID: 0 - FETCH - Program Counter: 0
+2024/07/09 22:20:58 PID: 0 - Ejecutando: SET - AX,0
+2024/07/09 22:20:58 PID: 0 - FETCH - Program Counter: 1
+2024/07/09 22:20:59 PID: 0 - Ejecutando: IO_FS_CREATE - Int4 , notas.txt
+2024/07/09 22:20:59 PID: 0 - FETCH - Program Counter: 2
+2024/07/09 22:21:00 PID: 0 - Ejecutando: EXIT

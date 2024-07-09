@@ -1204,3 +1204,73 @@ func SIGNAL(recurso string) string {
 	}
 	return "NOT_FOUND"
 }
+
+type CreateFileRequest struct {
+	Interfaz      string `json:"interfaz"`
+	NombreArchivo string `json:"nombreArchivo"`
+}
+
+type CreateFileResponse struct {
+	Status  string `json:"status"`
+	Message string `json:"message"`
+}
+
+func HandleCreateFileRequest(w http.ResponseWriter, r *http.Request) {
+	log.Printf("\n\n ENTRO AL HANDLE_CREATE_FILE_REQUEST")
+	var request CreateFileRequest
+	if err := json.NewDecoder(r.Body).Decode(&request); err != nil {
+		http.Error(w, "Bad request", http.StatusBadRequest)
+		return
+	}
+
+	// Enviar la solicitud al módulo de Interfaz de I/O
+	err := sendCreateFileRequestToIO(request.Interfaz, request.NombreArchivo)
+	var response CreateFileResponse
+	if err != nil {
+		response = CreateFileResponse{
+			Status:  "Error",
+			Message: err.Error(),
+		}
+		w.WriteHeader(http.StatusInternalServerError)
+	} else {
+		response = CreateFileResponse{
+			Status:  "OK",
+			Message: "Archivo creado correctamente",
+		}
+		w.WriteHeader(http.StatusOK)
+	}
+
+	// Responder a la CPU
+	if err := json.NewEncoder(w).Encode(response); err != nil {
+		http.Error(w, "Internal server error", http.StatusInternalServerError)
+	}
+}
+
+func sendCreateFileRequestToIO(interfaz, nombreArchivo string) error {
+	log.Printf("\n\n\n SEND_CREATORBLABLA TO IO")
+	// Crear la solicitud
+	request := CreateFileRequest{
+		Interfaz:      interfaz,
+		NombreArchivo: nombreArchivo,
+	}
+
+	// Codificar la solicitud a JSON
+	requestBody, err := json.Marshal(request)
+	if err != nil {
+		return fmt.Errorf("error al codificar la solicitud: %w", err)
+	}
+
+	// Enviar la solicitud al módulo de Interfaz de I/O
+	url := fmt.Sprintf("http://localhost:%d/fs/create", globals.ClientConfig.PortIO)
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(requestBody))
+	if err != nil {
+		return fmt.Errorf("error al enviar la solicitud al módulo de Interfaz de I/O: %w", err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return fmt.Errorf("error del módulo de Interfaz de I/O: %s", resp.Status)
+	}
+
+	return nil
+}
