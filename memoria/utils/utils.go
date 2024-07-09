@@ -56,7 +56,7 @@ func InicializarMemoriaYTablas() {
 }
 
 func readFile(fileName string) []string {
-	file, err := os.Open(fileName) // For read access.
+	file, err := os.Open(globals.ClientConfig.InstructionsPath + "/" + fileName) // For read access.
 	if err != nil {
 		log.Fatal(err)
 	}
