@@ -2338,3 +2338,127 @@ SE ENTRO IOFSCREATE EN IO FUNCION
 
 SE ENTRO IOFSCREATE EN IO FUNCION
 2024/07/10 13:52:12 Archivo 'leer2.txt' creado
+2024/07/10 20:40:39 
+Configuracion cargada con exito!
+2024/07/10 20:42:04 
+Configuracion cargada con exito!
+2024/07/10 20:42:04 Se crearon los archivos de bloque y bitmap
+2024/07/10 20:43:34 
+Configuracion cargada con exito!
+2024/07/10 20:51:46 
+Configuracion cargada con exito!
+2024/07/10 20:56:51 
+Configuracion cargada con exito!
+2024/07/10 22:53:02 
+Configuracion cargada con exito!
+2024/07/10 22:53:09 SE ENTRO IOFSCREATE EN IO FUNCION
+2024/07/10 22:58:05 
+Configuracion cargada con exito!
+2024/07/10 22:58:12 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/10 23:02:31 
+Configuracion cargada con exito!
+2024/07/10 23:02:38 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/10 23:09:11 
+Configuracion cargada con exito!
+2024/07/10 23:09:19 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/10 23:10:30 
+Configuracion cargada con exito!
+2024/07/10 23:10:38 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/10 23:10:38 Parámetros inválidos: nombreArchivo está vacío
+2024/07/10 23:13:20 
+Configuracion cargada con exito!
+2024/07/10 23:13:26 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/10 23:13:26 Parámetros inválidos: nombreArchivo está vacío
+2024/07/10 23:15:18 
+Configuracion cargada con exito!
+2024/07/10 23:15:25 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/10 23:15:25 Parámetros inválidos: nombreArchivo está vacío
+2024/07/10 23:18:32 
+Configuracion cargada con exito!
+2024/07/10 23:18:38 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/10 23:18:38 Parámetros inválidos: nombreArchivo está vacío
+2024/07/10 23:23:36 
+Configuracion cargada con exito!
+2024/07/10 23:23:46 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/10 23:23:46 Intentando crear archivo con nombre: notas.txt
+2024/07/10 23:23:46 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/10 23:23:46 Leyendo archivos de bloques y bitmap
+2024/07/10 23:23:46 Leyendo el bitmap
+2024/07/10 23:23:46 Buscando bloque libre
+2024/07/10 23:23:46 Bloque libre encontrado: 0
+2024/07/10 23:23:46 Actualización del bitmap completada
+2024/07/10 23:23:46 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/10 23:23:46 Archivo 'notas.txt' creado
+2024/07/10 23:31:47 
+Configuracion cargada con exito!
+2024/07/10 23:39:01 
+Configuracion cargada con exito!
+2024/07/10 23:39:07 Se recibió una solicitud en IO_FS_DELETE_Handler
+2024/07/10 23:39:07 Intentando eliminar archivo con nombre: notas.txt
+2024/07/10 23:39:07 Archivo 'notas.txt' eliminado
+2024/07/10 23:40:59 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/10 23:40:59 Intentando crear archivo con nombre: notas.txt
+2024/07/10 23:40:59 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/10 23:40:59 Leyendo archivos de bloques y bitmap
+2024/07/10 23:40:59 Leyendo el bitmap
+2024/07/10 23:40:59 Buscando bloque libre
+2024/07/10 23:40:59 Bloque libre encontrado: 0
+2024/07/10 23:40:59 Actualización del bitmap completada
+2024/07/10 23:40:59 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/10 23:40:59 Archivo 'notas.txt' creado
+2024/07/10 23:41:00 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/10 23:41:00 Intentando crear archivo con nombre: holi.txt
+2024/07/10 23:41:00 Se entró a CrearArchivoFS con nombreArchivo: holi.txt
+2024/07/10 23:41:00 Leyendo archivos de bloques y bitmap
+2024/07/10 23:41:00 Leyendo el bitmap
+2024/07/10 23:41:00 Buscando bloque libre
+2024/07/10 23:41:00 Bloque libre encontrado: 1
+2024/07/10 23:41:00 Actualización del bitmap completada
+2024/07/10 23:41:00 Archivo de metadata 'holi.txt' creado con éxito
+2024/07/10 23:41:00 Archivo 'holi.txt' creado
+2024/07/10 23:41:01 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/10 23:41:01 Intentando crear archivo con nombre: voyAaprobar.txt
+2024/07/10 23:41:01 Se entró a CrearArchivoFS con nombreArchivo: voyAaprobar.txt
+2024/07/10 23:41:01 Leyendo archivos de bloques y bitmap
+2024/07/10 23:41:01 Leyendo el bitmap
+2024/07/10 23:41:01 Buscando bloque libre
+2024/07/10 23:41:01 Bloque libre encontrado: 2
+2024/07/10 23:41:01 Actualización del bitmap completada
+2024/07/10 23:41:01 Archivo de metadata 'voyAaprobar.txt' creado con éxito
+2024/07/10 23:41:01 Archivo 'voyAaprobar.txt' creado
+2024/07/10 23:41:02 Se recibió una solicitud en IO_FS_DELETE_Handler
+2024/07/10 23:41:02 Intentando eliminar archivo con nombre: notas.txt
+2024/07/10 23:41:02 Archivo 'notas.txt' eliminado
+2024/07/10 23:41:58 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/10 23:41:58 Intentando crear archivo con nombre: notas.txt
+2024/07/10 23:41:58 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/10 23:41:58 Leyendo archivos de bloques y bitmap
+2024/07/10 23:41:58 Leyendo el bitmap
+2024/07/10 23:41:58 Buscando bloque libre
+2024/07/10 23:41:58 Bloque libre encontrado: 0
+2024/07/10 23:41:58 Actualización del bitmap completada
+2024/07/10 23:41:58 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/10 23:41:58 Archivo 'notas.txt' creado
+2024/07/10 23:41:59 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/10 23:41:59 Intentando crear archivo con nombre: holi.txt
+2024/07/10 23:41:59 Se entró a CrearArchivoFS con nombreArchivo: holi.txt
+2024/07/10 23:41:59 Leyendo archivos de bloques y bitmap
+2024/07/10 23:41:59 Leyendo el bitmap
+2024/07/10 23:41:59 Buscando bloque libre
+2024/07/10 23:41:59 Bloque libre encontrado: 3
+2024/07/10 23:41:59 Actualización del bitmap completada
+2024/07/10 23:41:59 Archivo de metadata 'holi.txt' creado con éxito
+2024/07/10 23:41:59 Archivo 'holi.txt' creado
+2024/07/10 23:42:00 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/10 23:42:00 Intentando crear archivo con nombre: voyAaprobar.txt
+2024/07/10 23:42:00 Se entró a CrearArchivoFS con nombreArchivo: voyAaprobar.txt
+2024/07/10 23:42:00 Leyendo archivos de bloques y bitmap
+2024/07/10 23:42:00 Leyendo el bitmap
+2024/07/10 23:42:00 Buscando bloque libre
+2024/07/10 23:42:00 Bloque libre encontrado: 4
+2024/07/10 23:42:00 Actualización del bitmap completada
+2024/07/10 23:42:00 Archivo de metadata 'voyAaprobar.txt' creado con éxito
+2024/07/10 23:42:00 Archivo 'voyAaprobar.txt' creado
+2024/07/10 23:42:01 Se recibió una solicitud en IO_FS_DELETE_Handler
+2024/07/10 23:42:01 Intentando eliminar archivo con nombre: notas.txt
+2024/07/10 23:42:01 Archivo 'notas.txt' eliminado

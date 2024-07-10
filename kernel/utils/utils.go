@@ -1205,35 +1205,41 @@ func SIGNAL(recurso string) string {
 	return "NOT_FOUND"
 }
 
-type CreateFileRequest struct {
-	Interfaz      string `json:"interfaz"`
+type FileRequest struct {
 	NombreArchivo string `json:"nombreArchivo"`
 }
 
-type CreateFileResponse struct {
+type FileResponse struct {
 	Status  string `json:"status"`
 	Message string `json:"message"`
 }
 
 func HandleCreateFileRequest(w http.ResponseWriter, r *http.Request) {
-	log.Printf("\n\n ENTRO AL HANDLE_CREATE_FILE_REQUEST")
-	var request CreateFileRequest
+	log.Printf("ENTRO AL HANDLE_CREATE_FILE_REQUEST")
+	var request FileRequest
 	if err := json.NewDecoder(r.Body).Decode(&request); err != nil {
+		log.Printf("Error al decodificar la solicitud: %v", err)
 		http.Error(w, "Bad request", http.StatusBadRequest)
 		return
 	}
 
+	if request.NombreArchivo == "" {
+		log.Printf("Parámetros inválidos: nombreArchivo está vacío")
+		http.Error(w, "Parámetros inválidos", http.StatusBadRequest)
+		return
+	}
+
 	// Enviar la solicitud al módulo de Interfaz de I/O
-	err := sendCreateFileRequestToIO(request.Interfaz, request.NombreArchivo)
-	var response CreateFileResponse
+	err := sendCreateFileRequestToIO(request.NombreArchivo)
+	var response FileResponse
 	if err != nil {
-		response = CreateFileResponse{
+		response = FileResponse{
 			Status:  "Error",
 			Message: err.Error(),
 		}
 		w.WriteHeader(http.StatusInternalServerError)
 	} else {
-		response = CreateFileResponse{
+		response = FileResponse{
 			Status:  "OK",
 			Message: "Archivo creado correctamente",
 		}
@@ -1242,21 +1248,22 @@ func HandleCreateFileRequest(w http.ResponseWriter, r *http.Request) {
 
 	// Responder a la CPU
 	if err := json.NewEncoder(w).Encode(response); err != nil {
+		log.Printf("Error al codificar la respuesta: %v", err)
 		http.Error(w, "Internal server error", http.StatusInternalServerError)
 	}
 }
 
-func sendCreateFileRequestToIO(interfaz, nombreArchivo string) error {
-	log.Printf("\n\n\n SEND_CREATORBLABLA TO IO")
+func sendCreateFileRequestToIO(nombreArchivo string) error {
+	log.Printf("SEND_CREATE_FILE_REQUEST_TO_IO")
 	// Crear la solicitud
-	request := CreateFileRequest{
-		Interfaz:      interfaz,
+	request := FileRequest{
 		NombreArchivo: nombreArchivo,
 	}
 
 	// Codificar la solicitud a JSON
 	requestBody, err := json.Marshal(request)
 	if err != nil {
+		log.Printf("Error al codificar la solicitud: %v", err)
 		return fmt.Errorf("error al codificar la solicitud: %w", err)
 	}
 
@@ -1264,11 +1271,83 @@ func sendCreateFileRequestToIO(interfaz, nombreArchivo string) error {
 	url := fmt.Sprintf("http://localhost:%d/fs/create", globals.ClientConfig.PortIO)
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(requestBody))
 	if err != nil {
+		log.Printf("Error al enviar la solicitud al módulo de Interfaz de I/O: %v", err)
 		return fmt.Errorf("error al enviar la solicitud al módulo de Interfaz de I/O: %w", err)
 	}
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
+		log.Printf("Error del módulo de Interfaz de I/O: %s", resp.Status)
+		return fmt.Errorf("error del módulo de Interfaz de I/O: %s", resp.Status)
+	}
+
+	return nil
+}
+
+func HandleDeleteFileRequest(w http.ResponseWriter, r *http.Request) {
+	log.Printf("ENTRO AL HANDLE_DELETE_FILE_REQUEST")
+	var request FileRequest
+	if err := json.NewDecoder(r.Body).Decode(&request); err != nil {
+		log.Printf("Error al decodificar la solicitud: %v", err)
+		http.Error(w, "Bad request", http.StatusBadRequest)
+		return
+	}
+
+	if request.NombreArchivo == "" {
+		log.Printf("Parámetros inválidos: nombreArchivo está vacío")
+		http.Error(w, "Parámetros inválidos", http.StatusBadRequest)
+		return
+	}
+
+	// Enviar la solicitud al módulo de Interfaz de I/O
+	err := sendDeleteFileRequestToIO(request.NombreArchivo)
+	var response FileResponse
+	if err != nil {
+		response = FileResponse{
+			Status:  "Error",
+			Message: err.Error(),
+		}
+		w.WriteHeader(http.StatusInternalServerError)
+	} else {
+		response = FileResponse{
+			Status:  "OK",
+			Message: "Archivo eliminado correctamente",
+		}
+		w.WriteHeader(http.StatusOK)
+	}
+
+	// Responder a la CPU
+	if err := json.NewEncoder(w).Encode(response); err != nil {
+		log.Printf("Error al codificar la respuesta: %v", err)
+		http.Error(w, "Internal server error", http.StatusInternalServerError)
+	}
+}
+
+func sendDeleteFileRequestToIO(nombreArchivo string) error {
+	log.Printf("SEND_DELETE_FILE_REQUEST_TO_IO")
+	// Crear la solicitud
+	request := FileRequest{
+		NombreArchivo: nombreArchivo,
+	}
+
+	// Codificar la solicitud a JSON
+	requestBody, err := json.Marshal(request)
+	if err != nil {
+		log.Printf("Error al codificar la solicitud: %v", err)
+		return fmt.Errorf("error al codificar la solicitud: %w", err)
+	}
+
+	// Enviar la solicitud al módulo de Interfaz de I/O
+	url := fmt.Sprintf("http://localhost:%d/fs/delete", globals.ClientConfig.PortIO)
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(requestBody))
+	if err != nil {
+		log.Printf("Error al enviar la solicitud al módulo de Interfaz de I/O: %v", err)
+		return fmt.Errorf("error al enviar la solicitud al módulo de Interfaz de I/O: %w", err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		log.Printf("Error del módulo de Interfaz de I/O: %s", resp.Status)
 		return fmt.Errorf("error del módulo de Interfaz de I/O: %s", resp.Status)
 	}
 

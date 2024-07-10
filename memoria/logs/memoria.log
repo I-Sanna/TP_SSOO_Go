@@ -15715,3 +15715,61 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/07/09 22:07:40 PID: 0 - Tamaño: 256
 2024/07/09 22:20:57 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
 2024/07/09 22:20:57 PID: 0 - Tamaño: 256
+2024/07/10 20:40:48 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/10 20:40:48 PID: 0 - Tamaño: 256
+2024/07/10 20:42:16 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/10 20:42:16 PID: 0 - Tamaño: 256
+2024/07/10 20:42:52 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/10 20:42:52 PID: 1 - Tamaño: 256
+2024/07/10 20:42:56 http: panic serving 127.0.0.1:60708: runtime error: slice bounds out of range [:-1]
+goroutine 13 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6a0020?, 0xc00001a378?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.removerIndexInt(...)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:288
+memoria/utils.LiberarRecursos({0x735060, 0xc0000ceee0}, 0xc00009d0e0)
+	/home/utnso/Desktop/TP ANUAL/tp-2024-1c-EPIC/memoria/utils/utils.go:272 +0x7eb
+net/http.HandlerFunc.ServeHTTP(0xc000088f70?, {0x735060?, 0xc0000ceee0?}, 0x63001a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x735060, 0xc0000ceee0}, 0xc00009d0e0)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00007f650?}, {0x735060?, 0xc0000ceee0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000c66c0, {0x7355c8, 0xc00007eed0})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/07/10 20:43:39 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/10 20:43:39 PID: 0 - Tamaño: 256
+2024/07/10 20:51:54 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/10 20:51:54 PID: 0 - Tamaño: 256
+2024/07/10 20:56:58 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/10 20:56:58 PID: 0 - Tamaño: 256
+2024/07/10 22:53:07 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/10 22:53:07 PID: 0 - Tamaño: 256
+2024/07/10 22:58:10 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/10 22:58:10 PID: 0 - Tamaño: 256
+2024/07/10 23:02:36 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/10 23:02:36 PID: 0 - Tamaño: 256
+2024/07/10 23:09:17 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/10 23:09:17 PID: 0 - Tamaño: 256
+2024/07/10 23:10:36 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/10 23:10:36 PID: 1 - Tamaño: 256
+2024/07/10 23:13:24 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/10 23:13:24 PID: 0 - Tamaño: 256
+2024/07/10 23:15:23 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/10 23:15:23 PID: 0 - Tamaño: 256
+2024/07/10 23:18:36 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/10 23:18:36 PID: 0 - Tamaño: 256
+2024/07/10 23:23:44 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/10 23:23:44 PID: 0 - Tamaño: 256
+2024/07/10 23:31:51 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/10 23:31:51 PID: 0 - Tamaño: 256
+2024/07/10 23:39:05 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/10 23:39:05 PID: 0 - Tamaño: 256
+2024/07/10 23:40:57 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/10 23:40:57 PID: 1 - Tamaño: 256
+2024/07/10 23:41:56 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/10 23:41:56 PID: 2 - Tamaño: 256

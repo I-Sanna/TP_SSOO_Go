@@ -760,33 +760,36 @@ func IO_STDOUT_WRITE(nombre string, tamaño int, direccion int) {
 }
 
 func IO_FS_CREATE(interfaz string, nombreArchivo string) error {
-	// Preparar la URL para la solicitud al Kernel
+	log.Printf("Se entró a IO_FS_CREATE en la CPU")
 
+	// Preparar la URL para la solicitud al Kernel
 	url := fmt.Sprintf("http://localhost:%d/fs/create", globals.ClientConfig.PortKernel)
 
 	// Crear el cuerpo de la solicitud
 	requestBody := map[string]string{
-		"interfaz":      interfaz,
 		"nombreArchivo": nombreArchivo,
 	}
 
 	body, err := json.Marshal(requestBody)
 	if err != nil {
+		log.Printf("Error al codificar el cuerpo de la solicitud: %v", err)
 		return fmt.Errorf("error al codificar el cuerpo de la solicitud: %w", err)
 	}
 
 	// Enviar la solicitud al Kernel
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
+		log.Printf("Error al enviar la solicitud al Kernel: %v", err)
 		return fmt.Errorf("error al enviar la solicitud al Kernel: %w", err)
 	}
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
+		log.Printf("Error del Kernel: %s", resp.Status)
 		return fmt.Errorf("error del Kernel: %s", resp.Status)
 	}
 
-	log.Printf("\n\n\n\nArchivo '%s' creado en la interfaz '%s'", nombreArchivo, interfaz)
+	log.Printf("Archivo '%s' creado en la interfaz '%s'", nombreArchivo, interfaz)
 	return nil
 }
 
@@ -796,7 +799,6 @@ func IO_FS_DELETE(interfaz, nombreArchivo string) error {
 
 	// Crear el cuerpo de la solicitud
 	requestBody := map[string]string{
-		"interfaz":      interfaz,
 		"nombreArchivo": nombreArchivo,
 	}
 	body, err := json.Marshal(requestBody)

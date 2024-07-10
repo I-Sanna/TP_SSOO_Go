@@ -513,50 +513,54 @@ func ValidarConexion(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 }
 
-func PathHandler(w http.ResponseWriter, r *http.Request) {
-	configResponse := map[string]interface{}{
-		"path":       globals.ClientConfig.DialfsPath,
-		"tam_block":  globals.ClientConfig.DialfsBlockSize,
-		"cant_block": globals.ClientConfig.DialfsBlockCount,
-	}
-
-	response, err := json.Marshal(configResponse)
-	if err != nil {
-		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
-		return
-	}
-
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusOK)
-	w.Write(response)
-}
-
-type BodyFileRequest struct {
-	NombreArchivo string `json:"nombre_archivo"`
-}
 type Metadata struct {
 	InitialBlock int `json:"initial_block"`
 	Size         int `json:"size"`
 }
 
+type CreateFileRequest struct {
+	Interfaz      string `json:"interfaz"`
+	NombreArchivo string `json:"nombreArchivo"`
+}
+
+type ConfigResponse struct {
+	Path       string `json:"path"`
+	BlockCount int    `json:"block_count"`
+	BlockSize  int    `json:"block_size"`
+}
+
+type BodyFileRequest struct {
+	NombreArchivo string `json:"nombreArchivo"`
+}
+
+type FileResponse struct {
+	Status  string `json:"status"`
+	Message string `json:"message"`
+}
+
 func IO_FS_CREATE_Handler(w http.ResponseWriter, r *http.Request) {
+	log.Printf("Se recibió una solicitud en IO_FS_CREATE_Handler")
+
 	var request BodyFileRequest
 	err := json.NewDecoder(r.Body).Decode(&request)
 	if err != nil {
+		log.Printf("Error al decodificar la solicitud: %v", err)
 		http.Error(w, "Error al decodificar la solicitud", http.StatusBadRequest)
 		return
 	}
 
 	if request.NombreArchivo == "" {
+		log.Printf("Parámetros inválidos: nombreArchivo está vacío")
 		http.Error(w, "Parámetros inválidos", http.StatusBadRequest)
 		return
 	}
 
-	log.Printf("\n\n\nSE ENTRO IOFSCREATE EN IO FUNCION")
+	log.Printf("Intentando crear archivo con nombre: %s", request.NombreArchivo)
 
 	err = CrearArchivoFS(request.NombreArchivo)
 	if err != nil {
-		response := CreateFileResponse{
+		log.Printf("Error al crear archivo: %v", err)
+		response := FileResponse{
 			Status:  "Error",
 			Message: err.Error(),
 		}
@@ -566,7 +570,7 @@ func IO_FS_CREATE_Handler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Responder con éxito
-	response := CreateFileResponse{
+	response := FileResponse{
 		Status:  "OK",
 		Message: "Archivo creado correctamente",
 	}
@@ -575,47 +579,50 @@ func IO_FS_CREATE_Handler(w http.ResponseWriter, r *http.Request) {
 	log.Printf("Archivo '%s' creado", request.NombreArchivo)
 }
 
-type CreateFileRequest struct {
-	Interfaz      string `json:"interfaz"`
-	NombreArchivo string `json:"nombreArchivo"`
-}
-
-type CreateFileResponse struct {
-	Status  string `json:"status"`
-	Message string `json:"message"`
-}
-
 func IO_FS_DELETE_Handler(w http.ResponseWriter, r *http.Request) {
+	log.Printf("Se recibió una solicitud en IO_FS_DELETE_Handler")
+
 	var request BodyFileRequest
 	err := json.NewDecoder(r.Body).Decode(&request)
 	if err != nil {
+		log.Printf("Error al decodificar la solicitud: %v", err)
 		http.Error(w, "Error al decodificar la solicitud", http.StatusBadRequest)
 		return
 	}
 
 	if request.NombreArchivo == "" {
+		log.Printf("Parámetros inválidos: nombreArchivo está vacío")
 		http.Error(w, "Parámetros inválidos", http.StatusBadRequest)
 		return
 	}
 
+	log.Printf("Intentando eliminar archivo con nombre: %s", request.NombreArchivo)
+
 	err = EliminarArchivoFS(request.NombreArchivo)
 	if err != nil {
-		http.Error(w, fmt.Sprintf("Error al eliminar el archivo: %s", err.Error()), http.StatusInternalServerError)
+		log.Printf("Error al eliminar archivo: %v", err)
+		response := FileResponse{
+			Status:  "Error",
+			Message: err.Error(),
+		}
+		w.WriteHeader(http.StatusInternalServerError)
+		json.NewEncoder(w).Encode(response)
 		return
 	}
 
+	// Responder con éxito
+	response := FileResponse{
+		Status:  "OK",
+		Message: "Archivo eliminado correctamente",
+	}
 	w.WriteHeader(http.StatusOK)
-	json.NewEncoder(w).Encode("Archivo eliminado correctamente")
+	json.NewEncoder(w).Encode(response)
 	log.Printf("Archivo '%s' eliminado", request.NombreArchivo)
 }
 
-type ConfigResponse struct {
-	Path       string `json:"path"`
-	BlockCount int    `json:"block_count"`
-	BlockSize  int    `json:"block_size"`
-}
-
 func CrearArchivoFS(nombreArchivo string) error {
+	log.Printf("Se entró a CrearArchivoFS con nombreArchivo: %s", nombreArchivo)
+
 	// Ruta al archivo de metadata
 	metadataPath := globals.ClientConfig.DialfsPath + "/" + nombreArchivo
 
@@ -623,6 +630,8 @@ func CrearArchivoFS(nombreArchivo string) error {
 	if _, err := os.Stat(metadataPath); err == nil {
 		return fmt.Errorf("el archivo ya existe")
 	}
+
+	log.Printf("Leyendo archivos de bloques y bitmap")
 
 	// Leer el archivo de bloques y el bitmap
 	bloquesPath := fmt.Sprintf("%s/bloques.dat", globals.ClientConfig.DialfsPath)
@@ -640,12 +649,16 @@ func CrearArchivoFS(nombreArchivo string) error {
 	}
 	defer bitmapFile.Close()
 
+	log.Printf("Leyendo el bitmap")
+
 	// Leer el bitmap
 	bitmap := make([]byte, globals.ClientConfig.DialfsBlockCount)
 	_, err = bitmapFile.Read(bitmap)
 	if err != nil {
 		return fmt.Errorf("no se pudo leer el bitmap: %s", err.Error())
 	}
+
+	log.Printf("Buscando bloque libre")
 
 	// Encontrar un bloque libre
 	var initialBlock int = -1
@@ -659,12 +672,16 @@ func CrearArchivoFS(nombreArchivo string) error {
 		return fmt.Errorf("no hay bloques libres disponibles")
 	}
 
+	log.Printf("Bloque libre encontrado: %d", initialBlock)
+
 	// Marcar el bloque como ocupado en el bitmap
 	bitmap[initialBlock] = 1
 	_, err = bitmapFile.WriteAt(bitmap, 0)
 	if err != nil {
 		return fmt.Errorf("no se pudo actualizar el bitmap: %s", err.Error())
 	}
+
+	log.Printf("Actualización del bitmap completada")
 
 	// Crear el archivo de metadata
 	metadata := Metadata{
@@ -682,6 +699,7 @@ func CrearArchivoFS(nombreArchivo string) error {
 		return fmt.Errorf("no se pudo crear el archivo de metadata: %s", err.Error())
 	}
 
+	log.Printf("Archivo de metadata '%s' creado con éxito", nombreArchivo)
 	return nil
 }
 
