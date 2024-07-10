@@ -65,6 +65,49 @@ func ConfigurarLogger() {
 	log.SetOutput(mw)
 }
 
+func check(e error) {
+	if e != nil {
+		panic(e)
+	}
+}
+
+func CrearEstructurasNecesariasFS() {
+	fileData := make([]byte, globals.ClientConfig.DialfsBlockSize*globals.ClientConfig.DialfsBlockCount)
+	bitmapData := make([]byte, globals.ClientConfig.DialfsBlockCount)
+
+	filePath := globals.ClientConfig.DialfsPath + "/bloques.dat"
+	bitmapPath := globals.ClientConfig.DialfsPath + "/bitmap.dat"
+
+	_, err := os.Stat(filePath)
+	_, err2 := os.Stat(bitmapPath)
+
+	if err == nil && err2 == nil {
+		return
+	}
+
+	data, err := os.Create(filePath)
+	check(err)
+
+	defer data.Close()
+
+	_, err = data.Write(fileData)
+	if err != nil {
+		log.Printf("Error creando el archivo %s", filePath)
+	}
+
+	bitmap, err := os.Create(bitmapPath)
+	check(err)
+
+	defer bitmap.Close()
+
+	_, err = bitmap.Write(bitmapData)
+	if err != nil {
+		log.Printf("Error creando el archivo %s", filePath)
+	}
+
+	log.Print("Se crearon los archivos de bloque y bitmap")
+}
+
 func IO_GEN_SLEEP(w http.ResponseWriter, r *http.Request) {
 
 	cantidad := r.PathValue("units")
@@ -489,8 +532,7 @@ func PathHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 type BodyFileRequest struct {
-	Interfaz      string `json:"interfaz"`
-	NombreArchivo string `json:"nombreArchivo"`
+	NombreArchivo string `json:"nombre_archivo"`
 }
 type Metadata struct {
 	InitialBlock int `json:"initial_block"`
@@ -505,12 +547,14 @@ func IO_FS_CREATE_Handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if request.Interfaz == "" || request.NombreArchivo == "" {
+	if request.NombreArchivo == "" {
 		http.Error(w, "Parámetros inválidos", http.StatusBadRequest)
 		return
 	}
+
 	log.Printf("\n\n\nSE ENTRO IOFSCREATE EN IO FUNCION")
-	err = CrearArchivoFS(request.Interfaz, request.NombreArchivo)
+
+	err = CrearArchivoFS(request.NombreArchivo)
 	if err != nil {
 		response := CreateFileResponse{
 			Status:  "Error",
@@ -528,7 +572,7 @@ func IO_FS_CREATE_Handler(w http.ResponseWriter, r *http.Request) {
 	}
 	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(response)
-	log.Printf("Archivo '%s' creado en la interfaz '%s'", request.NombreArchivo, request.Interfaz)
+	log.Printf("Archivo '%s' creado", request.NombreArchivo)
 }
 
 type CreateFileRequest struct {
@@ -549,12 +593,12 @@ func IO_FS_DELETE_Handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if request.Interfaz == "" || request.NombreArchivo == "" {
+	if request.NombreArchivo == "" {
 		http.Error(w, "Parámetros inválidos", http.StatusBadRequest)
 		return
 	}
 
-	err = EliminarArchivoFS(request.Interfaz, request.NombreArchivo)
+	err = EliminarArchivoFS(request.NombreArchivo)
 	if err != nil {
 		http.Error(w, fmt.Sprintf("Error al eliminar el archivo: %s", err.Error()), http.StatusInternalServerError)
 		return
@@ -562,7 +606,7 @@ func IO_FS_DELETE_Handler(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode("Archivo eliminado correctamente")
-	log.Printf("Archivo '%s' eliminado en la interfaz '%s'", request.NombreArchivo, request.Interfaz)
+	log.Printf("Archivo '%s' eliminado", request.NombreArchivo)
 }
 
 type ConfigResponse struct {
@@ -571,9 +615,9 @@ type ConfigResponse struct {
 	BlockSize  int    `json:"block_size"`
 }
 
-func CrearArchivoFS(interfaz, nombreArchivo string) error {
+func CrearArchivoFS(nombreArchivo string) error {
 	// Ruta al archivo de metadata
-	metadataPath := fmt.Sprintf("%s/%s", globals.ClientConfig.DialfsPath, nombreArchivo)
+	metadataPath := globals.ClientConfig.DialfsPath + "/" + nombreArchivo
 
 	// Verificar si el archivo ya existe
 	if _, err := os.Stat(metadataPath); err == nil {
@@ -623,9 +667,9 @@ func CrearArchivoFS(interfaz, nombreArchivo string) error {
 	}
 
 	// Crear el archivo de metadata
-	metadata := map[string]interface{}{
-		"initial_block": initialBlock,
-		"size":          0,
+	metadata := Metadata{
+		InitialBlock: initialBlock,
+		Size:         0,
 	}
 
 	metadataBytes, err := json.Marshal(metadata)
@@ -641,7 +685,7 @@ func CrearArchivoFS(interfaz, nombreArchivo string) error {
 	return nil
 }
 
-func EliminarArchivoFS(interfaz, nombreArchivo string) error {
+func EliminarArchivoFS(nombreArchivo string) error {
 	// Ruta al archivo de metadata
 	metadataPath := fmt.Sprintf("%s/%s", globals.ClientConfig.DialfsPath, nombreArchivo)
 

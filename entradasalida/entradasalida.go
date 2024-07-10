@@ -28,6 +28,10 @@ func main() {
 
 	utils.EstablecerConexion(nombreDispositivo, globals.ClientConfig.Port)
 
+	if globals.ClientConfig.Type == "DIALFS" {
+		utils.CrearEstructurasNecesariasFS()
+	}
+
 	http.HandleFunc("GET /sleep/{units}/{pid}", utils.IO_GEN_SLEEP)
 	http.HandleFunc("GET /read/{pid}/{tamaño}/{direccion}", utils.IO_STDIN_READ)
 	http.HandleFunc("GET /write/{pid}/{tamaño}/{direccion}", utils.IO_STDOUT_WRITE)
