@@ -69,12 +69,14 @@ var puertosDispSTDIN map[string]int
 var puertosDispSTDOUT map[string]int
 var puertosDispFSR map[string]int
 var puertosDispFSW map[string]int
+var puertosDispFS map[string]int
 var listaEsperaRecursos map[string][]int
 var listaEsperaGenericos map[string][]BodyIO
 var listaEsperaSTDIN map[string][]BodySTD
 var listaEsperaSTDOUT map[string][]BodySTD
 var listaEsperaFSW map[string][]BodyFS
 var listaEsperaFSR map[string][]BodyFS
+var listaEsperaFS map[string][]BodyFS
 
 type BodyIO struct {
 	PID        int
@@ -153,12 +155,14 @@ func InicializarVariables() {
 	puertosDispSTDOUT = make(map[string]int)
 	puertosDispFSR = make(map[string]int)
 	puertosDispFSW = make(map[string]int)
+	puertosDispFS = make(map[string]int)
 	listaEsperaRecursos = make(map[string][]int)
 	listaEsperaGenericos = make(map[string][]BodyIO)
 	listaEsperaSTDIN = make(map[string][]BodySTD)
 	listaEsperaSTDOUT = make(map[string][]BodySTD)
 	listaEsperaFSW = make(map[string][]BodyFS)
 	listaEsperaFSR = make(map[string][]BodyFS)
+	listaEsperaFS = make(map[string][]BodyFS)
 	for i := 0; i < len(globals.ClientConfig.Resources); i++ {
 		recursos[globals.ClientConfig.Resources[i]] = globals.ClientConfig.Resource_instances[i]
 	}
@@ -922,7 +926,7 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 		datosFS.PtrArchivo = request.PtrArchivo
 
 		dispositivoEscrituraFS.Lock()
-		puerto, ok := puertosDispFSW[request.Dispositivo]
+		puerto, ok := puertosDispFS[request.Dispositivo]
 
 		if ok && validarConexionIO(puerto) {
 			go agregarElemAListaFSW(request.Dispositivo, puerto, datosFS)
@@ -942,7 +946,7 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 		datosFS.PtrArchivo = request.PtrArchivo
 
 		dispositivoLecturaFS.Lock()
-		puerto, ok := puertosDispFSR[request.Dispositivo]
+		puerto, ok := puertosDispFS[request.Dispositivo]
 
 		if ok && validarConexionIO(puerto) {
 			go agregarElemAListaFSR(request.Dispositivo, puerto, datosFS)
@@ -983,16 +987,16 @@ func agregarElemAListaSTDOUT(dispositivo string, puerto int, datosSTD BodySTD) {
 
 func agregarElemAListaFSW(dispositivo string, puerto int, datosFS BodyFS) {
 	<-semProcesoBloqueado
-	listaEsperaFSW[dispositivo] = append(listaEsperaFSW[dispositivo], datosFS)
-	if len(listaEsperaFSW[dispositivo]) == 1 {
+	listaEsperaFS[dispositivo] = append(listaEsperaFS[dispositivo], datosFS)
+	if len(listaEsperaFS[dispositivo]) == 1 {
 		go WriteFS(dispositivo, puerto)
 	}
 }
 
 func agregarElemAListaFSR(dispositivo string, puerto int, datosFS BodyFS) {
 	<-semProcesoBloqueado
-	listaEsperaFSR[dispositivo] = append(listaEsperaFSR[dispositivo], datosFS)
-	if len(listaEsperaFSR[dispositivo]) == 1 {
+	listaEsperaFS[dispositivo] = append(listaEsperaFS[dispositivo], datosFS)
+	if len(listaEsperaFS[dispositivo]) == 1 {
 		go ReadFS(dispositivo, puerto)
 	}
 }
@@ -1162,8 +1166,8 @@ func Write(nombreDispositivo string, puerto int) {
 func WriteFS(nombreDispositivo string, puerto int) {
 	log.Printf("\n Entro al write fs (kernel)")
 	dispositivoEscrituraFS.Lock()
-	for len(listaEsperaFSW[nombreDispositivo]) > 0 {
-		proceso := listaEsperaFSW[nombreDispositivo][0]
+	for len(listaEsperaFS[nombreDispositivo]) > 0 {
+		proceso := listaEsperaFS[nombreDispositivo][0]
 		dispositivoEscrituraFS.Unlock()
 
 		mutexMapaEstados.Lock()
@@ -1171,7 +1175,7 @@ func WriteFS(nombreDispositivo string, puerto int) {
 		mutexMapaEstados.Unlock()
 		if !ok {
 			dispositivoEscritura.Lock()
-			listaEsperaFSW[nombreDispositivo] = listaEsperaFSW[nombreDispositivo][1:]
+			listaEsperaFS[nombreDispositivo] = listaEsperaFS[nombreDispositivo][1:]
 			continue
 		}
 
@@ -1205,14 +1209,14 @@ func WriteFS(nombreDispositivo string, puerto int) {
 			log.Printf("error enviando: %s", err.Error())
 			dispositivoEscrituraFS.Lock()
 
-			for _, elemento := range listaEsperaFSW[nombreDispositivo] {
+			for _, elemento := range listaEsperaFS[nombreDispositivo] {
 				mutexColaBlocked.Lock()
 				removerProcesoDeLista(&colaDeBlocked, elemento.PID, "LOST_CONNECTION_IO")
 				mutexColaBlocked.Unlock()
 			}
 
-			delete(listaEsperaFSW, nombreDispositivo)
-			delete(puertosDispFSW, nombreDispositivo)
+			delete(listaEsperaFS, nombreDispositivo)
+			delete(puertosDispFS, nombreDispositivo)
 			dispositivoEscrituraFS.Unlock()
 			agregarProcesosALaColaListos()
 			return
@@ -1224,7 +1228,7 @@ func WriteFS(nombreDispositivo string, puerto int) {
 		}
 
 		dispositivoEscrituraFS.Lock()
-		listaEsperaFSW[nombreDispositivo] = listaEsperaFSW[nombreDispositivo][1:]
+		listaEsperaFS[nombreDispositivo] = listaEsperaFS[nombreDispositivo][1:]
 		dispositivoEscrituraFS.Unlock()
 
 		rehabilitarProcesoBlocked(proceso.PID)
@@ -1237,8 +1241,8 @@ func WriteFS(nombreDispositivo string, puerto int) {
 func ReadFS(nombreDispositivo string, puerto int) {
 	log.Printf("\n Entro al read fs (kernel)")
 	dispositivoEscrituraFS.Lock()
-	for len(listaEsperaFSW[nombreDispositivo]) > 0 {
-		proceso := listaEsperaFSW[nombreDispositivo][0]
+	for len(listaEsperaFS[nombreDispositivo]) > 0 {
+		proceso := listaEsperaFS[nombreDispositivo][0]
 		dispositivoEscrituraFS.Unlock()
 
 		mutexMapaEstados.Lock()
@@ -1246,7 +1250,7 @@ func ReadFS(nombreDispositivo string, puerto int) {
 		mutexMapaEstados.Unlock()
 		if !ok {
 			dispositivoEscritura.Lock()
-			listaEsperaFSW[nombreDispositivo] = listaEsperaFSW[nombreDispositivo][1:]
+			listaEsperaFS[nombreDispositivo] = listaEsperaFS[nombreDispositivo][1:]
 			continue
 		}
 
@@ -1280,14 +1284,14 @@ func ReadFS(nombreDispositivo string, puerto int) {
 			log.Printf("error enviando: %s", err.Error())
 			dispositivoEscrituraFS.Lock()
 
-			for _, elemento := range listaEsperaFSW[nombreDispositivo] {
+			for _, elemento := range listaEsperaFS[nombreDispositivo] {
 				mutexColaBlocked.Lock()
 				removerProcesoDeLista(&colaDeBlocked, elemento.PID, "LOST_CONNECTION_IO")
 				mutexColaBlocked.Unlock()
 			}
 
-			delete(listaEsperaFSW, nombreDispositivo)
-			delete(puertosDispFSW, nombreDispositivo)
+			delete(listaEsperaFS, nombreDispositivo)
+			delete(puertosDispFS, nombreDispositivo)
 			dispositivoEscrituraFS.Unlock()
 			agregarProcesosALaColaListos()
 			return
@@ -1299,7 +1303,7 @@ func ReadFS(nombreDispositivo string, puerto int) {
 		}
 
 		dispositivoEscrituraFS.Lock()
-		listaEsperaFSW[nombreDispositivo] = listaEsperaFSW[nombreDispositivo][1:]
+		listaEsperaFS[nombreDispositivo] = listaEsperaFS[nombreDispositivo][1:]
 		dispositivoEscrituraFS.Unlock()
 
 		rehabilitarProcesoBlocked(proceso.PID)
@@ -1352,7 +1356,7 @@ func RegistrarIO(w http.ResponseWriter, r *http.Request) {
 	case "STDOUT":
 		puertosDispSTDOUT[request.Nombre] = request.Puerto
 	case "DIALFS":
-		puertosDispSTDOUT[request.Nombre] = request.Puerto
+		puertosDispFS[request.Nombre] = request.Puerto
 	}
 }
 
