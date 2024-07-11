@@ -35,6 +35,8 @@ type BodyRequestIO struct {
 	CategoriaDispositivo string `json:"categoria_dispositivo"`
 }
 
+var tablaSegmentacion map[int]string
+
 func IniciarConfiguracion(filePath string) *globals.Config {
 	var config *globals.Config
 	configFile, err := os.Open(filePath)
@@ -71,7 +73,33 @@ func check(e error) {
 	}
 }
 
+func CrearTablaSegmentacion() {
+	directory := globals.ClientConfig.DialfsPath // The current directory
+
+	files, err := os.Open(directory) //open the directory to read files in the directory
+	if err != nil {
+		fmt.Println("error opening directory:", err) //print error if directory is not opened
+		return
+	}
+	defer files.Close() //close the directory opened
+
+	fileInfos, err := files.Readdir(-1) //read the files from the directory
+	if err != nil {
+		fmt.Println("error reading directory:", err) //if directory is not read properly print error message
+		return
+	}
+	for _, fileInfos := range fileInfos {
+		if fileInfos.Name()[len(fileInfos.Name())-5:] == ".json" {
+			metadata := obtenerMetadata(globals.ClientConfig.DialfsPath + "/" + fileInfos.Name())
+			tablaSegmentacion[metadata.InitialBlock] = fileInfos.Name()[:len(fileInfos.Name())-5]
+		}
+	}
+}
+
 func CrearEstructurasNecesariasFS() {
+	tablaSegmentacion = make(map[int]string)
+	CrearTablaSegmentacion()
+
 	fileData := make([]byte, globals.ClientConfig.DialfsBlockSize*globals.ClientConfig.DialfsBlockCount)
 	bitmapData := make([]byte, globals.ClientConfig.DialfsBlockCount)
 
@@ -343,53 +371,306 @@ func IO_FS_DELETE(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Direccion: %s - Operación: IO_FS_CREATE", direccion)
 		log.Printf("El texto leido es: %s", respString)*/
 }
-func IO_FS_TRUNCATE(w http.ResponseWriter, r *http.Request) {
-	pid := r.PathValue("pid")
-	nombreArchivo := r.PathValue("nombre")
-	tamaño := r.PathValue("tamaño")
-	tamañoInt, err := strconv.Atoi(tamaño)
-	if err != nil {
-		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
-		return
-	}
-	pidInt, err := strconv.Atoi(pid)
-	if err != nil {
-		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
-		return
-	}
-	log.Printf("PID: %d - Truncar Archivo: %s Tamaño: %d", pidInt, nombreArchivo, tamañoInt)
-	/*
 
-		var requestBody = BodyEscritura{
-			PID:       pidInt,
-			Tamaño:    tamañoInt,
-			Direccion: direccionInt,
-		}
-		if err != nil {
-			http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
-			return
-		}
-
-		body, err := json.Marshal(requestBody)
-		url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/fscreate"
-		fmt.Print("URL: ", url)
-		resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
-		if err != nil {
-			log.Printf("error enviando: %s", err.Error())
-			fmt.Print("error enviando: %s", err.Error())
-			return
-		}
-		response := make([]byte, 0, tamañoInt)
-		err = json.NewDecoder(resp.Body).Decode(&response)
-		if err != nil {
-			log.Printf("Error al decodificar mensaje: %s\n", err.Error())
-			return
-		}
-		time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
-		respString := string(response)
-		log.Printf("Direccion: %s - Operación: IO_FS_CREATE", direccion)
-		log.Printf("El texto leido es: %s", respString)*/
+type BodyTruncate struct {
+	Pid           int    `json:"pid"`
+	NombreArchivo string `json:"nombre_archivo"`
+	Tamaño        int    `json:"tamaño"`
 }
+
+func ObtenerBitmap() []byte {
+	bitmapFile, err := os.OpenFile(globals.ClientConfig.DialfsPath+"/bitmap.dat", os.O_RDWR, 0644)
+	if err != nil {
+		log.Printf("no se pudo abrir el archivo de bitmap: %s", err.Error())
+	}
+	defer bitmapFile.Close()
+
+	// Leer el bitmap
+	bitmap := make([]byte, globals.ClientConfig.DialfsBlockCount)
+	_, err = bitmapFile.Read(bitmap)
+	if err != nil {
+		log.Printf("no se pudo leer el bitmap: %s", err.Error())
+	}
+
+	return bitmap
+}
+
+func ModificarBitmap(bitmap []byte) {
+	bitmapFile, err := os.OpenFile(globals.ClientConfig.DialfsPath+"/bitmap.dat", os.O_RDWR, 0644)
+	if err != nil {
+		log.Printf("no se pudo abrir el archivo de bitmap: %s", err.Error())
+	}
+	defer bitmapFile.Close()
+
+	_, err = bitmapFile.WriteAt(bitmap, 0)
+	if err != nil {
+		log.Printf("no se pudo actualizar el bitmap: %s", err.Error())
+	}
+}
+
+func OcuparEspacioLibreContiguo(bitmap []byte, bloquesOcupados int, bloquesNecesarios int, metadataPath string) []byte {
+	metadata := obtenerMetadata(metadataPath)
+
+	bloquesAOcupar := bloquesNecesarios - bloquesOcupados
+
+	espacioContiguoLibre := true
+	for i := 0; i < bloquesAOcupar; i++ {
+		if metadata.InitialBlock+bloquesOcupados+i == globals.ClientConfig.DialfsBlockCount {
+			espacioContiguoLibre = false
+			break
+		}
+		if bitmap[metadata.InitialBlock+bloquesOcupados+i] != 0 {
+			espacioContiguoLibre = false
+			break
+		}
+	}
+
+	if espacioContiguoLibre {
+		for i := 0; i < bloquesAOcupar; i++ {
+			bitmap[metadata.InitialBlock+bloquesOcupados+i] = 1
+		}
+		return bitmap
+	} else {
+		bitmapCompactado := Compactar(bitmap, metadata)
+		return OcuparEspacioLibreContiguo(bitmapCompactado, bloquesOcupados, bloquesNecesarios, metadataPath)
+	}
+}
+
+func Compactar(bitmap []byte, metadata Metadata) []byte {
+	contadorEspaciosLibres := 0
+	inicioEspacioLibre := -1
+	cadenaDe0 := false
+
+	bloquesOcupados := metadata.Size / globals.ClientConfig.DialfsBlockSize
+	if bloquesOcupados == 0 || metadata.Size%globals.ClientConfig.DialfsBlockSize != 0 {
+		bloquesOcupados++
+	}
+
+	for i := 0; i < metadata.InitialBlock+bloquesOcupados+1; i++ {
+		if i == metadata.InitialBlock+bloquesOcupados {
+			bitmap = liberarBloques(bitmap, i, contadorEspaciosLibres)
+			actualizarTablaSegmentacion(inicioEspacioLibre, i, contadorEspaciosLibres)
+		} else if bitmap[i] == 0 && !cadenaDe0 {
+			cadenaDe0 = true
+
+			if inicioEspacioLibre == -1 {
+				inicioEspacioLibre = i
+			}
+
+			actualizarTablaSegmentacion(inicioEspacioLibre, i, contadorEspaciosLibres)
+			inicioEspacioLibre = i - contadorEspaciosLibres
+			contadorEspaciosLibres++
+			bitmap[i] = 1
+		} else if bitmap[i] == 1 {
+			cadenaDe0 = false
+		} else {
+			contadorEspaciosLibres++
+			bitmap[i] = 1
+		}
+	}
+
+	contadorEspaciosLibres = 0
+	inicioEspacioLibre = -1
+
+	for i := globals.ClientConfig.DialfsBlockCount - 1; i > metadata.InitialBlock+bloquesOcupados-2; i-- {
+		if i == metadata.InitialBlock+bloquesOcupados-1 {
+			bitmap = liberarBloques(bitmap, i, -contadorEspaciosLibres)
+			actualizarTablaSegmentacion(inicioEspacioLibre, i, -contadorEspaciosLibres)
+		} else if bitmap[i] == 0 && !cadenaDe0 {
+			cadenaDe0 = true
+
+			if inicioEspacioLibre == -1 {
+				inicioEspacioLibre = i
+			}
+
+			actualizarTablaSegmentacion(inicioEspacioLibre, i, -contadorEspaciosLibres)
+			inicioEspacioLibre = i + contadorEspaciosLibres
+			contadorEspaciosLibres++
+			bitmap[i] = 1
+		} else if bitmap[i] == 1 {
+			cadenaDe0 = false
+		} else {
+			contadorEspaciosLibres++
+			bitmap[i] = 1
+		}
+	}
+
+	return bitmap
+}
+
+func actualizarTablaSegmentacion(bloqueInicial int, bloqueFinal int, desplazamiento int) {
+	bloquesFile, err := os.OpenFile(globals.ClientConfig.DialfsPath+"/bloques.dat", os.O_RDWR, 0644)
+	if err != nil {
+		log.Printf("no se pudo abrir el archivo de bloques: %s", err.Error())
+	}
+	defer bloquesFile.Close()
+
+	if desplazamiento > 0 {
+		for i := bloqueInicial; i < bloqueFinal; i++ {
+			archivo, ok := tablaSegmentacion[i]
+			if ok {
+				metadata := obtenerMetadata(globals.ClientConfig.DialfsPath + "/" + archivo + ".json")
+
+				data := make([]byte, metadata.Size)
+				_, err = bloquesFile.ReadAt(data, int64(metadata.InitialBlock)*int64(globals.ClientConfig.DialfsBlockSize))
+				if err != nil {
+					log.Printf("no se pudo leer el archivo de bloques: %s", err.Error())
+				}
+
+				metadata.InitialBlock -= desplazamiento
+
+				_, err = bloquesFile.WriteAt(data, int64(metadata.InitialBlock)*int64(globals.ClientConfig.DialfsBlockSize))
+				if err != nil {
+					log.Printf("no se pudo actualizar el bitmap: %s", err.Error())
+				}
+
+				delete(tablaSegmentacion, i)
+				tablaSegmentacion[metadata.InitialBlock] = archivo
+
+				metadataBytes, err := json.Marshal(metadata)
+				if err != nil {
+					log.Printf("no se pudo codificar la metadata: %s", err.Error())
+				}
+
+				err = os.WriteFile(globals.ClientConfig.DialfsPath+"/"+archivo+".json", metadataBytes, 0644)
+				if err != nil {
+					log.Printf("no se pudo crear el archivo de metadata: %s", err.Error())
+				}
+			}
+		}
+	} else {
+		for i := bloqueInicial; i > bloqueFinal; i-- {
+			archivo, ok := tablaSegmentacion[i]
+			if ok {
+				metadata := obtenerMetadata(globals.ClientConfig.DialfsPath + "/" + archivo + ".json")
+
+				data := make([]byte, metadata.Size)
+				_, err = bloquesFile.ReadAt(data, int64(metadata.InitialBlock)*int64(globals.ClientConfig.DialfsBlockSize))
+				if err != nil {
+					log.Printf("no se pudo leer el archivo de bloques: %s", err.Error())
+				}
+
+				metadata.InitialBlock -= desplazamiento
+
+				_, err = bloquesFile.WriteAt(data, int64(metadata.InitialBlock)*int64(globals.ClientConfig.DialfsBlockSize))
+				if err != nil {
+					log.Printf("no se pudo actualizar el bitmap: %s", err.Error())
+				}
+
+				delete(tablaSegmentacion, i)
+				tablaSegmentacion[metadata.InitialBlock] = archivo
+
+				metadataBytes, err := json.Marshal(metadata)
+				if err != nil {
+					log.Printf("no se pudo codificar la metadata: %s", err.Error())
+				}
+
+				err = os.WriteFile(globals.ClientConfig.DialfsPath+"/"+archivo+".json", metadataBytes, 0644)
+				if err != nil {
+					log.Printf("no se pudo crear el archivo de metadata: %s", err.Error())
+				}
+			}
+		}
+	}
+}
+
+func liberarBloques(bitmap []byte, puntero int, cantidad int) []byte {
+	if cantidad > 0 {
+		for i := 0; i < cantidad && puntero-(i+1) > 0; i++ {
+			bitmap[puntero-(i+1)] = 0
+		}
+	} else {
+		for i := 0; i > cantidad && puntero-(i-1) < globals.ClientConfig.DialfsBlockCount; i-- {
+			bitmap[puntero-(i-1)] = 0
+		}
+	}
+	fmt.Printf("Puntero: %d - Cantidad: %d", puntero, cantidad)
+	return bitmap
+}
+
+func IO_FS_TRUNCATE(w http.ResponseWriter, r *http.Request) {
+	var request BodyTruncate
+	err := json.NewDecoder(r.Body).Decode(&request)
+	if err != nil {
+		http.Error(w, "Error al decodificar la solicitud", http.StatusBadRequest)
+		return
+	}
+
+	metadataPath := globals.ClientConfig.DialfsPath + "/" + request.NombreArchivo + ".json"
+
+	if _, err := os.Stat(metadataPath); err != nil {
+		log.Printf("El archivo: %s no existe", request.NombreArchivo)
+		return
+	}
+
+	log.Printf("PID: %d - Truncar Archivo: %s Tamaño: %d", request.Pid, request.NombreArchivo, request.Tamaño)
+
+	metadata := obtenerMetadata(metadataPath)
+
+	bitmap := ObtenerBitmap()
+
+	bloquesOcupados := metadata.Size / globals.ClientConfig.DialfsBlockSize
+	if bloquesOcupados == 0 || metadata.Size%globals.ClientConfig.DialfsBlockSize != 0 {
+		bloquesOcupados++
+	}
+
+	bloquesNecesarios := request.Tamaño / globals.ClientConfig.DialfsBlockSize
+	if bloquesNecesarios == 0 || request.Tamaño%globals.ClientConfig.DialfsBlockSize != 0 {
+		bloquesNecesarios++
+	}
+
+	bloquesLibres := 0
+
+	for i := 0; i < globals.ClientConfig.DialfsBlockCount; i++ {
+		if bitmap[i] == 0 {
+			bloquesLibres++
+		}
+	}
+
+	if bloquesLibres < bloquesNecesarios-bloquesOcupados {
+		log.Printf("No hay bloques suficientes para el archivo")
+		w.WriteHeader(http.StatusBadRequest)
+		return
+	}
+
+	if bloquesNecesarios-bloquesOcupados >= 0 {
+		bitmap = OcuparEspacioLibreContiguo(bitmap, bloquesOcupados, bloquesNecesarios, metadataPath)
+	} else {
+		bitmap = liberarBloques(bitmap, metadata.InitialBlock+bloquesOcupados, bloquesOcupados-bloquesNecesarios)
+	}
+
+	log.Printf("\n%b", bitmap)
+
+	metadata = obtenerMetadata(globals.ClientConfig.DialfsPath + "/" + request.NombreArchivo + ".json")
+	metadata.Size = request.Tamaño
+
+	metadataBytes, err := json.Marshal(metadata)
+	if err != nil {
+		log.Printf("no se pudo codificar la metadata: %s", err.Error())
+	}
+
+	err = os.WriteFile(globals.ClientConfig.DialfsPath+"/"+request.NombreArchivo+".json", metadataBytes, 0644)
+	if err != nil {
+		log.Printf("no se pudo crear el archivo de metadata: %s", err.Error())
+	}
+
+	ModificarBitmap(bitmap)
+}
+
+func obtenerMetadata(filePath string) Metadata {
+	var metadata Metadata
+	metadataFile, err := os.Open(filePath)
+	if err != nil {
+		log.Fatal(err.Error())
+	}
+	defer metadataFile.Close()
+
+	jsonParser := json.NewDecoder(metadataFile)
+	jsonParser.Decode(&metadata)
+
+	return metadata
+}
+
 func IO_FS_WRITE(w http.ResponseWriter, r *http.Request) {
 	pid := r.PathValue("pid")
 	nombreArchivo := r.PathValue("nombre")
@@ -617,7 +898,7 @@ type ConfigResponse struct {
 
 func CrearArchivoFS(nombreArchivo string) error {
 	// Ruta al archivo de metadata
-	metadataPath := globals.ClientConfig.DialfsPath + "/" + nombreArchivo
+	metadataPath := globals.ClientConfig.DialfsPath + "/" + nombreArchivo + ".json"
 
 	// Verificar si el archivo ya existe
 	if _, err := os.Stat(metadataPath); err == nil {

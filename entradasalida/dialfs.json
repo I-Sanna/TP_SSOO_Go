@@ -8,5 +8,5 @@
     "port_memory":8002,
     "dialfs_path": "/home/utnso/dialfs",
     "dialfs_block_size": 64,
-    "dialfs_block_count": 1024   
+    "dialfs_block_count": 16   
 }
