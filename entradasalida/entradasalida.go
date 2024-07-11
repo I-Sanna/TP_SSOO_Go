@@ -33,11 +33,10 @@ func main() {
 	}
 
 	http.HandleFunc("GET /sleep/{units}/{pid}", utils.IO_GEN_SLEEP)
+
 	http.HandleFunc("GET /read/{pid}/{tamaño}/{direccion}", utils.IO_STDIN_READ)
 	http.HandleFunc("GET /write/{pid}/{tamaño}/{direccion}", utils.IO_STDOUT_WRITE)
 
-	http.HandleFunc("GET /fscreate/{pid}/{nombre}", utils.IO_FS_CREATE)
-	http.HandleFunc("GET /fsdelete/{pid}/{nombre}", utils.IO_FS_DELETE)
 	http.HandleFunc("POST /fs/truncate", utils.IO_FS_TRUNCATE)
 	http.HandleFunc("POST /fs/write", utils.IO_FS_WRITE)
 	http.HandleFunc("POST /fs/read", utils.IO_FS_READ)

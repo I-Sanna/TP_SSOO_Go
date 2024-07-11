@@ -791,7 +791,7 @@ type Metadata struct {
 
 type CreateFileRequest struct {
 	Interfaz      string `json:"interfaz"`
-	NombreArchivo string `json:"nombreArchivo"`
+	NombreArchivo string `json:"nombre_archivo"`
 }
 
 type ConfigResponse struct {
@@ -801,7 +801,7 @@ type ConfigResponse struct {
 }
 
 type BodyFileRequest struct {
-	NombreArchivo string `json:"nombreArchivo"`
+	NombreArchivo string `json:"nombre_archivo"`
 }
 
 type FileResponse struct {
@@ -970,13 +970,15 @@ func CrearArchivoFS(nombreArchivo string) error {
 		return fmt.Errorf("no se pudo crear el archivo de metadata: %s", err.Error())
 	}
 
+	tablaSegmentacion[initialBlock] = nombreArchivo
+
 	log.Printf("Archivo de metadata '%s' creado con éxito", nombreArchivo)
 	return nil
 }
 
 func EliminarArchivoFS(nombreArchivo string) error {
 	// Ruta al archivo de metadata
-	metadataPath := fmt.Sprintf("%s/%s", globals.ClientConfig.DialfsPath, nombreArchivo)
+	metadataPath := fmt.Sprintf("%s/%s.json", globals.ClientConfig.DialfsPath, nombreArchivo)
 
 	// Leer el archivo de metadata
 	metadataBytes, err := os.ReadFile(metadataPath)
@@ -997,9 +999,18 @@ func EliminarArchivoFS(nombreArchivo string) error {
 		return fmt.Errorf("error al leer el bitmap: %v", err)
 	}
 
+	bloquesOcupados := metadata.Size / globals.ClientConfig.DialfsBlockSize
+	if bloquesOcupados == 0 || metadata.Size%globals.ClientConfig.DialfsBlockSize != 0 {
+		bloquesOcupados++
+	}
+
 	// Marcar el bloque como libre en el bitmap
 	initialBlock := metadata.InitialBlock
-	bitmap[initialBlock] = 0
+	for i := 0; i < bloquesOcupados; i++ {
+		bitmap[initialBlock+i] = 0
+	}
+
+	fmt.Printf("%b", bitmap)
 
 	err = os.WriteFile(bitmapPath, bitmap, 0644)
 	if err != nil {
@@ -1011,6 +1022,8 @@ func EliminarArchivoFS(nombreArchivo string) error {
 	if err != nil {
 		return fmt.Errorf("error al eliminar el archivo de metadata: %v", err)
 	}
+
+	delete(tablaSegmentacion, initialBlock)
 
 	return nil
 }

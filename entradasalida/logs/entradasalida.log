@@ -2462,3 +2462,31 @@ Configuracion cargada con exito!
 2024/07/10 23:42:01 Se recibió una solicitud en IO_FS_DELETE_Handler
 2024/07/10 23:42:01 Intentando eliminar archivo con nombre: notas.txt
 2024/07/10 23:42:01 Archivo 'notas.txt' eliminado
+2024/07/11 14:49:33 
+Configuracion cargada con exito!
+2024/07/11 14:50:22 PID: 0 - Truncar Archivo: leer1.txt Tamaño: 128
+2024/07/11 14:50:22 
+[1 1 1 0 0 0 0 0 1 0 0 0 0 0 0 0]
+2024/07/11 14:50:39 Se recibió una solicitud en IO_FS_DELETE_Handler
+2024/07/11 14:50:39 Parámetros inválidos: nombreArchivo está vacío
+2024/07/11 14:51:35 
+Configuracion cargada con exito!
+2024/07/11 14:51:43 Se recibió una solicitud en IO_FS_DELETE_Handler
+2024/07/11 14:51:43 Intentando eliminar archivo con nombre: leer1.txt
+2024/07/11 14:51:43 Error al eliminar archivo: error al leer la metadata del archivo: open /home/utnso/dialfs/leer1.txt: no such file or directory
+2024/07/11 14:56:42 
+Configuracion cargada con exito!
+2024/07/11 14:56:49 PID: 0 - Truncar Archivo: leer1.txt Tamaño: 128
+2024/07/11 14:56:49 
+[1 1 1 0 0 0 0 0 1 0 0 0 0 0 0 0]
+2024/07/11 14:56:58 Se recibió una solicitud en IO_FS_DELETE_Handler
+2024/07/11 14:56:58 Intentando eliminar archivo con nombre: leer1.txt
+2024/07/11 14:56:58 Archivo 'leer1.txt' eliminado
+2024/07/11 14:58:47 
+Configuracion cargada con exito!
+2024/07/11 14:59:10 PID: 0 - Truncar Archivo: leer2.txt Tamaño: 256
+2024/07/11 14:59:10 
+[0 1 1 1 1 1 0 0 1 0 0 0 0 0 0 0]
+2024/07/11 14:59:28 Se recibió una solicitud en IO_FS_DELETE_Handler
+2024/07/11 14:59:28 Intentando eliminar archivo con nombre: leer2.txt
+2024/07/11 14:59:28 Archivo 'leer2.txt' eliminado
