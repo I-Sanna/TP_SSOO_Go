@@ -12,6 +12,7 @@ import (
 	"os"
 	"strconv"
 	"time"
+	"unsafe"
 )
 
 type BodyRequestTime struct {
@@ -23,7 +24,13 @@ type BodyEscritura struct {
 	Tamaño    int    `json:"tamaño"`
 	Direccion int    `json:"direccion"`
 }
-
+type BodyRequestFS struct {
+	PID        int    `json:"pid"`
+	Archivo    string `json:"archivo"`
+	Tamaño     int    `json:"tamaño"`
+	Direccion  int    `json:"direccion"`
+	PtrArchivo int    `json:"ptrarchivo"`
+}
 type BodyRequest struct {
 	PID       int `json:"pid"`
 	Tamaño    int `json:"tamaño"`
@@ -265,7 +272,7 @@ func IO_STDOUT_WRITE(w http.ResponseWriter, r *http.Request) {
 
 	body, err := json.Marshal(requestBody)
 	if err != nil {
-		log.Printf("Error guardando el texto ingresado %v", err)
+		log.Printf("Error al codificar la solicitud %v", err)
 		return
 	}
 	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/leer"
@@ -288,7 +295,6 @@ func IO_STDOUT_WRITE(w http.ResponseWriter, r *http.Request) {
 	log.Printf("El texto leido es: %s", respString)
 }
 
-// DIAL FS
 func IO_FS_CREATE(w http.ResponseWriter, r *http.Request) {
 	pid := r.PathValue("pid")
 	nombreArchivo := r.PathValue("nombre")
@@ -298,37 +304,6 @@ func IO_FS_CREATE(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	log.Printf("PID: %d - Crear Archivo: %s", pidInt, nombreArchivo)
-	/*
-
-		var requestBody = BodyEscritura{
-			PID:       pidInt,
-			Tamaño:    tamañoInt,
-			Direccion: direccionInt,
-		}
-		if err != nil {
-			http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
-			return
-		}
-
-		body, err := json.Marshal(requestBody)
-		url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/fscreate"
-		fmt.Print("URL: ", url)
-		resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
-		if err != nil {
-			log.Printf("error enviando: %s", err.Error())
-			fmt.Print("error enviando: %s", err.Error())
-			return
-		}
-		response := make([]byte, 0, tamañoInt)
-		err = json.NewDecoder(resp.Body).Decode(&response)
-		if err != nil {
-			log.Printf("Error al decodificar mensaje: %s\n", err.Error())
-			return
-		}
-		time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
-		respString := string(response)
-		log.Printf("Direccion: %s - Operación: IO_FS_CREATE", direccion)
-		log.Printf("El texto leido es: %s", respString)*/
 }
 func IO_FS_DELETE(w http.ResponseWriter, r *http.Request) {
 	pid := r.PathValue("pid")
@@ -339,37 +314,6 @@ func IO_FS_DELETE(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	log.Printf("PID: %d - Eliminar Archivo: %s", pidInt, nombreArchivo)
-	/*
-
-		var requestBody = BodyEscritura{
-			PID:       pidInt,
-			Tamaño:    tamañoInt,
-			Direccion: direccionInt,
-		}
-		if err != nil {
-			http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
-			return
-		}
-
-		body, err := json.Marshal(requestBody)
-		url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/fscreate"
-		fmt.Print("URL: ", url)
-		resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
-		if err != nil {
-			log.Printf("error enviando: %s", err.Error())
-			fmt.Print("error enviando: %s", err.Error())
-			return
-		}
-		response := make([]byte, 0, tamañoInt)
-		err = json.NewDecoder(resp.Body).Decode(&response)
-		if err != nil {
-			log.Printf("Error al decodificar mensaje: %s\n", err.Error())
-			return
-		}
-		time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
-		respString := string(response)
-		log.Printf("Direccion: %s - Operación: IO_FS_CREATE", direccion)
-		log.Printf("El texto leido es: %s", respString)*/
 }
 
 type BodyTruncate struct {
@@ -671,102 +615,148 @@ func obtenerMetadata(filePath string) Metadata {
 	return metadata
 }
 
-func IO_FS_WRITE(w http.ResponseWriter, r *http.Request) {
-	pid := r.PathValue("pid")
-	nombreArchivo := r.PathValue("nombre")
-	tamaño := r.PathValue("tamaño")
-	//Ver puntero si lo recibe o lo busca, y si lo trabaja como %s o %d
-	puntero := r.PathValue("puntero")
-	tamañoInt, err := strconv.Atoi(tamaño)
+func writeToFile(filename string, ptr unsafe.Pointer, size int) error {
+	file, err := os.OpenFile(filename, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0644)
 	if err != nil {
-		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
-		return
+		return err
 	}
-	pidInt, err := strconv.Atoi(pid)
+	defer file.Close()
+
+	data := (*[1 << 30]byte)(ptr)[:size:size]
+
+	_, err = file.Write(data)
 	if err != nil {
-		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
-		return
+		return err
 	}
-	log.Printf("PID: %d - Leer Archivo: %s - Tamaño a Leer: %d - Puntero Archivo: %s", pidInt, nombreArchivo, tamañoInt, puntero)
-	/*
 
-		var requestBody = BodyEscritura{
-			PID:       pidInt,
-			Tamaño:    tamañoInt,
-			Direccion: direccionInt,
-		}
-		if err != nil {
-			http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
-			return
-		}
-
-		body, err := json.Marshal(requestBody)
-		url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/fscreate"
-		fmt.Print("URL: ", url)
-		resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
-		if err != nil {
-			log.Printf("error enviando: %s", err.Error())
-			fmt.Print("error enviando: %s", err.Error())
-			return
-		}
-		response := make([]byte, 0, tamañoInt)
-		err = json.NewDecoder(resp.Body).Decode(&response)
-		if err != nil {
-			log.Printf("Error al decodificar mensaje: %s\n", err.Error())
-			return
-		}
-		time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
-		respString := string(response)
-		log.Printf("Direccion: %s - Operación: IO_FS_CREATE", direccion)
-		log.Printf("El texto leido es: %s", respString)*/
+	return nil
 }
-func IO_FS_READ(w http.ResponseWriter, r *http.Request) {
-	pid := r.PathValue("pid")
-	nombreArchivo := r.PathValue("nombre")
-	tamaño := r.PathValue("tamaño")
-	//Ver puntero si lo recibe o lo busca, y si lo trabaja como %s o %d
-	puntero := r.PathValue("puntero")
-	tamañoInt, err := strconv.Atoi(tamaño)
+func readFromFile(filename string, ptr unsafe.Pointer, size int) error {
+	file, err := os.Open(filename)
 	if err != nil {
-		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
-		return
+		log.Printf("Error al intentar abrir el archivo")
+		return err
 	}
-	pidInt, err := strconv.Atoi(pid)
-	if err != nil {
-		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
-		return
-	}
-	log.Printf("PID: %d - Escribir Archivo: %s - Tamaño a Escribir: %d - Puntero Archivo: %s", pidInt, nombreArchivo, tamañoInt, puntero)
-	/*
-		var requestBody = BodyEscritura{
-			PID:       pidInt,
-			Tamaño:    tamañoInt,
-			Direccion: direccionInt,
-		}
-		if err != nil {
-			http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
-			return
-		}
+	defer file.Close()
 
-		body, err := json.Marshal(requestBody)
-		url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/fscreate"
-		fmt.Print("URL: ", url)
-		resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
-		if err != nil {
-			log.Printf("error enviando: %s", err.Error())
-			fmt.Print("error enviando: %s", err.Error())
-			return
-		}
-		response := make([]byte, 0, tamañoInt)
-		err = json.NewDecoder(resp.Body).Decode(&response)
-		if err != nil {
-			log.Printf("Error al decodificar mensaje: %s\n", err.Error())
-			return
-		}
-		time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
-		respString := string(response)
-		log.Printf("Direccion: %s - Operación: IO_FS_CREATE", direccion)
-		log.Printf("El texto leido es: %s", respString)*/
+	data := (*[1 << 30]byte)(ptr)[:size:size]
+
+	_, err = file.Read(data)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func IO_FS_WRITE(w http.ResponseWriter, r *http.Request) {
+	var request BodyRequestFS
+	err := json.NewDecoder(r.Body).Decode(&request)
+	if err != nil {
+		http.Error(w, "Error al decodificar la solicitud", http.StatusBadRequest)
+		return
+	}
+
+	if request.Archivo == "" {
+		http.Error(w, "Parámetros inválidos", http.StatusBadRequest)
+		return
+	}
+
+	var requestBody = BodyEscritura{
+		PID:       request.PID,
+		Tamaño:    request.Tamaño,
+		Direccion: request.Direccion,
+	}
+
+	body, err := json.Marshal(requestBody)
+	if err != nil {
+		log.Printf("Error al codificar la solicitud %v", err)
+		return
+	}
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/leer"
+	fmt.Print("URL: ", url)
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
+	if err != nil {
+		log.Printf("error enviando: %s", err.Error())
+		return
+	}
+	response := make([]byte, 0, request.Tamaño)
+	err = json.NewDecoder(resp.Body).Decode(&response)
+	if err != nil {
+		log.Printf("Error al decodificar mensaje: %s\n", err.Error())
+		return
+	}
+	time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
+	respString := string(response)
+
+	log.Printf("El texto leido es: %s", respString)
+	//Ahora debo escribirlo en el archivo correspondiente desde la posición indicada por ptrArchivo
+	writeToFile(request.Archivo, unsafe.Pointer(&request.PtrArchivo), request.Tamaño)
+	//Consume una unidad de trabajo
+	time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
+	log.Printf("PID: %d - Operación: IO_FS_WRITE", request.PID)
+	log.Printf("PID: %d - Escribir Archivo: %s - Tamaño a Escribir:  %d - Puntero Archivo: %d", request.PID, request.Archivo, request.Tamaño, request.PtrArchivo)
+	//log.Printf("PID: %d - Leer direccion de memoria: %d - Tamaño a Leer: %d - Archivo a escribir: %s- Puntero Archivo: %d", request.PID, request.Direccion, request.Tamaño, request.Archivo, request.PtrArchivo)
+}
+
+func IO_FS_READ(w http.ResponseWriter, r *http.Request) {
+	var request BodyRequestFS
+	err := json.NewDecoder(r.Body).Decode(&request)
+	if err != nil {
+		http.Error(w, "Error al decodificar la solicitud", http.StatusBadRequest)
+		return
+	}
+
+	if request.Archivo == "" {
+		http.Error(w, "Parámetros inválidos", http.StatusBadRequest)
+		return
+	}
+	//Leer del archivo desde el ptr indicado
+	textoLeido := make([]byte, request.Tamaño)
+	err2 := readFromFile(request.Archivo, unsafe.Pointer(&request.PtrArchivo), request.Tamaño)
+	if err2 != nil {
+		log.Printf("Error leyendo del archivo")
+	}
+	log.Printf("El texto leido es: %s", string(textoLeido))
+	//Solicitar a memoria guardar lo leído en la direccion indicada
+	fmt.Print("\nGuardando texto en memoria... ")
+	var requestBody = BodyEscritura{
+		PID:       request.PID,
+		Info:      textoLeido,
+		Tamaño:    request.Tamaño,
+		Direccion: request.Direccion,
+	}
+	body, err := json.Marshal(requestBody)
+	if err != nil {
+		log.Printf("Error guardando el texto ingresado %v", err)
+		return
+	}
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/escribir"
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
+
+	if err != nil {
+		log.Printf("Error guardando el texto ingresado %v", err)
+		return
+	}
+	if resp.StatusCode != http.StatusOK {
+		log.Printf("Error al guardar el mensaje %s", resp.Status)
+		return
+	} else {
+		log.Printf("Se guardo correctamente el mensaje")
+	}
+	respuesta, err := json.Marshal("OK")
+	if err != nil {
+		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
+	w.Write(respuesta)
+	//Consume una unidad de trabajo
+	time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
+	log.Printf("PID: %d - Operación: IO_FS_WRITE", request.PID)
+	log.Printf("PID: %d - Leer Archivo: %s - Tamaño a Leer: %d - Puntero Archivo: %d ", request.PID, request.Archivo, request.Tamaño, request.PtrArchivo)
+	//log.Printf("PID: %d - Leer Archivo: %s - Tamaño a Leer: %d - Puntero Archivo: %d - Direccion de memoria a escribir: %d", request.PID, request.Archivo, request.Tamaño, request.PtrArchivo, request.Direccion)
 }
 
 func EstablecerConexion(nombre string, puerto int) {
@@ -794,50 +784,54 @@ func ValidarConexion(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 }
 
-func PathHandler(w http.ResponseWriter, r *http.Request) {
-	configResponse := map[string]interface{}{
-		"path":       globals.ClientConfig.DialfsPath,
-		"tam_block":  globals.ClientConfig.DialfsBlockSize,
-		"cant_block": globals.ClientConfig.DialfsBlockCount,
-	}
-
-	response, err := json.Marshal(configResponse)
-	if err != nil {
-		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
-		return
-	}
-
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusOK)
-	w.Write(response)
-}
-
-type BodyFileRequest struct {
-	NombreArchivo string `json:"nombre_archivo"`
-}
 type Metadata struct {
 	InitialBlock int `json:"initial_block"`
 	Size         int `json:"size"`
 }
 
+type CreateFileRequest struct {
+	Interfaz      string `json:"interfaz"`
+	NombreArchivo string `json:"nombreArchivo"`
+}
+
+type ConfigResponse struct {
+	Path       string `json:"path"`
+	BlockCount int    `json:"block_count"`
+	BlockSize  int    `json:"block_size"`
+}
+
+type BodyFileRequest struct {
+	NombreArchivo string `json:"nombreArchivo"`
+}
+
+type FileResponse struct {
+	Status  string `json:"status"`
+	Message string `json:"message"`
+}
+
 func IO_FS_CREATE_Handler(w http.ResponseWriter, r *http.Request) {
+	log.Printf("Se recibió una solicitud en IO_FS_CREATE_Handler")
+
 	var request BodyFileRequest
 	err := json.NewDecoder(r.Body).Decode(&request)
 	if err != nil {
+		log.Printf("Error al decodificar la solicitud: %v", err)
 		http.Error(w, "Error al decodificar la solicitud", http.StatusBadRequest)
 		return
 	}
 
 	if request.NombreArchivo == "" {
+		log.Printf("Parámetros inválidos: nombreArchivo está vacío")
 		http.Error(w, "Parámetros inválidos", http.StatusBadRequest)
 		return
 	}
 
-	log.Printf("\n\n\nSE ENTRO IOFSCREATE EN IO FUNCION")
+	log.Printf("Intentando crear archivo con nombre: %s", request.NombreArchivo)
 
 	err = CrearArchivoFS(request.NombreArchivo)
 	if err != nil {
-		response := CreateFileResponse{
+		log.Printf("Error al crear archivo: %v", err)
+		response := FileResponse{
 			Status:  "Error",
 			Message: err.Error(),
 		}
@@ -847,7 +841,7 @@ func IO_FS_CREATE_Handler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Responder con éxito
-	response := CreateFileResponse{
+	response := FileResponse{
 		Status:  "OK",
 		Message: "Archivo creado correctamente",
 	}
@@ -856,47 +850,50 @@ func IO_FS_CREATE_Handler(w http.ResponseWriter, r *http.Request) {
 	log.Printf("Archivo '%s' creado", request.NombreArchivo)
 }
 
-type CreateFileRequest struct {
-	Interfaz      string `json:"interfaz"`
-	NombreArchivo string `json:"nombreArchivo"`
-}
-
-type CreateFileResponse struct {
-	Status  string `json:"status"`
-	Message string `json:"message"`
-}
-
 func IO_FS_DELETE_Handler(w http.ResponseWriter, r *http.Request) {
+	log.Printf("Se recibió una solicitud en IO_FS_DELETE_Handler")
+
 	var request BodyFileRequest
 	err := json.NewDecoder(r.Body).Decode(&request)
 	if err != nil {
+		log.Printf("Error al decodificar la solicitud: %v", err)
 		http.Error(w, "Error al decodificar la solicitud", http.StatusBadRequest)
 		return
 	}
 
 	if request.NombreArchivo == "" {
+		log.Printf("Parámetros inválidos: nombreArchivo está vacío")
 		http.Error(w, "Parámetros inválidos", http.StatusBadRequest)
 		return
 	}
 
+	log.Printf("Intentando eliminar archivo con nombre: %s", request.NombreArchivo)
+
 	err = EliminarArchivoFS(request.NombreArchivo)
 	if err != nil {
-		http.Error(w, fmt.Sprintf("Error al eliminar el archivo: %s", err.Error()), http.StatusInternalServerError)
+		log.Printf("Error al eliminar archivo: %v", err)
+		response := FileResponse{
+			Status:  "Error",
+			Message: err.Error(),
+		}
+		w.WriteHeader(http.StatusInternalServerError)
+		json.NewEncoder(w).Encode(response)
 		return
 	}
 
+	// Responder con éxito
+	response := FileResponse{
+		Status:  "OK",
+		Message: "Archivo eliminado correctamente",
+	}
 	w.WriteHeader(http.StatusOK)
-	json.NewEncoder(w).Encode("Archivo eliminado correctamente")
+	json.NewEncoder(w).Encode(response)
 	log.Printf("Archivo '%s' eliminado", request.NombreArchivo)
 }
 
-type ConfigResponse struct {
-	Path       string `json:"path"`
-	BlockCount int    `json:"block_count"`
-	BlockSize  int    `json:"block_size"`
-}
-
 func CrearArchivoFS(nombreArchivo string) error {
+	log.Printf("Se entró a CrearArchivoFS con nombreArchivo: %s", nombreArchivo)
+
 	// Ruta al archivo de metadata
 	metadataPath := globals.ClientConfig.DialfsPath + "/" + nombreArchivo + ".json"
 
@@ -904,6 +901,8 @@ func CrearArchivoFS(nombreArchivo string) error {
 	if _, err := os.Stat(metadataPath); err == nil {
 		return fmt.Errorf("el archivo ya existe")
 	}
+
+	log.Printf("Leyendo archivos de bloques y bitmap")
 
 	// Leer el archivo de bloques y el bitmap
 	bloquesPath := fmt.Sprintf("%s/bloques.dat", globals.ClientConfig.DialfsPath)
@@ -921,12 +920,16 @@ func CrearArchivoFS(nombreArchivo string) error {
 	}
 	defer bitmapFile.Close()
 
+	log.Printf("Leyendo el bitmap")
+
 	// Leer el bitmap
 	bitmap := make([]byte, globals.ClientConfig.DialfsBlockCount)
 	_, err = bitmapFile.Read(bitmap)
 	if err != nil {
 		return fmt.Errorf("no se pudo leer el bitmap: %s", err.Error())
 	}
+
+	log.Printf("Buscando bloque libre")
 
 	// Encontrar un bloque libre
 	var initialBlock int = -1
@@ -940,12 +943,16 @@ func CrearArchivoFS(nombreArchivo string) error {
 		return fmt.Errorf("no hay bloques libres disponibles")
 	}
 
+	log.Printf("Bloque libre encontrado: %d", initialBlock)
+
 	// Marcar el bloque como ocupado en el bitmap
 	bitmap[initialBlock] = 1
 	_, err = bitmapFile.WriteAt(bitmap, 0)
 	if err != nil {
 		return fmt.Errorf("no se pudo actualizar el bitmap: %s", err.Error())
 	}
+
+	log.Printf("Actualización del bitmap completada")
 
 	// Crear el archivo de metadata
 	metadata := Metadata{
@@ -963,6 +970,7 @@ func CrearArchivoFS(nombreArchivo string) error {
 		return fmt.Errorf("no se pudo crear el archivo de metadata: %s", err.Error())
 	}
 
+	log.Printf("Archivo de metadata '%s' creado con éxito", nombreArchivo)
 	return nil
 }
 

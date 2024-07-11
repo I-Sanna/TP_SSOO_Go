@@ -1,3 +1,3 @@
 SET AX 0
-IO_FS_CREATE Int4 notas.txt
+IO_FS_DELETE Int4 notas.txt
 EXIT

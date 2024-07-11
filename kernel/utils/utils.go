@@ -44,6 +44,8 @@ var planificadorLargoPlazo sync.Mutex
 var dispositivoGenerico sync.Mutex
 var dispositivoLectura sync.Mutex
 var dispositivoEscritura sync.Mutex
+var dispositivoLecturaFS sync.Mutex
+var dispositivoEscrituraFS sync.Mutex
 var mutexColaListos sync.Mutex
 var mutexColaListosQuantum sync.Mutex
 var mutexColaBlocked sync.Mutex
@@ -65,10 +67,16 @@ var recursos map[string]int
 var puertosDispGenericos map[string]int
 var puertosDispSTDIN map[string]int
 var puertosDispSTDOUT map[string]int
+var puertosDispFSR map[string]int
+var puertosDispFSW map[string]int
+var puertosDispFS map[string]int
 var listaEsperaRecursos map[string][]int
 var listaEsperaGenericos map[string][]BodyIO
 var listaEsperaSTDIN map[string][]BodySTD
 var listaEsperaSTDOUT map[string][]BodySTD
+var listaEsperaFSW map[string][]BodyFS
+var listaEsperaFSR map[string][]BodyFS
+var listaEsperaFS map[string][]BodyFS
 
 type BodyIO struct {
 	PID        int
@@ -81,6 +89,23 @@ type BodySTD struct {
 	Direccion int `json:"direccion"`
 }
 
+type BodyFS struct {
+	Dispositivo string `json:"dispositivo"`
+	PID         int    `json:"pid"`
+	Archivo     string `json:"archivo"`
+	Tamaño      int    `json:"tamaño"`
+	Direccion   int    `json:"direccion"`
+	PtrArchivo  int    `json:"ptrarchivo"`
+	Instruccion string `json:"instruccion"`
+}
+
+type BodyRequestFS struct {
+	PID        int    `json:"pid"`
+	Archivo    string `json:"archivo"`
+	Tamaño     int    `json:"tamaño"`
+	Direccion  int    `json:"direccion"`
+	PtrArchivo int    `json:"ptrarchivo"`
+}
 type BodyRequest struct {
 	Path string `json:"path"`
 }
@@ -128,11 +153,16 @@ func InicializarVariables() {
 	puertosDispGenericos = make(map[string]int)
 	puertosDispSTDIN = make(map[string]int)
 	puertosDispSTDOUT = make(map[string]int)
+	puertosDispFSR = make(map[string]int)
+	puertosDispFSW = make(map[string]int)
+	puertosDispFS = make(map[string]int)
 	listaEsperaRecursos = make(map[string][]int)
 	listaEsperaGenericos = make(map[string][]BodyIO)
 	listaEsperaSTDIN = make(map[string][]BodySTD)
 	listaEsperaSTDOUT = make(map[string][]BodySTD)
-
+	listaEsperaFSW = make(map[string][]BodyFS)
+	listaEsperaFSR = make(map[string][]BodyFS)
+	listaEsperaFS = make(map[string][]BodyFS)
 	for i := 0; i < len(globals.ClientConfig.Resources); i++ {
 		recursos[globals.ClientConfig.Resources[i]] = globals.ClientConfig.Resource_instances[i]
 	}
@@ -764,13 +794,8 @@ type BodyRequestTime struct {
 	Tamaño      int    `json:"tamaño"`
 	Direccion   int    `json:"direccion"`
 	Instruccion string `json:"instruccion"`
-}
-type BodyRequestSTD struct {
-	Dispositivo string `json:"dispositivo"`
-	PID         int    `json:"pid"`
-	Tamaño      int    `json:"tamaño"`
-	Direccion   int    `json:"direccion"`
-	Instruccion string `json:"instruccion"`
+	Archivo     string `json:"archivo"`
+	PtrArchivo  int    `json:"ptrarchivo"`
 }
 
 // pedir io a entradasalid
@@ -893,40 +918,44 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 		dispositivoEscritura.Unlock()
 	case "FSWRITE":
 		fmt.Println("Entró en el case de write en kernel")
-		var datosSTD BodySTD
-		datosSTD.PID = request.PID
-		datosSTD.Tamaño = request.Tamaño
-		datosSTD.Direccion = request.Direccion
+		var datosFS BodyFS
+		datosFS.PID = request.PID
+		datosFS.Tamaño = request.Tamaño
+		datosFS.Direccion = request.Direccion
+		datosFS.Archivo = request.Archivo
+		datosFS.PtrArchivo = request.PtrArchivo
 
-		dispositivoEscritura.Lock() //Habria que hacer un semaforo por dispostivo
-		puerto, ok := puertosDispSTDOUT[request.Dispositivo]
+		dispositivoEscrituraFS.Lock()
+		puerto, ok := puertosDispFS[request.Dispositivo]
 
 		if ok && validarConexionIO(puerto) {
-			go agregarElemAListaSTDOUT(request.Dispositivo, puerto, datosSTD)
+			go agregarElemAListaFSW(request.Dispositivo, puerto, datosFS)
 		} else {
 			w.WriteHeader(http.StatusBadRequest)
-			dispositivoEscritura.Unlock()
+			dispositivoEscrituraFS.Unlock()
 			return
 		}
-		dispositivoEscritura.Unlock()
+		dispositivoEscrituraFS.Unlock()
 	case "FSREAD":
 		fmt.Println("Entró en el case de write en kernel")
-		var datosSTD BodySTD
-		datosSTD.PID = request.PID
-		datosSTD.Tamaño = request.Tamaño
-		datosSTD.Direccion = request.Direccion
+		var datosFS BodyFS
+		datosFS.PID = request.PID
+		datosFS.Tamaño = request.Tamaño
+		datosFS.Direccion = request.Direccion
+		datosFS.Archivo = request.Archivo
+		datosFS.PtrArchivo = request.PtrArchivo
 
-		dispositivoEscritura.Lock() //Habria que hacer un semaforo por dispostivo
-		puerto, ok := puertosDispSTDOUT[request.Dispositivo]
+		dispositivoLecturaFS.Lock()
+		puerto, ok := puertosDispFS[request.Dispositivo]
 
 		if ok && validarConexionIO(puerto) {
-			go agregarElemAListaSTDOUT(request.Dispositivo, puerto, datosSTD)
+			go agregarElemAListaFSR(request.Dispositivo, puerto, datosFS)
 		} else {
 			w.WriteHeader(http.StatusBadRequest)
-			dispositivoEscritura.Unlock()
+			dispositivoLecturaFS.Unlock()
 			return
 		}
-		dispositivoEscritura.Unlock()
+		dispositivoLecturaFS.Unlock()
 	}
 
 	w.WriteHeader(http.StatusOK)
@@ -953,6 +982,22 @@ func agregarElemAListaSTDOUT(dispositivo string, puerto int, datosSTD BodySTD) {
 	listaEsperaSTDOUT[dispositivo] = append(listaEsperaSTDOUT[dispositivo], datosSTD)
 	if len(listaEsperaSTDOUT[dispositivo]) == 1 {
 		go Write(dispositivo, puerto)
+	}
+}
+
+func agregarElemAListaFSW(dispositivo string, puerto int, datosFS BodyFS) {
+	<-semProcesoBloqueado
+	listaEsperaFS[dispositivo] = append(listaEsperaFS[dispositivo], datosFS)
+	if len(listaEsperaFS[dispositivo]) == 1 {
+		go WriteFS(dispositivo, puerto)
+	}
+}
+
+func agregarElemAListaFSR(dispositivo string, puerto int, datosFS BodyFS) {
+	<-semProcesoBloqueado
+	listaEsperaFS[dispositivo] = append(listaEsperaFS[dispositivo], datosFS)
+	if len(listaEsperaFS[dispositivo]) == 1 {
+		go ReadFS(dispositivo, puerto)
 	}
 }
 
@@ -1118,6 +1163,156 @@ func Write(nombreDispositivo string, puerto int) {
 	dispositivoEscritura.Unlock()
 }
 
+func WriteFS(nombreDispositivo string, puerto int) {
+	log.Printf("\n Entro al write fs (kernel)")
+	dispositivoEscrituraFS.Lock()
+	for len(listaEsperaFS[nombreDispositivo]) > 0 {
+		proceso := listaEsperaFS[nombreDispositivo][0]
+		dispositivoEscrituraFS.Unlock()
+
+		mutexMapaEstados.Lock()
+		_, ok := estadosProcesos[proceso.PID]
+		mutexMapaEstados.Unlock()
+		if !ok {
+			dispositivoEscritura.Lock()
+			listaEsperaFS[nombreDispositivo] = listaEsperaFS[nombreDispositivo][1:]
+			continue
+		}
+
+		request := BodyRequestFS{
+			PID:        proceso.PID,
+			Archivo:    proceso.Archivo,
+			Tamaño:     proceso.Tamaño,
+			Direccion:  proceso.Direccion,
+			PtrArchivo: proceso.PtrArchivo,
+		}
+
+		requestBody, err := json.Marshal(request)
+		if err != nil {
+			log.Printf("error al codificar la solicitud: %s", err.Error())
+		}
+
+		url := fmt.Sprintf("http://localhost:%d/fs/write", globals.ClientConfig.PortIO)
+		resp, err := http.Post(url, "application/json", bytes.NewBuffer(requestBody))
+
+		/*if err != nil {
+			return fmt.Errorf("error al enviar la solicitud al módulo de Interfaz de I/O: %w", err)
+		}
+		defer resp.Body.Close()
+
+		if resp.StatusCode != http.StatusOK {
+			return fmt.Errorf("error del módulo de Interfaz de I/O: %s", resp.Status)
+		}*/
+
+		if err != nil {
+
+			log.Printf("error enviando: %s", err.Error())
+			dispositivoEscrituraFS.Lock()
+
+			for _, elemento := range listaEsperaFS[nombreDispositivo] {
+				mutexColaBlocked.Lock()
+				removerProcesoDeLista(&colaDeBlocked, elemento.PID, "LOST_CONNECTION_IO")
+				mutexColaBlocked.Unlock()
+			}
+
+			delete(listaEsperaFS, nombreDispositivo)
+			delete(puertosDispFS, nombreDispositivo)
+			dispositivoEscrituraFS.Unlock()
+			agregarProcesosALaColaListos()
+			return
+		}
+
+		if resp.StatusCode != http.StatusOK {
+			log.Printf("error en la respuesta de la consulta: %s", resp.Status)
+			return
+		}
+
+		dispositivoEscrituraFS.Lock()
+		listaEsperaFS[nombreDispositivo] = listaEsperaFS[nombreDispositivo][1:]
+		dispositivoEscrituraFS.Unlock()
+
+		rehabilitarProcesoBlocked(proceso.PID)
+
+		dispositivoEscrituraFS.Lock()
+	}
+	dispositivoEscrituraFS.Unlock()
+}
+
+func ReadFS(nombreDispositivo string, puerto int) {
+	log.Printf("\n Entro al read fs (kernel)")
+	dispositivoEscrituraFS.Lock()
+	for len(listaEsperaFS[nombreDispositivo]) > 0 {
+		proceso := listaEsperaFS[nombreDispositivo][0]
+		dispositivoEscrituraFS.Unlock()
+
+		mutexMapaEstados.Lock()
+		_, ok := estadosProcesos[proceso.PID]
+		mutexMapaEstados.Unlock()
+		if !ok {
+			dispositivoEscritura.Lock()
+			listaEsperaFS[nombreDispositivo] = listaEsperaFS[nombreDispositivo][1:]
+			continue
+		}
+
+		request := BodyRequestFS{
+			PID:        proceso.PID,
+			Archivo:    proceso.Archivo,
+			Tamaño:     proceso.Tamaño,
+			Direccion:  proceso.Direccion,
+			PtrArchivo: proceso.PtrArchivo,
+		}
+
+		requestBody, err := json.Marshal(request)
+		if err != nil {
+			log.Printf("error al codificar la solicitud: %s", err)
+		}
+
+		url := fmt.Sprintf("http://localhost:%d/fs/read", globals.ClientConfig.PortIO)
+		resp, err := http.Post(url, "application/json", bytes.NewBuffer(requestBody))
+
+		/*if err != nil {
+			return fmt.Errorf("error al enviar la solicitud al módulo de Interfaz de I/O: %w", err)
+		}
+		defer resp.Body.Close()
+
+		if resp.StatusCode != http.StatusOK {
+			return fmt.Errorf("error del módulo de Interfaz de I/O: %s", resp.Status)
+		}*/
+
+		if err != nil {
+
+			log.Printf("error enviando: %s", err.Error())
+			dispositivoEscrituraFS.Lock()
+
+			for _, elemento := range listaEsperaFS[nombreDispositivo] {
+				mutexColaBlocked.Lock()
+				removerProcesoDeLista(&colaDeBlocked, elemento.PID, "LOST_CONNECTION_IO")
+				mutexColaBlocked.Unlock()
+			}
+
+			delete(listaEsperaFS, nombreDispositivo)
+			delete(puertosDispFS, nombreDispositivo)
+			dispositivoEscrituraFS.Unlock()
+			agregarProcesosALaColaListos()
+			return
+		}
+
+		if resp.StatusCode != http.StatusOK {
+			log.Printf("error en la respuesta de la consulta: %s", resp.Status)
+			return
+		}
+
+		dispositivoEscrituraFS.Lock()
+		listaEsperaFS[nombreDispositivo] = listaEsperaFS[nombreDispositivo][1:]
+		dispositivoEscrituraFS.Unlock()
+
+		rehabilitarProcesoBlocked(proceso.PID)
+
+		dispositivoEscrituraFS.Lock()
+	}
+	dispositivoEscrituraFS.Unlock()
+}
+
 func removerProcesoDeLista(lista *[]PCB, PID int, motivo string) {
 	var contador int = 0
 	for _, elemento := range *lista {
@@ -1161,7 +1356,7 @@ func RegistrarIO(w http.ResponseWriter, r *http.Request) {
 	case "STDOUT":
 		puertosDispSTDOUT[request.Nombre] = request.Puerto
 	case "DIALFS":
-		puertosDispSTDOUT[request.Nombre] = request.Puerto
+		puertosDispFS[request.Nombre] = request.Puerto
 	}
 }
 
@@ -1205,35 +1400,41 @@ func SIGNAL(recurso string) string {
 	return "NOT_FOUND"
 }
 
-type CreateFileRequest struct {
-	Interfaz      string `json:"interfaz"`
+type FileRequest struct {
 	NombreArchivo string `json:"nombreArchivo"`
 }
 
-type CreateFileResponse struct {
+type FileResponse struct {
 	Status  string `json:"status"`
 	Message string `json:"message"`
 }
 
 func HandleCreateFileRequest(w http.ResponseWriter, r *http.Request) {
-	log.Printf("\n\n ENTRO AL HANDLE_CREATE_FILE_REQUEST")
-	var request CreateFileRequest
+	log.Printf("ENTRO AL HANDLE_CREATE_FILE_REQUEST")
+	var request FileRequest
 	if err := json.NewDecoder(r.Body).Decode(&request); err != nil {
+		log.Printf("Error al decodificar la solicitud: %v", err)
 		http.Error(w, "Bad request", http.StatusBadRequest)
 		return
 	}
 
+	if request.NombreArchivo == "" {
+		log.Printf("Parámetros inválidos: nombreArchivo está vacío")
+		http.Error(w, "Parámetros inválidos", http.StatusBadRequest)
+		return
+	}
+
 	// Enviar la solicitud al módulo de Interfaz de I/O
-	err := sendCreateFileRequestToIO(request.Interfaz, request.NombreArchivo)
-	var response CreateFileResponse
+	err := sendCreateFileRequestToIO(request.NombreArchivo)
+	var response FileResponse
 	if err != nil {
-		response = CreateFileResponse{
+		response = FileResponse{
 			Status:  "Error",
 			Message: err.Error(),
 		}
 		w.WriteHeader(http.StatusInternalServerError)
 	} else {
-		response = CreateFileResponse{
+		response = FileResponse{
 			Status:  "OK",
 			Message: "Archivo creado correctamente",
 		}
@@ -1242,21 +1443,22 @@ func HandleCreateFileRequest(w http.ResponseWriter, r *http.Request) {
 
 	// Responder a la CPU
 	if err := json.NewEncoder(w).Encode(response); err != nil {
+		log.Printf("Error al codificar la respuesta: %v", err)
 		http.Error(w, "Internal server error", http.StatusInternalServerError)
 	}
 }
 
-func sendCreateFileRequestToIO(interfaz, nombreArchivo string) error {
-	log.Printf("\n\n\n SEND_CREATORBLABLA TO IO")
+func sendCreateFileRequestToIO(nombreArchivo string) error {
+	log.Printf("SEND_CREATE_FILE_REQUEST_TO_IO")
 	// Crear la solicitud
-	request := CreateFileRequest{
-		Interfaz:      interfaz,
+	request := FileRequest{
 		NombreArchivo: nombreArchivo,
 	}
 
 	// Codificar la solicitud a JSON
 	requestBody, err := json.Marshal(request)
 	if err != nil {
+		log.Printf("Error al codificar la solicitud: %v", err)
 		return fmt.Errorf("error al codificar la solicitud: %w", err)
 	}
 
@@ -1264,11 +1466,83 @@ func sendCreateFileRequestToIO(interfaz, nombreArchivo string) error {
 	url := fmt.Sprintf("http://localhost:%d/fs/create", globals.ClientConfig.PortIO)
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(requestBody))
 	if err != nil {
+		log.Printf("Error al enviar la solicitud al módulo de Interfaz de I/O: %v", err)
 		return fmt.Errorf("error al enviar la solicitud al módulo de Interfaz de I/O: %w", err)
 	}
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
+		log.Printf("Error del módulo de Interfaz de I/O: %s", resp.Status)
+		return fmt.Errorf("error del módulo de Interfaz de I/O: %s", resp.Status)
+	}
+
+	return nil
+}
+
+func HandleDeleteFileRequest(w http.ResponseWriter, r *http.Request) {
+	log.Printf("ENTRO AL HANDLE_DELETE_FILE_REQUEST")
+	var request FileRequest
+	if err := json.NewDecoder(r.Body).Decode(&request); err != nil {
+		log.Printf("Error al decodificar la solicitud: %v", err)
+		http.Error(w, "Bad request", http.StatusBadRequest)
+		return
+	}
+
+	if request.NombreArchivo == "" {
+		log.Printf("Parámetros inválidos: nombreArchivo está vacío")
+		http.Error(w, "Parámetros inválidos", http.StatusBadRequest)
+		return
+	}
+
+	// Enviar la solicitud al módulo de Interfaz de I/O
+	err := sendDeleteFileRequestToIO(request.NombreArchivo)
+	var response FileResponse
+	if err != nil {
+		response = FileResponse{
+			Status:  "Error",
+			Message: err.Error(),
+		}
+		w.WriteHeader(http.StatusInternalServerError)
+	} else {
+		response = FileResponse{
+			Status:  "OK",
+			Message: "Archivo eliminado correctamente",
+		}
+		w.WriteHeader(http.StatusOK)
+	}
+
+	// Responder a la CPU
+	if err := json.NewEncoder(w).Encode(response); err != nil {
+		log.Printf("Error al codificar la respuesta: %v", err)
+		http.Error(w, "Internal server error", http.StatusInternalServerError)
+	}
+}
+
+func sendDeleteFileRequestToIO(nombreArchivo string) error {
+	log.Printf("SEND_DELETE_FILE_REQUEST_TO_IO")
+	// Crear la solicitud
+	request := FileRequest{
+		NombreArchivo: nombreArchivo,
+	}
+
+	// Codificar la solicitud a JSON
+	requestBody, err := json.Marshal(request)
+	if err != nil {
+		log.Printf("Error al codificar la solicitud: %v", err)
+		return fmt.Errorf("error al codificar la solicitud: %w", err)
+	}
+
+	// Enviar la solicitud al módulo de Interfaz de I/O
+	url := fmt.Sprintf("http://localhost:%d/fs/delete", globals.ClientConfig.PortIO)
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(requestBody))
+	if err != nil {
+		log.Printf("Error al enviar la solicitud al módulo de Interfaz de I/O: %v", err)
+		return fmt.Errorf("error al enviar la solicitud al módulo de Interfaz de I/O: %w", err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		log.Printf("Error del módulo de Interfaz de I/O: %s", resp.Status)
 		return fmt.Errorf("error del módulo de Interfaz de I/O: %s", resp.Status)
 	}
 

@@ -33,17 +33,17 @@ func main() {
 	}
 
 	http.HandleFunc("GET /sleep/{units}/{pid}", utils.IO_GEN_SLEEP)
-
 	http.HandleFunc("GET /read/{pid}/{tamaño}/{direccion}", utils.IO_STDIN_READ)
 	http.HandleFunc("GET /write/{pid}/{tamaño}/{direccion}", utils.IO_STDOUT_WRITE)
 
 	http.HandleFunc("GET /fscreate/{pid}/{nombre}", utils.IO_FS_CREATE)
 	http.HandleFunc("GET /fsdelete/{pid}/{nombre}", utils.IO_FS_DELETE)
-	http.HandleFunc("GET /fswrite/{pid}/{nombre}/{tamaño}/{puntero}", utils.IO_FS_WRITE)
-	http.HandleFunc("GET /fsread/{pid}/{nombre}/{tamaño}/{puntero}", utils.IO_FS_READ)
+	http.HandleFunc("POST /fs/truncate", utils.IO_FS_TRUNCATE)
+	http.HandleFunc("POST /fs/write", utils.IO_FS_WRITE)
+	http.HandleFunc("POST /fs/read", utils.IO_FS_READ)
 	http.HandleFunc("GET /validar", utils.ValidarConexion)
 	http.HandleFunc("POST /fs/create", utils.IO_FS_CREATE_Handler)
-	http.HandleFunc("POST /fs/truncate", utils.IO_FS_TRUNCATE)
+	http.HandleFunc("POST /fs/delete", utils.IO_FS_DELETE_Handler)
 
 	log.Fatal(http.ListenAndServe(":"+strconv.Itoa(globals.ClientConfig.Port), nil))
 }
