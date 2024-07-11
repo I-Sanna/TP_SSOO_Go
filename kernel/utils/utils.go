@@ -1263,7 +1263,7 @@ func ReadFS(nombreDispositivo string, puerto int) {
 			log.Printf("error al codificar la solicitud: %s", err)
 		}
 
-		url := fmt.Sprintf("http://localhost:%d/fs/write", globals.ClientConfig.PortIO)
+		url := fmt.Sprintf("http://localhost:%d/fs/read", globals.ClientConfig.PortIO)
 		resp, err := http.Post(url, "application/json", bytes.NewBuffer(requestBody))
 
 		/*if err != nil {
