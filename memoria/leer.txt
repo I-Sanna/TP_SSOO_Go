@@ -1,3 +1,5 @@
 SET AX 0
+IO_FS_READ Int4 notas.txt AX AAA BBC
+IO_FS_WRITE Int4 notas.txt BX AAA BBC
 IO_FS_DELETE Int4 notas.txt
 EXIT

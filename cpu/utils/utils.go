@@ -709,11 +709,18 @@ func IO_GEN_SLEEP(nombre string, tiempo int) {
 
 func IO_STDIN_READ(nombre string, tamaño int, direccion int) {
 	var sending BodyRequestSTD
+	dirLogica := obtenerRegistro(string(direccion))
+	direccionFisica, err := mmu(procesoActual.PID, ObtenerValorRegistro(string(dirLogica)))
+	if err != nil {
+		log.Printf("Error al traducir dirección: %s", err.Error())
+		return
+	}
 
 	sending.Dispositivo = nombre
 	sending.PID = procesoActual.PID
 	sending.Tamaño = tamaño
-	sending.Direccion = direccion
+	//obtenerRegistro(string(tamaño))
+	sending.Direccion = direccionFisica
 	sending.Instruccion = "READ"
 
 	body, err := json.Marshal(sending)
@@ -740,11 +747,18 @@ func IO_STDIN_READ(nombre string, tamaño int, direccion int) {
 
 func IO_STDOUT_WRITE(nombre string, tamaño int, direccion int) {
 	var sending BodyRequestSTD
+	dirLogica := obtenerRegistro(string(direccion))
+	direccionFisica, err := mmu(procesoActual.PID, ObtenerValorRegistro(string(dirLogica)))
+	if err != nil {
+		log.Printf("Error al traducir dirección: %s", err.Error())
+		return
+	}
 
 	sending.Dispositivo = nombre
 	sending.PID = procesoActual.PID
 	sending.Tamaño = tamaño
-	sending.Direccion = direccion
+	//obtenerRegistro(string(tamaño))
+	sending.Direccion = direccionFisica
 	sending.Instruccion = "WRITE"
 
 	body, err := json.Marshal(sending)
@@ -862,15 +876,47 @@ func IO_FS_TRUNCATE(nombre string, tamaño int, direccion int) {
 	interrupcion = true
 }
 
+func obtenerRegistro(registro string) []byte {
+	if len(registro) == 2 && strings.Contains(registro, "X") {
+		regDatos8 := ObtenerRegistro8Bits(registro)
+		if regDatos8 == nil {
+			log.Printf("Error: registro de 8 bits inválido")
+		}
+		// Convertir el valor del registro de 8 bits a []byte
+		registroEnBytes := []byte{*regDatos8}
+		return registroEnBytes
+
+	} else {
+		regDatos32 := ObtenerRegistro32Bits(registro)
+		if regDatos32 == nil {
+			log.Printf("Error: registro de 32 bits inválido")
+		}
+
+		// Convertir el valor del registro a []byte
+		registroEnBytes := make([]byte, 4)
+		binary.LittleEndian.PutUint32(registroEnBytes, *regDatos32)
+		return registroEnBytes
+	}
+
+}
+
 func IO_FS_WRITE(nombre string, nombreArchivo string, registroDirec int, registroTamaño int, registroPtrArchivo int) {
 	var sending BodyRequestFS
 
+	dirLogica := obtenerRegistro(string(registroDirec))
+	direccionFisica, err := mmu(procesoActual.PID, ObtenerValorRegistro(string(dirLogica)))
+	if err != nil {
+		log.Printf("Error al traducir dirección: %s", err.Error())
+		return
+	}
 	sending.Dispositivo = nombre
 	sending.PID = procesoActual.PID
 	sending.Archivo = nombreArchivo
 	sending.Tamaño = registroTamaño
-	sending.Direccion = registroDirec
+	//obtenerRegistro(string(registroTamaño))
+	sending.Direccion = direccionFisica
 	sending.PtrArchivo = registroPtrArchivo
+	//obtenerRegistro(string(registroPtrArchivo))
 	sending.Instruccion = "FSWRITE"
 
 	body, err := json.Marshal(sending)
@@ -898,13 +944,20 @@ func IO_FS_WRITE(nombre string, nombreArchivo string, registroDirec int, registr
 
 func IO_FS_READ(nombre string, nombreArchivo string, registroDirec int, registroTamaño int, registroPtrArchivo int) {
 	var sending BodyRequestFS
-
+	dirLogica := obtenerRegistro(string(registroDirec))
+	direccionFisica, err := mmu(procesoActual.PID, ObtenerValorRegistro(string(dirLogica)))
+	if err != nil {
+		log.Printf("Error al traducir dirección: %s", err.Error())
+		return
+	}
 	sending.Dispositivo = nombre
 	sending.PID = procesoActual.PID
 	sending.Archivo = nombreArchivo
 	sending.Tamaño = registroTamaño
-	sending.Direccion = registroDirec
+	//obtenerRegistro(string(registroTamaño))
+	sending.Direccion = direccionFisica
 	sending.PtrArchivo = registroPtrArchivo
+	//obtenerRegistro(string(registroPtrArchivo))
 	sending.Instruccion = "FSREAD"
 
 	body, err := json.Marshal(sending)
@@ -928,6 +981,7 @@ func IO_FS_READ(nombre string, nombreArchivo string, registroDirec int, registro
 	mutexMensaje.Unlock()
 	interrupcion = true
 }
+
 func decoYExecInstru(instrucciones string) {
 	//"Decodificar" instruccion
 	instru := strings.Split(strings.TrimRight(instrucciones, "\x00"), " ")
