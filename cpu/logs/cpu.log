@@ -11614,3 +11614,252 @@ SE ENTRO IOFSCREATE EN CPU FUNCION
 2024/07/10 23:42:01 Archivo 'notas.txt' eliminado en la interfaz 'Int4'
 2024/07/10 23:42:01 PID: 2 - FETCH - Program Counter: 5
 2024/07/10 23:42:02 PID: 2 - Ejecutando: EXIT
+2024/07/18 00:23:23 Inicializando TLB con 4 entradas
+2024/07/18 00:40:53 PID: 0 - FETCH - Program Counter: 0
+2024/07/18 00:40:54 PID: 0 - Ejecutando: SET - AX,256
+2024/07/18 00:40:54 PID: 0 - FETCH - Program Counter: 1
+2024/07/18 00:40:55 PID: 0 - Ejecutando: SET - BX,0
+2024/07/18 00:40:55 PID: 0 - FETCH - Program Counter: 2
+2024/07/18 00:40:56 PID: 0 - Ejecutando: SET - EAX,16
+2024/07/18 00:40:56 PID: 0 - FETCH - Program Counter: 3
+2024/07/18 00:40:57 PID: 0 - Ejecutando: SET - EBX,0
+2024/07/18 00:40:57 PID: 0 - FETCH - Program Counter: 4
+2024/07/18 00:40:58 PID: 0 - Ejecutando: RESIZE - 256
+2024/07/18 00:40:59 PID: 0 - FETCH - Program Counter: 5
+2024/07/18 00:41:00 PID: 0 - Ejecutando: IO_STDIN_READ - Int3 , BX , EAX
+2024/07/18 00:41:01 PID: 0 - TLB MISS - Pagina: 1
+2024/07/18 00:41:02 PID: 0 - OBTENER MARCO - Página: 1 - Marco: 1
+2024/07/18 00:59:27 Inicializando TLB con 4 entradas
+2024/07/18 01:00:46 PID: 0 - FETCH - Program Counter: 0
+2024/07/18 01:00:47 PID: 0 - Ejecutando: SET - AX,256
+2024/07/18 01:00:47 PID: 0 - FETCH - Program Counter: 1
+2024/07/18 01:00:48 PID: 0 - Ejecutando: SET - BX,0
+2024/07/18 01:00:48 PID: 0 - FETCH - Program Counter: 2
+2024/07/18 01:00:49 PID: 0 - Ejecutando: SET - EAX,16
+2024/07/18 01:00:49 PID: 0 - FETCH - Program Counter: 3
+2024/07/18 01:00:50 PID: 0 - Ejecutando: SET - EBX,0
+2024/07/18 01:00:50 PID: 0 - FETCH - Program Counter: 4
+2024/07/18 01:00:51 PID: 0 - Ejecutando: RESIZE - 256
+2024/07/18 01:00:52 PID: 0 - FETCH - Program Counter: 5
+2024/07/18 01:00:53 PID: 0 - Ejecutando: IO_STDIN_READ - Int3 , BX , EAX
+2024/07/18 01:00:54 PID: 0 - TLB MISS - Pagina: 1
+2024/07/18 01:00:55 PID: 0 - OBTENER MARCO - Página: 1 - Marco: 1
+2024/07/18 01:03:47 Inicializando TLB con 4 entradas
+2024/07/18 01:04:56 PID: 0 - FETCH - Program Counter: 0
+2024/07/18 01:04:58 PID: 0 - Ejecutando: SET - AX,256
+2024/07/18 01:04:58 PID: 0 - FETCH - Program Counter: 1
+2024/07/18 01:04:59 PID: 0 - Ejecutando: SET - BX,0
+2024/07/18 01:04:59 PID: 0 - FETCH - Program Counter: 2
+2024/07/18 01:05:00 PID: 0 - Ejecutando: SET - EAX,16
+2024/07/18 01:05:00 PID: 0 - FETCH - Program Counter: 3
+2024/07/18 01:05:01 PID: 0 - Ejecutando: SET - EBX,0
+2024/07/18 01:05:01 PID: 0 - FETCH - Program Counter: 4
+2024/07/18 01:05:02 PID: 0 - Ejecutando: RESIZE - 256
+2024/07/18 01:05:03 PID: 0 - FETCH - Program Counter: 5
+2024/07/18 01:05:04 PID: 0 - Ejecutando: IO_STDIN_READ - Int3 , BX , EAX
+2024/07/18 01:05:05 PID: 0 - TLB MISS - Pagina: 0
+2024/07/18 01:05:06 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/18 01:05:24 PID: 0 - FETCH - Program Counter: 6
+2024/07/18 01:05:25 PID: 0 - Ejecutando: IO_FS_CREATE - Int4 , notas.txt
+2024/07/18 01:05:25 Se entró a IO_FS_CREATE en la CPU
+2024/07/18 01:05:25 Archivo 'notas.txt' creado en la interfaz 'Int4'
+2024/07/18 01:05:25 PID: 0 - FETCH - Program Counter: 7
+2024/07/18 01:05:26 PID: 0 - Ejecutando: IO_FS_TRUNCATE - Int4 , notas.txt , AX
+2024/07/18 01:05:26 PID: 0 - FETCH - Program Counter: 8
+2024/07/18 01:05:27 PID: 0 - Ejecutando: IO_FS_WRITE - Int4 , notas.txt , BX, EAX
+2024/07/18 01:05:28 PID: 0 - TLB HIT - Pagina: 0
+2024/07/18 01:12:03 Inicializando TLB con 4 entradas
+2024/07/18 01:13:25 PID: 0 - FETCH - Program Counter: 0
+2024/07/18 01:13:26 PID: 0 - Ejecutando: SET - AX,256
+2024/07/18 01:13:26 PID: 0 - FETCH - Program Counter: 1
+2024/07/18 01:13:27 PID: 0 - Ejecutando: SET - BX,0
+2024/07/18 01:13:27 PID: 0 - FETCH - Program Counter: 2
+2024/07/18 01:13:28 PID: 0 - Ejecutando: SET - EAX,16
+2024/07/18 01:13:28 PID: 0 - FETCH - Program Counter: 3
+2024/07/18 01:13:29 PID: 0 - Ejecutando: SET - EBX,0
+2024/07/18 01:13:29 PID: 0 - FETCH - Program Counter: 4
+2024/07/18 01:13:30 PID: 0 - Ejecutando: RESIZE - 256
+2024/07/18 01:13:31 PID: 0 - FETCH - Program Counter: 5
+2024/07/18 01:13:32 PID: 0 - Ejecutando: IO_STDIN_READ - Int3 , BX , EAX
+2024/07/18 01:13:33 PID: 0 - TLB MISS - Pagina: 0
+2024/07/18 01:13:34 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/18 01:13:46 PID: 0 - FETCH - Program Counter: 6
+2024/07/18 01:13:47 PID: 0 - Ejecutando: IO_FS_CREATE - Int4 , notas.txt
+2024/07/18 01:13:47 Se entró a IO_FS_CREATE en la CPU
+2024/07/18 01:13:47 Archivo 'notas.txt' creado en la interfaz 'Int4'
+2024/07/18 01:13:47 PID: 0 - FETCH - Program Counter: 7
+2024/07/18 01:13:48 PID: 0 - Ejecutando: IO_FS_TRUNCATE - Int4 , notas.txt , AX
+2024/07/18 01:13:48 PID: 0 - FETCH - Program Counter: 8
+2024/07/18 01:13:49 PID: 0 - Ejecutando: IO_FS_WRITE - Int4 , notas.txt , BX, EAX
+2024/07/18 01:13:50 PID: 0 - TLB HIT - Pagina: 0
+2024/07/18 01:55:17 Inicializando TLB con 4 entradas
+2024/07/18 01:59:56 Inicializando TLB con 4 entradas
+2024/07/18 02:00:47 PID: 0 - FETCH - Program Counter: 0
+2024/07/18 02:00:48 PID: 0 - Ejecutando: SET - AX,256
+2024/07/18 02:00:48 PID: 0 - FETCH - Program Counter: 1
+2024/07/18 02:00:49 PID: 0 - Ejecutando: SET - BX,0
+2024/07/18 02:00:49 PID: 0 - FETCH - Program Counter: 2
+2024/07/18 02:00:50 PID: 0 - Ejecutando: SET - EAX,16
+2024/07/18 02:00:50 PID: 0 - FETCH - Program Counter: 3
+2024/07/18 02:00:51 PID: 0 - Ejecutando: SET - EBX,0
+2024/07/18 02:00:51 PID: 0 - FETCH - Program Counter: 4
+2024/07/18 02:00:52 PID: 0 - Ejecutando: RESIZE - 256
+2024/07/18 02:00:53 PID: 0 - FETCH - Program Counter: 5
+2024/07/18 02:00:54 PID: 0 - Ejecutando: IO_STDIN_READ - Int3 , BX , EAX
+2024/07/18 02:00:55 PID: 0 - TLB MISS - Pagina: 0
+2024/07/18 02:00:56 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/18 02:01:18 PID: 0 - FETCH - Program Counter: 6
+2024/07/18 02:01:19 PID: 0 - Ejecutando: IO_FS_CREATE - Int4 , notas.txt
+2024/07/18 02:01:19 Se entró a IO_FS_CREATE en la CPU
+2024/07/18 02:01:19 Archivo 'notas.txt' creado en la interfaz 'Int4'
+2024/07/18 02:01:19 PID: 0 - FETCH - Program Counter: 7
+2024/07/18 02:01:20 PID: 0 - Ejecutando: IO_FS_TRUNCATE - Int4 , notas.txt , AX
+2024/07/18 02:02:47 Inicializando TLB con 4 entradas
+2024/07/18 02:03:40 PID: 0 - FETCH - Program Counter: 0
+2024/07/18 02:03:41 PID: 0 - Ejecutando: SET - AX,256
+2024/07/18 02:03:41 PID: 0 - FETCH - Program Counter: 1
+2024/07/18 02:03:42 PID: 0 - Ejecutando: SET - BX,0
+2024/07/18 02:03:42 PID: 0 - FETCH - Program Counter: 2
+2024/07/18 02:03:43 PID: 0 - Ejecutando: SET - EAX,16
+2024/07/18 02:03:43 PID: 0 - FETCH - Program Counter: 3
+2024/07/18 02:03:44 PID: 0 - Ejecutando: SET - EBX,0
+2024/07/18 02:03:44 PID: 0 - FETCH - Program Counter: 4
+2024/07/18 02:03:45 PID: 0 - Ejecutando: RESIZE - 256
+2024/07/18 02:03:47 PID: 0 - FETCH - Program Counter: 5
+2024/07/18 02:03:48 PID: 0 - Ejecutando: IO_STDIN_READ - Int3 , BX , EAX
+2024/07/18 02:03:49 PID: 0 - TLB MISS - Pagina: 0
+2024/07/18 02:03:50 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/18 02:04:08 PID: 0 - FETCH - Program Counter: 6
+2024/07/18 02:04:09 PID: 0 - Ejecutando: IO_FS_CREATE - Int4 , notas.txt
+2024/07/18 02:04:09 Se entró a IO_FS_CREATE en la CPU
+2024/07/18 02:04:09 Archivo 'notas.txt' creado en la interfaz 'Int4'
+2024/07/18 02:04:09 PID: 0 - FETCH - Program Counter: 7
+2024/07/18 02:04:10 PID: 0 - Ejecutando: IO_FS_TRUNCATE - Int4 , notas.txt , AX
+2024/07/18 02:04:10 PID: 0 - FETCH - Program Counter: 8
+2024/07/18 02:04:11 PID: 0 - Ejecutando: IO_FS_WRITE - Int4 , notas.txt , BX, EAX%!(EXTRA string=EBX)
+2024/07/18 02:04:12 PID: 0 - TLB HIT - Pagina: 0
+2024/07/18 02:04:12 PID: 0 - FETCH - Program Counter: 9
+2024/07/18 02:04:13 PID: 0 - Ejecutando: IO_FS_READ - Int4 , notas.txt , BX, EAX
+2024/07/18 02:04:14 PID: 0 - TLB HIT - Pagina: 0
+2024/07/18 02:08:22 Inicializando TLB con 4 entradas
+2024/07/18 02:09:29 PID: 0 - FETCH - Program Counter: 0
+2024/07/18 02:09:30 PID: 0 - Ejecutando: SET - AX,256
+2024/07/18 02:09:30 PID: 0 - FETCH - Program Counter: 1
+2024/07/18 02:09:31 PID: 0 - Ejecutando: SET - BX,0
+2024/07/18 02:09:31 PID: 0 - FETCH - Program Counter: 2
+2024/07/18 02:09:32 PID: 0 - Ejecutando: SET - EAX,16
+2024/07/18 02:09:32 PID: 0 - FETCH - Program Counter: 3
+2024/07/18 02:09:33 PID: 0 - Ejecutando: SET - EBX,0
+2024/07/18 02:09:33 PID: 0 - FETCH - Program Counter: 4
+2024/07/18 02:09:34 PID: 0 - Ejecutando: RESIZE - 256
+2024/07/18 02:09:35 PID: 0 - FETCH - Program Counter: 5
+2024/07/18 02:09:36 PID: 0 - Ejecutando: IO_STDIN_READ - Int3 , BX , EAX
+2024/07/18 02:09:37 PID: 0 - TLB MISS - Pagina: 0
+2024/07/18 02:09:38 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/18 02:10:26 PID: 0 - FETCH - Program Counter: 6
+2024/07/18 02:10:27 PID: 0 - Ejecutando: IO_FS_CREATE - Int4 , notas.txt
+2024/07/18 02:10:27 Se entró a IO_FS_CREATE en la CPU
+2024/07/18 02:10:27 Archivo 'notas.txt' creado en la interfaz 'Int4'
+2024/07/18 02:10:27 PID: 0 - FETCH - Program Counter: 7
+2024/07/18 02:10:28 PID: 0 - Ejecutando: IO_FS_TRUNCATE - Int4 , notas.txt , AX
+2024/07/18 02:10:28 PID: 0 - FETCH - Program Counter: 8
+2024/07/18 02:10:29 PID: 0 - Ejecutando: IO_FS_WRITE - Int4 , notas.txt , BX, EAX%!(EXTRA string=EBX)
+2024/07/18 02:10:30 PID: 0 - TLB HIT - Pagina: 0
+2024/07/18 02:10:30 PID: 0 - FETCH - Program Counter: 9
+2024/07/18 02:10:31 PID: 0 - Ejecutando: IO_FS_READ - Int4 , notas.txt , BX, EAX
+2024/07/18 02:10:32 PID: 0 - TLB HIT - Pagina: 0
+2024/07/18 02:16:21 Inicializando TLB con 4 entradas
+2024/07/18 02:18:23 Inicializando TLB con 4 entradas
+2024/07/18 02:19:31 PID: 0 - FETCH - Program Counter: 0
+2024/07/18 02:19:32 PID: 0 - Ejecutando: SET - AX,256
+2024/07/18 02:19:32 PID: 0 - FETCH - Program Counter: 1
+2024/07/18 02:19:33 PID: 0 - Ejecutando: SET - BX,0
+2024/07/18 02:19:33 PID: 0 - FETCH - Program Counter: 2
+2024/07/18 02:19:34 PID: 0 - Ejecutando: SET - EAX,16
+2024/07/18 02:19:34 PID: 0 - FETCH - Program Counter: 3
+2024/07/18 02:19:35 PID: 0 - Ejecutando: SET - EBX,0
+2024/07/18 02:19:35 PID: 0 - FETCH - Program Counter: 4
+2024/07/18 02:19:36 PID: 0 - Ejecutando: RESIZE - 256
+2024/07/18 02:19:37 PID: 0 - FETCH - Program Counter: 5
+2024/07/18 02:19:38 PID: 0 - Ejecutando: IO_STDIN_READ - Int3 , BX , EAX
+2024/07/18 02:19:39 PID: 0 - TLB MISS - Pagina: 0
+2024/07/18 02:19:40 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/18 02:20:03 PID: 0 - FETCH - Program Counter: 6
+2024/07/18 02:20:05 PID: 0 - Ejecutando: IO_FS_CREATE - Int4 , notas.txt
+2024/07/18 02:20:05 Se entró a IO_FS_CREATE en la CPU
+2024/07/18 02:20:05 Archivo 'notas.txt' creado en la interfaz 'Int4'
+2024/07/18 02:20:05 PID: 0 - FETCH - Program Counter: 7
+2024/07/18 02:20:06 PID: 0 - Ejecutando: IO_FS_TRUNCATE - Int4 , notas.txt , AX
+2024/07/18 02:20:06 PID: 0 - FETCH - Program Counter: 8
+2024/07/18 02:20:07 PID: 0 - Ejecutando: IO_FS_WRITE - Int4 , notas.txt , BX, EAX%!(EXTRA string=EBX)
+2024/07/18 02:20:08 PID: 0 - TLB HIT - Pagina: 0
+2024/07/18 02:20:08 PID: 0 - FETCH - Program Counter: 9
+2024/07/18 02:20:09 PID: 0 - Ejecutando: IO_FS_READ - Int4 , notas.txt , BX, EAX
+2024/07/18 02:20:10 PID: 0 - TLB HIT - Pagina: 0
+2024/07/18 02:26:16 Inicializando TLB con 4 entradas
+2024/07/18 02:27:13 PID: 0 - FETCH - Program Counter: 0
+2024/07/18 02:27:14 PID: 0 - Ejecutando: SET - AX,256
+2024/07/18 02:27:14 PID: 0 - FETCH - Program Counter: 1
+2024/07/18 02:27:15 PID: 0 - Ejecutando: SET - BX,0
+2024/07/18 02:27:15 PID: 0 - FETCH - Program Counter: 2
+2024/07/18 02:27:16 PID: 0 - Ejecutando: SET - EAX,16
+2024/07/18 02:27:16 PID: 0 - FETCH - Program Counter: 3
+2024/07/18 02:27:17 PID: 0 - Ejecutando: SET - EBX,0
+2024/07/18 02:27:17 PID: 0 - FETCH - Program Counter: 4
+2024/07/18 02:27:18 PID: 0 - Ejecutando: RESIZE - 256
+2024/07/18 02:27:19 PID: 0 - FETCH - Program Counter: 5
+2024/07/18 02:27:20 PID: 0 - Ejecutando: IO_STDIN_READ - Int3 , BX , EAX
+2024/07/18 02:27:21 PID: 0 - TLB MISS - Pagina: 0
+2024/07/18 02:27:22 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/18 02:27:58 PID: 0 - FETCH - Program Counter: 6
+2024/07/18 02:27:59 PID: 0 - Ejecutando: IO_FS_CREATE - Int4 , notas.txt
+2024/07/18 02:27:59 Se entró a IO_FS_CREATE en la CPU
+2024/07/18 02:27:59 Archivo 'notas.txt' creado en la interfaz 'Int4'
+2024/07/18 02:27:59 PID: 0 - FETCH - Program Counter: 7
+2024/07/18 02:28:00 PID: 0 - Ejecutando: IO_FS_TRUNCATE - Int4 , notas.txt , AX
+2024/07/18 02:28:31 PID: 1 - FETCH - Program Counter: 0
+2024/07/18 02:28:32 PID: 1 - Ejecutando: SET - AX,256
+2024/07/18 02:28:32 PID: 1 - FETCH - Program Counter: 1
+2024/07/18 02:28:33 PID: 1 - Ejecutando: SET - BX,0
+2024/07/18 02:28:33 PID: 1 - FETCH - Program Counter: 2
+2024/07/18 02:28:34 PID: 1 - Ejecutando: SET - EAX,16
+2024/07/18 02:28:34 PID: 1 - FETCH - Program Counter: 3
+2024/07/18 02:28:35 PID: 1 - Ejecutando: SET - EBX,0
+2024/07/18 02:28:35 PID: 1 - FETCH - Program Counter: 4
+2024/07/18 02:28:36 PID: 1 - Ejecutando: RESIZE - 256
+2024/07/18 02:28:37 PID: 1 - FETCH - Program Counter: 5
+2024/07/18 02:28:38 PID: 1 - Ejecutando: IO_STDIN_READ - Int3 , BX , EAX
+2024/07/18 02:28:39 PID: 1 - TLB MISS - Pagina: 0
+2024/07/18 02:28:40 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 16
+2024/07/18 02:30:14 Inicializando TLB con 4 entradas
+2024/07/18 02:31:23 PID: 0 - FETCH - Program Counter: 0
+2024/07/18 02:31:24 PID: 0 - Ejecutando: SET - AX,256
+2024/07/18 02:31:24 PID: 0 - FETCH - Program Counter: 1
+2024/07/18 02:31:25 PID: 0 - Ejecutando: SET - BX,0
+2024/07/18 02:31:25 PID: 0 - FETCH - Program Counter: 2
+2024/07/18 02:31:26 PID: 0 - Ejecutando: SET - EAX,16
+2024/07/18 02:31:26 PID: 0 - FETCH - Program Counter: 3
+2024/07/18 02:31:27 PID: 0 - Ejecutando: SET - EBX,0
+2024/07/18 02:31:27 PID: 0 - FETCH - Program Counter: 4
+2024/07/18 02:31:28 PID: 0 - Ejecutando: RESIZE - 256
+2024/07/18 02:31:29 PID: 0 - FETCH - Program Counter: 5
+2024/07/18 02:31:30 PID: 0 - Ejecutando: IO_STDIN_READ - Int3 , BX , EAX
+2024/07/18 02:31:31 PID: 0 - TLB MISS - Pagina: 0
+2024/07/18 02:31:32 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/18 02:31:46 PID: 0 - FETCH - Program Counter: 6
+2024/07/18 02:31:47 PID: 0 - Ejecutando: IO_FS_CREATE - Int4 , notas.txt
+2024/07/18 02:31:47 Se entró a IO_FS_CREATE en la CPU
+2024/07/18 02:31:47 Archivo 'notas.txt' creado en la interfaz 'Int4'
+2024/07/18 02:31:47 PID: 0 - FETCH - Program Counter: 7
+2024/07/18 02:31:48 PID: 0 - Ejecutando: IO_FS_TRUNCATE - Int4 , notas.txt , AX
+2024/07/18 02:31:48 PID: 0 - FETCH - Program Counter: 8
+2024/07/18 02:31:49 PID: 0 - Ejecutando: IO_FS_WRITE - Int4 , notas.txt , BX, EAX%!(EXTRA string=EBX)
+2024/07/18 02:31:50 PID: 0 - TLB HIT - Pagina: 0
+2024/07/18 02:31:50 PID: 0 - FETCH - Program Counter: 9
+2024/07/18 02:31:51 PID: 0 - Ejecutando: IO_FS_READ - Int4 , notas.txt , BX, EAX
+2024/07/18 02:31:52 PID: 0 - TLB HIT - Pagina: 0
+2024/07/18 02:31:54 PID: 0 - FETCH - Program Counter: 10
+2024/07/18 02:31:55 PID: 0 - Ejecutando: IO_FS_DELETE - Int4 , notas.txt
+2024/07/18 02:31:55 Archivo 'notas.txt' eliminado en la interfaz 'Int4'
+2024/07/18 02:31:55 PID: 0 - FETCH - Program Counter: 11
+2024/07/18 02:31:56 PID: 0 - Ejecutando: EXIT

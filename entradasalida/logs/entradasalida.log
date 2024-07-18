@@ -2490,3 +2490,143 @@ Configuracion cargada con exito!
 2024/07/11 14:59:28 Se recibió una solicitud en IO_FS_DELETE_Handler
 2024/07/11 14:59:28 Intentando eliminar archivo con nombre: leer2.txt
 2024/07/11 14:59:28 Archivo 'leer2.txt' eliminado
+2024/07/18 00:24:44 
+Configuracion cargada con exito!
+2024/07/18 00:26:01 
+Configuracion cargada con exito!
+2024/07/18 00:29:31 
+Configuracion cargada con exito!
+2024/07/18 00:33:34 
+Configuracion cargada con exito!
+2024/07/18 00:33:34 Se crearon los archivos de bloque y bitmap
+2024/07/18 00:59:57 
+Configuracion cargada con exito!
+2024/07/18 01:00:17 
+Configuracion cargada con exito!
+2024/07/18 01:04:15 
+Configuracion cargada con exito!
+2024/07/18 01:04:27 
+Configuracion cargada con exito!
+2024/07/18 01:05:23 Se guardo correctamente el mensaje
+2024/07/18 01:05:23 PID: 0 - Operación: IO_STDIN_READ
+2024/07/18 01:05:26 El archivo: notas.txt no existe
+2024/07/18 01:12:48 
+Configuracion cargada con exito!
+2024/07/18 01:13:05 
+Configuracion cargada con exito!
+2024/07/18 01:13:46 Se guardo correctamente el mensaje
+2024/07/18 01:13:46 PID: 0 - Operación: IO_STDIN_READ
+2024/07/18 01:13:48 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/18 01:13:48 Intentando crear archivo con nombre: notas.txt
+2024/07/18 01:13:48 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/18 01:13:48 Leyendo archivos de bloques y bitmap
+2024/07/18 01:13:48 Leyendo el bitmap
+2024/07/18 01:13:48 Buscando bloque libre
+2024/07/18 01:13:48 Bloque libre encontrado: 0
+2024/07/18 01:13:48 Actualización del bitmap completada
+2024/07/18 01:13:48 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/18 01:13:48 Archivo 'notas.txt' creado
+2024/07/18 02:00:12 
+Configuracion cargada con exito!
+2024/07/18 02:00:24 
+Configuracion cargada con exito!
+2024/07/18 02:01:18 Se guardo correctamente el mensaje
+2024/07/18 02:01:18 PID: 0 - Operación: IO_STDIN_READ
+2024/07/18 02:01:20 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/18 02:01:20 Intentando crear archivo con nombre: notas.txt
+2024/07/18 02:01:20 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/18 02:01:20 Error al crear archivo: el archivo ya existe
+2024/07/18 02:03:05 
+Configuracion cargada con exito!
+2024/07/18 02:03:20 
+Configuracion cargada con exito!
+2024/07/18 02:04:08 Se guardo correctamente el mensaje
+2024/07/18 02:04:08 PID: 0 - Operación: IO_STDIN_READ
+2024/07/18 02:04:10 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/18 02:04:10 Intentando crear archivo con nombre: notas.txt
+2024/07/18 02:04:10 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/18 02:04:10 Leyendo archivos de bloques y bitmap
+2024/07/18 02:04:10 Leyendo el bitmap
+2024/07/18 02:04:10 Buscando bloque libre
+2024/07/18 02:04:10 Bloque libre encontrado: 1
+2024/07/18 02:04:10 Actualización del bitmap completada
+2024/07/18 02:04:10 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/18 02:04:10 Archivo 'notas.txt' creado
+2024/07/18 02:04:12 PID: 0 - Truncar Archivo: notas.txt Tamaño: 0
+2024/07/18 02:04:12 
+[1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/07/18 02:08:55 
+Configuracion cargada con exito!
+2024/07/18 02:09:12 
+Configuracion cargada con exito!
+2024/07/18 02:10:26 Se guardo correctamente el mensaje
+2024/07/18 02:10:26 PID: 0 - Operación: IO_STDIN_READ
+2024/07/18 02:10:28 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/18 02:10:28 Intentando crear archivo con nombre: notas.txt
+2024/07/18 02:10:28 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/18 02:10:28 Leyendo archivos de bloques y bitmap
+2024/07/18 02:10:28 Leyendo el bitmap
+2024/07/18 02:10:28 Buscando bloque libre
+2024/07/18 02:10:28 Bloque libre encontrado: 2
+2024/07/18 02:10:28 Actualización del bitmap completada
+2024/07/18 02:10:28 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/18 02:10:28 Archivo 'notas.txt' creado
+2024/07/18 02:10:30 PID: 0 - Truncar Archivo: notas.txt Tamaño: 0
+2024/07/18 02:10:30 
+[1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/07/18 02:16:45 
+Configuracion cargada con exito!
+2024/07/18 02:16:55 
+Configuracion cargada con exito!
+2024/07/18 02:18:43 
+Configuracion cargada con exito!
+2024/07/18 02:19:13 
+Configuracion cargada con exito!
+2024/07/18 02:20:03 Se guardo correctamente el mensaje
+2024/07/18 02:20:03 PID: 0 - Operación: IO_STDIN_READ
+2024/07/18 02:20:06 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/18 02:20:06 Intentando crear archivo con nombre: notas.txt
+2024/07/18 02:20:06 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/18 02:20:06 Leyendo archivos de bloques y bitmap
+2024/07/18 02:20:06 Leyendo el bitmap
+2024/07/18 02:20:06 Buscando bloque libre
+2024/07/18 02:20:06 Bloque libre encontrado: 3
+2024/07/18 02:20:06 Actualización del bitmap completada
+2024/07/18 02:20:06 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/18 02:20:06 Archivo 'notas.txt' creado
+2024/07/18 02:20:08 PID: 0 - Truncar Archivo: notas.txt Tamaño: 0
+2024/07/18 02:20:08 
+[1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/07/18 02:26:40 
+Configuracion cargada con exito!
+2024/07/18 02:26:50 
+Configuracion cargada con exito!
+2024/07/18 02:27:58 Se guardo correctamente el mensaje
+2024/07/18 02:27:58 PID: 0 - Operación: IO_STDIN_READ
+2024/07/18 02:28:00 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/18 02:28:00 Intentando crear archivo con nombre: notas.txt
+2024/07/18 02:28:00 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/18 02:28:00 Error al crear archivo: el archivo ya existe
+2024/07/18 02:30:50 
+Configuracion cargada con exito!
+2024/07/18 02:31:01 
+Configuracion cargada con exito!
+2024/07/18 02:31:46 Se guardo correctamente el mensaje
+2024/07/18 02:31:46 PID: 0 - Operación: IO_STDIN_READ
+2024/07/18 02:31:48 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/18 02:31:48 Intentando crear archivo con nombre: notas.txt
+2024/07/18 02:31:48 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/18 02:31:48 Leyendo archivos de bloques y bitmap
+2024/07/18 02:31:48 Leyendo el bitmap
+2024/07/18 02:31:48 Buscando bloque libre
+2024/07/18 02:31:48 Bloque libre encontrado: 4
+2024/07/18 02:31:48 Actualización del bitmap completada
+2024/07/18 02:31:48 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/18 02:31:48 Archivo 'notas.txt' creado
+2024/07/18 02:31:50 PID: 0 - Truncar Archivo: notas.txt Tamaño: 0
+2024/07/18 02:31:50 
+[1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0]
+2024/07/18 02:31:54 El texto leido es: Hola mundo cruel
+2024/07/18 02:31:54 Escribo el texto en el archivo
+2024/07/18 02:31:54 PID: 0 - Operación: IO_FS_WRITE
+2024/07/18 02:31:54 PID: 0 - Escribir Archivo: notas.txt - Tamaño a Escribir:  16 - Puntero Archivo: 0

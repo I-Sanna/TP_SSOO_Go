@@ -26,7 +26,7 @@ type BodyEscritura struct {
 }
 type BodyRequestFS struct {
 	PID        int    `json:"pid"`
-	Archivo    string `json:"archivo"`
+	Archivo    string `json:"nombre_archivo"`
 	Tamaño     int    `json:"tamaño"`
 	Direccion  int    `json:"direccion"`
 	PtrArchivo int    `json:"ptrarchivo"`
@@ -190,7 +190,7 @@ func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
 		return
 	}
-	//fmt.Print("El tamaño pedido es: ", tamañoInt)
+	fmt.Print("El tamaño pedido es: ", tamañoInt)
 	direccionInt, err := strconv.Atoi(direccion)
 	if err != nil {
 		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
@@ -198,7 +198,9 @@ func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
 	}
 	fmt.Print("\nEsperando texto en consola... ")
 	textoIngresado := LeerConsola()
+	fmt.Print("\n Paso leer consola ")
 	textoBytes := []byte(textoIngresado)
+	fmt.Print("\nConvirtió a array de bytes el texto ")
 	if len(textoBytes) > tamañoInt {
 		http.Error(w, "El texto ingresado por consola excede el tamaño en bytes", http.StatusInternalServerError)
 		return
@@ -293,27 +295,6 @@ func IO_STDOUT_WRITE(w http.ResponseWriter, r *http.Request) {
 	//log.Printf("Direccion: %s - Operación: IO_STDOUT_WRITE", direccion)
 	log.Printf("PID: %d - Operación: IO_STDOUT_WRITE", pidInt)
 	log.Printf("El texto leido es: %s", respString)
-}
-
-func IO_FS_CREATE(w http.ResponseWriter, r *http.Request) {
-	pid := r.PathValue("pid")
-	nombreArchivo := r.PathValue("nombre")
-	pidInt, err := strconv.Atoi(pid)
-	if err != nil {
-		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
-		return
-	}
-	log.Printf("PID: %d - Crear Archivo: %s", pidInt, nombreArchivo)
-}
-func IO_FS_DELETE(w http.ResponseWriter, r *http.Request) {
-	pid := r.PathValue("pid")
-	nombreArchivo := r.PathValue("nombre")
-	pidInt, err := strconv.Atoi(pid)
-	if err != nil {
-		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
-		return
-	}
-	log.Printf("PID: %d - Eliminar Archivo: %s", pidInt, nombreArchivo)
 }
 
 type BodyTruncate struct {
@@ -599,6 +580,14 @@ func IO_FS_TRUNCATE(w http.ResponseWriter, r *http.Request) {
 	}
 
 	ModificarBitmap(bitmap)
+	respuesta, err := json.Marshal("OK")
+	if err != nil {
+		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
+	w.Write(respuesta)
 }
 
 func obtenerMetadata(filePath string) Metadata {
@@ -650,6 +639,7 @@ func readFromFile(filename string, ptr unsafe.Pointer, size int) error {
 }
 
 func IO_FS_WRITE(w http.ResponseWriter, r *http.Request) {
+	fmt.Printf("Entro al fs write IO")
 	var request BodyRequestFS
 	err := json.NewDecoder(r.Body).Decode(&request)
 	if err != nil {
@@ -673,6 +663,7 @@ func IO_FS_WRITE(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Error al codificar la solicitud %v", err)
 		return
 	}
+	fmt.Printf("Llamando a memoria para leer la direc %d, tamaño %d", request.Tamaño, request.Direccion)
 	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/leer"
 	fmt.Print("URL: ", url)
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
@@ -690,13 +681,20 @@ func IO_FS_WRITE(w http.ResponseWriter, r *http.Request) {
 	respString := string(response)
 
 	log.Printf("El texto leido es: %s", respString)
-	//Ahora debo escribirlo en el archivo correspondiente desde la posición indicada por ptrArchivo
+	log.Printf("Escribo el texto en el archivo")
 	writeToFile(request.Archivo, unsafe.Pointer(&request.PtrArchivo), request.Tamaño)
-	//Consume una unidad de trabajo
+
 	time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
 	log.Printf("PID: %d - Operación: IO_FS_WRITE", request.PID)
 	log.Printf("PID: %d - Escribir Archivo: %s - Tamaño a Escribir:  %d - Puntero Archivo: %d", request.PID, request.Archivo, request.Tamaño, request.PtrArchivo)
-	//log.Printf("PID: %d - Leer direccion de memoria: %d - Tamaño a Leer: %d - Archivo a escribir: %s- Puntero Archivo: %d", request.PID, request.Direccion, request.Tamaño, request.Archivo, request.PtrArchivo)
+	respuesta, err := json.Marshal("OK")
+	if err != nil {
+		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
+	w.Write(respuesta)
 }
 
 func IO_FS_READ(w http.ResponseWriter, r *http.Request) {

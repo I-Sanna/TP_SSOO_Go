@@ -63,15 +63,11 @@ var recursos map[string]int
 var puertosDispGenericos map[string]int
 var puertosDispSTDIN map[string]int
 var puertosDispSTDOUT map[string]int
-var puertosDispFSR map[string]int
-var puertosDispFSW map[string]int
 var puertosDispFS map[string]int
 var listaEsperaRecursos map[string][]int
 var listaEsperaGenericos map[string][]BodyIO
 var listaEsperaSTDIN map[string][]BodySTD
 var listaEsperaSTDOUT map[string][]BodySTD
-var listaEsperaFSW map[string][]BodyFS
-var listaEsperaFSR map[string][]BodyFS
 var listaEsperaFS map[string][]BodyFS
 
 type BodyIO struct {
@@ -141,8 +137,6 @@ func InicializarVariables() {
 	puertosDispGenericos = make(map[string]int)
 	puertosDispSTDIN = make(map[string]int)
 	puertosDispSTDOUT = make(map[string]int)
-	puertosDispFSR = make(map[string]int)
-	puertosDispFSW = make(map[string]int)
 	puertosDispFS = make(map[string]int)
 	listaEsperaRecursos = make(map[string][]int)
 	listaEsperaGenericos = make(map[string][]BodyIO)
@@ -850,7 +844,7 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 		}
 		dispositivoIO.Unlock()
 	case "DIALFS":
-		fmt.Println("Entró en el case de write en kernel")
+		fmt.Printf("DIALFS -- Instruccion: %s", TipoIO[1])
 		var datosFS BodyFS
 		datosFS.Instruccion = TipoIO[1]
 		datosFS.PID = request.PID
@@ -1090,6 +1084,7 @@ func InstruccionFS(nombreDispositivo string, puerto int) {
 			log.Printf("error al codificar la solicitud: %s", err.Error())
 		}
 		var resp *http.Response
+		fmt.Printf(proceso.Instruccion)
 		switch proceso.Instruccion {
 		case "CREATE":
 			url := fmt.Sprintf("http://localhost:%d/fs/create", puerto)
@@ -1100,11 +1095,11 @@ func InstruccionFS(nombreDispositivo string, puerto int) {
 		case "TRUNCATE":
 			url := fmt.Sprintf("http://localhost:%d/fs/truncate", puerto)
 			resp, err = http.Post(url, "application/json", bytes.NewBuffer(requestBody))
-		case "FSWRITE":
+		case "WRITE":
 			url := fmt.Sprintf("http://localhost:%d/fs/write", puerto)
 			resp, err = http.Post(url, "application/json", bytes.NewBuffer(requestBody))
 
-		case "FSREAD":
+		case "READ":
 			url := fmt.Sprintf("http://localhost:%d/fs/read", puerto)
 			resp, err = http.Post(url, "application/json", bytes.NewBuffer(requestBody))
 		}

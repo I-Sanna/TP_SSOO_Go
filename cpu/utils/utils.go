@@ -707,7 +707,7 @@ func IO_GEN_SLEEP(nombre string, tiempo int) {
 	interrupcion = true
 }
 
-func IO_STDIN_READ(nombre string, tamaño string, direccion string) {
+func IO_STDIN_READ(nombre string, direccion string, tamaño string) {
 	var sending BodyRequestSTD
 	dirLogica := ObtenerValorRegistro(direccion)
 	direccionFisica, err := mmu(procesoActual.PID, dirLogica)
@@ -744,7 +744,7 @@ func IO_STDIN_READ(nombre string, tamaño string, direccion string) {
 	interrupcion = true
 }
 
-func IO_STDOUT_WRITE(nombre string, tamaño string, direccion string) {
+func IO_STDOUT_WRITE(nombre string, direccion string, tamaño string) {
 	var sending BodyRequestSTD
 	dirLogica := ObtenerValorRegistro(direccion)
 	direccionFisica, err := mmu(procesoActual.PID, dirLogica)
@@ -787,6 +787,7 @@ func IO_FS_CREATE(interfaz string, nombreArchivo string) {
 	sending.Dispositivo = interfaz
 	sending.PID = procesoActual.PID
 	sending.Archivo = nombreArchivo
+	sending.Instruccion = "DIALFS CREATE"
 
 	body, err := json.Marshal(sending)
 	if err != nil {
@@ -1029,20 +1030,20 @@ func decoYExecInstru(instrucciones string) {
 		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3])
 		IO_FS_TRUNCATE(instru[1], instru[2], instru[3])
 	case "IO_FS_WRITE":
-		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v, %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3], instru[4])
-		interfaz := instru[0]
-		nombreArchivo := instru[1]
-		registroDirec := instru[2]
-		registroTamaño := instru[3]
-		registroPtrArchivo := instru[4]
+		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v, %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3], instru[4], instru[5])
+		interfaz := instru[1]
+		nombreArchivo := instru[2]
+		registroDirec := instru[3]
+		registroTamaño := instru[4]
+		registroPtrArchivo := instru[5]
 		IO_FS_WRITE(interfaz, nombreArchivo, registroDirec, registroTamaño, registroPtrArchivo)
 	case "IO_FS_READ":
 		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v, %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3], instru[4])
-		interfaz := instru[0]
-		nombreArchivo := instru[1]
-		registroDirec := instru[2]
-		registroTamaño := instru[3]
-		registroPtrArchivo := instru[4]
+		interfaz := instru[1]
+		nombreArchivo := instru[2]
+		registroDirec := instru[3]
+		registroTamaño := instru[4]
+		registroPtrArchivo := instru[5]
 		IO_FS_READ(interfaz, nombreArchivo, registroDirec, registroTamaño, registroPtrArchivo)
 	}
 }
