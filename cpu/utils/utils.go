@@ -707,10 +707,10 @@ func IO_GEN_SLEEP(nombre string, tiempo int) {
 	interrupcion = true
 }
 
-func IO_STDIN_READ(nombre string, tamaño int, direccion int) {
+func IO_STDIN_READ(nombre string, tamaño string, direccion string) {
 	var sending BodyRequestSTD
-	dirLogica := obtenerRegistro(string(direccion))
-	direccionFisica, err := mmu(procesoActual.PID, ObtenerValorRegistro(string(dirLogica)))
+	dirLogica := ObtenerValorRegistro(direccion)
+	direccionFisica, err := mmu(procesoActual.PID, dirLogica)
 	if err != nil {
 		log.Printf("Error al traducir dirección: %s", err.Error())
 		return
@@ -718,8 +718,7 @@ func IO_STDIN_READ(nombre string, tamaño int, direccion int) {
 
 	sending.Dispositivo = nombre
 	sending.PID = procesoActual.PID
-	sending.Tamaño = tamaño
-	//obtenerRegistro(string(tamaño))
+	sending.Tamaño = ObtenerValorRegistro(tamaño)
 	sending.Direccion = direccionFisica
 	sending.Instruccion = "READ"
 
@@ -745,10 +744,10 @@ func IO_STDIN_READ(nombre string, tamaño int, direccion int) {
 	interrupcion = true
 }
 
-func IO_STDOUT_WRITE(nombre string, tamaño int, direccion int) {
+func IO_STDOUT_WRITE(nombre string, tamaño string, direccion string) {
 	var sending BodyRequestSTD
-	dirLogica := obtenerRegistro(string(direccion))
-	direccionFisica, err := mmu(procesoActual.PID, ObtenerValorRegistro(string(dirLogica)))
+	dirLogica := ObtenerValorRegistro(direccion)
+	direccionFisica, err := mmu(procesoActual.PID, dirLogica)
 	if err != nil {
 		log.Printf("Error al traducir dirección: %s", err.Error())
 		return
@@ -756,8 +755,7 @@ func IO_STDOUT_WRITE(nombre string, tamaño int, direccion int) {
 
 	sending.Dispositivo = nombre
 	sending.PID = procesoActual.PID
-	sending.Tamaño = tamaño
-	//obtenerRegistro(string(tamaño))
+	sending.Tamaño = ObtenerValorRegistro(tamaño)
 	sending.Direccion = direccionFisica
 	sending.Instruccion = "WRITE"
 
@@ -783,76 +781,74 @@ func IO_STDOUT_WRITE(nombre string, tamaño int, direccion int) {
 	interrupcion = true
 }
 
-func IO_FS_CREATE(interfaz string, nombreArchivo string) error {
+func IO_FS_CREATE(interfaz string, nombreArchivo string) {
 	log.Printf("Se entró a IO_FS_CREATE en la CPU")
+	var sending BodyRequestFS
+	sending.Dispositivo = interfaz
+	sending.PID = procesoActual.PID
+	sending.Archivo = nombreArchivo
 
-	// Preparar la URL para la solicitud al Kernel
-	url := fmt.Sprintf("http://localhost:%d/fs/create", globals.ClientConfig.PortKernel)
-
-	// Crear el cuerpo de la solicitud
-	requestBody := map[string]string{
-		"nombreArchivo": nombreArchivo,
-	}
-
-	body, err := json.Marshal(requestBody)
+	body, err := json.Marshal(sending)
 	if err != nil {
-		log.Printf("Error al codificar el cuerpo de la solicitud: %v", err)
-		return fmt.Errorf("error al codificar el cuerpo de la solicitud: %w", err)
+		log.Printf("error codificando mensajes: %s", err.Error())
+		return
 	}
 
-	// Enviar la solicitud al Kernel
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
-		log.Printf("Error al enviar la solicitud al Kernel: %v", err)
-		return fmt.Errorf("error al enviar la solicitud al Kernel: %w", err)
+		log.Printf("error enviando: %s", err.Error())
+		return
 	}
+
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
-		log.Printf("Error del Kernel: %s", resp.Status)
-		return fmt.Errorf("error del Kernel: %s", resp.Status)
+		fmt.Printf("error del Kernel: %s", resp.Status)
+		return
 	}
 
 	log.Printf("Archivo '%s' creado en la interfaz '%s'", nombreArchivo, interfaz)
-	return nil
 }
 
-func IO_FS_DELETE(interfaz, nombreArchivo string) error {
-	// Preparar la URL para la solicitud al Kernel
-	url := fmt.Sprintf("http://localhost:%d/fs/delete", globals.ClientConfig.PortKernel)
+func IO_FS_DELETE(interfaz string, nombreArchivo string) {
+	var sending BodyRequestFS
+	sending.Dispositivo = interfaz
+	sending.PID = procesoActual.PID
+	sending.Archivo = nombreArchivo
+	sending.Instruccion = "DIALFS DELETE"
 
-	// Crear el cuerpo de la solicitud
-	requestBody := map[string]string{
-		"nombreArchivo": nombreArchivo,
-	}
-	body, err := json.Marshal(requestBody)
+	body, err := json.Marshal(sending)
 	if err != nil {
-		return fmt.Errorf("error al codificar el cuerpo de la solicitud: %w", err)
+		log.Printf("error codificando mensajes: %s", err.Error())
+		return
 	}
 
-	// Enviar la solicitud al Kernel
+	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
-		return fmt.Errorf("error al enviar la solicitud al Kernel: %w", err)
+		log.Printf("error enviando: %s", err.Error())
+		return
 	}
+
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
-		return fmt.Errorf("error del Kernel: %s", resp.Status)
+		fmt.Printf("error del Kernel: %s", resp.Status)
+		return
 	}
 
 	log.Printf("Archivo '%s' eliminado en la interfaz '%s'", nombreArchivo, interfaz)
-	return nil
 }
 
-func IO_FS_TRUNCATE(nombre string, tamaño int, direccion int) {
-	var sending BodyRequestSTD
+func IO_FS_TRUNCATE(nombreInterfaz string, nombreArchivo string, registroTamaño string) {
+	var sending BodyRequestFS
 
-	sending.Dispositivo = nombre
+	sending.Dispositivo = nombreInterfaz
+	sending.Archivo = nombreArchivo
 	sending.PID = procesoActual.PID
-	sending.Tamaño = tamaño
-	sending.Direccion = direccion
-	sending.Instruccion = "TRUNCATE"
+	sending.Tamaño = ObtenerValorRegistro(registroTamaño)
+	sending.Instruccion = "DIALFS TRUNCATE"
 
 	body, err := json.Marshal(sending)
 	if err != nil {
@@ -876,35 +872,11 @@ func IO_FS_TRUNCATE(nombre string, tamaño int, direccion int) {
 	interrupcion = true
 }
 
-func obtenerRegistro(registro string) []byte {
-	if len(registro) == 2 && strings.Contains(registro, "X") {
-		regDatos8 := ObtenerRegistro8Bits(registro)
-		if regDatos8 == nil {
-			log.Printf("Error: registro de 8 bits inválido")
-		}
-		// Convertir el valor del registro de 8 bits a []byte
-		registroEnBytes := []byte{*regDatos8}
-		return registroEnBytes
-
-	} else {
-		regDatos32 := ObtenerRegistro32Bits(registro)
-		if regDatos32 == nil {
-			log.Printf("Error: registro de 32 bits inválido")
-		}
-
-		// Convertir el valor del registro a []byte
-		registroEnBytes := make([]byte, 4)
-		binary.LittleEndian.PutUint32(registroEnBytes, *regDatos32)
-		return registroEnBytes
-	}
-
-}
-
-func IO_FS_WRITE(nombre string, nombreArchivo string, registroDirec int, registroTamaño int, registroPtrArchivo int) {
+func IO_FS_WRITE(nombre string, nombreArchivo string, registroDirec string, registroTamaño string, registroPtrArchivo string) {
 	var sending BodyRequestFS
 
-	dirLogica := obtenerRegistro(string(registroDirec))
-	direccionFisica, err := mmu(procesoActual.PID, ObtenerValorRegistro(string(dirLogica)))
+	dirLogica := ObtenerValorRegistro(registroDirec)
+	direccionFisica, err := mmu(procesoActual.PID, dirLogica)
 	if err != nil {
 		log.Printf("Error al traducir dirección: %s", err.Error())
 		return
@@ -912,12 +884,10 @@ func IO_FS_WRITE(nombre string, nombreArchivo string, registroDirec int, registr
 	sending.Dispositivo = nombre
 	sending.PID = procesoActual.PID
 	sending.Archivo = nombreArchivo
-	sending.Tamaño = registroTamaño
-	//obtenerRegistro(string(registroTamaño))
+	sending.Tamaño = ObtenerValorRegistro(registroTamaño)
 	sending.Direccion = direccionFisica
-	sending.PtrArchivo = registroPtrArchivo
-	//obtenerRegistro(string(registroPtrArchivo))
-	sending.Instruccion = "FSWRITE"
+	sending.PtrArchivo = ObtenerValorRegistro(registroPtrArchivo)
+	sending.Instruccion = "DIALFS WRITE"
 
 	body, err := json.Marshal(sending)
 	if err != nil {
@@ -942,10 +912,10 @@ func IO_FS_WRITE(nombre string, nombreArchivo string, registroDirec int, registr
 
 }
 
-func IO_FS_READ(nombre string, nombreArchivo string, registroDirec int, registroTamaño int, registroPtrArchivo int) {
+func IO_FS_READ(nombre string, nombreArchivo string, registroDirec string, registroTamaño string, registroPtrArchivo string) {
 	var sending BodyRequestFS
-	dirLogica := obtenerRegistro(string(registroDirec))
-	direccionFisica, err := mmu(procesoActual.PID, ObtenerValorRegistro(string(dirLogica)))
+	dirLogica := ObtenerValorRegistro(registroDirec)
+	direccionFisica, err := mmu(procesoActual.PID, dirLogica)
 	if err != nil {
 		log.Printf("Error al traducir dirección: %s", err.Error())
 		return
@@ -953,12 +923,10 @@ func IO_FS_READ(nombre string, nombreArchivo string, registroDirec int, registro
 	sending.Dispositivo = nombre
 	sending.PID = procesoActual.PID
 	sending.Archivo = nombreArchivo
-	sending.Tamaño = registroTamaño
-	//obtenerRegistro(string(registroTamaño))
+	sending.Tamaño = ObtenerValorRegistro(registroTamaño)
 	sending.Direccion = direccionFisica
-	sending.PtrArchivo = registroPtrArchivo
-	//obtenerRegistro(string(registroPtrArchivo))
-	sending.Instruccion = "FSREAD"
+	sending.PtrArchivo = ObtenerValorRegistro(registroPtrArchivo)
+	sending.Instruccion = "DIALFS READ"
 
 	body, err := json.Marshal(sending)
 	if err != nil {
@@ -1043,90 +1011,38 @@ func decoYExecInstru(instrucciones string) {
 		IO_GEN_SLEEP(instru[1], valor)
 	case "IO_STDIN_READ":
 		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3])
-		tamaño, err1 := strconv.Atoi(instru[2])
-		if err1 != nil {
-			log.Printf("error enviando: %s", err1.Error())
-			return
-		}
-		direccion, err := strconv.Atoi(instru[3])
-		if err != nil {
-			log.Printf("error enviando: %s", err.Error())
-			return
-		}
-		IO_STDIN_READ(instru[1], tamaño, direccion)
+		IO_STDIN_READ(instru[1], instru[2], instru[3])
 	case "IO_STDOUT_WRITE":
 		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3])
-		tamaño, err1 := strconv.Atoi(instru[2])
-		if err1 != nil {
-			log.Printf("error enviando: %s", err1.Error())
-			return
-		}
-		direccion, err := strconv.Atoi(instru[3])
-		if err != nil {
-			log.Printf("error enviando: %s", err.Error())
-			return
-		}
-		IO_STDOUT_WRITE(instru[1], tamaño, direccion)
+		IO_STDOUT_WRITE(instru[1], instru[2], instru[3])
 	case "IO_FS_CREATE":
 		log.Printf("PID: %d - Ejecutando: %v - %v , %v", procesoActual.PID, instru[0], instru[1], instru[2])
-		IO_FS_CREATE(instru[1], instru[2])
+		interfaz := instru[1]
+		nombreArchivo := instru[2]
+		IO_FS_CREATE(interfaz, nombreArchivo)
 	case "IO_FS_DELETE":
 		log.Printf("PID: %d - Ejecutando: %v - %v , %v", procesoActual.PID, instru[0], instru[1], instru[2])
-		IO_FS_DELETE(instru[1], instru[2])
+		interfaz := instru[1]
+		nombreArchivo := instru[2]
+		IO_FS_DELETE(interfaz, nombreArchivo)
 	case "IO_FS_TRUNCATE":
 		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3])
-		tamaño, err := strconv.Atoi(instru[2])
-		if err != nil {
-			log.Printf("error enviando: %s", err.Error())
-			return
-		}
-		direccion, err1 := strconv.Atoi(instru[3])
-		if err1 != nil {
-			log.Printf("error enviando: %s", err1.Error())
-			return
-		}
-		IO_FS_TRUNCATE(instru[1], tamaño, direccion)
+		IO_FS_TRUNCATE(instru[1], instru[2], instru[3])
 	case "IO_FS_WRITE":
 		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v, %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3], instru[4])
 		interfaz := instru[0]
 		nombreArchivo := instru[1]
-		//registroDirec := instru[2]
-		registroDirec, err := strconv.Atoi(instru[2])
-		if err != nil {
-			log.Printf("error enviando: %s", err.Error())
-			return
-		}
-		registroTamaño, err := strconv.Atoi(instru[3])
-		if err != nil {
-			log.Printf("error enviando: %s", err.Error())
-			return
-		}
-		registroPtrArchivo, err1 := strconv.Atoi(instru[4])
-		if err1 != nil {
-			log.Printf("error enviando: %s", err1.Error())
-			return
-		}
+		registroDirec := instru[2]
+		registroTamaño := instru[3]
+		registroPtrArchivo := instru[4]
 		IO_FS_WRITE(interfaz, nombreArchivo, registroDirec, registroTamaño, registroPtrArchivo)
 	case "IO_FS_READ":
 		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v, %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3], instru[4])
 		interfaz := instru[0]
 		nombreArchivo := instru[1]
-		//registroDirec := instru[2]
-		registroDirec, err := strconv.Atoi(instru[2])
-		if err != nil {
-			log.Printf("error enviando: %s", err.Error())
-			return
-		}
-		registroTamaño, err := strconv.Atoi(instru[3])
-		if err != nil {
-			log.Printf("error enviando: %s", err.Error())
-			return
-		}
-		registroPtrArchivo, err1 := strconv.Atoi(instru[4])
-		if err1 != nil {
-			log.Printf("error enviando: %s", err1.Error())
-			return
-		}
+		registroDirec := instru[2]
+		registroTamaño := instru[3]
+		registroPtrArchivo := instru[4]
 		IO_FS_READ(interfaz, nombreArchivo, registroDirec, registroTamaño, registroPtrArchivo)
 	}
 }

@@ -41,11 +41,7 @@ type Registros struct {
 // Semaforos
 var planificadorCortoPlazo sync.Mutex
 var planificadorLargoPlazo sync.Mutex
-var dispositivoGenerico sync.Mutex
-var dispositivoLectura sync.Mutex
-var dispositivoEscritura sync.Mutex
-var dispositivoLecturaFS sync.Mutex
-var dispositivoEscrituraFS sync.Mutex
+var dispositivoIO sync.Mutex
 var mutexColaListos sync.Mutex
 var mutexColaListosQuantum sync.Mutex
 var mutexColaBlocked sync.Mutex
@@ -92,19 +88,11 @@ type BodySTD struct {
 type BodyFS struct {
 	Dispositivo string `json:"dispositivo"`
 	PID         int    `json:"pid"`
-	Archivo     string `json:"archivo"`
+	Archivo     string `json:"nombre_archivo"`
 	Tamaño      int    `json:"tamaño"`
 	Direccion   int    `json:"direccion"`
 	PtrArchivo  int    `json:"ptrarchivo"`
 	Instruccion string `json:"instruccion"`
-}
-
-type BodyRequestFS struct {
-	PID        int    `json:"pid"`
-	Archivo    string `json:"archivo"`
-	Tamaño     int    `json:"tamaño"`
-	Direccion  int    `json:"direccion"`
-	PtrArchivo int    `json:"ptrarchivo"`
 }
 type BodyRequest struct {
 	Path string `json:"path"`
@@ -160,8 +148,6 @@ func InicializarVariables() {
 	listaEsperaGenericos = make(map[string][]BodyIO)
 	listaEsperaSTDIN = make(map[string][]BodySTD)
 	listaEsperaSTDOUT = make(map[string][]BodySTD)
-	listaEsperaFSW = make(map[string][]BodyFS)
-	listaEsperaFSR = make(map[string][]BodyFS)
 	listaEsperaFS = make(map[string][]BodyFS)
 	for i := 0; i < len(globals.ClientConfig.Resources); i++ {
 		recursos[globals.ClientConfig.Resources[i]] = globals.ClientConfig.Resource_instances[i]
@@ -807,24 +793,25 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 		log.Printf("error al decodificar mensaje: %s\n", err.Error())
 		return
 	}
+	TipoIO := strings.Split(strings.TrimRight(request.Instruccion, "\x00"), " ")
 
-	switch request.Instruccion {
+	switch TipoIO[0] {
 	case "SLEEP":
 		var datosIO BodyIO
 		datosIO.PID = request.PID
 		datosIO.CantidadIO = request.CantidadIO
 
-		dispositivoGenerico.Lock() //Habria que hacer un semaforo por dispostivo
+		dispositivoIO.Lock() //Habria que hacer un semaforo por dispostivo
 		puerto, ok := puertosDispGenericos[request.Dispositivo]
 		fmt.Println("Sleep por validar conexionIO")
 		if ok && validarConexionIO(puerto) {
 			go agregarElemAListaGenericos(request.Dispositivo, puerto, datosIO)
 		} else {
 			w.WriteHeader(http.StatusBadRequest)
-			dispositivoGenerico.Unlock()
+			dispositivoIO.Unlock()
 			return
 		}
-		dispositivoGenerico.Unlock()
+		dispositivoIO.Unlock()
 	case "READ":
 		fmt.Println("Entró en el case de read en kernel")
 		var datosSTD BodySTD
@@ -833,17 +820,17 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 		datosSTD.Direccion = request.Direccion
 
 		fmt.Println("Datos en READ ", request.PID, request.Tamaño, request.Direccion)
-		dispositivoLectura.Lock() //Habria que hacer un semaforo por dispostivo
+		dispositivoIO.Lock() //Habria que hacer un semaforo por dispostivo
 		puerto, ok := puertosDispSTDIN[request.Dispositivo]
 
 		if ok && validarConexionIO(puerto) {
 			go agregarElemAListaSTDIN(request.Dispositivo, puerto, datosSTD)
 		} else {
 			w.WriteHeader(http.StatusBadRequest)
-			dispositivoLectura.Unlock()
+			dispositivoIO.Unlock()
 			return
 		}
-		dispositivoLectura.Unlock()
+		dispositivoIO.Unlock()
 	case "WRITE":
 		fmt.Println("Entró en el case de write en kernel")
 		var datosSTD BodySTD
@@ -851,111 +838,38 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 		datosSTD.Tamaño = request.Tamaño
 		datosSTD.Direccion = request.Direccion
 
-		dispositivoEscritura.Lock() //Habria que hacer un semaforo por dispostivo
+		dispositivoIO.Lock() //Habria que hacer un semaforo por dispostivo
 		puerto, ok := puertosDispSTDOUT[request.Dispositivo]
 
 		if ok && validarConexionIO(puerto) {
 			go agregarElemAListaSTDOUT(request.Dispositivo, puerto, datosSTD)
 		} else {
 			w.WriteHeader(http.StatusBadRequest)
-			dispositivoEscritura.Unlock()
+			dispositivoIO.Unlock()
 			return
 		}
-		dispositivoEscritura.Unlock()
-	case "CREATE":
-		fmt.Println("Entró en el case de write en kernel")
-		var datosSTD BodySTD
-		datosSTD.PID = request.PID
-		datosSTD.Tamaño = request.Tamaño
-		datosSTD.Direccion = request.Direccion
-
-		dispositivoEscritura.Lock() //Habria que hacer un semaforo por dispostivo
-		puerto, ok := puertosDispSTDOUT[request.Dispositivo]
-
-		if ok && validarConexionIO(puerto) {
-			go agregarElemAListaSTDOUT(request.Dispositivo, puerto, datosSTD)
-		} else {
-			w.WriteHeader(http.StatusBadRequest)
-			dispositivoEscritura.Unlock()
-			return
-		}
-		dispositivoEscritura.Unlock()
-	case "DELETE":
-		fmt.Println("Entró en el case de write en kernel")
-		var datosSTD BodySTD
-		datosSTD.PID = request.PID
-		datosSTD.Tamaño = request.Tamaño
-		datosSTD.Direccion = request.Direccion
-
-		dispositivoEscritura.Lock() //Habria que hacer un semaforo por dispostivo
-		puerto, ok := puertosDispSTDOUT[request.Dispositivo]
-
-		if ok && validarConexionIO(puerto) {
-			go agregarElemAListaSTDOUT(request.Dispositivo, puerto, datosSTD)
-		} else {
-			w.WriteHeader(http.StatusBadRequest)
-			dispositivoEscritura.Unlock()
-			return
-		}
-		dispositivoEscritura.Unlock()
-	case "TRUNCATE":
-		fmt.Println("Entró en el case de write en kernel")
-		var datosSTD BodySTD
-		datosSTD.PID = request.PID
-		datosSTD.Tamaño = request.Tamaño
-		datosSTD.Direccion = request.Direccion
-
-		dispositivoEscritura.Lock() //Habria que hacer un semaforo por dispostivo
-		puerto, ok := puertosDispSTDOUT[request.Dispositivo]
-
-		if ok && validarConexionIO(puerto) {
-			go agregarElemAListaSTDOUT(request.Dispositivo, puerto, datosSTD)
-		} else {
-			w.WriteHeader(http.StatusBadRequest)
-			dispositivoEscritura.Unlock()
-			return
-		}
-		dispositivoEscritura.Unlock()
-	case "FSWRITE":
+		dispositivoIO.Unlock()
+	case "DIALFS":
 		fmt.Println("Entró en el case de write en kernel")
 		var datosFS BodyFS
+		datosFS.Instruccion = TipoIO[1]
 		datosFS.PID = request.PID
 		datosFS.Tamaño = request.Tamaño
 		datosFS.Direccion = request.Direccion
 		datosFS.Archivo = request.Archivo
 		datosFS.PtrArchivo = request.PtrArchivo
 
-		dispositivoEscrituraFS.Lock()
+		dispositivoIO.Lock()
 		puerto, ok := puertosDispFS[request.Dispositivo]
 
 		if ok && validarConexionIO(puerto) {
-			go agregarElemAListaFSW(request.Dispositivo, puerto, datosFS)
+			go agregarElemAListaFS(request.Dispositivo, puerto, datosFS)
 		} else {
 			w.WriteHeader(http.StatusBadRequest)
-			dispositivoEscrituraFS.Unlock()
+			dispositivoIO.Unlock()
 			return
 		}
-		dispositivoEscrituraFS.Unlock()
-	case "FSREAD":
-		fmt.Println("Entró en el case de write en kernel")
-		var datosFS BodyFS
-		datosFS.PID = request.PID
-		datosFS.Tamaño = request.Tamaño
-		datosFS.Direccion = request.Direccion
-		datosFS.Archivo = request.Archivo
-		datosFS.PtrArchivo = request.PtrArchivo
-
-		dispositivoLecturaFS.Lock()
-		puerto, ok := puertosDispFS[request.Dispositivo]
-
-		if ok && validarConexionIO(puerto) {
-			go agregarElemAListaFSR(request.Dispositivo, puerto, datosFS)
-		} else {
-			w.WriteHeader(http.StatusBadRequest)
-			dispositivoLecturaFS.Unlock()
-			return
-		}
-		dispositivoLecturaFS.Unlock()
+		dispositivoIO.Unlock()
 	}
 
 	w.WriteHeader(http.StatusOK)
@@ -985,19 +899,11 @@ func agregarElemAListaSTDOUT(dispositivo string, puerto int, datosSTD BodySTD) {
 	}
 }
 
-func agregarElemAListaFSW(dispositivo string, puerto int, datosFS BodyFS) {
+func agregarElemAListaFS(dispositivo string, puerto int, datosFS BodyFS) {
 	<-semProcesoBloqueado
 	listaEsperaFS[dispositivo] = append(listaEsperaFS[dispositivo], datosFS)
 	if len(listaEsperaFS[dispositivo]) == 1 {
-		go WriteFS(dispositivo, puerto)
-	}
-}
-
-func agregarElemAListaFSR(dispositivo string, puerto int, datosFS BodyFS) {
-	<-semProcesoBloqueado
-	listaEsperaFS[dispositivo] = append(listaEsperaFS[dispositivo], datosFS)
-	if len(listaEsperaFS[dispositivo]) == 1 {
-		go ReadFS(dispositivo, puerto)
+		go InstruccionFS(dispositivo, puerto)
 	}
 }
 
@@ -1008,16 +914,16 @@ func validarConexionIO(puerto int) bool {
 }
 
 func Sleep(nombreDispositivo string, puerto int) {
-	dispositivoGenerico.Lock()
+	dispositivoIO.Lock()
 	for len(listaEsperaGenericos[nombreDispositivo]) > 0 {
 		proceso := listaEsperaGenericos[nombreDispositivo][0]
-		dispositivoGenerico.Unlock()
+		dispositivoIO.Unlock()
 
 		mutexMapaEstados.Lock()
 		_, ok := estadosProcesos[proceso.PID]
 		mutexMapaEstados.Unlock()
 		if !ok {
-			dispositivoGenerico.Lock()
+			dispositivoIO.Lock()
 			listaEsperaGenericos[nombreDispositivo] = listaEsperaGenericos[nombreDispositivo][1:]
 			continue
 		}
@@ -1028,7 +934,7 @@ func Sleep(nombreDispositivo string, puerto int) {
 		if err != nil {
 
 			log.Printf("error enviando: %s", err.Error())
-			dispositivoGenerico.Lock()
+			dispositivoIO.Lock()
 
 			for _, elemento := range listaEsperaGenericos[nombreDispositivo] {
 				mutexColaBlocked.Lock()
@@ -1038,7 +944,7 @@ func Sleep(nombreDispositivo string, puerto int) {
 
 			delete(listaEsperaGenericos, nombreDispositivo)
 			delete(puertosDispGenericos, nombreDispositivo)
-			dispositivoGenerico.Unlock()
+			dispositivoIO.Unlock()
 			agregarProcesosALaColaListos()
 			return
 		}
@@ -1048,28 +954,28 @@ func Sleep(nombreDispositivo string, puerto int) {
 			return
 		}
 
-		dispositivoGenerico.Lock()
+		dispositivoIO.Lock()
 		listaEsperaGenericos[nombreDispositivo] = listaEsperaGenericos[nombreDispositivo][1:]
-		dispositivoGenerico.Unlock()
+		dispositivoIO.Unlock()
 
 		rehabilitarProcesoBlocked(proceso.PID)
 
-		dispositivoGenerico.Lock()
+		dispositivoIO.Lock()
 	}
-	dispositivoGenerico.Unlock()
+	dispositivoIO.Unlock()
 }
 
 func Read(nombreDispositivo string, puerto int) {
-	dispositivoLectura.Lock()
+	dispositivoIO.Lock()
 	for len(listaEsperaSTDIN[nombreDispositivo]) > 0 {
 		proceso := listaEsperaSTDIN[nombreDispositivo][0]
-		dispositivoLectura.Unlock()
+		dispositivoIO.Unlock()
 
 		mutexMapaEstados.Lock()
 		_, ok := estadosProcesos[proceso.PID]
 		mutexMapaEstados.Unlock()
 		if !ok {
-			dispositivoLectura.Lock()
+			dispositivoIO.Lock()
 			listaEsperaSTDIN[nombreDispositivo] = listaEsperaSTDIN[nombreDispositivo][1:]
 			continue
 		}
@@ -1080,7 +986,7 @@ func Read(nombreDispositivo string, puerto int) {
 		if err != nil {
 
 			log.Printf("error enviando: %s", err.Error())
-			dispositivoLectura.Lock()
+			dispositivoIO.Lock()
 
 			for _, elemento := range listaEsperaSTDIN[nombreDispositivo] {
 				mutexColaBlocked.Lock()
@@ -1090,7 +996,7 @@ func Read(nombreDispositivo string, puerto int) {
 
 			delete(listaEsperaSTDIN, nombreDispositivo)
 			delete(puertosDispSTDIN, nombreDispositivo)
-			dispositivoLectura.Unlock()
+			dispositivoIO.Unlock()
 			agregarProcesosALaColaListos()
 			return
 		}
@@ -1100,28 +1006,28 @@ func Read(nombreDispositivo string, puerto int) {
 			return
 		}
 
-		dispositivoLectura.Lock()
+		dispositivoIO.Lock()
 		listaEsperaSTDIN[nombreDispositivo] = listaEsperaSTDIN[nombreDispositivo][1:]
-		dispositivoLectura.Unlock()
+		dispositivoIO.Unlock()
 
 		rehabilitarProcesoBlocked(proceso.PID)
 
-		dispositivoLectura.Lock()
+		dispositivoIO.Lock()
 	}
-	dispositivoLectura.Unlock()
+	dispositivoIO.Unlock()
 }
 
 func Write(nombreDispositivo string, puerto int) {
-	dispositivoEscritura.Lock()
+	dispositivoIO.Lock()
 	for len(listaEsperaSTDOUT[nombreDispositivo]) > 0 {
 		proceso := listaEsperaSTDOUT[nombreDispositivo][0]
-		dispositivoEscritura.Unlock()
+		dispositivoIO.Unlock()
 
 		mutexMapaEstados.Lock()
 		_, ok := estadosProcesos[proceso.PID]
 		mutexMapaEstados.Unlock()
 		if !ok {
-			dispositivoEscritura.Lock()
+			dispositivoIO.Lock()
 			listaEsperaSTDOUT[nombreDispositivo] = listaEsperaSTDIN[nombreDispositivo][1:]
 			continue
 		}
@@ -1132,7 +1038,7 @@ func Write(nombreDispositivo string, puerto int) {
 		if err != nil {
 
 			log.Printf("error enviando: %s", err.Error())
-			dispositivoEscritura.Lock()
+			dispositivoIO.Lock()
 
 			for _, elemento := range listaEsperaSTDOUT[nombreDispositivo] {
 				mutexColaBlocked.Lock()
@@ -1142,7 +1048,7 @@ func Write(nombreDispositivo string, puerto int) {
 
 			delete(listaEsperaSTDOUT, nombreDispositivo)
 			delete(puertosDispSTDOUT, nombreDispositivo)
-			dispositivoEscritura.Unlock()
+			dispositivoIO.Unlock()
 			agregarProcesosALaColaListos()
 			return
 		}
@@ -1152,72 +1058,67 @@ func Write(nombreDispositivo string, puerto int) {
 			return
 		}
 
-		dispositivoEscritura.Lock()
+		dispositivoIO.Lock()
 		listaEsperaSTDOUT[nombreDispositivo] = listaEsperaSTDOUT[nombreDispositivo][1:]
-		dispositivoEscritura.Unlock()
+		dispositivoIO.Unlock()
 
 		rehabilitarProcesoBlocked(proceso.PID)
 
-		dispositivoEscritura.Lock()
+		dispositivoIO.Lock()
 	}
-	dispositivoEscritura.Unlock()
+	dispositivoIO.Unlock()
 }
 
-func WriteFS(nombreDispositivo string, puerto int) {
-	log.Printf("\n Entro al write fs (kernel)")
-	dispositivoEscrituraFS.Lock()
+func InstruccionFS(nombreDispositivo string, puerto int) {
+	log.Printf("\n Entro a la instruccion fs (kernel)")
+	dispositivoIO.Lock()
 	for len(listaEsperaFS[nombreDispositivo]) > 0 {
 		proceso := listaEsperaFS[nombreDispositivo][0]
-		dispositivoEscrituraFS.Unlock()
+		dispositivoIO.Unlock()
 
 		mutexMapaEstados.Lock()
 		_, ok := estadosProcesos[proceso.PID]
 		mutexMapaEstados.Unlock()
 		if !ok {
-			dispositivoEscritura.Lock()
+			dispositivoIO.Lock()
 			listaEsperaFS[nombreDispositivo] = listaEsperaFS[nombreDispositivo][1:]
 			continue
 		}
 
-		request := BodyRequestFS{
-			PID:        proceso.PID,
-			Archivo:    proceso.Archivo,
-			Tamaño:     proceso.Tamaño,
-			Direccion:  proceso.Direccion,
-			PtrArchivo: proceso.PtrArchivo,
-		}
-
-		requestBody, err := json.Marshal(request)
+		requestBody, err := json.Marshal(proceso)
 		if err != nil {
 			log.Printf("error al codificar la solicitud: %s", err.Error())
 		}
+		var resp *http.Response
+		switch proceso.Instruccion {
+		case "CREATE":
+			url := fmt.Sprintf("http://localhost:%d/fs/create", puerto)
+			resp, err = http.Post(url, "application/json", bytes.NewBuffer(requestBody))
+		case "DELETE":
+			url := fmt.Sprintf("http://localhost:%d/fs/delete", puerto)
+			resp, err = http.Post(url, "application/json", bytes.NewBuffer(requestBody))
+		case "TRUNCATE":
+			url := fmt.Sprintf("http://localhost:%d/fs/truncate", puerto)
+			resp, err = http.Post(url, "application/json", bytes.NewBuffer(requestBody))
+		case "FSWRITE":
+			url := fmt.Sprintf("http://localhost:%d/fs/write", puerto)
+			resp, err = http.Post(url, "application/json", bytes.NewBuffer(requestBody))
 
-		url := fmt.Sprintf("http://localhost:%d/fs/write", globals.ClientConfig.PortIO)
-		resp, err := http.Post(url, "application/json", bytes.NewBuffer(requestBody))
-
-		/*if err != nil {
-			return fmt.Errorf("error al enviar la solicitud al módulo de Interfaz de I/O: %w", err)
+		case "FSREAD":
+			url := fmt.Sprintf("http://localhost:%d/fs/read", puerto)
+			resp, err = http.Post(url, "application/json", bytes.NewBuffer(requestBody))
 		}
-		defer resp.Body.Close()
-
-		if resp.StatusCode != http.StatusOK {
-			return fmt.Errorf("error del módulo de Interfaz de I/O: %s", resp.Status)
-		}*/
-
 		if err != nil {
-
 			log.Printf("error enviando: %s", err.Error())
-			dispositivoEscrituraFS.Lock()
-
+			dispositivoIO.Lock()
 			for _, elemento := range listaEsperaFS[nombreDispositivo] {
 				mutexColaBlocked.Lock()
 				removerProcesoDeLista(&colaDeBlocked, elemento.PID, "LOST_CONNECTION_IO")
 				mutexColaBlocked.Unlock()
 			}
-
 			delete(listaEsperaFS, nombreDispositivo)
 			delete(puertosDispFS, nombreDispositivo)
-			dispositivoEscrituraFS.Unlock()
+			dispositivoIO.Unlock()
 			agregarProcesosALaColaListos()
 			return
 		}
@@ -1226,91 +1127,13 @@ func WriteFS(nombreDispositivo string, puerto int) {
 			log.Printf("error en la respuesta de la consulta: %s", resp.Status)
 			return
 		}
-
-		dispositivoEscrituraFS.Lock()
+		dispositivoIO.Lock()
 		listaEsperaFS[nombreDispositivo] = listaEsperaFS[nombreDispositivo][1:]
-		dispositivoEscrituraFS.Unlock()
-
+		dispositivoIO.Unlock()
 		rehabilitarProcesoBlocked(proceso.PID)
-
-		dispositivoEscrituraFS.Lock()
+		dispositivoIO.Lock()
 	}
-	dispositivoEscrituraFS.Unlock()
-}
-
-func ReadFS(nombreDispositivo string, puerto int) {
-	log.Printf("\n Entro al read fs (kernel)")
-	dispositivoEscrituraFS.Lock()
-	for len(listaEsperaFS[nombreDispositivo]) > 0 {
-		proceso := listaEsperaFS[nombreDispositivo][0]
-		dispositivoEscrituraFS.Unlock()
-
-		mutexMapaEstados.Lock()
-		_, ok := estadosProcesos[proceso.PID]
-		mutexMapaEstados.Unlock()
-		if !ok {
-			dispositivoEscritura.Lock()
-			listaEsperaFS[nombreDispositivo] = listaEsperaFS[nombreDispositivo][1:]
-			continue
-		}
-
-		request := BodyRequestFS{
-			PID:        proceso.PID,
-			Archivo:    proceso.Archivo,
-			Tamaño:     proceso.Tamaño,
-			Direccion:  proceso.Direccion,
-			PtrArchivo: proceso.PtrArchivo,
-		}
-
-		requestBody, err := json.Marshal(request)
-		if err != nil {
-			log.Printf("error al codificar la solicitud: %s", err)
-		}
-
-		url := fmt.Sprintf("http://localhost:%d/fs/read", globals.ClientConfig.PortIO)
-		resp, err := http.Post(url, "application/json", bytes.NewBuffer(requestBody))
-
-		/*if err != nil {
-			return fmt.Errorf("error al enviar la solicitud al módulo de Interfaz de I/O: %w", err)
-		}
-		defer resp.Body.Close()
-
-		if resp.StatusCode != http.StatusOK {
-			return fmt.Errorf("error del módulo de Interfaz de I/O: %s", resp.Status)
-		}*/
-
-		if err != nil {
-
-			log.Printf("error enviando: %s", err.Error())
-			dispositivoEscrituraFS.Lock()
-
-			for _, elemento := range listaEsperaFS[nombreDispositivo] {
-				mutexColaBlocked.Lock()
-				removerProcesoDeLista(&colaDeBlocked, elemento.PID, "LOST_CONNECTION_IO")
-				mutexColaBlocked.Unlock()
-			}
-
-			delete(listaEsperaFS, nombreDispositivo)
-			delete(puertosDispFS, nombreDispositivo)
-			dispositivoEscrituraFS.Unlock()
-			agregarProcesosALaColaListos()
-			return
-		}
-
-		if resp.StatusCode != http.StatusOK {
-			log.Printf("error en la respuesta de la consulta: %s", resp.Status)
-			return
-		}
-
-		dispositivoEscrituraFS.Lock()
-		listaEsperaFS[nombreDispositivo] = listaEsperaFS[nombreDispositivo][1:]
-		dispositivoEscrituraFS.Unlock()
-
-		rehabilitarProcesoBlocked(proceso.PID)
-
-		dispositivoEscrituraFS.Lock()
-	}
-	dispositivoEscrituraFS.Unlock()
+	dispositivoIO.Unlock()
 }
 
 func removerProcesoDeLista(lista *[]PCB, PID int, motivo string) {
