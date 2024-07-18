@@ -15913,3 +15913,100 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/07/18 02:31:50 aa 16
 2024/07/18 02:31:52 aa 16
 2024/07/18 02:31:53 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 16
+2024/07/18 14:20:20 open /home/utnso/mappa-pruebas/leer.txt: no such file or directory
+2024/07/18 14:24:31 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/18 14:24:31 PID: 0 - Tamaño: 256
+2024/07/18 14:24:37 256 256
+
+
+
+2024/07/18 14:24:37 tabla de paginas-------map[]
+2024/07/18 14:24:37 tabla GLOBAL de paginas------map[]
+2024/07/18 14:24:37 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/07/18 14:24:39 aa 16
+2024/07/18 14:24:40 PID: 0 - Pagina: 0 - Marco: 0
+2024/07/18 14:25:08 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 16
+2024/07/18 14:25:13 aa 16
+2024/07/18 14:25:15 aa 16
+2024/07/18 14:25:16 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 16
+2024/07/18 14:40:11 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/18 14:40:11 PID: 0 - Tamaño: 256
+2024/07/18 14:40:17 256 256
+
+
+
+2024/07/18 14:40:17 tabla de paginas-------map[]
+2024/07/18 14:40:17 tabla GLOBAL de paginas------map[]
+2024/07/18 14:40:17 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/07/18 14:40:19 aa 16
+2024/07/18 14:40:20 PID: 0 - Pagina: 0 - Marco: 0
+2024/07/18 14:42:04 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 16
+2024/07/18 14:43:58 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/18 14:43:58 PID: 0 - Tamaño: 256
+2024/07/18 14:44:04 256 256
+
+
+
+2024/07/18 14:44:04 tabla de paginas-------map[]
+2024/07/18 14:44:04 tabla GLOBAL de paginas------map[]
+2024/07/18 14:44:04 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/07/18 14:44:06 aa 16
+2024/07/18 14:44:07 PID: 0 - Pagina: 0 - Marco: 0
+2024/07/18 14:44:19 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 16
+2024/07/18 14:44:23 aa 16
+2024/07/18 14:44:25 aa 16
+2024/07/18 14:44:26 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 16
+2024/07/18 14:49:12 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/18 14:49:12 PID: 0 - Tamaño: 256
+2024/07/18 14:49:18 256 256
+
+
+
+2024/07/18 14:49:18 tabla de paginas-------map[]
+2024/07/18 14:49:18 tabla GLOBAL de paginas------map[]
+2024/07/18 14:49:18 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/07/18 14:49:20 aa 16
+2024/07/18 14:49:21 PID: 0 - Pagina: 0 - Marco: 0
+2024/07/18 14:49:36 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 16
+2024/07/18 14:49:40 aa 16
+2024/07/18 14:49:42 aa 16
+2024/07/18 14:49:43 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 16
+2024/07/18 14:56:00 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/18 14:56:00 PID: 0 - Tamaño: 256
+2024/07/18 14:56:07 256 256
+
+
+
+2024/07/18 14:56:07 tabla de paginas-------map[]
+2024/07/18 14:56:07 tabla GLOBAL de paginas------map[]
+2024/07/18 14:56:07 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/07/18 14:56:09 aa 16
+2024/07/18 14:56:10 PID: 0 - Pagina: 0 - Marco: 0
+2024/07/18 14:56:28 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 16
+2024/07/18 14:57:49 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/18 14:57:49 PID: 0 - Tamaño: 256
+2024/07/18 14:57:55 256 256
+
+
+
+2024/07/18 14:57:55 tabla de paginas-------map[]
+2024/07/18 14:57:55 tabla GLOBAL de paginas------map[]
+2024/07/18 14:57:55 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/07/18 14:57:57 aa 16
+2024/07/18 14:57:58 PID: 0 - Pagina: 0 - Marco: 0
+2024/07/18 14:58:39 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 16
+2024/07/18 14:58:43 aa 16
+2024/07/18 14:58:45 aa 16
+2024/07/18 14:58:46 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 16
+2024/07/18 15:14:33 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/18 15:14:33 PID: 0 - Tamaño: 256
+2024/07/18 15:14:39 256 256
+
+
+
+2024/07/18 15:14:39 tabla de paginas-------map[]
+2024/07/18 15:14:39 tabla GLOBAL de paginas------map[]
+2024/07/18 15:14:39 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/07/18 15:14:41 aa 16
+2024/07/18 15:14:42 PID: 0 - Pagina: 0 - Marco: 0
+2024/07/18 15:15:32 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 16

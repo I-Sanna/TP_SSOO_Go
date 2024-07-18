@@ -914,6 +914,7 @@ func IO_FS_WRITE(nombre string, nombreArchivo string, registroDirec string, regi
 }
 
 func IO_FS_READ(nombre string, nombreArchivo string, registroDirec string, registroTamaño string, registroPtrArchivo string) {
+	fmt.Printf("Entro al fs read en CPU")
 	var sending BodyRequestFS
 	dirLogica := ObtenerValorRegistro(registroDirec)
 	direccionFisica, err := mmu(procesoActual.PID, dirLogica)
@@ -1030,7 +1031,7 @@ func decoYExecInstru(instrucciones string) {
 		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3])
 		IO_FS_TRUNCATE(instru[1], instru[2], instru[3])
 	case "IO_FS_WRITE":
-		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v, %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3], instru[4], instru[5])
+		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v, %v, %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3], instru[4], instru[5])
 		interfaz := instru[1]
 		nombreArchivo := instru[2]
 		registroDirec := instru[3]
@@ -1038,7 +1039,7 @@ func decoYExecInstru(instrucciones string) {
 		registroPtrArchivo := instru[5]
 		IO_FS_WRITE(interfaz, nombreArchivo, registroDirec, registroTamaño, registroPtrArchivo)
 	case "IO_FS_READ":
-		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v, %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3], instru[4])
+		log.Printf("PID: %d - Ejecutando: %v - %v , %v , %v, %v, %v", procesoActual.PID, instru[0], instru[1], instru[2], instru[3], instru[4], instru[5])
 		interfaz := instru[1]
 		nombreArchivo := instru[2]
 		registroDirec := instru[3]

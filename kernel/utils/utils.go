@@ -813,7 +813,6 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 		datosSTD.Tamaño = request.Tamaño
 		datosSTD.Direccion = request.Direccion
 
-		fmt.Println("Datos en READ ", request.PID, request.Tamaño, request.Direccion)
 		dispositivoIO.Lock() //Habria que hacer un semaforo por dispostivo
 		puerto, ok := puertosDispSTDIN[request.Dispositivo]
 
@@ -1066,7 +1065,9 @@ func Write(nombreDispositivo string, puerto int) {
 func InstruccionFS(nombreDispositivo string, puerto int) {
 	log.Printf("\n Entro a la instruccion fs (kernel)")
 	dispositivoIO.Lock()
+	log.Printf("\n Entra al for para el switch por instruccion de fs lista de espera:  %v", listaEsperaFS[nombreDispositivo])
 	for len(listaEsperaFS[nombreDispositivo]) > 0 {
+		log.Printf("\n Entra al for para el switch por instruccion de fs ")
 		proceso := listaEsperaFS[nombreDispositivo][0]
 		dispositivoIO.Unlock()
 
@@ -1084,22 +1085,27 @@ func InstruccionFS(nombreDispositivo string, puerto int) {
 			log.Printf("error al codificar la solicitud: %s", err.Error())
 		}
 		var resp *http.Response
-		fmt.Printf(proceso.Instruccion)
+		fmt.Printf("\n\n Instruccion: %s", proceso.Instruccion)
 		switch proceso.Instruccion {
 		case "CREATE":
+			fmt.Printf("\n\n Proceso en CREATE: %v", proceso)
 			url := fmt.Sprintf("http://localhost:%d/fs/create", puerto)
 			resp, err = http.Post(url, "application/json", bytes.NewBuffer(requestBody))
 		case "DELETE":
+			fmt.Printf("\n\n Proceso en DELETE: %v", proceso)
 			url := fmt.Sprintf("http://localhost:%d/fs/delete", puerto)
 			resp, err = http.Post(url, "application/json", bytes.NewBuffer(requestBody))
 		case "TRUNCATE":
+			fmt.Printf("\n\n Proceso en TRUNCATE: %v", proceso)
 			url := fmt.Sprintf("http://localhost:%d/fs/truncate", puerto)
 			resp, err = http.Post(url, "application/json", bytes.NewBuffer(requestBody))
 		case "WRITE":
+			fmt.Printf("\n\n Proceso en write: %v", proceso)
 			url := fmt.Sprintf("http://localhost:%d/fs/write", puerto)
 			resp, err = http.Post(url, "application/json", bytes.NewBuffer(requestBody))
-
 		case "READ":
+			fmt.Printf("\n\n Proceso en READ: %v", proceso)
+			fmt.Printf("\n\n Entro al fs read en kernel, puerto: %d", puerto)
 			url := fmt.Sprintf("http://localhost:%d/fs/read", puerto)
 			resp, err = http.Post(url, "application/json", bytes.NewBuffer(requestBody))
 		}

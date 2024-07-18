@@ -585,7 +585,7 @@ func IO_FS_TRUNCATE(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
 		return
 	}
-
+	//time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
 }
@@ -663,7 +663,7 @@ func IO_FS_WRITE(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Error al codificar la solicitud %v", err)
 		return
 	}
-	fmt.Printf("Llamando a memoria para leer la direc %d, tamaño %d", request.Tamaño, request.Direccion)
+	fmt.Printf("Llamando a memoria para leer la direc %d, tamaño %d", request.Direccion, request.Tamaño)
 	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/leer"
 	fmt.Print("URL: ", url)
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
@@ -677,14 +677,12 @@ func IO_FS_WRITE(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Error al decodificar mensaje: %s\n", err.Error())
 		return
 	}
-	time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
+	//time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
 	respString := string(response)
 
 	log.Printf("El texto leido es: %s", respString)
 	log.Printf("Escribo el texto en el archivo")
 	writeToFile(request.Archivo, unsafe.Pointer(&request.PtrArchivo), request.Tamaño)
-
-	time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
 	log.Printf("PID: %d - Operación: IO_FS_WRITE", request.PID)
 	log.Printf("PID: %d - Escribir Archivo: %s - Tamaño a Escribir:  %d - Puntero Archivo: %d", request.PID, request.Archivo, request.Tamaño, request.PtrArchivo)
 	respuesta, err := json.Marshal("OK")
@@ -698,6 +696,7 @@ func IO_FS_WRITE(w http.ResponseWriter, r *http.Request) {
 }
 
 func IO_FS_READ(w http.ResponseWriter, r *http.Request) {
+	fmt.Printf("Entro al fs read IO")
 	var request BodyRequestFS
 	err := json.NewDecoder(r.Body).Decode(&request)
 	if err != nil {
@@ -716,7 +715,6 @@ func IO_FS_READ(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Error leyendo del archivo")
 	}
 	log.Printf("El texto leido es: %s", string(textoLeido))
-	//Solicitar a memoria guardar lo leído en la direccion indicada
 	fmt.Print("\nGuardando texto en memoria... ")
 	var requestBody = BodyEscritura{
 		PID:       request.PID,
@@ -750,11 +748,9 @@ func IO_FS_READ(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
-	//Consume una unidad de trabajo
-	time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
-	log.Printf("PID: %d - Operación: IO_FS_WRITE", request.PID)
+	//time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
+	log.Printf("PID: %d - Operación: IO_FS_READ", request.PID)
 	log.Printf("PID: %d - Leer Archivo: %s - Tamaño a Leer: %d - Puntero Archivo: %d ", request.PID, request.Archivo, request.Tamaño, request.PtrArchivo)
-	//log.Printf("PID: %d - Leer Archivo: %s - Tamaño a Leer: %d - Puntero Archivo: %d - Direccion de memoria a escribir: %d", request.PID, request.Archivo, request.Tamaño, request.PtrArchivo, request.Direccion)
 }
 
 func EstablecerConexion(nombre string, puerto int) {
@@ -799,6 +795,7 @@ type ConfigResponse struct {
 }
 
 type BodyFileRequest struct {
+	PID           int    `json:"pid"`
 	NombreArchivo string `json:"nombre_archivo"`
 }
 
@@ -843,9 +840,11 @@ func IO_FS_CREATE_Handler(w http.ResponseWriter, r *http.Request) {
 		Status:  "OK",
 		Message: "Archivo creado correctamente",
 	}
+	//time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
 	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(response)
 	log.Printf("Archivo '%s' creado", request.NombreArchivo)
+	log.Printf("PID: %d - Crear Archivo: %s", request.PID, request.NombreArchivo)
 }
 
 func IO_FS_DELETE_Handler(w http.ResponseWriter, r *http.Request) {
@@ -886,7 +885,9 @@ func IO_FS_DELETE_Handler(w http.ResponseWriter, r *http.Request) {
 	}
 	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(response)
+	//time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
 	log.Printf("Archivo '%s' eliminado", request.NombreArchivo)
+	log.Printf("PID: %d - Delete Archivo: %s", request.PID, request.NombreArchivo)
 }
 
 func CrearArchivoFS(nombreArchivo string) error {
