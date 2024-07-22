@@ -804,12 +804,14 @@ func IO_FS_CREATE(interfaz string, nombreArchivo string) {
 
 	defer resp.Body.Close()
 
+	mutexMensaje.Lock()
 	if resp.StatusCode != http.StatusOK {
-		fmt.Printf("error del Kernel: %s", resp.Status)
-		return
+		resultadoEjecucion.Mensaje = "EXIT INVALID_IO"
+	} else {
+		resultadoEjecucion.Mensaje = "BLOCKED " + sending.Dispositivo
 	}
-
-	log.Printf("Archivo '%s' creado en la interfaz '%s'", nombreArchivo, interfaz)
+	mutexMensaje.Unlock()
+	interrupcion = true
 }
 
 func IO_FS_DELETE(interfaz string, nombreArchivo string) {
@@ -834,12 +836,14 @@ func IO_FS_DELETE(interfaz string, nombreArchivo string) {
 
 	defer resp.Body.Close()
 
+	mutexMensaje.Lock()
 	if resp.StatusCode != http.StatusOK {
-		fmt.Printf("error del Kernel: %s", resp.Status)
-		return
+		resultadoEjecucion.Mensaje = "EXIT INVALID_IO"
+	} else {
+		resultadoEjecucion.Mensaje = "BLOCKED " + sending.Dispositivo
 	}
-
-	log.Printf("Archivo '%s' eliminado en la interfaz '%s'", nombreArchivo, interfaz)
+	mutexMensaje.Unlock()
+	interrupcion = true
 }
 
 func IO_FS_TRUNCATE(nombreInterfaz string, nombreArchivo string, registroTamaño string) {

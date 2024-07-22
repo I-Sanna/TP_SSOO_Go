@@ -12,7 +12,6 @@ import (
 	"os"
 	"strconv"
 	"time"
-	"unsafe"
 )
 
 type BodyRequestTime struct {
@@ -528,7 +527,7 @@ func IO_FS_TRUNCATE(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	log.Printf("PID: %d - Truncar Archivo: %s Tamaño: %d", request.Pid, request.NombreArchivo, request.Tamaño)
+	log.Printf("PID: %d - Truncar Archivo: %s - Tamaño: %d", request.Pid, request.NombreArchivo, request.Tamaño)
 
 	metadata := obtenerMetadata(metadataPath)
 
@@ -604,38 +603,32 @@ func obtenerMetadata(filePath string) Metadata {
 	return metadata
 }
 
-func writeToFile(filename string, ptr unsafe.Pointer, size int) error {
-	file, err := os.OpenFile(filename, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0644)
-	if err != nil {
-		return err
-	}
+func writeToFile(filename string, ptr int, data []byte) error {
+	metadata := obtenerMetadata(globals.ClientConfig.DialfsPath + "/" + filename + ".json")
+
+	file, err := os.OpenFile(globals.ClientConfig.DialfsPath+"/bloques.dat", os.O_RDWR, 0644)
+	check(err)
 	defer file.Close()
 
-	data := (*[1 << 30]byte)(ptr)[:size:size]
-
-	_, err = file.Write(data)
-	if err != nil {
-		return err
-	}
+	_, err = file.WriteAt(data, int64(metadata.InitialBlock*globals.ClientConfig.DialfsBlockSize)+int64(ptr))
+	check(err)
 
 	return nil
 }
-func readFromFile(filename string, ptr unsafe.Pointer, size int) error {
-	file, err := os.Open(filename)
-	if err != nil {
-		log.Printf("Error al intentar abrir el archivo")
-		return err
-	}
+
+func readFromFile(filename string, ptr int, size int) []byte {
+	metadata := obtenerMetadata(globals.ClientConfig.DialfsPath + "/" + filename + ".json")
+
+	textoLeido := make([]byte, size)
+
+	file, err := os.OpenFile(globals.ClientConfig.DialfsPath+"/bloques.dat", os.O_RDWR, 0644)
+	check(err)
 	defer file.Close()
 
-	data := (*[1 << 30]byte)(ptr)[:size:size]
+	_, err = file.ReadAt(textoLeido, int64(metadata.InitialBlock*globals.ClientConfig.DialfsBlockSize)+int64(ptr))
+	check(err)
 
-	_, err = file.Read(data)
-	if err != nil {
-		return err
-	}
-
-	return nil
+	return textoLeido
 }
 
 func IO_FS_WRITE(w http.ResponseWriter, r *http.Request) {
@@ -663,9 +656,8 @@ func IO_FS_WRITE(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Error al codificar la solicitud %v", err)
 		return
 	}
-	fmt.Printf("Llamando a memoria para leer la direc %d, tamaño %d", request.Direccion, request.Tamaño)
+	fmt.Printf("\nLlamando a memoria para leer la direc %d, tamaño %d", request.Direccion, request.Tamaño)
 	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/leer"
-	fmt.Print("URL: ", url)
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
 		log.Printf("error enviando: %s", err.Error())
@@ -682,7 +674,7 @@ func IO_FS_WRITE(w http.ResponseWriter, r *http.Request) {
 
 	log.Printf("El texto leido es: %s", respString)
 	log.Printf("Escribo el texto en el archivo")
-	writeToFile(request.Archivo, unsafe.Pointer(&request.PtrArchivo), request.Tamaño)
+	writeToFile(request.Archivo, request.PtrArchivo, response)
 	log.Printf("PID: %d - Operación: IO_FS_WRITE", request.PID)
 	log.Printf("PID: %d - Escribir Archivo: %s - Tamaño a Escribir:  %d - Puntero Archivo: %d", request.PID, request.Archivo, request.Tamaño, request.PtrArchivo)
 	respuesta, err := json.Marshal("OK")
@@ -696,7 +688,7 @@ func IO_FS_WRITE(w http.ResponseWriter, r *http.Request) {
 }
 
 func IO_FS_READ(w http.ResponseWriter, r *http.Request) {
-	fmt.Printf("Entro al fs read IO")
+	fmt.Printf("\nEntro al fs read IO")
 	var request BodyRequestFS
 	err := json.NewDecoder(r.Body).Decode(&request)
 	if err != nil {
@@ -709,11 +701,9 @@ func IO_FS_READ(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	//Leer del archivo desde el ptr indicado
-	textoLeido := make([]byte, request.Tamaño)
-	err2 := readFromFile(request.Archivo, unsafe.Pointer(&request.PtrArchivo), request.Tamaño)
-	if err2 != nil {
-		log.Printf("Error leyendo del archivo")
-	}
+
+	textoLeido := readFromFile(request.Archivo, request.PtrArchivo, request.Tamaño)
+
 	log.Printf("El texto leido es: %s", string(textoLeido))
 	fmt.Print("\nGuardando texto en memoria... ")
 	var requestBody = BodyEscritura{

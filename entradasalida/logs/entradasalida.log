@@ -2767,3 +2767,433 @@ Configuracion cargada con exito!
 2024/07/18 15:15:34 Archivo de metadata 'notas.txt' creado con éxito
 2024/07/18 15:15:34 Archivo 'notas.txt' creado
 2024/07/18 15:15:34 PID: 0 - Crear Archivo: notas.txt
+2024/07/22 10:44:36 
+Configuracion cargada con exito!
+2024/07/22 10:45:13 
+Configuracion cargada con exito!
+2024/07/22 10:47:08 Se guardo correctamente el mensaje
+2024/07/22 10:47:08 PID: 0 - Operación: IO_STDIN_READ
+2024/07/22 10:47:10 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/22 10:47:10 Parámetros inválidos: nombreArchivo está vacío
+2024/07/22 10:53:52 
+Configuracion cargada con exito!
+2024/07/22 10:53:52 error enviando: Post "http://localhost:8001/nuevoIO": dial tcp 127.0.0.1:8001: connect: connection refused
+2024/07/22 10:55:04 
+Configuracion cargada con exito!
+2024/07/22 10:55:18 
+Configuracion cargada con exito!
+2024/07/22 10:56:07 Se guardo correctamente el mensaje
+2024/07/22 10:56:07 PID: 0 - Operación: IO_STDIN_READ
+2024/07/22 10:56:09 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/22 10:56:09 Intentando crear archivo con nombre: notas.txt
+2024/07/22 10:56:09 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/22 10:56:09 Leyendo archivos de bloques y bitmap
+2024/07/22 10:56:09 Leyendo el bitmap
+2024/07/22 10:56:09 Buscando bloque libre
+2024/07/22 10:56:09 Bloque libre encontrado: 0
+2024/07/22 10:56:09 Actualización del bitmap completada
+2024/07/22 10:56:09 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/22 10:56:09 Archivo 'notas.txt' creado
+2024/07/22 10:56:09 PID: 0 - Crear Archivo: notas.txt
+2024/07/22 10:58:56 
+Configuracion cargada con exito!
+2024/07/22 10:59:07 
+Configuracion cargada con exito!
+2024/07/22 10:59:33 Se guardo correctamente el mensaje
+2024/07/22 10:59:33 PID: 0 - Operación: IO_STDIN_READ
+2024/07/22 10:59:35 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/22 10:59:35 Intentando crear archivo con nombre: notas.txt
+2024/07/22 10:59:35 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/22 10:59:35 Error al crear archivo: el archivo ya existe
+2024/07/22 11:01:56 
+Configuracion cargada con exito!
+2024/07/22 11:02:05 
+Configuracion cargada con exito!
+2024/07/22 11:02:42 Se guardo correctamente el mensaje
+2024/07/22 11:02:42 PID: 0 - Operación: IO_STDIN_READ
+2024/07/22 11:02:44 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/22 11:02:44 Intentando crear archivo con nombre: notas.txt
+2024/07/22 11:02:44 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/22 11:02:44 Leyendo archivos de bloques y bitmap
+2024/07/22 11:02:44 Leyendo el bitmap
+2024/07/22 11:02:44 Buscando bloque libre
+2024/07/22 11:02:44 Bloque libre encontrado: 2
+2024/07/22 11:02:44 Actualización del bitmap completada
+2024/07/22 11:02:44 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/22 11:02:44 Archivo 'notas.txt' creado
+2024/07/22 11:02:44 PID: 0 - Crear Archivo: notas.txt
+2024/07/22 11:02:46 PID: 0 - Truncar Archivo: notas.txt Tamaño: 0
+2024/07/22 11:02:46 
+[1 1 1 0 0 0 0 0 1 0 0 0 0 0 0 0]
+2024/07/22 11:02:49 El texto leido es: hola mundo arbol
+2024/07/22 11:02:49 Escribo el texto en el archivo
+2024/07/22 11:02:49 PID: 0 - Operación: IO_FS_WRITE
+2024/07/22 11:02:49 PID: 0 - Escribir Archivo: notas.txt - Tamaño a Escribir:  16 - Puntero Archivo: 0
+2024/07/22 11:20:38 
+Configuracion cargada con exito!
+2024/07/22 11:20:49 
+Configuracion cargada con exito!
+2024/07/22 11:21:59 
+Configuracion cargada con exito!
+2024/07/22 11:22:11 
+Configuracion cargada con exito!
+2024/07/22 11:22:11 Se crearon los archivos de bloque y bitmap
+2024/07/22 11:22:52 Se guardo correctamente el mensaje
+2024/07/22 11:22:52 PID: 0 - Operación: IO_STDIN_READ
+2024/07/22 11:22:54 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/22 11:22:54 Intentando crear archivo con nombre: notas.txt
+2024/07/22 11:22:54 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/22 11:22:54 Leyendo archivos de bloques y bitmap
+2024/07/22 11:22:54 Leyendo el bitmap
+2024/07/22 11:22:54 Buscando bloque libre
+2024/07/22 11:22:54 Bloque libre encontrado: 0
+2024/07/22 11:22:54 Actualización del bitmap completada
+2024/07/22 11:22:54 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/22 11:22:54 Archivo 'notas.txt' creado
+2024/07/22 11:22:54 PID: 0 - Crear Archivo: notas.txt
+2024/07/22 11:22:56 PID: 0 - Truncar Archivo: notas.txt - Tamaño: 0
+2024/07/22 11:22:56 
+[1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/07/22 11:22:59 El texto leido es: hola mundo arbol
+2024/07/22 11:22:59 Escribo el texto en el archivo
+2024/07/22 11:22:59 PID: 0 - Operación: IO_FS_WRITE
+2024/07/22 11:22:59 PID: 0 - Escribir Archivo: notas.txt - Tamaño a Escribir:  16 - Puntero Archivo: 0
+2024/07/22 11:26:54 
+Configuracion cargada con exito!
+2024/07/22 11:27:06 
+Configuracion cargada con exito!
+2024/07/22 11:28:10 
+Configuracion cargada con exito!
+2024/07/22 11:28:23 
+Configuracion cargada con exito!
+2024/07/22 11:29:14 Se guardo correctamente el mensaje
+2024/07/22 11:29:14 PID: 0 - Operación: IO_STDIN_READ
+2024/07/22 11:29:16 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/22 11:29:16 Intentando crear archivo con nombre: notas.txt
+2024/07/22 11:29:16 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/22 11:29:16 Leyendo archivos de bloques y bitmap
+2024/07/22 11:29:16 Error al crear archivo: no se pudo abrir el archivo de bloques: open /home/utnso/dialfs/bloques.dat: no such file or directory
+2024/07/22 11:35:34 
+Configuracion cargada con exito!
+2024/07/22 11:35:45 
+Configuracion cargada con exito!
+2024/07/22 11:35:45 Se crearon los archivos de bloque y bitmap
+2024/07/22 11:36:13 Se guardo correctamente el mensaje
+2024/07/22 11:36:13 PID: 0 - Operación: IO_STDIN_READ
+2024/07/22 11:36:14 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/22 11:36:14 Intentando crear archivo con nombre: notas.txt
+2024/07/22 11:36:14 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/22 11:36:14 Leyendo archivos de bloques y bitmap
+2024/07/22 11:36:14 Leyendo el bitmap
+2024/07/22 11:36:14 Buscando bloque libre
+2024/07/22 11:36:14 Bloque libre encontrado: 0
+2024/07/22 11:36:14 Actualización del bitmap completada
+2024/07/22 11:36:14 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/22 11:36:14 Archivo 'notas.txt' creado
+2024/07/22 11:36:14 PID: 0 - Crear Archivo: notas.txt
+2024/07/22 11:36:15 PID: 0 - Truncar Archivo: notas.txt - Tamaño: 0
+2024/07/22 11:36:15 
+[1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/07/22 11:36:18 El texto leido es: hola mundo arbol
+2024/07/22 11:36:18 Escribo el texto en el archivo
+2024/07/22 11:36:18 PID: 0 - Operación: IO_FS_WRITE
+2024/07/22 11:36:18 PID: 0 - Escribir Archivo: notas.txt - Tamaño a Escribir:  16 - Puntero Archivo: 0
+2024/07/22 11:36:20 El texto leido es:                 
+2024/07/22 11:36:21 Se guardo correctamente el mensaje
+2024/07/22 11:36:21 PID: 0 - Operación: IO_FS_READ
+2024/07/22 11:36:21 PID: 0 - Leer Archivo: notas.txt - Tamaño a Leer: 16 - Puntero Archivo: 0 
+2024/07/22 11:36:22 Se recibió una solicitud en IO_FS_DELETE_Handler
+2024/07/22 11:36:22 Intentando eliminar archivo con nombre: notas.txt
+2024/07/22 11:36:22 Archivo 'notas.txt' eliminado
+2024/07/22 11:36:22 PID: 0 - Delete Archivo: notas.txt
+2024/07/22 11:44:18 
+Configuracion cargada con exito!
+2024/07/22 11:44:29 
+Configuracion cargada con exito!
+2024/07/22 11:45:29 Se guardo correctamente el mensaje
+2024/07/22 11:45:29 PID: 0 - Operación: IO_STDIN_READ
+2024/07/22 11:45:30 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/22 11:45:30 Intentando crear archivo con nombre: notas.txt
+2024/07/22 11:45:30 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/22 11:45:30 Leyendo archivos de bloques y bitmap
+2024/07/22 11:45:30 Leyendo el bitmap
+2024/07/22 11:45:30 Buscando bloque libre
+2024/07/22 11:45:30 Bloque libre encontrado: 0
+2024/07/22 11:45:30 Actualización del bitmap completada
+2024/07/22 11:45:30 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/22 11:45:30 Archivo 'notas.txt' creado
+2024/07/22 11:45:30 PID: 0 - Crear Archivo: notas.txt
+2024/07/22 11:45:31 PID: 0 - Truncar Archivo: notas.txt - Tamaño: 0
+2024/07/22 11:45:31 
+[1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/07/22 11:45:34 El texto leido es: hola mundo arbol
+2024/07/22 11:45:34 Escribo el texto en el archivo
+2024/07/22 11:45:34 PID: 0 - Operación: IO_FS_WRITE
+2024/07/22 11:45:34 PID: 0 - Escribir Archivo: notas.txt - Tamaño a Escribir:  16 - Puntero Archivo: 0
+2024/07/22 11:45:36 El texto leido es:                 
+2024/07/22 11:45:37 Se guardo correctamente el mensaje
+2024/07/22 11:45:37 PID: 0 - Operación: IO_FS_READ
+2024/07/22 11:45:37 PID: 0 - Leer Archivo: notas.txt - Tamaño a Leer: 16 - Puntero Archivo: 0 
+2024/07/22 11:45:38 Se recibió una solicitud en IO_FS_DELETE_Handler
+2024/07/22 11:45:38 Intentando eliminar archivo con nombre: notas.txt
+2024/07/22 11:45:38 Archivo 'notas.txt' eliminado
+2024/07/22 11:45:38 PID: 0 - Delete Archivo: notas.txt
+2024/07/22 11:49:14 Se guardo correctamente el mensaje
+2024/07/22 11:49:14 PID: 1 - Operación: IO_STDIN_READ
+2024/07/22 11:49:15 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/22 11:49:15 Intentando crear archivo con nombre: notas.txt
+2024/07/22 11:49:15 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/22 11:49:15 Leyendo archivos de bloques y bitmap
+2024/07/22 11:49:15 Leyendo el bitmap
+2024/07/22 11:49:15 Buscando bloque libre
+2024/07/22 11:49:15 Bloque libre encontrado: 0
+2024/07/22 11:49:15 Actualización del bitmap completada
+2024/07/22 11:49:15 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/22 11:49:15 Archivo 'notas.txt' creado
+2024/07/22 11:49:15 PID: 1 - Crear Archivo: notas.txt
+2024/07/22 11:49:16 PID: 1 - Truncar Archivo: notas.txt - Tamaño: 0
+2024/07/22 11:49:16 
+[1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/07/22 11:49:19 El texto leido es: a               
+2024/07/22 11:49:19 Escribo el texto en el archivo
+2024/07/22 11:49:19 PID: 1 - Operación: IO_FS_WRITE
+2024/07/22 11:49:19 PID: 1 - Escribir Archivo: notas.txt - Tamaño a Escribir:  16 - Puntero Archivo: 0
+2024/07/22 11:49:21 El texto leido es:                 
+2024/07/22 11:49:22 Se guardo correctamente el mensaje
+2024/07/22 11:49:22 PID: 1 - Operación: IO_FS_READ
+2024/07/22 11:49:22 PID: 1 - Leer Archivo: notas.txt - Tamaño a Leer: 16 - Puntero Archivo: 0 
+2024/07/22 11:49:23 Se recibió una solicitud en IO_FS_DELETE_Handler
+2024/07/22 11:49:23 Intentando eliminar archivo con nombre: notas.txt
+2024/07/22 11:49:23 Archivo 'notas.txt' eliminado
+2024/07/22 11:49:23 PID: 1 - Delete Archivo: notas.txt
+2024/07/22 12:34:39 Se guardo correctamente el mensaje
+2024/07/22 12:34:39 PID: 2 - Operación: IO_STDIN_READ
+2024/07/22 12:34:40 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/22 12:34:40 Intentando crear archivo con nombre: notas.txt
+2024/07/22 12:34:40 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/22 12:34:40 Leyendo archivos de bloques y bitmap
+2024/07/22 12:34:40 Leyendo el bitmap
+2024/07/22 12:34:40 Buscando bloque libre
+2024/07/22 12:34:40 Bloque libre encontrado: 0
+2024/07/22 12:34:40 Actualización del bitmap completada
+2024/07/22 12:34:40 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/22 12:34:40 Archivo 'notas.txt' creado
+2024/07/22 12:34:40 PID: 2 - Crear Archivo: notas.txt
+2024/07/22 12:34:41 PID: 2 - Truncar Archivo: notas.txt - Tamaño: 0
+2024/07/22 12:34:41 
+[1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/07/22 12:34:45 El texto leido es: hola mundo arbol
+2024/07/22 12:34:45 Escribo el texto en el archivo
+2024/07/22 12:34:45 PID: 2 - Operación: IO_FS_WRITE
+2024/07/22 12:34:45 PID: 2 - Escribir Archivo: notas.txt - Tamaño a Escribir:  16 - Puntero Archivo: 0
+2024/07/22 12:34:47 El texto leido es:                 
+2024/07/22 12:34:48 Se guardo correctamente el mensaje
+2024/07/22 12:34:48 PID: 2 - Operación: IO_FS_READ
+2024/07/22 12:34:48 PID: 2 - Leer Archivo: notas.txt - Tamaño a Leer: 16 - Puntero Archivo: 0 
+2024/07/22 12:34:49 Se recibió una solicitud en IO_FS_DELETE_Handler
+2024/07/22 12:34:49 Intentando eliminar archivo con nombre: notas.txt
+2024/07/22 12:34:49 Archivo 'notas.txt' eliminado
+2024/07/22 12:34:49 PID: 2 - Delete Archivo: notas.txt
+2024/07/22 12:35:03 Se guardo correctamente el mensaje
+2024/07/22 12:35:03 PID: 3 - Operación: IO_STDIN_READ
+2024/07/22 12:35:04 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/22 12:35:04 Intentando crear archivo con nombre: notas.txt
+2024/07/22 12:35:04 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/22 12:35:04 Leyendo archivos de bloques y bitmap
+2024/07/22 12:35:04 Leyendo el bitmap
+2024/07/22 12:35:04 Buscando bloque libre
+2024/07/22 12:35:04 Bloque libre encontrado: 0
+2024/07/22 12:35:04 Actualización del bitmap completada
+2024/07/22 12:35:04 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/22 12:35:04 Archivo 'notas.txt' creado
+2024/07/22 12:35:04 PID: 3 - Crear Archivo: notas.txt
+2024/07/22 12:35:05 PID: 3 - Truncar Archivo: notas.txt - Tamaño: 128
+2024/07/22 12:35:05 
+[1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/07/22 12:35:08 El texto leido es: hola mundo arbol
+2024/07/22 12:35:08 Escribo el texto en el archivo
+2024/07/22 12:35:08 PID: 3 - Operación: IO_FS_WRITE
+2024/07/22 12:35:08 PID: 3 - Escribir Archivo: notas.txt - Tamaño a Escribir:  16 - Puntero Archivo: 0
+2024/07/22 12:35:11 El texto leido es:                 
+2024/07/22 12:35:12 Se guardo correctamente el mensaje
+2024/07/22 12:35:12 PID: 3 - Operación: IO_FS_READ
+2024/07/22 12:35:12 PID: 3 - Leer Archivo: notas.txt - Tamaño a Leer: 16 - Puntero Archivo: 0 
+2024/07/22 12:35:13 Se recibió una solicitud en IO_FS_DELETE_Handler
+2024/07/22 12:35:13 Intentando eliminar archivo con nombre: notas.txt
+2024/07/22 12:35:13 Archivo 'notas.txt' eliminado
+2024/07/22 12:35:13 PID: 3 - Delete Archivo: notas.txt
+2024/07/22 13:04:26 
+Configuracion cargada con exito!
+2024/07/22 13:04:40 
+Configuracion cargada con exito!
+2024/07/22 13:05:01 Se guardo correctamente el mensaje
+2024/07/22 13:05:01 PID: 0 - Operación: IO_STDIN_READ
+2024/07/22 13:05:02 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/22 13:05:02 Intentando crear archivo con nombre: notas.txt
+2024/07/22 13:05:02 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/22 13:05:02 Leyendo archivos de bloques y bitmap
+2024/07/22 13:05:02 Leyendo el bitmap
+2024/07/22 13:05:02 Buscando bloque libre
+2024/07/22 13:05:02 Bloque libre encontrado: 0
+2024/07/22 13:05:02 Actualización del bitmap completada
+2024/07/22 13:05:02 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/22 13:05:02 Archivo 'notas.txt' creado
+2024/07/22 13:05:02 PID: 0 - Crear Archivo: notas.txt
+2024/07/22 13:05:03 PID: 0 - Truncar Archivo: notas.txt - Tamaño: 128
+2024/07/22 13:05:03 
+[1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/07/22 13:05:06 El texto leido es: hola mundo arbol
+2024/07/22 13:05:06 Escribo el texto en el archivo
+2024/07/22 13:05:06 PID: 0 - Operación: IO_FS_WRITE
+2024/07/22 13:05:06 PID: 0 - Escribir Archivo: notas.txt - Tamaño a Escribir:  16 - Puntero Archivo: 0
+2024/07/22 13:05:08 Error leyendo el archivo bloques.dat
+2024/07/22 13:05:08 Error leyendo del archivo
+2024/07/22 13:05:08 El texto leido es:                 
+2024/07/22 13:05:09 Se guardo correctamente el mensaje
+2024/07/22 13:05:09 PID: 0 - Operación: IO_FS_READ
+2024/07/22 13:05:09 PID: 0 - Leer Archivo: notas.txt - Tamaño a Leer: 16 - Puntero Archivo: 0 
+2024/07/22 13:05:10 Se recibió una solicitud en IO_FS_DELETE_Handler
+2024/07/22 13:05:10 Intentando eliminar archivo con nombre: notas.txt
+2024/07/22 13:05:10 Archivo 'notas.txt' eliminado
+2024/07/22 13:05:10 PID: 0 - Delete Archivo: notas.txt
+2024/07/22 13:07:34 
+Configuracion cargada con exito!
+2024/07/22 13:07:53 
+Configuracion cargada con exito!
+2024/07/22 13:09:02 Se guardo correctamente el mensaje
+2024/07/22 13:09:02 PID: 0 - Operación: IO_STDIN_READ
+2024/07/22 13:09:03 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/22 13:09:03 Intentando crear archivo con nombre: notas.txt
+2024/07/22 13:09:03 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/22 13:09:03 Leyendo archivos de bloques y bitmap
+2024/07/22 13:09:03 Leyendo el bitmap
+2024/07/22 13:09:03 Buscando bloque libre
+2024/07/22 13:09:03 Bloque libre encontrado: 0
+2024/07/22 13:09:03 Actualización del bitmap completada
+2024/07/22 13:09:03 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/22 13:09:03 Archivo 'notas.txt' creado
+2024/07/22 13:09:03 PID: 0 - Crear Archivo: notas.txt
+2024/07/22 13:09:04 PID: 0 - Truncar Archivo: notas.txt - Tamaño: 128
+2024/07/22 13:09:04 
+[1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/07/22 13:09:07 El texto leido es: hola mundo arbol
+2024/07/22 13:09:07 Escribo el texto en el archivo
+2024/07/22 13:09:07 PID: 0 - Operación: IO_FS_WRITE
+2024/07/22 13:09:07 PID: 0 - Escribir Archivo: notas.txt - Tamaño a Escribir:  16 - Puntero Archivo: 0
+2024/07/22 13:09:09 Error leyendo el archivo bloques.dat
+2024/07/22 13:09:09 El texto leido es:                 
+2024/07/22 13:09:10 Se guardo correctamente el mensaje
+2024/07/22 13:09:10 PID: 0 - Operación: IO_FS_READ
+2024/07/22 13:09:10 PID: 0 - Leer Archivo: notas.txt - Tamaño a Leer: 16 - Puntero Archivo: 0 
+2024/07/22 13:09:11 Se recibió una solicitud en IO_FS_DELETE_Handler
+2024/07/22 13:09:11 Intentando eliminar archivo con nombre: notas.txt
+2024/07/22 13:09:11 Archivo 'notas.txt' eliminado
+2024/07/22 13:09:11 PID: 0 - Delete Archivo: notas.txt
+2024/07/22 13:11:29 Se guardo correctamente el mensaje
+2024/07/22 13:11:29 PID: 1 - Operación: IO_STDIN_READ
+2024/07/22 13:11:30 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/22 13:11:30 Intentando crear archivo con nombre: notas.txt
+2024/07/22 13:11:30 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/22 13:11:30 Leyendo archivos de bloques y bitmap
+2024/07/22 13:11:30 Leyendo el bitmap
+2024/07/22 13:11:30 Buscando bloque libre
+2024/07/22 13:11:30 Bloque libre encontrado: 0
+2024/07/22 13:11:30 Actualización del bitmap completada
+2024/07/22 13:11:30 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/22 13:11:30 Archivo 'notas.txt' creado
+2024/07/22 13:11:30 PID: 1 - Crear Archivo: notas.txt
+2024/07/22 13:11:31 PID: 1 - Truncar Archivo: notas.txt - Tamaño: 128
+2024/07/22 13:11:31 
+[1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/07/22 13:11:34 El texto leido es: hola mundo arbol
+2024/07/22 13:11:34 Escribo el texto en el archivo
+2024/07/22 13:11:34 PID: 1 - Operación: IO_FS_WRITE
+2024/07/22 13:11:34 PID: 1 - Escribir Archivo: notas.txt - Tamaño a Escribir:  16 - Puntero Archivo: 0
+2024/07/22 13:11:36 Error leyendo el archivo bloques.dat
+2024/07/22 13:11:36 El texto leido es:                 
+2024/07/22 13:11:37 Se guardo correctamente el mensaje
+2024/07/22 13:11:37 PID: 1 - Operación: IO_FS_READ
+2024/07/22 13:11:37 PID: 1 - Leer Archivo: notas.txt - Tamaño a Leer: 16 - Puntero Archivo: 0 
+2024/07/22 13:11:38 Se recibió una solicitud en IO_FS_DELETE_Handler
+2024/07/22 13:11:38 Intentando eliminar archivo con nombre: notas.txt
+2024/07/22 13:11:38 Archivo 'notas.txt' eliminado
+2024/07/22 13:11:38 PID: 1 - Delete Archivo: notas.txt
+2024/07/22 13:12:02 
+Configuracion cargada con exito!
+2024/07/22 13:12:13 
+Configuracion cargada con exito!
+2024/07/22 13:12:56 Se guardo correctamente el mensaje
+2024/07/22 13:12:56 PID: 0 - Operación: IO_STDIN_READ
+2024/07/22 13:12:57 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/22 13:12:57 Intentando crear archivo con nombre: notas.txt
+2024/07/22 13:12:57 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/22 13:12:57 Leyendo archivos de bloques y bitmap
+2024/07/22 13:12:57 Leyendo el bitmap
+2024/07/22 13:12:57 Buscando bloque libre
+2024/07/22 13:12:57 Bloque libre encontrado: 0
+2024/07/22 13:12:57 Actualización del bitmap completada
+2024/07/22 13:12:57 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/22 13:12:57 Archivo 'notas.txt' creado
+2024/07/22 13:12:57 PID: 0 - Crear Archivo: notas.txt
+2024/07/22 13:12:58 PID: 0 - Truncar Archivo: notas.txt - Tamaño: 128
+2024/07/22 13:12:58 
+[1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/07/22 13:13:01 El texto leido es: hola mundo arbol
+2024/07/22 13:13:01 Escribo el texto en el archivo
+2024/07/22 13:13:01 PID: 0 - Operación: IO_FS_WRITE
+2024/07/22 13:13:01 PID: 0 - Escribir Archivo: notas.txt - Tamaño a Escribir:  16 - Puntero Archivo: 0
+2024/07/22 13:13:03 http: panic serving 127.0.0.1:37702: read /home/utnso/dialfs/bloques.dat: bad file descriptor
+goroutine 27 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6c7360?, 0xc0000922d0?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+entradasalida/utils.check(...)
+	/home/utnso/Desktop/SO/tp-2024-1c-EPIC/entradasalida/utils/utils.go:78
+entradasalida/utils.readFromFile({0xc0000aa0d0?, 0x69fdc0?}, 0x0, 0x10)
+	/home/utnso/Desktop/SO/tp-2024-1c-EPIC/entradasalida/utils/utils.go:629 +0x1b4
+entradasalida/utils.IO_FS_READ({0x78f7f0, 0xc0000d0000}, 0xc0000b6120)
+	/home/utnso/Desktop/SO/tp-2024-1c-EPIC/entradasalida/utils/utils.go:705 +0x13a
+net/http.HandlerFunc.ServeHTTP(0x95adc0?, {0x78f7f0?, 0xc0000d0000?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x78f7f0, 0xc0000d0000}, 0xc0000b6120)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x78e7d8?}, {0x78f7f0?, 0xc0000d0000?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0001987e0, {0x78fdb0, 0xc00019e570})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/07/22 13:15:55 
+Configuracion cargada con exito!
+2024/07/22 13:16:04 
+Configuracion cargada con exito!
+2024/07/22 13:16:04 Se crearon los archivos de bloque y bitmap
+2024/07/22 13:16:22 Se guardo correctamente el mensaje
+2024/07/22 13:16:22 PID: 0 - Operación: IO_STDIN_READ
+2024/07/22 13:16:23 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/22 13:16:23 Intentando crear archivo con nombre: notas.txt
+2024/07/22 13:16:23 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/22 13:16:23 Leyendo archivos de bloques y bitmap
+2024/07/22 13:16:23 Leyendo el bitmap
+2024/07/22 13:16:23 Buscando bloque libre
+2024/07/22 13:16:23 Bloque libre encontrado: 0
+2024/07/22 13:16:23 Actualización del bitmap completada
+2024/07/22 13:16:23 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/22 13:16:23 Archivo 'notas.txt' creado
+2024/07/22 13:16:23 PID: 0 - Crear Archivo: notas.txt
+2024/07/22 13:16:24 PID: 0 - Truncar Archivo: notas.txt - Tamaño: 128
+2024/07/22 13:16:24 
+[1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/07/22 13:16:27 El texto leido es: hola mundo arbol
+2024/07/22 13:16:27 Escribo el texto en el archivo
+2024/07/22 13:16:27 PID: 0 - Operación: IO_FS_WRITE
+2024/07/22 13:16:27 PID: 0 - Escribir Archivo: notas.txt - Tamaño a Escribir:  16 - Puntero Archivo: 0
+2024/07/22 13:16:29 El texto leido es: hola mundo arbol
+2024/07/22 13:16:30 Se guardo correctamente el mensaje
+2024/07/22 13:16:30 PID: 0 - Operación: IO_FS_READ
+2024/07/22 13:16:30 PID: 0 - Leer Archivo: notas.txt - Tamaño a Leer: 16 - Puntero Archivo: 0 
+2024/07/22 13:16:31 Se recibió una solicitud en IO_FS_DELETE_Handler
+2024/07/22 13:16:31 Intentando eliminar archivo con nombre: notas.txt
+2024/07/22 13:16:31 Archivo 'notas.txt' eliminado
+2024/07/22 13:16:31 PID: 0 - Delete Archivo: notas.txt
