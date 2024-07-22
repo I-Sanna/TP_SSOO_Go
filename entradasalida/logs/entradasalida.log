@@ -3197,3 +3197,88 @@ Configuracion cargada con exito!
 2024/07/22 13:16:31 Intentando eliminar archivo con nombre: notas.txt
 2024/07/22 13:16:31 Archivo 'notas.txt' eliminado
 2024/07/22 13:16:31 PID: 0 - Delete Archivo: notas.txt
+2024/07/22 18:56:20 
+Configuracion cargada con exito!
+2024/07/22 18:57:37 
+Configuracion cargada con exito!
+2024/07/22 18:57:57 Se guardo correctamente el mensaje
+2024/07/22 18:57:57 PID: 0 - Operación: IO_STDIN_READ
+2024/07/22 19:03:02 
+Configuracion cargada con exito!
+2024/07/22 19:03:20 
+Configuracion cargada con exito!
+2024/07/22 19:03:44 Se guardo correctamente el mensaje
+2024/07/22 19:03:44 PID: 0 - Operación: IO_STDIN_READ
+2024/07/22 19:03:45 PID: 0 - Truncar Archivo: notas.txt - Tamaño: 0
+2024/07/22 19:03:45 
+[1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0]
+2024/07/22 19:20:24 
+Configuracion cargada con exito!
+2024/07/22 19:20:42 
+Configuracion cargada con exito!
+2024/07/22 19:20:59 Se guardo correctamente el mensaje
+2024/07/22 19:20:59 PID: 0 - Operación: IO_STDIN_READ
+2024/07/22 19:21:00 PID: 0 - Truncar Archivo: notas.txt - Tamaño: 0
+2024/07/22 19:21:00 
+[1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0]
+2024/07/22 19:21:55 
+Configuracion cargada con exito!
+2024/07/22 19:27:12 
+Configuracion cargada con exito!
+2024/07/22 19:27:12 listen tcp :8005: bind: address already in use
+2024/07/22 19:27:35 
+Configuracion cargada con exito!
+2024/07/22 19:42:53 
+Configuracion cargada con exito!
+2024/07/22 19:42:53 listen tcp :8005: bind: address already in use
+2024/07/22 19:43:10 
+Configuracion cargada con exito!
+2024/07/22 19:44:54 
+Configuracion cargada con exito!
+2024/07/22 19:45:46 
+Configuracion cargada con exito!
+2024/07/22 19:46:02 
+Configuracion cargada con exito!
+2024/07/22 19:46:23 Se guardo correctamente el mensaje
+2024/07/22 19:46:23 PID: 0 - Operación: IO_STDIN_READ
+2024/07/22 19:46:24 El archivo: notas.txt no existe
+2024/07/22 19:46:26 open /home/utnso/dialfs/notas.txt.json: no such file or directory
+2024/07/22 19:48:01 
+Configuracion cargada con exito!
+2024/07/22 19:48:13 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/22 19:48:13 Intentando crear archivo con nombre: notas.txt
+2024/07/22 19:48:13 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/22 19:48:13 Leyendo archivos de bloques y bitmap
+2024/07/22 19:48:13 Leyendo el bitmap
+2024/07/22 19:48:13 Buscando bloque libre
+2024/07/22 19:48:13 Bloque libre encontrado: 7
+2024/07/22 19:48:13 Actualización del bitmap completada
+2024/07/22 19:48:13 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/22 19:48:13 Archivo 'notas.txt' creado
+2024/07/22 19:48:13 PID: 0 - Crear Archivo: notas.txt
+2024/07/22 19:52:45 
+Configuracion cargada con exito!
+2024/07/22 19:53:03 
+Configuracion cargada con exito!
+2024/07/22 19:53:03 Se crearon los archivos de bloque y bitmap
+2024/07/22 19:53:16 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/22 19:53:16 Intentando crear archivo con nombre: notas.txt
+2024/07/22 19:53:16 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/22 19:53:16 Leyendo archivos de bloques y bitmap
+2024/07/22 19:53:16 Leyendo el bitmap
+2024/07/22 19:53:16 Buscando bloque libre
+2024/07/22 19:53:16 Bloque libre encontrado: 0
+2024/07/22 19:53:16 Actualización del bitmap completada
+2024/07/22 19:53:16 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/22 19:53:16 Archivo 'notas.txt' creado
+2024/07/22 19:53:16 PID: 0 - Crear Archivo: notas.txt
+2024/07/22 19:53:36 Se guardo correctamente el mensaje
+2024/07/22 19:53:36 PID: 0 - Operación: IO_STDIN_READ
+2024/07/22 19:53:37 PID: 0 - Truncar Archivo: notas.txt - Tamaño: 128
+2024/07/22 19:53:37 
+[1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/07/22 19:53:39 El texto leido es:                 
+2024/07/22 19:53:40 Se guardo correctamente el mensaje
+2024/07/22 19:53:40 PID: 0 - Operación: IO_FS_READ
+2024/07/22 19:53:40 PID: 0 - Leer Archivo: notas.txt - Tamaño a Leer: 16 - Puntero Archivo: 0 
+2024/07/22 19:53:43 Error: Intentando leer/escribir más allá del tamaño del archivo

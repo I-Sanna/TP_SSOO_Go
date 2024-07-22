@@ -12542,3 +12542,157 @@ SE ENTRO IOFSCREATE EN CPU FUNCION
 2024/07/22 13:16:31 PID: 0 - Ejecutando: IO_FS_DELETE - Int4 , notas.txt
 2024/07/22 13:16:31 PID: 0 - FETCH - Program Counter: 11
 2024/07/22 13:16:32 PID: 0 - Ejecutando: EXIT
+2024/07/22 18:55:13 Inicializando TLB con 4 entradas
+2024/07/22 18:57:42 PID: 0 - FETCH - Program Counter: 0
+2024/07/22 18:57:43 PID: 0 - Ejecutando: SET - AX,256
+2024/07/22 18:57:43 PID: 0 - FETCH - Program Counter: 1
+2024/07/22 18:57:44 PID: 0 - Ejecutando: SET - BX,0
+2024/07/22 18:57:44 PID: 0 - FETCH - Program Counter: 2
+2024/07/22 18:57:45 PID: 0 - Ejecutando: SET - EAX,16
+2024/07/22 18:57:45 PID: 0 - FETCH - Program Counter: 3
+2024/07/22 18:57:46 PID: 0 - Ejecutando: SET - EBX,0
+2024/07/22 18:57:46 PID: 0 - FETCH - Program Counter: 4
+2024/07/22 18:57:47 PID: 0 - Ejecutando: IO_STDIN_READ - Int3 , BX , EAX
+2024/07/22 18:57:48 PID: 0 - TLB MISS - Pagina: 0
+2024/07/22 18:57:57 PID: 0 - FETCH - Program Counter: 5
+2024/07/22 18:57:58 PID: 0 - Ejecutando: IO_FS_TRUNCATE - Int4 , notas.txt , AX
+2024/07/22 19:02:45 Inicializando TLB con 4 entradas
+2024/07/22 19:03:27 PID: 0 - FETCH - Program Counter: 0
+2024/07/22 19:03:28 PID: 0 - Ejecutando: SET - AX,256
+2024/07/22 19:03:28 PID: 0 - FETCH - Program Counter: 1
+2024/07/22 19:03:29 PID: 0 - Ejecutando: SET - BX,0
+2024/07/22 19:03:29 PID: 0 - FETCH - Program Counter: 2
+2024/07/22 19:03:30 PID: 0 - Ejecutando: SET - EAX,16
+2024/07/22 19:03:30 PID: 0 - FETCH - Program Counter: 3
+2024/07/22 19:03:31 PID: 0 - Ejecutando: SET - EBX,0
+2024/07/22 19:03:31 PID: 0 - FETCH - Program Counter: 4
+2024/07/22 19:03:32 PID: 0 - Ejecutando: IO_STDIN_READ - Int3 , BX , EAX
+2024/07/22 19:03:33 PID: 0 - TLB MISS - Pagina: 0
+2024/07/22 19:03:44 PID: 0 - FETCH - Program Counter: 5
+2024/07/22 19:03:45 PID: 0 - Ejecutando: IO_FS_TRUNCATE - Int4 , notas.txt , AX
+2024/07/22 19:03:45 PID: 0 - FETCH - Program Counter: 6
+2024/07/22 19:03:46 PID: 0 - Ejecutando: IO_FS_READ - Int4 , notas.txt , BX, EAX, EBX
+2024/07/22 19:03:47 PID: 0 - TLB HIT - Pagina: 0
+2024/07/22 19:19:53 Inicializando TLB con 4 entradas
+2024/07/22 19:20:47 PID: 0 - FETCH - Program Counter: 0
+2024/07/22 19:20:48 PID: 0 - Ejecutando: SET - AX,256
+2024/07/22 19:20:48 PID: 0 - FETCH - Program Counter: 1
+2024/07/22 19:20:49 PID: 0 - Ejecutando: SET - BX,0
+2024/07/22 19:20:49 PID: 0 - FETCH - Program Counter: 2
+2024/07/22 19:20:50 PID: 0 - Ejecutando: SET - EAX,16
+2024/07/22 19:20:50 PID: 0 - FETCH - Program Counter: 3
+2024/07/22 19:20:51 PID: 0 - Ejecutando: SET - EBX,0
+2024/07/22 19:20:51 PID: 0 - FETCH - Program Counter: 4
+2024/07/22 19:20:52 PID: 0 - Ejecutando: IO_STDIN_READ - Int3 , BX , EAX
+2024/07/22 19:20:53 PID: 0 - TLB MISS - Pagina: 0
+2024/07/22 19:20:59 PID: 0 - FETCH - Program Counter: 5
+2024/07/22 19:21:00 PID: 0 - Ejecutando: IO_FS_TRUNCATE - Int4 , notas.txt , AX
+2024/07/22 19:21:00 PID: 0 - FETCH - Program Counter: 6
+2024/07/22 19:21:01 PID: 0 - Ejecutando: IO_FS_READ - Int4 , notas.txt , BX, EAX, EBX
+2024/07/22 19:21:02 PID: 0 - TLB HIT - Pagina: 0
+2024/07/22 19:21:32 Inicializando TLB con 4 entradas
+2024/07/22 19:21:59 PID: 0 - FETCH - Program Counter: 0
+2024/07/22 19:22:00 PID: 0 - Ejecutando: SET - AX,256
+2024/07/22 19:22:00 PID: 0 - FETCH - Program Counter: 1
+2024/07/22 19:22:01 PID: 0 - Ejecutando: SET - BX,0
+2024/07/22 19:22:01 PID: 0 - FETCH - Program Counter: 2
+2024/07/22 19:22:02 PID: 0 - Ejecutando: SET - EAX,16
+2024/07/22 19:22:02 PID: 0 - FETCH - Program Counter: 3
+2024/07/22 19:22:03 PID: 0 - Ejecutando: SET - EBX,0
+2024/07/22 19:22:03 PID: 0 - FETCH - Program Counter: 4
+2024/07/22 19:22:04 PID: 0 - Ejecutando: IO_STDIN_READ - Int3 , BX , EAX
+2024/07/22 19:22:05 PID: 0 - TLB MISS - Pagina: 0
+2024/07/22 19:26:50 Inicializando TLB con 4 entradas
+2024/07/22 19:27:40 PID: 0 - FETCH - Program Counter: 0
+2024/07/22 19:27:41 PID: 0 - Ejecutando: SET - AX,256
+2024/07/22 19:27:41 PID: 0 - FETCH - Program Counter: 1
+2024/07/22 19:27:42 PID: 0 - Ejecutando: SET - BX,0
+2024/07/22 19:27:42 PID: 0 - FETCH - Program Counter: 2
+2024/07/22 19:27:43 PID: 0 - Ejecutando: SET - EAX,16
+2024/07/22 19:27:43 PID: 0 - FETCH - Program Counter: 3
+2024/07/22 19:27:44 PID: 0 - Ejecutando: SET - EBX,0
+2024/07/22 19:27:44 PID: 0 - FETCH - Program Counter: 4
+2024/07/22 19:27:45 PID: 0 - Ejecutando: RESIZE - 256
+2024/07/22 19:27:46 PID: 0 - FETCH - Program Counter: 5
+2024/07/22 19:27:47 PID: 0 - Ejecutando: EXIT
+2024/07/22 19:40:17 Inicializando TLB con 4 entradas
+2024/07/22 19:45:03 PID: 0 - FETCH - Program Counter: 0
+2024/07/22 19:45:04 PID: 0 - Ejecutando: SET - AX,256
+2024/07/22 19:45:04 PID: 0 - FETCH - Program Counter: 1
+2024/07/22 19:45:05 PID: 0 - Ejecutando: SET - BX,0
+2024/07/22 19:45:05 PID: 0 - FETCH - Program Counter: 2
+2024/07/22 19:45:06 PID: 0 - Ejecutando: SET - EAX,16
+2024/07/22 19:45:06 PID: 0 - FETCH - Program Counter: 3
+2024/07/22 19:45:07 PID: 0 - Ejecutando: SET - EBX,0
+2024/07/22 19:45:07 PID: 0 - FETCH - Program Counter: 4
+2024/07/22 19:45:08 PID: 0 - Ejecutando: RESIZE - 256
+2024/07/22 19:45:09 PID: 0 - FETCH - Program Counter: 5
+2024/07/22 19:45:10 PID: 0 - Ejecutando: IO_STDIN_READ - Int3 , BX , EAX
+2024/07/22 19:45:11 PID: 0 - TLB MISS - Pagina: 0
+2024/07/22 19:45:12 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/22 19:45:32 Inicializando TLB con 4 entradas
+2024/07/22 19:46:07 PID: 0 - FETCH - Program Counter: 0
+2024/07/22 19:46:08 PID: 0 - Ejecutando: SET - AX,128
+2024/07/22 19:46:08 PID: 0 - FETCH - Program Counter: 1
+2024/07/22 19:46:09 PID: 0 - Ejecutando: SET - BX,0
+2024/07/22 19:46:09 PID: 0 - FETCH - Program Counter: 2
+2024/07/22 19:46:10 PID: 0 - Ejecutando: SET - EAX,16
+2024/07/22 19:46:10 PID: 0 - FETCH - Program Counter: 3
+2024/07/22 19:46:11 PID: 0 - Ejecutando: SET - EBX,0
+2024/07/22 19:46:11 PID: 0 - FETCH - Program Counter: 4
+2024/07/22 19:46:12 PID: 0 - Ejecutando: RESIZE - 256
+2024/07/22 19:46:13 PID: 0 - FETCH - Program Counter: 5
+2024/07/22 19:46:14 PID: 0 - Ejecutando: IO_STDIN_READ - Int3 , BX , EAX
+2024/07/22 19:46:15 PID: 0 - TLB MISS - Pagina: 0
+2024/07/22 19:46:16 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/22 19:46:23 PID: 0 - FETCH - Program Counter: 6
+2024/07/22 19:46:24 PID: 0 - Ejecutando: IO_FS_TRUNCATE - Int4 , notas.txt , AX
+2024/07/22 19:46:24 PID: 0 - FETCH - Program Counter: 7
+2024/07/22 19:46:25 PID: 0 - Ejecutando: IO_FS_READ - Int4 , notas.txt , BX, EAX, EBX
+2024/07/22 19:46:26 PID: 0 - TLB HIT - Pagina: 0
+2024/07/22 19:47:50 Inicializando TLB con 4 entradas
+2024/07/22 19:48:06 PID: 0 - FETCH - Program Counter: 0
+2024/07/22 19:48:07 PID: 0 - Ejecutando: SET - AX,128
+2024/07/22 19:48:07 PID: 0 - FETCH - Program Counter: 1
+2024/07/22 19:48:08 PID: 0 - Ejecutando: SET - BX,0
+2024/07/22 19:48:08 PID: 0 - FETCH - Program Counter: 2
+2024/07/22 19:48:09 PID: 0 - Ejecutando: SET - EAX,16
+2024/07/22 19:48:09 PID: 0 - FETCH - Program Counter: 3
+2024/07/22 19:48:10 PID: 0 - Ejecutando: SET - EBX,0
+2024/07/22 19:48:10 PID: 0 - FETCH - Program Counter: 4
+2024/07/22 19:48:11 PID: 0 - Ejecutando: RESIZE - 256
+2024/07/22 19:48:12 PID: 0 - FETCH - Program Counter: 5
+2024/07/22 19:48:13 PID: 0 - Ejecutando: IO_FS_CREATE - Int4 , notas.txt
+2024/07/22 19:48:13 Se entró a IO_FS_CREATE en la CPU
+2024/07/22 19:48:13 PID: 0 - FETCH - Program Counter: 6
+2024/07/22 19:48:14 PID: 0 - Ejecutando: IO_STDIN_READ - Int3 , BX , EAX
+2024/07/22 19:48:15 PID: 0 - TLB MISS - Pagina: 0
+2024/07/22 19:48:16 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/22 19:52:31 Inicializando TLB con 4 entradas
+2024/07/22 19:53:09 PID: 0 - FETCH - Program Counter: 0
+2024/07/22 19:53:10 PID: 0 - Ejecutando: SET - AX,128
+2024/07/22 19:53:10 PID: 0 - FETCH - Program Counter: 1
+2024/07/22 19:53:11 PID: 0 - Ejecutando: SET - BX,0
+2024/07/22 19:53:11 PID: 0 - FETCH - Program Counter: 2
+2024/07/22 19:53:12 PID: 0 - Ejecutando: SET - EAX,16
+2024/07/22 19:53:12 PID: 0 - FETCH - Program Counter: 3
+2024/07/22 19:53:13 PID: 0 - Ejecutando: SET - EBX,0
+2024/07/22 19:53:13 PID: 0 - FETCH - Program Counter: 4
+2024/07/22 19:53:14 PID: 0 - Ejecutando: RESIZE - 256
+2024/07/22 19:53:15 PID: 0 - FETCH - Program Counter: 5
+2024/07/22 19:53:16 PID: 0 - Ejecutando: IO_FS_CREATE - Int4 , notas.txt
+2024/07/22 19:53:16 Se entró a IO_FS_CREATE en la CPU
+2024/07/22 19:53:16 PID: 0 - FETCH - Program Counter: 6
+2024/07/22 19:53:17 PID: 0 - Ejecutando: IO_STDIN_READ - Int3 , BX , EAX
+2024/07/22 19:53:18 PID: 0 - TLB MISS - Pagina: 0
+2024/07/22 19:53:19 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/22 19:53:36 PID: 0 - FETCH - Program Counter: 7
+2024/07/22 19:53:37 PID: 0 - Ejecutando: IO_FS_TRUNCATE - Int4 , notas.txt , AX
+2024/07/22 19:53:37 PID: 0 - FETCH - Program Counter: 8
+2024/07/22 19:53:38 PID: 0 - Ejecutando: IO_FS_READ - Int4 , notas.txt , BX, EAX, EBX
+2024/07/22 19:53:39 PID: 0 - TLB HIT - Pagina: 0
+2024/07/22 19:53:40 PID: 0 - FETCH - Program Counter: 9
+2024/07/22 19:53:41 PID: 0 - Ejecutando: SET - EAX,256
+2024/07/22 19:53:41 PID: 0 - FETCH - Program Counter: 10
+2024/07/22 19:53:42 PID: 0 - Ejecutando: IO_FS_READ - Int4 , notas.txt , BX, EAX, EBX
+2024/07/22 19:53:43 PID: 0 - TLB HIT - Pagina: 0

@@ -16307,3 +16307,83 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/07/22 13:16:27 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 16
 2024/07/22 13:16:29 aa 16
 2024/07/22 13:16:30 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 16
+2024/07/22 18:57:42 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/22 18:57:42 PID: 0 - Tamaño: 256
+2024/07/22 18:57:48 aa 16
+2024/07/22 18:57:49 http: superfluous response.WriteHeader call from memoria/utils.BuscarMarco (utils.go:105)
+2024/07/22 18:57:57 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 16
+2024/07/22 19:03:27 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/22 19:03:27 PID: 0 - Tamaño: 256
+2024/07/22 19:03:33 aa 16
+2024/07/22 19:03:34 http: superfluous response.WriteHeader call from memoria/utils.BuscarMarco (utils.go:105)
+2024/07/22 19:03:44 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 16
+2024/07/22 19:03:47 aa 16
+2024/07/22 19:20:47 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/22 19:20:47 PID: 0 - Tamaño: 256
+2024/07/22 19:20:53 aa 16
+2024/07/22 19:20:54 http: superfluous response.WriteHeader call from memoria/utils.BuscarMarco (utils.go:105)
+2024/07/22 19:20:59 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 16
+2024/07/22 19:21:02 aa 16
+2024/07/22 19:21:59 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/22 19:21:59 PID: 0 - Tamaño: 256
+2024/07/22 19:22:05 aa 16
+2024/07/22 19:22:06 http: superfluous response.WriteHeader call from memoria/utils.BuscarMarco (utils.go:105)
+2024/07/22 19:27:40 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/22 19:27:40 PID: 0 - Tamaño: 256
+2024/07/22 19:27:46 256 256
+
+
+
+2024/07/22 19:27:46 tabla de paginas-------map[]
+2024/07/22 19:27:46 tabla GLOBAL de paginas------map[]
+2024/07/22 19:27:46 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/07/22 19:45:03 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/22 19:45:03 PID: 0 - Tamaño: 256
+2024/07/22 19:45:09 256 256
+
+
+
+2024/07/22 19:45:09 tabla de paginas-------map[]
+2024/07/22 19:45:09 tabla GLOBAL de paginas------map[]
+2024/07/22 19:45:09 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/07/22 19:45:11 aa 16
+2024/07/22 19:45:12 PID: 0 - Pagina: 0 - Marco: 0
+2024/07/22 19:46:07 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/22 19:46:07 PID: 0 - Tamaño: 256
+2024/07/22 19:46:13 256 256
+
+
+
+2024/07/22 19:46:13 tabla de paginas-------map[]
+2024/07/22 19:46:13 tabla GLOBAL de paginas------map[]
+2024/07/22 19:46:13 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/07/22 19:46:15 aa 16
+2024/07/22 19:46:16 PID: 0 - Pagina: 0 - Marco: 0
+2024/07/22 19:46:23 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 16
+2024/07/22 19:46:26 aa 16
+2024/07/22 19:48:06 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/22 19:48:06 PID: 0 - Tamaño: 256
+2024/07/22 19:48:12 256 256
+
+
+
+2024/07/22 19:48:12 tabla de paginas-------map[]
+2024/07/22 19:48:12 tabla GLOBAL de paginas------map[]
+2024/07/22 19:48:12 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/07/22 19:48:15 aa 16
+2024/07/22 19:48:16 PID: 0 - Pagina: 0 - Marco: 0
+2024/07/22 19:53:09 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/22 19:53:09 PID: 0 - Tamaño: 256
+2024/07/22 19:53:15 256 256
+
+
+
+2024/07/22 19:53:15 tabla de paginas-------map[]
+2024/07/22 19:53:15 tabla GLOBAL de paginas------map[]
+2024/07/22 19:53:15 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 256
+2024/07/22 19:53:18 aa 16
+2024/07/22 19:53:19 PID: 0 - Pagina: 0 - Marco: 0
+2024/07/22 19:53:36 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 16
+2024/07/22 19:53:39 aa 16
+2024/07/22 19:53:40 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 16
+2024/07/22 19:53:43 aa 16

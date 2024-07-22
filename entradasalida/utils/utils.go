@@ -651,6 +651,14 @@ func IO_FS_WRITE(w http.ResponseWriter, r *http.Request) {
 		Direccion: request.Direccion,
 	}
 
+	metadata := obtenerMetadata(globals.ClientConfig.DialfsPath + "/" + request.Archivo + ".json")
+
+	if request.PtrArchivo+request.Tamaño >= metadata.Size {
+		log.Printf("Error: Intentando leer/escribir más allá del tamaño del archivo")
+		w.WriteHeader(http.StatusBadRequest)
+		return
+	}
+
 	body, err := json.Marshal(requestBody)
 	if err != nil {
 		log.Printf("Error al codificar la solicitud %v", err)
@@ -701,6 +709,13 @@ func IO_FS_READ(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	//Leer del archivo desde el ptr indicado
+	metadata := obtenerMetadata(globals.ClientConfig.DialfsPath + "/" + request.Archivo + ".json")
+
+	if request.PtrArchivo+request.Tamaño >= metadata.Size {
+		log.Printf("Error: Intentando leer/escribir más allá del tamaño del archivo")
+		w.WriteHeader(http.StatusBadRequest)
+		return
+	}
 
 	textoLeido := readFromFile(request.Archivo, request.PtrArchivo, request.Tamaño)
 
