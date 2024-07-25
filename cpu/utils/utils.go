@@ -196,7 +196,7 @@ func LeerDeMemoria(pid int, direccion int, tamaño int) ([]byte, error) {
 		return nil, fmt.Errorf("error al codificar solicitud: %v", err)
 	}
 
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/leer"
+	url := "http://" + globals.ClientConfig.IpMemory + ":" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/leer"
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
 		return nil, fmt.Errorf("error al enviar solicitud: %v", err)
@@ -238,7 +238,7 @@ func EscribirEnMemoria(pid int, direccionFisica int, datos []byte, tamaño int) 
 		return fmt.Errorf("error codificando la solicitud: %w", err)
 	}
 
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/escribir"
+	url := "http://" + globals.ClientConfig.IpMemory + ":" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/escribir"
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(bodyJSON))
 	if err != nil {
 		return fmt.Errorf("error al enviar la solicitud: %w", err)
@@ -400,7 +400,7 @@ func RESIZE(tamS string) {
 		return
 	}
 
-	url := fmt.Sprintf("http://localhost:%d/memoria/%d/%d", globals.ClientConfig.PortMemory, procesoActual.PID, tam)
+	url := fmt.Sprintf("http://"+globals.ClientConfig.IpMemory+":%d/memoria/%d/%d", globals.ClientConfig.PortMemory, procesoActual.PID, tam)
 	resp, err := http.Get(url)
 	if err != nil {
 		log.Printf("Error al enviar la solicitud: %s", err.Error())
@@ -552,6 +552,10 @@ func buscarEnTLB(pid, numeroPagina int) (int, error) {
 */
 func actualizarTLB(pid, numeroPagina, marco int) {
 
+	if globals.ClientConfig.NumberFellingTbl == 0 {
+		return
+	}
+
 	if len(TLBCPU.Entradas) >= globals.ClientConfig.NumberFellingTbl {
 		TLBCPU.Entradas = TLBCPU.Entradas[1:] // Elimina la entrada más antigua
 	}
@@ -569,7 +573,7 @@ func actualizarTLB(pid, numeroPagina, marco int) {
 
 func buscarEnMemoria(pid int, numeroPagina int) (int, error) {
 
-	url := fmt.Sprintf("http://localhost:%d/pagina/%d/%d", globals.ClientConfig.PortMemory, pid, numeroPagina)
+	url := fmt.Sprintf("http://"+globals.ClientConfig.IpMemory+":%d/pagina/%d/%d", globals.ClientConfig.PortMemory, pid, numeroPagina)
 
 	response, err := http.Get(url)
 	if err != nil {
@@ -593,7 +597,7 @@ func buscarEnMemoria(pid int, numeroPagina int) (int, error) {
 }
 
 func ObtenerPageSize() (int, error) {
-	response, err := http.Get("http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/pageSize")
+	response, err := http.Get("http://" + globals.ClientConfig.IpMemory + ":" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/pageSize")
 	if err != nil {
 		return 0, err
 	}
@@ -691,7 +695,7 @@ func IO_GEN_SLEEP(nombre string, tiempo int) {
 		return
 	}
 
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
+	url := "http://" + globals.ClientConfig.IpKernel + ":" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
 		log.Printf("error enviando: %s", err.Error())
@@ -728,7 +732,7 @@ func IO_STDIN_READ(nombre string, direccion string, tamaño string) {
 		return
 	}
 
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
+	url := "http://" + globals.ClientConfig.IpKernel + ":" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
 		log.Printf("error enviando: %s", err.Error())
@@ -765,7 +769,7 @@ func IO_STDOUT_WRITE(nombre string, direccion string, tamaño string) {
 		return
 	}
 
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
+	url := "http://" + globals.ClientConfig.IpKernel + ":" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
 		log.Printf("error enviando: %s", err.Error())
@@ -795,7 +799,7 @@ func IO_FS_CREATE(interfaz string, nombreArchivo string) {
 		return
 	}
 
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
+	url := "http://" + globals.ClientConfig.IpKernel + ":" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
 		log.Printf("error enviando: %s", err.Error())
@@ -827,7 +831,7 @@ func IO_FS_DELETE(interfaz string, nombreArchivo string) {
 		return
 	}
 
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
+	url := "http://" + globals.ClientConfig.IpKernel + ":" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
 		log.Printf("error enviando: %s", err.Error())
@@ -861,7 +865,7 @@ func IO_FS_TRUNCATE(nombreInterfaz string, nombreArchivo string, registroTamaño
 		return
 	}
 
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
+	url := "http://" + globals.ClientConfig.IpKernel + ":" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
 		log.Printf("error enviando: %s", err.Error())
@@ -900,7 +904,7 @@ func IO_FS_WRITE(nombre string, nombreArchivo string, registroDirec string, regi
 		return
 	}
 
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
+	url := "http://" + globals.ClientConfig.IpKernel + ":" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
 		log.Printf("error enviando: %s", err.Error())
@@ -940,7 +944,7 @@ func IO_FS_READ(nombre string, nombreArchivo string, registroDirec string, regis
 		return
 	}
 
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
+	url := "http://" + globals.ClientConfig.IpKernel + ":" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/io"
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
 		log.Printf("error enviando: %s", err.Error())
@@ -980,12 +984,13 @@ func decoYExecInstru(instrucciones string) {
 		log.Printf("PID: %d - Ejecutando: %v - %v,%v", procesoActual.PID, instru[0], instru[1], instru[2])
 		MOV_OUT(instru[1], instru[2])
 	case "SET":
+		log.Print("instruccion: %s", instru)
+		log.Printf("PID: %d - Ejecutando: %v - %v,%v", procesoActual.PID, instru[0], instru[1], instru[2])
 		valor, err := strconv.Atoi(instru[2])
 		if err != nil {
 			log.Printf("error enviando: %s", err.Error())
 			return
 		}
-		log.Printf("PID: %d - Ejecutando: %v - %v,%v", procesoActual.PID, instru[0], instru[1], instru[2])
 		SET(instru[1], valor)
 	case "SUM":
 		log.Printf("PID: %d - Ejecutando: %v - %v,%v", procesoActual.PID, instru[0], instru[1], instru[2])
@@ -1055,7 +1060,7 @@ func decoYExecInstru(instrucciones string) {
 
 func SolicitarInstruccion(pid int, pc int) string {
 
-	url := fmt.Sprintf("http://localhost:%d/instruccion/%d/%d", globals.ClientConfig.PortMemory, pid, pc)
+	url := fmt.Sprintf("http://"+globals.ClientConfig.IpMemory+":%d/instruccion/%d/%d", globals.ClientConfig.PortMemory, pid, pc)
 
 	resp, err := http.Get(url)
 	if err != nil {
@@ -1082,6 +1087,7 @@ func SolicitarInstruccion(pid int, pc int) string {
 		log.Printf("Error al decodificar la respuesta JSON: %s", err.Error())
 		return ""
 	}
+	log.Printf("Instruccion: %s", instruccion)
 
 	return instruccion
 }

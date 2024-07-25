@@ -67,6 +67,7 @@ var puertosDispGenericos map[string]int
 var puertosDispSTDIN map[string]int
 var puertosDispSTDOUT map[string]int
 var puertosDispFS map[string]int
+var listaRecursosOcupados map[int][]string
 var listaEsperaRecursos map[string][]int
 var listaEsperaGenericos map[string][]BodyIO
 var listaEsperaSTDIN map[string][]BodySTD
@@ -148,6 +149,7 @@ func InicializarVariables() {
 	puertosDispSTDIN = make(map[string]int)
 	puertosDispSTDOUT = make(map[string]int)
 	puertosDispFS = make(map[string]int)
+	listaRecursosOcupados = make(map[int][]string)
 	listaEsperaRecursos = make(map[string][]int)
 	listaEsperaGenericos = make(map[string][]BodyIO)
 	listaEsperaSTDIN = make(map[string][]BodySTD)
@@ -173,6 +175,7 @@ func InicializarPlanificador() {
 func planificarFIFO() {
 	for {
 		<-semProcesosListos
+		log.Print("Consumi una señal")
 		planificadorCortoPlazo.Lock()
 		// Selecciona el primer proceso en la lista de procesos
 		mutexColaListos.Lock()
@@ -281,7 +284,7 @@ func planificarVRR() {
 
 func quantum(PID int, quantum int) {
 	time.Sleep(time.Duration(quantum) * time.Millisecond)
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortCPU) + "/quantum/" + strconv.Itoa(PID)
+	url := "http://" + globals.ClientConfig.IpCPU + ":" + strconv.Itoa(globals.ClientConfig.PortCPU) + "/quantum/" + strconv.Itoa(PID)
 
 	_, err := http.Get(url)
 
@@ -310,7 +313,7 @@ func IniciarProceso(w http.ResponseWriter, r *http.Request) {
 	}
 
 	cliente := &http.Client{}
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/process"
+	url := "http://" + globals.ClientConfig.IpMemory + ":" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/process"
 	req, err := http.NewRequest("PUT", url, bytes.NewBuffer(body))
 	if err != nil {
 		return
@@ -374,6 +377,7 @@ func agregarProcesosALaColaListos() {
 		cambiarEstado(string(proceso.Estado), "READY", &proceso)
 		colaDeListos = append(colaDeListos, proceso)
 		colaDeNuevos = colaDeNuevos[1:]
+		log.Print("Di una señal 1")
 		semProcesosListos <- 0
 	}
 
@@ -416,6 +420,7 @@ func rehabilitarProcesoBlocked(PID int) {
 			} else {
 				colaDeListosQuantum = append(colaDeListosQuantum, proceso)
 			}
+			log.Print("Di una señal 2")
 			semProcesosListos <- 0
 			break
 		} else {
@@ -441,7 +446,7 @@ func EnviarProcesoACPU(pcb *PCB) string {
 		return "error"
 	}
 
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortCPU) + "/PCB"
+	url := "http://" + globals.ClientConfig.IpCPU + ":" + strconv.Itoa(globals.ClientConfig.PortCPU) + "/PCB"
 
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
@@ -512,7 +517,7 @@ func ManejarInterrupcion(interrupcion string, proceso PCB, colaVRR bool) {
 		if mensaje == "QUANTUM" {
 			log.Printf("PID: %d - Desalojado por fin de Quantum", proceso.PID)
 		}
-
+		log.Print("Di una señal 3")
 		semProcesosListos <- 0
 	case "BLOCKED":
 		cambiarEstado(string(proceso.Estado), "BLOCKED", &proceso)
@@ -524,20 +529,17 @@ func ManejarInterrupcion(interrupcion string, proceso PCB, colaVRR bool) {
 
 			if resultado == "OK" {
 				cambiarEstado(string(proceso.Estado), "READY", &proceso)
-				var listaTemp []PCB
-				listaTemp = append(listaTemp, proceso)
-				if proceso.Quantum == globals.ClientConfig.Quantum {
+				if proceso.Quantum == globals.ClientConfig.Quantum && globals.ClientConfig.PlanningAlgorithm == "VRR" {
 					mutexColaListosQuantum.Lock()
-					listaTemp = append(listaTemp, colaDeListosQuantum...)
-					colaDeListosQuantum = listaTemp
+					colaDeListosQuantum = append(colaDeListosQuantum, proceso)
 					mutexColaListosQuantum.Unlock()
 				} else {
 					mutexColaListos.Lock()
-					listaTemp = append(listaTemp, colaDeListos...)
-					colaDeListos = listaTemp
+					colaDeListos = append(colaDeListos, proceso)
 					mutexColaListos.Unlock()
 				}
 				log.Printf("PID: %d - Recurso asignado: %v", proceso.PID, motivo[2])
+				log.Print("Di una señal 4")
 				semProcesosListos <- 0
 				return
 			} else if resultado == "NOT_FOUND" {
@@ -547,7 +549,7 @@ func ManejarInterrupcion(interrupcion string, proceso PCB, colaVRR bool) {
 		} else if motivo[1] == "SIGNAL" {
 			log.Printf("PID: %d - Recurso liberado: %v", proceso.PID, motivo[2])
 			mutexColaListos.Unlock()
-			resultado := SIGNAL(motivo[2])
+			resultado := SIGNAL(proceso.PID, motivo[2])
 			if resultado == "NOT_FOUND" {
 				eliminarProceso(proceso, "INVALID_RESOURCE")
 				return
@@ -555,7 +557,7 @@ func ManejarInterrupcion(interrupcion string, proceso PCB, colaVRR bool) {
 			cambiarEstado(string(proceso.Estado), "READY", &proceso)
 			var listaTemp []PCB
 			listaTemp = append(listaTemp, proceso)
-			if proceso.Quantum == globals.ClientConfig.Quantum {
+			if globals.ClientConfig.PlanningAlgorithm == "VRR" {
 				mutexColaListosQuantum.Lock()
 				listaTemp = append(listaTemp, colaDeListosQuantum...)
 				colaDeListosQuantum = listaTemp
@@ -566,6 +568,7 @@ func ManejarInterrupcion(interrupcion string, proceso PCB, colaVRR bool) {
 				colaDeListos = listaTemp
 				mutexColaListos.Unlock()
 			}
+			log.Print("Di una señal 5")
 			semProcesosListos <- 0
 			return
 		} else {
@@ -608,8 +611,24 @@ func cambiarEstado(estadoAnterior string, estadoNuevo string, proceso *PCB) {
 }
 
 func liberarRecursosProceso(pid int) {
+	largo := len(listaRecursosOcupados[pid])
+	for i := 0; i < largo; i++ {
+		recurso := listaRecursosOcupados[pid][0]
+		SIGNAL(pid, recurso)
+		log.Print("Hola?")
+	}
+	for _, recurso := range globals.ClientConfig.Resources {
+		listaTemp := listaEsperaRecursos[recurso]
+		removerPidDeLista(&listaTemp, pid)
+		listaEsperaRecursos[recurso] = listaTemp
+	}
+
+	log.Print("Todavia no se elimino el pid")
+	delete(listaRecursosOcupados, pid)
+	log.Print("Se elimino el pid")
+
 	cliente := &http.Client{}
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/process/" + strconv.Itoa(pid)
+	url := "http://" + globals.ClientConfig.IpMemory + ":" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/process/" + strconv.Itoa(pid)
 	req, err := http.NewRequest("DELETE", url, nil)
 	if err != nil {
 		return
@@ -695,6 +714,9 @@ func FinalizarProceso(w http.ResponseWriter, r *http.Request) {
 		mutexColaBlocked.Unlock()
 		removerProcesoDeLista(&colaDeNuevos, pidInt, "Se solicito finalizar el proceso")
 		mutexColaNuevos.Unlock()
+		planificadorLargoPlazo.Unlock()
+		liberarRecursosProceso(pidInt)
+		planificadorLargoPlazo.Lock()
 	case "READY":
 		mutexColaBlocked.Unlock()
 		mutexColaNuevos.Unlock()
@@ -702,6 +724,9 @@ func FinalizarProceso(w http.ResponseWriter, r *http.Request) {
 		removerProcesoDeLista(&colaDeListosQuantum, pidInt, "Se solicito finalizar el proceso")
 		mutexColaListos.Unlock()
 		mutexColaListosQuantum.Unlock()
+		planificadorLargoPlazo.Unlock()
+		liberarRecursosProceso(pidInt)
+		planificadorLargoPlazo.Lock()
 		agregarProcesosALaColaListos()
 	case "BLOCKED":
 		mutexColaListos.Unlock()
@@ -709,6 +734,9 @@ func FinalizarProceso(w http.ResponseWriter, r *http.Request) {
 		mutexColaNuevos.Unlock()
 		removerProcesoDeLista(&colaDeBlocked, pidInt, "Se solicito finalizar el proceso")
 		mutexColaBlocked.Unlock()
+		planificadorLargoPlazo.Unlock()
+		liberarRecursosProceso(pidInt)
+		planificadorLargoPlazo.Lock()
 		agregarProcesosALaColaListos()
 	case "EXEC":
 		mutexColaListos.Unlock()
@@ -716,7 +744,7 @@ func FinalizarProceso(w http.ResponseWriter, r *http.Request) {
 		mutexColaBlocked.Unlock()
 		mutexColaNuevos.Unlock()
 		killProcess = true
-		url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortCPU) + "/desalojar/" + strconv.Itoa(pidInt)
+		url := "http://" + globals.ClientConfig.IpCPU + ":" + strconv.Itoa(globals.ClientConfig.PortCPU) + "/desalojar/" + strconv.Itoa(pidInt)
 
 		_, err := http.Get(url)
 
@@ -744,6 +772,10 @@ func ListarProcesos(w http.ResponseWriter, r *http.Request) {
 
 	mutexMapaEstados.Lock()
 	for pid, estado := range estadosProcesos {
+		_, ok := estadosProcesos[pid]
+		if !ok {
+			continue
+		}
 		proceso.PID = pid
 		proceso.State = estado
 		listaProcesos = append(listaProcesos, proceso)
@@ -914,7 +946,7 @@ func agregarElemAListaFS(dispositivo string, puerto int, datosFS BodyFS) {
 }
 
 func validarConexionIO(puerto int) bool {
-	url := "http://localhost:" + strconv.Itoa(puerto) + "/validar"
+	url := "http://" + globals.ClientConfig.IpIO + ":" + strconv.Itoa(puerto) + "/validar"
 	_, err := http.Get(url)
 	return err == nil
 }
@@ -934,7 +966,7 @@ func Sleep(nombreDispositivo string, puerto int) {
 			continue
 		}
 
-		url := "http://localhost:" + strconv.Itoa(puerto) + "/sleep/" + strconv.Itoa(proceso.CantidadIO) + "/" + strconv.Itoa(proceso.PID)
+		url := "http://" + globals.ClientConfig.IpIO + ":" + strconv.Itoa(puerto) + "/sleep/" + strconv.Itoa(proceso.CantidadIO) + "/" + strconv.Itoa(proceso.PID)
 
 		resp, err := http.Get(url)
 		if err != nil {
@@ -946,6 +978,7 @@ func Sleep(nombreDispositivo string, puerto int) {
 				mutexColaBlocked.Lock()
 				removerProcesoDeLista(&colaDeBlocked, elemento.PID, "LOST_CONNECTION_IO")
 				mutexColaBlocked.Unlock()
+				liberarRecursosProceso(elemento.PID)
 			}
 
 			delete(listaEsperaGenericos, nombreDispositivo)
@@ -986,7 +1019,7 @@ func Read(nombreDispositivo string, puerto int) {
 			continue
 		}
 
-		url := "http://localhost:" + strconv.Itoa(puerto) + "/read/" + strconv.Itoa(proceso.PID) + "/" + strconv.Itoa(proceso.Tamaño) + "/" + strconv.Itoa(proceso.Direccion)
+		url := "http://" + globals.ClientConfig.IpIO + ":" + strconv.Itoa(puerto) + "/read/" + strconv.Itoa(proceso.PID) + "/" + strconv.Itoa(proceso.Tamaño) + "/" + strconv.Itoa(proceso.Direccion)
 
 		resp, err := http.Get(url)
 		if err != nil {
@@ -998,6 +1031,7 @@ func Read(nombreDispositivo string, puerto int) {
 				mutexColaBlocked.Lock()
 				removerProcesoDeLista(&colaDeBlocked, elemento.PID, "LOST_CONNECTION_IO")
 				mutexColaBlocked.Unlock()
+				liberarRecursosProceso(elemento.PID)
 			}
 
 			delete(listaEsperaSTDIN, nombreDispositivo)
@@ -1038,7 +1072,7 @@ func Write(nombreDispositivo string, puerto int) {
 			continue
 		}
 
-		url := "http://localhost:" + strconv.Itoa(puerto) + "/write/" + strconv.Itoa(proceso.PID) + "/" + strconv.Itoa(proceso.Tamaño) + "/" + strconv.Itoa(proceso.Direccion)
+		url := "http://" + globals.ClientConfig.IpIO + ":" + strconv.Itoa(puerto) + "/write/" + strconv.Itoa(proceso.PID) + "/" + strconv.Itoa(proceso.Tamaño) + "/" + strconv.Itoa(proceso.Direccion)
 
 		resp, err := http.Get(url)
 		if err != nil {
@@ -1050,6 +1084,7 @@ func Write(nombreDispositivo string, puerto int) {
 				mutexColaBlocked.Lock()
 				removerProcesoDeLista(&colaDeBlocked, elemento.PID, "LOST_CONNECTION_IO")
 				mutexColaBlocked.Unlock()
+				liberarRecursosProceso(elemento.PID)
 			}
 
 			delete(listaEsperaSTDOUT, nombreDispositivo)
@@ -1100,15 +1135,15 @@ func DialFS(nombreDispositivo string, puerto int) {
 
 		switch proceso.Instruccion {
 		case "CREATE":
-			url = fmt.Sprintf("http://localhost:%d/fs/create", puerto)
+			url = fmt.Sprintf("http://"+globals.ClientConfig.IpIO+":%d/fs/create", puerto)
 		case "DELETE":
-			url = fmt.Sprintf("http://localhost:%d/fs/delete", puerto)
+			url = fmt.Sprintf("http://"+globals.ClientConfig.IpIO+":%d/fs/delete", puerto)
 		case "TRUNCATE":
-			url = fmt.Sprintf("http://localhost:%d/fs/truncate", puerto)
+			url = fmt.Sprintf("http://"+globals.ClientConfig.IpIO+":%d/fs/truncate", puerto)
 		case "WRITE":
-			url = fmt.Sprintf("http://localhost:%d/fs/write", puerto)
+			url = fmt.Sprintf("http://"+globals.ClientConfig.IpIO+":%d/fs/write", puerto)
 		case "READ":
-			url = fmt.Sprintf("http://localhost:%d/fs/read", puerto)
+			url = fmt.Sprintf("http://"+globals.ClientConfig.IpIO+":%d/fs/read", puerto)
 		}
 
 		resp, err := http.Post(url, "application/json", bytes.NewBuffer(requestBody))
@@ -1122,6 +1157,7 @@ func DialFS(nombreDispositivo string, puerto int) {
 				mutexColaBlocked.Lock()
 				removerProcesoDeLista(&colaDeBlocked, elemento.PID, "LOST_CONNECTION_IO")
 				mutexColaBlocked.Unlock()
+				liberarRecursosProceso(elemento.PID)
 			}
 
 			delete(listaEsperaSTDOUT, nombreDispositivo)
@@ -1152,8 +1188,24 @@ func removerProcesoDeLista(lista *[]PCB, PID int, motivo string) {
 	for _, elemento := range *lista {
 		if elemento.PID == PID {
 			*lista = removerIndex(*lista, contador)
-			liberarRecursosProceso(PID)
+
+			mutexMapaEstados.Lock()
+			delete(estadosProcesos, PID)
+			mutexMapaEstados.Unlock()
+
 			log.Printf("Finaliza el proceso %d - Motivo: %v", PID, motivo)
+			break
+		} else {
+			contador++
+		}
+	}
+}
+
+func removerPidDeLista(lista *[]int, PID int) {
+	var contador int = 0
+	for _, elemento := range *lista {
+		if elemento == PID {
+			*lista = removerIndexInt(*lista, contador)
 			break
 		} else {
 			contador++
@@ -1163,6 +1215,18 @@ func removerProcesoDeLista(lista *[]PCB, PID int, motivo string) {
 
 func removerIndex(s []PCB, index int) []PCB {
 	ret := make([]PCB, 0)
+	ret = append(ret, s[:index]...)
+	return append(ret, s[index+1:]...)
+}
+
+func removerIndexString(s []string, index int) []string {
+	ret := make([]string, 0)
+	ret = append(ret, s[:index]...)
+	return append(ret, s[index+1:]...)
+}
+
+func removerIndexInt(s []int, index int) []int {
+	ret := make([]int, 0)
 	ret = append(ret, s[:index]...)
 	return append(ret, s[index+1:]...)
 }
@@ -1183,7 +1247,7 @@ func RegistrarIO(w http.ResponseWriter, r *http.Request) {
 	}
 
 	switch request.Categoria {
-	case "Generico":
+	case "GENERICO":
 		puertosDispGenericos[request.Nombre] = request.Puerto
 	case "STDIN":
 		puertosDispSTDIN[request.Nombre] = request.Puerto
@@ -1212,19 +1276,35 @@ func WAIT(pid int, recurso string) string {
 				}
 				listaEsperaRecursos[recurso] = append(listaEsperaRecursos[recurso], pid)
 				return "BLOCKED"
+			} else {
+				listaRecursosOcupados[pid] = append(listaRecursosOcupados[pid], recurso)
+				log.Printf("Lista de recursos añadidos modificada: %s", listaRecursosOcupados[pid])
+				return "OK"
 			}
-			return "OK"
 		}
 	}
 	return "NOT_FOUND"
 }
 
-func SIGNAL(recurso string) string {
+func SIGNAL(pid int, recurso string) string {
 	// Buscar el recurso
 	for i, r := range globals.ClientConfig.Resources {
 		if r == recurso {
 			globals.ClientConfig.Resource_instances[i]++
+
+			listaRecursos := listaRecursosOcupados[pid]
+			contador := 0
+			for _, recursoLista := range listaRecursos {
+				if recursoLista == recurso {
+					log.Printf("Lista de recursos ocupados sin modificar: %s", listaRecursosOcupados[pid])
+					listaRecursosOcupados[pid] = removerIndexString(listaRecursosOcupados[pid], contador)
+					log.Printf("Lista de recursos ocupados modificada: %s", listaRecursosOcupados[pid])
+				} else {
+					contador++
+				}
+			}
 			if len(listaEsperaRecursos[recurso]) != 0 {
+				listaRecursosOcupados[pid] = append(listaRecursosOcupados[pid], recurso)
 				rehabilitarProcesoBlocked(listaEsperaRecursos[recurso][0])
 				listaEsperaRecursos[recurso] = listaEsperaRecursos[recurso][1:]
 			}
@@ -1241,144 +1321,4 @@ type FileRequest struct {
 type FileResponse struct {
 	Status  string `json:"status"`
 	Message string `json:"message"`
-}
-
-func HandleCreateFileRequest(w http.ResponseWriter, r *http.Request) {
-	log.Printf("ENTRO AL HANDLE_CREATE_FILE_REQUEST")
-	var request FileRequest
-	if err := json.NewDecoder(r.Body).Decode(&request); err != nil {
-		log.Printf("Error al decodificar la solicitud: %v", err)
-		http.Error(w, "Bad request", http.StatusBadRequest)
-		return
-	}
-
-	if request.NombreArchivo == "" {
-		log.Printf("Parámetros inválidos: nombreArchivo está vacío")
-		http.Error(w, "Parámetros inválidos", http.StatusBadRequest)
-		return
-	}
-
-	// Enviar la solicitud al módulo de Interfaz de I/O
-	err := sendCreateFileRequestToIO(request.NombreArchivo)
-	var response FileResponse
-	if err != nil {
-		response = FileResponse{
-			Status:  "Error",
-			Message: err.Error(),
-		}
-		w.WriteHeader(http.StatusInternalServerError)
-	} else {
-		response = FileResponse{
-			Status:  "OK",
-			Message: "Archivo creado correctamente",
-		}
-		w.WriteHeader(http.StatusOK)
-	}
-
-	// Responder a la CPU
-	if err := json.NewEncoder(w).Encode(response); err != nil {
-		log.Printf("Error al codificar la respuesta: %v", err)
-		http.Error(w, "Internal server error", http.StatusInternalServerError)
-	}
-}
-
-func sendCreateFileRequestToIO(nombreArchivo string) error {
-	log.Printf("SEND_CREATE_FILE_REQUEST_TO_IO")
-	// Crear la solicitud
-	request := FileRequest{
-		NombreArchivo: nombreArchivo,
-	}
-
-	// Codificar la solicitud a JSON
-	requestBody, err := json.Marshal(request)
-	if err != nil {
-		log.Printf("Error al codificar la solicitud: %v", err)
-		return fmt.Errorf("error al codificar la solicitud: %w", err)
-	}
-
-	// Enviar la solicitud al módulo de Interfaz de I/O
-	url := fmt.Sprintf("http://localhost:%d/fs/create", globals.ClientConfig.PortIO)
-	resp, err := http.Post(url, "application/json", bytes.NewBuffer(requestBody))
-	if err != nil {
-		log.Printf("Error al enviar la solicitud al módulo de Interfaz de I/O: %v", err)
-		return fmt.Errorf("error al enviar la solicitud al módulo de Interfaz de I/O: %w", err)
-	}
-	defer resp.Body.Close()
-
-	if resp.StatusCode != http.StatusOK {
-		log.Printf("Error del módulo de Interfaz de I/O: %s", resp.Status)
-		return fmt.Errorf("error del módulo de Interfaz de I/O: %s", resp.Status)
-	}
-
-	return nil
-}
-
-func HandleDeleteFileRequest(w http.ResponseWriter, r *http.Request) {
-	log.Printf("ENTRO AL HANDLE_DELETE_FILE_REQUEST")
-	var request FileRequest
-	if err := json.NewDecoder(r.Body).Decode(&request); err != nil {
-		log.Printf("Error al decodificar la solicitud: %v", err)
-		http.Error(w, "Bad request", http.StatusBadRequest)
-		return
-	}
-
-	if request.NombreArchivo == "" {
-		log.Printf("Parámetros inválidos: nombreArchivo está vacío")
-		http.Error(w, "Parámetros inválidos", http.StatusBadRequest)
-		return
-	}
-
-	// Enviar la solicitud al módulo de Interfaz de I/O
-	err := sendDeleteFileRequestToIO(request.NombreArchivo)
-	var response FileResponse
-	if err != nil {
-		response = FileResponse{
-			Status:  "Error",
-			Message: err.Error(),
-		}
-		w.WriteHeader(http.StatusInternalServerError)
-	} else {
-		response = FileResponse{
-			Status:  "OK",
-			Message: "Archivo eliminado correctamente",
-		}
-		w.WriteHeader(http.StatusOK)
-	}
-
-	// Responder a la CPU
-	if err := json.NewEncoder(w).Encode(response); err != nil {
-		log.Printf("Error al codificar la respuesta: %v", err)
-		http.Error(w, "Internal server error", http.StatusInternalServerError)
-	}
-}
-
-func sendDeleteFileRequestToIO(nombreArchivo string) error {
-	log.Printf("SEND_DELETE_FILE_REQUEST_TO_IO")
-	// Crear la solicitud
-	request := FileRequest{
-		NombreArchivo: nombreArchivo,
-	}
-
-	// Codificar la solicitud a JSON
-	requestBody, err := json.Marshal(request)
-	if err != nil {
-		log.Printf("Error al codificar la solicitud: %v", err)
-		return fmt.Errorf("error al codificar la solicitud: %w", err)
-	}
-
-	// Enviar la solicitud al módulo de Interfaz de I/O
-	url := fmt.Sprintf("http://localhost:%d/fs/delete", globals.ClientConfig.PortIO)
-	resp, err := http.Post(url, "application/json", bytes.NewBuffer(requestBody))
-	if err != nil {
-		log.Printf("Error al enviar la solicitud al módulo de Interfaz de I/O: %v", err)
-		return fmt.Errorf("error al enviar la solicitud al módulo de Interfaz de I/O: %w", err)
-	}
-	defer resp.Body.Close()
-
-	if resp.StatusCode != http.StatusOK {
-		log.Printf("Error del módulo de Interfaz de I/O: %s", resp.Status)
-		return fmt.Errorf("error del módulo de Interfaz de I/O: %s", resp.Status)
-	}
-
-	return nil
 }

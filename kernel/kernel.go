@@ -25,8 +25,6 @@ func main() {
 	mux.HandleFunc("GET /process", utils.ListarProcesos)
 	mux.HandleFunc("POST /io", utils.PedirIO)
 	mux.HandleFunc("POST /nuevoIO", utils.RegistrarIO)
-	mux.HandleFunc("POST /fs/create", utils.HandleCreateFileRequest)
-	mux.HandleFunc("POST /fs/delete", utils.HandleDeleteFileRequest)
 	err := http.ListenAndServe(":"+strconv.Itoa(globals.ClientConfig.PortKernel), mux)
 	if err != nil {
 		panic(err)

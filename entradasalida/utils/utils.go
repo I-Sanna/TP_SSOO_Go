@@ -217,7 +217,7 @@ func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Error guardando el texto ingresado %v", err)
 		return
 	}
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/escribir"
+	url := "http://" + globals.ClientConfig.IpMemory + ":" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/escribir"
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 
 	if err != nil {
@@ -276,7 +276,7 @@ func IO_STDOUT_WRITE(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Error al codificar la solicitud %v", err)
 		return
 	}
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/leer"
+	url := "http://" + globals.ClientConfig.IpMemory + ":" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/leer"
 	fmt.Print("URL: ", url)
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
@@ -584,7 +584,7 @@ func IO_FS_TRUNCATE(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
 		return
 	}
-	//time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
+	time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
 }
@@ -665,7 +665,7 @@ func IO_FS_WRITE(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	fmt.Printf("\nLlamando a memoria para leer la direc %d, tamaño %d", request.Direccion, request.Tamaño)
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/leer"
+	url := "http://" + globals.ClientConfig.IpMemory + ":" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/leer"
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
 		log.Printf("error enviando: %s", err.Error())
@@ -677,7 +677,7 @@ func IO_FS_WRITE(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Error al decodificar mensaje: %s\n", err.Error())
 		return
 	}
-	//time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
+	time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
 	respString := string(response)
 
 	log.Printf("El texto leido es: %s", respString)
@@ -732,7 +732,7 @@ func IO_FS_READ(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Error guardando el texto ingresado %v", err)
 		return
 	}
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/escribir"
+	url := "http://" + globals.ClientConfig.IpMemory + ":" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/escribir"
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 
 	if err != nil {
@@ -753,7 +753,7 @@ func IO_FS_READ(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
-	//time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
+	time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
 	log.Printf("PID: %d - Operación: IO_FS_READ", request.PID)
 	log.Printf("PID: %d - Leer Archivo: %s - Tamaño a Leer: %d - Puntero Archivo: %d ", request.PID, request.Archivo, request.Tamaño, request.PtrArchivo)
 }
@@ -771,7 +771,7 @@ func EstablecerConexion(nombre string, puerto int) {
 		return
 	}
 
-	url := "http://localhost:" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/nuevoIO"
+	url := "http://" + globals.ClientConfig.IpKernel + ":" + strconv.Itoa(globals.ClientConfig.PortKernel) + "/nuevoIO"
 	_, err = http.Post(url, "application/json", bytes.NewBuffer(body)) // Enviando nil como el cuerpo
 	if err != nil {
 		log.Printf("error enviando: %s", err.Error())
@@ -845,7 +845,7 @@ func IO_FS_CREATE_Handler(w http.ResponseWriter, r *http.Request) {
 		Status:  "OK",
 		Message: "Archivo creado correctamente",
 	}
-	//time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
+	time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
 	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(response)
 	log.Printf("Archivo '%s' creado", request.NombreArchivo)
@@ -890,7 +890,7 @@ func IO_FS_DELETE_Handler(w http.ResponseWriter, r *http.Request) {
 	}
 	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(response)
-	//time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
+	time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
 	log.Printf("Archivo '%s' eliminado", request.NombreArchivo)
 	log.Printf("PID: %d - Delete Archivo: %s", request.PID, request.NombreArchivo)
 }

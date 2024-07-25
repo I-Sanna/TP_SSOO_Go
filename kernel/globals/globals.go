@@ -6,7 +6,7 @@ type Config struct {
 	PortMemory         int      `json:"port_memory"`
 	IpCPU              string   `json:"ip_cpu"`
 	PortCPU            int      `json:"port_cpu"`
-	PortIO             int      `json:"port_io"`
+	IpIO               string   `json:"ip_io"`
 	PlanningAlgorithm  string   `json:"planning_algorithm"`
 	Quantum            int      `json:"quantum"`
 	Resources          []string `json:"resources"`

@@ -3282,3 +3282,182 @@ Configuracion cargada con exito!
 2024/07/22 19:53:40 PID: 0 - Operación: IO_FS_READ
 2024/07/22 19:53:40 PID: 0 - Leer Archivo: notas.txt - Tamaño a Leer: 16 - Puntero Archivo: 0 
 2024/07/22 19:53:43 Error: Intentando leer/escribir más allá del tamaño del archivo
+2024/07/24 23:00:36 
+Configuracion cargada con exito!
+2024/07/24 23:00:54 
+Configuracion cargada con exito!
+2024/07/24 23:02:00 Se guardo correctamente el mensaje
+2024/07/24 23:02:00 PID: 0 - Operación: IO_STDIN_READ
+2024/07/24 23:02:01 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/24 23:02:01 Intentando crear archivo con nombre: notas.txt
+2024/07/24 23:02:01 Se entró a CrearArchivoFS con nombreArchivo: notas.txt
+2024/07/24 23:02:01 Leyendo archivos de bloques y bitmap
+2024/07/24 23:02:01 Leyendo el bitmap
+2024/07/24 23:02:01 Buscando bloque libre
+2024/07/24 23:02:01 Bloque libre encontrado: 0
+2024/07/24 23:02:01 Actualización del bitmap completada
+2024/07/24 23:02:01 Archivo de metadata 'notas.txt' creado con éxito
+2024/07/24 23:02:01 Archivo 'notas.txt' creado
+2024/07/24 23:02:01 PID: 0 - Crear Archivo: notas.txt
+2024/07/24 23:02:02 PID: 0 - Truncar Archivo: notas.txt - Tamaño: 128
+2024/07/24 23:02:02 
+[1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+2024/07/24 23:02:05 El texto leido es: hola mundo arbol
+2024/07/24 23:02:05 Escribo el texto en el archivo
+2024/07/24 23:02:05 PID: 0 - Operación: IO_FS_WRITE
+2024/07/24 23:02:05 PID: 0 - Escribir Archivo: notas.txt - Tamaño a Escribir:  16 - Puntero Archivo: 0
+2024/07/24 23:02:07 El texto leido es: hola mundo arbol
+2024/07/24 23:02:08 Se guardo correctamente el mensaje
+2024/07/24 23:02:08 PID: 0 - Operación: IO_FS_READ
+2024/07/24 23:02:08 PID: 0 - Leer Archivo: notas.txt - Tamaño a Leer: 16 - Puntero Archivo: 0 
+2024/07/24 23:02:09 Se recibió una solicitud en IO_FS_DELETE_Handler
+2024/07/24 23:02:09 Intentando eliminar archivo con nombre: notas.txt
+2024/07/24 23:02:09 Archivo 'notas.txt' eliminado
+2024/07/24 23:02:09 PID: 0 - Delete Archivo: notas.txt
+2024/07/24 23:16:51 
+Configuracion cargada con exito!
+2024/07/24 23:16:51 error enviando: Post "http://127.0.0.1:8001/nuevoIO": dial tcp 127.0.0.1:8001: connect: connection refused
+2024/07/24 23:17:59 
+Configuracion cargada con exito!
+2024/07/24 23:35:22 
+Configuracion cargada con exito!
+2024/07/25 00:12:07 
+Configuracion cargada con exito!
+2024/07/25 00:14:28 
+Configuracion cargada con exito!
+2024/07/25 00:14:40 PID: 0 - Operación: IO_GEN_SLEEP
+2024/07/25 00:14:45 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/25 00:14:47 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/25 00:14:48 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/25 00:26:13 
+Configuracion cargada con exito!
+2024/07/25 00:26:24 PID: 0 - Operación: IO_GEN_SLEEP
+2024/07/25 00:26:29 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/25 00:26:31 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/25 00:26:32 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/25 00:27:51 
+Configuracion cargada con exito!
+2024/07/25 00:28:06 PID: 0 - Operación: IO_GEN_SLEEP
+2024/07/25 00:28:11 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/25 00:28:13 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/25 00:28:14 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/25 00:33:26 
+Configuracion cargada con exito!
+2024/07/25 00:34:49 PID: 0 - Operación: IO_GEN_SLEEP
+2024/07/25 00:34:54 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/25 00:34:56 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/25 00:34:57 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/25 00:51:52 
+Configuracion cargada con exito!
+2024/07/25 00:52:05 PID: 0 - Operación: IO_GEN_SLEEP
+2024/07/25 00:52:10 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/25 00:52:12 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/25 00:52:13 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/25 00:56:33 
+Configuracion cargada con exito!
+2024/07/25 00:56:44 PID: 0 - Operación: IO_GEN_SLEEP
+2024/07/25 00:56:49 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/25 00:56:51 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/25 00:56:52 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/25 01:04:23 
+Configuracion cargada con exito!
+2024/07/25 01:04:33 PID: 0 - Operación: IO_GEN_SLEEP
+2024/07/25 01:04:38 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/25 01:04:40 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/25 01:04:41 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/25 01:07:34 
+Configuracion cargada con exito!
+2024/07/25 01:07:43 PID: 0 - Operación: IO_GEN_SLEEP
+2024/07/25 01:07:48 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/25 01:07:50 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/25 01:07:51 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/25 01:17:08 
+Configuracion cargada con exito!
+2024/07/25 01:17:17 PID: 0 - Operación: IO_GEN_SLEEP
+2024/07/25 01:17:22 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/25 01:17:24 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/25 01:17:25 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/25 01:19:47 
+Configuracion cargada con exito!
+2024/07/25 01:19:58 PID: 0 - Operación: IO_GEN_SLEEP
+2024/07/25 01:20:03 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/25 01:20:05 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/25 01:20:06 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/25 01:20:18 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/25 01:20:25 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/25 01:20:33 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/25 01:24:30 
+Configuracion cargada con exito!
+2024/07/25 01:24:42 PID: 0 - Operación: IO_GEN_SLEEP
+2024/07/25 01:24:47 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/25 01:24:49 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/25 01:24:50 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/25 01:24:59 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/25 01:25:07 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/25 01:25:15 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/25 01:38:15 
+Configuracion cargada con exito!
+2024/07/25 01:38:24 PID: 0 - Operación: IO_GEN_SLEEP
+2024/07/25 01:38:29 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/25 01:38:31 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/25 01:38:32 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/25 01:38:43 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/25 01:38:50 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/25 01:38:58 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/25 01:46:06 
+Configuracion cargada con exito!
+2024/07/25 01:46:29 
+Configuracion cargada con exito!
+2024/07/25 01:46:45 
+Configuracion cargada con exito!
+2024/07/25 01:58:29 
+Configuracion cargada con exito!
+2024/07/25 01:58:46 
+Configuracion cargada con exito!
+2024/07/25 01:59:02 
+Configuracion cargada con exito!
+2024/07/25 01:59:14 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/25 02:05:48 
+Configuracion cargada con exito!
+2024/07/25 02:06:03 
+Configuracion cargada con exito!
+2024/07/25 02:06:15 
+Configuracion cargada con exito!
+2024/07/25 02:06:30 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/25 02:07:51 Se guardo correctamente el mensaje
+2024/07/25 02:07:51 PID: 0 - Operación: IO_STDIN_READ
+2024/07/25 02:07:54 PID: 0 - Operación: IO_GEN_SLEEP
+2024/07/25 02:08:17 Se guardo correctamente el mensaje
+2024/07/25 02:08:17 PID: 2 - Operación: IO_STDIN_READ
+2024/07/25 02:08:18 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/25 02:08:21 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/25 02:08:22 PID: 2 - Operación: IO_STDOUT_WRITE
+2024/07/25 02:08:22 El texto leido es:                     1    4
+2024/07/25 02:10:03 
+Configuracion cargada con exito!
+2024/07/25 02:10:17 
+Configuracion cargada con exito!
+2024/07/25 02:11:02 
+Configuracion cargada con exito!
+2024/07/25 02:11:13 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/25 02:19:36 
+Configuracion cargada con exito!
+2024/07/25 02:19:46 
+Configuracion cargada con exito!
+2024/07/25 02:19:56 
+Configuracion cargada con exito!
+2024/07/25 02:20:05 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/25 02:23:58 
+Configuracion cargada con exito!
+2024/07/25 02:24:08 
+Configuracion cargada con exito!
+2024/07/25 02:24:19 
+Configuracion cargada con exito!
+2024/07/25 02:24:29 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/25 02:26:14 
+Configuracion cargada con exito!
+2024/07/25 02:26:28 
+Configuracion cargada con exito!
+2024/07/25 02:26:44 
+Configuracion cargada con exito!
+2024/07/25 02:26:52 PID: 1 - Operación: IO_GEN_SLEEP
