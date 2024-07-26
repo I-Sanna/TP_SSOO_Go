@@ -340,6 +340,8 @@ func IniciarProceso(w http.ResponseWriter, r *http.Request) {
 		RegistrosCPU:   Registros{},
 	}
 
+	nuevoProceso.RegistrosCPU.PC = uint32(0)
+
 	contadorPID++
 
 	log.Printf("Se crea el proceso %d en NEW", nuevoProceso.PID)
@@ -377,7 +379,6 @@ func agregarProcesosALaColaListos() {
 		cambiarEstado(string(proceso.Estado), "READY", &proceso)
 		colaDeListos = append(colaDeListos, proceso)
 		colaDeNuevos = colaDeNuevos[1:]
-		log.Print("Di una señal 1")
 		semProcesosListos <- 0
 	}
 
@@ -420,7 +421,6 @@ func rehabilitarProcesoBlocked(PID int) {
 			} else {
 				colaDeListosQuantum = append(colaDeListosQuantum, proceso)
 			}
-			log.Print("Di una señal 2")
 			semProcesosListos <- 0
 			break
 		} else {
@@ -517,7 +517,6 @@ func ManejarInterrupcion(interrupcion string, proceso PCB, colaVRR bool) {
 		if mensaje == "QUANTUM" {
 			log.Printf("PID: %d - Desalojado por fin de Quantum", proceso.PID)
 		}
-		log.Print("Di una señal 3")
 		semProcesosListos <- 0
 	case "BLOCKED":
 		cambiarEstado(string(proceso.Estado), "BLOCKED", &proceso)
@@ -539,7 +538,6 @@ func ManejarInterrupcion(interrupcion string, proceso PCB, colaVRR bool) {
 					mutexColaListos.Unlock()
 				}
 				log.Printf("PID: %d - Recurso asignado: %v", proceso.PID, motivo[2])
-				log.Print("Di una señal 4")
 				semProcesosListos <- 0
 				return
 			} else if resultado == "NOT_FOUND" {
@@ -568,7 +566,6 @@ func ManejarInterrupcion(interrupcion string, proceso PCB, colaVRR bool) {
 				colaDeListos = listaTemp
 				mutexColaListos.Unlock()
 			}
-			log.Print("Di una señal 5")
 			semProcesosListos <- 0
 			return
 		} else {
@@ -615,7 +612,6 @@ func liberarRecursosProceso(pid int) {
 	for i := 0; i < largo; i++ {
 		recurso := listaRecursosOcupados[pid][0]
 		SIGNAL(pid, recurso)
-		log.Print("Hola?")
 	}
 	for _, recurso := range globals.ClientConfig.Resources {
 		listaTemp := listaEsperaRecursos[recurso]
@@ -623,9 +619,7 @@ func liberarRecursosProceso(pid int) {
 		listaEsperaRecursos[recurso] = listaTemp
 	}
 
-	log.Print("Todavia no se elimino el pid")
 	delete(listaRecursosOcupados, pid)
-	log.Print("Se elimino el pid")
 
 	cliente := &http.Client{}
 	url := "http://" + globals.ClientConfig.IpMemory + ":" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/process/" + strconv.Itoa(pid)
@@ -840,7 +834,7 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 
 		dispositivoGenerico.Lock() //Habria que hacer un semaforo por dispostivo
 		puerto, ok := puertosDispGenericos[request.Dispositivo]
-		fmt.Println("Sleep por validar conexionIO")
+
 		if ok && validarConexionIO(puerto) {
 			go agregarElemAListaGenericos(request.Dispositivo, puerto, datosIO)
 		} else {

@@ -35773,3 +35773,67 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/07/26 17:04:41 aa 16
 2024/07/26 17:04:41 PID: 14 - Pagina: 0 - Marco: 8
 2024/07/26 17:04:41 PID: 14 - Accion: Leer - Direccion fisica: 128 - Tamaño a leer: 37
+2024/07/26 17:21:21 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/26 17:21:21 PID: 0 - Tamaño: 32
+2024/07/26 17:21:22 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[]]
+2024/07/26 17:21:22 PID: 1 - Tamaño: 32
+2024/07/26 17:21:23 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[] map[]]
+2024/07/26 17:21:23 PID: 2 - Tamaño: 32
+2024/07/26 17:21:24 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[] map[] map[]]
+2024/07/26 17:21:24 PID: 3 - Tamaño: 32
+2024/07/26 17:31:08 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/26 17:31:08 PID: 4 - Tamaño: 32
+2024/07/26 17:31:09 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[]]
+2024/07/26 17:31:09 PID: 5 - Tamaño: 32
+2024/07/26 17:31:10 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[] map[]]
+2024/07/26 17:31:10 PID: 6 - Tamaño: 32
+2024/07/26 17:31:11 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[] map[] map[]]
+2024/07/26 17:31:11 PID: 7 - Tamaño: 32
+2024/07/26 17:42:29 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/26 17:42:29 PID: 0 - Tamaño: 32
+2024/07/26 17:42:30 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[]]
+2024/07/26 17:42:30 PID: 1 - Tamaño: 32
+2024/07/26 17:42:31 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[] map[]]
+2024/07/26 17:42:31 PID: 2 - Tamaño: 32
+2024/07/26 17:42:32 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[] map[] map[]]
+2024/07/26 17:42:32 PID: 3 - Tamaño: 32
+2024/07/26 17:47:38 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/26 17:47:38 PID: 0 - Tamaño: 32
+2024/07/26 17:47:39 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[]]
+2024/07/26 17:47:39 PID: 1 - Tamaño: 32
+2024/07/26 17:47:40 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[] map[]]
+2024/07/26 17:47:40 PID: 2 - Tamaño: 32
+2024/07/26 17:47:41 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[] map[] map[]]
+2024/07/26 17:47:41 PID: 3 - Tamaño: 32
+2024/07/26 17:56:42 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/26 17:56:42 PID: 4 - Tamaño: 32
+2024/07/26 17:56:43 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[]]
+2024/07/26 17:56:43 PID: 5 - Tamaño: 32
+2024/07/26 17:56:44 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[] map[]]
+2024/07/26 17:56:44 PID: 6 - Tamaño: 32
+2024/07/26 17:56:45 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[] map[] map[]]
+2024/07/26 17:56:45 PID: 7 - Tamaño: 32
+2024/07/26 18:01:39 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/26 18:01:39 PID: 0 - Tamaño: 32
+2024/07/26 18:01:40 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[]]
+2024/07/26 18:01:40 PID: 1 - Tamaño: 32
+2024/07/26 18:01:41 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[] map[]]
+2024/07/26 18:01:41 PID: 2 - Tamaño: 32
+2024/07/26 18:01:42 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[] map[] map[]]
+2024/07/26 18:01:42 PID: 3 - Tamaño: 32
+2024/07/26 18:05:51 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/26 18:05:51 PID: 0 - Tamaño: 32
+2024/07/26 18:05:52 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[]]
+2024/07/26 18:05:52 PID: 1 - Tamaño: 32
+2024/07/26 18:05:53 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[] map[]]
+2024/07/26 18:05:53 PID: 2 - Tamaño: 32
+2024/07/26 18:05:54 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[] map[] map[]]
+2024/07/26 18:05:54 PID: 3 - Tamaño: 32
+2024/07/26 18:15:46 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/26 18:15:46 PID: 0 - Tamaño: 32
+2024/07/26 18:15:47 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[]]
+2024/07/26 18:15:47 PID: 1 - Tamaño: 32
+2024/07/26 18:15:48 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[] map[]]
+2024/07/26 18:15:48 PID: 2 - Tamaño: 32
+2024/07/26 18:15:49 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[] map[] map[]]
+2024/07/26 18:15:49 PID: 3 - Tamaño: 32

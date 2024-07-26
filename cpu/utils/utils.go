@@ -111,10 +111,13 @@ func RecibirProceso(w http.ResponseWriter, r *http.Request) {
 	//Ejecutar las instrucciones
 
 	for !interrupcion {
-		log.Printf("PID: %d - FETCH - Program Counter: %d", procesoActual.PID, procesoActual.ProgramCounter)
-		instruccion := SolicitarInstruccion(procesoActual.PID, procesoActual.ProgramCounter)
+		log.Printf("PID: %d - FETCH - Program Counter: %d", procesoActual.PID, int(procesoActual.RegistrosCPU.PC))
+		valorPC := procesoActual.RegistrosCPU.PC
+		instruccion := SolicitarInstruccion(procesoActual.PID, int(procesoActual.RegistrosCPU.PC))
 		decoYExecInstru(instruccion)
-		procesoActual.ProgramCounter++
+		if valorPC == procesoActual.RegistrosCPU.PC {
+			procesoActual.RegistrosCPU.PC += uint32(1)
+		}
 	}
 
 	resultadoEjecucion.Pcb = procesoActual
@@ -167,12 +170,12 @@ func JNZ(nombreRegistro string, valor int) {
 	if strlen(nombreRegistro) == 2 && strings.Contains(nombreRegistro, "X") {
 		var registro *uint8 = ObtenerRegistro8Bits(nombreRegistro)
 		if *registro != uint8(0) {
-			procesoActual.ProgramCounter = valor - 2
+			procesoActual.RegistrosCPU.PC = uint32(valor - 1)
 		}
 	} else {
 		var registro *uint32 = ObtenerRegistro32Bits(nombreRegistro)
 		if *registro != uint32(0) {
-			procesoActual.ProgramCounter = valor - 2
+			procesoActual.RegistrosCPU.PC = uint32(valor - 1)
 		}
 	}
 }

@@ -22713,3 +22713,2766 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/07/26 17:04:41 PID: 14 - FETCH - Program Counter: 124
 2024/07/26 17:04:41 Instruccion: EXIT
 2024/07/26 17:04:41 PID: 14 - Ejecutando: EXIT
+2024/07/26 17:19:51 Inicializando TLB con 32 entradas
+2024/07/26 17:21:21 PID: 0 - FETCH - Program Counter: 0
+2024/07/26 17:21:22 Instruccion: SET AX 1
+2024/07/26 17:21:22 PID: 0 - Ejecutando: SET - AX,1
+2024/07/26 17:21:22 PID: 0 - FETCH - Program Counter: 1
+2024/07/26 17:21:23 Instruccion: SET BX 1
+2024/07/26 17:21:23 PID: 0 - Ejecutando: SET - BX,1
+2024/07/26 17:21:23 PID: 0 - FETCH - Program Counter: 2
+2024/07/26 17:21:24 Instruccion: SET CX 1
+2024/07/26 17:21:24 PID: 0 - Ejecutando: SET - CX,1
+2024/07/26 17:21:24 PID: 0 - FETCH - Program Counter: 3
+2024/07/26 17:21:25 Instruccion: SET DX 1
+2024/07/26 17:21:25 PID: 0 - Ejecutando: SET - DX,1
+2024/07/26 17:21:25 PID: 0 - FETCH - Program Counter: 4
+2024/07/26 17:21:26 Instruccion: EXIT
+2024/07/26 17:21:26 PID: 0 - Ejecutando: EXIT
+2024/07/26 17:21:27 PID: 1 - FETCH - Program Counter: 0
+2024/07/26 17:21:28 Instruccion: SET AX 1
+2024/07/26 17:21:28 PID: 1 - Ejecutando: SET - AX,1
+2024/07/26 17:21:28 PID: 1 - FETCH - Program Counter: 1
+2024/07/26 17:21:29 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:21:29 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:21:29 PID: 2 - FETCH - Program Counter: 0
+2024/07/26 17:21:30 Instruccion: SET AX 1
+2024/07/26 17:21:30 PID: 2 - Ejecutando: SET - AX,1
+2024/07/26 17:21:30 PID: 2 - FETCH - Program Counter: 1
+2024/07/26 17:21:31 Instruccion: SET BX 1
+2024/07/26 17:21:31 PID: 2 - Ejecutando: SET - BX,1
+2024/07/26 17:21:31 PID: 2 - FETCH - Program Counter: 2
+2024/07/26 17:21:32 Instruccion: SET CX 1
+2024/07/26 17:21:32 PID: 2 - Ejecutando: SET - CX,1
+2024/07/26 17:21:32 PID: 2 - FETCH - Program Counter: 3
+2024/07/26 17:21:33 Instruccion: SET DX 1
+2024/07/26 17:21:33 PID: 2 - Ejecutando: SET - DX,1
+2024/07/26 17:21:33 PID: 2 - FETCH - Program Counter: 4
+2024/07/26 17:21:34 Instruccion: IO_GEN_SLEEP SLP1 4
+2024/07/26 17:21:34 PID: 2 - Ejecutando: IO_GEN_SLEEP - SLP1,4
+2024/07/26 17:21:34 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 17:21:35 Instruccion: SET AX 1
+2024/07/26 17:21:35 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 17:21:35 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:21:36 Instruccion: SET BX 1
+2024/07/26 17:21:36 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:21:36 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:21:37 Instruccion: SET CX 1
+2024/07/26 17:21:37 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:21:37 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:21:38 Instruccion: SET DX 1
+2024/07/26 17:21:38 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:21:38 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:21:39 Instruccion: SET PC 0
+2024/07/26 17:21:39 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:21:39 PID: 3 - FETCH - Program Counter: 5
+2024/07/26 17:21:40 Instruccion: EXIT
+2024/07/26 17:21:40 PID: 3 - Ejecutando: EXIT
+2024/07/26 17:21:41 PID: 1 - FETCH - Program Counter: 2
+2024/07/26 17:21:42 Instruccion: SET BX 1
+2024/07/26 17:21:42 PID: 1 - Ejecutando: SET - BX,1
+2024/07/26 17:21:42 PID: 1 - FETCH - Program Counter: 3
+2024/07/26 17:21:43 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:21:43 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:21:43 PID: 2 - FETCH - Program Counter: 5
+2024/07/26 17:21:44 Instruccion: SET EAX 1
+2024/07/26 17:21:44 PID: 2 - Ejecutando: SET - EAX,1
+2024/07/26 17:21:44 PID: 2 - FETCH - Program Counter: 6
+2024/07/26 17:21:45 Instruccion: SET EBX 1
+2024/07/26 17:21:45 PID: 2 - Ejecutando: SET - EBX,1
+2024/07/26 17:21:45 PID: 2 - FETCH - Program Counter: 7
+2024/07/26 17:21:46 Instruccion: SET ECX 1
+2024/07/26 17:21:46 PID: 2 - Ejecutando: SET - ECX,1
+2024/07/26 17:21:46 PID: 2 - FETCH - Program Counter: 8
+2024/07/26 17:21:47 Instruccion: SET EDX 1
+2024/07/26 17:21:47 PID: 2 - Ejecutando: SET - EDX,1
+2024/07/26 17:21:47 PID: 2 - FETCH - Program Counter: 9
+2024/07/26 17:21:48 Instruccion: EXIT
+2024/07/26 17:21:48 PID: 2 - Ejecutando: EXIT
+2024/07/26 17:21:49 PID: 1 - FETCH - Program Counter: 4
+2024/07/26 17:21:50 Instruccion: SET CX 1
+2024/07/26 17:21:50 PID: 1 - Ejecutando: SET - CX,1
+2024/07/26 17:21:50 PID: 1 - FETCH - Program Counter: 5
+2024/07/26 17:21:51 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:21:51 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:21:51 PID: 1 - FETCH - Program Counter: 6
+2024/07/26 17:21:52 Instruccion: SET DX 1
+2024/07/26 17:21:52 PID: 1 - Ejecutando: SET - DX,1
+2024/07/26 17:21:52 PID: 1 - FETCH - Program Counter: 7
+2024/07/26 17:21:53 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:21:53 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:21:53 PID: 1 - FETCH - Program Counter: 8
+2024/07/26 17:21:54 Instruccion: SET EAX 1
+2024/07/26 17:21:54 PID: 1 - Ejecutando: SET - EAX,1
+2024/07/26 17:21:54 PID: 1 - FETCH - Program Counter: 9
+2024/07/26 17:21:55 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:21:55 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:21:55 PID: 1 - FETCH - Program Counter: 10
+2024/07/26 17:21:56 Instruccion: SET EBX 1
+2024/07/26 17:21:56 PID: 1 - Ejecutando: SET - EBX,1
+2024/07/26 17:21:56 PID: 1 - FETCH - Program Counter: 11
+2024/07/26 17:21:57 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:21:57 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:21:57 PID: 1 - FETCH - Program Counter: 12
+2024/07/26 17:21:58 Instruccion: SET ECX 1
+2024/07/26 17:21:58 PID: 1 - Ejecutando: SET - ECX,1
+2024/07/26 17:21:58 PID: 1 - FETCH - Program Counter: 13
+2024/07/26 17:21:59 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:21:59 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:21:59 PID: 1 - FETCH - Program Counter: 14
+2024/07/26 17:22:00 Instruccion: SET EDX 1
+2024/07/26 17:22:00 PID: 1 - Ejecutando: SET - EDX,1
+2024/07/26 17:22:00 PID: 1 - FETCH - Program Counter: 15
+2024/07/26 17:22:01 Instruccion: EXIT
+2024/07/26 17:22:01 PID: 1 - Ejecutando: EXIT
+2024/07/26 17:31:08 PID: 4 - FETCH - Program Counter: 0
+2024/07/26 17:31:09 Instruccion: SET AX 1
+2024/07/26 17:31:09 PID: 4 - Ejecutando: SET - AX,1
+2024/07/26 17:31:09 PID: 4 - FETCH - Program Counter: 1
+2024/07/26 17:31:10 Instruccion: SET BX 1
+2024/07/26 17:31:10 PID: 4 - Ejecutando: SET - BX,1
+2024/07/26 17:31:10 PID: 4 - FETCH - Program Counter: 2
+2024/07/26 17:31:11 Instruccion: SET CX 1
+2024/07/26 17:31:11 PID: 4 - Ejecutando: SET - CX,1
+2024/07/26 17:31:11 PID: 4 - FETCH - Program Counter: 3
+2024/07/26 17:31:12 Instruccion: SET DX 1
+2024/07/26 17:31:12 PID: 4 - Ejecutando: SET - DX,1
+2024/07/26 17:31:12 PID: 4 - FETCH - Program Counter: 4
+2024/07/26 17:31:13 Instruccion: EXIT
+2024/07/26 17:31:13 PID: 4 - Ejecutando: EXIT
+2024/07/26 17:31:14 PID: 5 - FETCH - Program Counter: 0
+2024/07/26 17:31:15 Instruccion: SET AX 1
+2024/07/26 17:31:15 PID: 5 - Ejecutando: SET - AX,1
+2024/07/26 17:31:15 PID: 5 - FETCH - Program Counter: 1
+2024/07/26 17:31:16 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:31:16 PID: 5 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:31:16 PID: 6 - FETCH - Program Counter: 0
+2024/07/26 17:31:17 Instruccion: SET AX 1
+2024/07/26 17:31:17 PID: 6 - Ejecutando: SET - AX,1
+2024/07/26 17:31:17 PID: 6 - FETCH - Program Counter: 1
+2024/07/26 17:31:18 Instruccion: SET BX 1
+2024/07/26 17:31:18 PID: 6 - Ejecutando: SET - BX,1
+2024/07/26 17:31:18 PID: 6 - FETCH - Program Counter: 2
+2024/07/26 17:31:19 Instruccion: SET CX 1
+2024/07/26 17:31:19 PID: 6 - Ejecutando: SET - CX,1
+2024/07/26 17:31:19 PID: 6 - FETCH - Program Counter: 3
+2024/07/26 17:31:20 Instruccion: SET DX 1
+2024/07/26 17:31:20 PID: 6 - Ejecutando: SET - DX,1
+2024/07/26 17:31:20 PID: 6 - FETCH - Program Counter: 4
+2024/07/26 17:31:21 Instruccion: IO_GEN_SLEEP SLP1 4
+2024/07/26 17:31:21 PID: 6 - Ejecutando: IO_GEN_SLEEP - SLP1,4
+2024/07/26 17:31:21 PID: 7 - FETCH - Program Counter: 0
+2024/07/26 17:31:22 Instruccion: SET AX 1
+2024/07/26 17:31:22 PID: 7 - Ejecutando: SET - AX,1
+2024/07/26 17:31:22 PID: 7 - FETCH - Program Counter: 1
+2024/07/26 17:31:23 Instruccion: SET BX 1
+2024/07/26 17:31:23 PID: 7 - Ejecutando: SET - BX,1
+2024/07/26 17:31:23 PID: 7 - FETCH - Program Counter: 2
+2024/07/26 17:31:24 Instruccion: SET CX 1
+2024/07/26 17:31:24 PID: 7 - Ejecutando: SET - CX,1
+2024/07/26 17:31:25 PID: 5 - FETCH - Program Counter: 2
+2024/07/26 17:31:26 Instruccion: SET BX 1
+2024/07/26 17:31:26 PID: 5 - Ejecutando: SET - BX,1
+2024/07/26 17:31:26 PID: 5 - FETCH - Program Counter: 3
+2024/07/26 17:31:27 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:31:27 PID: 5 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:31:27 PID: 6 - FETCH - Program Counter: 5
+2024/07/26 17:31:28 Instruccion: SET EAX 1
+2024/07/26 17:31:28 PID: 6 - Ejecutando: SET - EAX,1
+2024/07/26 17:31:28 PID: 6 - FETCH - Program Counter: 6
+2024/07/26 17:31:29 Instruccion: SET EBX 1
+2024/07/26 17:31:29 PID: 6 - Ejecutando: SET - EBX,1
+2024/07/26 17:31:29 PID: 6 - FETCH - Program Counter: 7
+2024/07/26 17:31:30 Instruccion: SET ECX 1
+2024/07/26 17:31:30 PID: 6 - Ejecutando: SET - ECX,1
+2024/07/26 17:31:30 PID: 6 - FETCH - Program Counter: 8
+2024/07/26 17:31:31 Instruccion: SET EDX 1
+2024/07/26 17:31:31 PID: 6 - Ejecutando: SET - EDX,1
+2024/07/26 17:31:31 PID: 6 - FETCH - Program Counter: 9
+2024/07/26 17:31:32 Instruccion: EXIT
+2024/07/26 17:31:32 PID: 6 - Ejecutando: EXIT
+2024/07/26 17:31:33 PID: 5 - FETCH - Program Counter: 4
+2024/07/26 17:31:34 Instruccion: SET CX 1
+2024/07/26 17:31:34 PID: 5 - Ejecutando: SET - CX,1
+2024/07/26 17:31:34 PID: 5 - FETCH - Program Counter: 5
+2024/07/26 17:31:35 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:31:35 PID: 5 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:31:36 PID: 5 - FETCH - Program Counter: 6
+2024/07/26 17:31:37 Instruccion: SET DX 1
+2024/07/26 17:31:37 PID: 5 - Ejecutando: SET - DX,1
+2024/07/26 17:31:37 PID: 5 - FETCH - Program Counter: 7
+2024/07/26 17:31:38 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:31:38 PID: 5 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:31:38 PID: 5 - FETCH - Program Counter: 8
+2024/07/26 17:31:39 Instruccion: SET EAX 1
+2024/07/26 17:31:39 PID: 5 - Ejecutando: SET - EAX,1
+2024/07/26 17:31:39 PID: 5 - FETCH - Program Counter: 9
+2024/07/26 17:31:40 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:31:40 PID: 5 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:31:40 PID: 5 - FETCH - Program Counter: 10
+2024/07/26 17:31:41 Instruccion: SET EBX 1
+2024/07/26 17:31:41 PID: 5 - Ejecutando: SET - EBX,1
+2024/07/26 17:31:41 PID: 5 - FETCH - Program Counter: 11
+2024/07/26 17:31:42 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:31:42 PID: 5 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:31:42 PID: 5 - FETCH - Program Counter: 12
+2024/07/26 17:31:43 Instruccion: SET ECX 1
+2024/07/26 17:31:43 PID: 5 - Ejecutando: SET - ECX,1
+2024/07/26 17:31:43 PID: 5 - FETCH - Program Counter: 13
+2024/07/26 17:31:44 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:31:44 PID: 5 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:31:44 PID: 5 - FETCH - Program Counter: 14
+2024/07/26 17:31:45 Instruccion: SET EDX 1
+2024/07/26 17:31:45 PID: 5 - Ejecutando: SET - EDX,1
+2024/07/26 17:31:45 PID: 5 - FETCH - Program Counter: 15
+2024/07/26 17:31:46 Instruccion: EXIT
+2024/07/26 17:31:46 PID: 5 - Ejecutando: EXIT
+2024/07/26 17:41:35 Inicializando TLB con 32 entradas
+2024/07/26 17:42:29 PID: 0 - FETCH - Program Counter: 0
+2024/07/26 17:42:30 Instruccion: SET AX 1
+2024/07/26 17:42:30 PID: 0 - Ejecutando: SET - AX,1
+2024/07/26 17:42:30 PID: 0 - FETCH - Program Counter: 1
+2024/07/26 17:42:31 Instruccion: SET BX 1
+2024/07/26 17:42:31 PID: 0 - Ejecutando: SET - BX,1
+2024/07/26 17:42:31 PID: 0 - FETCH - Program Counter: 2
+2024/07/26 17:42:32 Instruccion: SET CX 1
+2024/07/26 17:42:32 PID: 0 - Ejecutando: SET - CX,1
+2024/07/26 17:42:32 PID: 0 - FETCH - Program Counter: 3
+2024/07/26 17:42:33 Instruccion: SET DX 1
+2024/07/26 17:42:33 PID: 0 - Ejecutando: SET - DX,1
+2024/07/26 17:42:33 PID: 0 - FETCH - Program Counter: 4
+2024/07/26 17:42:34 Instruccion: EXIT
+2024/07/26 17:42:34 PID: 0 - Ejecutando: EXIT
+2024/07/26 17:42:35 PID: 1 - FETCH - Program Counter: 0
+2024/07/26 17:42:36 Instruccion: SET AX 1
+2024/07/26 17:42:36 PID: 1 - Ejecutando: SET - AX,1
+2024/07/26 17:42:36 PID: 1 - FETCH - Program Counter: 1
+2024/07/26 17:42:37 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:42:37 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:42:37 PID: 2 - FETCH - Program Counter: 0
+2024/07/26 17:42:38 Instruccion: SET AX 1
+2024/07/26 17:42:38 PID: 2 - Ejecutando: SET - AX,1
+2024/07/26 17:42:38 PID: 2 - FETCH - Program Counter: 1
+2024/07/26 17:42:39 Instruccion: SET BX 1
+2024/07/26 17:42:39 PID: 2 - Ejecutando: SET - BX,1
+2024/07/26 17:42:39 PID: 2 - FETCH - Program Counter: 2
+2024/07/26 17:42:40 Instruccion: SET CX 1
+2024/07/26 17:42:40 PID: 2 - Ejecutando: SET - CX,1
+2024/07/26 17:42:40 PID: 2 - FETCH - Program Counter: 3
+2024/07/26 17:42:41 Instruccion: SET DX 1
+2024/07/26 17:42:41 PID: 2 - Ejecutando: SET - DX,1
+2024/07/26 17:42:41 PID: 2 - FETCH - Program Counter: 4
+2024/07/26 17:42:42 Instruccion: IO_GEN_SLEEP SLP1 4
+2024/07/26 17:42:42 PID: 2 - Ejecutando: IO_GEN_SLEEP - SLP1,4
+2024/07/26 17:42:42 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 17:42:43 Instruccion: SET AX 1
+2024/07/26 17:42:43 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 17:42:43 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:42:44 Instruccion: SET BX 1
+2024/07/26 17:42:44 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:42:44 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:42:45 Instruccion: SET CX 1
+2024/07/26 17:42:45 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:42:45 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:42:46 Instruccion: SET DX 1
+2024/07/26 17:42:46 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:42:46 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:42:47 Instruccion: SET PC 0
+2024/07/26 17:42:47 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:42:47 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:42:48 Instruccion: SET BX 1
+2024/07/26 17:42:48 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:42:48 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:42:49 Instruccion: SET CX 1
+2024/07/26 17:42:49 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:42:49 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:42:50 Instruccion: SET DX 1
+2024/07/26 17:42:50 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:42:50 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:42:51 Instruccion: SET PC 0
+2024/07/26 17:42:51 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:42:51 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:42:52 Instruccion: SET BX 1
+2024/07/26 17:42:52 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:42:52 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:42:53 Instruccion: SET CX 1
+2024/07/26 17:42:53 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:42:53 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:42:54 Instruccion: SET DX 1
+2024/07/26 17:42:54 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:42:54 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:42:55 Instruccion: SET PC 0
+2024/07/26 17:42:55 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:42:55 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:42:56 Instruccion: SET BX 1
+2024/07/26 17:42:56 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:42:56 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:42:57 Instruccion: SET CX 1
+2024/07/26 17:42:57 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:42:57 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:42:58 Instruccion: SET DX 1
+2024/07/26 17:42:58 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:42:58 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:42:59 Instruccion: SET PC 0
+2024/07/26 17:42:59 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:42:59 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:43:00 Instruccion: SET BX 1
+2024/07/26 17:43:00 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:43:00 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:43:01 Instruccion: SET CX 1
+2024/07/26 17:43:01 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:43:01 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:43:02 Instruccion: SET DX 1
+2024/07/26 17:43:02 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:43:02 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:43:03 Instruccion: SET PC 0
+2024/07/26 17:43:03 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:43:03 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:43:04 Instruccion: SET BX 1
+2024/07/26 17:43:04 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:43:04 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:43:05 Instruccion: SET CX 1
+2024/07/26 17:43:05 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:43:05 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:43:06 Instruccion: SET DX 1
+2024/07/26 17:43:06 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:43:06 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:43:07 Instruccion: SET PC 0
+2024/07/26 17:43:07 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:43:07 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:43:08 Instruccion: SET BX 1
+2024/07/26 17:43:08 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:43:08 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:43:09 Instruccion: SET CX 1
+2024/07/26 17:43:09 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:43:09 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:43:10 Instruccion: SET DX 1
+2024/07/26 17:43:10 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:43:10 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:43:11 Instruccion: SET PC 0
+2024/07/26 17:43:11 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:43:11 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:43:12 Instruccion: SET BX 1
+2024/07/26 17:43:12 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:43:12 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:43:13 Instruccion: SET CX 1
+2024/07/26 17:43:13 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:43:13 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:43:14 Instruccion: SET DX 1
+2024/07/26 17:43:14 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:43:14 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:43:15 Instruccion: SET PC 0
+2024/07/26 17:43:15 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:43:15 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:43:16 Instruccion: SET BX 1
+2024/07/26 17:43:16 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:43:16 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:43:17 Instruccion: SET CX 1
+2024/07/26 17:43:17 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:43:17 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:43:18 Instruccion: SET DX 1
+2024/07/26 17:43:18 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:43:18 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:43:19 Instruccion: SET PC 0
+2024/07/26 17:43:19 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:43:19 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:43:20 Instruccion: SET BX 1
+2024/07/26 17:43:20 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:43:20 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:43:21 Instruccion: SET CX 1
+2024/07/26 17:43:21 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:43:21 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:43:22 Instruccion: SET DX 1
+2024/07/26 17:43:22 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:43:22 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:43:23 Instruccion: SET PC 0
+2024/07/26 17:43:23 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:43:23 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:43:24 Instruccion: SET BX 1
+2024/07/26 17:43:24 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:43:24 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:43:25 Instruccion: SET CX 1
+2024/07/26 17:43:25 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:43:25 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:43:26 Instruccion: SET DX 1
+2024/07/26 17:43:26 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:43:26 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:43:27 Instruccion: SET PC 0
+2024/07/26 17:43:27 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:43:27 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:43:28 Instruccion: SET BX 1
+2024/07/26 17:43:28 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:43:28 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:43:29 Instruccion: SET CX 1
+2024/07/26 17:43:29 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:43:29 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:43:30 Instruccion: SET DX 1
+2024/07/26 17:43:30 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:43:30 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:43:31 Instruccion: SET PC 0
+2024/07/26 17:43:31 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:43:31 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:43:32 Instruccion: SET BX 1
+2024/07/26 17:43:32 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:43:32 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:43:33 Instruccion: SET CX 1
+2024/07/26 17:43:33 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:43:33 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:43:34 Instruccion: SET DX 1
+2024/07/26 17:43:34 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:43:34 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:43:35 Instruccion: SET PC 0
+2024/07/26 17:43:35 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:43:35 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:43:36 Instruccion: SET BX 1
+2024/07/26 17:43:36 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:43:36 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:43:37 Instruccion: SET CX 1
+2024/07/26 17:43:37 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:43:37 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:43:38 Instruccion: SET DX 1
+2024/07/26 17:43:38 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:43:38 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:43:39 Instruccion: SET PC 0
+2024/07/26 17:43:39 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:43:39 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:43:40 Instruccion: SET BX 1
+2024/07/26 17:43:40 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:43:40 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:43:41 Instruccion: SET CX 1
+2024/07/26 17:43:41 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:43:41 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:43:42 Instruccion: SET DX 1
+2024/07/26 17:43:42 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:43:42 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:43:43 Instruccion: SET PC 0
+2024/07/26 17:43:43 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:43:43 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:43:44 Instruccion: SET BX 1
+2024/07/26 17:43:44 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:43:44 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:43:45 Instruccion: SET CX 1
+2024/07/26 17:43:45 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:43:45 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:43:46 Instruccion: SET DX 1
+2024/07/26 17:43:46 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:43:46 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:43:47 Instruccion: SET PC 0
+2024/07/26 17:43:47 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:43:47 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:43:48 Instruccion: SET BX 1
+2024/07/26 17:43:48 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:43:48 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:43:49 Instruccion: SET CX 1
+2024/07/26 17:43:49 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:43:49 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:43:50 Instruccion: SET DX 1
+2024/07/26 17:43:50 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:43:50 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:43:51 Instruccion: SET PC 0
+2024/07/26 17:43:51 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:43:51 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:43:52 Instruccion: SET BX 1
+2024/07/26 17:43:52 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:43:52 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:43:53 Instruccion: SET CX 1
+2024/07/26 17:43:53 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:43:53 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:43:54 Instruccion: SET DX 1
+2024/07/26 17:43:54 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:43:54 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:43:55 Instruccion: SET PC 0
+2024/07/26 17:43:55 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:43:55 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:43:56 Instruccion: SET BX 1
+2024/07/26 17:43:56 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:43:56 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:43:57 Instruccion: SET CX 1
+2024/07/26 17:43:57 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:43:57 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:43:58 Instruccion: SET DX 1
+2024/07/26 17:43:58 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:43:58 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:43:59 Instruccion: SET PC 0
+2024/07/26 17:43:59 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:43:59 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:44:00 Instruccion: SET BX 1
+2024/07/26 17:44:00 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:44:00 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:44:01 Instruccion: SET CX 1
+2024/07/26 17:44:01 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:44:01 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:44:02 Instruccion: SET DX 1
+2024/07/26 17:44:02 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:44:02 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:44:03 Instruccion: SET PC 0
+2024/07/26 17:44:03 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:44:03 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:44:04 Instruccion: SET BX 1
+2024/07/26 17:44:04 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:44:04 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:44:05 Instruccion: SET CX 1
+2024/07/26 17:44:05 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:44:05 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:44:06 Instruccion: SET DX 1
+2024/07/26 17:44:06 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:44:06 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:44:07 Instruccion: SET PC 0
+2024/07/26 17:44:07 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:44:07 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:44:08 Instruccion: SET BX 1
+2024/07/26 17:44:08 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:44:08 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:44:09 Instruccion: SET CX 1
+2024/07/26 17:44:09 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:44:09 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:44:10 Instruccion: SET DX 1
+2024/07/26 17:44:10 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:44:10 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:44:11 Instruccion: SET PC 0
+2024/07/26 17:44:11 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:44:11 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:44:12 Instruccion: SET BX 1
+2024/07/26 17:44:12 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:44:12 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:44:13 Instruccion: SET CX 1
+2024/07/26 17:44:13 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:44:13 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:44:14 Instruccion: SET DX 1
+2024/07/26 17:44:14 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:44:14 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:44:15 Instruccion: SET PC 0
+2024/07/26 17:44:15 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:44:15 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:44:16 Instruccion: SET BX 1
+2024/07/26 17:44:16 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:44:16 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:44:17 Instruccion: SET CX 1
+2024/07/26 17:44:17 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:44:17 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:44:18 Instruccion: SET DX 1
+2024/07/26 17:44:18 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:44:18 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:44:19 Instruccion: SET PC 0
+2024/07/26 17:44:19 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:44:19 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:44:20 Instruccion: SET BX 1
+2024/07/26 17:44:20 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:44:20 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:44:21 Instruccion: SET CX 1
+2024/07/26 17:44:21 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:44:21 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:44:22 Instruccion: SET DX 1
+2024/07/26 17:44:22 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:44:22 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:44:23 Instruccion: SET PC 0
+2024/07/26 17:44:23 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:44:23 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:44:24 Instruccion: SET BX 1
+2024/07/26 17:44:24 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:44:24 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:44:25 Instruccion: SET CX 1
+2024/07/26 17:44:25 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:44:25 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:44:26 Instruccion: SET DX 1
+2024/07/26 17:44:26 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:44:26 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:44:27 Instruccion: SET PC 0
+2024/07/26 17:44:27 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:44:27 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:44:28 Instruccion: SET BX 1
+2024/07/26 17:44:28 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:44:28 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:44:29 Instruccion: SET CX 1
+2024/07/26 17:44:29 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:44:29 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:44:30 Instruccion: SET DX 1
+2024/07/26 17:44:30 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:44:30 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:44:31 Instruccion: SET PC 0
+2024/07/26 17:44:31 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:44:31 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:44:32 Instruccion: SET BX 1
+2024/07/26 17:44:32 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:44:32 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:44:33 Instruccion: SET CX 1
+2024/07/26 17:44:33 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:44:33 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:44:34 Instruccion: SET DX 1
+2024/07/26 17:44:34 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:44:34 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:44:35 Instruccion: SET PC 0
+2024/07/26 17:44:35 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:44:35 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:44:36 Instruccion: SET BX 1
+2024/07/26 17:44:36 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:44:36 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:44:37 Instruccion: SET CX 1
+2024/07/26 17:44:37 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:44:37 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:44:38 Instruccion: SET DX 1
+2024/07/26 17:44:38 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:44:38 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:44:39 Instruccion: SET PC 0
+2024/07/26 17:44:39 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:44:39 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:44:40 Instruccion: SET BX 1
+2024/07/26 17:44:40 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:44:40 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:44:41 Instruccion: SET CX 1
+2024/07/26 17:44:41 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:44:41 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:44:42 Instruccion: SET DX 1
+2024/07/26 17:44:42 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:44:42 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:44:43 Instruccion: SET PC 0
+2024/07/26 17:44:43 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:44:43 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:44:44 Instruccion: SET BX 1
+2024/07/26 17:44:44 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:44:44 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:44:45 Instruccion: SET CX 1
+2024/07/26 17:44:45 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:44:45 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:44:46 Instruccion: SET DX 1
+2024/07/26 17:44:46 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:44:46 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:44:47 Instruccion: SET PC 0
+2024/07/26 17:44:47 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:44:47 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:44:49 Instruccion: SET BX 1
+2024/07/26 17:44:49 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:44:49 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:44:50 Instruccion: SET CX 1
+2024/07/26 17:44:50 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:44:50 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:44:51 Instruccion: SET DX 1
+2024/07/26 17:44:51 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:44:51 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:44:52 Instruccion: SET PC 0
+2024/07/26 17:44:52 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:44:52 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:44:53 Instruccion: SET BX 1
+2024/07/26 17:44:53 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:44:53 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:44:54 Instruccion: SET CX 1
+2024/07/26 17:44:54 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:44:54 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:44:55 Instruccion: SET DX 1
+2024/07/26 17:44:55 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:44:55 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:44:56 Instruccion: SET PC 0
+2024/07/26 17:44:56 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:44:56 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:44:57 Instruccion: SET BX 1
+2024/07/26 17:44:57 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:44:57 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:44:58 Instruccion: SET CX 1
+2024/07/26 17:44:58 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:44:58 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:44:59 Instruccion: SET DX 1
+2024/07/26 17:44:59 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:44:59 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:45:00 Instruccion: SET PC 0
+2024/07/26 17:45:00 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:45:00 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:45:01 Instruccion: SET BX 1
+2024/07/26 17:45:01 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:45:01 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:45:02 Instruccion: SET CX 1
+2024/07/26 17:45:02 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:45:02 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:45:03 Instruccion: SET DX 1
+2024/07/26 17:45:03 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:45:03 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:45:04 Instruccion: SET PC 0
+2024/07/26 17:45:04 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:45:04 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:45:05 Instruccion: SET BX 1
+2024/07/26 17:45:05 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:45:05 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:45:06 Instruccion: SET CX 1
+2024/07/26 17:45:06 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:45:06 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:45:07 Instruccion: SET DX 1
+2024/07/26 17:45:07 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:45:07 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:45:08 Instruccion: SET PC 0
+2024/07/26 17:45:08 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:45:08 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:45:09 Instruccion: SET BX 1
+2024/07/26 17:45:09 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:45:09 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:45:10 Instruccion: SET CX 1
+2024/07/26 17:45:10 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:45:10 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:45:11 Instruccion: SET DX 1
+2024/07/26 17:45:11 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:45:11 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:45:12 Instruccion: SET PC 0
+2024/07/26 17:45:12 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:45:12 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:45:13 Instruccion: SET BX 1
+2024/07/26 17:45:13 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:45:13 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:45:14 Instruccion: SET CX 1
+2024/07/26 17:45:14 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:45:14 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:45:15 Instruccion: SET DX 1
+2024/07/26 17:45:15 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:45:15 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:45:16 Instruccion: SET PC 0
+2024/07/26 17:45:16 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:45:16 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:45:17 Instruccion: SET BX 1
+2024/07/26 17:45:17 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:45:17 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:45:18 Instruccion: SET CX 1
+2024/07/26 17:45:18 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:45:18 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:45:19 Instruccion: SET DX 1
+2024/07/26 17:45:19 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:45:19 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:45:20 Instruccion: SET PC 0
+2024/07/26 17:45:20 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:45:20 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:45:21 Instruccion: SET BX 1
+2024/07/26 17:45:21 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:45:21 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:45:22 Instruccion: SET CX 1
+2024/07/26 17:45:22 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:45:22 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:45:23 Instruccion: SET DX 1
+2024/07/26 17:45:23 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:45:23 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:45:24 Instruccion: SET PC 0
+2024/07/26 17:45:24 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:45:24 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:45:25 Instruccion: SET BX 1
+2024/07/26 17:45:25 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:45:25 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:45:26 Instruccion: SET CX 1
+2024/07/26 17:45:26 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:45:26 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:45:27 Instruccion: SET DX 1
+2024/07/26 17:45:27 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:45:27 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:45:28 Instruccion: SET PC 0
+2024/07/26 17:45:28 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:45:28 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:45:29 Instruccion: SET BX 1
+2024/07/26 17:45:29 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:45:29 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:45:30 Instruccion: SET CX 1
+2024/07/26 17:45:30 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:45:30 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:45:31 Instruccion: SET DX 1
+2024/07/26 17:45:31 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:45:31 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:45:32 Instruccion: SET PC 0
+2024/07/26 17:45:32 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:45:32 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:45:33 Instruccion: SET BX 1
+2024/07/26 17:45:33 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:45:33 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:45:34 Instruccion: SET CX 1
+2024/07/26 17:45:34 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:45:34 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:45:35 Instruccion: SET DX 1
+2024/07/26 17:45:35 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:45:35 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:45:36 Instruccion: SET PC 0
+2024/07/26 17:45:36 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:45:36 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:45:37 Instruccion: SET BX 1
+2024/07/26 17:45:37 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:45:37 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:45:38 Instruccion: SET CX 1
+2024/07/26 17:45:38 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:45:38 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:45:39 Instruccion: SET DX 1
+2024/07/26 17:45:39 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:45:39 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:45:40 Instruccion: SET PC 0
+2024/07/26 17:45:40 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:45:40 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:45:41 Instruccion: SET BX 1
+2024/07/26 17:45:41 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:45:41 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:45:42 Instruccion: SET CX 1
+2024/07/26 17:45:42 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:45:42 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:45:43 Instruccion: SET DX 1
+2024/07/26 17:45:43 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:45:43 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:45:44 Instruccion: SET PC 0
+2024/07/26 17:45:44 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:45:44 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:45:45 Instruccion: SET BX 1
+2024/07/26 17:45:45 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:45:45 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:45:46 Instruccion: SET CX 1
+2024/07/26 17:45:46 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:45:46 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:45:47 Instruccion: SET DX 1
+2024/07/26 17:45:47 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:45:47 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:45:48 Instruccion: SET PC 0
+2024/07/26 17:45:48 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:45:48 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:45:49 Instruccion: SET BX 1
+2024/07/26 17:45:49 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:45:49 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:45:50 Instruccion: SET CX 1
+2024/07/26 17:45:50 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:45:50 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:45:51 Instruccion: SET DX 1
+2024/07/26 17:45:51 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:45:51 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:45:52 Instruccion: SET PC 0
+2024/07/26 17:45:52 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:45:52 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:45:53 Instruccion: SET BX 1
+2024/07/26 17:45:53 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:45:53 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:45:54 Instruccion: SET CX 1
+2024/07/26 17:45:54 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:45:54 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:45:55 Instruccion: SET DX 1
+2024/07/26 17:45:55 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:45:55 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:45:56 Instruccion: SET PC 0
+2024/07/26 17:45:56 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:45:56 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:45:57 Instruccion: SET BX 1
+2024/07/26 17:45:57 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:45:57 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:45:58 Instruccion: SET CX 1
+2024/07/26 17:45:58 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:45:58 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:45:59 Instruccion: SET DX 1
+2024/07/26 17:45:59 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:45:59 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:46:00 Instruccion: SET PC 0
+2024/07/26 17:46:00 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:46:00 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:46:01 Instruccion: SET BX 1
+2024/07/26 17:46:01 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:46:01 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:46:02 Instruccion: SET CX 1
+2024/07/26 17:46:02 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:46:02 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:46:03 Instruccion: SET DX 1
+2024/07/26 17:46:03 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:46:03 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:46:04 Instruccion: SET PC 0
+2024/07/26 17:46:04 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:46:04 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:46:05 Instruccion: SET BX 1
+2024/07/26 17:46:05 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:46:05 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:46:06 Instruccion: SET CX 1
+2024/07/26 17:46:06 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:46:06 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:46:07 Instruccion: SET DX 1
+2024/07/26 17:46:07 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:46:07 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:46:08 Instruccion: SET PC 0
+2024/07/26 17:46:08 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:46:08 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:46:09 Instruccion: SET BX 1
+2024/07/26 17:46:09 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:46:09 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:46:10 Instruccion: SET CX 1
+2024/07/26 17:46:10 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:46:10 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:46:11 Instruccion: SET DX 1
+2024/07/26 17:46:11 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:46:11 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:46:12 Instruccion: SET PC 0
+2024/07/26 17:46:12 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:46:12 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:46:13 Instruccion: SET BX 1
+2024/07/26 17:46:13 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:46:13 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:46:14 Instruccion: SET CX 1
+2024/07/26 17:46:14 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:46:14 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:46:15 Instruccion: SET DX 1
+2024/07/26 17:46:15 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:46:15 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:46:16 Instruccion: SET PC 0
+2024/07/26 17:46:16 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:46:16 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:46:17 Instruccion: SET BX 1
+2024/07/26 17:46:17 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:46:17 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:46:18 Instruccion: SET CX 1
+2024/07/26 17:46:18 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:46:18 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:46:19 Instruccion: SET DX 1
+2024/07/26 17:46:19 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:46:19 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:46:20 Instruccion: SET PC 0
+2024/07/26 17:46:20 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:46:20 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:46:21 Instruccion: SET BX 1
+2024/07/26 17:46:21 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:46:21 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:46:22 Instruccion: SET CX 1
+2024/07/26 17:46:22 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:46:22 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:46:23 Instruccion: SET DX 1
+2024/07/26 17:46:23 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:46:23 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:46:24 Instruccion: SET PC 0
+2024/07/26 17:46:24 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:46:24 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:46:25 Instruccion: SET BX 1
+2024/07/26 17:46:25 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:46:25 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:46:26 Instruccion: SET CX 1
+2024/07/26 17:46:26 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:46:26 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:46:27 Instruccion: SET DX 1
+2024/07/26 17:46:27 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:46:27 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:46:28 Instruccion: SET PC 0
+2024/07/26 17:46:28 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:46:28 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:46:29 Instruccion: SET BX 1
+2024/07/26 17:46:29 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:46:29 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:46:30 Instruccion: SET CX 1
+2024/07/26 17:46:30 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:46:30 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:46:31 Instruccion: SET DX 1
+2024/07/26 17:46:31 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:46:31 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:46:32 Instruccion: SET PC 0
+2024/07/26 17:46:32 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:46:32 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:46:33 Instruccion: SET BX 1
+2024/07/26 17:46:33 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:46:33 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:46:34 Instruccion: SET CX 1
+2024/07/26 17:46:34 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:46:34 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:46:35 Instruccion: SET DX 1
+2024/07/26 17:46:35 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:46:35 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:46:36 Instruccion: SET PC 0
+2024/07/26 17:46:36 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:46:36 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:46:39 Inicializando TLB con 32 entradas
+2024/07/26 17:47:38 PID: 0 - FETCH - Program Counter: 0
+2024/07/26 17:47:39 Instruccion: SET AX 1
+2024/07/26 17:47:39 PID: 0 - Ejecutando: SET - AX,1
+2024/07/26 17:47:39 PID: 0 - FETCH - Program Counter: 1
+2024/07/26 17:47:40 Instruccion: SET BX 1
+2024/07/26 17:47:40 PID: 0 - Ejecutando: SET - BX,1
+2024/07/26 17:47:40 PID: 0 - FETCH - Program Counter: 2
+2024/07/26 17:47:41 Instruccion: SET CX 1
+2024/07/26 17:47:41 PID: 0 - Ejecutando: SET - CX,1
+2024/07/26 17:47:41 PID: 0 - FETCH - Program Counter: 3
+2024/07/26 17:47:42 Instruccion: SET DX 1
+2024/07/26 17:47:42 PID: 0 - Ejecutando: SET - DX,1
+2024/07/26 17:47:42 PID: 0 - FETCH - Program Counter: 4
+2024/07/26 17:47:43 Instruccion: EXIT
+2024/07/26 17:47:43 PID: 0 - Ejecutando: EXIT
+2024/07/26 17:47:44 PID: 1 - FETCH - Program Counter: 0
+2024/07/26 17:47:45 Instruccion: SET AX 1
+2024/07/26 17:47:45 PID: 1 - Ejecutando: SET - AX,1
+2024/07/26 17:47:45 PID: 1 - FETCH - Program Counter: 1
+2024/07/26 17:47:46 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:47:46 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:47:46 PID: 2 - FETCH - Program Counter: 0
+2024/07/26 17:47:47 Instruccion: SET AX 1
+2024/07/26 17:47:47 PID: 2 - Ejecutando: SET - AX,1
+2024/07/26 17:47:47 PID: 2 - FETCH - Program Counter: 1
+2024/07/26 17:47:48 Instruccion: SET BX 1
+2024/07/26 17:47:48 PID: 2 - Ejecutando: SET - BX,1
+2024/07/26 17:47:48 PID: 2 - FETCH - Program Counter: 2
+2024/07/26 17:47:49 Instruccion: SET CX 1
+2024/07/26 17:47:49 PID: 2 - Ejecutando: SET - CX,1
+2024/07/26 17:47:49 PID: 2 - FETCH - Program Counter: 3
+2024/07/26 17:47:50 Instruccion: SET DX 1
+2024/07/26 17:47:50 PID: 2 - Ejecutando: SET - DX,1
+2024/07/26 17:47:50 PID: 2 - FETCH - Program Counter: 4
+2024/07/26 17:47:51 Instruccion: IO_GEN_SLEEP SLP1 4
+2024/07/26 17:47:51 PID: 2 - Ejecutando: IO_GEN_SLEEP - SLP1,4
+2024/07/26 17:47:51 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 17:47:52 Instruccion: SET AX 1
+2024/07/26 17:47:52 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 17:47:52 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:47:53 Instruccion: SET BX 1
+2024/07/26 17:47:53 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:47:53 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:47:54 Instruccion: SET CX 1
+2024/07/26 17:47:54 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:47:54 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:47:56 Instruccion: SET DX 1
+2024/07/26 17:47:56 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:47:56 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:47:57 Instruccion: SET PC 0
+2024/07/26 17:47:57 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:47:57 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:47:58 Instruccion: SET BX 1
+2024/07/26 17:47:58 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:47:58 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:47:59 Instruccion: SET CX 1
+2024/07/26 17:47:59 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:47:59 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:48:00 Instruccion: SET DX 1
+2024/07/26 17:48:00 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:48:00 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:48:01 Instruccion: SET PC 0
+2024/07/26 17:48:01 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:48:01 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:48:02 Instruccion: SET BX 1
+2024/07/26 17:48:02 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:48:02 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:48:03 Instruccion: SET CX 1
+2024/07/26 17:48:03 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:48:03 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:48:04 Instruccion: SET DX 1
+2024/07/26 17:48:04 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:48:04 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:48:05 Instruccion: SET PC 0
+2024/07/26 17:48:05 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:48:05 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:48:06 Instruccion: SET BX 1
+2024/07/26 17:48:06 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:48:06 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:48:07 Instruccion: SET CX 1
+2024/07/26 17:48:07 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:48:07 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:48:08 Instruccion: SET DX 1
+2024/07/26 17:48:08 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:48:08 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:48:09 Instruccion: SET PC 0
+2024/07/26 17:48:09 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:48:09 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:48:10 Instruccion: SET BX 1
+2024/07/26 17:48:10 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:48:10 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:48:11 Instruccion: SET CX 1
+2024/07/26 17:48:11 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:48:11 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:48:12 Instruccion: SET DX 1
+2024/07/26 17:48:12 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:48:12 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:48:13 Instruccion: SET PC 0
+2024/07/26 17:48:13 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:48:13 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:48:14 Instruccion: SET BX 1
+2024/07/26 17:48:14 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:48:14 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:48:15 Instruccion: SET CX 1
+2024/07/26 17:48:15 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:48:15 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:48:16 Instruccion: SET DX 1
+2024/07/26 17:48:16 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:48:16 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:48:17 Instruccion: SET PC 0
+2024/07/26 17:48:17 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:48:17 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:48:18 Instruccion: SET BX 1
+2024/07/26 17:48:18 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:48:18 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:48:19 Instruccion: SET CX 1
+2024/07/26 17:48:19 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:48:19 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:48:20 Instruccion: SET DX 1
+2024/07/26 17:48:20 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:48:20 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:48:21 Instruccion: SET PC 0
+2024/07/26 17:48:21 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:48:21 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:48:22 Instruccion: SET BX 1
+2024/07/26 17:48:22 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:48:22 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:48:23 Instruccion: SET CX 1
+2024/07/26 17:48:23 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:48:23 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:48:24 Instruccion: SET DX 1
+2024/07/26 17:48:24 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:48:24 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:48:25 Instruccion: SET PC 0
+2024/07/26 17:48:25 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:48:25 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:48:26 Instruccion: SET BX 1
+2024/07/26 17:48:26 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:48:26 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:48:27 Instruccion: SET CX 1
+2024/07/26 17:48:27 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:48:27 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:48:28 Instruccion: SET DX 1
+2024/07/26 17:48:28 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:48:28 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:48:29 Instruccion: SET PC 0
+2024/07/26 17:48:29 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:48:29 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:48:30 Instruccion: SET BX 1
+2024/07/26 17:48:30 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:48:30 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:48:31 Instruccion: SET CX 1
+2024/07/26 17:48:31 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:48:31 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:48:32 Instruccion: SET DX 1
+2024/07/26 17:48:32 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:48:32 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:48:33 Instruccion: SET PC 0
+2024/07/26 17:48:33 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:48:33 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:48:34 Instruccion: SET BX 1
+2024/07/26 17:48:34 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:48:34 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:48:35 Instruccion: SET CX 1
+2024/07/26 17:48:35 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:48:35 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:48:36 Instruccion: SET DX 1
+2024/07/26 17:48:36 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:48:36 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:48:37 Instruccion: SET PC 0
+2024/07/26 17:48:37 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:48:37 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:48:38 Instruccion: SET BX 1
+2024/07/26 17:48:38 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:48:38 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:48:39 Instruccion: SET CX 1
+2024/07/26 17:48:39 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:48:39 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:48:40 Instruccion: SET DX 1
+2024/07/26 17:48:40 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:48:40 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:48:41 Instruccion: SET PC 0
+2024/07/26 17:48:41 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:48:41 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:48:42 Instruccion: SET BX 1
+2024/07/26 17:48:42 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:48:42 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:48:43 Instruccion: SET CX 1
+2024/07/26 17:48:43 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:48:43 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:48:44 Instruccion: SET DX 1
+2024/07/26 17:48:44 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:48:44 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:48:45 Instruccion: SET PC 0
+2024/07/26 17:48:45 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:48:45 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:48:46 Instruccion: SET BX 1
+2024/07/26 17:48:46 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:48:46 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:48:47 Instruccion: SET CX 1
+2024/07/26 17:48:47 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:48:47 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:48:48 Instruccion: SET DX 1
+2024/07/26 17:48:48 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:48:48 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:48:49 Instruccion: SET PC 0
+2024/07/26 17:48:49 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:48:49 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:48:50 Instruccion: SET BX 1
+2024/07/26 17:48:50 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:48:50 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:48:51 Instruccion: SET CX 1
+2024/07/26 17:48:51 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:48:51 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:48:52 Instruccion: SET DX 1
+2024/07/26 17:48:52 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:48:52 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:48:53 Instruccion: SET PC 0
+2024/07/26 17:48:53 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:48:53 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:48:54 Instruccion: SET BX 1
+2024/07/26 17:48:54 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:48:54 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:48:55 Instruccion: SET CX 1
+2024/07/26 17:48:55 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:48:55 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:48:56 Instruccion: SET DX 1
+2024/07/26 17:48:56 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:48:56 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:48:57 Instruccion: SET PC 0
+2024/07/26 17:48:57 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:48:57 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:48:58 Instruccion: SET BX 1
+2024/07/26 17:48:58 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:48:58 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:48:59 Instruccion: SET CX 1
+2024/07/26 17:48:59 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:48:59 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:49:00 Instruccion: SET DX 1
+2024/07/26 17:49:00 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:49:00 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:49:01 Instruccion: SET PC 0
+2024/07/26 17:49:01 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:49:01 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:49:02 Instruccion: SET BX 1
+2024/07/26 17:49:02 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:49:02 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:49:03 Instruccion: SET CX 1
+2024/07/26 17:49:03 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:49:03 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:49:04 Instruccion: SET DX 1
+2024/07/26 17:49:04 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:49:04 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:49:05 Instruccion: SET PC 0
+2024/07/26 17:49:05 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:49:05 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:49:06 Instruccion: SET BX 1
+2024/07/26 17:49:06 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:49:06 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:49:07 Instruccion: SET CX 1
+2024/07/26 17:49:07 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:49:07 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:49:08 Instruccion: SET DX 1
+2024/07/26 17:49:08 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:49:08 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:49:09 Instruccion: SET PC 0
+2024/07/26 17:49:09 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:49:09 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:49:10 Instruccion: SET BX 1
+2024/07/26 17:49:10 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:49:10 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:49:11 Instruccion: SET CX 1
+2024/07/26 17:49:11 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:49:11 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:49:12 Instruccion: SET DX 1
+2024/07/26 17:49:12 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:49:12 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:49:13 Instruccion: SET PC 0
+2024/07/26 17:49:13 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:49:13 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:49:14 Instruccion: SET BX 1
+2024/07/26 17:49:14 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:49:14 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:49:15 Instruccion: SET CX 1
+2024/07/26 17:49:15 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:49:15 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:49:16 Instruccion: SET DX 1
+2024/07/26 17:49:16 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:49:16 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:49:17 Instruccion: SET PC 0
+2024/07/26 17:49:17 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:49:17 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:49:18 Instruccion: SET BX 1
+2024/07/26 17:49:18 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:49:18 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:49:19 Instruccion: SET CX 1
+2024/07/26 17:49:19 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:49:19 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:49:20 Instruccion: SET DX 1
+2024/07/26 17:49:20 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:49:20 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:49:21 Instruccion: SET PC 0
+2024/07/26 17:49:21 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:49:21 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:49:22 Instruccion: SET BX 1
+2024/07/26 17:49:22 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:49:22 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:49:23 Instruccion: SET CX 1
+2024/07/26 17:49:23 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:49:23 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:49:24 Instruccion: SET DX 1
+2024/07/26 17:49:24 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:49:24 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:49:25 Instruccion: SET PC 0
+2024/07/26 17:49:25 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:49:25 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:49:26 Instruccion: SET BX 1
+2024/07/26 17:49:26 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:49:26 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:49:27 Instruccion: SET CX 1
+2024/07/26 17:49:27 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:49:27 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:49:28 Instruccion: SET DX 1
+2024/07/26 17:49:28 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:49:28 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:49:29 Instruccion: SET PC 0
+2024/07/26 17:49:29 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:49:29 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:49:30 Instruccion: SET BX 1
+2024/07/26 17:49:30 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:49:30 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:49:31 Instruccion: SET CX 1
+2024/07/26 17:49:31 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:49:31 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:49:32 Instruccion: SET DX 1
+2024/07/26 17:49:32 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:49:32 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:49:33 Instruccion: SET PC 0
+2024/07/26 17:49:33 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:49:33 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:49:34 Instruccion: SET BX 1
+2024/07/26 17:49:34 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:49:34 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:49:35 Instruccion: SET CX 1
+2024/07/26 17:49:35 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:49:35 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:49:36 Instruccion: SET DX 1
+2024/07/26 17:49:36 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:49:36 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:49:37 Instruccion: SET PC 0
+2024/07/26 17:49:37 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:49:37 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:49:38 Instruccion: SET BX 1
+2024/07/26 17:49:38 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:49:38 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:49:39 Instruccion: SET CX 1
+2024/07/26 17:49:39 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:49:39 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:49:40 Instruccion: SET DX 1
+2024/07/26 17:49:40 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:49:40 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:49:41 Instruccion: SET PC 0
+2024/07/26 17:49:41 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:49:41 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:49:42 Instruccion: SET BX 1
+2024/07/26 17:49:42 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:49:42 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:49:43 Instruccion: SET CX 1
+2024/07/26 17:49:43 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:49:43 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:49:44 Instruccion: SET DX 1
+2024/07/26 17:49:44 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:49:44 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:49:45 Instruccion: SET PC 0
+2024/07/26 17:49:45 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:49:45 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:49:46 Instruccion: SET BX 1
+2024/07/26 17:49:46 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:49:46 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:49:47 Instruccion: SET CX 1
+2024/07/26 17:49:47 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:49:47 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:49:48 Instruccion: SET DX 1
+2024/07/26 17:49:48 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:49:48 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:49:49 Instruccion: SET PC 0
+2024/07/26 17:49:49 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:49:49 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:49:50 Instruccion: SET BX 1
+2024/07/26 17:49:50 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:49:50 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:49:51 Instruccion: SET CX 1
+2024/07/26 17:49:51 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:49:51 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:49:52 Instruccion: SET DX 1
+2024/07/26 17:49:52 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:49:52 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:49:53 Instruccion: SET PC 0
+2024/07/26 17:49:53 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:49:53 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:49:54 Instruccion: SET BX 1
+2024/07/26 17:49:54 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:49:54 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:49:55 Instruccion: SET CX 1
+2024/07/26 17:49:55 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:49:55 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:49:56 Instruccion: SET DX 1
+2024/07/26 17:49:56 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:49:56 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:49:57 Instruccion: SET PC 0
+2024/07/26 17:49:57 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:49:57 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:49:58 Instruccion: SET BX 1
+2024/07/26 17:49:58 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:49:58 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:49:59 Instruccion: SET CX 1
+2024/07/26 17:49:59 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:49:59 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:50:00 Instruccion: SET DX 1
+2024/07/26 17:50:00 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:50:00 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:50:01 Instruccion: SET PC 0
+2024/07/26 17:50:01 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:50:01 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:50:02 Instruccion: SET BX 1
+2024/07/26 17:50:02 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:50:02 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:50:03 Instruccion: SET CX 1
+2024/07/26 17:50:03 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:50:03 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:50:04 Instruccion: SET DX 1
+2024/07/26 17:50:04 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:50:04 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:50:05 Instruccion: SET PC 0
+2024/07/26 17:50:05 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:50:05 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:50:06 Instruccion: SET BX 1
+2024/07/26 17:50:06 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:50:06 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:50:07 Instruccion: SET CX 1
+2024/07/26 17:50:07 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:50:07 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:50:08 Instruccion: SET DX 1
+2024/07/26 17:50:08 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:50:08 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:50:09 Instruccion: SET PC 0
+2024/07/26 17:50:09 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:50:09 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:50:10 Instruccion: SET BX 1
+2024/07/26 17:50:10 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:50:10 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:50:11 Instruccion: SET CX 1
+2024/07/26 17:50:11 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:50:11 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:50:12 Instruccion: SET DX 1
+2024/07/26 17:50:12 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:50:12 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:50:13 Instruccion: SET PC 0
+2024/07/26 17:50:13 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:50:13 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:50:14 Instruccion: SET BX 1
+2024/07/26 17:50:14 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:50:14 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:50:15 Instruccion: SET CX 1
+2024/07/26 17:50:15 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:50:15 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:50:16 Instruccion: SET DX 1
+2024/07/26 17:50:16 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:50:16 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:50:17 Instruccion: SET PC 0
+2024/07/26 17:50:17 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:50:17 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 17:50:18 Instruccion: SET BX 1
+2024/07/26 17:50:18 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 17:50:18 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 17:50:19 Instruccion: SET CX 1
+2024/07/26 17:50:19 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 17:50:19 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 17:50:20 Instruccion: SET DX 1
+2024/07/26 17:50:20 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 17:50:20 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 17:50:21 Instruccion: SET PC 0
+2024/07/26 17:50:21 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 17:50:22 PID: 1 - FETCH - Program Counter: 2
+2024/07/26 17:50:23 Instruccion: SET BX 1
+2024/07/26 17:50:23 PID: 1 - Ejecutando: SET - BX,1
+2024/07/26 17:50:23 PID: 1 - FETCH - Program Counter: 3
+2024/07/26 17:50:24 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:50:24 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:50:24 PID: 2 - FETCH - Program Counter: 5
+2024/07/26 17:50:25 Instruccion: SET EAX 1
+2024/07/26 17:50:25 PID: 2 - Ejecutando: SET - EAX,1
+2024/07/26 17:50:25 PID: 2 - FETCH - Program Counter: 6
+2024/07/26 17:50:26 Instruccion: SET EBX 1
+2024/07/26 17:50:26 PID: 2 - Ejecutando: SET - EBX,1
+2024/07/26 17:50:26 PID: 2 - FETCH - Program Counter: 7
+2024/07/26 17:50:27 Instruccion: SET ECX 1
+2024/07/26 17:50:27 PID: 2 - Ejecutando: SET - ECX,1
+2024/07/26 17:50:27 PID: 2 - FETCH - Program Counter: 8
+2024/07/26 17:50:28 Instruccion: SET EDX 1
+2024/07/26 17:50:28 PID: 2 - Ejecutando: SET - EDX,1
+2024/07/26 17:50:28 PID: 2 - FETCH - Program Counter: 9
+2024/07/26 17:50:29 Instruccion: EXIT
+2024/07/26 17:50:29 PID: 2 - Ejecutando: EXIT
+2024/07/26 17:50:30 PID: 1 - FETCH - Program Counter: 4
+2024/07/26 17:50:31 Instruccion: SET CX 1
+2024/07/26 17:50:31 PID: 1 - Ejecutando: SET - CX,1
+2024/07/26 17:50:31 PID: 1 - FETCH - Program Counter: 5
+2024/07/26 17:50:32 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:50:32 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:50:32 PID: 1 - FETCH - Program Counter: 6
+2024/07/26 17:50:33 Instruccion: SET DX 1
+2024/07/26 17:50:33 PID: 1 - Ejecutando: SET - DX,1
+2024/07/26 17:50:33 PID: 1 - FETCH - Program Counter: 7
+2024/07/26 17:50:34 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:50:34 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:50:34 PID: 1 - FETCH - Program Counter: 8
+2024/07/26 17:50:35 Instruccion: SET EAX 1
+2024/07/26 17:50:35 PID: 1 - Ejecutando: SET - EAX,1
+2024/07/26 17:50:35 PID: 1 - FETCH - Program Counter: 9
+2024/07/26 17:50:36 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:50:36 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:50:37 PID: 1 - FETCH - Program Counter: 10
+2024/07/26 17:50:38 Instruccion: SET EBX 1
+2024/07/26 17:50:38 PID: 1 - Ejecutando: SET - EBX,1
+2024/07/26 17:50:38 PID: 1 - FETCH - Program Counter: 11
+2024/07/26 17:50:39 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:50:39 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:50:39 PID: 1 - FETCH - Program Counter: 12
+2024/07/26 17:50:40 Instruccion: SET ECX 1
+2024/07/26 17:50:40 PID: 1 - Ejecutando: SET - ECX,1
+2024/07/26 17:50:40 PID: 1 - FETCH - Program Counter: 13
+2024/07/26 17:50:41 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:50:41 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:50:41 PID: 1 - FETCH - Program Counter: 14
+2024/07/26 17:50:42 Instruccion: SET EDX 1
+2024/07/26 17:50:42 PID: 1 - Ejecutando: SET - EDX,1
+2024/07/26 17:50:42 PID: 1 - FETCH - Program Counter: 15
+2024/07/26 17:50:43 Instruccion: EXIT
+2024/07/26 17:50:43 PID: 1 - Ejecutando: EXIT
+2024/07/26 17:56:30 Inicializando TLB con 32 entradas
+2024/07/26 17:56:42 PID: 4 - FETCH - Program Counter: 0
+2024/07/26 17:56:43 Instruccion: SET AX 1
+2024/07/26 17:56:43 PID: 4 - Ejecutando: SET - AX,1
+2024/07/26 17:56:43 PID: 4 - FETCH - Program Counter: 1
+2024/07/26 17:56:44 Instruccion: SET BX 1
+2024/07/26 17:56:44 PID: 4 - Ejecutando: SET - BX,1
+2024/07/26 17:56:44 PID: 4 - FETCH - Program Counter: 2
+2024/07/26 17:56:45 Instruccion: SET CX 1
+2024/07/26 17:56:45 PID: 4 - Ejecutando: SET - CX,1
+2024/07/26 17:56:45 PID: 4 - FETCH - Program Counter: 3
+2024/07/26 17:56:46 Instruccion: SET DX 1
+2024/07/26 17:56:46 PID: 4 - Ejecutando: SET - DX,1
+2024/07/26 17:56:46 PID: 4 - FETCH - Program Counter: 4
+2024/07/26 17:56:47 Instruccion: EXIT
+2024/07/26 17:56:47 PID: 4 - Ejecutando: EXIT
+2024/07/26 17:56:48 PID: 5 - FETCH - Program Counter: 0
+2024/07/26 17:56:49 Instruccion: SET AX 1
+2024/07/26 17:56:49 PID: 5 - Ejecutando: SET - AX,1
+2024/07/26 17:56:49 PID: 5 - FETCH - Program Counter: 1
+2024/07/26 17:56:50 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:56:50 PID: 5 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:56:50 PID: 6 - FETCH - Program Counter: 0
+2024/07/26 17:56:51 Instruccion: SET AX 1
+2024/07/26 17:56:51 PID: 6 - Ejecutando: SET - AX,1
+2024/07/26 17:56:51 PID: 6 - FETCH - Program Counter: 1
+2024/07/26 17:56:52 Instruccion: SET BX 1
+2024/07/26 17:56:52 PID: 6 - Ejecutando: SET - BX,1
+2024/07/26 17:56:52 PID: 6 - FETCH - Program Counter: 2
+2024/07/26 17:56:53 Instruccion: SET CX 1
+2024/07/26 17:56:53 PID: 6 - Ejecutando: SET - CX,1
+2024/07/26 17:56:53 PID: 6 - FETCH - Program Counter: 3
+2024/07/26 17:56:54 Instruccion: SET DX 1
+2024/07/26 17:56:54 PID: 6 - Ejecutando: SET - DX,1
+2024/07/26 17:56:54 PID: 6 - FETCH - Program Counter: 4
+2024/07/26 17:56:55 Instruccion: IO_GEN_SLEEP SLP1 4
+2024/07/26 17:56:55 PID: 6 - Ejecutando: IO_GEN_SLEEP - SLP1,4
+2024/07/26 17:56:55 PID: 7 - FETCH - Program Counter: 0
+2024/07/26 17:56:56 Instruccion: SET AX 1
+2024/07/26 17:56:56 PID: 7 - Ejecutando: SET - AX,1
+2024/07/26 17:56:56 PID: 7 - FETCH - Program Counter: 1
+2024/07/26 17:56:57 Instruccion: SET BX 1
+2024/07/26 17:56:57 PID: 7 - Ejecutando: SET - BX,1
+2024/07/26 17:56:57 PID: 7 - FETCH - Program Counter: 2
+2024/07/26 17:56:58 Instruccion: SET CX 1
+2024/07/26 17:56:58 PID: 7 - Ejecutando: SET - CX,1
+2024/07/26 17:56:58 PID: 7 - FETCH - Program Counter: 3
+2024/07/26 17:56:59 Instruccion: SET DX 1
+2024/07/26 17:56:59 PID: 7 - Ejecutando: SET - DX,1
+2024/07/26 17:56:59 PID: 7 - FETCH - Program Counter: 4
+2024/07/26 17:57:00 Instruccion: SET PC 0
+2024/07/26 17:57:00 PID: 7 - Ejecutando: SET - PC,0
+2024/07/26 17:57:00 PID: 7 - FETCH - Program Counter: 0
+2024/07/26 17:57:01 Instruccion: SET AX 1
+2024/07/26 17:57:01 PID: 7 - Ejecutando: SET - AX,1
+2024/07/26 17:57:01 PID: 7 - FETCH - Program Counter: 1
+2024/07/26 17:57:02 Instruccion: SET BX 1
+2024/07/26 17:57:02 PID: 7 - Ejecutando: SET - BX,1
+2024/07/26 17:57:02 PID: 7 - FETCH - Program Counter: 2
+2024/07/26 17:57:03 Instruccion: SET CX 1
+2024/07/26 17:57:03 PID: 7 - Ejecutando: SET - CX,1
+2024/07/26 17:57:03 PID: 7 - FETCH - Program Counter: 3
+2024/07/26 17:57:04 Instruccion: SET DX 1
+2024/07/26 17:57:04 PID: 7 - Ejecutando: SET - DX,1
+2024/07/26 17:57:04 PID: 7 - FETCH - Program Counter: 4
+2024/07/26 17:57:05 Instruccion: SET PC 0
+2024/07/26 17:57:05 PID: 7 - Ejecutando: SET - PC,0
+2024/07/26 17:57:05 PID: 7 - FETCH - Program Counter: 0
+2024/07/26 17:57:06 Instruccion: SET AX 1
+2024/07/26 17:57:06 PID: 7 - Ejecutando: SET - AX,1
+2024/07/26 17:57:06 PID: 7 - FETCH - Program Counter: 1
+2024/07/26 17:57:07 Instruccion: SET BX 1
+2024/07/26 17:57:07 PID: 7 - Ejecutando: SET - BX,1
+2024/07/26 17:57:07 PID: 7 - FETCH - Program Counter: 2
+2024/07/26 17:57:08 Instruccion: SET CX 1
+2024/07/26 17:57:08 PID: 7 - Ejecutando: SET - CX,1
+2024/07/26 17:57:08 PID: 7 - FETCH - Program Counter: 3
+2024/07/26 17:57:09 Instruccion: SET DX 1
+2024/07/26 17:57:09 PID: 7 - Ejecutando: SET - DX,1
+2024/07/26 17:57:09 PID: 7 - FETCH - Program Counter: 4
+2024/07/26 17:57:10 Instruccion: SET PC 0
+2024/07/26 17:57:10 PID: 7 - Ejecutando: SET - PC,0
+2024/07/26 17:57:10 PID: 7 - FETCH - Program Counter: 0
+2024/07/26 17:57:11 Instruccion: SET AX 1
+2024/07/26 17:57:11 PID: 7 - Ejecutando: SET - AX,1
+2024/07/26 17:57:11 PID: 7 - FETCH - Program Counter: 1
+2024/07/26 17:57:12 Instruccion: SET BX 1
+2024/07/26 17:57:12 PID: 7 - Ejecutando: SET - BX,1
+2024/07/26 17:57:12 PID: 7 - FETCH - Program Counter: 2
+2024/07/26 17:57:13 Instruccion: SET CX 1
+2024/07/26 17:57:13 PID: 7 - Ejecutando: SET - CX,1
+2024/07/26 17:57:13 PID: 7 - FETCH - Program Counter: 3
+2024/07/26 17:57:14 Instruccion: SET DX 1
+2024/07/26 17:57:14 PID: 7 - Ejecutando: SET - DX,1
+2024/07/26 17:57:14 PID: 7 - FETCH - Program Counter: 4
+2024/07/26 17:57:15 Instruccion: SET PC 0
+2024/07/26 17:57:15 PID: 7 - Ejecutando: SET - PC,0
+2024/07/26 17:57:15 PID: 7 - FETCH - Program Counter: 0
+2024/07/26 17:57:16 Instruccion: SET AX 1
+2024/07/26 17:57:16 PID: 7 - Ejecutando: SET - AX,1
+2024/07/26 17:57:16 PID: 7 - FETCH - Program Counter: 1
+2024/07/26 17:57:17 Instruccion: SET BX 1
+2024/07/26 17:57:17 PID: 7 - Ejecutando: SET - BX,1
+2024/07/26 17:57:17 PID: 7 - FETCH - Program Counter: 2
+2024/07/26 17:57:18 Instruccion: SET CX 1
+2024/07/26 17:57:18 PID: 7 - Ejecutando: SET - CX,1
+2024/07/26 17:57:18 PID: 7 - FETCH - Program Counter: 3
+2024/07/26 17:57:19 Instruccion: SET DX 1
+2024/07/26 17:57:19 PID: 7 - Ejecutando: SET - DX,1
+2024/07/26 17:57:19 PID: 7 - FETCH - Program Counter: 4
+2024/07/26 17:57:20 Instruccion: SET PC 0
+2024/07/26 17:57:20 PID: 7 - Ejecutando: SET - PC,0
+2024/07/26 17:57:20 PID: 7 - FETCH - Program Counter: 0
+2024/07/26 17:57:21 Instruccion: SET AX 1
+2024/07/26 17:57:21 PID: 7 - Ejecutando: SET - AX,1
+2024/07/26 17:57:21 PID: 7 - FETCH - Program Counter: 1
+2024/07/26 17:57:22 Instruccion: SET BX 1
+2024/07/26 17:57:22 PID: 7 - Ejecutando: SET - BX,1
+2024/07/26 17:57:22 PID: 7 - FETCH - Program Counter: 2
+2024/07/26 17:57:23 Instruccion: SET CX 1
+2024/07/26 17:57:23 PID: 7 - Ejecutando: SET - CX,1
+2024/07/26 17:57:23 PID: 7 - FETCH - Program Counter: 3
+2024/07/26 17:57:24 Instruccion: SET DX 1
+2024/07/26 17:57:24 PID: 7 - Ejecutando: SET - DX,1
+2024/07/26 17:57:24 PID: 7 - FETCH - Program Counter: 4
+2024/07/26 17:57:25 Instruccion: SET PC 0
+2024/07/26 17:57:25 PID: 7 - Ejecutando: SET - PC,0
+2024/07/26 17:57:25 PID: 7 - FETCH - Program Counter: 0
+2024/07/26 17:57:26 Instruccion: SET AX 1
+2024/07/26 17:57:26 PID: 7 - Ejecutando: SET - AX,1
+2024/07/26 17:57:26 PID: 7 - FETCH - Program Counter: 1
+2024/07/26 17:57:27 Instruccion: SET BX 1
+2024/07/26 17:57:27 PID: 7 - Ejecutando: SET - BX,1
+2024/07/26 17:57:27 PID: 7 - FETCH - Program Counter: 2
+2024/07/26 17:57:28 Instruccion: SET CX 1
+2024/07/26 17:57:28 PID: 7 - Ejecutando: SET - CX,1
+2024/07/26 17:57:28 PID: 7 - FETCH - Program Counter: 3
+2024/07/26 17:57:29 Instruccion: SET DX 1
+2024/07/26 17:57:29 PID: 7 - Ejecutando: SET - DX,1
+2024/07/26 17:57:29 PID: 7 - FETCH - Program Counter: 4
+2024/07/26 17:57:30 Instruccion: SET PC 0
+2024/07/26 17:57:30 PID: 7 - Ejecutando: SET - PC,0
+2024/07/26 17:57:30 PID: 7 - FETCH - Program Counter: 0
+2024/07/26 17:57:32 Instruccion: SET AX 1
+2024/07/26 17:57:32 PID: 7 - Ejecutando: SET - AX,1
+2024/07/26 17:57:32 PID: 7 - FETCH - Program Counter: 1
+2024/07/26 17:57:33 Instruccion: SET BX 1
+2024/07/26 17:57:33 PID: 7 - Ejecutando: SET - BX,1
+2024/07/26 17:57:33 PID: 7 - FETCH - Program Counter: 2
+2024/07/26 17:57:34 Instruccion: SET CX 1
+2024/07/26 17:57:34 PID: 7 - Ejecutando: SET - CX,1
+2024/07/26 17:57:34 PID: 7 - FETCH - Program Counter: 3
+2024/07/26 17:57:35 Instruccion: SET DX 1
+2024/07/26 17:57:35 PID: 7 - Ejecutando: SET - DX,1
+2024/07/26 17:57:35 PID: 7 - FETCH - Program Counter: 4
+2024/07/26 17:57:36 Instruccion: SET PC 0
+2024/07/26 17:57:36 PID: 7 - Ejecutando: SET - PC,0
+2024/07/26 17:57:36 PID: 7 - FETCH - Program Counter: 0
+2024/07/26 17:57:37 Instruccion: SET AX 1
+2024/07/26 17:57:37 PID: 7 - Ejecutando: SET - AX,1
+2024/07/26 17:57:37 PID: 7 - FETCH - Program Counter: 1
+2024/07/26 17:57:38 Instruccion: SET BX 1
+2024/07/26 17:57:38 PID: 7 - Ejecutando: SET - BX,1
+2024/07/26 17:57:38 PID: 7 - FETCH - Program Counter: 2
+2024/07/26 17:57:39 Instruccion: SET CX 1
+2024/07/26 17:57:39 PID: 7 - Ejecutando: SET - CX,1
+2024/07/26 17:57:39 PID: 7 - FETCH - Program Counter: 3
+2024/07/26 17:57:40 Instruccion: SET DX 1
+2024/07/26 17:57:40 PID: 7 - Ejecutando: SET - DX,1
+2024/07/26 17:57:40 PID: 7 - FETCH - Program Counter: 4
+2024/07/26 17:57:41 Instruccion: SET PC 0
+2024/07/26 17:57:41 PID: 7 - Ejecutando: SET - PC,0
+2024/07/26 17:57:41 PID: 7 - FETCH - Program Counter: 0
+2024/07/26 17:57:42 Instruccion: SET AX 1
+2024/07/26 17:57:42 PID: 7 - Ejecutando: SET - AX,1
+2024/07/26 17:57:42 PID: 7 - FETCH - Program Counter: 1
+2024/07/26 17:57:43 Instruccion: SET BX 1
+2024/07/26 17:57:43 PID: 7 - Ejecutando: SET - BX,1
+2024/07/26 17:57:43 PID: 7 - FETCH - Program Counter: 2
+2024/07/26 17:57:44 Instruccion: SET CX 1
+2024/07/26 17:57:44 PID: 7 - Ejecutando: SET - CX,1
+2024/07/26 17:57:44 PID: 7 - FETCH - Program Counter: 3
+2024/07/26 17:57:45 Instruccion: SET DX 1
+2024/07/26 17:57:45 PID: 7 - Ejecutando: SET - DX,1
+2024/07/26 17:57:45 PID: 7 - FETCH - Program Counter: 4
+2024/07/26 17:57:46 Instruccion: SET PC 0
+2024/07/26 17:57:46 PID: 7 - Ejecutando: SET - PC,0
+2024/07/26 17:57:46 PID: 7 - FETCH - Program Counter: 0
+2024/07/26 17:57:47 Instruccion: SET AX 1
+2024/07/26 17:57:47 PID: 7 - Ejecutando: SET - AX,1
+2024/07/26 17:57:47 PID: 7 - FETCH - Program Counter: 1
+2024/07/26 17:57:48 Instruccion: SET BX 1
+2024/07/26 17:57:48 PID: 7 - Ejecutando: SET - BX,1
+2024/07/26 17:57:49 PID: 5 - FETCH - Program Counter: 2
+2024/07/26 17:57:50 Instruccion: SET BX 1
+2024/07/26 17:57:50 PID: 5 - Ejecutando: SET - BX,1
+2024/07/26 17:57:50 PID: 5 - FETCH - Program Counter: 3
+2024/07/26 17:57:51 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:57:51 PID: 5 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:57:51 PID: 6 - FETCH - Program Counter: 5
+2024/07/26 17:57:52 Instruccion: SET EAX 1
+2024/07/26 17:57:52 PID: 6 - Ejecutando: SET - EAX,1
+2024/07/26 17:57:52 PID: 6 - FETCH - Program Counter: 6
+2024/07/26 17:57:53 Instruccion: SET EBX 1
+2024/07/26 17:57:53 PID: 6 - Ejecutando: SET - EBX,1
+2024/07/26 17:57:53 PID: 6 - FETCH - Program Counter: 7
+2024/07/26 17:57:54 Instruccion: SET ECX 1
+2024/07/26 17:57:54 PID: 6 - Ejecutando: SET - ECX,1
+2024/07/26 17:57:54 PID: 6 - FETCH - Program Counter: 8
+2024/07/26 17:57:55 Instruccion: SET EDX 1
+2024/07/26 17:57:55 PID: 6 - Ejecutando: SET - EDX,1
+2024/07/26 17:57:55 PID: 6 - FETCH - Program Counter: 9
+2024/07/26 17:57:56 Instruccion: EXIT
+2024/07/26 17:57:56 PID: 6 - Ejecutando: EXIT
+2024/07/26 17:57:57 PID: 5 - FETCH - Program Counter: 4
+2024/07/26 17:57:58 Instruccion: SET CX 1
+2024/07/26 17:57:58 PID: 5 - Ejecutando: SET - CX,1
+2024/07/26 17:57:58 PID: 5 - FETCH - Program Counter: 5
+2024/07/26 17:57:59 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:57:59 PID: 5 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:57:59 PID: 5 - FETCH - Program Counter: 6
+2024/07/26 17:58:00 Instruccion: SET DX 1
+2024/07/26 17:58:00 PID: 5 - Ejecutando: SET - DX,1
+2024/07/26 17:58:00 PID: 5 - FETCH - Program Counter: 7
+2024/07/26 17:58:01 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:58:01 PID: 5 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:58:01 PID: 5 - FETCH - Program Counter: 8
+2024/07/26 17:58:02 Instruccion: SET EAX 1
+2024/07/26 17:58:02 PID: 5 - Ejecutando: SET - EAX,1
+2024/07/26 17:58:02 PID: 5 - FETCH - Program Counter: 9
+2024/07/26 17:58:03 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:58:03 PID: 5 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:58:03 PID: 5 - FETCH - Program Counter: 10
+2024/07/26 17:58:04 Instruccion: SET EBX 1
+2024/07/26 17:58:04 PID: 5 - Ejecutando: SET - EBX,1
+2024/07/26 17:58:04 PID: 5 - FETCH - Program Counter: 11
+2024/07/26 17:58:05 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:58:05 PID: 5 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:58:05 PID: 5 - FETCH - Program Counter: 12
+2024/07/26 17:58:06 Instruccion: SET ECX 1
+2024/07/26 17:58:06 PID: 5 - Ejecutando: SET - ECX,1
+2024/07/26 17:58:06 PID: 5 - FETCH - Program Counter: 13
+2024/07/26 17:58:07 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 17:58:07 PID: 5 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 17:58:07 PID: 5 - FETCH - Program Counter: 14
+2024/07/26 17:58:08 Instruccion: SET EDX 1
+2024/07/26 17:58:08 PID: 5 - Ejecutando: SET - EDX,1
+2024/07/26 17:58:08 PID: 5 - FETCH - Program Counter: 15
+2024/07/26 17:58:09 Instruccion: EXIT
+2024/07/26 17:58:09 PID: 5 - Ejecutando: EXIT
+2024/07/26 17:59:50 Inicializando TLB con 32 entradas
+2024/07/26 18:01:39 PID: 0 - FETCH - Program Counter: 0
+2024/07/26 18:01:40 Instruccion: SET AX 1
+2024/07/26 18:01:40 PID: 0 - Ejecutando: SET - AX,1
+2024/07/26 18:01:40 PID: 0 - FETCH - Program Counter: 1
+2024/07/26 18:01:41 Instruccion: SET BX 1
+2024/07/26 18:01:41 PID: 0 - Ejecutando: SET - BX,1
+2024/07/26 18:01:41 PID: 0 - FETCH - Program Counter: 2
+2024/07/26 18:01:42 Instruccion: SET CX 1
+2024/07/26 18:01:42 PID: 0 - Ejecutando: SET - CX,1
+2024/07/26 18:01:42 PID: 1 - FETCH - Program Counter: 0
+2024/07/26 18:01:43 Instruccion: SET AX 1
+2024/07/26 18:01:43 PID: 1 - Ejecutando: SET - AX,1
+2024/07/26 18:01:43 PID: 1 - FETCH - Program Counter: 1
+2024/07/26 18:01:44 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 18:01:44 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 18:01:44 PID: 2 - FETCH - Program Counter: 0
+2024/07/26 18:01:45 Instruccion: SET AX 1
+2024/07/26 18:01:45 PID: 2 - Ejecutando: SET - AX,1
+2024/07/26 18:01:45 PID: 2 - FETCH - Program Counter: 1
+2024/07/26 18:01:46 Instruccion: SET BX 1
+2024/07/26 18:01:46 PID: 2 - Ejecutando: SET - BX,1
+2024/07/26 18:01:46 PID: 2 - FETCH - Program Counter: 2
+2024/07/26 18:01:47 Instruccion: SET CX 1
+2024/07/26 18:01:47 PID: 2 - Ejecutando: SET - CX,1
+2024/07/26 18:01:47 PID: 0 - FETCH - Program Counter: 3
+2024/07/26 18:01:48 Instruccion: SET DX 1
+2024/07/26 18:01:48 PID: 0 - Ejecutando: SET - DX,1
+2024/07/26 18:01:48 PID: 0 - FETCH - Program Counter: 4
+2024/07/26 18:01:49 Instruccion: EXIT
+2024/07/26 18:01:49 PID: 0 - Ejecutando: EXIT
+2024/07/26 18:01:50 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:01:51 Instruccion: SET AX 1
+2024/07/26 18:01:51 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:01:51 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:01:52 Instruccion: SET BX 1
+2024/07/26 18:01:52 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:01:52 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:01:53 Instruccion: SET CX 1
+2024/07/26 18:01:53 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:01:53 PID: 1 - FETCH - Program Counter: 2
+2024/07/26 18:01:54 Instruccion: SET BX 1
+2024/07/26 18:01:54 PID: 1 - Ejecutando: SET - BX,1
+2024/07/26 18:01:54 PID: 1 - FETCH - Program Counter: 3
+2024/07/26 18:01:55 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 18:01:55 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 18:01:55 PID: 2 - FETCH - Program Counter: 3
+2024/07/26 18:01:56 Instruccion: SET DX 1
+2024/07/26 18:01:56 PID: 2 - Ejecutando: SET - DX,1
+2024/07/26 18:01:56 PID: 2 - FETCH - Program Counter: 4
+2024/07/26 18:01:57 Instruccion: IO_GEN_SLEEP SLP1 4
+2024/07/26 18:01:57 PID: 2 - Ejecutando: IO_GEN_SLEEP - SLP1,4
+2024/07/26 18:01:57 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:01:58 Instruccion: SET DX 1
+2024/07/26 18:01:58 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:01:58 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:01:59 Instruccion: SET PC 0
+2024/07/26 18:01:59 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:01:59 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:02:00 Instruccion: SET AX 1
+2024/07/26 18:02:00 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:02:00 PID: 1 - FETCH - Program Counter: 4
+2024/07/26 18:02:01 Instruccion: SET CX 1
+2024/07/26 18:02:01 PID: 1 - Ejecutando: SET - CX,1
+2024/07/26 18:02:01 PID: 1 - FETCH - Program Counter: 5
+2024/07/26 18:02:02 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 18:02:02 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 18:02:02 PID: 2 - FETCH - Program Counter: 5
+2024/07/26 18:02:03 Instruccion: SET EAX 1
+2024/07/26 18:02:03 PID: 2 - Ejecutando: SET - EAX,1
+2024/07/26 18:02:03 PID: 2 - FETCH - Program Counter: 6
+2024/07/26 18:02:04 Instruccion: SET EBX 1
+2024/07/26 18:02:04 PID: 2 - Ejecutando: SET - EBX,1
+2024/07/26 18:02:04 PID: 2 - FETCH - Program Counter: 7
+2024/07/26 18:02:05 Instruccion: SET ECX 1
+2024/07/26 18:02:05 PID: 2 - Ejecutando: SET - ECX,1
+2024/07/26 18:02:05 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:02:07 Instruccion: SET BX 1
+2024/07/26 18:02:07 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:02:07 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:02:08 Instruccion: SET CX 1
+2024/07/26 18:02:08 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:02:08 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:02:09 Instruccion: SET DX 1
+2024/07/26 18:02:09 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:02:09 PID: 1 - FETCH - Program Counter: 6
+2024/07/26 18:02:10 Instruccion: SET DX 1
+2024/07/26 18:02:10 PID: 1 - Ejecutando: SET - DX,1
+2024/07/26 18:02:10 PID: 1 - FETCH - Program Counter: 7
+2024/07/26 18:02:11 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 18:02:11 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 18:02:11 PID: 2 - FETCH - Program Counter: 8
+2024/07/26 18:02:12 Instruccion: SET EDX 1
+2024/07/26 18:02:12 PID: 2 - Ejecutando: SET - EDX,1
+2024/07/26 18:02:12 PID: 2 - FETCH - Program Counter: 9
+2024/07/26 18:02:13 Instruccion: EXIT
+2024/07/26 18:02:13 PID: 2 - Ejecutando: EXIT
+2024/07/26 18:02:14 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:02:15 Instruccion: SET PC 0
+2024/07/26 18:02:15 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:02:15 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:02:16 Instruccion: SET AX 1
+2024/07/26 18:02:16 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:02:16 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:02:17 Instruccion: SET BX 1
+2024/07/26 18:02:17 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:02:17 PID: 1 - FETCH - Program Counter: 8
+2024/07/26 18:02:18 Instruccion: SET EAX 1
+2024/07/26 18:02:18 PID: 1 - Ejecutando: SET - EAX,1
+2024/07/26 18:02:18 PID: 1 - FETCH - Program Counter: 9
+2024/07/26 18:02:19 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 18:02:19 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 18:02:19 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:02:20 Instruccion: SET CX 1
+2024/07/26 18:02:20 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:02:20 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:02:21 Instruccion: SET DX 1
+2024/07/26 18:02:21 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:02:21 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:02:22 Instruccion: SET PC 0
+2024/07/26 18:02:22 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:02:22 PID: 1 - FETCH - Program Counter: 10
+2024/07/26 18:02:23 Instruccion: SET EBX 1
+2024/07/26 18:02:23 PID: 1 - Ejecutando: SET - EBX,1
+2024/07/26 18:02:23 PID: 1 - FETCH - Program Counter: 11
+2024/07/26 18:02:24 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 18:02:24 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 18:02:24 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:02:25 Instruccion: SET AX 1
+2024/07/26 18:02:25 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:02:25 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:02:26 Instruccion: SET BX 1
+2024/07/26 18:02:26 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:02:26 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:02:27 Instruccion: SET CX 1
+2024/07/26 18:02:27 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:02:27 PID: 1 - FETCH - Program Counter: 12
+2024/07/26 18:02:28 Instruccion: SET ECX 1
+2024/07/26 18:02:28 PID: 1 - Ejecutando: SET - ECX,1
+2024/07/26 18:02:28 PID: 1 - FETCH - Program Counter: 13
+2024/07/26 18:02:29 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 18:02:29 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 18:02:29 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:02:30 Instruccion: SET DX 1
+2024/07/26 18:02:30 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:02:30 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:02:31 Instruccion: SET PC 0
+2024/07/26 18:02:31 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:02:31 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:02:32 Instruccion: SET AX 1
+2024/07/26 18:02:32 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:02:32 PID: 1 - FETCH - Program Counter: 14
+2024/07/26 18:02:33 Instruccion: SET EDX 1
+2024/07/26 18:02:33 PID: 1 - Ejecutando: SET - EDX,1
+2024/07/26 18:02:33 PID: 1 - FETCH - Program Counter: 15
+2024/07/26 18:02:34 Instruccion: EXIT
+2024/07/26 18:02:34 PID: 1 - Ejecutando: EXIT
+2024/07/26 18:02:35 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:02:36 Instruccion: SET BX 1
+2024/07/26 18:02:36 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:02:36 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:02:37 Instruccion: SET CX 1
+2024/07/26 18:02:37 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:02:37 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:02:38 Instruccion: SET DX 1
+2024/07/26 18:02:38 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:02:38 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:02:39 Instruccion: SET PC 0
+2024/07/26 18:02:39 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:02:39 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:02:40 Instruccion: SET AX 1
+2024/07/26 18:02:40 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:02:40 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:02:41 Instruccion: SET BX 1
+2024/07/26 18:02:41 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:02:41 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:02:42 Instruccion: SET CX 1
+2024/07/26 18:02:42 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:02:42 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:02:43 Instruccion: SET DX 1
+2024/07/26 18:02:43 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:02:43 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:02:44 Instruccion: SET PC 0
+2024/07/26 18:02:44 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:02:44 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:02:45 Instruccion: SET AX 1
+2024/07/26 18:02:45 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:02:45 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:02:46 Instruccion: SET BX 1
+2024/07/26 18:02:46 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:02:46 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:02:47 Instruccion: SET CX 1
+2024/07/26 18:02:47 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:02:47 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:02:48 Instruccion: SET DX 1
+2024/07/26 18:02:48 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:02:48 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:02:49 Instruccion: SET PC 0
+2024/07/26 18:02:49 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:02:49 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:02:50 Instruccion: SET AX 1
+2024/07/26 18:02:50 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:02:50 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:02:51 Instruccion: SET BX 1
+2024/07/26 18:02:51 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:02:51 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:02:52 Instruccion: SET CX 1
+2024/07/26 18:02:52 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:02:52 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:02:53 Instruccion: SET DX 1
+2024/07/26 18:02:53 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:02:53 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:02:54 Instruccion: SET PC 0
+2024/07/26 18:02:54 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:02:54 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:02:55 Instruccion: SET AX 1
+2024/07/26 18:02:55 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:02:55 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:02:56 Instruccion: SET BX 1
+2024/07/26 18:02:56 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:02:56 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:02:57 Instruccion: SET CX 1
+2024/07/26 18:02:57 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:02:57 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:02:58 Instruccion: SET DX 1
+2024/07/26 18:02:58 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:02:58 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:02:59 Instruccion: SET PC 0
+2024/07/26 18:02:59 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:02:59 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:03:00 Instruccion: SET AX 1
+2024/07/26 18:03:00 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:03:00 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:03:01 Instruccion: SET BX 1
+2024/07/26 18:03:01 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:03:01 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:03:02 Instruccion: SET CX 1
+2024/07/26 18:03:02 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:03:02 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:03:03 Instruccion: SET DX 1
+2024/07/26 18:03:03 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:03:03 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:03:04 Instruccion: SET PC 0
+2024/07/26 18:03:04 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:03:04 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:03:05 Instruccion: SET AX 1
+2024/07/26 18:03:05 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:03:05 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:03:06 Instruccion: SET BX 1
+2024/07/26 18:03:06 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:03:06 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:03:07 Instruccion: SET CX 1
+2024/07/26 18:03:07 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:03:07 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:03:08 Instruccion: SET DX 1
+2024/07/26 18:03:08 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:03:08 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:03:09 Instruccion: SET PC 0
+2024/07/26 18:03:09 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:03:09 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:03:10 Instruccion: SET AX 1
+2024/07/26 18:03:10 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:03:10 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:03:11 Instruccion: SET BX 1
+2024/07/26 18:03:11 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:03:11 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:03:12 Instruccion: SET CX 1
+2024/07/26 18:03:12 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:03:12 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:03:13 Instruccion: SET DX 1
+2024/07/26 18:03:13 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:03:13 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:03:14 Instruccion: SET PC 0
+2024/07/26 18:03:14 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:03:14 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:03:15 Instruccion: SET AX 1
+2024/07/26 18:03:15 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:03:15 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:03:16 Instruccion: SET BX 1
+2024/07/26 18:03:16 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:03:16 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:03:17 Instruccion: SET CX 1
+2024/07/26 18:03:17 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:03:17 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:03:18 Instruccion: SET DX 1
+2024/07/26 18:03:18 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:03:18 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:03:19 Instruccion: SET PC 0
+2024/07/26 18:03:19 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:03:19 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:03:20 Instruccion: SET AX 1
+2024/07/26 18:03:20 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:03:20 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:03:21 Instruccion: SET BX 1
+2024/07/26 18:03:21 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:03:21 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:03:22 Instruccion: SET CX 1
+2024/07/26 18:03:22 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:03:22 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:03:23 Instruccion: SET DX 1
+2024/07/26 18:03:23 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:03:23 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:03:24 Instruccion: SET PC 0
+2024/07/26 18:03:24 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:03:24 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:03:25 Instruccion: SET AX 1
+2024/07/26 18:03:25 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:03:25 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:03:26 Instruccion: SET BX 1
+2024/07/26 18:03:26 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:03:26 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:03:27 Instruccion: SET CX 1
+2024/07/26 18:03:27 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:03:27 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:03:28 Instruccion: SET DX 1
+2024/07/26 18:03:28 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:03:28 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:03:29 Instruccion: SET PC 0
+2024/07/26 18:03:29 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:03:29 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:03:30 Instruccion: SET AX 1
+2024/07/26 18:03:30 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:03:30 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:03:31 Instruccion: SET BX 1
+2024/07/26 18:03:31 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:03:31 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:03:32 Instruccion: SET CX 1
+2024/07/26 18:03:32 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:03:32 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:03:33 Instruccion: SET DX 1
+2024/07/26 18:03:33 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:03:33 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:03:34 Instruccion: SET PC 0
+2024/07/26 18:03:34 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:03:34 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:03:35 Instruccion: SET AX 1
+2024/07/26 18:03:35 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:03:35 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:03:36 Instruccion: SET BX 1
+2024/07/26 18:03:36 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:03:36 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:03:37 Instruccion: SET CX 1
+2024/07/26 18:03:37 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:03:37 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:03:38 Instruccion: SET DX 1
+2024/07/26 18:03:38 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:03:38 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:03:39 Instruccion: SET PC 0
+2024/07/26 18:03:39 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:03:39 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:03:40 Instruccion: SET AX 1
+2024/07/26 18:03:40 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:03:40 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:03:41 Instruccion: SET BX 1
+2024/07/26 18:03:41 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:03:41 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:03:42 Instruccion: SET CX 1
+2024/07/26 18:03:42 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:03:42 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:03:43 Instruccion: SET DX 1
+2024/07/26 18:03:43 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:03:43 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:03:44 Instruccion: SET PC 0
+2024/07/26 18:03:44 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:03:44 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:03:45 Instruccion: SET AX 1
+2024/07/26 18:03:45 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:03:45 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:03:46 Instruccion: SET BX 1
+2024/07/26 18:03:46 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:03:46 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:03:47 Instruccion: SET CX 1
+2024/07/26 18:03:47 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:03:47 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:03:48 Instruccion: SET DX 1
+2024/07/26 18:03:48 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:03:48 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:03:49 Instruccion: SET PC 0
+2024/07/26 18:03:49 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:03:49 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:03:50 Instruccion: SET AX 1
+2024/07/26 18:03:50 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:03:50 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:03:51 Instruccion: SET BX 1
+2024/07/26 18:03:51 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:03:51 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:03:52 Instruccion: SET CX 1
+2024/07/26 18:03:52 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:03:52 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:03:53 Instruccion: SET DX 1
+2024/07/26 18:03:53 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:03:53 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:03:54 Instruccion: SET PC 0
+2024/07/26 18:03:54 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:03:54 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:03:55 Instruccion: SET AX 1
+2024/07/26 18:03:55 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:03:55 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:03:56 Instruccion: SET BX 1
+2024/07/26 18:03:56 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:03:56 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:03:57 Instruccion: SET CX 1
+2024/07/26 18:03:57 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:03:57 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:03:58 Instruccion: SET DX 1
+2024/07/26 18:03:58 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:03:58 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:03:59 Instruccion: SET PC 0
+2024/07/26 18:03:59 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:03:59 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:04:00 Instruccion: SET AX 1
+2024/07/26 18:04:00 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:04:00 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:04:01 Instruccion: SET BX 1
+2024/07/26 18:04:01 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:04:01 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:04:02 Instruccion: SET CX 1
+2024/07/26 18:04:02 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:04:02 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:04:03 Instruccion: SET DX 1
+2024/07/26 18:04:03 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:04:03 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:04:04 Instruccion: SET PC 0
+2024/07/26 18:04:04 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:04:04 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:04:05 Instruccion: SET AX 1
+2024/07/26 18:04:05 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:04:05 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:04:06 Instruccion: SET BX 1
+2024/07/26 18:04:06 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:04:06 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:04:07 Instruccion: SET CX 1
+2024/07/26 18:04:07 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:04:07 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:04:08 Instruccion: SET DX 1
+2024/07/26 18:04:08 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:04:08 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:04:09 Instruccion: SET PC 0
+2024/07/26 18:04:09 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:04:09 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:04:10 Instruccion: SET AX 1
+2024/07/26 18:04:10 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:04:10 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:04:11 Instruccion: SET BX 1
+2024/07/26 18:04:11 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:04:11 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:04:12 Instruccion: SET CX 1
+2024/07/26 18:04:12 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:04:12 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:04:13 Instruccion: SET DX 1
+2024/07/26 18:04:13 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:04:13 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:04:14 Instruccion: SET PC 0
+2024/07/26 18:04:14 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:04:14 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:04:15 Instruccion: SET AX 1
+2024/07/26 18:04:15 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:04:15 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:04:16 Instruccion: SET BX 1
+2024/07/26 18:04:16 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:04:16 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:04:17 Instruccion: SET CX 1
+2024/07/26 18:04:17 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:04:17 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:04:18 Instruccion: SET DX 1
+2024/07/26 18:04:18 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:04:18 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:04:19 Instruccion: SET PC 0
+2024/07/26 18:04:19 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:04:19 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:04:20 Instruccion: SET AX 1
+2024/07/26 18:04:20 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:04:20 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:04:21 Instruccion: SET BX 1
+2024/07/26 18:04:21 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:04:21 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:04:22 Instruccion: SET CX 1
+2024/07/26 18:04:22 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:04:22 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:04:23 Instruccion: SET DX 1
+2024/07/26 18:04:23 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:04:23 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:04:24 Instruccion: SET PC 0
+2024/07/26 18:04:24 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:04:24 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:04:25 Instruccion: SET AX 1
+2024/07/26 18:04:25 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:04:25 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:04:26 Instruccion: SET BX 1
+2024/07/26 18:04:26 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:04:26 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:04:27 Instruccion: SET CX 1
+2024/07/26 18:04:27 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:04:27 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:04:28 Instruccion: SET DX 1
+2024/07/26 18:04:28 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:04:28 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:04:29 Instruccion: SET PC 0
+2024/07/26 18:04:29 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:04:29 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:04:30 Instruccion: SET AX 1
+2024/07/26 18:04:30 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:04:30 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:04:31 Instruccion: SET BX 1
+2024/07/26 18:04:31 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:04:31 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:04:32 Instruccion: SET CX 1
+2024/07/26 18:04:32 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:04:32 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:04:33 Instruccion: SET DX 1
+2024/07/26 18:04:33 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:04:33 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:04:34 Instruccion: SET PC 0
+2024/07/26 18:04:34 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:04:34 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:04:35 Instruccion: SET AX 1
+2024/07/26 18:04:35 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:04:35 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:04:36 Instruccion: SET BX 1
+2024/07/26 18:04:36 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:04:36 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:04:37 Instruccion: SET CX 1
+2024/07/26 18:04:37 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:04:37 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:04:38 Instruccion: SET DX 1
+2024/07/26 18:04:38 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:04:38 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:04:39 Instruccion: SET PC 0
+2024/07/26 18:04:39 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:04:39 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:04:40 Instruccion: SET AX 1
+2024/07/26 18:04:40 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:04:40 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:04:41 Instruccion: SET BX 1
+2024/07/26 18:04:41 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:04:41 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:04:42 Instruccion: SET CX 1
+2024/07/26 18:04:42 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:04:42 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:04:43 Instruccion: SET DX 1
+2024/07/26 18:04:43 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:04:43 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:04:44 Instruccion: SET PC 0
+2024/07/26 18:04:44 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:04:44 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:04:45 Instruccion: SET AX 1
+2024/07/26 18:04:45 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:04:45 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:04:46 Instruccion: SET BX 1
+2024/07/26 18:04:46 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:04:46 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:04:47 Instruccion: SET CX 1
+2024/07/26 18:04:47 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:04:47 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:04:48 Instruccion: SET DX 1
+2024/07/26 18:04:48 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:04:48 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:04:49 Instruccion: SET PC 0
+2024/07/26 18:04:49 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:04:49 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:04:50 Instruccion: SET AX 1
+2024/07/26 18:04:50 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:04:50 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:04:51 Instruccion: SET BX 1
+2024/07/26 18:04:51 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:04:51 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:04:52 Instruccion: SET CX 1
+2024/07/26 18:04:52 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:04:52 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:04:53 Instruccion: SET DX 1
+2024/07/26 18:04:53 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:04:53 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:04:54 Instruccion: SET PC 0
+2024/07/26 18:04:54 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:04:54 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:04:55 Instruccion: SET AX 1
+2024/07/26 18:04:55 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:04:55 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:04:56 Instruccion: SET BX 1
+2024/07/26 18:04:56 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:04:56 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:04:57 Instruccion: SET CX 1
+2024/07/26 18:04:57 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:04:57 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:04:58 Instruccion: SET DX 1
+2024/07/26 18:04:58 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:04:58 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:04:59 Instruccion: SET PC 0
+2024/07/26 18:04:59 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:04:59 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:05:00 Instruccion: SET AX 1
+2024/07/26 18:05:00 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:05:00 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:05:01 Instruccion: SET BX 1
+2024/07/26 18:05:01 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:05:01 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:05:02 Instruccion: SET CX 1
+2024/07/26 18:05:02 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:05:02 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:05:03 Instruccion: SET DX 1
+2024/07/26 18:05:03 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:05:03 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:05:04 Instruccion: SET PC 0
+2024/07/26 18:05:04 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:05:04 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:05:05 Instruccion: SET AX 1
+2024/07/26 18:05:05 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:05:05 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:05:06 Instruccion: SET BX 1
+2024/07/26 18:05:06 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:05:06 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:05:07 Instruccion: SET CX 1
+2024/07/26 18:05:07 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:05:07 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:05:08 Instruccion: SET DX 1
+2024/07/26 18:05:08 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:05:08 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:05:09 Instruccion: SET PC 0
+2024/07/26 18:05:09 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:05:09 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:05:10 Instruccion: SET AX 1
+2024/07/26 18:05:10 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:05:10 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:05:11 Instruccion: SET BX 1
+2024/07/26 18:05:11 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:05:11 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:05:12 Instruccion: SET CX 1
+2024/07/26 18:05:12 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:05:12 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:05:13 Instruccion: SET DX 1
+2024/07/26 18:05:13 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:05:13 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:05:14 Instruccion: SET PC 0
+2024/07/26 18:05:14 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:05:14 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:05:16 Instruccion: SET AX 1
+2024/07/26 18:05:16 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:05:16 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:05:17 Instruccion: SET BX 1
+2024/07/26 18:05:17 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:05:17 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:05:18 Instruccion: SET CX 1
+2024/07/26 18:05:18 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:05:18 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:05:19 Instruccion: SET DX 1
+2024/07/26 18:05:19 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:05:19 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:05:20 Instruccion: SET PC 0
+2024/07/26 18:05:20 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:05:20 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:05:21 Instruccion: SET AX 1
+2024/07/26 18:05:21 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:05:21 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:05:24 Inicializando TLB con 32 entradas
+2024/07/26 18:05:51 PID: 0 - FETCH - Program Counter: 0
+2024/07/26 18:05:52 Instruccion: SET AX 1
+2024/07/26 18:05:52 PID: 0 - Ejecutando: SET - AX,1
+2024/07/26 18:05:52 PID: 0 - FETCH - Program Counter: 1
+2024/07/26 18:05:53 Instruccion: SET BX 1
+2024/07/26 18:05:53 PID: 0 - Ejecutando: SET - BX,1
+2024/07/26 18:05:53 PID: 0 - FETCH - Program Counter: 2
+2024/07/26 18:05:54 Instruccion: SET CX 1
+2024/07/26 18:05:54 PID: 0 - Ejecutando: SET - CX,1
+2024/07/26 18:05:54 PID: 1 - FETCH - Program Counter: 0
+2024/07/26 18:05:55 Instruccion: SET AX 1
+2024/07/26 18:05:55 PID: 1 - Ejecutando: SET - AX,1
+2024/07/26 18:05:55 PID: 1 - FETCH - Program Counter: 1
+2024/07/26 18:05:56 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 18:05:56 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 18:05:56 PID: 2 - FETCH - Program Counter: 0
+2024/07/26 18:05:57 Instruccion: SET AX 1
+2024/07/26 18:05:57 PID: 2 - Ejecutando: SET - AX,1
+2024/07/26 18:05:57 PID: 2 - FETCH - Program Counter: 1
+2024/07/26 18:05:58 Instruccion: SET BX 1
+2024/07/26 18:05:58 PID: 2 - Ejecutando: SET - BX,1
+2024/07/26 18:05:58 PID: 2 - FETCH - Program Counter: 2
+2024/07/26 18:05:59 Instruccion: SET CX 1
+2024/07/26 18:05:59 PID: 2 - Ejecutando: SET - CX,1
+2024/07/26 18:05:59 PID: 0 - FETCH - Program Counter: 3
+2024/07/26 18:06:00 Instruccion: SET DX 1
+2024/07/26 18:06:00 PID: 0 - Ejecutando: SET - DX,1
+2024/07/26 18:06:00 PID: 0 - FETCH - Program Counter: 4
+2024/07/26 18:06:01 Instruccion: EXIT
+2024/07/26 18:06:01 PID: 0 - Ejecutando: EXIT
+2024/07/26 18:06:02 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:06:03 Instruccion: SET AX 1
+2024/07/26 18:06:03 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:06:03 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:06:04 Instruccion: SET BX 1
+2024/07/26 18:06:04 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:06:04 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:06:05 Instruccion: SET CX 1
+2024/07/26 18:06:05 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:06:05 PID: 1 - FETCH - Program Counter: 2
+2024/07/26 18:06:06 Instruccion: SET BX 1
+2024/07/26 18:06:06 PID: 1 - Ejecutando: SET - BX,1
+2024/07/26 18:06:06 PID: 1 - FETCH - Program Counter: 3
+2024/07/26 18:06:07 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 18:06:07 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 18:06:07 PID: 2 - FETCH - Program Counter: 3
+2024/07/26 18:06:08 Instruccion: SET DX 1
+2024/07/26 18:06:08 PID: 2 - Ejecutando: SET - DX,1
+2024/07/26 18:06:08 PID: 2 - FETCH - Program Counter: 4
+2024/07/26 18:06:09 Instruccion: IO_GEN_SLEEP SLP1 4
+2024/07/26 18:06:09 PID: 2 - Ejecutando: IO_GEN_SLEEP - SLP1,4
+2024/07/26 18:06:09 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:06:10 Instruccion: SET DX 1
+2024/07/26 18:06:10 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:06:10 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:06:11 Instruccion: SET PC 0
+2024/07/26 18:06:11 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:06:11 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:06:12 Instruccion: SET AX 1
+2024/07/26 18:06:12 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:06:12 PID: 1 - FETCH - Program Counter: 4
+2024/07/26 18:06:13 Instruccion: SET CX 1
+2024/07/26 18:06:13 PID: 1 - Ejecutando: SET - CX,1
+2024/07/26 18:06:13 PID: 1 - FETCH - Program Counter: 5
+2024/07/26 18:06:14 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 18:06:14 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 18:06:14 PID: 2 - FETCH - Program Counter: 5
+2024/07/26 18:06:15 Instruccion: SET EAX 1
+2024/07/26 18:06:15 PID: 2 - Ejecutando: SET - EAX,1
+2024/07/26 18:06:15 PID: 2 - FETCH - Program Counter: 6
+2024/07/26 18:06:16 Instruccion: SET EBX 1
+2024/07/26 18:06:16 PID: 2 - Ejecutando: SET - EBX,1
+2024/07/26 18:06:16 PID: 2 - FETCH - Program Counter: 7
+2024/07/26 18:06:17 Instruccion: SET ECX 1
+2024/07/26 18:06:17 PID: 2 - Ejecutando: SET - ECX,1
+2024/07/26 18:06:17 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:06:18 Instruccion: SET BX 1
+2024/07/26 18:06:18 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:06:18 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:06:19 Instruccion: SET CX 1
+2024/07/26 18:06:19 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:06:19 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:06:20 Instruccion: SET DX 1
+2024/07/26 18:06:20 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:06:20 PID: 1 - FETCH - Program Counter: 6
+2024/07/26 18:06:21 Instruccion: SET DX 1
+2024/07/26 18:06:21 PID: 1 - Ejecutando: SET - DX,1
+2024/07/26 18:06:21 PID: 1 - FETCH - Program Counter: 7
+2024/07/26 18:06:22 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 18:06:22 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 18:06:22 PID: 2 - FETCH - Program Counter: 8
+2024/07/26 18:06:23 Instruccion: SET EDX 1
+2024/07/26 18:06:23 PID: 2 - Ejecutando: SET - EDX,1
+2024/07/26 18:06:23 PID: 2 - FETCH - Program Counter: 9
+2024/07/26 18:06:24 Instruccion: EXIT
+2024/07/26 18:06:24 PID: 2 - Ejecutando: EXIT
+2024/07/26 18:06:25 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:06:26 Instruccion: SET PC 0
+2024/07/26 18:06:26 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:06:26 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:06:27 Instruccion: SET AX 1
+2024/07/26 18:06:27 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:06:27 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:06:28 Instruccion: SET BX 1
+2024/07/26 18:06:28 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:06:28 PID: 1 - FETCH - Program Counter: 8
+2024/07/26 18:06:29 Instruccion: SET EAX 1
+2024/07/26 18:06:29 PID: 1 - Ejecutando: SET - EAX,1
+2024/07/26 18:06:29 PID: 1 - FETCH - Program Counter: 9
+2024/07/26 18:06:30 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 18:06:30 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 18:06:30 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:06:31 Instruccion: SET CX 1
+2024/07/26 18:06:31 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:06:31 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:06:32 Instruccion: SET DX 1
+2024/07/26 18:06:32 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:06:32 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:06:33 Instruccion: SET PC 0
+2024/07/26 18:06:33 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:06:33 PID: 1 - FETCH - Program Counter: 10
+2024/07/26 18:06:34 Instruccion: SET EBX 1
+2024/07/26 18:06:34 PID: 1 - Ejecutando: SET - EBX,1
+2024/07/26 18:06:34 PID: 1 - FETCH - Program Counter: 11
+2024/07/26 18:06:35 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 18:06:35 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 18:06:35 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:06:36 Instruccion: SET AX 1
+2024/07/26 18:06:36 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:06:36 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:06:37 Instruccion: SET BX 1
+2024/07/26 18:06:37 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:06:37 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:06:38 Instruccion: SET CX 1
+2024/07/26 18:06:38 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:06:38 PID: 1 - FETCH - Program Counter: 12
+2024/07/26 18:06:39 Instruccion: SET ECX 1
+2024/07/26 18:06:39 PID: 1 - Ejecutando: SET - ECX,1
+2024/07/26 18:06:39 PID: 1 - FETCH - Program Counter: 13
+2024/07/26 18:06:40 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 18:06:40 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 18:06:40 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:06:41 Instruccion: SET DX 1
+2024/07/26 18:06:41 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:06:41 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:06:42 Instruccion: SET PC 0
+2024/07/26 18:06:42 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:06:42 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:06:43 Instruccion: SET AX 1
+2024/07/26 18:06:43 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:06:43 PID: 1 - FETCH - Program Counter: 14
+2024/07/26 18:06:44 Instruccion: SET EDX 1
+2024/07/26 18:06:44 PID: 1 - Ejecutando: SET - EDX,1
+2024/07/26 18:06:44 PID: 1 - FETCH - Program Counter: 15
+2024/07/26 18:06:45 Instruccion: EXIT
+2024/07/26 18:06:45 PID: 1 - Ejecutando: EXIT
+2024/07/26 18:06:46 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:06:47 Instruccion: SET BX 1
+2024/07/26 18:06:47 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:06:47 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:06:48 Instruccion: SET CX 1
+2024/07/26 18:06:48 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:06:48 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:06:49 Instruccion: SET DX 1
+2024/07/26 18:06:49 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:06:49 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:06:50 Instruccion: SET PC 0
+2024/07/26 18:06:50 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:06:50 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:06:51 Instruccion: SET AX 1
+2024/07/26 18:06:51 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:06:51 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:06:52 Instruccion: SET BX 1
+2024/07/26 18:06:52 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:06:52 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:06:53 Instruccion: SET CX 1
+2024/07/26 18:06:53 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:14:24 Inicializando TLB con 32 entradas
+2024/07/26 18:15:46 PID: 0 - FETCH - Program Counter: 0
+2024/07/26 18:15:47 Instruccion: SET AX 1
+2024/07/26 18:15:47 PID: 0 - Ejecutando: SET - AX,1
+2024/07/26 18:15:47 PID: 0 - FETCH - Program Counter: 1
+2024/07/26 18:15:48 Instruccion: SET BX 1
+2024/07/26 18:15:48 PID: 0 - Ejecutando: SET - BX,1
+2024/07/26 18:15:48 PID: 0 - FETCH - Program Counter: 2
+2024/07/26 18:15:49 Instruccion: SET CX 1
+2024/07/26 18:15:49 PID: 0 - Ejecutando: SET - CX,1
+2024/07/26 18:15:49 PID: 1 - FETCH - Program Counter: 0
+2024/07/26 18:15:50 Instruccion: SET AX 1
+2024/07/26 18:15:50 PID: 1 - Ejecutando: SET - AX,1
+2024/07/26 18:15:50 PID: 1 - FETCH - Program Counter: 1
+2024/07/26 18:15:51 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 18:15:51 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 18:15:51 PID: 2 - FETCH - Program Counter: 0
+2024/07/26 18:15:52 Instruccion: SET AX 1
+2024/07/26 18:15:52 PID: 2 - Ejecutando: SET - AX,1
+2024/07/26 18:15:52 PID: 2 - FETCH - Program Counter: 1
+2024/07/26 18:15:53 Instruccion: SET BX 1
+2024/07/26 18:15:53 PID: 2 - Ejecutando: SET - BX,1
+2024/07/26 18:15:53 PID: 2 - FETCH - Program Counter: 2
+2024/07/26 18:15:54 Instruccion: SET CX 1
+2024/07/26 18:15:54 PID: 2 - Ejecutando: SET - CX,1
+2024/07/26 18:15:54 PID: 1 - FETCH - Program Counter: 2
+2024/07/26 18:15:55 Instruccion: SET BX 1
+2024/07/26 18:15:55 PID: 1 - Ejecutando: SET - BX,1
+2024/07/26 18:15:55 PID: 0 - FETCH - Program Counter: 3
+2024/07/26 18:15:56 Instruccion: SET DX 1
+2024/07/26 18:15:56 PID: 0 - Ejecutando: SET - DX,1
+2024/07/26 18:15:56 PID: 0 - FETCH - Program Counter: 4
+2024/07/26 18:15:57 Instruccion: EXIT
+2024/07/26 18:15:57 PID: 0 - Ejecutando: EXIT
+2024/07/26 18:15:58 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:15:59 Instruccion: SET AX 1
+2024/07/26 18:15:59 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:15:59 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:16:00 Instruccion: SET BX 1
+2024/07/26 18:16:00 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:16:00 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:16:01 Instruccion: SET CX 1
+2024/07/26 18:16:01 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:16:01 PID: 2 - FETCH - Program Counter: 3
+2024/07/26 18:16:02 Instruccion: SET DX 1
+2024/07/26 18:16:02 PID: 2 - Ejecutando: SET - DX,1
+2024/07/26 18:16:02 PID: 2 - FETCH - Program Counter: 4
+2024/07/26 18:16:03 Instruccion: IO_GEN_SLEEP SLP1 4
+2024/07/26 18:16:03 PID: 2 - Ejecutando: IO_GEN_SLEEP - SLP1,4
+2024/07/26 18:16:03 PID: 1 - FETCH - Program Counter: 3
+2024/07/26 18:16:04 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 18:16:04 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 18:16:04 PID: 2 - FETCH - Program Counter: 5
+2024/07/26 18:16:05 Instruccion: SET EAX 1
+2024/07/26 18:16:05 PID: 2 - Ejecutando: SET - EAX,1
+2024/07/26 18:16:05 PID: 1 - FETCH - Program Counter: 4
+2024/07/26 18:16:06 Instruccion: SET CX 1
+2024/07/26 18:16:06 PID: 1 - Ejecutando: SET - CX,1
+2024/07/26 18:16:06 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:16:07 Instruccion: SET DX 1
+2024/07/26 18:16:07 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:16:07 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:16:08 Instruccion: SET PC 0
+2024/07/26 18:16:08 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:16:08 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:16:09 Instruccion: SET AX 1
+2024/07/26 18:16:09 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:16:09 PID: 2 - FETCH - Program Counter: 6
+2024/07/26 18:16:10 Instruccion: SET EBX 1
+2024/07/26 18:16:10 PID: 2 - Ejecutando: SET - EBX,1
+2024/07/26 18:16:10 PID: 2 - FETCH - Program Counter: 7
+2024/07/26 18:16:11 Instruccion: SET ECX 1
+2024/07/26 18:16:11 PID: 2 - Ejecutando: SET - ECX,1
+2024/07/26 18:16:11 PID: 2 - FETCH - Program Counter: 8
+2024/07/26 18:16:12 Instruccion: SET EDX 1
+2024/07/26 18:16:12 PID: 2 - Ejecutando: SET - EDX,1
+2024/07/26 18:16:12 PID: 1 - FETCH - Program Counter: 5
+2024/07/26 18:16:13 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 18:16:13 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 18:16:13 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:16:14 Instruccion: SET BX 1
+2024/07/26 18:16:14 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:16:14 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:16:16 Instruccion: SET CX 1
+2024/07/26 18:16:16 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:16:16 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:16:17 Instruccion: SET DX 1
+2024/07/26 18:16:17 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:16:17 PID: 2 - FETCH - Program Counter: 9
+2024/07/26 18:16:18 Instruccion: EXIT
+2024/07/26 18:16:18 PID: 2 - Ejecutando: EXIT
+2024/07/26 18:16:19 PID: 1 - FETCH - Program Counter: 6
+2024/07/26 18:16:20 Instruccion: SET DX 1
+2024/07/26 18:16:20 PID: 1 - Ejecutando: SET - DX,1
+2024/07/26 18:16:20 PID: 1 - FETCH - Program Counter: 7
+2024/07/26 18:16:21 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 18:16:21 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 18:16:21 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:16:22 Instruccion: SET PC 0
+2024/07/26 18:16:22 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:16:22 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:16:23 Instruccion: SET AX 1
+2024/07/26 18:16:23 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:16:23 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:16:24 Instruccion: SET BX 1
+2024/07/26 18:16:24 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:16:24 PID: 1 - FETCH - Program Counter: 8
+2024/07/26 18:16:25 Instruccion: SET EAX 1
+2024/07/26 18:16:25 PID: 1 - Ejecutando: SET - EAX,1
+2024/07/26 18:16:25 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:16:26 Instruccion: SET CX 1
+2024/07/26 18:16:26 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:16:26 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:16:27 Instruccion: SET DX 1
+2024/07/26 18:16:27 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:16:27 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:16:28 Instruccion: SET PC 0
+2024/07/26 18:16:28 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:16:28 PID: 1 - FETCH - Program Counter: 9
+2024/07/26 18:16:29 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 18:16:29 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 18:16:29 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:16:30 Instruccion: SET AX 1
+2024/07/26 18:16:30 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:16:30 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:16:31 Instruccion: SET BX 1
+2024/07/26 18:16:31 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:16:31 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:16:32 Instruccion: SET CX 1
+2024/07/26 18:16:32 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:16:32 PID: 1 - FETCH - Program Counter: 10
+2024/07/26 18:16:33 Instruccion: SET EBX 1
+2024/07/26 18:16:33 PID: 1 - Ejecutando: SET - EBX,1
+2024/07/26 18:16:33 PID: 1 - FETCH - Program Counter: 11
+2024/07/26 18:16:34 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 18:16:34 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 18:16:34 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:16:35 Instruccion: SET DX 1
+2024/07/26 18:16:35 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:16:35 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:16:36 Instruccion: SET PC 0
+2024/07/26 18:16:36 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:16:36 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:16:37 Instruccion: SET AX 1
+2024/07/26 18:16:37 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:16:37 PID: 1 - FETCH - Program Counter: 12
+2024/07/26 18:16:38 Instruccion: SET ECX 1
+2024/07/26 18:16:38 PID: 1 - Ejecutando: SET - ECX,1
+2024/07/26 18:16:38 PID: 1 - FETCH - Program Counter: 13
+2024/07/26 18:16:39 Instruccion: IO_GEN_SLEEP SLP1 1
+2024/07/26 18:16:39 PID: 1 - Ejecutando: IO_GEN_SLEEP - SLP1,1
+2024/07/26 18:16:39 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:16:40 Instruccion: SET BX 1
+2024/07/26 18:16:40 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:16:40 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:16:41 Instruccion: SET CX 1
+2024/07/26 18:16:41 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:16:41 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:16:42 Instruccion: SET DX 1
+2024/07/26 18:16:42 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:16:42 PID: 1 - FETCH - Program Counter: 14
+2024/07/26 18:16:43 Instruccion: SET EDX 1
+2024/07/26 18:16:43 PID: 1 - Ejecutando: SET - EDX,1
+2024/07/26 18:16:43 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:16:44 Instruccion: SET PC 0
+2024/07/26 18:16:44 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:16:44 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:16:45 Instruccion: SET AX 1
+2024/07/26 18:16:45 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:16:45 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:16:46 Instruccion: SET BX 1
+2024/07/26 18:16:46 PID: 3 - Ejecutando: SET - BX,1
+2024/07/26 18:16:46 PID: 1 - FETCH - Program Counter: 15
+2024/07/26 18:16:47 Instruccion: EXIT
+2024/07/26 18:16:47 PID: 1 - Ejecutando: EXIT
+2024/07/26 18:16:48 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 18:16:49 Instruccion: SET CX 1
+2024/07/26 18:16:49 PID: 3 - Ejecutando: SET - CX,1
+2024/07/26 18:16:49 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 18:16:50 Instruccion: SET DX 1
+2024/07/26 18:16:50 PID: 3 - Ejecutando: SET - DX,1
+2024/07/26 18:16:50 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 18:16:51 Instruccion: SET PC 0
+2024/07/26 18:16:51 PID: 3 - Ejecutando: SET - PC,0
+2024/07/26 18:16:51 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 18:16:52 Instruccion: SET AX 1
+2024/07/26 18:16:52 PID: 3 - Ejecutando: SET - AX,1
+2024/07/26 18:16:52 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 18:16:53 Instruccion: SET BX 1
+2024/07/26 18:16:53 PID: 3 - Ejecutando: SET - BX,1

@@ -3757,3 +3757,74 @@ Configuracion cargada con exito!
 2024/07/26 17:04:38 El texto leido es: Sistemas Operativos 1c2024
 2024/07/26 17:04:41 PID: 14 - Operación: IO_STDOUT_WRITE
 2024/07/26 17:04:41 El texto leido es: I don't want to set the world on fire
+2024/07/26 17:20:15 
+Configuracion cargada con exito!
+2024/07/26 17:21:29 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 17:21:34 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/26 17:21:43 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 17:21:51 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 17:21:53 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 17:21:55 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 17:21:57 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 17:21:59 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 17:31:16 PID: 5 - Operación: IO_GEN_SLEEP
+2024/07/26 17:31:21 PID: 6 - Operación: IO_GEN_SLEEP
+2024/07/26 17:31:27 PID: 5 - Operación: IO_GEN_SLEEP
+2024/07/26 17:31:35 PID: 5 - Operación: IO_GEN_SLEEP
+2024/07/26 17:31:38 PID: 5 - Operación: IO_GEN_SLEEP
+2024/07/26 17:31:40 PID: 5 - Operación: IO_GEN_SLEEP
+2024/07/26 17:31:42 PID: 5 - Operación: IO_GEN_SLEEP
+2024/07/26 17:31:44 PID: 5 - Operación: IO_GEN_SLEEP
+2024/07/26 17:42:02 
+Configuracion cargada con exito!
+2024/07/26 17:42:37 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 17:42:42 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/26 17:47:09 open ñ: no such file or directory
+2024/07/26 17:47:18 
+Configuracion cargada con exito!
+2024/07/26 17:47:46 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 17:47:51 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/26 17:50:24 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 17:50:32 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 17:50:34 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 17:50:36 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 17:50:39 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 17:50:41 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 17:56:50 PID: 5 - Operación: IO_GEN_SLEEP
+2024/07/26 17:56:55 PID: 6 - Operación: IO_GEN_SLEEP
+2024/07/26 17:57:51 PID: 5 - Operación: IO_GEN_SLEEP
+2024/07/26 17:57:59 PID: 5 - Operación: IO_GEN_SLEEP
+2024/07/26 17:58:01 PID: 5 - Operación: IO_GEN_SLEEP
+2024/07/26 17:58:03 PID: 5 - Operación: IO_GEN_SLEEP
+2024/07/26 17:58:05 PID: 5 - Operación: IO_GEN_SLEEP
+2024/07/26 17:58:07 PID: 5 - Operación: IO_GEN_SLEEP
+2024/07/26 18:00:21 
+Configuracion cargada con exito!
+2024/07/26 18:01:44 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 18:01:55 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 18:01:57 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/26 18:02:02 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 18:02:11 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 18:02:19 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 18:02:24 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 18:02:29 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 18:05:41 
+Configuracion cargada con exito!
+2024/07/26 18:05:56 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 18:06:07 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 18:06:09 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/26 18:06:14 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 18:06:22 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 18:06:30 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 18:06:35 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 18:06:40 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 18:15:37 
+Configuracion cargada con exito!
+2024/07/26 18:15:51 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 18:16:03 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/26 18:16:04 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 18:16:13 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 18:16:21 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 18:16:29 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 18:16:34 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 18:16:39 PID: 1 - Operación: IO_GEN_SLEEP
