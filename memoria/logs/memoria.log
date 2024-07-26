@@ -36651,3 +36651,80 @@ created by net/http.(*Server).Serve in goroutine 1
 
 2024/07/26 20:01:28 PID: 0 - Tamaño Actual: 256 - Tamaño a Ampliar: 1056
 2024/07/26 20:01:28 http: superfluous response.WriteHeader call from memoria/utils.ReservarMemoria (utils.go:171)
+2024/07/26 20:06:53 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/26 20:06:53 PID: 1 - Tamaño: 32
+2024/07/26 20:06:58 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/26 20:06:58 PID: 2 - Tamaño: 32
+2024/07/26 20:14:21 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/26 20:14:21 PID: 0 - Tamaño: 32
+2024/07/26 20:14:27 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[]]
+2024/07/26 20:14:27 PID: 1 - Tamaño: 32
+2024/07/26 20:18:49 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/26 20:18:49 PID: 0 - Tamaño: 32
+2024/07/26 20:19:00 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[]]
+2024/07/26 20:19:00 PID: 1 - Tamaño: 32
+2024/07/26 20:20:34 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/26 20:20:34 PID: 0 - Tamaño: 32
+2024/07/26 20:20:40 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[]]
+2024/07/26 20:20:40 PID: 1 - Tamaño: 32
+2024/07/26 20:22:26 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/26 20:22:26 PID: 0 - Tamaño: 32
+2024/07/26 20:22:33 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[]]
+2024/07/26 20:22:33 PID: 1 - Tamaño: 32
+2024/07/26 20:22:56 160 160
+
+
+
+2024/07/26 20:22:56 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 160
+2024/07/26 20:22:56 tabla de paginas-------map[0:0 1:1 2:2 3:3 4:4]
+2024/07/26 20:22:56 tabla GLOBAL de paginas------[map[0:0 1:1 2:2 3:3 4:4] map[]]
+2024/07/26 20:23:01 aa 32
+2024/07/26 20:23:02 PID: 0 - Pagina: 0 - Marco: 0
+2024/07/26 20:24:08 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 69
+2024/07/26 20:24:10 aa 32
+2024/07/26 20:24:11 PID: 0 - Accion: Escribir - Direccion fisica: 9 - Tamaño a escribir: 1
+2024/07/26 20:24:14 aa 32
+2024/07/26 20:24:15 PID: 0 - Accion: Escribir - Direccion fisica: 19 - Tamaño a escribir: 1
+2024/07/26 20:24:18 aa 32
+2024/07/26 20:24:19 PID: 0 - Accion: Escribir - Direccion fisica: 29 - Tamaño a escribir: 1
+2024/07/26 20:24:22 aa 32
+2024/07/26 20:24:23 PID: 0 - Pagina: 1 - Marco: 1
+2024/07/26 20:24:24 PID: 0 - Accion: Escribir - Direccion fisica: 48 - Tamaño a escribir: 1
+2024/07/26 20:24:27 aa 32
+2024/07/26 20:24:28 PID: 0 - Accion: Escribir - Direccion fisica: 58 - Tamaño a escribir: 1
+2024/07/26 20:24:30 aa 32
+2024/07/26 20:24:31 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 69
+2024/07/26 20:24:37 aa 32
+2024/07/26 20:24:38 aa 32
+2024/07/26 20:24:39 PID: 0 - Pagina: 2 - Marco: 2
+2024/07/26 20:24:40 PID: 0 - Accion: Leer - Direccion fisica: 59 - Tamaño a leer: 10
+2024/07/26 20:24:41 PID: 0 - Accion: Escribir - Direccion fisica: 80 - Tamaño a escribir: 10
+2024/07/26 20:24:44 aa 32
+2024/07/26 20:24:45 PID: 0 - Accion: Escribir - Direccion fisica: 90 - Tamaño a escribir: 1
+2024/07/26 20:24:49 aa 32
+2024/07/26 20:24:50 aa 32
+2024/07/26 20:24:51 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 59
+2024/07/26 20:24:52 PID: 0 - Accion: Escribir - Direccion fisica: 91 - Tamaño a escribir: 59
+2024/07/26 20:24:55 aa 32
+2024/07/26 20:24:56 PID: 0 - Accion: Leer - Direccion fisica: 80 - Tamaño a leer: 69
+2024/07/26 20:28:14 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/26 20:28:14 PID: 0 - Tamaño: 32
+2024/07/26 20:28:19 160 160
+
+
+
+2024/07/26 20:28:19 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 160
+2024/07/26 20:28:19 tabla de paginas-------map[0:0 1:1 2:2 3:3 4:4]
+2024/07/26 20:28:19 tabla GLOBAL de paginas------[map[0:0 1:1 2:2 3:3 4:4]]
+2024/07/26 20:28:19 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1 2:2 3:3 4:4] map[]]
+2024/07/26 20:28:19 PID: 1 - Tamaño: 32
+2024/07/26 20:28:21 aa 32
+2024/07/26 20:28:22 PID: 0 - Pagina: 0 - Marco: 0
+2024/07/26 20:28:23 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 69
+2024/07/26 20:28:28 aa 32
+2024/07/26 20:28:29 PID: 0 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 69
+2024/07/26 20:28:31 aa 32
+2024/07/26 20:28:32 PID: 0 - Pagina: 2 - Marco: 2
+2024/07/26 20:28:37 PID: 0 - Accion: Escribir - Direccion fisica: 80 - Tamaño a escribir: 69
+2024/07/26 20:28:42 aa 32
+2024/07/26 20:28:43 PID: 0 - Accion: Leer - Direccion fisica: 80 - Tamaño a leer: 69

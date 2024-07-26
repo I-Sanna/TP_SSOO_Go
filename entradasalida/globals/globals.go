@@ -4,6 +4,7 @@ type Config struct {
 	Port             int    `json:"port"`
 	Type             string `json:"type"`
 	UnitWorkTime     int    `json:"unit_work_time"`
+	CompactationTime int    `json:"compactation_time"`
 	IpKernel         string `json:"ip_kernel"`
 	PortKernel       int    `json:"port_kernel"`
 	IpMemory         string `json:"ip_memory"`

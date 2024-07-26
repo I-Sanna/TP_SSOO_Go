@@ -27212,3 +27212,287 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/07/26 20:01:27 Instruccion: RESIZE 1056
 2024/07/26 20:01:27 PID: 0 - Ejecutando: RESIZE - 1056
 2024/07/26 20:01:28 Error en la respuesta del servidor: 500 Internal Server Error
+2024/07/26 20:06:53 PID: 1 - FETCH - Program Counter: 0
+2024/07/26 20:06:54 Instruccion: SET AX 10
+2024/07/26 20:06:54 PID: 1 - Ejecutando: SET - AX,10
+2024/07/26 20:06:54 PID: 1 - FETCH - Program Counter: 1
+2024/07/26 20:06:55 Instruccion: SET BX 80
+2024/07/26 20:06:55 PID: 1 - Ejecutando: SET - BX,80
+2024/07/26 20:06:55 PID: 1 - FETCH - Program Counter: 2
+2024/07/26 20:06:56 Instruccion: IO_FS_CREATE FS salida.txt
+2024/07/26 20:06:56 PID: 1 - Ejecutando: IO_FS_CREATE - FS , salida.txt
+2024/07/26 20:06:56 Se entró a IO_FS_CREATE en la CPU
+2024/07/26 20:06:58 PID: 2 - FETCH - Program Counter: 0
+2024/07/26 20:06:59 Instruccion: SET AX 10
+2024/07/26 20:06:59 PID: 2 - Ejecutando: SET - AX,10
+2024/07/26 20:06:59 PID: 2 - FETCH - Program Counter: 1
+2024/07/26 20:07:00 Instruccion: IO_FS_CREATE FS archivo1.txt
+2024/07/26 20:07:00 PID: 2 - Ejecutando: IO_FS_CREATE - FS , archivo1.txt
+2024/07/26 20:07:00 Se entró a IO_FS_CREATE en la CPU
+2024/07/26 20:07:12 Inicializando TLB con 4 entradas
+2024/07/26 20:14:21 PID: 0 - FETCH - Program Counter: 0
+2024/07/26 20:14:22 Instruccion: SET AX 10
+2024/07/26 20:14:22 PID: 0 - Ejecutando: SET - AX,10
+2024/07/26 20:14:22 PID: 0 - FETCH - Program Counter: 1
+2024/07/26 20:14:23 Instruccion: SET BX 80
+2024/07/26 20:14:23 PID: 0 - Ejecutando: SET - BX,80
+2024/07/26 20:14:23 PID: 0 - FETCH - Program Counter: 2
+2024/07/26 20:14:24 Instruccion: IO_FS_CREATE FS salida.txt
+2024/07/26 20:14:24 PID: 0 - Ejecutando: IO_FS_CREATE - FS , salida.txt
+2024/07/26 20:14:24 Se entró a IO_FS_CREATE en la CPU
+2024/07/26 20:17:45 Inicializando TLB con 4 entradas
+2024/07/26 20:18:49 PID: 0 - FETCH - Program Counter: 0
+2024/07/26 20:18:50 Instruccion: SET AX 10
+2024/07/26 20:18:50 PID: 0 - Ejecutando: SET - AX,10
+2024/07/26 20:18:50 PID: 0 - FETCH - Program Counter: 1
+2024/07/26 20:18:51 Instruccion: SET BX 80
+2024/07/26 20:18:51 PID: 0 - Ejecutando: SET - BX,80
+2024/07/26 20:18:51 PID: 0 - FETCH - Program Counter: 2
+2024/07/26 20:18:52 Instruccion: IO_FS_CREATE FS salida.txt
+2024/07/26 20:18:52 PID: 0 - Ejecutando: IO_FS_CREATE - FS , salida.txt
+2024/07/26 20:18:52 Se entró a IO_FS_CREATE en la CPU
+2024/07/26 20:19:00 PID: 1 - FETCH - Program Counter: 0
+2024/07/26 20:19:01 Instruccion: SET AX 10
+2024/07/26 20:19:01 PID: 1 - Ejecutando: SET - AX,10
+2024/07/26 20:19:01 PID: 1 - FETCH - Program Counter: 1
+2024/07/26 20:19:02 Instruccion: IO_FS_CREATE FS archivo1.txt
+2024/07/26 20:19:02 PID: 1 - Ejecutando: IO_FS_CREATE - FS , archivo1.txt
+2024/07/26 20:19:02 Se entró a IO_FS_CREATE en la CPU
+2024/07/26 20:19:23 Inicializando TLB con 4 entradas
+2024/07/26 20:19:28 Inicializando TLB con 4 entradas
+2024/07/26 20:20:34 PID: 0 - FETCH - Program Counter: 0
+2024/07/26 20:20:35 Instruccion: SET AX 10
+2024/07/26 20:20:35 PID: 0 - Ejecutando: SET - AX,10
+2024/07/26 20:20:35 PID: 0 - FETCH - Program Counter: 1
+2024/07/26 20:20:36 Instruccion: SET BX 80
+2024/07/26 20:20:36 PID: 0 - Ejecutando: SET - BX,80
+2024/07/26 20:20:36 PID: 0 - FETCH - Program Counter: 2
+2024/07/26 20:20:37 Instruccion: IO_FS_CREATE FS salida.txt
+2024/07/26 20:20:37 PID: 0 - Ejecutando: IO_FS_CREATE - FS , salida.txt
+2024/07/26 20:20:37 Se entró a IO_FS_CREATE en la CPU
+2024/07/26 20:20:40 PID: 1 - FETCH - Program Counter: 0
+2024/07/26 20:20:41 Instruccion: SET AX 10
+2024/07/26 20:20:41 PID: 1 - Ejecutando: SET - AX,10
+2024/07/26 20:20:41 PID: 1 - FETCH - Program Counter: 1
+2024/07/26 20:20:42 Instruccion: IO_FS_CREATE FS archivo1.txt
+2024/07/26 20:20:42 PID: 1 - Ejecutando: IO_FS_CREATE - FS , archivo1.txt
+2024/07/26 20:20:42 Se entró a IO_FS_CREATE en la CPU
+2024/07/26 20:21:38 Inicializando TLB con 4 entradas
+2024/07/26 20:22:26 PID: 0 - FETCH - Program Counter: 0
+2024/07/26 20:22:27 Instruccion: SET AX 10
+2024/07/26 20:22:27 PID: 0 - Ejecutando: SET - AX,10
+2024/07/26 20:22:27 PID: 0 - FETCH - Program Counter: 1
+2024/07/26 20:22:28 Instruccion: SET BX 80
+2024/07/26 20:22:28 PID: 0 - Ejecutando: SET - BX,80
+2024/07/26 20:22:28 PID: 0 - FETCH - Program Counter: 2
+2024/07/26 20:22:29 Instruccion: IO_FS_CREATE FS salida.txt
+2024/07/26 20:22:29 PID: 0 - Ejecutando: IO_FS_CREATE - FS , salida.txt
+2024/07/26 20:22:29 Se entró a IO_FS_CREATE en la CPU
+2024/07/26 20:22:31 PID: 0 - FETCH - Program Counter: 3
+2024/07/26 20:22:32 Instruccion: IO_FS_CREATE FS cronologico.txt
+2024/07/26 20:22:32 PID: 0 - Ejecutando: IO_FS_CREATE - FS , cronologico.txt
+2024/07/26 20:22:32 Se entró a IO_FS_CREATE en la CPU
+2024/07/26 20:22:33 PID: 1 - FETCH - Program Counter: 0
+2024/07/26 20:22:34 Instruccion: SET AX 10
+2024/07/26 20:22:34 PID: 1 - Ejecutando: SET - AX,10
+2024/07/26 20:22:34 PID: 1 - FETCH - Program Counter: 1
+2024/07/26 20:22:35 Instruccion: IO_FS_CREATE FS archivo1.txt
+2024/07/26 20:22:35 PID: 1 - Ejecutando: IO_FS_CREATE - FS , archivo1.txt
+2024/07/26 20:22:35 Se entró a IO_FS_CREATE en la CPU
+2024/07/26 20:22:35 PID: 0 - FETCH - Program Counter: 4
+2024/07/26 20:22:36 Instruccion: IO_FS_TRUNCATE FS salida.txt BX
+2024/07/26 20:22:36 PID: 0 - Ejecutando: IO_FS_TRUNCATE - FS , salida.txt , BX
+2024/07/26 20:22:37 PID: 1 - FETCH - Program Counter: 2
+2024/07/26 20:22:38 Instruccion: IO_FS_CREATE FS archivo2.txt
+2024/07/26 20:22:38 PID: 1 - Ejecutando: IO_FS_CREATE - FS , archivo2.txt
+2024/07/26 20:22:38 Se entró a IO_FS_CREATE en la CPU
+2024/07/26 20:22:44 PID: 0 - FETCH - Program Counter: 5
+2024/07/26 20:22:45 Instruccion: IO_FS_TRUNCATE FS cronologico.txt BX
+2024/07/26 20:22:45 PID: 0 - Ejecutando: IO_FS_TRUNCATE - FS , cronologico.txt , BX
+2024/07/26 20:22:46 PID: 1 - FETCH - Program Counter: 3
+2024/07/26 20:22:47 Instruccion: IO_FS_TRUNCATE FS archivo1.txt AX
+2024/07/26 20:22:47 PID: 1 - Ejecutando: IO_FS_TRUNCATE - FS , archivo1.txt , AX
+2024/07/26 20:22:54 PID: 0 - FETCH - Program Counter: 6
+2024/07/26 20:22:55 Instruccion: RESIZE 160
+2024/07/26 20:22:55 PID: 0 - Ejecutando: RESIZE - 160
+2024/07/26 20:22:56 PID: 0 - FETCH - Program Counter: 7
+2024/07/26 20:22:57 Instruccion: SET CX 0
+2024/07/26 20:22:57 PID: 0 - Ejecutando: SET - CX,0
+2024/07/26 20:22:57 PID: 0 - FETCH - Program Counter: 8
+2024/07/26 20:22:58 Instruccion: SET DX 9
+2024/07/26 20:22:58 PID: 0 - Ejecutando: SET - DX,9
+2024/07/26 20:22:58 PID: 0 - FETCH - Program Counter: 9
+2024/07/26 20:22:59 Instruccion: SET EAX 69
+2024/07/26 20:22:59 PID: 0 - Ejecutando: SET - EAX,69
+2024/07/26 20:22:59 PID: 0 - FETCH - Program Counter: 10
+2024/07/26 20:23:00 Instruccion: IO_STDIN_READ TECLADO CX EAX
+2024/07/26 20:23:00 PID: 0 - Ejecutando: IO_STDIN_READ - TECLADO , CX , EAX
+2024/07/26 20:23:01 PID: 0 - TLB MISS - Pagina: 0
+2024/07/26 20:23:02 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/26 20:23:02 PID: 1 - FETCH - Program Counter: 4
+2024/07/26 20:23:03 Instruccion: IO_FS_TRUNCATE FS archivo2.txt AX
+2024/07/26 20:23:03 PID: 1 - Ejecutando: IO_FS_TRUNCATE - FS , archivo2.txt , AX
+2024/07/26 20:23:10 PID: 1 - FETCH - Program Counter: 5
+2024/07/26 20:23:11 Instruccion: EXIT
+2024/07/26 20:23:11 PID: 1 - Ejecutando: EXIT
+2024/07/26 20:24:08 PID: 0 - FETCH - Program Counter: 11
+2024/07/26 20:24:09 Instruccion: MOV_OUT DX AX
+2024/07/26 20:24:09 PID: 0 - Ejecutando: MOV_OUT - DX,AX
+2024/07/26 20:24:10 PID: 0 - TLB HIT - Pagina: 0
+2024/07/26 20:24:11 PID: 0 - Acción: ESCRIBIR - Dirección Física: 9 - Valor: 10
+2024/07/26 20:24:11 PID: 0 - FETCH - Program Counter: 12
+2024/07/26 20:24:12 Instruccion: SET DX 19
+2024/07/26 20:24:12 PID: 0 - Ejecutando: SET - DX,19
+2024/07/26 20:24:12 PID: 0 - FETCH - Program Counter: 13
+2024/07/26 20:24:13 Instruccion: MOV_OUT DX AX
+2024/07/26 20:24:13 PID: 0 - Ejecutando: MOV_OUT - DX,AX
+2024/07/26 20:24:14 PID: 0 - TLB HIT - Pagina: 0
+2024/07/26 20:24:15 PID: 0 - Acción: ESCRIBIR - Dirección Física: 19 - Valor: 10
+2024/07/26 20:24:15 PID: 0 - FETCH - Program Counter: 14
+2024/07/26 20:24:16 Instruccion: SET DX 29
+2024/07/26 20:24:16 PID: 0 - Ejecutando: SET - DX,29
+2024/07/26 20:24:16 PID: 0 - FETCH - Program Counter: 15
+2024/07/26 20:24:17 Instruccion: MOV_OUT DX AX
+2024/07/26 20:24:17 PID: 0 - Ejecutando: MOV_OUT - DX,AX
+2024/07/26 20:24:18 PID: 0 - TLB HIT - Pagina: 0
+2024/07/26 20:24:19 PID: 0 - Acción: ESCRIBIR - Dirección Física: 29 - Valor: 10
+2024/07/26 20:24:19 PID: 0 - FETCH - Program Counter: 16
+2024/07/26 20:24:20 Instruccion: SET DX 48
+2024/07/26 20:24:20 PID: 0 - Ejecutando: SET - DX,48
+2024/07/26 20:24:20 PID: 0 - FETCH - Program Counter: 17
+2024/07/26 20:24:21 Instruccion: MOV_OUT DX AX
+2024/07/26 20:24:21 PID: 0 - Ejecutando: MOV_OUT - DX,AX
+2024/07/26 20:24:22 PID: 0 - TLB MISS - Pagina: 1
+2024/07/26 20:24:23 PID: 0 - OBTENER MARCO - Página: 1 - Marco: 1
+2024/07/26 20:24:24 PID: 0 - Acción: ESCRIBIR - Dirección Física: 48 - Valor: 10
+2024/07/26 20:24:24 PID: 0 - FETCH - Program Counter: 18
+2024/07/26 20:24:25 Instruccion: SET DX 58
+2024/07/26 20:24:25 PID: 0 - Ejecutando: SET - DX,58
+2024/07/26 20:24:25 PID: 0 - FETCH - Program Counter: 19
+2024/07/26 20:24:26 Instruccion: MOV_OUT DX AX
+2024/07/26 20:24:26 PID: 0 - Ejecutando: MOV_OUT - DX,AX
+2024/07/26 20:24:27 PID: 0 - TLB HIT - Pagina: 1
+2024/07/26 20:24:28 PID: 0 - Acción: ESCRIBIR - Dirección Física: 58 - Valor: 10
+2024/07/26 20:24:28 PID: 0 - FETCH - Program Counter: 20
+2024/07/26 20:24:29 Instruccion: IO_FS_WRITE FS salida.txt CX EAX CX
+2024/07/26 20:24:29 PID: 0 - Ejecutando: IO_FS_WRITE - FS , salida.txt , CX, EAX, CX
+2024/07/26 20:24:30 PID: 0 - TLB HIT - Pagina: 0
+2024/07/26 20:24:33 PID: 0 - FETCH - Program Counter: 21
+2024/07/26 20:24:34 Instruccion: SET SI 59
+2024/07/26 20:24:34 PID: 0 - Ejecutando: SET - SI,59
+2024/07/26 20:24:34 PID: 0 - FETCH - Program Counter: 22
+2024/07/26 20:24:35 Instruccion: SET DI 80
+2024/07/26 20:24:35 PID: 0 - Ejecutando: SET - DI,80
+2024/07/26 20:24:35 PID: 0 - FETCH - Program Counter: 23
+2024/07/26 20:24:36 Instruccion: COPY_STRING 10
+2024/07/26 20:24:36 PID: 0 - Ejecutando: COPY_STRING - 10
+2024/07/26 20:24:36 Tamaño solicitado: 10
+2024/07/26 20:24:37 PID: 0 - TLB HIT - Pagina: 1
+2024/07/26 20:24:38 PID: 0 - TLB MISS - Pagina: 2
+2024/07/26 20:24:39 PID: 0 - OBTENER MARCO - Página: 2 - Marco: 2
+2024/07/26 20:24:40 PID: 0 - Acción: LEER - Dirección Física: 59 - Valor: Fallout 76
+2024/07/26 20:24:41 PID: 0 - Acción: LEER - Dirección Física: 80 - Valor: Fallout 76
+2024/07/26 20:24:41 PID: 0 - COPY_STRING ejecutado: 10 bytes copiados desde 59 a 80
+2024/07/26 20:24:41 PID: 0 - FETCH - Program Counter: 24
+2024/07/26 20:24:42 Instruccion: SET BX 90
+2024/07/26 20:24:42 PID: 0 - Ejecutando: SET - BX,90
+2024/07/26 20:24:42 PID: 0 - FETCH - Program Counter: 25
+2024/07/26 20:24:43 Instruccion: MOV_OUT BX AX
+2024/07/26 20:24:43 PID: 0 - Ejecutando: MOV_OUT - BX,AX
+2024/07/26 20:24:44 PID: 0 - TLB HIT - Pagina: 2
+2024/07/26 20:24:45 PID: 0 - Acción: ESCRIBIR - Dirección Física: 90 - Valor: 10
+2024/07/26 20:24:45 PID: 0 - FETCH - Program Counter: 26
+2024/07/26 20:24:46 Instruccion: SET SI 0
+2024/07/26 20:24:46 PID: 0 - Ejecutando: SET - SI,0
+2024/07/26 20:24:46 PID: 0 - FETCH - Program Counter: 27
+2024/07/26 20:24:47 Instruccion: SET DI 91
+2024/07/26 20:24:47 PID: 0 - Ejecutando: SET - DI,91
+2024/07/26 20:24:47 PID: 0 - FETCH - Program Counter: 28
+2024/07/26 20:24:48 Instruccion: COPY_STRING 59
+2024/07/26 20:24:48 PID: 0 - Ejecutando: COPY_STRING - 59
+2024/07/26 20:24:48 Tamaño solicitado: 59
+2024/07/26 20:24:49 PID: 0 - TLB HIT - Pagina: 0
+2024/07/26 20:24:50 PID: 0 - TLB HIT - Pagina: 2
+2024/07/26 20:24:51 PID: 0 - Acción: LEER - Dirección Física: 0 - Valor: Fallout 1
+Fallout 2
+Fallout 3
+Fallout: New Vegas
+Fallout 4
+2024/07/26 20:24:52 PID: 0 - Acción: LEER - Dirección Física: 91 - Valor: Fallout 1
+Fallout 2
+Fallout 3
+Fallout: New Vegas
+Fallout 4
+2024/07/26 20:24:52 PID: 0 - COPY_STRING ejecutado: 59 bytes copiados desde 0 a 91
+2024/07/26 20:24:52 PID: 0 - FETCH - Program Counter: 29
+2024/07/26 20:24:53 Instruccion: SET ECX 80
+2024/07/26 20:24:53 PID: 0 - Ejecutando: SET - ECX,80
+2024/07/26 20:24:53 PID: 0 - FETCH - Program Counter: 30
+2024/07/26 20:24:54 Instruccion: IO_FS_WRITE FS cronologico.txt ECX EAX CX
+2024/07/26 20:24:54 PID: 0 - Ejecutando: IO_FS_WRITE - FS , cronologico.txt , ECX, EAX, CX
+2024/07/26 20:24:55 PID: 0 - TLB HIT - Pagina: 2
+2024/07/26 20:24:58 PID: 0 - FETCH - Program Counter: 31
+2024/07/26 20:24:59 Instruccion: EXIT
+2024/07/26 20:24:59 PID: 0 - Ejecutando: EXIT
+2024/07/26 20:27:06 Inicializando TLB con 4 entradas
+2024/07/26 20:28:14 PID: 0 - FETCH - Program Counter: 0
+2024/07/26 20:28:15 Instruccion: SET AX 0
+2024/07/26 20:28:15 PID: 0 - Ejecutando: SET - AX,0
+2024/07/26 20:28:15 PID: 0 - FETCH - Program Counter: 1
+2024/07/26 20:28:16 Instruccion: SET BX 69
+2024/07/26 20:28:16 PID: 0 - Ejecutando: SET - BX,69
+2024/07/26 20:28:16 PID: 0 - FETCH - Program Counter: 2
+2024/07/26 20:28:17 Instruccion: SET CX 80
+2024/07/26 20:28:17 PID: 0 - Ejecutando: SET - CX,80
+2024/07/26 20:28:17 PID: 0 - FETCH - Program Counter: 3
+2024/07/26 20:28:18 Instruccion: RESIZE 160
+2024/07/26 20:28:18 PID: 0 - Ejecutando: RESIZE - 160
+2024/07/26 20:28:19 PID: 0 - FETCH - Program Counter: 4
+2024/07/26 20:28:20 Instruccion: IO_FS_READ FS salida.txt AX BX AX
+2024/07/26 20:28:20 PID: 0 - Ejecutando: IO_FS_READ - FS , salida.txt , AX, BX, AX
+2024/07/26 20:28:21 PID: 0 - TLB MISS - Pagina: 0
+2024/07/26 20:28:22 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/26 20:28:22 PID: 1 - FETCH - Program Counter: 0
+2024/07/26 20:28:23 Instruccion: SET AX 0
+2024/07/26 20:28:23 PID: 1 - Ejecutando: SET - AX,0
+2024/07/26 20:28:23 PID: 1 - FETCH - Program Counter: 1
+2024/07/26 20:28:24 Instruccion: SET BX 250
+2024/07/26 20:28:24 PID: 1 - Ejecutando: SET - BX,250
+2024/07/26 20:28:24 PID: 1 - FETCH - Program Counter: 2
+2024/07/26 20:28:25 Instruccion: SET CX 70
+2024/07/26 20:28:25 PID: 1 - Ejecutando: SET - CX,70
+2024/07/26 20:28:25 PID: 1 - FETCH - Program Counter: 3
+2024/07/26 20:28:26 Instruccion: IO_FS_CREATE FS pesado.txt
+2024/07/26 20:28:26 PID: 1 - Ejecutando: IO_FS_CREATE - FS , pesado.txt
+2024/07/26 20:28:26 Se entró a IO_FS_CREATE en la CPU
+2024/07/26 20:28:26 PID: 0 - FETCH - Program Counter: 5
+2024/07/26 20:28:27 Instruccion: IO_STDOUT_WRITE MONITOR AX BX
+2024/07/26 20:28:27 PID: 0 - Ejecutando: IO_STDOUT_WRITE - MONITOR , AX , BX
+2024/07/26 20:28:28 PID: 0 - TLB HIT - Pagina: 0
+2024/07/26 20:28:28 PID: 1 - FETCH - Program Counter: 4
+2024/07/26 20:28:29 Instruccion: IO_FS_TRUNCATE FS pesado.txt BX
+2024/07/26 20:28:29 PID: 1 - Ejecutando: IO_FS_TRUNCATE - FS , pesado.txt , BX
+2024/07/26 20:28:29 PID: 0 - FETCH - Program Counter: 6
+2024/07/26 20:28:30 Instruccion: IO_FS_READ FS cronologico.txt CX BX AX
+2024/07/26 20:28:30 PID: 0 - Ejecutando: IO_FS_READ - FS , cronologico.txt , CX, BX, AX
+2024/07/26 20:28:31 PID: 0 - TLB MISS - Pagina: 2
+2024/07/26 20:28:32 PID: 0 - OBTENER MARCO - Página: 2 - Marco: 2
+2024/07/26 20:28:36 PID: 1 - FETCH - Program Counter: 5
+2024/07/26 20:28:37 Instruccion: IO_FS_DELETE FS archivo1.txt
+2024/07/26 20:28:37 PID: 1 - Ejecutando: IO_FS_DELETE - FS , archivo1.txt
+2024/07/26 20:28:39 PID: 0 - FETCH - Program Counter: 7
+2024/07/26 20:28:41 Instruccion: IO_STDOUT_WRITE MONITOR CX BX
+2024/07/26 20:28:41 PID: 0 - Ejecutando: IO_STDOUT_WRITE - MONITOR , CX , BX
+2024/07/26 20:28:42 PID: 0 - TLB HIT - Pagina: 2
+2024/07/26 20:28:42 PID: 1 - FETCH - Program Counter: 6
+2024/07/26 20:28:43 Instruccion: IO_FS_TRUNCATE FS archivo2.txt CX
+2024/07/26 20:28:43 PID: 1 - Ejecutando: IO_FS_TRUNCATE - FS , archivo2.txt , CX
+2024/07/26 20:28:43 PID: 0 - FETCH - Program Counter: 8
+2024/07/26 20:28:44 Instruccion: EXIT
+2024/07/26 20:28:44 PID: 0 - Ejecutando: EXIT
+2024/07/26 20:28:50 PID: 1 - FETCH - Program Counter: 7
+2024/07/26 20:28:51 Instruccion: SET DX 0
+2024/07/26 20:28:51 PID: 1 - Ejecutando: SET - DX,0
+2024/07/26 20:28:51 PID: 1 - FETCH - Program Counter: 8
+2024/07/26 20:28:52 Instruccion: EXIT
+2024/07/26 20:28:52 PID: 1 - Ejecutando: EXIT

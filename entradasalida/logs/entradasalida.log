@@ -3858,3 +3858,186 @@ Configuracion cargada con exito!
 Configuracion cargada con exito!
 2024/07/26 20:01:11 
 Configuracion cargada con exito!
+2024/07/26 20:07:38 
+Configuracion cargada con exito!
+2024/07/26 20:08:32 
+Configuracion cargada con exito!
+2024/07/26 20:13:35 open FS.config: no such file or directory
+2024/07/26 20:13:51 
+Configuracion cargada con exito!
+2024/07/26 20:14:24 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/26 20:14:24 Intentando crear archivo con nombre: salida.txt
+2024/07/26 20:14:24 Se entró a CrearArchivoFS con nombreArchivo: salida.txt
+2024/07/26 20:14:24 Leyendo archivos de bloques y bitmap
+2024/07/26 20:14:24 Leyendo el bitmap
+2024/07/26 20:14:24 Buscando bloque libre
+2024/07/26 20:14:24 Bloque libre encontrado: 0
+2024/07/26 20:14:24 Actualización del bitmap completada
+2024/07/26 20:14:24 Archivo de metadata 'salida.txt' creado con éxito
+2024/07/26 20:14:26 Archivo 'salida.txt' creado
+2024/07/26 20:14:26 PID: 0 - Crear Archivo: salida.txt
+2024/07/26 20:18:09 
+Configuracion cargada con exito!
+2024/07/26 20:18:28 
+Configuracion cargada con exito!
+2024/07/26 20:18:39 
+Configuracion cargada con exito!
+2024/07/26 20:18:52 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/26 20:18:52 Intentando crear archivo con nombre: salida.txt
+2024/07/26 20:18:52 Se entró a CrearArchivoFS con nombreArchivo: salida.txt
+2024/07/26 20:18:52 Error al crear archivo: el archivo ya existe
+2024/07/26 20:19:42 
+Configuracion cargada con exito!
+2024/07/26 20:19:51 
+Configuracion cargada con exito!
+2024/07/26 20:20:02 
+Configuracion cargada con exito!
+2024/07/26 20:20:37 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/26 20:20:37 Intentando crear archivo con nombre: salida.txt
+2024/07/26 20:20:37 Se entró a CrearArchivoFS con nombreArchivo: salida.txt
+2024/07/26 20:20:37 Leyendo archivos de bloques y bitmap
+2024/07/26 20:20:37 Error al crear archivo: no se pudo abrir el archivo de bloques: open /home/utnso/dialfs/bloques.dat: no such file or directory
+2024/07/26 20:21:13 
+Configuracion cargada con exito!
+2024/07/26 20:21:13 Se crearon los archivos de bloque y bitmap
+2024/07/26 20:21:55 
+Configuracion cargada con exito!
+2024/07/26 20:22:09 
+Configuracion cargada con exito!
+2024/07/26 20:22:17 
+Configuracion cargada con exito!
+2024/07/26 20:22:29 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/26 20:22:29 Intentando crear archivo con nombre: salida.txt
+2024/07/26 20:22:29 Se entró a CrearArchivoFS con nombreArchivo: salida.txt
+2024/07/26 20:22:29 Leyendo archivos de bloques y bitmap
+2024/07/26 20:22:29 Leyendo el bitmap
+2024/07/26 20:22:29 Buscando bloque libre
+2024/07/26 20:22:29 Bloque libre encontrado: 0
+2024/07/26 20:22:29 Actualización del bitmap completada
+2024/07/26 20:22:29 Archivo de metadata 'salida.txt' creado con éxito
+2024/07/26 20:22:31 Archivo 'salida.txt' creado
+2024/07/26 20:22:31 PID: 0 - Crear Archivo: salida.txt
+2024/07/26 20:22:32 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/26 20:22:32 Intentando crear archivo con nombre: cronologico.txt
+2024/07/26 20:22:32 Se entró a CrearArchivoFS con nombreArchivo: cronologico.txt
+2024/07/26 20:22:32 Leyendo archivos de bloques y bitmap
+2024/07/26 20:22:32 Leyendo el bitmap
+2024/07/26 20:22:32 Buscando bloque libre
+2024/07/26 20:22:32 Bloque libre encontrado: 1
+2024/07/26 20:22:32 Actualización del bitmap completada
+2024/07/26 20:22:32 Archivo de metadata 'cronologico.txt' creado con éxito
+2024/07/26 20:22:34 Archivo 'cronologico.txt' creado
+2024/07/26 20:22:34 PID: 0 - Crear Archivo: cronologico.txt
+2024/07/26 20:22:35 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/26 20:22:35 Intentando crear archivo con nombre: archivo1.txt
+2024/07/26 20:22:35 Se entró a CrearArchivoFS con nombreArchivo: archivo1.txt
+2024/07/26 20:22:35 Leyendo archivos de bloques y bitmap
+2024/07/26 20:22:35 Leyendo el bitmap
+2024/07/26 20:22:35 Buscando bloque libre
+2024/07/26 20:22:35 Bloque libre encontrado: 2
+2024/07/26 20:22:35 Actualización del bitmap completada
+2024/07/26 20:22:35 Archivo de metadata 'archivo1.txt' creado con éxito
+2024/07/26 20:22:37 Archivo 'archivo1.txt' creado
+2024/07/26 20:22:37 PID: 1 - Crear Archivo: archivo1.txt
+2024/07/26 20:22:37 PID: 0 - Truncar Archivo: salida.txt - Tamaño: 80
+2024/07/26 20:22:37 
+[1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1]
+2024/07/26 20:22:44 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/26 20:22:44 Intentando crear archivo con nombre: archivo2.txt
+2024/07/26 20:22:44 Se entró a CrearArchivoFS con nombreArchivo: archivo2.txt
+2024/07/26 20:22:44 Leyendo archivos de bloques y bitmap
+2024/07/26 20:22:44 Leyendo el bitmap
+2024/07/26 20:22:44 Buscando bloque libre
+2024/07/26 20:22:44 Bloque libre encontrado: 5
+2024/07/26 20:22:44 Actualización del bitmap completada
+2024/07/26 20:22:44 Archivo de metadata 'archivo2.txt' creado con éxito
+2024/07/26 20:22:46 Archivo 'archivo2.txt' creado
+2024/07/26 20:22:46 PID: 1 - Crear Archivo: archivo2.txt
+2024/07/26 20:22:46 PID: 0 - Truncar Archivo: cronologico.txt - Tamaño: 80
+2024/07/26 20:22:46 
+[1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+2024/07/26 20:22:54 PID: 1 - Truncar Archivo: archivo1.txt - Tamaño: 10
+2024/07/26 20:22:54 
+[1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+2024/07/26 20:23:03 PID: 1 - Truncar Archivo: archivo2.txt - Tamaño: 10
+2024/07/26 20:23:03 
+[1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
+2024/07/26 20:24:08 Se guardo correctamente el mensaje
+2024/07/26 20:24:08 PID: 0 - Operación: IO_STDIN_READ
+2024/07/26 20:24:33 El texto leido es: Fallout 1
+Fallout 2
+Fallout 3
+Fallout: New Vegas
+Fallout 4
+Fallout 76
+2024/07/26 20:24:33 Escribo el texto en el archivo
+2024/07/26 20:24:33 PID: 0 - Operación: IO_FS_WRITE
+2024/07/26 20:24:33 PID: 0 - Escribir Archivo: salida.txt - Tamaño a Escribir:  69 - Puntero Archivo: 0
+2024/07/26 20:24:58 El texto leido es: Fallout 76
+Fallout 1
+Fallout 2
+Fallout 3
+Fallout: New Vegas
+Fallout 4
+2024/07/26 20:24:58 Escribo el texto en el archivo
+2024/07/26 20:24:58 PID: 0 - Operación: IO_FS_WRITE
+2024/07/26 20:24:58 PID: 0 - Escribir Archivo: cronologico.txt - Tamaño a Escribir:  69 - Puntero Archivo: 0
+2024/07/26 20:27:28 
+Configuracion cargada con exito!
+2024/07/26 20:27:42 
+Configuracion cargada con exito!
+2024/07/26 20:27:55 
+Configuracion cargada con exito!
+2024/07/26 20:28:22 El texto leido es: Fallout 1
+Fallout 2
+Fallout 3
+Fallout: New Vegas
+Fallout 4
+Fallout 76
+2024/07/26 20:28:23 Se guardo correctamente el mensaje
+2024/07/26 20:28:25 PID: 0 - Operación: IO_FS_READ
+2024/07/26 20:28:25 PID: 0 - Leer Archivo: salida.txt - Tamaño a Leer: 69 - Puntero Archivo: 0 
+2024/07/26 20:28:26 Se recibió una solicitud en IO_FS_CREATE_Handler
+2024/07/26 20:28:26 Intentando crear archivo con nombre: pesado.txt
+2024/07/26 20:28:26 Se entró a CrearArchivoFS con nombreArchivo: pesado.txt
+2024/07/26 20:28:26 Leyendo archivos de bloques y bitmap
+2024/07/26 20:28:26 Leyendo el bitmap
+2024/07/26 20:28:26 Buscando bloque libre
+2024/07/26 20:28:26 Bloque libre encontrado: 11
+2024/07/26 20:28:26 Actualización del bitmap completada
+2024/07/26 20:28:26 Archivo de metadata 'pesado.txt' creado con éxito
+2024/07/26 20:28:28 Archivo 'pesado.txt' creado
+2024/07/26 20:28:28 PID: 1 - Crear Archivo: pesado.txt
+2024/07/26 20:28:29 PID: 1 - Truncar Archivo: pesado.txt - Tamaño: 250
+2024/07/26 20:28:29 
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1]
+2024/07/26 20:28:29 PID: 0 - Operación: IO_STDOUT_WRITE
+2024/07/26 20:28:29 El texto leido es: Fallout 1
+Fallout 2
+Fallout 3
+Fallout: New Vegas
+Fallout 4
+Fallout 76
+2024/07/26 20:28:36 El texto leido es: Fallout 76
+Fallout 1
+Fallout 2
+Fallout 3
+Fallout: New Vegas
+Fallout 4
+2024/07/26 20:28:37 Se guardo correctamente el mensaje
+2024/07/26 20:28:39 PID: 0 - Operación: IO_FS_READ
+2024/07/26 20:28:39 PID: 0 - Leer Archivo: cronologico.txt - Tamaño a Leer: 69 - Puntero Archivo: 0 
+2024/07/26 20:28:39 Se recibió una solicitud en IO_FS_DELETE_Handler
+2024/07/26 20:28:39 Intentando eliminar archivo con nombre: archivo1.txt
+2024/07/26 20:28:42 Archivo 'archivo1.txt' eliminado
+2024/07/26 20:28:42 PID: 1 - Delete Archivo: archivo1.txt
+2024/07/26 20:28:43 PID: 1 - Truncar Archivo: archivo2.txt - Tamaño: 70
+2024/07/26 20:28:43 
+[1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+2024/07/26 20:28:43 PID: 0 - Operación: IO_STDOUT_WRITE
+2024/07/26 20:28:43 El texto leido es: Fallout 76
+Fallout 1
+Fallout 2
+Fallout 3
+Fallout: New Vegas
+Fallout 4

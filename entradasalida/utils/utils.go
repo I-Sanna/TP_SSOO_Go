@@ -584,7 +584,7 @@ func IO_FS_TRUNCATE(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
 		return
 	}
-	time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
+	time.Sleep(time.Duration(globals.ClientConfig.CompactationTime) * time.Millisecond)
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
 }
