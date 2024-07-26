@@ -219,7 +219,7 @@ func LeerDeMemoria(pid int, direccion int, tamaño int) ([]byte, error) {
 		valorUint8 := resultado[0]
 		log.Printf("PID: %d - Acción: LEER - Dirección Física: %d - Valor: %d", pid, direccion, valorUint8)
 	} else {
-		return nil, fmt.Errorf("tamaño de datos no soportado: %d bytes", tamaño)
+		log.Printf("PID: %d - Acción: LEER - Dirección Física: %d - Valor: %s", pid, direccion, string(resultado))
 	}
 
 	return resultado, nil
@@ -257,7 +257,7 @@ func EscribirEnMemoria(pid int, direccionFisica int, datos []byte, tamaño int) 
 		valorUint8 := datos[0]
 		log.Printf("PID: %d - Acción: ESCRIBIR - Dirección Física: %d - Valor: %d", pid, direccionFisica, valorUint8)
 	} else {
-		return fmt.Errorf("tamaño de datos no soportado: %d bytes", tamaño)
+		log.Printf("PID: %d - Acción: LEER - Dirección Física: %d - Valor: %s", pid, direccionFisica, string(datos))
 	}
 
 	return nil
@@ -427,25 +427,29 @@ func COPY_STRING(tamS string) {
 		log.Printf("Error al convertir el tamaño a entero: %s", err.Error())
 		return
 	}
+	log.Printf("Tamaño solicitado: %d", tam)
 
-	si := procesoActual.RegistrosCPU.SI
-	di := procesoActual.RegistrosCPU.DI
+	direccionLogicaLectura := ObtenerValorRegistro("SI")
+	direccionLogicaEscritura := ObtenerValorRegistro("DI")
+
+	direccionFisicaLectura, _ := mmu(procesoActual.PID, direccionLogicaLectura)
+	direccionFisicaEscritura, _ := mmu(procesoActual.PID, direccionLogicaEscritura)
 
 	// Leer el contenido de la memoria desde la dirección apuntada por SI
-	contenido, err := LeerDeMemoria(procesoActual.PID, int(si), tam)
+	contenido, err := LeerDeMemoria(procesoActual.PID, direccionFisicaLectura, tam)
 	if err != nil {
 		log.Printf("Error al leer de memoria: %s", err.Error())
 		return
 	}
 
 	// Escribir este contenido en la memoria en la dirección apuntada por DI
-	err = EscribirEnMemoria(procesoActual.PID, int(di), contenido, tam)
+	err = EscribirEnMemoria(procesoActual.PID, direccionFisicaEscritura, contenido, tam)
 	if err != nil {
 		log.Printf("Error al escribir en memoria: %s", err.Error())
 		return
 	}
 
-	log.Printf("PID: %d - COPY_STRING ejecutado: %d bytes copiados desde %d a %d", procesoActual.PID, tam, si, di)
+	log.Printf("PID: %d - COPY_STRING ejecutado: %d bytes copiados desde %d a %d", procesoActual.PID, tam, direccionFisicaLectura, direccionFisicaEscritura)
 }
 
 type BodyRRSS struct {
@@ -984,7 +988,6 @@ func decoYExecInstru(instrucciones string) {
 		log.Printf("PID: %d - Ejecutando: %v - %v,%v", procesoActual.PID, instru[0], instru[1], instru[2])
 		MOV_OUT(instru[1], instru[2])
 	case "SET":
-		log.Print("instruccion: %s", instru)
 		log.Printf("PID: %d - Ejecutando: %v - %v,%v", procesoActual.PID, instru[0], instru[1], instru[2])
 		valor, err := strconv.Atoi(instru[2])
 		if err != nil {

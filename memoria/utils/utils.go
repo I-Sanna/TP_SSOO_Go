@@ -60,7 +60,11 @@ func readFile(fileName string) []string {
 	if err != nil {
 		log.Fatal(err)
 	}
-	data := make([]byte, 300)
+	fileData, err := file.Stat()
+	if err != nil {
+		log.Fatal(err)
+	}
+	data := make([]byte, fileData.Size())
 	_, err = file.Read(data)
 	if err != nil {
 		log.Fatal(err)
@@ -149,8 +153,6 @@ func ReservarMemoria(w http.ResponseWriter, r *http.Request) {
 	index := obtenerIndexProceso(pidInt)
 	//log.Printf("chau %d", index)
 	tablaPaginas = tablasPaginasProcesos[index]
-	log.Printf("tabla de paginas-------%v", tablaPaginas)
-	log.Printf("tabla GLOBAL de paginas------%v", tablasPaginasProcesos[index])
 
 	if tamaño > len(tablaPaginas)*globals.ClientConfig.PageSize {
 		log.Printf("PID: %d - Tamaño Actual: %d - Tamaño a Ampliar: %d", pidInt, len(tablaPaginas)*globals.ClientConfig.PageSize, tamaño)
@@ -179,6 +181,9 @@ func ReservarMemoria(w http.ResponseWriter, r *http.Request) {
 			delete(tablaPaginas, len(tablaPaginas)-1)
 		}
 	}
+
+	log.Printf("tabla de paginas-------%v", tablaPaginas)
+	log.Printf("tabla GLOBAL de paginas------%v", tablasPaginasProcesos)
 
 	w.WriteHeader(http.StatusOK)
 }

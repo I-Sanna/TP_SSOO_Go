@@ -3461,3 +3461,299 @@ Configuracion cargada con exito!
 2024/07/25 02:26:44 
 Configuracion cargada con exito!
 2024/07/25 02:26:52 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 12:52:27 
+Configuracion cargada con exito!
+2024/07/26 12:52:52 
+Configuracion cargada con exito!
+2024/07/26 12:53:31 
+Configuracion cargada con exito!
+2024/07/26 12:54:37 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 12:54:41 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 12:54:44 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 12:54:47 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 12:54:50 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 12:54:53 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 12:54:57 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 12:54:59 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 12:55:03 PID: 1 - Operación: IO_STDOUT_WRITE
+2024/07/26 12:55:03 El texto leido es: I don't want to set the world on fire
+2024/07/26 13:13:12 Se guardo correctamente el mensaje
+2024/07/26 13:13:12 PID: 0 - Operación: IO_STDIN_READ
+2024/07/26 13:13:15 PID: 0 - Operación: IO_GEN_SLEEP
+2024/07/26 13:13:17 PID: 0 - Operación: IO_STDOUT_WRITE
+2024/07/26 13:13:17 El texto leido es: WAR, WAR NEVER CHANGES...
+2024/07/26 13:13:36 Se guardo correctamente el mensaje
+2024/07/26 13:13:36 PID: 2 - Operación: IO_STDIN_READ
+2024/07/26 13:13:36 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/26 13:13:38 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/26 13:13:39 PID: 2 - Operación: IO_STDOUT_WRITE
+2024/07/26 13:13:39 El texto leido es:                     1    4
+2024/07/26 13:27:37 Se guardo correctamente el mensaje
+2024/07/26 13:27:37 PID: 3 - Operación: IO_STDIN_READ
+2024/07/26 13:27:40 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/26 13:27:42 PID: 3 - Operación: IO_STDOUT_WRITE
+2024/07/26 13:27:42 El texto leido es: WAR, WAR NEVER CHANGES...
+2024/07/26 13:28:25 Se guardo correctamente el mensaje
+2024/07/26 13:28:25 PID: 4 - Operación: IO_STDIN_READ
+2024/07/26 13:28:25 PID: 4 - Operación: IO_GEN_SLEEP
+2024/07/26 13:28:27 PID: 4 - Operación: IO_GEN_SLEEP
+2024/07/26 13:28:28 PID: 4 - Operación: IO_STDOUT_WRITE
+2024/07/26 13:28:28 El texto leido es: S...                1    4
+2024/07/26 13:29:31 Se guardo correctamente el mensaje
+2024/07/26 13:29:31 PID: 5 - Operación: IO_STDIN_READ
+2024/07/26 13:29:31 PID: 5 - Operación: IO_GEN_SLEEP
+2024/07/26 13:29:33 PID: 5 - Operación: IO_GEN_SLEEP
+2024/07/26 13:29:34 PID: 5 - Operación: IO_STDOUT_WRITE
+2024/07/26 13:29:34 El texto leido es: S...                1    4
+2024/07/26 13:48:05 
+Configuracion cargada con exito!
+2024/07/26 13:48:22 
+Configuracion cargada con exito!
+2024/07/26 13:48:37 
+Configuracion cargada con exito!
+2024/07/26 13:49:16 Se guardo correctamente el mensaje
+2024/07/26 13:49:16 PID: 0 - Operación: IO_STDIN_READ
+2024/07/26 13:49:16 PID: 0 - Operación: IO_GEN_SLEEP
+2024/07/26 13:49:18 PID: 0 - Operación: IO_GEN_SLEEP
+2024/07/26 13:49:19 PID: 0 - Operación: IO_STDOUT_WRITE
+2024/07/26 13:49:19 El texto leido es:                     1    4
+2024/07/26 15:39:40 
+Configuracion cargada con exito!
+2024/07/26 15:40:21 
+Configuracion cargada con exito!
+2024/07/26 15:40:44 
+Configuracion cargada con exito!
+2024/07/26 15:42:04 Se guardo correctamente el mensaje
+2024/07/26 15:42:04 PID: 0 - Operación: IO_STDIN_READ
+2024/07/26 15:42:05 PID: 0 - Operación: IO_GEN_SLEEP
+2024/07/26 15:42:07 PID: 0 - Operación: IO_GEN_SLEEP
+2024/07/26 15:42:08 PID: 0 - Operación: IO_STDOUT_WRITE
+2024/07/26 15:42:08 El texto leido es:                     1    4
+2024/07/26 15:54:30 Se guardo correctamente el mensaje
+2024/07/26 15:54:30 PID: 1 - Operación: IO_STDIN_READ
+2024/07/26 15:54:30 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 15:54:32 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 15:54:34 PID: 1 - Operación: IO_STDOUT_WRITE
+2024/07/26 15:54:34 El texto leido es: Sistemas Operativos 1c2024
+2024/07/26 15:58:58 Se guardo correctamente el mensaje
+2024/07/26 15:58:58 PID: 2 - Operación: IO_STDIN_READ
+2024/07/26 15:58:59 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/26 15:59:01 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/26 15:59:02 PID: 2 - Operación: IO_STDOUT_WRITE
+2024/07/26 15:59:02 El texto leido es: Sistemas Operativos 1c2024
+2024/07/26 16:03:24 PID: 4 - Operación: IO_GEN_SLEEP
+2024/07/26 16:03:28 PID: 4 - Operación: IO_GEN_SLEEP
+2024/07/26 16:03:32 PID: 4 - Operación: IO_GEN_SLEEP
+2024/07/26 16:03:34 PID: 4 - Operación: IO_GEN_SLEEP
+2024/07/26 16:03:37 PID: 4 - Operación: IO_GEN_SLEEP
+2024/07/26 16:03:40 PID: 4 - Operación: IO_GEN_SLEEP
+2024/07/26 16:03:44 PID: 4 - Operación: IO_GEN_SLEEP
+2024/07/26 16:03:46 PID: 4 - Operación: IO_GEN_SLEEP
+2024/07/26 16:03:50 PID: 4 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:03:50 El texto leido es: I don't want to set the world on fire
+2024/07/26 16:04:28 Se guardo correctamente el mensaje
+2024/07/26 16:04:28 PID: 3 - Operación: IO_STDIN_READ
+2024/07/26 16:04:31 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/26 16:04:32 PID: 3 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:04:32 El texto leido es: WAR, WAR NEVER CHANGES...
+2024/07/26 16:04:38 Se guardo correctamente el mensaje
+2024/07/26 16:04:38 PID: 5 - Operación: IO_STDIN_READ
+2024/07/26 16:04:38 PID: 5 - Operación: IO_GEN_SLEEP
+2024/07/26 16:04:40 PID: 5 - Operación: IO_GEN_SLEEP
+2024/07/26 16:04:42 PID: 5 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:04:42 El texto leido es:                     1    4
+2024/07/26 16:05:37 
+Configuracion cargada con exito!
+2024/07/26 16:05:53 
+Configuracion cargada con exito!
+2024/07/26 16:06:07 
+Configuracion cargada con exito!
+2024/07/26 16:06:16 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 16:06:20 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 16:06:24 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 16:06:26 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 16:06:29 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 16:06:32 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 16:06:35 Se guardo correctamente el mensaje
+2024/07/26 16:06:35 PID: 0 - Operación: IO_STDIN_READ
+2024/07/26 16:06:37 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 16:06:41 PID: 0 - Operación: IO_GEN_SLEEP
+2024/07/26 16:06:41 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 16:06:44 PID: 0 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:06:44 El texto leido es: WAR, WAR NEVER CHANGES...
+2024/07/26 16:06:46 PID: 1 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:06:46 El texto leido es: I don't want to set the world on fire
+2024/07/26 16:06:49 Se guardo correctamente el mensaje
+2024/07/26 16:06:49 PID: 2 - Operación: IO_STDIN_READ
+2024/07/26 16:06:49 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/26 16:06:51 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/26 16:06:52 PID: 2 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:06:52 El texto leido es:                     1    4
+2024/07/26 16:09:24 
+Configuracion cargada con exito!
+2024/07/26 16:09:38 
+Configuracion cargada con exito!
+2024/07/26 16:09:52 
+Configuracion cargada con exito!
+2024/07/26 16:10:18 Se guardo correctamente el mensaje
+2024/07/26 16:10:18 PID: 0 - Operación: IO_STDIN_READ
+2024/07/26 16:10:19 PID: 0 - Operación: IO_GEN_SLEEP
+2024/07/26 16:10:21 PID: 0 - Operación: IO_GEN_SLEEP
+2024/07/26 16:10:22 PID: 0 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:10:22 El texto leido es: Sistemas Operativos 1c2024
+2024/07/26 16:10:57 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/26 16:11:01 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/26 16:11:05 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/26 16:11:07 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/26 16:11:10 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/26 16:11:13 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/26 16:11:17 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/26 16:11:19 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/26 16:11:23 PID: 2 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:11:23 El texto leido es: I don't want to set the world on fire
+2024/07/26 16:11:38 Se guardo correctamente el mensaje
+2024/07/26 16:11:38 PID: 1 - Operación: IO_STDIN_READ
+2024/07/26 16:11:41 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 16:11:42 PID: 1 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:11:42 El texto leido es: WAR, WAR NEVER CHANGES...
+2024/07/26 16:11:55 Se guardo correctamente el mensaje
+2024/07/26 16:11:55 PID: 3 - Operación: IO_STDIN_READ
+2024/07/26 16:11:55 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/26 16:11:57 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/26 16:11:58 PID: 3 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:11:58 El texto leido es:                     1    4
+2024/07/26 16:17:58 Se guardo correctamente el mensaje
+2024/07/26 16:17:58 PID: 4 - Operación: IO_STDIN_READ
+2024/07/26 16:17:58 PID: 4 - Operación: IO_GEN_SLEEP
+2024/07/26 16:18:00 PID: 4 - Operación: IO_GEN_SLEEP
+2024/07/26 16:18:02 PID: 4 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:18:02 El texto leido es: Sistemas Operativos 1c2024
+2024/07/26 16:28:08 PID: 6 - Operación: IO_GEN_SLEEP
+2024/07/26 16:28:12 PID: 6 - Operación: IO_GEN_SLEEP
+2024/07/26 16:28:16 PID: 6 - Operación: IO_GEN_SLEEP
+2024/07/26 16:28:18 PID: 6 - Operación: IO_GEN_SLEEP
+2024/07/26 16:28:21 PID: 6 - Operación: IO_GEN_SLEEP
+2024/07/26 16:28:23 PID: 6 - Operación: IO_GEN_SLEEP
+2024/07/26 16:28:27 PID: 6 - Operación: IO_GEN_SLEEP
+2024/07/26 16:28:30 PID: 6 - Operación: IO_GEN_SLEEP
+2024/07/26 16:28:33 PID: 6 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:28:33 El texto leido es: I don't want to set the world on fire
+2024/07/26 16:28:47 Se guardo correctamente el mensaje
+2024/07/26 16:28:47 PID: 5 - Operación: IO_STDIN_READ
+2024/07/26 16:28:50 PID: 5 - Operación: IO_GEN_SLEEP
+2024/07/26 16:28:52 PID: 5 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:28:52 El texto leido es: WAR, WAR NEVER CHANGES...
+2024/07/26 16:28:57 Se guardo correctamente el mensaje
+2024/07/26 16:28:57 PID: 7 - Operación: IO_STDIN_READ
+2024/07/26 16:28:57 PID: 7 - Operación: IO_GEN_SLEEP
+2024/07/26 16:29:00 PID: 7 - Operación: IO_GEN_SLEEP
+2024/07/26 16:29:01 PID: 7 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:29:01 El texto leido es:                     1    4
+2024/07/26 16:41:20 
+Configuracion cargada con exito!
+2024/07/26 16:41:35 
+Configuracion cargada con exito!
+2024/07/26 16:42:03 
+Configuracion cargada con exito!
+2024/07/26 16:42:16 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 16:42:20 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 16:42:23 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 16:42:26 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 16:42:29 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 16:42:31 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 16:42:36 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 16:42:38 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/26 16:42:41 PID: 1 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:42:41 El texto leido es: I don't want to set the world on fire
+2024/07/26 16:44:25 Se guardo correctamente el mensaje
+2024/07/26 16:44:25 PID: 0 - Operación: IO_STDIN_READ
+2024/07/26 16:44:28 PID: 0 - Operación: IO_GEN_SLEEP
+2024/07/26 16:44:30 PID: 0 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:44:30 El texto leido es: WAR, WAR NEVER CHANGES...
+2024/07/26 16:44:49 Se guardo correctamente el mensaje
+2024/07/26 16:44:49 PID: 2 - Operación: IO_STDIN_READ
+2024/07/26 16:44:50 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/26 16:44:52 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/26 16:44:53 PID: 2 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:44:53 El texto leido es:                     1    4
+2024/07/26 16:50:41 PID: 4 - Operación: IO_GEN_SLEEP
+2024/07/26 16:50:46 PID: 4 - Operación: IO_GEN_SLEEP
+2024/07/26 16:50:49 PID: 4 - Operación: IO_GEN_SLEEP
+2024/07/26 16:50:51 PID: 4 - Operación: IO_GEN_SLEEP
+2024/07/26 16:50:54 PID: 4 - Operación: IO_GEN_SLEEP
+2024/07/26 16:50:57 PID: 4 - Operación: IO_GEN_SLEEP
+2024/07/26 16:51:01 PID: 4 - Operación: IO_GEN_SLEEP
+2024/07/26 16:51:02 Se guardo correctamente el mensaje
+2024/07/26 16:51:02 PID: 3 - Operación: IO_STDIN_READ
+2024/07/26 16:51:06 PID: 4 - Operación: IO_GEN_SLEEP
+2024/07/26 16:51:06 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/26 16:51:08 PID: 3 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:51:08 El texto leido es: WAR, WAR NEVER CHANGES...
+2024/07/26 16:51:11 PID: 4 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:51:11 El texto leido es: I don't want to set the world on fire
+2024/07/26 16:51:11 Se guardo correctamente el mensaje
+2024/07/26 16:51:11 PID: 5 - Operación: IO_STDIN_READ
+2024/07/26 16:51:12 PID: 5 - Operación: IO_GEN_SLEEP
+2024/07/26 16:51:14 PID: 5 - Operación: IO_GEN_SLEEP
+2024/07/26 16:51:15 PID: 5 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:51:15 El texto leido es:                     1    4
+2024/07/26 16:51:47 Se guardo correctamente el mensaje
+2024/07/26 16:51:47 PID: 6 - Operación: IO_STDIN_READ
+2024/07/26 16:51:47 PID: 6 - Operación: IO_GEN_SLEEP
+2024/07/26 16:51:49 PID: 6 - Operación: IO_GEN_SLEEP
+2024/07/26 16:51:50 PID: 6 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:51:50 El texto leido es: Sistemas Operativos 1c2024
+2024/07/26 16:53:07 Se guardo correctamente el mensaje
+2024/07/26 16:53:07 PID: 7 - Operación: IO_STDIN_READ
+2024/07/26 16:53:07 PID: 7 - Operación: IO_GEN_SLEEP
+2024/07/26 16:53:09 PID: 7 - Operación: IO_GEN_SLEEP
+2024/07/26 16:53:11 PID: 7 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:53:11 El texto leido es: Sistemas Operativos 1c2024
+2024/07/26 16:53:12 Se guardo correctamente el mensaje
+2024/07/26 16:53:12 PID: 8 - Operación: IO_STDIN_READ
+2024/07/26 16:53:15 PID: 8 - Operación: IO_GEN_SLEEP
+2024/07/26 16:53:17 PID: 8 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:53:17 El texto leido es: WAR, WAR NEVER CHANGES...
+2024/07/26 16:53:51 Se guardo correctamente el mensaje
+2024/07/26 16:53:51 PID: 9 - Operación: IO_STDIN_READ
+2024/07/26 16:53:54 PID: 9 - Operación: IO_GEN_SLEEP
+2024/07/26 16:53:56 PID: 9 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:53:56 El texto leido es: WAR, WAR NEVER CHANGES...
+2024/07/26 16:53:59 Se guardo correctamente el mensaje
+2024/07/26 16:53:59 PID: 10 - Operación: IO_STDIN_READ
+2024/07/26 16:53:59 PID: 10 - Operación: IO_GEN_SLEEP
+2024/07/26 16:54:01 PID: 10 - Operación: IO_GEN_SLEEP
+2024/07/26 16:54:03 PID: 10 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:54:03 El texto leido es:  fire           Sist1mas 4
+2024/07/26 16:54:44 Se guardo correctamente el mensaje
+2024/07/26 16:54:44 PID: 11 - Operación: IO_STDIN_READ
+2024/07/26 16:54:44 PID: 11 - Operación: IO_GEN_SLEEP
+2024/07/26 16:54:46 PID: 11 - Operación: IO_GEN_SLEEP
+2024/07/26 16:54:47 PID: 11 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:54:47 El texto leido es: Sistemas Operativos 1c2024
+2024/07/26 16:54:52 Se guardo correctamente el mensaje
+2024/07/26 16:54:52 PID: 12 - Operación: IO_STDIN_READ
+2024/07/26 16:54:55 PID: 12 - Operación: IO_GEN_SLEEP
+2024/07/26 16:54:57 PID: 12 - Operación: IO_STDOUT_WRITE
+2024/07/26 16:54:57 El texto leido es: WAR, WAR NEVER CHANGES...
+2024/07/26 17:04:09 PID: 14 - Operación: IO_GEN_SLEEP
+2024/07/26 17:04:14 PID: 14 - Operación: IO_GEN_SLEEP
+2024/07/26 17:04:17 PID: 14 - Operación: IO_GEN_SLEEP
+2024/07/26 17:04:18 Se guardo correctamente el mensaje
+2024/07/26 17:04:18 PID: 13 - Operación: IO_STDIN_READ
+2024/07/26 17:04:21 PID: 14 - Operación: IO_GEN_SLEEP
+2024/07/26 17:04:23 PID: 13 - Operación: IO_GEN_SLEEP
+2024/07/26 17:04:25 PID: 13 - Operación: IO_STDOUT_WRITE
+2024/07/26 17:04:25 El texto leido es: WAR, WAR NEVER CHANGES...
+2024/07/26 17:04:26 PID: 14 - Operación: IO_GEN_SLEEP
+2024/07/26 17:04:29 PID: 14 - Operación: IO_GEN_SLEEP
+2024/07/26 17:04:31 Se guardo correctamente el mensaje
+2024/07/26 17:04:31 PID: 15 - Operación: IO_STDIN_READ
+2024/07/26 17:04:32 PID: 15 - Operación: IO_GEN_SLEEP
+2024/07/26 17:04:34 PID: 14 - Operación: IO_GEN_SLEEP
+2024/07/26 17:04:36 PID: 15 - Operación: IO_GEN_SLEEP
+2024/07/26 17:04:37 PID: 14 - Operación: IO_GEN_SLEEP
+2024/07/26 17:04:38 PID: 15 - Operación: IO_STDOUT_WRITE
+2024/07/26 17:04:38 El texto leido es: Sistemas Operativos 1c2024
+2024/07/26 17:04:41 PID: 14 - Operación: IO_STDOUT_WRITE
+2024/07/26 17:04:41 El texto leido es: I don't want to set the world on fire
