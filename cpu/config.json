@@ -2,8 +2,8 @@
     "port": 8003,
     "ip_memory": "127.0.0.1",
     "port_memory": 8002,
-    "number_felling_tbl": 32,
-    "algorithm_tbl": "FIFO",
+    "number_felling_tbl": 16,
+    "algorithm_tbl": "LRU",
     "ip_kernel": "127.0.0.1",
     "port_kernel": 8080
 }

@@ -35837,3 +35837,605 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/07/26 18:15:48 PID: 2 - Tamaño: 32
 2024/07/26 18:15:49 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[] map[] map[]]
 2024/07/26 18:15:49 PID: 3 - Tamaño: 32
+2024/07/26 18:57:14 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/26 18:57:14 PID: 0 - Tamaño: 128
+2024/07/26 18:57:15 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[]]
+2024/07/26 18:57:15 PID: 1 - Tamaño: 128
+2024/07/26 18:57:15 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[] map[]]
+2024/07/26 18:57:15 PID: 2 - Tamaño: 128
+2024/07/26 18:57:15 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[] map[] map[]]
+2024/07/26 18:57:15 PID: 3 - Tamaño: 128
+2024/07/26 18:57:15 64 64
+
+
+
+2024/07/26 18:57:15 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 64
+2024/07/26 18:57:15 tabla de paginas-------map[0:0 1:1]
+2024/07/26 18:57:15 tabla GLOBAL de paginas------[map[0:0 1:1] map[] map[] map[]]
+2024/07/26 18:57:15 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[] map[] map[]]
+2024/07/26 18:57:15 PID: 4 - Tamaño: 128
+2024/07/26 18:57:15 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:15 PID: 5 - Tamaño: 128
+2024/07/26 18:57:15 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:15 PID: 6 - Tamaño: 128
+2024/07/26 18:57:16 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:16 PID: 7 - Tamaño: 128
+2024/07/26 18:57:16 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:16 PID: 8 - Tamaño: 128
+2024/07/26 18:57:16 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:16 PID: 9 - Tamaño: 128
+2024/07/26 18:57:16 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:16 PID: 10 - Tamaño: 128
+2024/07/26 18:57:16 64 64
+
+
+
+2024/07/26 18:57:16 PID: 2 - Tamaño Actual: 0 - Tamaño a Ampliar: 64
+2024/07/26 18:57:16 tabla de paginas-------map[0:2 1:3]
+2024/07/26 18:57:16 tabla GLOBAL de paginas------[map[0:0 1:1] map[] map[0:2 1:3] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:16 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[0:2 1:3] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:16 PID: 11 - Tamaño: 128
+2024/07/26 18:57:16 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[0:2 1:3] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:16 PID: 12 - Tamaño: 128
+2024/07/26 18:57:16 aa 32
+2024/07/26 18:57:16 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[0:2 1:3] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:16 PID: 13 - Tamaño: 128
+2024/07/26 18:57:16 PID: 2 - Pagina: 0 - Marco: 2
+2024/07/26 18:57:16 PID: 2 - Accion: Escribir - Direccion fisica: 64 - Tamaño a escribir: 1
+2024/07/26 18:57:16 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[0:2 1:3] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:16 PID: 14 - Tamaño: 128
+2024/07/26 18:57:16 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[0:2 1:3] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:16 PID: 15 - Tamaño: 128
+2024/07/26 18:57:17 40 40
+
+
+
+2024/07/26 18:57:17 PID: 3 - Tamaño Actual: 0 - Tamaño a Ampliar: 40
+2024/07/26 18:57:17 tabla de paginas-------map[0:4 1:5]
+2024/07/26 18:57:17 tabla GLOBAL de paginas------[map[0:0 1:1] map[] map[0:2 1:3] map[0:4 1:5] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:17 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[0:2 1:3] map[0:4 1:5] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:17 PID: 16 - Tamaño: 128
+2024/07/26 18:57:17 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[0:2 1:3] map[0:4 1:5] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:17 PID: 17 - Tamaño: 128
+2024/07/26 18:57:17 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[0:2 1:3] map[0:4 1:5] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:17 PID: 18 - Tamaño: 128
+2024/07/26 18:57:17 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[0:2 1:3] map[0:4 1:5] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:17 PID: 19 - Tamaño: 128
+2024/07/26 18:57:17 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[0:2 1:3] map[0:4 1:5] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:17 PID: 20 - Tamaño: 128
+2024/07/26 18:57:17 aa 32
+2024/07/26 18:57:17 PID: 0 - Pagina: 0 - Marco: 0
+2024/07/26 18:57:17 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[0:2 1:3] map[0:4 1:5] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:17 PID: 21 - Tamaño: 128
+2024/07/26 18:57:17 PID: 0 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 1
+2024/07/26 18:57:17 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[0:2 1:3] map[0:4 1:5] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:17 PID: 22 - Tamaño: 128
+2024/07/26 18:57:17 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[0:2 1:3] map[0:4 1:5] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:17 PID: 23 - Tamaño: 128
+2024/07/26 18:57:18 22 22
+
+
+
+2024/07/26 18:57:18 PID: 4 - Tamaño Actual: 0 - Tamaño a Ampliar: 22
+2024/07/26 18:57:18 tabla de paginas-------map[0:6]
+2024/07/26 18:57:18 tabla GLOBAL de paginas------[map[0:0 1:1] map[] map[0:2 1:3] map[0:4 1:5] map[0:6] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:18 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[0:2 1:3] map[0:4 1:5] map[0:6] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:18 PID: 24 - Tamaño: 128
+2024/07/26 18:57:18 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[0:2 1:3] map[0:4 1:5] map[0:6] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:18 PID: 25 - Tamaño: 128
+2024/07/26 18:57:18 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[0:2 1:3] map[0:4 1:5] map[0:6] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:18 PID: 26 - Tamaño: 128
+2024/07/26 18:57:18 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[0:2 1:3] map[0:4 1:5] map[0:6] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:18 PID: 27 - Tamaño: 128
+2024/07/26 18:57:18 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[0:2 1:3] map[0:4 1:5] map[0:6] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:18 PID: 28 - Tamaño: 128
+2024/07/26 18:57:18 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[0:0 1:1] map[] map[0:2 1:3] map[0:4 1:5] map[0:6] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:18 PID: 29 - Tamaño: 128
+2024/07/26 18:57:18 8 8
+
+
+
+2024/07/26 18:57:18 PID: 5 - Tamaño Actual: 0 - Tamaño a Ampliar: 8
+2024/07/26 18:57:18 tabla de paginas-------map[0:7]
+2024/07/26 18:57:18 tabla GLOBAL de paginas------[map[0:0 1:1] map[] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:19 aa 32
+2024/07/26 18:57:19 PID: 5 - Pagina: 0 - Marco: 7
+2024/07/26 18:57:19 64 64
+
+
+
+2024/07/26 18:57:19 PID: 6 - Tamaño Actual: 0 - Tamaño a Ampliar: 64
+2024/07/26 18:57:19 tabla de paginas-------map[0:8 1:9]
+2024/07/26 18:57:19 tabla GLOBAL de paginas------[map[0:0 1:1] map[] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:20 64 64
+
+
+
+2024/07/26 18:57:20 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 64
+2024/07/26 18:57:20 tabla de paginas-------map[0:10 1:11]
+2024/07/26 18:57:20 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:20 aa 32
+2024/07/26 18:57:20 PID: 1 - Pagina: 0 - Marco: 10
+2024/07/26 18:57:20 PID: 1 - Accion: Escribir - Direccion fisica: 321 - Tamaño a escribir: 1
+2024/07/26 18:57:21 64 64
+
+
+
+2024/07/26 18:57:21 PID: 8 - Tamaño Actual: 0 - Tamaño a Ampliar: 64
+2024/07/26 18:57:21 tabla de paginas-------map[0:12 1:13]
+2024/07/26 18:57:21 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[] map[0:12 1:13] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:21 aa 32
+2024/07/26 18:57:21 PID: 8 - Pagina: 0 - Marco: 12
+2024/07/26 18:57:21 PID: 8 - Accion: Escribir - Direccion fisica: 384 - Tamaño a escribir: 1
+2024/07/26 18:57:21 40 40
+
+
+
+2024/07/26 18:57:21 PID: 9 - Tamaño Actual: 0 - Tamaño a Ampliar: 40
+2024/07/26 18:57:21 tabla de paginas-------map[0:14 1:15]
+2024/07/26 18:57:21 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[] map[0:12 1:13] map[0:14 1:15] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:22 22 22
+
+
+
+2024/07/26 18:57:22 PID: 10 - Tamaño Actual: 0 - Tamaño a Ampliar: 22
+2024/07/26 18:57:22 tabla de paginas-------map[0:16]
+2024/07/26 18:57:22 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[] map[0:12 1:13] map[0:14 1:15] map[0:16] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:23 8 8
+
+
+
+2024/07/26 18:57:23 PID: 11 - Tamaño Actual: 0 - Tamaño a Ampliar: 8
+2024/07/26 18:57:23 tabla de paginas-------map[0:17]
+2024/07/26 18:57:23 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:23 aa 32
+2024/07/26 18:57:23 PID: 11 - Pagina: 0 - Marco: 17
+2024/07/26 18:57:24 64 64
+
+
+
+2024/07/26 18:57:24 PID: 12 - Tamaño Actual: 0 - Tamaño a Ampliar: 64
+2024/07/26 18:57:24 tabla de paginas-------map[0:18 1:19]
+2024/07/26 18:57:24 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:24 aa 32
+2024/07/26 18:57:24 PID: 2 - Accion: Leer - Direccion fisica: 64 - Tamaño a leer: 1
+2024/07/26 18:57:25 aa 32
+2024/07/26 18:57:25 PID: 2 - Accion: Escribir - Direccion fisica: 64 - Tamaño a escribir: 1
+2024/07/26 18:57:25 64 64
+
+
+
+2024/07/26 18:57:25 PID: 14 - Tamaño Actual: 0 - Tamaño a Ampliar: 64
+2024/07/26 18:57:25 tabla de paginas-------map[0:20 1:21]
+2024/07/26 18:57:25 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[] map[0:20 1:21] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:25 aa 32
+2024/07/26 18:57:26 PID: 14 - Pagina: 0 - Marco: 20
+2024/07/26 18:57:26 PID: 14 - Accion: Escribir - Direccion fisica: 640 - Tamaño a escribir: 1
+2024/07/26 18:57:26 40 40
+
+
+
+2024/07/26 18:57:26 PID: 15 - Tamaño Actual: 0 - Tamaño a Ampliar: 40
+2024/07/26 18:57:26 tabla de paginas-------map[0:22 1:23]
+2024/07/26 18:57:26 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[] map[0:20 1:21] map[0:22 1:23] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:26 22 22
+
+
+
+2024/07/26 18:57:26 PID: 16 - Tamaño Actual: 0 - Tamaño a Ampliar: 22
+2024/07/26 18:57:26 tabla de paginas-------map[0:24]
+2024/07/26 18:57:26 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[] map[0:20 1:21] map[0:22 1:23] map[0:24] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:27 8 8
+
+
+
+2024/07/26 18:57:27 PID: 17 - Tamaño Actual: 0 - Tamaño a Ampliar: 8
+2024/07/26 18:57:27 tabla de paginas-------map[0:25]
+2024/07/26 18:57:27 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[] map[0:20 1:21] map[0:22 1:23] map[0:24] map[0:25] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:27 aa 32
+2024/07/26 18:57:27 PID: 17 - Pagina: 0 - Marco: 25
+2024/07/26 18:57:28 64 64
+
+
+
+2024/07/26 18:57:28 PID: 18 - Tamaño Actual: 0 - Tamaño a Ampliar: 64
+2024/07/26 18:57:28 tabla de paginas-------map[0:26 1:27]
+2024/07/26 18:57:28 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[] map[0:20 1:21] map[0:22 1:23] map[0:24] map[0:25] map[0:26 1:27] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:28 aa 32
+2024/07/26 18:57:29 PID: 3 - Pagina: 0 - Marco: 4
+2024/07/26 18:57:29 PID: 3 - Accion: Escribir - Direccion fisica: 128 - Tamaño a escribir: 1
+2024/07/26 18:57:30 64 64
+
+
+
+2024/07/26 18:57:30 PID: 20 - Tamaño Actual: 0 - Tamaño a Ampliar: 64
+2024/07/26 18:57:30 tabla de paginas-------map[0:28 1:29]
+2024/07/26 18:57:30 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[] map[0:20 1:21] map[0:22 1:23] map[0:24] map[0:25] map[0:26 1:27] map[] map[0:28 1:29] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:30 aa 32
+2024/07/26 18:57:30 PID: 20 - Pagina: 0 - Marco: 28
+2024/07/26 18:57:30 PID: 20 - Accion: Escribir - Direccion fisica: 896 - Tamaño a escribir: 1
+2024/07/26 18:57:30 40 40
+
+
+
+2024/07/26 18:57:30 PID: 21 - Tamaño Actual: 0 - Tamaño a Ampliar: 40
+2024/07/26 18:57:30 tabla de paginas-------map[0:30 1:31]
+2024/07/26 18:57:30 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[] map[0:20 1:21] map[0:22 1:23] map[0:24] map[0:25] map[0:26 1:27] map[] map[0:28 1:29] map[0:30 1:31] map[] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:31 22 22
+
+
+
+2024/07/26 18:57:31 PID: 22 - Tamaño Actual: 0 - Tamaño a Ampliar: 22
+2024/07/26 18:57:31 tabla de paginas-------map[0:32]
+2024/07/26 18:57:31 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[] map[0:20 1:21] map[0:22 1:23] map[0:24] map[0:25] map[0:26 1:27] map[] map[0:28 1:29] map[0:30 1:31] map[0:32] map[] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:31 aa 32
+2024/07/26 18:57:31 PID: 0 - Accion: Escribir - Direccion fisica: 1 - Tamaño a escribir: 1
+2024/07/26 18:57:32 aa 32
+2024/07/26 18:57:32 PID: 0 - Accion: Escribir - Direccion fisica: 2 - Tamaño a escribir: 1
+2024/07/26 18:57:32 8 8
+
+
+
+2024/07/26 18:57:32 PID: 23 - Tamaño Actual: 0 - Tamaño a Ampliar: 8
+2024/07/26 18:57:32 tabla de paginas-------map[0:33]
+2024/07/26 18:57:32 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[] map[0:20 1:21] map[0:22 1:23] map[0:24] map[0:25] map[0:26 1:27] map[] map[0:28 1:29] map[0:30 1:31] map[0:32] map[0:33] map[] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:32 aa 32
+2024/07/26 18:57:32 PID: 23 - Pagina: 0 - Marco: 33
+2024/07/26 18:57:33 64 64
+
+
+
+2024/07/26 18:57:33 PID: 24 - Tamaño Actual: 0 - Tamaño a Ampliar: 64
+2024/07/26 18:57:33 tabla de paginas-------map[0:34 1:35]
+2024/07/26 18:57:33 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[] map[0:20 1:21] map[0:22 1:23] map[0:24] map[0:25] map[0:26 1:27] map[] map[0:28 1:29] map[0:30 1:31] map[0:32] map[0:33] map[0:34 1:35] map[] map[] map[] map[] map[]]
+2024/07/26 18:57:34 64 64
+
+
+
+2024/07/26 18:57:34 PID: 26 - Tamaño Actual: 0 - Tamaño a Ampliar: 64
+2024/07/26 18:57:34 tabla de paginas-------map[0:36 1:37]
+2024/07/26 18:57:34 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[] map[0:20 1:21] map[0:22 1:23] map[0:24] map[0:25] map[0:26 1:27] map[] map[0:28 1:29] map[0:30 1:31] map[0:32] map[0:33] map[0:34 1:35] map[] map[0:36 1:37] map[] map[] map[]]
+2024/07/26 18:57:34 aa 32
+2024/07/26 18:57:34 PID: 26 - Pagina: 0 - Marco: 36
+2024/07/26 18:57:34 PID: 26 - Accion: Escribir - Direccion fisica: 1152 - Tamaño a escribir: 1
+2024/07/26 18:57:35 aa 32
+2024/07/26 18:57:35 PID: 4 - Pagina: 0 - Marco: 6
+2024/07/26 18:57:35 PID: 4 - Accion: Escribir - Direccion fisica: 192 - Tamaño a escribir: 1
+2024/07/26 18:57:35 40 40
+
+
+
+2024/07/26 18:57:35 PID: 27 - Tamaño Actual: 0 - Tamaño a Ampliar: 40
+2024/07/26 18:57:35 tabla de paginas-------map[0:38 1:39]
+2024/07/26 18:57:35 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[] map[0:20 1:21] map[0:22 1:23] map[0:24] map[0:25] map[0:26 1:27] map[] map[0:28 1:29] map[0:30 1:31] map[0:32] map[0:33] map[0:34 1:35] map[] map[0:36 1:37] map[0:38 1:39] map[] map[]]
+2024/07/26 18:57:36 22 22
+
+
+
+2024/07/26 18:57:36 PID: 28 - Tamaño Actual: 0 - Tamaño a Ampliar: 22
+2024/07/26 18:57:36 tabla de paginas-------map[0:40]
+2024/07/26 18:57:36 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[] map[0:20 1:21] map[0:22 1:23] map[0:24] map[0:25] map[0:26 1:27] map[] map[0:28 1:29] map[0:30 1:31] map[0:32] map[0:33] map[0:34 1:35] map[] map[0:36 1:37] map[0:38 1:39] map[0:40] map[]]
+2024/07/26 18:57:36 8 8
+
+
+
+2024/07/26 18:57:36 PID: 29 - Tamaño Actual: 0 - Tamaño a Ampliar: 8
+2024/07/26 18:57:36 tabla de paginas-------map[0:41]
+2024/07/26 18:57:36 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[] map[0:20 1:21] map[0:22 1:23] map[0:24] map[0:25] map[0:26 1:27] map[] map[0:28 1:29] map[0:30 1:31] map[0:32] map[0:33] map[0:34 1:35] map[] map[0:36 1:37] map[0:38 1:39] map[0:40] map[0:41]]
+2024/07/26 18:57:37 aa 32
+2024/07/26 18:57:37 PID: 29 - Pagina: 0 - Marco: 41
+2024/07/26 18:57:37 aa 32
+2024/07/26 18:57:37 PID: 6 - Pagina: 0 - Marco: 8
+2024/07/26 18:57:37 PID: 6 - Accion: Escribir - Direccion fisica: 256 - Tamaño a escribir: 1
+2024/07/26 18:57:37 64 64
+
+
+
+2024/07/26 18:57:37 PID: 7 - Tamaño Actual: 0 - Tamaño a Ampliar: 64
+2024/07/26 18:57:37 tabla de paginas-------map[0:42 1:43]
+2024/07/26 18:57:37 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[0:42 1:43] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[] map[0:20 1:21] map[0:22 1:23] map[0:24] map[0:25] map[0:26 1:27] map[] map[0:28 1:29] map[0:30 1:31] map[0:32] map[0:33] map[0:34 1:35] map[] map[0:36 1:37] map[0:38 1:39] map[0:40] map[0:41]]
+2024/07/26 18:57:38 aa 32
+2024/07/26 18:57:38 PID: 7 - Pagina: 0 - Marco: 42
+2024/07/26 18:57:38 PID: 7 - Accion: Escribir - Direccion fisica: 1345 - Tamaño a escribir: 1
+2024/07/26 18:57:38 aa 32
+2024/07/26 18:57:38 PID: 1 - Accion: Escribir - Direccion fisica: 321 - Tamaño a escribir: 1
+2024/07/26 18:57:39 aa 32
+2024/07/26 18:57:39 PID: 8 - Accion: Leer - Direccion fisica: 384 - Tamaño a leer: 1
+2024/07/26 18:57:39 aa 32
+2024/07/26 18:57:39 PID: 8 - Accion: Escribir - Direccion fisica: 384 - Tamaño a escribir: 1
+2024/07/26 18:57:40 aa 32
+2024/07/26 18:57:40 PID: 9 - Pagina: 0 - Marco: 14
+2024/07/26 18:57:40 PID: 9 - Accion: Escribir - Direccion fisica: 448 - Tamaño a escribir: 1
+2024/07/26 18:57:40 aa 32
+2024/07/26 18:57:40 PID: 10 - Pagina: 0 - Marco: 16
+2024/07/26 18:57:40 PID: 10 - Accion: Escribir - Direccion fisica: 512 - Tamaño a escribir: 1
+2024/07/26 18:57:41 aa 32
+2024/07/26 18:57:41 PID: 12 - Pagina: 0 - Marco: 18
+2024/07/26 18:57:41 PID: 12 - Accion: Escribir - Direccion fisica: 576 - Tamaño a escribir: 1
+2024/07/26 18:57:41 64 64
+
+
+
+2024/07/26 18:57:41 PID: 13 - Tamaño Actual: 0 - Tamaño a Ampliar: 64
+2024/07/26 18:57:41 tabla de paginas-------map[0:44 1:45]
+2024/07/26 18:57:41 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[0:42 1:43] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[0:44 1:45] map[0:20 1:21] map[0:22 1:23] map[0:24] map[0:25] map[0:26 1:27] map[] map[0:28 1:29] map[0:30 1:31] map[0:32] map[0:33] map[0:34 1:35] map[] map[0:36 1:37] map[0:38 1:39] map[0:40] map[0:41]]
+2024/07/26 18:57:41 aa 32
+2024/07/26 18:57:41 PID: 13 - Pagina: 0 - Marco: 44
+2024/07/26 18:57:41 PID: 13 - Accion: Escribir - Direccion fisica: 1409 - Tamaño a escribir: 1
+2024/07/26 18:57:42 aa 32
+2024/07/26 18:57:42 PID: 2 - Pagina: 0 - Marco: 2
+2024/07/26 18:57:42 PID: 2 - Accion: Leer - Direccion fisica: 64 - Tamaño a leer: 1
+2024/07/26 18:57:42 aa 32
+2024/07/26 18:57:42 PID: 14 - Pagina: 0 - Marco: 20
+2024/07/26 18:57:42 PID: 14 - Accion: Leer - Direccion fisica: 640 - Tamaño a leer: 1
+2024/07/26 18:57:43 aa 32
+2024/07/26 18:57:43 PID: 15 - Pagina: 0 - Marco: 22
+2024/07/26 18:57:43 PID: 15 - Accion: Escribir - Direccion fisica: 704 - Tamaño a escribir: 1
+2024/07/26 18:57:43 aa 32
+2024/07/26 18:57:44 PID: 16 - Pagina: 0 - Marco: 24
+2024/07/26 18:57:44 PID: 16 - Accion: Escribir - Direccion fisica: 768 - Tamaño a escribir: 1
+2024/07/26 18:57:44 aa 32
+2024/07/26 18:57:44 PID: 18 - Pagina: 0 - Marco: 26
+2024/07/26 18:57:44 PID: 18 - Accion: Escribir - Direccion fisica: 832 - Tamaño a escribir: 1
+2024/07/26 18:57:45 aa 32
+2024/07/26 18:57:45 PID: 3 - Pagina: 0 - Marco: 4
+2024/07/26 18:57:45 PID: 3 - Accion: Escribir - Direccion fisica: 129 - Tamaño a escribir: 1
+2024/07/26 18:57:45 64 64
+
+
+
+2024/07/26 18:57:45 PID: 19 - Tamaño Actual: 0 - Tamaño a Ampliar: 64
+2024/07/26 18:57:45 tabla de paginas-------map[0:46 1:47]
+2024/07/26 18:57:45 tabla GLOBAL de paginas------[map[0:0 1:1] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[0:42 1:43] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[0:44 1:45] map[0:20 1:21] map[0:22 1:23] map[0:24] map[0:25] map[0:26 1:27] map[0:46 1:47] map[0:28 1:29] map[0:30 1:31] map[0:32] map[0:33] map[0:34 1:35] map[] map[0:36 1:37] map[0:38 1:39] map[0:40] map[0:41]]
+2024/07/26 18:57:45 aa 32
+2024/07/26 18:57:45 PID: 19 - Pagina: 0 - Marco: 46
+2024/07/26 18:57:45 PID: 19 - Accion: Escribir - Direccion fisica: 1473 - Tamaño a escribir: 1
+2024/07/26 18:57:46 aa 32
+2024/07/26 18:57:46 PID: 20 - Pagina: 0 - Marco: 28
+2024/07/26 18:57:46 PID: 20 - Accion: Leer - Direccion fisica: 896 - Tamaño a leer: 1
+2024/07/26 18:57:46 aa 32
+2024/07/26 18:57:46 PID: 21 - Pagina: 0 - Marco: 30
+2024/07/26 18:57:47 PID: 21 - Accion: Escribir - Direccion fisica: 960 - Tamaño a escribir: 1
+2024/07/26 18:57:47 aa 32
+2024/07/26 18:57:47 PID: 22 - Pagina: 0 - Marco: 32
+2024/07/26 18:57:47 PID: 22 - Accion: Escribir - Direccion fisica: 1024 - Tamaño a escribir: 1
+2024/07/26 18:57:47 0 0
+
+
+
+2024/07/26 18:57:47 PID: 0 - Tamaño Actual: 64 - Tamaño a Reducir: 0
+2024/07/26 18:57:47 tabla de paginas-------map[]
+2024/07/26 18:57:47 tabla GLOBAL de paginas------[map[] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[0:42 1:43] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[0:44 1:45] map[0:20 1:21] map[0:22 1:23] map[0:24] map[0:25] map[0:26 1:27] map[0:46 1:47] map[0:28 1:29] map[0:30 1:31] map[0:32] map[0:33] map[0:34 1:35] map[] map[0:36 1:37] map[0:38 1:39] map[0:40] map[0:41]]
+2024/07/26 18:57:48 aa 32
+2024/07/26 18:57:48 PID: 24 - Pagina: 0 - Marco: 34
+2024/07/26 18:57:48 PID: 24 - Accion: Escribir - Direccion fisica: 1088 - Tamaño a escribir: 1
+2024/07/26 18:57:48 64 64
+
+
+
+2024/07/26 18:57:48 PID: 25 - Tamaño Actual: 0 - Tamaño a Ampliar: 64
+2024/07/26 18:57:48 tabla de paginas-------map[0:0 1:1]
+2024/07/26 18:57:48 tabla GLOBAL de paginas------[map[] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[0:42 1:43] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[0:44 1:45] map[0:20 1:21] map[0:22 1:23] map[0:24] map[0:25] map[0:26 1:27] map[0:46 1:47] map[0:28 1:29] map[0:30 1:31] map[0:32] map[0:33] map[0:34 1:35] map[0:0 1:1] map[0:36 1:37] map[0:38 1:39] map[0:40] map[0:41]]
+2024/07/26 18:57:49 aa 32
+2024/07/26 18:57:49 PID: 25 - Pagina: 0 - Marco: 0
+2024/07/26 18:57:49 PID: 25 - Accion: Escribir - Direccion fisica: 1 - Tamaño a escribir: 1
+2024/07/26 18:57:49 aa 32
+2024/07/26 18:57:49 PID: 26 - Pagina: 0 - Marco: 36
+2024/07/26 18:57:49 PID: 26 - Accion: Leer - Direccion fisica: 1152 - Tamaño a leer: 1
+2024/07/26 18:57:50 aa 32
+2024/07/26 18:57:50 PID: 4 - Pagina: 0 - Marco: 6
+2024/07/26 18:57:50 PID: 4 - Accion: Escribir - Direccion fisica: 193 - Tamaño a escribir: 1
+2024/07/26 18:58:09 aa 32
+2024/07/26 18:58:09 PID: 27 - Pagina: 0 - Marco: 38
+2024/07/26 18:58:09 PID: 27 - Accion: Escribir - Direccion fisica: 1216 - Tamaño a escribir: 1
+2024/07/26 18:58:10 aa 32
+2024/07/26 18:58:10 PID: 28 - Pagina: 0 - Marco: 40
+2024/07/26 18:58:10 PID: 28 - Accion: Escribir - Direccion fisica: 1280 - Tamaño a escribir: 1
+2024/07/26 18:58:10 aa 32
+2024/07/26 18:58:10 PID: 6 - Pagina: 0 - Marco: 8
+2024/07/26 18:58:10 PID: 6 - Accion: Escribir - Direccion fisica: 257 - Tamaño a escribir: 1
+2024/07/26 18:58:11 aa 32
+2024/07/26 18:58:11 PID: 7 - Pagina: 0 - Marco: 42
+2024/07/26 18:58:11 PID: 7 - Accion: Escribir - Direccion fisica: 1345 - Tamaño a escribir: 1
+2024/07/26 18:58:11 aa 32
+2024/07/26 18:58:11 PID: 1 - Pagina: 0 - Marco: 10
+2024/07/26 18:58:11 PID: 1 - Accion: Escribir - Direccion fisica: 321 - Tamaño a escribir: 1
+2024/07/26 18:58:12 aa 32
+2024/07/26 18:58:12 PID: 8 - Pagina: 0 - Marco: 12
+2024/07/26 18:58:12 PID: 8 - Accion: Leer - Direccion fisica: 384 - Tamaño a leer: 1
+2024/07/26 18:58:12 aa 32
+2024/07/26 18:58:12 PID: 9 - Pagina: 0 - Marco: 14
+2024/07/26 18:58:13 PID: 9 - Accion: Escribir - Direccion fisica: 449 - Tamaño a escribir: 1
+2024/07/26 18:58:13 aa 32
+2024/07/26 18:58:13 PID: 10 - Pagina: 0 - Marco: 16
+2024/07/26 18:58:13 PID: 10 - Accion: Escribir - Direccion fisica: 513 - Tamaño a escribir: 1
+2024/07/26 18:58:13 aa 32
+2024/07/26 18:58:13 PID: 12 - Pagina: 0 - Marco: 18
+2024/07/26 18:58:14 PID: 12 - Accion: Escribir - Direccion fisica: 577 - Tamaño a escribir: 1
+2024/07/26 18:58:14 aa 32
+2024/07/26 18:58:14 PID: 13 - Pagina: 0 - Marco: 44
+2024/07/26 18:58:14 PID: 13 - Accion: Escribir - Direccion fisica: 1409 - Tamaño a escribir: 1
+2024/07/26 18:58:14 aa 32
+2024/07/26 18:58:14 PID: 2 - Pagina: 0 - Marco: 2
+2024/07/26 18:58:15 PID: 2 - Accion: Escribir - Direccion fisica: 64 - Tamaño a escribir: 1
+2024/07/26 18:58:15 aa 32
+2024/07/26 18:58:15 PID: 2 - Accion: Leer - Direccion fisica: 64 - Tamaño a leer: 1
+2024/07/26 18:58:15 aa 32
+2024/07/26 18:58:15 PID: 14 - Pagina: 0 - Marco: 20
+2024/07/26 18:58:15 PID: 14 - Accion: Escribir - Direccion fisica: 640 - Tamaño a escribir: 1
+2024/07/26 18:58:15 aa 32
+2024/07/26 18:58:16 PID: 14 - Accion: Leer - Direccion fisica: 640 - Tamaño a leer: 1
+2024/07/26 18:58:16 aa 32
+2024/07/26 18:58:16 PID: 15 - Pagina: 0 - Marco: 22
+2024/07/26 18:58:16 PID: 15 - Accion: Escribir - Direccion fisica: 705 - Tamaño a escribir: 1
+2024/07/26 18:58:17 aa 32
+2024/07/26 18:58:17 PID: 16 - Pagina: 0 - Marco: 24
+2024/07/26 18:58:17 PID: 16 - Accion: Escribir - Direccion fisica: 769 - Tamaño a escribir: 1
+2024/07/26 18:58:17 aa 32
+2024/07/26 18:58:17 PID: 18 - Pagina: 0 - Marco: 26
+2024/07/26 18:58:17 PID: 18 - Accion: Escribir - Direccion fisica: 833 - Tamaño a escribir: 1
+2024/07/26 18:58:18 aa 32
+2024/07/26 18:58:18 PID: 3 - Pagina: 0 - Marco: 4
+2024/07/26 18:58:18 PID: 3 - Accion: Escribir - Direccion fisica: 130 - Tamaño a escribir: 1
+2024/07/26 18:58:18 aa 32
+2024/07/26 18:58:18 PID: 19 - Pagina: 0 - Marco: 46
+2024/07/26 18:58:18 PID: 19 - Accion: Escribir - Direccion fisica: 1473 - Tamaño a escribir: 1
+2024/07/26 18:58:19 aa 32
+2024/07/26 18:58:19 PID: 20 - Pagina: 0 - Marco: 28
+2024/07/26 18:58:19 PID: 20 - Accion: Escribir - Direccion fisica: 896 - Tamaño a escribir: 1
+2024/07/26 18:58:19 aa 32
+2024/07/26 18:58:19 PID: 20 - Accion: Leer - Direccion fisica: 896 - Tamaño a leer: 1
+2024/07/26 18:58:20 aa 32
+2024/07/26 18:58:20 PID: 21 - Pagina: 0 - Marco: 30
+2024/07/26 18:58:20 PID: 21 - Accion: Escribir - Direccion fisica: 961 - Tamaño a escribir: 1
+2024/07/26 18:58:20 aa 32
+2024/07/26 18:58:20 PID: 22 - Pagina: 0 - Marco: 32
+2024/07/26 18:58:20 PID: 22 - Accion: Escribir - Direccion fisica: 1025 - Tamaño a escribir: 1
+2024/07/26 18:58:21 64 64
+
+
+
+2024/07/26 18:58:21 PID: 0 - Tamaño Actual: 0 - Tamaño a Ampliar: 64
+2024/07/26 18:58:21 tabla de paginas-------map[0:48 1:49]
+2024/07/26 18:58:21 tabla GLOBAL de paginas------[map[0:48 1:49] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[0:8 1:9] map[0:42 1:43] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[0:44 1:45] map[0:20 1:21] map[0:22 1:23] map[0:24] map[0:25] map[0:26 1:27] map[0:46 1:47] map[0:28 1:29] map[0:30 1:31] map[0:32] map[0:33] map[0:34 1:35] map[0:0 1:1] map[0:36 1:37] map[0:38 1:39] map[0:40] map[0:41]]
+2024/07/26 18:58:21 aa 32
+2024/07/26 18:58:21 PID: 0 - Pagina: 0 - Marco: 48
+2024/07/26 18:58:21 PID: 0 - Accion: Escribir - Direccion fisica: 1536 - Tamaño a escribir: 1
+2024/07/26 18:58:21 aa 32
+2024/07/26 18:58:21 PID: 24 - Pagina: 0 - Marco: 34
+2024/07/26 18:58:22 PID: 24 - Accion: Escribir - Direccion fisica: 1089 - Tamaño a escribir: 1
+2024/07/26 18:58:22 aa 32
+2024/07/26 18:58:22 PID: 25 - Pagina: 0 - Marco: 0
+2024/07/26 18:58:22 PID: 25 - Accion: Escribir - Direccion fisica: 1 - Tamaño a escribir: 1
+2024/07/26 18:58:22 aa 32
+2024/07/26 18:58:23 PID: 26 - Pagina: 0 - Marco: 36
+2024/07/26 18:58:23 PID: 26 - Accion: Escribir - Direccion fisica: 1152 - Tamaño a escribir: 1
+2024/07/26 18:58:23 aa 32
+2024/07/26 18:58:23 PID: 26 - Accion: Leer - Direccion fisica: 1152 - Tamaño a leer: 1
+2024/07/26 18:58:23 aa 32
+2024/07/26 18:58:23 PID: 4 - Pagina: 0 - Marco: 6
+2024/07/26 18:58:24 PID: 4 - Accion: Escribir - Direccion fisica: 194 - Tamaño a escribir: 1
+2024/07/26 18:58:24 aa 32
+2024/07/26 18:58:24 PID: 27 - Pagina: 0 - Marco: 38
+2024/07/26 18:58:24 PID: 27 - Accion: Escribir - Direccion fisica: 1217 - Tamaño a escribir: 1
+2024/07/26 18:58:25 aa 32
+2024/07/26 18:58:25 PID: 28 - Pagina: 0 - Marco: 40
+2024/07/26 18:58:25 PID: 28 - Accion: Escribir - Direccion fisica: 1281 - Tamaño a escribir: 1
+2024/07/26 18:59:04 aa 32
+2024/07/26 18:59:04 PID: 6 - Pagina: 0 - Marco: 8
+2024/07/26 18:59:04 PID: 6 - Accion: Escribir - Direccion fisica: 258 - Tamaño a escribir: 1
+2024/07/26 18:59:04 0 0
+
+
+
+2024/07/26 18:59:04 PID: 6 - Tamaño Actual: 64 - Tamaño a Reducir: 0
+2024/07/26 18:59:04 tabla de paginas-------map[]
+2024/07/26 18:59:04 tabla GLOBAL de paginas------[map[0:48 1:49] map[0:10 1:11] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[] map[0:42 1:43] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[0:44 1:45] map[0:20 1:21] map[0:22 1:23] map[0:24] map[0:25] map[0:26 1:27] map[0:46 1:47] map[0:28 1:29] map[0:30 1:31] map[0:32] map[0:33] map[0:34 1:35] map[0:0 1:1] map[0:36 1:37] map[0:38 1:39] map[0:40] map[0:41]]
+2024/07/26 18:59:05 aa 32
+2024/07/26 18:59:05 PID: 7 - Pagina: 0 - Marco: 42
+2024/07/26 18:59:05 PID: 7 - Accion: Escribir - Direccion fisica: 1345 - Tamaño a escribir: 1
+2024/07/26 18:59:05 aa 32
+2024/07/26 18:59:05 PID: 1 - Pagina: 0 - Marco: 10
+2024/07/26 18:59:05 PID: 1 - Accion: Escribir - Direccion fisica: 321 - Tamaño a escribir: 1
+2024/07/26 18:59:05 0 0
+
+
+
+2024/07/26 18:59:05 PID: 1 - Tamaño Actual: 64 - Tamaño a Reducir: 0
+2024/07/26 18:59:05 tabla de paginas-------map[]
+2024/07/26 18:59:05 tabla GLOBAL de paginas------[map[0:48 1:49] map[] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[] map[0:42 1:43] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[0:18 1:19] map[0:44 1:45] map[0:20 1:21] map[0:22 1:23] map[0:24] map[0:25] map[0:26 1:27] map[0:46 1:47] map[0:28 1:29] map[0:30 1:31] map[0:32] map[0:33] map[0:34 1:35] map[0:0 1:1] map[0:36 1:37] map[0:38 1:39] map[0:40] map[0:41]]
+2024/07/26 18:59:06 aa 32
+2024/07/26 18:59:06 PID: 8 - Pagina: 0 - Marco: 12
+2024/07/26 18:59:06 PID: 8 - Accion: Escribir - Direccion fisica: 384 - Tamaño a escribir: 1
+2024/07/26 18:59:06 aa 32
+2024/07/26 18:59:06 PID: 8 - Accion: Leer - Direccion fisica: 384 - Tamaño a leer: 1
+2024/07/26 18:59:06 aa 32
+2024/07/26 18:59:07 PID: 9 - Pagina: 0 - Marco: 14
+2024/07/26 18:59:07 PID: 9 - Accion: Escribir - Direccion fisica: 450 - Tamaño a escribir: 1
+2024/07/26 18:59:07 aa 32
+2024/07/26 18:59:07 PID: 10 - Pagina: 0 - Marco: 16
+2024/07/26 18:59:07 PID: 10 - Accion: Escribir - Direccion fisica: 514 - Tamaño a escribir: 1
+2024/07/26 18:59:08 aa 32
+2024/07/26 18:59:08 PID: 12 - Pagina: 0 - Marco: 18
+2024/07/26 18:59:08 PID: 12 - Accion: Escribir - Direccion fisica: 578 - Tamaño a escribir: 1
+2024/07/26 18:59:08 0 0
+
+
+
+2024/07/26 18:59:08 PID: 12 - Tamaño Actual: 64 - Tamaño a Reducir: 0
+2024/07/26 18:59:08 tabla de paginas-------map[]
+2024/07/26 18:59:08 tabla GLOBAL de paginas------[map[0:48 1:49] map[] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[] map[0:42 1:43] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[] map[0:44 1:45] map[0:20 1:21] map[0:22 1:23] map[0:24] map[0:25] map[0:26 1:27] map[0:46 1:47] map[0:28 1:29] map[0:30 1:31] map[0:32] map[0:33] map[0:34 1:35] map[0:0 1:1] map[0:36 1:37] map[0:38 1:39] map[0:40] map[0:41]]
+2024/07/26 18:59:08 aa 32
+2024/07/26 18:59:08 PID: 13 - Pagina: 0 - Marco: 44
+2024/07/26 18:59:08 PID: 13 - Accion: Escribir - Direccion fisica: 1409 - Tamaño a escribir: 1
+2024/07/26 18:59:09 aa 32
+2024/07/26 18:59:09 PID: 2 - Pagina: 0 - Marco: 2
+2024/07/26 18:59:09 PID: 2 - Accion: Escribir - Direccion fisica: 64 - Tamaño a escribir: 1
+2024/07/26 18:59:09 aa 32
+2024/07/26 18:59:09 PID: 14 - Pagina: 0 - Marco: 20
+2024/07/26 18:59:09 PID: 14 - Accion: Escribir - Direccion fisica: 640 - Tamaño a escribir: 1
+2024/07/26 18:59:10 aa 32
+2024/07/26 18:59:10 PID: 15 - Pagina: 0 - Marco: 22
+2024/07/26 18:59:10 PID: 15 - Accion: Escribir - Direccion fisica: 706 - Tamaño a escribir: 1
+2024/07/26 18:59:10 aa 32
+2024/07/26 18:59:11 PID: 16 - Pagina: 0 - Marco: 24
+2024/07/26 18:59:11 PID: 16 - Accion: Escribir - Direccion fisica: 770 - Tamaño a escribir: 1
+2024/07/26 18:59:11 aa 32
+2024/07/26 18:59:11 PID: 18 - Pagina: 0 - Marco: 26
+2024/07/26 18:59:11 PID: 18 - Accion: Escribir - Direccion fisica: 834 - Tamaño a escribir: 1
+2024/07/26 18:59:11 0 0
+
+
+
+2024/07/26 18:59:11 PID: 18 - Tamaño Actual: 64 - Tamaño a Reducir: 0
+2024/07/26 18:59:11 tabla de paginas-------map[]
+2024/07/26 18:59:11 tabla GLOBAL de paginas------[map[0:48 1:49] map[] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[] map[0:42 1:43] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[] map[0:44 1:45] map[0:20 1:21] map[0:22 1:23] map[0:24] map[0:25] map[] map[0:46 1:47] map[0:28 1:29] map[0:30 1:31] map[0:32] map[0:33] map[0:34 1:35] map[0:0 1:1] map[0:36 1:37] map[0:38 1:39] map[0:40] map[0:41]]
+2024/07/26 18:59:12 aa 32
+2024/07/26 18:59:12 PID: 3 - Pagina: 0 - Marco: 4
+2024/07/26 18:59:12 PID: 3 - Accion: Escribir - Direccion fisica: 131 - Tamaño a escribir: 1
+2024/07/26 18:59:12 aa 32
+2024/07/26 18:59:12 PID: 19 - Pagina: 0 - Marco: 46
+2024/07/26 18:59:12 PID: 19 - Accion: Escribir - Direccion fisica: 1473 - Tamaño a escribir: 1
+2024/07/26 18:59:13 aa 32
+2024/07/26 18:59:13 PID: 20 - Pagina: 0 - Marco: 28
+2024/07/26 18:59:13 PID: 20 - Accion: Escribir - Direccion fisica: 896 - Tamaño a escribir: 1
+2024/07/26 18:59:13 aa 32
+2024/07/26 18:59:13 PID: 21 - Pagina: 0 - Marco: 30
+2024/07/26 18:59:14 PID: 21 - Accion: Escribir - Direccion fisica: 962 - Tamaño a escribir: 1
+2024/07/26 18:59:14 aa 32
+2024/07/26 18:59:14 PID: 22 - Pagina: 0 - Marco: 32
+2024/07/26 18:59:14 PID: 22 - Accion: Escribir - Direccion fisica: 1026 - Tamaño a escribir: 1
+2024/07/26 18:59:15 aa 32
+2024/07/26 18:59:15 PID: 0 - Pagina: 0 - Marco: 48
+2024/07/26 18:59:15 PID: 0 - Accion: Escribir - Direccion fisica: 1537 - Tamaño a escribir: 1
+2024/07/26 18:59:15 aa 32
+2024/07/26 18:59:15 PID: 24 - Pagina: 0 - Marco: 34
+2024/07/26 18:59:15 PID: 24 - Accion: Escribir - Direccion fisica: 1090 - Tamaño a escribir: 1
+2024/07/26 18:59:15 0 0
+
+
+
+2024/07/26 18:59:15 PID: 24 - Tamaño Actual: 64 - Tamaño a Reducir: 0
+2024/07/26 18:59:15 tabla de paginas-------map[]
+2024/07/26 18:59:15 tabla GLOBAL de paginas------[map[0:48 1:49] map[] map[0:2 1:3] map[0:4 1:5] map[0:6] map[0:7] map[] map[0:42 1:43] map[0:12 1:13] map[0:14 1:15] map[0:16] map[0:17] map[] map[0:44 1:45] map[0:20 1:21] map[0:22 1:23] map[0:24] map[0:25] map[] map[0:46 1:47] map[0:28 1:29] map[0:30 1:31] map[0:32] map[0:33] map[] map[0:0 1:1] map[0:36 1:37] map[0:38 1:39] map[0:40] map[0:41]]
+2024/07/26 18:59:16 aa 32
+2024/07/26 18:59:16 PID: 25 - Pagina: 0 - Marco: 0
+2024/07/26 18:59:16 PID: 25 - Accion: Escribir - Direccion fisica: 1 - Tamaño a escribir: 1
+2024/07/26 18:59:16 aa 32
+2024/07/26 18:59:16 PID: 26 - Pagina: 0 - Marco: 36
+2024/07/26 18:59:16 PID: 26 - Accion: Escribir - Direccion fisica: 1152 - Tamaño a escribir: 1
+2024/07/26 18:59:17 aa 32
+2024/07/26 18:59:17 PID: 4 - Pagina: 0 - Marco: 6
+2024/07/26 18:59:17 PID: 4 - Accion: Escribir - Direccion fisica: 195 - Tamaño a escribir: 1
+2024/07/26 18:59:18 aa 32
+2024/07/26 18:59:18 PID: 27 - Pagina: 0 - Marco: 38
+2024/07/26 18:59:18 PID: 27 - Accion: Escribir - Direccion fisica: 1218 - Tamaño a escribir: 1
+2024/07/26 18:59:18 aa 32
+2024/07/26 18:59:18 PID: 28 - Pagina: 0 - Marco: 40
+2024/07/26 18:59:18 PID: 28 - Accion: Escribir - Direccion fisica: 1282 - Tamaño a escribir: 1
+2024/07/26 18:59:19 aa 32
+2024/07/26 18:59:19 PID: 7 - Pagina: 0 - Marco: 42
+2024/07/26 18:59:19 PID: 7 - Accion: Escribir - Direccion fisica: 1345 - Tamaño a escribir: 1
+2024/07/26 18:59:20 aa 32
+2024/07/26 18:59:20 PID: 8 - Pagina: 0 - Marco: 12
+2024/07/26 18:59:20 PID: 8 - Accion: Escribir - Direccion fisica: 384 - Tamaño a escribir: 1
