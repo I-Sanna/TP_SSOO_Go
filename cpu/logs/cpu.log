@@ -26798,3 +26798,417 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/07/26 18:59:20 PID: 8 - TLB MISS - Pagina: 0
 2024/07/26 18:59:20 PID: 8 - OBTENER MARCO - Página: 0 - Marco: 12
 2024/07/26 18:59:20 PID: 8 - Acción: ESCRIBIR - Dirección Física: 384 - Valor: 1
+2024/07/26 19:23:24 Inicializando TLB con 16 entradas
+2024/07/26 19:28:24 Inicializando TLB con 4 entradas
+2024/07/26 19:30:14 PID: 0 - FETCH - Program Counter: 0
+2024/07/26 19:30:15 Instruccion: SET AX 0
+2024/07/26 19:30:15 PID: 0 - Ejecutando: SET - AX,0
+2024/07/26 19:30:15 PID: 0 - FETCH - Program Counter: 1
+2024/07/26 19:30:16 Instruccion: SET BX 1
+2024/07/26 19:30:16 PID: 0 - Ejecutando: SET - BX,1
+2024/07/26 19:30:16 PID: 0 - FETCH - Program Counter: 2
+2024/07/26 19:30:17 Instruccion: SET CX 2
+2024/07/26 19:30:17 PID: 0 - Ejecutando: SET - CX,2
+2024/07/26 19:30:17 PID: 0 - FETCH - Program Counter: 3
+2024/07/26 19:30:18 Instruccion: SET DX 3
+2024/07/26 19:30:18 PID: 0 - Ejecutando: SET - DX,3
+2024/07/26 19:30:18 PID: 0 - FETCH - Program Counter: 4
+2024/07/26 19:30:19 Instruccion: SET EAX 0
+2024/07/26 19:30:19 PID: 0 - Ejecutando: SET - EAX,0
+2024/07/26 19:30:19 PID: 0 - FETCH - Program Counter: 5
+2024/07/26 19:30:20 Instruccion: SET EBX 32
+2024/07/26 19:30:20 PID: 0 - Ejecutando: SET - EBX,32
+2024/07/26 19:30:20 PID: 0 - FETCH - Program Counter: 6
+2024/07/26 19:30:21 Instruccion: SET ECX 64
+2024/07/26 19:30:21 PID: 0 - Ejecutando: SET - ECX,64
+2024/07/26 19:30:21 PID: 0 - FETCH - Program Counter: 7
+2024/07/26 19:30:22 Instruccion: SET EDX 96
+2024/07/26 19:30:22 PID: 0 - Ejecutando: SET - EDX,96
+2024/07/26 19:30:22 PID: 0 - FETCH - Program Counter: 8
+2024/07/26 19:30:23 Instruccion: RESIZE 128
+2024/07/26 19:30:23 PID: 0 - Ejecutando: RESIZE - 128
+2024/07/26 19:30:24 PID: 0 - FETCH - Program Counter: 9
+2024/07/26 19:30:25 Instruccion: MOV_OUT EAX AX
+2024/07/26 19:30:25 PID: 0 - Ejecutando: MOV_OUT - EAX,AX
+2024/07/26 19:30:26 PID: 0 - TLB MISS - Pagina: 0
+2024/07/26 19:30:27 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/26 19:30:28 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 0
+2024/07/26 19:30:28 PID: 0 - FETCH - Program Counter: 10
+2024/07/26 19:30:29 Instruccion: MOV_OUT EBX AX
+2024/07/26 19:30:29 PID: 0 - Ejecutando: MOV_OUT - EBX,AX
+2024/07/26 19:30:30 PID: 0 - TLB MISS - Pagina: 1
+2024/07/26 19:30:31 PID: 0 - OBTENER MARCO - Página: 1 - Marco: 1
+2024/07/26 19:30:32 PID: 0 - Acción: ESCRIBIR - Dirección Física: 32 - Valor: 0
+2024/07/26 19:30:32 PID: 0 - FETCH - Program Counter: 11
+2024/07/26 19:30:33 Instruccion: MOV_OUT ECX AX
+2024/07/26 19:30:33 PID: 0 - Ejecutando: MOV_OUT - ECX,AX
+2024/07/26 19:30:34 PID: 0 - TLB MISS - Pagina: 2
+2024/07/26 19:30:35 PID: 0 - OBTENER MARCO - Página: 2 - Marco: 2
+2024/07/26 19:30:36 PID: 0 - Acción: ESCRIBIR - Dirección Física: 64 - Valor: 0
+2024/07/26 19:30:36 PID: 0 - FETCH - Program Counter: 12
+2024/07/26 19:30:37 Instruccion: MOV_OUT EDX AX
+2024/07/26 19:30:37 PID: 0 - Ejecutando: MOV_OUT - EDX,AX
+2024/07/26 19:30:38 PID: 0 - TLB MISS - Pagina: 3
+2024/07/26 19:30:39 PID: 0 - OBTENER MARCO - Página: 3 - Marco: 3
+2024/07/26 19:30:40 PID: 0 - Acción: ESCRIBIR - Dirección Física: 96 - Valor: 0
+2024/07/26 19:30:40 PID: 0 - FETCH - Program Counter: 13
+2024/07/26 19:30:41 Instruccion: SET DX 64
+2024/07/26 19:30:41 PID: 0 - Ejecutando: SET - DX,64
+2024/07/26 19:30:41 PID: 0 - FETCH - Program Counter: 14
+2024/07/26 19:30:42 Instruccion: MOV_IN BX EBX
+2024/07/26 19:30:42 PID: 0 - Ejecutando: MOV_IN - BX,EBX
+2024/07/26 19:30:43 PID: 0 - TLB HIT - Pagina: 1
+2024/07/26 19:30:44 PID: 0 - Acción: LEER - Dirección Física: 32 - Valor: 0
+2024/07/26 19:30:44 PID: 0 - FETCH - Program Counter: 15
+2024/07/26 19:30:45 Instruccion: MOV_IN CX ECX
+2024/07/26 19:30:45 PID: 0 - Ejecutando: MOV_IN - CX,ECX
+2024/07/26 19:30:46 PID: 0 - TLB HIT - Pagina: 2
+2024/07/26 19:30:47 PID: 0 - Acción: LEER - Dirección Física: 64 - Valor: 0
+2024/07/26 19:30:47 PID: 0 - FETCH - Program Counter: 16
+2024/07/26 19:30:48 Instruccion: RESIZE 256
+2024/07/26 19:30:48 PID: 0 - Ejecutando: RESIZE - 256
+2024/07/26 19:30:49 PID: 0 - FETCH - Program Counter: 17
+2024/07/26 19:30:50 Instruccion: SET EAX 128
+2024/07/26 19:30:50 PID: 0 - Ejecutando: SET - EAX,128
+2024/07/26 19:30:50 PID: 0 - FETCH - Program Counter: 18
+2024/07/26 19:30:51 Instruccion: SET EBX 160
+2024/07/26 19:30:51 PID: 0 - Ejecutando: SET - EBX,160
+2024/07/26 19:30:51 PID: 0 - FETCH - Program Counter: 19
+2024/07/26 19:30:52 Instruccion: MOV_OUT EAX DX
+2024/07/26 19:30:52 PID: 0 - Ejecutando: MOV_OUT - EAX,DX
+2024/07/26 19:30:53 PID: 0 - TLB MISS - Pagina: 4
+2024/07/26 19:30:54 PID: 0 - OBTENER MARCO - Página: 4 - Marco: 4
+2024/07/26 19:30:55 PID: 0 - Acción: ESCRIBIR - Dirección Física: 128 - Valor: 64
+2024/07/26 19:30:55 PID: 0 - FETCH - Program Counter: 20
+2024/07/26 19:30:56 Instruccion: MOV_OUT EBX DX
+2024/07/26 19:30:56 PID: 0 - Ejecutando: MOV_OUT - EBX,DX
+2024/07/26 19:30:57 PID: 0 - TLB MISS - Pagina: 5
+2024/07/26 19:30:58 PID: 0 - OBTENER MARCO - Página: 5 - Marco: 5
+2024/07/26 19:31:00 PID: 0 - Acción: ESCRIBIR - Dirección Física: 160 - Valor: 64
+2024/07/26 19:31:00 PID: 0 - FETCH - Program Counter: 21
+2024/07/26 19:31:01 Instruccion: SET EAX 40
+2024/07/26 19:31:01 PID: 0 - Ejecutando: SET - EAX,40
+2024/07/26 19:31:01 PID: 0 - FETCH - Program Counter: 22
+2024/07/26 19:31:02 Instruccion: SET EBX 80
+2024/07/26 19:31:02 PID: 0 - Ejecutando: SET - EBX,80
+2024/07/26 19:31:02 PID: 0 - FETCH - Program Counter: 23
+2024/07/26 19:31:03 Instruccion: SET ECX 192
+2024/07/26 19:31:03 PID: 0 - Ejecutando: SET - ECX,192
+2024/07/26 19:31:03 PID: 0 - FETCH - Program Counter: 24
+2024/07/26 19:31:04 Instruccion: SET EDX 224
+2024/07/26 19:31:04 PID: 0 - Ejecutando: SET - EDX,224
+2024/07/26 19:31:04 PID: 0 - FETCH - Program Counter: 25
+2024/07/26 19:31:05 Instruccion: MOV_OUT EAX DX
+2024/07/26 19:31:05 PID: 0 - Ejecutando: MOV_OUT - EAX,DX
+2024/07/26 19:31:06 PID: 0 - TLB MISS - Pagina: 1
+2024/07/26 19:31:07 PID: 0 - OBTENER MARCO - Página: 1 - Marco: 1
+2024/07/26 19:31:08 PID: 0 - Acción: ESCRIBIR - Dirección Física: 40 - Valor: 64
+2024/07/26 19:31:08 PID: 0 - FETCH - Program Counter: 26
+2024/07/26 19:31:09 Instruccion: MOV_OUT EBX DX
+2024/07/26 19:31:09 PID: 0 - Ejecutando: MOV_OUT - EBX,DX
+2024/07/26 19:31:10 PID: 0 - TLB MISS - Pagina: 2
+2024/07/26 19:31:11 PID: 0 - OBTENER MARCO - Página: 2 - Marco: 2
+2024/07/26 19:31:12 PID: 0 - Acción: ESCRIBIR - Dirección Física: 80 - Valor: 64
+2024/07/26 19:31:12 PID: 0 - FETCH - Program Counter: 27
+2024/07/26 19:31:13 Instruccion: MOV_OUT ECX DX
+2024/07/26 19:31:13 PID: 0 - Ejecutando: MOV_OUT - ECX,DX
+2024/07/26 19:31:14 PID: 0 - TLB MISS - Pagina: 6
+2024/07/26 19:31:15 PID: 0 - OBTENER MARCO - Página: 6 - Marco: 6
+2024/07/26 19:31:16 PID: 0 - Acción: ESCRIBIR - Dirección Física: 192 - Valor: 64
+2024/07/26 19:31:16 PID: 0 - FETCH - Program Counter: 28
+2024/07/26 19:31:17 Instruccion: MOV_OUT EDX DX
+2024/07/26 19:31:17 PID: 0 - Ejecutando: MOV_OUT - EDX,DX
+2024/07/26 19:31:18 PID: 0 - TLB MISS - Pagina: 7
+2024/07/26 19:31:19 PID: 0 - OBTENER MARCO - Página: 7 - Marco: 7
+2024/07/26 19:31:20 PID: 0 - Acción: ESCRIBIR - Dirección Física: 224 - Valor: 64
+2024/07/26 19:31:20 PID: 0 - FETCH - Program Counter: 29
+2024/07/26 19:31:21 Instruccion: EXIT
+2024/07/26 19:31:21 PID: 0 - Ejecutando: EXIT
+2024/07/26 19:36:17 Inicializando TLB con 4 entradas
+2024/07/26 19:36:25 PID: 1 - FETCH - Program Counter: 0
+2024/07/26 19:36:26 Instruccion: SET AX 0
+2024/07/26 19:36:26 PID: 1 - Ejecutando: SET - AX,0
+2024/07/26 19:36:26 PID: 1 - FETCH - Program Counter: 1
+2024/07/26 19:36:27 Instruccion: SET BX 1
+2024/07/26 19:36:27 PID: 1 - Ejecutando: SET - BX,1
+2024/07/26 19:36:27 PID: 1 - FETCH - Program Counter: 2
+2024/07/26 19:36:28 Instruccion: SET CX 2
+2024/07/26 19:36:28 PID: 1 - Ejecutando: SET - CX,2
+2024/07/26 19:36:28 PID: 1 - FETCH - Program Counter: 3
+2024/07/26 19:36:29 Instruccion: SET DX 3
+2024/07/26 19:36:29 PID: 1 - Ejecutando: SET - DX,3
+2024/07/26 19:36:29 PID: 1 - FETCH - Program Counter: 4
+2024/07/26 19:36:30 Instruccion: SET EAX 0
+2024/07/26 19:36:30 PID: 1 - Ejecutando: SET - EAX,0
+2024/07/26 19:36:30 PID: 1 - FETCH - Program Counter: 5
+2024/07/26 19:36:31 Instruccion: SET EBX 32
+2024/07/26 19:36:31 PID: 1 - Ejecutando: SET - EBX,32
+2024/07/26 19:36:31 PID: 1 - FETCH - Program Counter: 6
+2024/07/26 19:36:32 Instruccion: SET ECX 64
+2024/07/26 19:36:32 PID: 1 - Ejecutando: SET - ECX,64
+2024/07/26 19:36:32 PID: 1 - FETCH - Program Counter: 7
+2024/07/26 19:36:33 Instruccion: SET EDX 96
+2024/07/26 19:36:33 PID: 1 - Ejecutando: SET - EDX,96
+2024/07/26 19:36:33 PID: 1 - FETCH - Program Counter: 8
+2024/07/26 19:36:34 Instruccion: RESIZE 128
+2024/07/26 19:36:34 PID: 1 - Ejecutando: RESIZE - 128
+2024/07/26 19:36:35 PID: 1 - FETCH - Program Counter: 9
+2024/07/26 19:36:36 Instruccion: MOV_OUT EAX AX
+2024/07/26 19:36:36 PID: 1 - Ejecutando: MOV_OUT - EAX,AX
+2024/07/26 19:36:37 PID: 1 - TLB MISS - Pagina: 0
+2024/07/26 19:36:38 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/26 19:36:39 PID: 1 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 0
+2024/07/26 19:36:39 PID: 1 - FETCH - Program Counter: 10
+2024/07/26 19:36:40 Instruccion: MOV_OUT EBX AX
+2024/07/26 19:36:40 PID: 1 - Ejecutando: MOV_OUT - EBX,AX
+2024/07/26 19:36:41 PID: 1 - TLB MISS - Pagina: 1
+2024/07/26 19:36:42 PID: 1 - OBTENER MARCO - Página: 1 - Marco: 1
+2024/07/26 19:36:43 PID: 1 - Acción: ESCRIBIR - Dirección Física: 32 - Valor: 0
+2024/07/26 19:36:43 PID: 1 - FETCH - Program Counter: 11
+2024/07/26 19:36:44 Instruccion: MOV_OUT ECX AX
+2024/07/26 19:36:44 PID: 1 - Ejecutando: MOV_OUT - ECX,AX
+2024/07/26 19:36:45 PID: 1 - TLB MISS - Pagina: 2
+2024/07/26 19:36:46 PID: 1 - OBTENER MARCO - Página: 2 - Marco: 2
+2024/07/26 19:36:47 PID: 1 - Acción: ESCRIBIR - Dirección Física: 64 - Valor: 0
+2024/07/26 19:36:47 PID: 1 - FETCH - Program Counter: 12
+2024/07/26 19:36:48 Instruccion: MOV_OUT EDX AX
+2024/07/26 19:36:48 PID: 1 - Ejecutando: MOV_OUT - EDX,AX
+2024/07/26 19:36:49 PID: 1 - TLB MISS - Pagina: 3
+2024/07/26 19:36:50 PID: 1 - OBTENER MARCO - Página: 3 - Marco: 3
+2024/07/26 19:36:51 PID: 1 - Acción: ESCRIBIR - Dirección Física: 96 - Valor: 0
+2024/07/26 19:36:51 PID: 1 - FETCH - Program Counter: 13
+2024/07/26 19:36:52 Instruccion: SET DX 64
+2024/07/26 19:36:52 PID: 1 - Ejecutando: SET - DX,64
+2024/07/26 19:36:52 PID: 1 - FETCH - Program Counter: 14
+2024/07/26 19:36:53 Instruccion: MOV_IN BX EBX
+2024/07/26 19:36:53 PID: 1 - Ejecutando: MOV_IN - BX,EBX
+2024/07/26 19:36:54 PID: 1 - TLB HIT - Pagina: 1
+2024/07/26 19:36:55 PID: 1 - Acción: LEER - Dirección Física: 32 - Valor: 0
+2024/07/26 19:36:55 PID: 1 - FETCH - Program Counter: 15
+2024/07/26 19:36:56 Instruccion: MOV_IN CX ECX
+2024/07/26 19:36:56 PID: 1 - Ejecutando: MOV_IN - CX,ECX
+2024/07/26 19:36:57 PID: 1 - TLB HIT - Pagina: 2
+2024/07/26 19:36:58 PID: 1 - Acción: LEER - Dirección Física: 64 - Valor: 0
+2024/07/26 19:36:58 PID: 1 - FETCH - Program Counter: 16
+2024/07/26 19:36:59 Instruccion: RESIZE 256
+2024/07/26 19:36:59 PID: 1 - Ejecutando: RESIZE - 256
+2024/07/26 19:37:00 PID: 1 - FETCH - Program Counter: 17
+2024/07/26 19:37:01 Instruccion: SET EAX 128
+2024/07/26 19:37:01 PID: 1 - Ejecutando: SET - EAX,128
+2024/07/26 19:37:01 PID: 1 - FETCH - Program Counter: 18
+2024/07/26 19:37:02 Instruccion: SET EBX 160
+2024/07/26 19:37:02 PID: 1 - Ejecutando: SET - EBX,160
+2024/07/26 19:37:02 PID: 1 - FETCH - Program Counter: 19
+2024/07/26 19:37:03 Instruccion: MOV_OUT EAX DX
+2024/07/26 19:37:03 PID: 1 - Ejecutando: MOV_OUT - EAX,DX
+2024/07/26 19:37:04 PID: 1 - TLB MISS - Pagina: 4
+2024/07/26 19:37:05 PID: 1 - OBTENER MARCO - Página: 4 - Marco: 4
+2024/07/26 19:37:06 PID: 1 - Acción: ESCRIBIR - Dirección Física: 128 - Valor: 64
+2024/07/26 19:37:06 PID: 1 - FETCH - Program Counter: 20
+2024/07/26 19:37:07 Instruccion: MOV_OUT EBX DX
+2024/07/26 19:37:07 PID: 1 - Ejecutando: MOV_OUT - EBX,DX
+2024/07/26 19:37:08 PID: 1 - TLB MISS - Pagina: 5
+2024/07/26 19:37:09 PID: 1 - OBTENER MARCO - Página: 5 - Marco: 5
+2024/07/26 19:37:10 PID: 1 - Acción: ESCRIBIR - Dirección Física: 160 - Valor: 64
+2024/07/26 19:37:10 PID: 1 - FETCH - Program Counter: 21
+2024/07/26 19:37:11 Instruccion: SET EAX 40
+2024/07/26 19:37:11 PID: 1 - Ejecutando: SET - EAX,40
+2024/07/26 19:37:11 PID: 1 - FETCH - Program Counter: 22
+2024/07/26 19:37:12 Instruccion: SET EBX 80
+2024/07/26 19:37:12 PID: 1 - Ejecutando: SET - EBX,80
+2024/07/26 19:37:12 PID: 1 - FETCH - Program Counter: 23
+2024/07/26 19:37:13 Instruccion: SET ECX 192
+2024/07/26 19:37:13 PID: 1 - Ejecutando: SET - ECX,192
+2024/07/26 19:37:13 PID: 1 - FETCH - Program Counter: 24
+2024/07/26 19:37:14 Instruccion: SET EDX 224
+2024/07/26 19:37:14 PID: 1 - Ejecutando: SET - EDX,224
+2024/07/26 19:37:14 PID: 1 - FETCH - Program Counter: 25
+2024/07/26 19:37:15 Instruccion: MOV_OUT EAX DX
+2024/07/26 19:37:15 PID: 1 - Ejecutando: MOV_OUT - EAX,DX
+2024/07/26 19:37:16 PID: 1 - TLB HIT - Pagina: 1
+2024/07/26 19:37:17 PID: 1 - Acción: ESCRIBIR - Dirección Física: 40 - Valor: 64
+2024/07/26 19:37:17 PID: 1 - FETCH - Program Counter: 26
+2024/07/26 19:37:18 Instruccion: MOV_OUT EBX DX
+2024/07/26 19:37:18 PID: 1 - Ejecutando: MOV_OUT - EBX,DX
+2024/07/26 19:37:19 PID: 1 - TLB HIT - Pagina: 2
+2024/07/26 19:37:20 PID: 1 - Acción: ESCRIBIR - Dirección Física: 80 - Valor: 64
+2024/07/26 19:37:20 PID: 1 - FETCH - Program Counter: 27
+2024/07/26 19:37:21 Instruccion: MOV_OUT ECX DX
+2024/07/26 19:37:21 PID: 1 - Ejecutando: MOV_OUT - ECX,DX
+2024/07/26 19:37:22 PID: 1 - TLB MISS - Pagina: 6
+2024/07/26 19:37:23 PID: 1 - OBTENER MARCO - Página: 6 - Marco: 6
+2024/07/26 19:37:24 PID: 1 - Acción: ESCRIBIR - Dirección Física: 192 - Valor: 64
+2024/07/26 19:37:24 PID: 1 - FETCH - Program Counter: 28
+2024/07/26 19:37:25 Instruccion: MOV_OUT EDX DX
+2024/07/26 19:37:25 PID: 1 - Ejecutando: MOV_OUT - EDX,DX
+2024/07/26 19:37:26 PID: 1 - TLB MISS - Pagina: 7
+2024/07/26 19:37:27 PID: 1 - OBTENER MARCO - Página: 7 - Marco: 7
+2024/07/26 19:37:28 PID: 1 - Acción: ESCRIBIR - Dirección Física: 224 - Valor: 64
+2024/07/26 19:37:28 PID: 1 - FETCH - Program Counter: 29
+2024/07/26 19:37:29 Instruccion: EXIT
+2024/07/26 19:37:29 PID: 1 - Ejecutando: EXIT
+2024/07/26 19:39:37 PID: 2 - FETCH - Program Counter: 0
+2024/07/26 19:39:38 Instruccion: SET EAX 0
+2024/07/26 19:39:38 PID: 2 - Ejecutando: SET - EAX,0
+2024/07/26 19:39:38 PID: 2 - FETCH - Program Counter: 1
+2024/07/26 19:39:39 Instruccion: SET EBX 10
+2024/07/26 19:39:39 PID: 2 - Ejecutando: SET - EBX,10
+2024/07/26 19:39:39 PID: 2 - FETCH - Program Counter: 2
+2024/07/26 19:39:40 Instruccion: SET EDX 0
+2024/07/26 19:39:40 PID: 2 - Ejecutando: SET - EDX,0
+2024/07/26 19:39:40 PID: 2 - FETCH - Program Counter: 3
+2024/07/26 19:39:41 Instruccion: SET ECX 1
+2024/07/26 19:39:41 PID: 2 - Ejecutando: SET - ECX,1
+2024/07/26 19:39:41 PID: 2 - FETCH - Program Counter: 4
+2024/07/26 19:39:42 Instruccion: SET DX 30
+2024/07/26 19:39:42 PID: 2 - Ejecutando: SET - DX,30
+2024/07/26 19:39:42 PID: 2 - FETCH - Program Counter: 5
+2024/07/26 19:39:43 Instruccion: RESIZE 60
+2024/07/26 19:39:43 PID: 2 - Ejecutando: RESIZE - 60
+2024/07/26 19:39:44 PID: 2 - FETCH - Program Counter: 6
+2024/07/26 19:39:45 Instruccion: MOV_OUT DX EBX
+2024/07/26 19:39:45 PID: 2 - Ejecutando: MOV_OUT - DX,EBX
+2024/07/26 19:39:46 PID: 2 - TLB MISS - Pagina: 0
+2024/07/26 19:39:47 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/26 19:39:48 PID: 2 - Acción: ESCRIBIR - Dirección Física: 30 - Valor: 10
+2024/07/26 19:39:48 PID: 2 - FETCH - Program Counter: 7
+2024/07/26 19:39:49 Instruccion: MOV_IN EAX DX
+2024/07/26 19:39:49 PID: 2 - Ejecutando: MOV_IN - EAX,DX
+2024/07/26 19:39:50 PID: 2 - TLB HIT - Pagina: 0
+2024/07/26 19:39:51 PID: 2 - Acción: LEER - Dirección Física: 30 - Valor: 10
+2024/07/26 19:39:51 PID: 2 - FETCH - Program Counter: 8
+2024/07/26 19:39:52 Instruccion: SUB EBX ECX
+2024/07/26 19:39:52 PID: 2 - Ejecutando: SUB - EBX,ECX
+2024/07/26 19:39:52 PID: 2 - FETCH - Program Counter: 9
+2024/07/26 19:39:53 Instruccion: SET EAX 0
+2024/07/26 19:39:53 PID: 2 - Ejecutando: SET - EAX,0
+2024/07/26 19:39:53 PID: 2 - FETCH - Program Counter: 10
+2024/07/26 19:39:54 Instruccion: EXIT
+2024/07/26 19:39:54 PID: 2 - Ejecutando: EXIT
+2024/07/26 19:48:21 PID: 3 - FETCH - Program Counter: 0
+2024/07/26 19:48:22 Instruccion: SET AX 0
+2024/07/26 19:48:22 PID: 3 - Ejecutando: SET - AX,0
+2024/07/26 19:48:22 PID: 3 - FETCH - Program Counter: 1
+2024/07/26 19:48:23 Instruccion: RESIZE 960
+2024/07/26 19:48:23 PID: 3 - Ejecutando: RESIZE - 960
+2024/07/26 19:48:24 PID: 3 - FETCH - Program Counter: 2
+2024/07/26 19:48:25 Instruccion: SET EAX 0
+2024/07/26 19:48:25 PID: 3 - Ejecutando: SET - EAX,0
+2024/07/26 19:48:25 PID: 3 - FETCH - Program Counter: 3
+2024/07/26 19:48:26 Instruccion: RESIZE 256
+2024/07/26 19:48:26 PID: 3 - Ejecutando: RESIZE - 256
+2024/07/26 19:48:27 PID: 3 - FETCH - Program Counter: 4
+2024/07/26 19:48:28 Instruccion: MOV_OUT AX EAX
+2024/07/26 19:48:28 PID: 3 - Ejecutando: MOV_OUT - AX,EAX
+2024/07/26 19:48:29 PID: 3 - TLB MISS - Pagina: 0
+2024/07/26 19:48:30 PID: 3 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/26 19:48:31 PID: 3 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 0
+2024/07/26 19:48:31 PID: 3 - FETCH - Program Counter: 5
+2024/07/26 19:48:32 Instruccion: RESIZE 1056
+2024/07/26 19:48:32 PID: 3 - Ejecutando: RESIZE - 1056
+2024/07/26 19:48:33 Error en la respuesta del servidor: 500 Internal Server Error
+2024/07/26 19:48:33 PID: 3 - FETCH - Program Counter: 6
+2024/07/26 19:48:34 Instruccion: SET BX 0
+2024/07/26 19:48:34 PID: 3 - Ejecutando: SET - BX,0
+2024/07/26 19:48:34 PID: 3 - FETCH - Program Counter: 7
+2024/07/26 19:48:35 Instruccion: SET CX 0
+2024/07/26 19:48:35 PID: 3 - Ejecutando: SET - CX,0
+2024/07/26 19:48:35 PID: 3 - FETCH - Program Counter: 8
+2024/07/26 19:48:36 Instruccion: SET DX 0
+2024/07/26 19:48:36 PID: 3 - Ejecutando: SET - DX,0
+2024/07/26 19:48:36 PID: 3 - FETCH - Program Counter: 9
+2024/07/26 19:48:37 Instruccion: EXIT
+2024/07/26 19:48:37 PID: 3 - Ejecutando: EXIT
+2024/07/26 19:54:35 Inicializando TLB con 4 entradas
+2024/07/26 19:56:55 PID: 0 - FETCH - Program Counter: 0
+2024/07/26 19:56:56 Instruccion: SET AX 0
+2024/07/26 19:56:56 PID: 0 - Ejecutando: SET - AX,0
+2024/07/26 19:56:56 PID: 0 - FETCH - Program Counter: 1
+2024/07/26 19:56:57 Instruccion: RESIZE 960
+2024/07/26 19:56:57 PID: 0 - Ejecutando: RESIZE - 960
+2024/07/26 19:56:58 PID: 0 - FETCH - Program Counter: 2
+2024/07/26 19:56:59 Instruccion: SET EAX 0
+2024/07/26 19:56:59 PID: 0 - Ejecutando: SET - EAX,0
+2024/07/26 19:56:59 PID: 0 - FETCH - Program Counter: 3
+2024/07/26 19:57:00 Instruccion: RESIZE 256
+2024/07/26 19:57:00 PID: 0 - Ejecutando: RESIZE - 256
+2024/07/26 19:57:01 PID: 0 - FETCH - Program Counter: 4
+2024/07/26 19:57:02 Instruccion: MOV_OUT AX EAX
+2024/07/26 19:57:02 PID: 0 - Ejecutando: MOV_OUT - AX,EAX
+2024/07/26 19:57:03 PID: 0 - TLB MISS - Pagina: 0
+2024/07/26 19:57:04 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/26 19:57:05 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 0
+2024/07/26 19:57:05 PID: 0 - FETCH - Program Counter: 5
+2024/07/26 19:57:06 Instruccion: RESIZE 1056
+2024/07/26 19:57:06 PID: 0 - Ejecutando: RESIZE - 1056
+2024/07/26 19:57:07 Error en la respuesta del servidor: 500 Internal Server Error
+2024/07/26 19:57:07 PID: 0 - FETCH - Program Counter: 6
+2024/07/26 19:57:08 Instruccion: SET BX 0
+2024/07/26 19:57:08 PID: 0 - Ejecutando: SET - BX,0
+2024/07/26 19:57:08 PID: 0 - FETCH - Program Counter: 7
+2024/07/26 19:57:09 Instruccion: SET CX 0
+2024/07/26 19:57:09 PID: 0 - Ejecutando: SET - CX,0
+2024/07/26 19:57:09 PID: 0 - FETCH - Program Counter: 8
+2024/07/26 19:57:10 Instruccion: SET DX 0
+2024/07/26 19:57:10 PID: 0 - Ejecutando: SET - DX,0
+2024/07/26 19:57:10 PID: 0 - FETCH - Program Counter: 9
+2024/07/26 19:57:11 Instruccion: EXIT
+2024/07/26 19:57:11 PID: 0 - Ejecutando: EXIT
+2024/07/26 19:58:08 PID: 1 - FETCH - Program Counter: 0
+2024/07/26 19:58:09 Instruccion: SET AX 0
+2024/07/26 19:58:09 PID: 1 - Ejecutando: SET - AX,0
+2024/07/26 19:58:09 PID: 1 - FETCH - Program Counter: 1
+2024/07/26 19:58:10 Instruccion: RESIZE 960
+2024/07/26 19:58:10 PID: 1 - Ejecutando: RESIZE - 960
+2024/07/26 19:58:11 PID: 1 - FETCH - Program Counter: 2
+2024/07/26 19:58:12 Instruccion: SET EAX 0
+2024/07/26 19:58:12 PID: 1 - Ejecutando: SET - EAX,0
+2024/07/26 19:58:12 PID: 1 - FETCH - Program Counter: 3
+2024/07/26 19:58:13 Instruccion: RESIZE 256
+2024/07/26 19:58:13 PID: 1 - Ejecutando: RESIZE - 256
+2024/07/26 19:58:14 PID: 1 - FETCH - Program Counter: 4
+2024/07/26 19:58:15 Instruccion: MOV_OUT AX EAX
+2024/07/26 19:58:15 PID: 1 - Ejecutando: MOV_OUT - AX,EAX
+2024/07/26 19:58:16 PID: 1 - TLB MISS - Pagina: 0
+2024/07/26 19:58:17 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/26 19:58:18 PID: 1 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 0
+2024/07/26 19:58:18 PID: 1 - FETCH - Program Counter: 5
+2024/07/26 19:58:19 Instruccion: RESIZE 1056
+2024/07/26 19:58:19 PID: 1 - Ejecutando: RESIZE - 1056
+2024/07/26 19:58:20 Error en la respuesta del servidor: 500 Internal Server Error
+2024/07/26 19:58:20 PID: 1 - FETCH - Program Counter: 6
+2024/07/26 19:58:21 Instruccion: SET BX 0
+2024/07/26 19:58:21 PID: 1 - Ejecutando: SET - BX,0
+2024/07/26 19:58:21 PID: 1 - FETCH - Program Counter: 7
+2024/07/26 19:58:22 Instruccion: SET CX 0
+2024/07/26 19:58:22 PID: 1 - Ejecutando: SET - CX,0
+2024/07/26 19:58:22 PID: 1 - FETCH - Program Counter: 8
+2024/07/26 19:58:23 Instruccion: SET DX 0
+2024/07/26 19:58:23 PID: 1 - Ejecutando: SET - DX,0
+2024/07/26 19:58:23 PID: 1 - FETCH - Program Counter: 9
+2024/07/26 19:58:24 Instruccion: EXIT
+2024/07/26 19:58:24 PID: 1 - Ejecutando: EXIT
+2024/07/26 20:00:44 Inicializando TLB con 4 entradas
+2024/07/26 20:00:50 Inicializando TLB con 4 entradas
+2024/07/26 20:01:16 PID: 0 - FETCH - Program Counter: 0
+2024/07/26 20:01:17 Instruccion: SET AX 0
+2024/07/26 20:01:17 PID: 0 - Ejecutando: SET - AX,0
+2024/07/26 20:01:17 PID: 0 - FETCH - Program Counter: 1
+2024/07/26 20:01:18 Instruccion: RESIZE 960
+2024/07/26 20:01:18 PID: 0 - Ejecutando: RESIZE - 960
+2024/07/26 20:01:19 PID: 0 - FETCH - Program Counter: 2
+2024/07/26 20:01:20 Instruccion: SET EAX 0
+2024/07/26 20:01:20 PID: 0 - Ejecutando: SET - EAX,0
+2024/07/26 20:01:20 PID: 0 - FETCH - Program Counter: 3
+2024/07/26 20:01:21 Instruccion: RESIZE 256
+2024/07/26 20:01:21 PID: 0 - Ejecutando: RESIZE - 256
+2024/07/26 20:01:22 PID: 0 - FETCH - Program Counter: 4
+2024/07/26 20:01:23 Instruccion: MOV_OUT AX EAX
+2024/07/26 20:01:23 PID: 0 - Ejecutando: MOV_OUT - AX,EAX
+2024/07/26 20:01:24 PID: 0 - TLB MISS - Pagina: 0
+2024/07/26 20:01:25 PID: 0 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/26 20:01:26 PID: 0 - Acción: ESCRIBIR - Dirección Física: 0 - Valor: 0
+2024/07/26 20:01:26 PID: 0 - FETCH - Program Counter: 5
+2024/07/26 20:01:27 Instruccion: RESIZE 1056
+2024/07/26 20:01:27 PID: 0 - Ejecutando: RESIZE - 1056
+2024/07/26 20:01:28 Error en la respuesta del servidor: 500 Internal Server Error

@@ -413,12 +413,10 @@ func RESIZE(tamS string) {
 
 	if resp.StatusCode != http.StatusOK {
 		log.Printf("Error en la respuesta del servidor: %s", resp.Status)
-		if resp.StatusCode == http.StatusInsufficientStorage { // Out of Memory
-			mutexMensaje.Lock()
-			resultadoEjecucion.Mensaje = "EXIT OUT_OF_MEMORY"
-			mutexMensaje.Unlock()
-			interrupcion = true
-		}
+		mutexMensaje.Lock()
+		resultadoEjecucion.Mensaje = "EXIT OUT_OF_MEMORY"
+		mutexMensaje.Unlock()
+		interrupcion = true
 		return
 	}
 }

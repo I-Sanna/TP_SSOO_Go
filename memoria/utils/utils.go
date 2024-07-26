@@ -168,7 +168,7 @@ func ReservarMemoria(w http.ResponseWriter, r *http.Request) {
 
 			if marcoLibre == -1 {
 				http.Error(w, "Error: Out of memory", http.StatusInternalServerError)
-				w.WriteHeader(http.StatusBadRequest) // Si no devuelve http.StatusOk a la CPU es que se quedo sin memoria
+				w.WriteHeader(http.StatusInsufficientStorage) // Si no devuelve http.StatusOk a la CPU es que se quedo sin memoria
 				return
 			}
 
