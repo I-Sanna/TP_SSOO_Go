@@ -27496,3 +27496,2285 @@ Fallout 4
 2024/07/26 20:28:51 PID: 1 - FETCH - Program Counter: 8
 2024/07/26 20:28:52 Instruccion: EXIT
 2024/07/26 20:28:52 PID: 1 - Ejecutando: EXIT
+2024/07/27 16:06:25 Inicializando TLB con 0 entradas
+2024/07/27 16:07:50 PID: 1 - FETCH - Program Counter: 0
+2024/07/27 16:07:50 Instruccion: SET EAX 16
+2024/07/27 16:07:50 PID: 1 - Ejecutando: SET - EAX,16
+2024/07/27 16:07:50 PID: 1 - FETCH - Program Counter: 1
+2024/07/27 16:07:50 Instruccion: SET EBX 20
+2024/07/27 16:07:50 PID: 1 - Ejecutando: SET - EBX,20
+2024/07/27 16:07:50 PID: 1 - FETCH - Program Counter: 2
+2024/07/27 16:07:50 Instruccion: RESIZE 128
+2024/07/27 16:07:50 PID: 1 - Ejecutando: RESIZE - 128
+2024/07/27 16:07:51 PID: 1 - FETCH - Program Counter: 3
+2024/07/27 16:07:51 Instruccion: IO_STDIN_READ TECLADO EAX EBX
+2024/07/27 16:07:51 PID: 1 - Ejecutando: IO_STDIN_READ - TECLADO , EAX , EBX
+2024/07/27 16:07:51 PID: 1 - TLB MISS - Pagina: 1
+2024/07/27 16:07:51 PID: 1 - OBTENER MARCO - Página: 1 - Marco: 1
+2024/07/27 16:07:51 PID: 2 - FETCH - Program Counter: 0
+2024/07/27 16:07:51 Instruccion: RESIZE 40
+2024/07/27 16:07:51 PID: 2 - Ejecutando: RESIZE - 40
+2024/07/27 16:07:51 PID: 2 - FETCH - Program Counter: 1
+2024/07/27 16:07:51 Instruccion: SET BX 0
+2024/07/27 16:07:51 PID: 2 - Ejecutando: SET - BX,0
+2024/07/27 16:07:51 PID: 2 - FETCH - Program Counter: 2
+2024/07/27 16:07:51 Instruccion: SET CX 1
+2024/07/27 16:07:51 PID: 2 - Ejecutando: SET - CX,1
+2024/07/27 16:07:51 PID: 2 - FETCH - Program Counter: 3
+2024/07/27 16:07:51 Instruccion: SET AX 73
+2024/07/27 16:07:51 PID: 2 - Ejecutando: SET - AX,73
+2024/07/27 16:07:51 PID: 2 - FETCH - Program Counter: 4
+2024/07/27 16:07:51 Instruccion: MOV_OUT BX AX
+2024/07/27 16:07:51 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:07:52 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:07:52 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:07:52 PID: 2 - Acción: ESCRIBIR - Dirección Física: 128 - Valor: 73
+2024/07/27 16:07:52 PID: 3 - FETCH - Program Counter: 0
+2024/07/27 16:07:52 Instruccion: SET AX 0
+2024/07/27 16:07:52 PID: 3 - Ejecutando: SET - AX,0
+2024/07/27 16:07:52 PID: 3 - FETCH - Program Counter: 1
+2024/07/27 16:07:52 Instruccion: SET BX 32
+2024/07/27 16:07:52 PID: 3 - Ejecutando: SET - BX,32
+2024/07/27 16:07:52 PID: 3 - FETCH - Program Counter: 2
+2024/07/27 16:07:52 Instruccion: SET CX 26
+2024/07/27 16:07:52 PID: 3 - Ejecutando: SET - CX,26
+2024/07/27 16:07:52 PID: 3 - FETCH - Program Counter: 3
+2024/07/27 16:07:52 Instruccion: RESIZE 64
+2024/07/27 16:07:52 PID: 3 - Ejecutando: RESIZE - 64
+2024/07/27 16:07:52 Error al enviar la solicitud: Get "http://127.0.0.1:8002/memoria/3/64": EOF
+2024/07/27 16:07:52 PID: 3 - FETCH - Program Counter: 4
+2024/07/27 16:07:52 Instruccion: IO_STDIN_READ TECLADO AX CX
+2024/07/27 16:07:52 PID: 3 - Ejecutando: IO_STDIN_READ - TECLADO , AX , CX
+2024/07/27 16:07:53 PID: 3 - TLB MISS - Pagina: 0
+2024/07/27 16:07:53 PID: 3 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:07:53 PID: 2 - FETCH - Program Counter: 5
+2024/07/27 16:07:53 Instruccion: SUM BX CX
+2024/07/27 16:07:53 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:07:53 PID: 2 - FETCH - Program Counter: 6
+2024/07/27 16:07:53 Instruccion: SET AX 32
+2024/07/27 16:07:53 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:07:53 PID: 2 - FETCH - Program Counter: 7
+2024/07/27 16:07:53 Instruccion: MOV_OUT BX AX
+2024/07/27 16:07:53 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:07:53 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:07:53 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:07:53 PID: 2 - Acción: ESCRIBIR - Dirección Física: 129 - Valor: 32
+2024/07/27 16:07:53 PID: 2 - FETCH - Program Counter: 8
+2024/07/27 16:07:53 Instruccion: IO_GEN_SLEEP GENERICA 1
+2024/07/27 16:07:53 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:07:54 PID: 2 - FETCH - Program Counter: 9
+2024/07/27 16:07:54 Instruccion: SUM BX CX
+2024/07/27 16:07:54 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:07:54 PID: 2 - FETCH - Program Counter: 10
+2024/07/27 16:07:54 Instruccion: SET AX 100
+2024/07/27 16:07:54 PID: 2 - Ejecutando: SET - AX,100
+2024/07/27 16:07:54 PID: 2 - FETCH - Program Counter: 11
+2024/07/27 16:07:54 Instruccion: MOV_OUT BX AX
+2024/07/27 16:07:54 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:07:54 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:07:54 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:07:54 PID: 2 - Acción: ESCRIBIR - Dirección Física: 130 - Valor: 100
+2024/07/27 16:07:54 PID: 2 - FETCH - Program Counter: 12
+2024/07/27 16:07:54 Instruccion: SUM BX CX
+2024/07/27 16:07:54 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:07:54 PID: 2 - FETCH - Program Counter: 13
+2024/07/27 16:07:54 Instruccion: SET AX 111
+2024/07/27 16:07:54 PID: 2 - Ejecutando: SET - AX,111
+2024/07/27 16:07:54 PID: 2 - FETCH - Program Counter: 14
+2024/07/27 16:07:55 Instruccion: MOV_OUT BX AX
+2024/07/27 16:07:55 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:07:55 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:07:55 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:07:55 PID: 2 - Acción: ESCRIBIR - Dirección Física: 131 - Valor: 111
+2024/07/27 16:07:55 PID: 2 - FETCH - Program Counter: 15
+2024/07/27 16:07:55 Instruccion: SUM BX CX
+2024/07/27 16:07:55 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:07:55 PID: 2 - FETCH - Program Counter: 16
+2024/07/27 16:07:55 Instruccion: SET AX 110
+2024/07/27 16:07:55 PID: 2 - Ejecutando: SET - AX,110
+2024/07/27 16:07:55 PID: 2 - FETCH - Program Counter: 17
+2024/07/27 16:07:55 Instruccion: MOV_OUT BX AX
+2024/07/27 16:07:55 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:07:55 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:07:55 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:07:55 PID: 2 - Acción: ESCRIBIR - Dirección Física: 132 - Valor: 110
+2024/07/27 16:07:55 PID: 2 - FETCH - Program Counter: 18
+2024/07/27 16:07:56 Instruccion: SUM BX CX
+2024/07/27 16:07:56 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:07:56 PID: 2 - FETCH - Program Counter: 19
+2024/07/27 16:07:56 Instruccion: SET AX 39
+2024/07/27 16:07:56 PID: 2 - Ejecutando: SET - AX,39
+2024/07/27 16:07:56 PID: 2 - FETCH - Program Counter: 20
+2024/07/27 16:07:56 Instruccion: MOV_OUT BX AX
+2024/07/27 16:07:56 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:07:56 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:07:56 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:07:56 PID: 2 - Acción: ESCRIBIR - Dirección Física: 133 - Valor: 39
+2024/07/27 16:07:56 PID: 2 - FETCH - Program Counter: 21
+2024/07/27 16:07:56 Instruccion: SUM BX CX
+2024/07/27 16:07:56 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:07:56 PID: 2 - FETCH - Program Counter: 22
+2024/07/27 16:07:56 Instruccion: SET AX 116
+2024/07/27 16:07:56 PID: 2 - Ejecutando: SET - AX,116
+2024/07/27 16:07:56 PID: 2 - FETCH - Program Counter: 23
+2024/07/27 16:07:56 Instruccion: MOV_OUT BX AX
+2024/07/27 16:07:56 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:07:56 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:07:57 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:07:57 PID: 2 - Acción: ESCRIBIR - Dirección Física: 134 - Valor: 116
+2024/07/27 16:07:57 PID: 2 - FETCH - Program Counter: 24
+2024/07/27 16:07:57 Instruccion: SUM BX CX
+2024/07/27 16:07:57 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:07:57 PID: 2 - FETCH - Program Counter: 25
+2024/07/27 16:07:57 Instruccion: SET AX 32
+2024/07/27 16:07:57 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:07:57 PID: 2 - FETCH - Program Counter: 26
+2024/07/27 16:07:57 Instruccion: MOV_OUT BX AX
+2024/07/27 16:07:57 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:07:57 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:07:57 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:07:57 PID: 2 - Acción: ESCRIBIR - Dirección Física: 135 - Valor: 32
+2024/07/27 16:07:57 PID: 2 - FETCH - Program Counter: 27
+2024/07/27 16:07:57 Instruccion: IO_GEN_SLEEP GENERICA 1
+2024/07/27 16:07:57 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:07:58 PID: 2 - FETCH - Program Counter: 28
+2024/07/27 16:07:58 Instruccion: SUM BX CX
+2024/07/27 16:07:58 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:07:58 PID: 2 - FETCH - Program Counter: 29
+2024/07/27 16:07:58 Instruccion: SET AX 119
+2024/07/27 16:07:58 PID: 2 - Ejecutando: SET - AX,119
+2024/07/27 16:07:58 PID: 2 - FETCH - Program Counter: 30
+2024/07/27 16:07:58 Instruccion: MOV_OUT BX AX
+2024/07/27 16:07:58 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:07:58 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:07:58 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:07:58 PID: 2 - Acción: ESCRIBIR - Dirección Física: 136 - Valor: 119
+2024/07/27 16:07:58 PID: 2 - FETCH - Program Counter: 31
+2024/07/27 16:07:58 Instruccion: SUM BX CX
+2024/07/27 16:07:58 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:07:58 PID: 2 - FETCH - Program Counter: 32
+2024/07/27 16:07:58 Instruccion: SET AX 97
+2024/07/27 16:07:58 PID: 2 - Ejecutando: SET - AX,97
+2024/07/27 16:07:58 PID: 2 - FETCH - Program Counter: 33
+2024/07/27 16:07:59 Instruccion: MOV_OUT BX AX
+2024/07/27 16:07:59 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:07:59 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:07:59 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:07:59 PID: 2 - Acción: ESCRIBIR - Dirección Física: 137 - Valor: 97
+2024/07/27 16:07:59 PID: 2 - FETCH - Program Counter: 34
+2024/07/27 16:07:59 Instruccion: SUM BX CX
+2024/07/27 16:07:59 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:07:59 PID: 2 - FETCH - Program Counter: 35
+2024/07/27 16:07:59 Instruccion: SET AX 110
+2024/07/27 16:07:59 PID: 2 - Ejecutando: SET - AX,110
+2024/07/27 16:07:59 PID: 2 - FETCH - Program Counter: 36
+2024/07/27 16:07:59 Instruccion: MOV_OUT BX AX
+2024/07/27 16:07:59 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:07:59 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:07:59 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:07:59 PID: 2 - Acción: ESCRIBIR - Dirección Física: 138 - Valor: 110
+2024/07/27 16:07:59 PID: 2 - FETCH - Program Counter: 37
+2024/07/27 16:08:00 Instruccion: SUM BX CX
+2024/07/27 16:08:00 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:00 PID: 2 - FETCH - Program Counter: 38
+2024/07/27 16:08:00 Instruccion: SET AX 116
+2024/07/27 16:08:00 PID: 2 - Ejecutando: SET - AX,116
+2024/07/27 16:08:00 PID: 2 - FETCH - Program Counter: 39
+2024/07/27 16:08:00 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:00 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:00 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:08:00 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:08:00 PID: 2 - Acción: ESCRIBIR - Dirección Física: 139 - Valor: 116
+2024/07/27 16:08:00 PID: 2 - FETCH - Program Counter: 40
+2024/07/27 16:08:00 Instruccion: SUM BX CX
+2024/07/27 16:08:00 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:00 PID: 2 - FETCH - Program Counter: 41
+2024/07/27 16:08:00 Instruccion: SET AX 32
+2024/07/27 16:08:00 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:08:00 PID: 2 - FETCH - Program Counter: 42
+2024/07/27 16:08:00 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:00 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:00 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:08:01 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:08:01 PID: 2 - Acción: ESCRIBIR - Dirección Física: 140 - Valor: 32
+2024/07/27 16:08:01 PID: 2 - FETCH - Program Counter: 43
+2024/07/27 16:08:01 Instruccion: IO_GEN_SLEEP GENERICA 1
+2024/07/27 16:08:01 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:08:01 PID: 2 - FETCH - Program Counter: 44
+2024/07/27 16:08:01 Instruccion: SUM BX CX
+2024/07/27 16:08:01 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:01 PID: 2 - FETCH - Program Counter: 45
+2024/07/27 16:08:01 Instruccion: SET AX 116
+2024/07/27 16:08:01 PID: 2 - Ejecutando: SET - AX,116
+2024/07/27 16:08:01 PID: 2 - FETCH - Program Counter: 46
+2024/07/27 16:08:01 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:01 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:01 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:08:02 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:08:02 PID: 2 - Acción: ESCRIBIR - Dirección Física: 141 - Valor: 116
+2024/07/27 16:08:02 PID: 2 - FETCH - Program Counter: 47
+2024/07/27 16:08:02 Instruccion: SUM BX CX
+2024/07/27 16:08:02 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:02 PID: 2 - FETCH - Program Counter: 48
+2024/07/27 16:08:02 Instruccion: SET AX 111
+2024/07/27 16:08:02 PID: 2 - Ejecutando: SET - AX,111
+2024/07/27 16:08:02 PID: 2 - FETCH - Program Counter: 49
+2024/07/27 16:08:02 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:02 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:02 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:08:02 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:08:02 PID: 2 - Acción: ESCRIBIR - Dirección Física: 142 - Valor: 111
+2024/07/27 16:08:02 PID: 2 - FETCH - Program Counter: 50
+2024/07/27 16:08:02 Instruccion: SUM BX CX
+2024/07/27 16:08:02 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:02 PID: 2 - FETCH - Program Counter: 51
+2024/07/27 16:08:02 Instruccion: SET AX 32
+2024/07/27 16:08:02 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:08:02 PID: 2 - FETCH - Program Counter: 52
+2024/07/27 16:08:03 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:03 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:03 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:08:03 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:08:03 PID: 2 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 32
+2024/07/27 16:08:03 PID: 2 - FETCH - Program Counter: 53
+2024/07/27 16:08:03 Instruccion: IO_GEN_SLEEP GENERICA 1
+2024/07/27 16:08:03 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:08:03 PID: 2 - FETCH - Program Counter: 54
+2024/07/27 16:08:03 Instruccion: SUM BX CX
+2024/07/27 16:08:03 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:03 PID: 2 - FETCH - Program Counter: 55
+2024/07/27 16:08:03 Instruccion: SET AX 115
+2024/07/27 16:08:03 PID: 2 - Ejecutando: SET - AX,115
+2024/07/27 16:08:03 PID: 2 - FETCH - Program Counter: 56
+2024/07/27 16:08:04 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:04 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:04 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:08:04 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:08:04 PID: 2 - Acción: ESCRIBIR - Dirección Física: 144 - Valor: 115
+2024/07/27 16:08:04 PID: 2 - FETCH - Program Counter: 57
+2024/07/27 16:08:04 Instruccion: SUM BX CX
+2024/07/27 16:08:04 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:04 PID: 2 - FETCH - Program Counter: 58
+2024/07/27 16:08:04 Instruccion: SET AX 101
+2024/07/27 16:08:04 PID: 2 - Ejecutando: SET - AX,101
+2024/07/27 16:08:04 PID: 2 - FETCH - Program Counter: 59
+2024/07/27 16:08:04 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:04 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:04 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:08:04 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:08:04 PID: 2 - Acción: ESCRIBIR - Dirección Física: 145 - Valor: 101
+2024/07/27 16:08:04 PID: 2 - FETCH - Program Counter: 60
+2024/07/27 16:08:05 Instruccion: SUM BX CX
+2024/07/27 16:08:05 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:05 PID: 2 - FETCH - Program Counter: 61
+2024/07/27 16:08:05 Instruccion: SET AX 116
+2024/07/27 16:08:05 PID: 2 - Ejecutando: SET - AX,116
+2024/07/27 16:08:05 PID: 2 - FETCH - Program Counter: 62
+2024/07/27 16:08:05 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:05 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:05 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:08:05 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:08:05 PID: 2 - Acción: ESCRIBIR - Dirección Física: 146 - Valor: 116
+2024/07/27 16:08:05 PID: 2 - FETCH - Program Counter: 63
+2024/07/27 16:08:05 Instruccion: SUM BX CX
+2024/07/27 16:08:05 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:05 PID: 2 - FETCH - Program Counter: 64
+2024/07/27 16:08:05 Instruccion: SET AX 32
+2024/07/27 16:08:05 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:08:05 PID: 2 - FETCH - Program Counter: 65
+2024/07/27 16:08:05 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:05 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:05 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:08:06 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:08:06 PID: 2 - Acción: ESCRIBIR - Dirección Física: 147 - Valor: 32
+2024/07/27 16:08:06 PID: 2 - FETCH - Program Counter: 66
+2024/07/27 16:08:06 Instruccion: IO_GEN_SLEEP GENERICA 1
+2024/07/27 16:08:06 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:08:06 PID: 2 - FETCH - Program Counter: 67
+2024/07/27 16:08:06 Instruccion: SUM BX CX
+2024/07/27 16:08:06 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:06 PID: 2 - FETCH - Program Counter: 68
+2024/07/27 16:08:06 Instruccion: SET AX 116
+2024/07/27 16:08:06 PID: 2 - Ejecutando: SET - AX,116
+2024/07/27 16:08:06 PID: 2 - FETCH - Program Counter: 69
+2024/07/27 16:08:06 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:06 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:06 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:08:06 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:08:07 PID: 2 - Acción: ESCRIBIR - Dirección Física: 148 - Valor: 116
+2024/07/27 16:08:07 PID: 2 - FETCH - Program Counter: 70
+2024/07/27 16:08:07 Instruccion: SUM BX CX
+2024/07/27 16:08:07 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:07 PID: 2 - FETCH - Program Counter: 71
+2024/07/27 16:08:07 Instruccion: SET AX 104
+2024/07/27 16:08:07 PID: 2 - Ejecutando: SET - AX,104
+2024/07/27 16:08:07 PID: 2 - FETCH - Program Counter: 72
+2024/07/27 16:08:07 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:07 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:07 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:08:07 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:08:07 PID: 2 - Acción: ESCRIBIR - Dirección Física: 149 - Valor: 104
+2024/07/27 16:08:07 PID: 2 - FETCH - Program Counter: 73
+2024/07/27 16:08:07 Instruccion: SUM BX CX
+2024/07/27 16:08:07 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:07 PID: 2 - FETCH - Program Counter: 74
+2024/07/27 16:08:07 Instruccion: SET AX 101
+2024/07/27 16:08:07 PID: 2 - Ejecutando: SET - AX,101
+2024/07/27 16:08:07 PID: 2 - FETCH - Program Counter: 75
+2024/07/27 16:08:08 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:08 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:08 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:08:08 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:08:08 PID: 2 - Acción: ESCRIBIR - Dirección Física: 150 - Valor: 101
+2024/07/27 16:08:08 PID: 1 - FETCH - Program Counter: 4
+2024/07/27 16:08:08 Instruccion: SET AX 87
+2024/07/27 16:08:08 PID: 1 - Ejecutando: SET - AX,87
+2024/07/27 16:08:08 PID: 1 - FETCH - Program Counter: 5
+2024/07/27 16:08:08 Instruccion: SET BX 65
+2024/07/27 16:08:08 PID: 1 - Ejecutando: SET - BX,65
+2024/07/27 16:08:08 PID: 1 - FETCH - Program Counter: 6
+2024/07/27 16:08:08 Instruccion: SET CX 82
+2024/07/27 16:08:08 PID: 1 - Ejecutando: SET - CX,82
+2024/07/27 16:08:08 PID: 1 - FETCH - Program Counter: 7
+2024/07/27 16:08:08 Instruccion: SET DX 44
+2024/07/27 16:08:08 PID: 1 - Ejecutando: SET - DX,44
+2024/07/27 16:08:08 PID: 1 - FETCH - Program Counter: 8
+2024/07/27 16:08:08 Instruccion: SET ECX 11
+2024/07/27 16:08:08 PID: 1 - Ejecutando: SET - ECX,11
+2024/07/27 16:08:08 PID: 1 - FETCH - Program Counter: 9
+2024/07/27 16:08:08 Instruccion: SET EDX 1
+2024/07/27 16:08:08 PID: 1 - Ejecutando: SET - EDX,1
+2024/07/27 16:08:08 PID: 1 - FETCH - Program Counter: 10
+2024/07/27 16:08:09 Instruccion: MOV_OUT ECX AX
+2024/07/27 16:08:09 PID: 1 - Ejecutando: MOV_OUT - ECX,AX
+2024/07/27 16:08:09 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:08:09 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:08:09 PID: 1 - Acción: ESCRIBIR - Dirección Física: 11 - Valor: 87
+2024/07/27 16:08:09 PID: 2 - FETCH - Program Counter: 76
+2024/07/27 16:08:09 Instruccion: SUM BX CX
+2024/07/27 16:08:09 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:09 PID: 2 - FETCH - Program Counter: 77
+2024/07/27 16:08:09 Instruccion: SET AX 32
+2024/07/27 16:08:09 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:08:09 PID: 2 - FETCH - Program Counter: 78
+2024/07/27 16:08:09 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:09 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:09 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:08:09 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:08:09 PID: 2 - Acción: ESCRIBIR - Dirección Física: 151 - Valor: 32
+2024/07/27 16:08:09 PID: 2 - FETCH - Program Counter: 79
+2024/07/27 16:08:10 Instruccion: IO_GEN_SLEEP GENERICA 1
+2024/07/27 16:08:10 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:08:10 PID: 1 - FETCH - Program Counter: 11
+2024/07/27 16:08:10 Instruccion: SUM ECX EDX
+2024/07/27 16:08:10 PID: 1 - Ejecutando: SUM - ECX,EDX
+2024/07/27 16:08:10 PID: 1 - FETCH - Program Counter: 12
+2024/07/27 16:08:10 Instruccion: MOV_OUT ECX BX
+2024/07/27 16:08:10 PID: 1 - Ejecutando: MOV_OUT - ECX,BX
+2024/07/27 16:08:10 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:08:10 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:08:10 PID: 1 - Acción: ESCRIBIR - Dirección Física: 12 - Valor: 65
+2024/07/27 16:08:10 PID: 1 - FETCH - Program Counter: 13
+2024/07/27 16:08:10 Instruccion: SUM ECX EDX
+2024/07/27 16:08:10 PID: 1 - Ejecutando: SUM - ECX,EDX
+2024/07/27 16:08:10 PID: 1 - FETCH - Program Counter: 14
+2024/07/27 16:08:10 Instruccion: MOV_OUT ECX CX
+2024/07/27 16:08:10 PID: 1 - Ejecutando: MOV_OUT - ECX,CX
+2024/07/27 16:08:10 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:08:10 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:08:11 PID: 1 - Acción: ESCRIBIR - Dirección Física: 13 - Valor: 82
+2024/07/27 16:08:11 PID: 2 - FETCH - Program Counter: 80
+2024/07/27 16:08:11 Instruccion: SUM BX CX
+2024/07/27 16:08:11 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:11 PID: 2 - FETCH - Program Counter: 81
+2024/07/27 16:08:11 Instruccion: SET AX 119
+2024/07/27 16:08:11 PID: 2 - Ejecutando: SET - AX,119
+2024/07/27 16:08:11 PID: 2 - FETCH - Program Counter: 82
+2024/07/27 16:08:11 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:11 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:11 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:08:11 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:08:11 PID: 2 - Acción: ESCRIBIR - Dirección Física: 152 - Valor: 119
+2024/07/27 16:08:11 PID: 2 - FETCH - Program Counter: 83
+2024/07/27 16:08:11 Instruccion: SUM BX CX
+2024/07/27 16:08:11 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:11 PID: 2 - FETCH - Program Counter: 84
+2024/07/27 16:08:11 Instruccion: SET AX 111
+2024/07/27 16:08:11 PID: 2 - Ejecutando: SET - AX,111
+2024/07/27 16:08:11 PID: 1 - FETCH - Program Counter: 15
+2024/07/27 16:08:11 Instruccion: SUM ECX EDX
+2024/07/27 16:08:11 PID: 1 - Ejecutando: SUM - ECX,EDX
+2024/07/27 16:08:11 PID: 1 - FETCH - Program Counter: 16
+2024/07/27 16:08:12 Instruccion: MOV_OUT ECX DX
+2024/07/27 16:08:12 PID: 1 - Ejecutando: MOV_OUT - ECX,DX
+2024/07/27 16:08:12 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:08:12 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:08:12 PID: 1 - Acción: ESCRIBIR - Dirección Física: 14 - Valor: 44
+2024/07/27 16:08:12 PID: 1 - FETCH - Program Counter: 17
+2024/07/27 16:08:12 Instruccion: SUM ECX EDX
+2024/07/27 16:08:12 PID: 1 - Ejecutando: SUM - ECX,EDX
+2024/07/27 16:08:12 PID: 1 - FETCH - Program Counter: 18
+2024/07/27 16:08:12 Instruccion: SET AX 32
+2024/07/27 16:08:12 PID: 1 - Ejecutando: SET - AX,32
+2024/07/27 16:08:12 PID: 1 - FETCH - Program Counter: 19
+2024/07/27 16:08:12 Instruccion: IO_GEN_SLEEP GENERICA 2
+2024/07/27 16:08:12 PID: 1 - Ejecutando: IO_GEN_SLEEP - GENERICA,2
+2024/07/27 16:08:12 PID: 2 - FETCH - Program Counter: 85
+2024/07/27 16:08:12 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:12 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:12 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:08:12 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:08:13 PID: 2 - Acción: ESCRIBIR - Dirección Física: 153 - Valor: 111
+2024/07/27 16:08:13 PID: 2 - FETCH - Program Counter: 86
+2024/07/27 16:08:13 Instruccion: SUM BX CX
+2024/07/27 16:08:13 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:13 PID: 2 - FETCH - Program Counter: 87
+2024/07/27 16:08:13 Instruccion: SET AX 114
+2024/07/27 16:08:13 PID: 2 - Ejecutando: SET - AX,114
+2024/07/27 16:08:13 PID: 2 - FETCH - Program Counter: 88
+2024/07/27 16:08:13 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:13 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:13 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:08:13 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:08:13 PID: 2 - Acción: ESCRIBIR - Dirección Física: 154 - Valor: 114
+2024/07/27 16:08:13 PID: 1 - FETCH - Program Counter: 20
+2024/07/27 16:08:13 Instruccion: MOV_OUT ECX AX
+2024/07/27 16:08:13 PID: 1 - Ejecutando: MOV_OUT - ECX,AX
+2024/07/27 16:08:13 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:08:13 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:08:14 PID: 1 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 32
+2024/07/27 16:08:14 PID: 1 - FETCH - Program Counter: 21
+2024/07/27 16:08:14 Instruccion: SET EBX 25
+2024/07/27 16:08:14 PID: 1 - Ejecutando: SET - EBX,25
+2024/07/27 16:08:14 PID: 1 - FETCH - Program Counter: 22
+2024/07/27 16:08:14 Instruccion: SET EAX 11
+2024/07/27 16:08:14 PID: 1 - Ejecutando: SET - EAX,11
+2024/07/27 16:08:14 PID: 1 - FETCH - Program Counter: 23
+2024/07/27 16:08:14 Instruccion: IO_STDOUT_WRITE MONITOR EAX EBX
+2024/07/27 16:08:14 PID: 1 - Ejecutando: IO_STDOUT_WRITE - MONITOR , EAX , EBX
+2024/07/27 16:08:14 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:08:14 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:08:14 PID: 2 - FETCH - Program Counter: 89
+2024/07/27 16:08:14 Instruccion: SUM BX CX
+2024/07/27 16:08:14 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:14 PID: 2 - FETCH - Program Counter: 90
+2024/07/27 16:08:14 Instruccion: SET AX 108
+2024/07/27 16:08:14 PID: 2 - Ejecutando: SET - AX,108
+2024/07/27 16:08:14 PID: 2 - FETCH - Program Counter: 91
+2024/07/27 16:08:14 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:14 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:14 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:08:15 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:08:15 PID: 2 - Acción: ESCRIBIR - Dirección Física: 155 - Valor: 108
+2024/07/27 16:08:15 PID: 2 - FETCH - Program Counter: 92
+2024/07/27 16:08:15 Instruccion: SUM BX CX
+2024/07/27 16:08:15 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:15 PID: 2 - FETCH - Program Counter: 93
+2024/07/27 16:08:15 Instruccion: SET AX 100
+2024/07/27 16:08:15 PID: 2 - Ejecutando: SET - AX,100
+2024/07/27 16:08:15 PID: 1 - FETCH - Program Counter: 24
+2024/07/27 16:08:15 Instruccion: EXIT
+2024/07/27 16:08:15 PID: 1 - Ejecutando: EXIT
+2024/07/27 16:08:15 PID: 2 - FETCH - Program Counter: 94
+2024/07/27 16:08:15 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:15 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:15 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:08:15 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:08:15 PID: 2 - Acción: ESCRIBIR - Dirección Física: 156 - Valor: 100
+2024/07/27 16:08:15 PID: 2 - FETCH - Program Counter: 95
+2024/07/27 16:08:16 Instruccion: SUM BX CX
+2024/07/27 16:08:16 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:16 PID: 2 - FETCH - Program Counter: 96
+2024/07/27 16:08:16 Instruccion: SET AX 32
+2024/07/27 16:08:16 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:08:16 PID: 2 - FETCH - Program Counter: 97
+2024/07/27 16:08:16 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:16 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:16 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:08:16 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:08:16 PID: 2 - Acción: ESCRIBIR - Dirección Física: 157 - Valor: 32
+2024/07/27 16:08:16 PID: 2 - FETCH - Program Counter: 98
+2024/07/27 16:08:16 Instruccion: IO_GEN_SLEEP GENERICA 1
+2024/07/27 16:08:16 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:08:16 PID: 2 - FETCH - Program Counter: 99
+2024/07/27 16:08:17 Instruccion: SUM BX CX
+2024/07/27 16:08:17 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:17 PID: 2 - FETCH - Program Counter: 100
+2024/07/27 16:08:17 Instruccion: SET AX 111
+2024/07/27 16:08:17 PID: 2 - Ejecutando: SET - AX,111
+2024/07/27 16:08:17 PID: 2 - FETCH - Program Counter: 101
+2024/07/27 16:08:17 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:17 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:17 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:08:17 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:08:17 PID: 2 - Acción: ESCRIBIR - Dirección Física: 158 - Valor: 111
+2024/07/27 16:08:17 PID: 2 - FETCH - Program Counter: 102
+2024/07/27 16:08:17 Instruccion: SUM BX CX
+2024/07/27 16:08:17 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:17 PID: 2 - FETCH - Program Counter: 103
+2024/07/27 16:08:17 Instruccion: SET AX 110
+2024/07/27 16:08:17 PID: 2 - Ejecutando: SET - AX,110
+2024/07/27 16:08:17 PID: 2 - FETCH - Program Counter: 104
+2024/07/27 16:08:17 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:17 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:17 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:08:18 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:08:18 PID: 2 - Acción: ESCRIBIR - Dirección Física: 159 - Valor: 110
+2024/07/27 16:08:18 PID: 2 - FETCH - Program Counter: 105
+2024/07/27 16:08:18 Instruccion: SUM BX CX
+2024/07/27 16:08:18 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:18 PID: 2 - FETCH - Program Counter: 106
+2024/07/27 16:08:18 Instruccion: SET AX 32
+2024/07/27 16:08:18 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:08:18 PID: 2 - FETCH - Program Counter: 107
+2024/07/27 16:08:18 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:18 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:18 PID: 2 - TLB MISS - Pagina: 2
+2024/07/27 16:08:18 PID: 2 - OBTENER MARCO - Página: 2 - Marco: 10
+2024/07/27 16:08:18 PID: 2 - Acción: ESCRIBIR - Dirección Física: 160 - Valor: 32
+2024/07/27 16:08:18 PID: 2 - FETCH - Program Counter: 108
+2024/07/27 16:08:18 Instruccion: IO_GEN_SLEEP GENERICA 1
+2024/07/27 16:08:18 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:08:19 PID: 2 - FETCH - Program Counter: 109
+2024/07/27 16:08:19 Instruccion: SUM BX CX
+2024/07/27 16:08:19 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:19 PID: 2 - FETCH - Program Counter: 110
+2024/07/27 16:08:19 Instruccion: SET AX 102
+2024/07/27 16:08:19 PID: 2 - Ejecutando: SET - AX,102
+2024/07/27 16:08:19 PID: 2 - FETCH - Program Counter: 111
+2024/07/27 16:08:19 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:19 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:19 PID: 2 - TLB MISS - Pagina: 2
+2024/07/27 16:08:19 PID: 2 - OBTENER MARCO - Página: 2 - Marco: 10
+2024/07/27 16:08:19 PID: 2 - Acción: ESCRIBIR - Dirección Física: 161 - Valor: 102
+2024/07/27 16:08:19 PID: 2 - FETCH - Program Counter: 112
+2024/07/27 16:08:19 Instruccion: SUM BX CX
+2024/07/27 16:08:19 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:19 PID: 2 - FETCH - Program Counter: 113
+2024/07/27 16:08:19 Instruccion: SET AX 105
+2024/07/27 16:08:19 PID: 2 - Ejecutando: SET - AX,105
+2024/07/27 16:08:19 PID: 2 - FETCH - Program Counter: 114
+2024/07/27 16:08:20 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:20 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:20 PID: 2 - TLB MISS - Pagina: 2
+2024/07/27 16:08:20 PID: 2 - OBTENER MARCO - Página: 2 - Marco: 10
+2024/07/27 16:08:20 PID: 2 - Acción: ESCRIBIR - Dirección Física: 162 - Valor: 105
+2024/07/27 16:08:20 PID: 2 - FETCH - Program Counter: 115
+2024/07/27 16:08:20 Instruccion: SUM BX CX
+2024/07/27 16:08:20 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:20 PID: 2 - FETCH - Program Counter: 116
+2024/07/27 16:08:20 Instruccion: SET AX 114
+2024/07/27 16:08:20 PID: 2 - Ejecutando: SET - AX,114
+2024/07/27 16:08:20 PID: 3 - FETCH - Program Counter: 5
+2024/07/27 16:08:20 Instruccion: SET SI 0
+2024/07/27 16:08:20 PID: 3 - Ejecutando: SET - SI,0
+2024/07/27 16:08:20 PID: 3 - FETCH - Program Counter: 6
+2024/07/27 16:08:20 Instruccion: SET DI 32
+2024/07/27 16:08:20 PID: 3 - Ejecutando: SET - DI,32
+2024/07/27 16:08:20 PID: 3 - FETCH - Program Counter: 7
+2024/07/27 16:08:20 Instruccion: IO_GEN_SLEEP GENERICA 2
+2024/07/27 16:08:20 PID: 3 - Ejecutando: IO_GEN_SLEEP - GENERICA,2
+2024/07/27 16:08:20 PID: 2 - FETCH - Program Counter: 117
+2024/07/27 16:08:20 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:20 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:21 PID: 2 - TLB MISS - Pagina: 2
+2024/07/27 16:08:21 PID: 2 - OBTENER MARCO - Página: 2 - Marco: 10
+2024/07/27 16:08:21 PID: 2 - Acción: ESCRIBIR - Dirección Física: 163 - Valor: 114
+2024/07/27 16:08:21 PID: 2 - FETCH - Program Counter: 118
+2024/07/27 16:08:21 Instruccion: SUM BX CX
+2024/07/27 16:08:21 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:08:21 PID: 2 - FETCH - Program Counter: 119
+2024/07/27 16:08:21 Instruccion: SET AX 101
+2024/07/27 16:08:21 PID: 2 - Ejecutando: SET - AX,101
+2024/07/27 16:08:21 PID: 2 - FETCH - Program Counter: 120
+2024/07/27 16:08:21 Instruccion: MOV_OUT BX AX
+2024/07/27 16:08:21 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:08:21 PID: 2 - TLB MISS - Pagina: 2
+2024/07/27 16:08:21 PID: 2 - OBTENER MARCO - Página: 2 - Marco: 10
+2024/07/27 16:08:21 PID: 2 - Acción: ESCRIBIR - Dirección Física: 164 - Valor: 101
+2024/07/27 16:08:21 PID: 3 - FETCH - Program Counter: 8
+2024/07/27 16:08:21 Instruccion: COPY_STRING 26
+2024/07/27 16:08:21 PID: 3 - Ejecutando: COPY_STRING - 26
+2024/07/27 16:08:21 Tamaño solicitado: 26
+2024/07/27 16:08:22 PID: 3 - TLB MISS - Pagina: 0
+2024/07/27 16:08:22 PID: 3 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:08:22 PID: 3 - TLB MISS - Pagina: 2
+2024/07/27 16:08:22 PID: 3 - OBTENER MARCO - Página: 2 - Marco: 0
+2024/07/27 16:08:22 Error al leer de memoria: error al enviar solicitud: Post "http://127.0.0.1:8002/leer": EOF
+2024/07/27 16:08:22 PID: 3 - FETCH - Program Counter: 9
+2024/07/27 16:08:22 Instruccion: SET DX 52
+2024/07/27 16:08:22 PID: 3 - Ejecutando: SET - DX,52
+2024/07/27 16:08:22 PID: 3 - FETCH - Program Counter: 10
+2024/07/27 16:08:22 Instruccion: SET AX 49
+2024/07/27 16:08:22 PID: 3 - Ejecutando: SET - AX,49
+2024/07/27 16:08:22 PID: 2 - FETCH - Program Counter: 121
+2024/07/27 16:08:22 Instruccion: SET BX 0
+2024/07/27 16:08:22 PID: 2 - Ejecutando: SET - BX,0
+2024/07/27 16:08:22 PID: 2 - FETCH - Program Counter: 122
+2024/07/27 16:08:22 Instruccion: SET DX 37
+2024/07/27 16:08:22 PID: 2 - Ejecutando: SET - DX,37
+2024/07/27 16:08:22 PID: 2 - FETCH - Program Counter: 123
+2024/07/27 16:08:22 Instruccion: IO_STDOUT_WRITE MONITOR BX DX
+2024/07/27 16:08:22 PID: 2 - Ejecutando: IO_STDOUT_WRITE - MONITOR , BX , DX
+2024/07/27 16:08:23 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:08:23 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:08:23 PID: 3 - FETCH - Program Counter: 11
+2024/07/27 16:08:23 Instruccion: MOV_OUT DX AX
+2024/07/27 16:08:23 PID: 3 - Ejecutando: MOV_OUT - DX,AX
+2024/07/27 16:08:23 PID: 3 - TLB MISS - Pagina: 3
+2024/07/27 16:08:23 PID: 3 - OBTENER MARCO - Página: 3 - Marco: 0
+2024/07/27 16:08:23 Error al escribir memoria: error al enviar la solicitud: Post "http://127.0.0.1:8002/escribir": EOF
+2024/07/27 16:08:23 PID: 3 - FETCH - Program Counter: 12
+2024/07/27 16:08:23 Instruccion: SET AX 52
+2024/07/27 16:08:23 PID: 3 - Ejecutando: SET - AX,52
+2024/07/27 16:08:23 PID: 3 - FETCH - Program Counter: 13
+2024/07/27 16:08:23 Instruccion: SET DX 57
+2024/07/27 16:08:23 PID: 3 - Ejecutando: SET - DX,57
+2024/07/27 16:08:23 PID: 3 - FETCH - Program Counter: 14
+2024/07/27 16:08:23 Instruccion: MOV_OUT DX AX
+2024/07/27 16:08:23 PID: 3 - Ejecutando: MOV_OUT - DX,AX
+2024/07/27 16:08:24 PID: 3 - TLB MISS - Pagina: 3
+2024/07/27 16:08:24 PID: 3 - OBTENER MARCO - Página: 3 - Marco: 0
+2024/07/27 16:08:24 Error al escribir memoria: error al enviar la solicitud: Post "http://127.0.0.1:8002/escribir": EOF
+2024/07/27 16:08:24 PID: 2 - FETCH - Program Counter: 124
+2024/07/27 16:08:24 Instruccion: EXIT
+2024/07/27 16:08:24 PID: 2 - Ejecutando: EXIT
+2024/07/27 16:08:24 PID: 3 - FETCH - Program Counter: 15
+2024/07/27 16:08:24 Instruccion: IO_GEN_SLEEP GENERICA 2
+2024/07/27 16:08:24 PID: 3 - Ejecutando: IO_GEN_SLEEP - GENERICA,2
+2024/07/27 16:08:25 PID: 3 - FETCH - Program Counter: 16
+2024/07/27 16:08:25 Instruccion: IO_STDOUT_WRITE MONITOR BX CX
+2024/07/27 16:08:25 PID: 3 - Ejecutando: IO_STDOUT_WRITE - MONITOR , BX , CX
+2024/07/27 16:08:25 PID: 3 - TLB MISS - Pagina: 2
+2024/07/27 16:08:25 PID: 3 - OBTENER MARCO - Página: 2 - Marco: 0
+2024/07/27 16:08:25 PID: 3 - FETCH - Program Counter: 17
+2024/07/27 16:08:25 Instruccion: EXIT
+2024/07/27 16:08:25 PID: 3 - Ejecutando: EXIT
+2024/07/27 16:17:23 Inicializando TLB con 0 entradas
+2024/07/27 16:19:33 Inicializando TLB con 0 entradas
+2024/07/27 16:20:11 PID: 1 - FETCH - Program Counter: 0
+2024/07/27 16:20:11 Instruccion: SET EAX 16
+2024/07/27 16:20:11 PID: 1 - Ejecutando: SET - EAX,16
+2024/07/27 16:20:11 PID: 1 - FETCH - Program Counter: 1
+2024/07/27 16:20:11 Instruccion: SET EBX 20
+2024/07/27 16:20:11 PID: 1 - Ejecutando: SET - EBX,20
+2024/07/27 16:20:11 PID: 1 - FETCH - Program Counter: 2
+2024/07/27 16:20:11 Instruccion: RESIZE 128
+2024/07/27 16:20:11 PID: 1 - Ejecutando: RESIZE - 128
+2024/07/27 16:20:11 PID: 1 - FETCH - Program Counter: 3
+2024/07/27 16:20:12 Instruccion: IO_STDIN_READ TECLADO EAX EBX
+2024/07/27 16:20:12 PID: 1 - Ejecutando: IO_STDIN_READ - TECLADO , EAX , EBX
+2024/07/27 16:20:12 PID: 1 - TLB MISS - Pagina: 1
+2024/07/27 16:20:12 PID: 1 - OBTENER MARCO - Página: 1 - Marco: 1
+2024/07/27 16:20:12 PID: 2 - FETCH - Program Counter: 0
+2024/07/27 16:20:12 Instruccion: RESIZE 40
+2024/07/27 16:20:12 PID: 2 - Ejecutando: RESIZE - 40
+2024/07/27 16:20:12 PID: 2 - FETCH - Program Counter: 1
+2024/07/27 16:20:12 Instruccion: SET BX 0
+2024/07/27 16:20:12 PID: 2 - Ejecutando: SET - BX,0
+2024/07/27 16:20:12 PID: 2 - FETCH - Program Counter: 2
+2024/07/27 16:20:12 Instruccion: SET CX 1
+2024/07/27 16:20:12 PID: 2 - Ejecutando: SET - CX,1
+2024/07/27 16:20:12 PID: 2 - FETCH - Program Counter: 3
+2024/07/27 16:20:12 Instruccion: SET AX 73
+2024/07/27 16:20:12 PID: 2 - Ejecutando: SET - AX,73
+2024/07/27 16:20:12 PID: 2 - FETCH - Program Counter: 4
+2024/07/27 16:20:12 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:12 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:12 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:20:13 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:20:13 PID: 2 - Acción: ESCRIBIR - Dirección Física: 128 - Valor: 73
+2024/07/27 16:20:13 PID: 3 - FETCH - Program Counter: 0
+2024/07/27 16:20:13 Instruccion: SET AX 0
+2024/07/27 16:20:13 PID: 3 - Ejecutando: SET - AX,0
+2024/07/27 16:20:13 PID: 3 - FETCH - Program Counter: 1
+2024/07/27 16:20:13 Instruccion: SET BX 32
+2024/07/27 16:20:13 PID: 3 - Ejecutando: SET - BX,32
+2024/07/27 16:20:13 PID: 3 - FETCH - Program Counter: 2
+2024/07/27 16:20:13 Instruccion: SET CX 26
+2024/07/27 16:20:13 PID: 3 - Ejecutando: SET - CX,26
+2024/07/27 16:20:13 PID: 3 - FETCH - Program Counter: 3
+2024/07/27 16:20:13 Instruccion: RESIZE 64
+2024/07/27 16:20:13 PID: 3 - Ejecutando: RESIZE - 64
+2024/07/27 16:20:13 PID: 3 - FETCH - Program Counter: 4
+2024/07/27 16:20:13 Instruccion: IO_STDIN_READ TECLADO AX CX
+2024/07/27 16:20:13 PID: 3 - Ejecutando: IO_STDIN_READ - TECLADO , AX , CX
+2024/07/27 16:20:13 PID: 3 - TLB MISS - Pagina: 0
+2024/07/27 16:20:13 PID: 3 - OBTENER MARCO - Página: 0 - Marco: 11
+2024/07/27 16:20:13 PID: 2 - FETCH - Program Counter: 5
+2024/07/27 16:20:14 Instruccion: SUM BX CX
+2024/07/27 16:20:14 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:14 PID: 2 - FETCH - Program Counter: 6
+2024/07/27 16:20:14 Instruccion: SET AX 32
+2024/07/27 16:20:14 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:20:14 PID: 2 - FETCH - Program Counter: 7
+2024/07/27 16:20:14 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:14 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:14 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:20:14 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:20:14 PID: 2 - Acción: ESCRIBIR - Dirección Física: 129 - Valor: 32
+2024/07/27 16:20:14 PID: 2 - FETCH - Program Counter: 8
+2024/07/27 16:20:14 Instruccion: IO_GEN_SLEEP GENERICA 1
+2024/07/27 16:20:14 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:20:14 PID: 2 - FETCH - Program Counter: 9
+2024/07/27 16:20:15 Instruccion: SUM BX CX
+2024/07/27 16:20:15 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:15 PID: 2 - FETCH - Program Counter: 10
+2024/07/27 16:20:15 Instruccion: SET AX 100
+2024/07/27 16:20:15 PID: 2 - Ejecutando: SET - AX,100
+2024/07/27 16:20:15 PID: 2 - FETCH - Program Counter: 11
+2024/07/27 16:20:15 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:15 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:15 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:20:15 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:20:15 PID: 2 - Acción: ESCRIBIR - Dirección Física: 130 - Valor: 100
+2024/07/27 16:20:15 PID: 2 - FETCH - Program Counter: 12
+2024/07/27 16:20:15 Instruccion: SUM BX CX
+2024/07/27 16:20:15 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:15 PID: 2 - FETCH - Program Counter: 13
+2024/07/27 16:20:15 Instruccion: SET AX 111
+2024/07/27 16:20:15 PID: 2 - Ejecutando: SET - AX,111
+2024/07/27 16:20:15 PID: 2 - FETCH - Program Counter: 14
+2024/07/27 16:20:15 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:15 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:15 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:20:16 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:20:16 PID: 2 - Acción: ESCRIBIR - Dirección Física: 131 - Valor: 111
+2024/07/27 16:20:16 PID: 2 - FETCH - Program Counter: 15
+2024/07/27 16:20:16 Instruccion: SUM BX CX
+2024/07/27 16:20:16 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:16 PID: 2 - FETCH - Program Counter: 16
+2024/07/27 16:20:16 Instruccion: SET AX 110
+2024/07/27 16:20:16 PID: 2 - Ejecutando: SET - AX,110
+2024/07/27 16:20:16 PID: 2 - FETCH - Program Counter: 17
+2024/07/27 16:20:16 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:16 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:16 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:20:16 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:20:16 PID: 2 - Acción: ESCRIBIR - Dirección Física: 132 - Valor: 110
+2024/07/27 16:20:16 PID: 2 - FETCH - Program Counter: 18
+2024/07/27 16:20:16 Instruccion: SUM BX CX
+2024/07/27 16:20:16 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:16 PID: 2 - FETCH - Program Counter: 19
+2024/07/27 16:20:16 Instruccion: SET AX 39
+2024/07/27 16:20:16 PID: 2 - Ejecutando: SET - AX,39
+2024/07/27 16:20:16 PID: 2 - FETCH - Program Counter: 20
+2024/07/27 16:20:17 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:17 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:17 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:20:17 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:20:17 PID: 2 - Acción: ESCRIBIR - Dirección Física: 133 - Valor: 39
+2024/07/27 16:20:17 PID: 2 - FETCH - Program Counter: 21
+2024/07/27 16:20:17 Instruccion: SUM BX CX
+2024/07/27 16:20:17 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:17 PID: 2 - FETCH - Program Counter: 22
+2024/07/27 16:20:17 Instruccion: SET AX 116
+2024/07/27 16:20:17 PID: 2 - Ejecutando: SET - AX,116
+2024/07/27 16:20:17 PID: 2 - FETCH - Program Counter: 23
+2024/07/27 16:20:17 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:17 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:17 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:20:17 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:20:17 PID: 2 - Acción: ESCRIBIR - Dirección Física: 134 - Valor: 116
+2024/07/27 16:20:17 PID: 2 - FETCH - Program Counter: 24
+2024/07/27 16:20:18 Instruccion: SUM BX CX
+2024/07/27 16:20:18 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:18 PID: 2 - FETCH - Program Counter: 25
+2024/07/27 16:20:18 Instruccion: SET AX 32
+2024/07/27 16:20:18 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:20:18 PID: 2 - FETCH - Program Counter: 26
+2024/07/27 16:20:18 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:18 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:18 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:20:18 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:20:18 PID: 2 - Acción: ESCRIBIR - Dirección Física: 135 - Valor: 32
+2024/07/27 16:20:18 PID: 2 - FETCH - Program Counter: 27
+2024/07/27 16:20:18 Instruccion: IO_GEN_SLEEP GENERICA 1
+2024/07/27 16:20:18 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:20:18 PID: 2 - FETCH - Program Counter: 28
+2024/07/27 16:20:19 Instruccion: SUM BX CX
+2024/07/27 16:20:19 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:19 PID: 2 - FETCH - Program Counter: 29
+2024/07/27 16:20:19 Instruccion: SET AX 119
+2024/07/27 16:20:19 PID: 2 - Ejecutando: SET - AX,119
+2024/07/27 16:20:19 PID: 2 - FETCH - Program Counter: 30
+2024/07/27 16:20:19 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:19 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:19 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:20:19 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:20:19 PID: 2 - Acción: ESCRIBIR - Dirección Física: 136 - Valor: 119
+2024/07/27 16:20:19 PID: 1 - FETCH - Program Counter: 4
+2024/07/27 16:20:19 Instruccion: SET AX 87
+2024/07/27 16:20:19 PID: 1 - Ejecutando: SET - AX,87
+2024/07/27 16:20:19 PID: 1 - FETCH - Program Counter: 5
+2024/07/27 16:20:19 Instruccion: SET BX 65
+2024/07/27 16:20:19 PID: 1 - Ejecutando: SET - BX,65
+2024/07/27 16:20:19 PID: 1 - FETCH - Program Counter: 6
+2024/07/27 16:20:19 Instruccion: SET CX 82
+2024/07/27 16:20:19 PID: 1 - Ejecutando: SET - CX,82
+2024/07/27 16:20:19 PID: 1 - FETCH - Program Counter: 7
+2024/07/27 16:20:19 Instruccion: SET DX 44
+2024/07/27 16:20:19 PID: 1 - Ejecutando: SET - DX,44
+2024/07/27 16:20:19 PID: 1 - FETCH - Program Counter: 8
+2024/07/27 16:20:20 Instruccion: SET ECX 11
+2024/07/27 16:20:20 PID: 1 - Ejecutando: SET - ECX,11
+2024/07/27 16:20:20 PID: 1 - FETCH - Program Counter: 9
+2024/07/27 16:20:20 Instruccion: SET EDX 1
+2024/07/27 16:20:20 PID: 1 - Ejecutando: SET - EDX,1
+2024/07/27 16:20:20 PID: 1 - FETCH - Program Counter: 10
+2024/07/27 16:20:20 Instruccion: MOV_OUT ECX AX
+2024/07/27 16:20:20 PID: 1 - Ejecutando: MOV_OUT - ECX,AX
+2024/07/27 16:20:20 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:20:20 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:20:20 PID: 1 - Acción: ESCRIBIR - Dirección Física: 11 - Valor: 87
+2024/07/27 16:20:20 PID: 2 - FETCH - Program Counter: 31
+2024/07/27 16:20:20 Instruccion: SUM BX CX
+2024/07/27 16:20:20 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:20 PID: 2 - FETCH - Program Counter: 32
+2024/07/27 16:20:20 Instruccion: SET AX 97
+2024/07/27 16:20:20 PID: 2 - Ejecutando: SET - AX,97
+2024/07/27 16:20:20 PID: 2 - FETCH - Program Counter: 33
+2024/07/27 16:20:20 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:20 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:20 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:20:21 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:20:21 PID: 2 - Acción: ESCRIBIR - Dirección Física: 137 - Valor: 97
+2024/07/27 16:20:21 PID: 2 - FETCH - Program Counter: 34
+2024/07/27 16:20:21 Instruccion: SUM BX CX
+2024/07/27 16:20:21 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:21 PID: 2 - FETCH - Program Counter: 35
+2024/07/27 16:20:21 Instruccion: SET AX 110
+2024/07/27 16:20:21 PID: 2 - Ejecutando: SET - AX,110
+2024/07/27 16:20:21 PID: 1 - FETCH - Program Counter: 11
+2024/07/27 16:20:21 Instruccion: SUM ECX EDX
+2024/07/27 16:20:21 PID: 1 - Ejecutando: SUM - ECX,EDX
+2024/07/27 16:20:21 PID: 1 - FETCH - Program Counter: 12
+2024/07/27 16:20:21 Instruccion: MOV_OUT ECX BX
+2024/07/27 16:20:21 PID: 1 - Ejecutando: MOV_OUT - ECX,BX
+2024/07/27 16:20:21 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:20:21 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:20:21 PID: 1 - Acción: ESCRIBIR - Dirección Física: 12 - Valor: 65
+2024/07/27 16:20:21 PID: 1 - FETCH - Program Counter: 13
+2024/07/27 16:20:21 Instruccion: SUM ECX EDX
+2024/07/27 16:20:21 PID: 1 - Ejecutando: SUM - ECX,EDX
+2024/07/27 16:20:21 PID: 1 - FETCH - Program Counter: 14
+2024/07/27 16:20:22 Instruccion: MOV_OUT ECX CX
+2024/07/27 16:20:22 PID: 1 - Ejecutando: MOV_OUT - ECX,CX
+2024/07/27 16:20:22 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:20:22 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:20:22 PID: 1 - Acción: ESCRIBIR - Dirección Física: 13 - Valor: 82
+2024/07/27 16:20:22 PID: 2 - FETCH - Program Counter: 36
+2024/07/27 16:20:22 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:22 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:22 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:20:22 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:20:22 PID: 2 - Acción: ESCRIBIR - Dirección Física: 138 - Valor: 110
+2024/07/27 16:20:22 PID: 2 - FETCH - Program Counter: 37
+2024/07/27 16:20:22 Instruccion: SUM BX CX
+2024/07/27 16:20:22 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:22 PID: 2 - FETCH - Program Counter: 38
+2024/07/27 16:20:22 Instruccion: SET AX 116
+2024/07/27 16:20:22 PID: 2 - Ejecutando: SET - AX,116
+2024/07/27 16:20:22 PID: 2 - FETCH - Program Counter: 39
+2024/07/27 16:20:23 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:23 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:23 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:20:23 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:20:23 PID: 2 - Acción: ESCRIBIR - Dirección Física: 139 - Valor: 116
+2024/07/27 16:20:23 PID: 1 - FETCH - Program Counter: 15
+2024/07/27 16:20:23 Instruccion: SUM ECX EDX
+2024/07/27 16:20:23 PID: 1 - Ejecutando: SUM - ECX,EDX
+2024/07/27 16:20:23 PID: 1 - FETCH - Program Counter: 16
+2024/07/27 16:20:23 Instruccion: MOV_OUT ECX DX
+2024/07/27 16:20:23 PID: 1 - Ejecutando: MOV_OUT - ECX,DX
+2024/07/27 16:20:23 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:20:23 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:20:23 PID: 1 - Acción: ESCRIBIR - Dirección Física: 14 - Valor: 44
+2024/07/27 16:20:23 PID: 1 - FETCH - Program Counter: 17
+2024/07/27 16:20:23 Instruccion: SUM ECX EDX
+2024/07/27 16:20:23 PID: 1 - Ejecutando: SUM - ECX,EDX
+2024/07/27 16:20:23 PID: 1 - FETCH - Program Counter: 18
+2024/07/27 16:20:24 Instruccion: SET AX 32
+2024/07/27 16:20:24 PID: 1 - Ejecutando: SET - AX,32
+2024/07/27 16:20:24 PID: 1 - FETCH - Program Counter: 19
+2024/07/27 16:20:24 Instruccion: IO_GEN_SLEEP GENERICA 2
+2024/07/27 16:20:24 PID: 1 - Ejecutando: IO_GEN_SLEEP - GENERICA,2
+2024/07/27 16:20:24 PID: 2 - FETCH - Program Counter: 40
+2024/07/27 16:20:24 Instruccion: SUM BX CX
+2024/07/27 16:20:24 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:24 PID: 2 - FETCH - Program Counter: 41
+2024/07/27 16:20:24 Instruccion: SET AX 32
+2024/07/27 16:20:24 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:20:24 PID: 2 - FETCH - Program Counter: 42
+2024/07/27 16:20:24 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:24 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:24 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:20:24 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:20:24 PID: 2 - Acción: ESCRIBIR - Dirección Física: 140 - Valor: 32
+2024/07/27 16:20:24 PID: 2 - FETCH - Program Counter: 43
+2024/07/27 16:20:24 Instruccion: IO_GEN_SLEEP GENERICA 1
+2024/07/27 16:20:24 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:20:24 PID: 1 - FETCH - Program Counter: 20
+2024/07/27 16:20:24 Instruccion: MOV_OUT ECX AX
+2024/07/27 16:20:24 PID: 1 - Ejecutando: MOV_OUT - ECX,AX
+2024/07/27 16:20:25 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:20:25 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:20:25 PID: 1 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 32
+2024/07/27 16:20:25 PID: 1 - FETCH - Program Counter: 21
+2024/07/27 16:20:25 Instruccion: SET EBX 25
+2024/07/27 16:20:25 PID: 1 - Ejecutando: SET - EBX,25
+2024/07/27 16:20:25 PID: 1 - FETCH - Program Counter: 22
+2024/07/27 16:20:25 Instruccion: SET EAX 11
+2024/07/27 16:20:25 PID: 1 - Ejecutando: SET - EAX,11
+2024/07/27 16:20:25 PID: 1 - FETCH - Program Counter: 23
+2024/07/27 16:20:25 Instruccion: IO_STDOUT_WRITE MONITOR EAX EBX
+2024/07/27 16:20:25 PID: 1 - Ejecutando: IO_STDOUT_WRITE - MONITOR , EAX , EBX
+2024/07/27 16:20:25 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:20:25 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:20:25 PID: 2 - FETCH - Program Counter: 44
+2024/07/27 16:20:25 Instruccion: SUM BX CX
+2024/07/27 16:20:25 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:25 PID: 2 - FETCH - Program Counter: 45
+2024/07/27 16:20:26 Instruccion: SET AX 116
+2024/07/27 16:20:26 PID: 2 - Ejecutando: SET - AX,116
+2024/07/27 16:20:26 PID: 2 - FETCH - Program Counter: 46
+2024/07/27 16:20:26 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:26 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:26 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:20:26 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:20:26 PID: 2 - Acción: ESCRIBIR - Dirección Física: 141 - Valor: 116
+2024/07/27 16:20:26 PID: 2 - FETCH - Program Counter: 47
+2024/07/27 16:20:26 Instruccion: SUM BX CX
+2024/07/27 16:20:26 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:26 PID: 2 - FETCH - Program Counter: 48
+2024/07/27 16:20:26 Instruccion: SET AX 111
+2024/07/27 16:20:26 PID: 2 - Ejecutando: SET - AX,111
+2024/07/27 16:20:26 PID: 1 - FETCH - Program Counter: 24
+2024/07/27 16:20:26 Instruccion: EXIT
+2024/07/27 16:20:26 PID: 1 - Ejecutando: EXIT
+2024/07/27 16:20:26 PID: 2 - FETCH - Program Counter: 49
+2024/07/27 16:20:26 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:26 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:27 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:20:27 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:20:27 PID: 2 - Acción: ESCRIBIR - Dirección Física: 142 - Valor: 111
+2024/07/27 16:20:27 PID: 2 - FETCH - Program Counter: 50
+2024/07/27 16:20:27 Instruccion: SUM BX CX
+2024/07/27 16:20:27 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:27 PID: 2 - FETCH - Program Counter: 51
+2024/07/27 16:20:27 Instruccion: SET AX 32
+2024/07/27 16:20:27 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:20:27 PID: 2 - FETCH - Program Counter: 52
+2024/07/27 16:20:27 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:27 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:27 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:20:27 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:20:27 PID: 2 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 32
+2024/07/27 16:20:27 PID: 3 - FETCH - Program Counter: 5
+2024/07/27 16:20:27 Instruccion: SET SI 0
+2024/07/27 16:20:27 PID: 3 - Ejecutando: SET - SI,0
+2024/07/27 16:20:27 PID: 3 - FETCH - Program Counter: 6
+2024/07/27 16:20:28 Instruccion: SET DI 32
+2024/07/27 16:20:28 PID: 3 - Ejecutando: SET - DI,32
+2024/07/27 16:20:28 PID: 3 - FETCH - Program Counter: 7
+2024/07/27 16:20:28 Instruccion: IO_GEN_SLEEP GENERICA 2
+2024/07/27 16:20:28 PID: 3 - Ejecutando: IO_GEN_SLEEP - GENERICA,2
+2024/07/27 16:20:28 PID: 2 - FETCH - Program Counter: 53
+2024/07/27 16:20:28 Instruccion: IO_GEN_SLEEP GENERICA 1
+2024/07/27 16:20:28 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:20:28 PID: 3 - FETCH - Program Counter: 8
+2024/07/27 16:20:28 Instruccion: COPY_STRING 26
+2024/07/27 16:20:28 PID: 3 - Ejecutando: COPY_STRING - 26
+2024/07/27 16:20:28 Tamaño solicitado: 26
+2024/07/27 16:20:28 PID: 3 - TLB MISS - Pagina: 0
+2024/07/27 16:20:28 PID: 3 - OBTENER MARCO - Página: 0 - Marco: 11
+2024/07/27 16:20:29 PID: 3 - TLB MISS - Pagina: 2
+2024/07/27 16:20:29 PID: 3 - OBTENER MARCO - Página: 2 - Marco: 13
+2024/07/27 16:20:29 PID: 3 - Acción: LEER - Dirección Física: 176 - Valor: Sistemas Operativos 2c2023
+2024/07/27 16:20:29 PID: 3 - Acción: LEER - Dirección Física: 208 - Valor: Sistemas Operativos 2c2023
+2024/07/27 16:20:29 PID: 3 - COPY_STRING ejecutado: 26 bytes copiados desde 176 a 208
+2024/07/27 16:20:29 PID: 3 - FETCH - Program Counter: 9
+2024/07/27 16:20:29 Instruccion: SET DX 52
+2024/07/27 16:20:29 PID: 3 - Ejecutando: SET - DX,52
+2024/07/27 16:20:29 PID: 2 - FETCH - Program Counter: 54
+2024/07/27 16:20:29 Instruccion: SUM BX CX
+2024/07/27 16:20:29 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:29 PID: 2 - FETCH - Program Counter: 55
+2024/07/27 16:20:29 Instruccion: SET AX 115
+2024/07/27 16:20:29 PID: 2 - Ejecutando: SET - AX,115
+2024/07/27 16:20:29 PID: 2 - FETCH - Program Counter: 56
+2024/07/27 16:20:29 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:29 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:29 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:20:29 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:20:30 PID: 2 - Acción: ESCRIBIR - Dirección Física: 144 - Valor: 115
+2024/07/27 16:20:30 PID: 2 - FETCH - Program Counter: 57
+2024/07/27 16:20:30 Instruccion: SUM BX CX
+2024/07/27 16:20:30 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:30 PID: 2 - FETCH - Program Counter: 58
+2024/07/27 16:20:30 Instruccion: SET AX 101
+2024/07/27 16:20:30 PID: 2 - Ejecutando: SET - AX,101
+2024/07/27 16:20:30 PID: 3 - FETCH - Program Counter: 10
+2024/07/27 16:20:30 Instruccion: SET AX 49
+2024/07/27 16:20:30 PID: 3 - Ejecutando: SET - AX,49
+2024/07/27 16:20:30 PID: 3 - FETCH - Program Counter: 11
+2024/07/27 16:20:30 Instruccion: MOV_OUT DX AX
+2024/07/27 16:20:30 PID: 3 - Ejecutando: MOV_OUT - DX,AX
+2024/07/27 16:20:30 PID: 3 - TLB MISS - Pagina: 3
+2024/07/27 16:20:30 PID: 3 - OBTENER MARCO - Página: 3 - Marco: 14
+2024/07/27 16:20:30 PID: 3 - Acción: ESCRIBIR - Dirección Física: 228 - Valor: 49
+2024/07/27 16:20:30 PID: 3 - FETCH - Program Counter: 12
+2024/07/27 16:20:30 Instruccion: SET AX 52
+2024/07/27 16:20:30 PID: 3 - Ejecutando: SET - AX,52
+2024/07/27 16:20:30 PID: 3 - FETCH - Program Counter: 13
+2024/07/27 16:20:30 Instruccion: SET DX 57
+2024/07/27 16:20:30 PID: 3 - Ejecutando: SET - DX,57
+2024/07/27 16:20:30 PID: 3 - FETCH - Program Counter: 14
+2024/07/27 16:20:31 Instruccion: MOV_OUT DX AX
+2024/07/27 16:20:31 PID: 3 - Ejecutando: MOV_OUT - DX,AX
+2024/07/27 16:20:31 PID: 3 - TLB MISS - Pagina: 3
+2024/07/27 16:20:31 PID: 3 - OBTENER MARCO - Página: 3 - Marco: 14
+2024/07/27 16:20:31 PID: 3 - Acción: ESCRIBIR - Dirección Física: 233 - Valor: 52
+2024/07/27 16:20:31 PID: 2 - FETCH - Program Counter: 59
+2024/07/27 16:20:31 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:31 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:31 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:20:31 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:20:31 PID: 2 - Acción: ESCRIBIR - Dirección Física: 145 - Valor: 101
+2024/07/27 16:20:31 PID: 2 - FETCH - Program Counter: 60
+2024/07/27 16:20:31 Instruccion: SUM BX CX
+2024/07/27 16:20:31 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:31 PID: 2 - FETCH - Program Counter: 61
+2024/07/27 16:20:31 Instruccion: SET AX 116
+2024/07/27 16:20:31 PID: 2 - Ejecutando: SET - AX,116
+2024/07/27 16:20:31 PID: 2 - FETCH - Program Counter: 62
+2024/07/27 16:20:32 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:32 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:32 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:20:32 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:20:32 PID: 2 - Acción: ESCRIBIR - Dirección Física: 146 - Valor: 116
+2024/07/27 16:20:32 PID: 3 - FETCH - Program Counter: 15
+2024/07/27 16:20:32 Instruccion: IO_GEN_SLEEP GENERICA 2
+2024/07/27 16:20:32 PID: 3 - Ejecutando: IO_GEN_SLEEP - GENERICA,2
+2024/07/27 16:20:32 PID: 2 - FETCH - Program Counter: 63
+2024/07/27 16:20:32 Instruccion: SUM BX CX
+2024/07/27 16:20:32 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:32 PID: 2 - FETCH - Program Counter: 64
+2024/07/27 16:20:32 Instruccion: SET AX 32
+2024/07/27 16:20:32 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:20:32 PID: 2 - FETCH - Program Counter: 65
+2024/07/27 16:20:32 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:32 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:32 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:20:32 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:20:33 PID: 2 - Acción: ESCRIBIR - Dirección Física: 147 - Valor: 32
+2024/07/27 16:20:33 PID: 2 - FETCH - Program Counter: 66
+2024/07/27 16:20:33 Instruccion: IO_GEN_SLEEP GENERICA 1
+2024/07/27 16:20:33 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:20:33 PID: 3 - FETCH - Program Counter: 16
+2024/07/27 16:20:33 Instruccion: IO_STDOUT_WRITE MONITOR BX CX
+2024/07/27 16:20:33 PID: 3 - Ejecutando: IO_STDOUT_WRITE - MONITOR , BX , CX
+2024/07/27 16:20:33 PID: 3 - TLB MISS - Pagina: 2
+2024/07/27 16:20:33 PID: 3 - OBTENER MARCO - Página: 2 - Marco: 13
+2024/07/27 16:20:33 PID: 2 - FETCH - Program Counter: 67
+2024/07/27 16:20:33 Instruccion: SUM BX CX
+2024/07/27 16:20:33 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:33 PID: 2 - FETCH - Program Counter: 68
+2024/07/27 16:20:33 Instruccion: SET AX 116
+2024/07/27 16:20:33 PID: 2 - Ejecutando: SET - AX,116
+2024/07/27 16:20:33 PID: 2 - FETCH - Program Counter: 69
+2024/07/27 16:20:33 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:33 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:33 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:20:34 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:20:34 PID: 2 - Acción: ESCRIBIR - Dirección Física: 148 - Valor: 116
+2024/07/27 16:20:34 PID: 2 - FETCH - Program Counter: 70
+2024/07/27 16:20:34 Instruccion: SUM BX CX
+2024/07/27 16:20:34 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:34 PID: 2 - FETCH - Program Counter: 71
+2024/07/27 16:20:34 Instruccion: SET AX 104
+2024/07/27 16:20:34 PID: 2 - Ejecutando: SET - AX,104
+2024/07/27 16:20:34 PID: 3 - FETCH - Program Counter: 17
+2024/07/27 16:20:34 Instruccion: EXIT
+2024/07/27 16:20:34 PID: 3 - Ejecutando: EXIT
+2024/07/27 16:20:34 PID: 2 - FETCH - Program Counter: 72
+2024/07/27 16:20:34 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:34 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:34 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:20:34 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:20:34 PID: 2 - Acción: ESCRIBIR - Dirección Física: 149 - Valor: 104
+2024/07/27 16:20:34 PID: 2 - FETCH - Program Counter: 73
+2024/07/27 16:20:35 Instruccion: SUM BX CX
+2024/07/27 16:20:35 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:35 PID: 2 - FETCH - Program Counter: 74
+2024/07/27 16:20:35 Instruccion: SET AX 101
+2024/07/27 16:20:35 PID: 2 - Ejecutando: SET - AX,101
+2024/07/27 16:20:35 PID: 2 - FETCH - Program Counter: 75
+2024/07/27 16:20:35 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:35 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:35 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:20:35 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:20:35 PID: 2 - Acción: ESCRIBIR - Dirección Física: 150 - Valor: 101
+2024/07/27 16:20:35 PID: 2 - FETCH - Program Counter: 76
+2024/07/27 16:20:35 Instruccion: SUM BX CX
+2024/07/27 16:20:35 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:35 PID: 2 - FETCH - Program Counter: 77
+2024/07/27 16:20:35 Instruccion: SET AX 32
+2024/07/27 16:20:35 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:20:35 PID: 2 - FETCH - Program Counter: 78
+2024/07/27 16:20:35 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:35 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:35 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:20:36 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:20:36 PID: 2 - Acción: ESCRIBIR - Dirección Física: 151 - Valor: 32
+2024/07/27 16:20:36 PID: 2 - FETCH - Program Counter: 79
+2024/07/27 16:20:36 Instruccion: IO_GEN_SLEEP GENERICA 1
+2024/07/27 16:20:36 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:20:36 PID: 2 - FETCH - Program Counter: 80
+2024/07/27 16:20:36 Instruccion: SUM BX CX
+2024/07/27 16:20:36 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:36 PID: 2 - FETCH - Program Counter: 81
+2024/07/27 16:20:36 Instruccion: SET AX 119
+2024/07/27 16:20:36 PID: 2 - Ejecutando: SET - AX,119
+2024/07/27 16:20:36 PID: 2 - FETCH - Program Counter: 82
+2024/07/27 16:20:36 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:36 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:36 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:20:36 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:20:37 PID: 2 - Acción: ESCRIBIR - Dirección Física: 152 - Valor: 119
+2024/07/27 16:20:37 PID: 2 - FETCH - Program Counter: 83
+2024/07/27 16:20:37 Instruccion: SUM BX CX
+2024/07/27 16:20:37 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:37 PID: 2 - FETCH - Program Counter: 84
+2024/07/27 16:20:37 Instruccion: SET AX 111
+2024/07/27 16:20:37 PID: 2 - Ejecutando: SET - AX,111
+2024/07/27 16:20:37 PID: 2 - FETCH - Program Counter: 85
+2024/07/27 16:20:37 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:37 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:37 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:20:37 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:20:37 PID: 2 - Acción: ESCRIBIR - Dirección Física: 153 - Valor: 111
+2024/07/27 16:20:37 PID: 2 - FETCH - Program Counter: 86
+2024/07/27 16:20:37 Instruccion: SUM BX CX
+2024/07/27 16:20:37 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:37 PID: 2 - FETCH - Program Counter: 87
+2024/07/27 16:20:37 Instruccion: SET AX 114
+2024/07/27 16:20:37 PID: 2 - Ejecutando: SET - AX,114
+2024/07/27 16:20:37 PID: 2 - FETCH - Program Counter: 88
+2024/07/27 16:20:38 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:38 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:38 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:20:38 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:20:38 PID: 2 - Acción: ESCRIBIR - Dirección Física: 154 - Valor: 114
+2024/07/27 16:20:38 PID: 2 - FETCH - Program Counter: 89
+2024/07/27 16:20:38 Instruccion: SUM BX CX
+2024/07/27 16:20:38 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:38 PID: 2 - FETCH - Program Counter: 90
+2024/07/27 16:20:38 Instruccion: SET AX 108
+2024/07/27 16:20:38 PID: 2 - Ejecutando: SET - AX,108
+2024/07/27 16:20:38 PID: 2 - FETCH - Program Counter: 91
+2024/07/27 16:20:38 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:38 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:38 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:20:38 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:20:38 PID: 2 - Acción: ESCRIBIR - Dirección Física: 155 - Valor: 108
+2024/07/27 16:20:38 PID: 2 - FETCH - Program Counter: 92
+2024/07/27 16:20:39 Instruccion: SUM BX CX
+2024/07/27 16:20:39 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:39 PID: 2 - FETCH - Program Counter: 93
+2024/07/27 16:20:39 Instruccion: SET AX 100
+2024/07/27 16:20:39 PID: 2 - Ejecutando: SET - AX,100
+2024/07/27 16:20:39 PID: 2 - FETCH - Program Counter: 94
+2024/07/27 16:20:39 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:39 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:39 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:20:39 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:20:39 PID: 2 - Acción: ESCRIBIR - Dirección Física: 156 - Valor: 100
+2024/07/27 16:20:39 PID: 2 - FETCH - Program Counter: 95
+2024/07/27 16:20:39 Instruccion: SUM BX CX
+2024/07/27 16:20:39 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:39 PID: 2 - FETCH - Program Counter: 96
+2024/07/27 16:20:39 Instruccion: SET AX 32
+2024/07/27 16:20:39 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:20:39 PID: 2 - FETCH - Program Counter: 97
+2024/07/27 16:20:39 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:39 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:39 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:20:40 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:20:40 PID: 2 - Acción: ESCRIBIR - Dirección Física: 157 - Valor: 32
+2024/07/27 16:20:40 PID: 2 - FETCH - Program Counter: 98
+2024/07/27 16:20:40 Instruccion: IO_GEN_SLEEP GENERICA 1
+2024/07/27 16:20:40 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:20:40 PID: 2 - FETCH - Program Counter: 99
+2024/07/27 16:20:40 Instruccion: SUM BX CX
+2024/07/27 16:20:40 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:40 PID: 2 - FETCH - Program Counter: 100
+2024/07/27 16:20:40 Instruccion: SET AX 111
+2024/07/27 16:20:40 PID: 2 - Ejecutando: SET - AX,111
+2024/07/27 16:20:40 PID: 2 - FETCH - Program Counter: 101
+2024/07/27 16:20:40 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:40 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:40 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:20:41 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:20:41 PID: 2 - Acción: ESCRIBIR - Dirección Física: 158 - Valor: 111
+2024/07/27 16:20:41 PID: 2 - FETCH - Program Counter: 102
+2024/07/27 16:20:41 Instruccion: SUM BX CX
+2024/07/27 16:20:41 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:41 PID: 2 - FETCH - Program Counter: 103
+2024/07/27 16:20:41 Instruccion: SET AX 110
+2024/07/27 16:20:41 PID: 2 - Ejecutando: SET - AX,110
+2024/07/27 16:20:41 PID: 2 - FETCH - Program Counter: 104
+2024/07/27 16:20:41 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:41 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:41 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:20:41 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:20:41 PID: 2 - Acción: ESCRIBIR - Dirección Física: 159 - Valor: 110
+2024/07/27 16:20:41 PID: 2 - FETCH - Program Counter: 105
+2024/07/27 16:20:41 Instruccion: SUM BX CX
+2024/07/27 16:20:41 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:41 PID: 2 - FETCH - Program Counter: 106
+2024/07/27 16:20:41 Instruccion: SET AX 32
+2024/07/27 16:20:41 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:20:41 PID: 2 - FETCH - Program Counter: 107
+2024/07/27 16:20:42 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:42 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:42 PID: 2 - TLB MISS - Pagina: 2
+2024/07/27 16:20:42 PID: 2 - OBTENER MARCO - Página: 2 - Marco: 10
+2024/07/27 16:20:42 PID: 2 - Acción: ESCRIBIR - Dirección Física: 160 - Valor: 32
+2024/07/27 16:20:42 PID: 2 - FETCH - Program Counter: 108
+2024/07/27 16:20:42 Instruccion: IO_GEN_SLEEP GENERICA 1
+2024/07/27 16:20:42 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:20:42 PID: 2 - FETCH - Program Counter: 109
+2024/07/27 16:20:42 Instruccion: SUM BX CX
+2024/07/27 16:20:42 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:42 PID: 2 - FETCH - Program Counter: 110
+2024/07/27 16:20:42 Instruccion: SET AX 102
+2024/07/27 16:20:42 PID: 2 - Ejecutando: SET - AX,102
+2024/07/27 16:20:42 PID: 2 - FETCH - Program Counter: 111
+2024/07/27 16:20:42 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:42 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:43 PID: 2 - TLB MISS - Pagina: 2
+2024/07/27 16:20:43 PID: 2 - OBTENER MARCO - Página: 2 - Marco: 10
+2024/07/27 16:20:43 PID: 2 - Acción: ESCRIBIR - Dirección Física: 161 - Valor: 102
+2024/07/27 16:20:43 PID: 2 - FETCH - Program Counter: 112
+2024/07/27 16:20:43 Instruccion: SUM BX CX
+2024/07/27 16:20:43 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:43 PID: 2 - FETCH - Program Counter: 113
+2024/07/27 16:20:43 Instruccion: SET AX 105
+2024/07/27 16:20:43 PID: 2 - Ejecutando: SET - AX,105
+2024/07/27 16:20:43 PID: 2 - FETCH - Program Counter: 114
+2024/07/27 16:20:43 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:43 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:43 PID: 2 - TLB MISS - Pagina: 2
+2024/07/27 16:20:43 PID: 2 - OBTENER MARCO - Página: 2 - Marco: 10
+2024/07/27 16:20:43 PID: 2 - Acción: ESCRIBIR - Dirección Física: 162 - Valor: 105
+2024/07/27 16:20:43 PID: 2 - FETCH - Program Counter: 115
+2024/07/27 16:20:43 Instruccion: SUM BX CX
+2024/07/27 16:20:43 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:43 PID: 2 - FETCH - Program Counter: 116
+2024/07/27 16:20:44 Instruccion: SET AX 114
+2024/07/27 16:20:44 PID: 2 - Ejecutando: SET - AX,114
+2024/07/27 16:20:44 PID: 2 - FETCH - Program Counter: 117
+2024/07/27 16:20:44 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:44 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:44 PID: 2 - TLB MISS - Pagina: 2
+2024/07/27 16:20:44 PID: 2 - OBTENER MARCO - Página: 2 - Marco: 10
+2024/07/27 16:20:44 PID: 2 - Acción: ESCRIBIR - Dirección Física: 163 - Valor: 114
+2024/07/27 16:20:44 PID: 2 - FETCH - Program Counter: 118
+2024/07/27 16:20:44 Instruccion: SUM BX CX
+2024/07/27 16:20:44 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:20:44 PID: 2 - FETCH - Program Counter: 119
+2024/07/27 16:20:44 Instruccion: SET AX 101
+2024/07/27 16:20:44 PID: 2 - Ejecutando: SET - AX,101
+2024/07/27 16:20:44 PID: 2 - FETCH - Program Counter: 120
+2024/07/27 16:20:44 Instruccion: MOV_OUT BX AX
+2024/07/27 16:20:44 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:20:44 PID: 2 - TLB MISS - Pagina: 2
+2024/07/27 16:20:45 PID: 2 - OBTENER MARCO - Página: 2 - Marco: 10
+2024/07/27 16:20:45 PID: 2 - Acción: ESCRIBIR - Dirección Física: 164 - Valor: 101
+2024/07/27 16:20:45 PID: 2 - FETCH - Program Counter: 121
+2024/07/27 16:20:45 Instruccion: SET BX 0
+2024/07/27 16:20:45 PID: 2 - Ejecutando: SET - BX,0
+2024/07/27 16:20:45 PID: 2 - FETCH - Program Counter: 122
+2024/07/27 16:20:45 Instruccion: SET DX 37
+2024/07/27 16:20:45 PID: 2 - Ejecutando: SET - DX,37
+2024/07/27 16:20:45 PID: 2 - FETCH - Program Counter: 123
+2024/07/27 16:20:45 Instruccion: IO_STDOUT_WRITE MONITOR BX DX
+2024/07/27 16:20:45 PID: 2 - Ejecutando: IO_STDOUT_WRITE - MONITOR , BX , DX
+2024/07/27 16:20:45 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:20:45 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:20:45 PID: 2 - FETCH - Program Counter: 124
+2024/07/27 16:20:46 Instruccion: EXIT
+2024/07/27 16:20:46 PID: 2 - Ejecutando: EXIT
+2024/07/27 16:35:30 Inicializando TLB con 0 entradas
+2024/07/27 16:36:06 PID: 1 - FETCH - Program Counter: 0
+2024/07/27 16:36:07 PID: 1 - Ejecutando: SET - EAX,16
+2024/07/27 16:36:07 PID: 1 - FETCH - Program Counter: 1
+2024/07/27 16:36:07 PID: 1 - Ejecutando: SET - EBX,20
+2024/07/27 16:36:07 PID: 1 - FETCH - Program Counter: 2
+2024/07/27 16:36:07 PID: 1 - Ejecutando: RESIZE - 128
+2024/07/27 16:36:07 PID: 1 - FETCH - Program Counter: 3
+2024/07/27 16:36:07 PID: 1 - Ejecutando: IO_STDIN_READ - TECLADO , EAX , EBX
+2024/07/27 16:36:07 PID: 1 - TLB MISS - Pagina: 1
+2024/07/27 16:36:07 PID: 1 - OBTENER MARCO - Página: 1 - Marco: 1
+2024/07/27 16:36:07 PID: 2 - FETCH - Program Counter: 0
+2024/07/27 16:36:07 PID: 2 - Ejecutando: RESIZE - 40
+2024/07/27 16:36:07 PID: 2 - FETCH - Program Counter: 1
+2024/07/27 16:36:07 PID: 2 - Ejecutando: SET - BX,0
+2024/07/27 16:36:07 PID: 2 - FETCH - Program Counter: 2
+2024/07/27 16:36:08 PID: 2 - Ejecutando: SET - CX,1
+2024/07/27 16:36:08 PID: 2 - FETCH - Program Counter: 3
+2024/07/27 16:36:08 PID: 2 - Ejecutando: SET - AX,73
+2024/07/27 16:36:08 PID: 2 - FETCH - Program Counter: 4
+2024/07/27 16:36:08 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:08 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:36:08 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:36:08 PID: 2 - Acción: ESCRIBIR - Dirección Física: 128 - Valor: 73
+2024/07/27 16:36:08 PID: 3 - FETCH - Program Counter: 0
+2024/07/27 16:36:08 PID: 3 - Ejecutando: SET - AX,0
+2024/07/27 16:36:08 PID: 3 - FETCH - Program Counter: 1
+2024/07/27 16:36:08 PID: 3 - Ejecutando: SET - BX,32
+2024/07/27 16:36:08 PID: 3 - FETCH - Program Counter: 2
+2024/07/27 16:36:08 PID: 3 - Ejecutando: SET - CX,26
+2024/07/27 16:36:08 PID: 3 - FETCH - Program Counter: 3
+2024/07/27 16:36:08 PID: 3 - Ejecutando: RESIZE - 64
+2024/07/27 16:36:09 PID: 3 - FETCH - Program Counter: 4
+2024/07/27 16:36:09 PID: 3 - Ejecutando: IO_STDIN_READ - TECLADO , AX , CX
+2024/07/27 16:36:09 PID: 3 - TLB MISS - Pagina: 0
+2024/07/27 16:36:09 PID: 3 - OBTENER MARCO - Página: 0 - Marco: 11
+2024/07/27 16:36:09 PID: 2 - FETCH - Program Counter: 5
+2024/07/27 16:36:09 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:09 PID: 2 - FETCH - Program Counter: 6
+2024/07/27 16:36:09 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:36:09 PID: 2 - FETCH - Program Counter: 7
+2024/07/27 16:36:09 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:09 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:36:09 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:36:09 PID: 2 - Acción: ESCRIBIR - Dirección Física: 129 - Valor: 32
+2024/07/27 16:36:09 PID: 2 - FETCH - Program Counter: 8
+2024/07/27 16:36:10 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:36:10 PID: 2 - FETCH - Program Counter: 9
+2024/07/27 16:36:10 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:10 PID: 2 - FETCH - Program Counter: 10
+2024/07/27 16:36:10 PID: 2 - Ejecutando: SET - AX,100
+2024/07/27 16:36:10 PID: 2 - FETCH - Program Counter: 11
+2024/07/27 16:36:10 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:10 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:36:10 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:36:10 PID: 2 - Acción: ESCRIBIR - Dirección Física: 130 - Valor: 100
+2024/07/27 16:36:10 PID: 2 - FETCH - Program Counter: 12
+2024/07/27 16:36:11 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:11 PID: 2 - FETCH - Program Counter: 13
+2024/07/27 16:36:11 PID: 2 - Ejecutando: SET - AX,111
+2024/07/27 16:36:11 PID: 2 - FETCH - Program Counter: 14
+2024/07/27 16:36:11 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:11 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:36:11 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:36:11 PID: 2 - Acción: ESCRIBIR - Dirección Física: 131 - Valor: 111
+2024/07/27 16:36:11 PID: 2 - FETCH - Program Counter: 15
+2024/07/27 16:36:11 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:11 PID: 2 - FETCH - Program Counter: 16
+2024/07/27 16:36:11 PID: 2 - Ejecutando: SET - AX,110
+2024/07/27 16:36:11 PID: 2 - FETCH - Program Counter: 17
+2024/07/27 16:36:11 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:11 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:36:12 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:36:12 PID: 2 - Acción: ESCRIBIR - Dirección Física: 132 - Valor: 110
+2024/07/27 16:36:12 PID: 2 - FETCH - Program Counter: 18
+2024/07/27 16:36:12 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:12 PID: 2 - FETCH - Program Counter: 19
+2024/07/27 16:36:12 PID: 2 - Ejecutando: SET - AX,39
+2024/07/27 16:36:12 PID: 2 - FETCH - Program Counter: 20
+2024/07/27 16:36:12 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:12 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:36:12 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:36:12 PID: 2 - Acción: ESCRIBIR - Dirección Física: 133 - Valor: 39
+2024/07/27 16:36:12 PID: 2 - FETCH - Program Counter: 21
+2024/07/27 16:36:12 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:12 PID: 2 - FETCH - Program Counter: 22
+2024/07/27 16:36:12 PID: 2 - Ejecutando: SET - AX,116
+2024/07/27 16:36:12 PID: 2 - FETCH - Program Counter: 23
+2024/07/27 16:36:13 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:13 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:36:13 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:36:13 PID: 2 - Acción: ESCRIBIR - Dirección Física: 134 - Valor: 116
+2024/07/27 16:36:13 PID: 2 - FETCH - Program Counter: 24
+2024/07/27 16:36:13 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:13 PID: 2 - FETCH - Program Counter: 25
+2024/07/27 16:36:13 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:36:13 PID: 2 - FETCH - Program Counter: 26
+2024/07/27 16:36:13 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:13 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:36:13 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:36:13 PID: 2 - Acción: ESCRIBIR - Dirección Física: 135 - Valor: 32
+2024/07/27 16:36:13 PID: 2 - FETCH - Program Counter: 27
+2024/07/27 16:36:14 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:36:14 PID: 2 - FETCH - Program Counter: 28
+2024/07/27 16:36:14 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:14 PID: 2 - FETCH - Program Counter: 29
+2024/07/27 16:36:14 PID: 2 - Ejecutando: SET - AX,119
+2024/07/27 16:36:14 PID: 2 - FETCH - Program Counter: 30
+2024/07/27 16:36:14 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:14 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:36:14 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:36:14 PID: 2 - Acción: ESCRIBIR - Dirección Física: 136 - Valor: 119
+2024/07/27 16:36:14 PID: 2 - FETCH - Program Counter: 31
+2024/07/27 16:36:15 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:15 PID: 2 - FETCH - Program Counter: 32
+2024/07/27 16:36:15 PID: 2 - Ejecutando: SET - AX,97
+2024/07/27 16:36:15 PID: 2 - FETCH - Program Counter: 33
+2024/07/27 16:36:15 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:15 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:36:15 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:36:15 PID: 2 - Acción: ESCRIBIR - Dirección Física: 137 - Valor: 97
+2024/07/27 16:36:15 PID: 2 - FETCH - Program Counter: 34
+2024/07/27 16:36:15 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:15 PID: 2 - FETCH - Program Counter: 35
+2024/07/27 16:36:15 PID: 2 - Ejecutando: SET - AX,110
+2024/07/27 16:36:15 PID: 1 - FETCH - Program Counter: 4
+2024/07/27 16:36:15 PID: 1 - Ejecutando: SET - AX,87
+2024/07/27 16:36:15 PID: 1 - FETCH - Program Counter: 5
+2024/07/27 16:36:15 PID: 1 - Ejecutando: SET - BX,65
+2024/07/27 16:36:15 PID: 1 - FETCH - Program Counter: 6
+2024/07/27 16:36:16 PID: 1 - Ejecutando: SET - CX,82
+2024/07/27 16:36:16 PID: 1 - FETCH - Program Counter: 7
+2024/07/27 16:36:16 PID: 1 - Ejecutando: SET - DX,44
+2024/07/27 16:36:16 PID: 1 - FETCH - Program Counter: 8
+2024/07/27 16:36:16 PID: 1 - Ejecutando: SET - ECX,11
+2024/07/27 16:36:16 PID: 1 - FETCH - Program Counter: 9
+2024/07/27 16:36:16 PID: 1 - Ejecutando: SET - EDX,1
+2024/07/27 16:36:16 PID: 1 - FETCH - Program Counter: 10
+2024/07/27 16:36:16 PID: 1 - Ejecutando: MOV_OUT - ECX,AX
+2024/07/27 16:36:16 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:36:16 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:36:16 PID: 1 - Acción: ESCRIBIR - Dirección Física: 11 - Valor: 87
+2024/07/27 16:36:16 PID: 2 - FETCH - Program Counter: 36
+2024/07/27 16:36:16 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:16 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:36:17 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:36:17 PID: 2 - Acción: ESCRIBIR - Dirección Física: 138 - Valor: 110
+2024/07/27 16:36:17 PID: 2 - FETCH - Program Counter: 37
+2024/07/27 16:36:17 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:17 PID: 2 - FETCH - Program Counter: 38
+2024/07/27 16:36:17 PID: 2 - Ejecutando: SET - AX,116
+2024/07/27 16:36:17 PID: 2 - FETCH - Program Counter: 39
+2024/07/27 16:36:17 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:17 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:36:17 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:36:17 PID: 2 - Acción: ESCRIBIR - Dirección Física: 139 - Valor: 116
+2024/07/27 16:36:17 PID: 1 - FETCH - Program Counter: 11
+2024/07/27 16:36:17 PID: 1 - Ejecutando: SUM - ECX,EDX
+2024/07/27 16:36:17 PID: 1 - FETCH - Program Counter: 12
+2024/07/27 16:36:17 PID: 1 - Ejecutando: MOV_OUT - ECX,BX
+2024/07/27 16:36:18 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:36:18 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:36:18 PID: 1 - Acción: ESCRIBIR - Dirección Física: 12 - Valor: 65
+2024/07/27 16:36:18 PID: 1 - FETCH - Program Counter: 13
+2024/07/27 16:36:18 PID: 1 - Ejecutando: SUM - ECX,EDX
+2024/07/27 16:36:18 PID: 1 - FETCH - Program Counter: 14
+2024/07/27 16:36:18 PID: 1 - Ejecutando: MOV_OUT - ECX,CX
+2024/07/27 16:36:18 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:36:18 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:36:18 PID: 1 - Acción: ESCRIBIR - Dirección Física: 13 - Valor: 82
+2024/07/27 16:36:18 PID: 2 - FETCH - Program Counter: 40
+2024/07/27 16:36:18 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:18 PID: 2 - FETCH - Program Counter: 41
+2024/07/27 16:36:18 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:36:18 PID: 2 - FETCH - Program Counter: 42
+2024/07/27 16:36:19 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:19 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:36:19 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:36:19 PID: 2 - Acción: ESCRIBIR - Dirección Física: 140 - Valor: 32
+2024/07/27 16:36:19 PID: 2 - FETCH - Program Counter: 43
+2024/07/27 16:36:19 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:36:19 PID: 1 - FETCH - Program Counter: 15
+2024/07/27 16:36:19 PID: 1 - Ejecutando: SUM - ECX,EDX
+2024/07/27 16:36:19 PID: 1 - FETCH - Program Counter: 16
+2024/07/27 16:36:19 PID: 1 - Ejecutando: MOV_OUT - ECX,DX
+2024/07/27 16:36:19 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:36:19 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:36:19 PID: 1 - Acción: ESCRIBIR - Dirección Física: 14 - Valor: 44
+2024/07/27 16:36:19 PID: 1 - FETCH - Program Counter: 17
+2024/07/27 16:36:20 PID: 1 - Ejecutando: SUM - ECX,EDX
+2024/07/27 16:36:20 PID: 1 - FETCH - Program Counter: 18
+2024/07/27 16:36:20 PID: 1 - Ejecutando: SET - AX,32
+2024/07/27 16:36:20 PID: 1 - FETCH - Program Counter: 19
+2024/07/27 16:36:20 PID: 1 - Ejecutando: IO_GEN_SLEEP - GENERICA,2
+2024/07/27 16:36:20 PID: 2 - FETCH - Program Counter: 44
+2024/07/27 16:36:20 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:20 PID: 2 - FETCH - Program Counter: 45
+2024/07/27 16:36:20 PID: 2 - Ejecutando: SET - AX,116
+2024/07/27 16:36:20 PID: 2 - FETCH - Program Counter: 46
+2024/07/27 16:36:20 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:20 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:36:20 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:36:20 PID: 2 - Acción: ESCRIBIR - Dirección Física: 141 - Valor: 116
+2024/07/27 16:36:20 PID: 2 - FETCH - Program Counter: 47
+2024/07/27 16:36:20 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:20 PID: 2 - FETCH - Program Counter: 48
+2024/07/27 16:36:21 PID: 2 - Ejecutando: SET - AX,111
+2024/07/27 16:36:21 PID: 1 - FETCH - Program Counter: 20
+2024/07/27 16:36:21 PID: 1 - Ejecutando: MOV_OUT - ECX,AX
+2024/07/27 16:36:21 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:36:21 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:36:21 PID: 1 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 32
+2024/07/27 16:36:21 PID: 1 - FETCH - Program Counter: 21
+2024/07/27 16:36:21 PID: 1 - Ejecutando: SET - EBX,25
+2024/07/27 16:36:21 PID: 1 - FETCH - Program Counter: 22
+2024/07/27 16:36:21 PID: 1 - Ejecutando: SET - EAX,11
+2024/07/27 16:36:21 PID: 1 - FETCH - Program Counter: 23
+2024/07/27 16:36:21 PID: 1 - Ejecutando: IO_STDOUT_WRITE - MONITOR , EAX , EBX
+2024/07/27 16:36:21 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:36:22 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:36:22 PID: 2 - FETCH - Program Counter: 49
+2024/07/27 16:36:22 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:22 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:36:22 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:36:22 PID: 2 - Acción: ESCRIBIR - Dirección Física: 142 - Valor: 111
+2024/07/27 16:36:22 PID: 2 - FETCH - Program Counter: 50
+2024/07/27 16:36:22 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:22 PID: 2 - FETCH - Program Counter: 51
+2024/07/27 16:36:22 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:36:22 PID: 2 - FETCH - Program Counter: 52
+2024/07/27 16:36:22 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:22 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:36:22 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:36:23 PID: 2 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 32
+2024/07/27 16:36:23 PID: 1 - FETCH - Program Counter: 24
+2024/07/27 16:36:23 PID: 1 - Ejecutando: EXIT
+2024/07/27 16:36:23 PID: 2 - FETCH - Program Counter: 53
+2024/07/27 16:36:23 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:36:23 PID: 2 - FETCH - Program Counter: 54
+2024/07/27 16:36:23 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:23 PID: 2 - FETCH - Program Counter: 55
+2024/07/27 16:36:23 PID: 2 - Ejecutando: SET - AX,115
+2024/07/27 16:36:23 PID: 2 - FETCH - Program Counter: 56
+2024/07/27 16:36:23 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:23 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:36:24 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:36:24 PID: 2 - Acción: ESCRIBIR - Dirección Física: 144 - Valor: 115
+2024/07/27 16:36:24 PID: 2 - FETCH - Program Counter: 57
+2024/07/27 16:36:24 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:24 PID: 2 - FETCH - Program Counter: 58
+2024/07/27 16:36:24 PID: 2 - Ejecutando: SET - AX,101
+2024/07/27 16:36:24 PID: 2 - FETCH - Program Counter: 59
+2024/07/27 16:36:24 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:24 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:36:24 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:36:24 PID: 2 - Acción: ESCRIBIR - Dirección Física: 145 - Valor: 101
+2024/07/27 16:36:24 PID: 2 - FETCH - Program Counter: 60
+2024/07/27 16:36:24 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:24 PID: 2 - FETCH - Program Counter: 61
+2024/07/27 16:36:24 PID: 2 - Ejecutando: SET - AX,116
+2024/07/27 16:36:24 PID: 2 - FETCH - Program Counter: 62
+2024/07/27 16:36:25 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:25 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:36:25 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:36:25 PID: 2 - Acción: ESCRIBIR - Dirección Física: 146 - Valor: 116
+2024/07/27 16:36:25 PID: 2 - FETCH - Program Counter: 63
+2024/07/27 16:36:25 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:25 PID: 2 - FETCH - Program Counter: 64
+2024/07/27 16:36:25 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:36:25 PID: 2 - FETCH - Program Counter: 65
+2024/07/27 16:36:25 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:25 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:36:25 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:36:26 PID: 2 - Acción: ESCRIBIR - Dirección Física: 147 - Valor: 32
+2024/07/27 16:36:26 PID: 2 - FETCH - Program Counter: 66
+2024/07/27 16:36:26 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:36:26 PID: 2 - FETCH - Program Counter: 67
+2024/07/27 16:36:26 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:26 PID: 2 - FETCH - Program Counter: 68
+2024/07/27 16:36:26 PID: 2 - Ejecutando: SET - AX,116
+2024/07/27 16:36:26 PID: 2 - FETCH - Program Counter: 69
+2024/07/27 16:36:26 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:26 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:36:26 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:36:26 PID: 2 - Acción: ESCRIBIR - Dirección Física: 148 - Valor: 116
+2024/07/27 16:36:26 PID: 2 - FETCH - Program Counter: 70
+2024/07/27 16:36:27 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:27 PID: 2 - FETCH - Program Counter: 71
+2024/07/27 16:36:27 PID: 2 - Ejecutando: SET - AX,104
+2024/07/27 16:36:27 PID: 2 - FETCH - Program Counter: 72
+2024/07/27 16:36:27 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:27 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:36:27 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:36:27 PID: 2 - Acción: ESCRIBIR - Dirección Física: 149 - Valor: 104
+2024/07/27 16:36:27 PID: 2 - FETCH - Program Counter: 73
+2024/07/27 16:36:27 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:27 PID: 2 - FETCH - Program Counter: 74
+2024/07/27 16:36:27 PID: 2 - Ejecutando: SET - AX,101
+2024/07/27 16:36:27 PID: 3 - FETCH - Program Counter: 5
+2024/07/27 16:36:27 PID: 3 - Ejecutando: SET - SI,0
+2024/07/27 16:36:27 PID: 3 - FETCH - Program Counter: 6
+2024/07/27 16:36:27 PID: 3 - Ejecutando: SET - DI,32
+2024/07/27 16:36:27 PID: 3 - FETCH - Program Counter: 7
+2024/07/27 16:36:28 PID: 3 - Ejecutando: IO_GEN_SLEEP - GENERICA,2
+2024/07/27 16:36:28 PID: 2 - FETCH - Program Counter: 75
+2024/07/27 16:36:28 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:28 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:36:28 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:36:28 PID: 2 - Acción: ESCRIBIR - Dirección Física: 150 - Valor: 101
+2024/07/27 16:36:28 PID: 2 - FETCH - Program Counter: 76
+2024/07/27 16:36:28 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:28 PID: 2 - FETCH - Program Counter: 77
+2024/07/27 16:36:28 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:36:28 PID: 2 - FETCH - Program Counter: 78
+2024/07/27 16:36:28 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:28 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:36:28 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:36:29 PID: 2 - Acción: ESCRIBIR - Dirección Física: 151 - Valor: 32
+2024/07/27 16:36:29 PID: 3 - FETCH - Program Counter: 8
+2024/07/27 16:36:29 PID: 3 - Ejecutando: COPY_STRING - 26
+2024/07/27 16:36:29 PID: 3 - TLB MISS - Pagina: 0
+2024/07/27 16:36:29 PID: 3 - OBTENER MARCO - Página: 0 - Marco: 11
+2024/07/27 16:36:29 PID: 3 - TLB MISS - Pagina: 2
+2024/07/27 16:36:29 PID: 3 - OBTENER MARCO - Página: 2 - Marco: 13
+2024/07/27 16:36:29 PID: 3 - Acción: LEER - Dirección Física: 176 - Valor: Sistemas Operativos 2c2023
+2024/07/27 16:36:29 PID: 3 - Acción: LEER - Dirección Física: 208 - Valor: Sistemas Operativos 2c2023
+2024/07/27 16:36:29 PID: 3 - COPY_STRING ejecutado: 26 bytes copiados desde 176 a 208
+2024/07/27 16:36:29 PID: 3 - FETCH - Program Counter: 9
+2024/07/27 16:36:29 PID: 3 - Ejecutando: SET - DX,52
+2024/07/27 16:36:29 PID: 2 - FETCH - Program Counter: 79
+2024/07/27 16:36:30 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:36:30 PID: 3 - FETCH - Program Counter: 10
+2024/07/27 16:36:30 PID: 3 - Ejecutando: SET - AX,49
+2024/07/27 16:36:30 PID: 3 - FETCH - Program Counter: 11
+2024/07/27 16:36:30 PID: 3 - Ejecutando: MOV_OUT - DX,AX
+2024/07/27 16:36:30 PID: 3 - TLB MISS - Pagina: 3
+2024/07/27 16:36:30 PID: 3 - OBTENER MARCO - Página: 3 - Marco: 14
+2024/07/27 16:36:30 PID: 3 - Acción: ESCRIBIR - Dirección Física: 228 - Valor: 49
+2024/07/27 16:36:30 PID: 3 - FETCH - Program Counter: 12
+2024/07/27 16:36:30 PID: 3 - Ejecutando: SET - AX,52
+2024/07/27 16:36:30 PID: 3 - FETCH - Program Counter: 13
+2024/07/27 16:36:30 PID: 3 - Ejecutando: SET - DX,57
+2024/07/27 16:36:30 PID: 3 - FETCH - Program Counter: 14
+2024/07/27 16:36:30 PID: 3 - Ejecutando: MOV_OUT - DX,AX
+2024/07/27 16:36:30 PID: 3 - TLB MISS - Pagina: 3
+2024/07/27 16:36:31 PID: 3 - OBTENER MARCO - Página: 3 - Marco: 14
+2024/07/27 16:36:31 PID: 3 - Acción: ESCRIBIR - Dirección Física: 233 - Valor: 52
+2024/07/27 16:36:31 PID: 2 - FETCH - Program Counter: 80
+2024/07/27 16:36:31 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:31 PID: 2 - FETCH - Program Counter: 81
+2024/07/27 16:36:31 PID: 2 - Ejecutando: SET - AX,119
+2024/07/27 16:36:31 PID: 2 - FETCH - Program Counter: 82
+2024/07/27 16:36:31 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:31 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:36:31 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:36:31 PID: 2 - Acción: ESCRIBIR - Dirección Física: 152 - Valor: 119
+2024/07/27 16:36:31 PID: 2 - FETCH - Program Counter: 83
+2024/07/27 16:36:31 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:31 PID: 2 - FETCH - Program Counter: 84
+2024/07/27 16:36:31 PID: 2 - Ejecutando: SET - AX,111
+2024/07/27 16:36:31 PID: 3 - FETCH - Program Counter: 15
+2024/07/27 16:36:32 PID: 3 - Ejecutando: IO_GEN_SLEEP - GENERICA,2
+2024/07/27 16:36:32 PID: 2 - FETCH - Program Counter: 85
+2024/07/27 16:36:32 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:32 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:36:32 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:36:32 PID: 2 - Acción: ESCRIBIR - Dirección Física: 153 - Valor: 111
+2024/07/27 16:36:32 PID: 2 - FETCH - Program Counter: 86
+2024/07/27 16:36:32 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:32 PID: 2 - FETCH - Program Counter: 87
+2024/07/27 16:36:32 PID: 2 - Ejecutando: SET - AX,114
+2024/07/27 16:36:32 PID: 2 - FETCH - Program Counter: 88
+2024/07/27 16:36:32 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:32 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:36:32 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:36:33 PID: 2 - Acción: ESCRIBIR - Dirección Física: 154 - Valor: 114
+2024/07/27 16:36:33 PID: 3 - FETCH - Program Counter: 16
+2024/07/27 16:36:33 PID: 3 - Ejecutando: IO_STDOUT_WRITE - MONITOR , BX , CX
+2024/07/27 16:36:33 PID: 3 - TLB MISS - Pagina: 2
+2024/07/27 16:36:33 PID: 3 - OBTENER MARCO - Página: 2 - Marco: 13
+2024/07/27 16:36:33 PID: 2 - FETCH - Program Counter: 89
+2024/07/27 16:36:33 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:33 PID: 2 - FETCH - Program Counter: 90
+2024/07/27 16:36:33 PID: 2 - Ejecutando: SET - AX,108
+2024/07/27 16:36:33 PID: 2 - FETCH - Program Counter: 91
+2024/07/27 16:36:33 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:33 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:36:33 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:36:33 PID: 2 - Acción: ESCRIBIR - Dirección Física: 155 - Valor: 108
+2024/07/27 16:36:33 PID: 2 - FETCH - Program Counter: 92
+2024/07/27 16:36:34 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:34 PID: 2 - FETCH - Program Counter: 93
+2024/07/27 16:36:34 PID: 2 - Ejecutando: SET - AX,100
+2024/07/27 16:36:34 PID: 3 - FETCH - Program Counter: 17
+2024/07/27 16:36:34 PID: 3 - Ejecutando: EXIT
+2024/07/27 16:36:34 PID: 2 - FETCH - Program Counter: 94
+2024/07/27 16:36:34 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:34 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:36:34 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:36:34 PID: 2 - Acción: ESCRIBIR - Dirección Física: 156 - Valor: 100
+2024/07/27 16:36:34 PID: 2 - FETCH - Program Counter: 95
+2024/07/27 16:36:34 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:34 PID: 2 - FETCH - Program Counter: 96
+2024/07/27 16:36:34 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:36:34 PID: 2 - FETCH - Program Counter: 97
+2024/07/27 16:36:35 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:35 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:36:35 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:36:35 PID: 2 - Acción: ESCRIBIR - Dirección Física: 157 - Valor: 32
+2024/07/27 16:36:35 PID: 2 - FETCH - Program Counter: 98
+2024/07/27 16:36:35 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:36:35 PID: 2 - FETCH - Program Counter: 99
+2024/07/27 16:36:35 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:35 PID: 2 - FETCH - Program Counter: 100
+2024/07/27 16:36:35 PID: 2 - Ejecutando: SET - AX,111
+2024/07/27 16:36:35 PID: 2 - FETCH - Program Counter: 101
+2024/07/27 16:36:36 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:36 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:36:36 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:36:36 PID: 2 - Acción: ESCRIBIR - Dirección Física: 158 - Valor: 111
+2024/07/27 16:36:36 PID: 2 - FETCH - Program Counter: 102
+2024/07/27 16:36:36 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:36 PID: 2 - FETCH - Program Counter: 103
+2024/07/27 16:36:36 PID: 2 - Ejecutando: SET - AX,110
+2024/07/27 16:36:36 PID: 2 - FETCH - Program Counter: 104
+2024/07/27 16:36:36 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:36 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:36:36 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:36:36 PID: 2 - Acción: ESCRIBIR - Dirección Física: 159 - Valor: 110
+2024/07/27 16:36:36 PID: 2 - FETCH - Program Counter: 105
+2024/07/27 16:36:37 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:37 PID: 2 - FETCH - Program Counter: 106
+2024/07/27 16:36:37 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:36:37 PID: 2 - FETCH - Program Counter: 107
+2024/07/27 16:36:37 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:37 PID: 2 - TLB MISS - Pagina: 2
+2024/07/27 16:36:37 PID: 2 - OBTENER MARCO - Página: 2 - Marco: 10
+2024/07/27 16:36:37 PID: 2 - Acción: ESCRIBIR - Dirección Física: 160 - Valor: 32
+2024/07/27 16:36:37 PID: 2 - FETCH - Program Counter: 108
+2024/07/27 16:36:37 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:36:37 PID: 2 - FETCH - Program Counter: 109
+2024/07/27 16:36:38 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:38 PID: 2 - FETCH - Program Counter: 110
+2024/07/27 16:36:38 PID: 2 - Ejecutando: SET - AX,102
+2024/07/27 16:36:38 PID: 2 - FETCH - Program Counter: 111
+2024/07/27 16:36:38 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:38 PID: 2 - TLB MISS - Pagina: 2
+2024/07/27 16:36:38 PID: 2 - OBTENER MARCO - Página: 2 - Marco: 10
+2024/07/27 16:36:38 PID: 2 - Acción: ESCRIBIR - Dirección Física: 161 - Valor: 102
+2024/07/27 16:36:38 PID: 2 - FETCH - Program Counter: 112
+2024/07/27 16:36:38 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:38 PID: 2 - FETCH - Program Counter: 113
+2024/07/27 16:36:38 PID: 2 - Ejecutando: SET - AX,105
+2024/07/27 16:36:38 PID: 2 - FETCH - Program Counter: 114
+2024/07/27 16:36:38 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:38 PID: 2 - TLB MISS - Pagina: 2
+2024/07/27 16:36:39 PID: 2 - OBTENER MARCO - Página: 2 - Marco: 10
+2024/07/27 16:36:39 PID: 2 - Acción: ESCRIBIR - Dirección Física: 162 - Valor: 105
+2024/07/27 16:36:39 PID: 2 - FETCH - Program Counter: 115
+2024/07/27 16:36:39 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:39 PID: 2 - FETCH - Program Counter: 116
+2024/07/27 16:36:39 PID: 2 - Ejecutando: SET - AX,114
+2024/07/27 16:36:39 PID: 2 - FETCH - Program Counter: 117
+2024/07/27 16:36:39 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:39 PID: 2 - TLB MISS - Pagina: 2
+2024/07/27 16:36:39 PID: 2 - OBTENER MARCO - Página: 2 - Marco: 10
+2024/07/27 16:36:39 PID: 2 - Acción: ESCRIBIR - Dirección Física: 163 - Valor: 114
+2024/07/27 16:36:39 PID: 2 - FETCH - Program Counter: 118
+2024/07/27 16:36:39 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:36:39 PID: 2 - FETCH - Program Counter: 119
+2024/07/27 16:36:39 PID: 2 - Ejecutando: SET - AX,101
+2024/07/27 16:36:39 PID: 2 - FETCH - Program Counter: 120
+2024/07/27 16:36:40 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:36:40 PID: 2 - TLB MISS - Pagina: 2
+2024/07/27 16:36:40 PID: 2 - OBTENER MARCO - Página: 2 - Marco: 10
+2024/07/27 16:36:40 PID: 2 - Acción: ESCRIBIR - Dirección Física: 164 - Valor: 101
+2024/07/27 16:36:40 PID: 2 - FETCH - Program Counter: 121
+2024/07/27 16:36:40 PID: 2 - Ejecutando: SET - BX,0
+2024/07/27 16:36:40 PID: 2 - FETCH - Program Counter: 122
+2024/07/27 16:36:40 PID: 2 - Ejecutando: SET - DX,37
+2024/07/27 16:36:40 PID: 2 - FETCH - Program Counter: 123
+2024/07/27 16:36:40 PID: 2 - Ejecutando: IO_STDOUT_WRITE - MONITOR , BX , DX
+2024/07/27 16:36:40 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:36:40 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:36:41 PID: 2 - FETCH - Program Counter: 124
+2024/07/27 16:36:41 PID: 2 - Ejecutando: EXIT
+2024/07/27 16:43:53 Inicializando TLB con 0 entradas
+2024/07/27 16:44:34 PID: 1 - FETCH - Program Counter: 0
+2024/07/27 16:44:34 PID: 1 - Ejecutando: SET - EAX,16
+2024/07/27 16:44:34 PID: 1 - FETCH - Program Counter: 1
+2024/07/27 16:44:34 PID: 1 - Ejecutando: SET - EBX,20
+2024/07/27 16:44:34 PID: 1 - FETCH - Program Counter: 2
+2024/07/27 16:44:34 PID: 1 - Ejecutando: RESIZE - 128
+2024/07/27 16:44:34 PID: 1 - FETCH - Program Counter: 3
+2024/07/27 16:44:34 PID: 1 - Ejecutando: IO_STDIN_READ - TECLADO , EAX , EBX
+2024/07/27 16:44:34 PID: 1 - TLB MISS - Pagina: 1
+2024/07/27 16:44:34 PID: 1 - OBTENER MARCO - Página: 1 - Marco: 1
+2024/07/27 16:44:34 PID: 2 - FETCH - Program Counter: 0
+2024/07/27 16:44:35 PID: 2 - Ejecutando: RESIZE - 40
+2024/07/27 16:44:35 PID: 2 - FETCH - Program Counter: 1
+2024/07/27 16:44:35 PID: 2 - Ejecutando: SET - BX,0
+2024/07/27 16:44:35 PID: 2 - FETCH - Program Counter: 2
+2024/07/27 16:44:35 PID: 2 - Ejecutando: SET - CX,1
+2024/07/27 16:44:35 PID: 2 - FETCH - Program Counter: 3
+2024/07/27 16:44:35 PID: 2 - Ejecutando: SET - AX,73
+2024/07/27 16:44:35 PID: 2 - FETCH - Program Counter: 4
+2024/07/27 16:44:35 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:35 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:44:35 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:44:35 PID: 2 - Acción: ESCRIBIR - Dirección Física: 128 - Valor: 73
+2024/07/27 16:44:35 PID: 3 - FETCH - Program Counter: 0
+2024/07/27 16:44:35 PID: 3 - Ejecutando: SET - AX,0
+2024/07/27 16:44:35 PID: 3 - FETCH - Program Counter: 1
+2024/07/27 16:44:36 PID: 3 - Ejecutando: SET - BX,32
+2024/07/27 16:44:36 PID: 3 - FETCH - Program Counter: 2
+2024/07/27 16:44:36 PID: 3 - Ejecutando: SET - CX,26
+2024/07/27 16:44:36 PID: 3 - FETCH - Program Counter: 3
+2024/07/27 16:44:36 PID: 3 - Ejecutando: RESIZE - 64
+2024/07/27 16:44:36 PID: 3 - FETCH - Program Counter: 4
+2024/07/27 16:44:36 PID: 3 - Ejecutando: IO_STDIN_READ - TECLADO , AX , CX
+2024/07/27 16:44:36 PID: 3 - TLB MISS - Pagina: 0
+2024/07/27 16:44:36 PID: 3 - OBTENER MARCO - Página: 0 - Marco: 11
+2024/07/27 16:44:36 PID: 2 - FETCH - Program Counter: 5
+2024/07/27 16:44:36 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:36 PID: 2 - FETCH - Program Counter: 6
+2024/07/27 16:44:36 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:44:36 PID: 2 - FETCH - Program Counter: 7
+2024/07/27 16:44:36 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:37 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:44:37 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:44:37 PID: 2 - Acción: ESCRIBIR - Dirección Física: 129 - Valor: 32
+2024/07/27 16:44:37 PID: 2 - FETCH - Program Counter: 8
+2024/07/27 16:44:37 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:44:37 PID: 2 - FETCH - Program Counter: 9
+2024/07/27 16:44:37 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:37 PID: 2 - FETCH - Program Counter: 10
+2024/07/27 16:44:37 PID: 2 - Ejecutando: SET - AX,100
+2024/07/27 16:44:37 PID: 2 - FETCH - Program Counter: 11
+2024/07/27 16:44:37 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:38 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:44:38 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:44:38 PID: 2 - Acción: ESCRIBIR - Dirección Física: 130 - Valor: 100
+2024/07/27 16:44:38 PID: 2 - FETCH - Program Counter: 12
+2024/07/27 16:44:38 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:38 PID: 2 - FETCH - Program Counter: 13
+2024/07/27 16:44:38 PID: 2 - Ejecutando: SET - AX,111
+2024/07/27 16:44:38 PID: 2 - FETCH - Program Counter: 14
+2024/07/27 16:44:38 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:38 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:44:38 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:44:38 PID: 2 - Acción: ESCRIBIR - Dirección Física: 131 - Valor: 111
+2024/07/27 16:44:38 PID: 2 - FETCH - Program Counter: 15
+2024/07/27 16:44:38 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:38 PID: 2 - FETCH - Program Counter: 16
+2024/07/27 16:44:39 PID: 2 - Ejecutando: SET - AX,110
+2024/07/27 16:44:39 PID: 2 - FETCH - Program Counter: 17
+2024/07/27 16:44:39 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:39 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:44:39 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:44:39 PID: 2 - Acción: ESCRIBIR - Dirección Física: 132 - Valor: 110
+2024/07/27 16:44:39 PID: 2 - FETCH - Program Counter: 18
+2024/07/27 16:44:39 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:39 PID: 2 - FETCH - Program Counter: 19
+2024/07/27 16:44:39 PID: 2 - Ejecutando: SET - AX,39
+2024/07/27 16:44:39 PID: 2 - FETCH - Program Counter: 20
+2024/07/27 16:44:39 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:39 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:44:39 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:44:40 PID: 2 - Acción: ESCRIBIR - Dirección Física: 133 - Valor: 39
+2024/07/27 16:44:40 PID: 2 - FETCH - Program Counter: 21
+2024/07/27 16:44:40 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:40 PID: 2 - FETCH - Program Counter: 22
+2024/07/27 16:44:40 PID: 2 - Ejecutando: SET - AX,116
+2024/07/27 16:44:40 PID: 2 - FETCH - Program Counter: 23
+2024/07/27 16:44:40 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:40 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:44:40 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:44:40 PID: 2 - Acción: ESCRIBIR - Dirección Física: 134 - Valor: 116
+2024/07/27 16:44:40 PID: 2 - FETCH - Program Counter: 24
+2024/07/27 16:44:40 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:40 PID: 2 - FETCH - Program Counter: 25
+2024/07/27 16:44:40 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:44:40 PID: 2 - FETCH - Program Counter: 26
+2024/07/27 16:44:40 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:41 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:44:41 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:44:41 PID: 2 - Acción: ESCRIBIR - Dirección Física: 135 - Valor: 32
+2024/07/27 16:44:41 PID: 2 - FETCH - Program Counter: 27
+2024/07/27 16:44:41 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:44:41 PID: 2 - FETCH - Program Counter: 28
+2024/07/27 16:44:41 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:41 PID: 2 - FETCH - Program Counter: 29
+2024/07/27 16:44:41 PID: 2 - Ejecutando: SET - AX,119
+2024/07/27 16:44:41 PID: 2 - FETCH - Program Counter: 30
+2024/07/27 16:44:41 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:42 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:44:42 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:44:42 PID: 2 - Acción: ESCRIBIR - Dirección Física: 136 - Valor: 119
+2024/07/27 16:44:42 PID: 2 - FETCH - Program Counter: 31
+2024/07/27 16:44:42 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:42 PID: 2 - FETCH - Program Counter: 32
+2024/07/27 16:44:42 PID: 2 - Ejecutando: SET - AX,97
+2024/07/27 16:44:42 PID: 2 - FETCH - Program Counter: 33
+2024/07/27 16:44:42 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:42 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:44:42 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:44:42 PID: 2 - Acción: ESCRIBIR - Dirección Física: 137 - Valor: 97
+2024/07/27 16:44:42 PID: 2 - FETCH - Program Counter: 34
+2024/07/27 16:44:42 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:42 PID: 2 - FETCH - Program Counter: 35
+2024/07/27 16:44:43 PID: 2 - Ejecutando: SET - AX,110
+2024/07/27 16:44:43 PID: 1 - FETCH - Program Counter: 4
+2024/07/27 16:44:43 PID: 1 - Ejecutando: SET - AX,87
+2024/07/27 16:44:43 PID: 1 - FETCH - Program Counter: 5
+2024/07/27 16:44:43 PID: 1 - Ejecutando: SET - BX,65
+2024/07/27 16:44:43 PID: 1 - FETCH - Program Counter: 6
+2024/07/27 16:44:43 PID: 1 - Ejecutando: SET - CX,82
+2024/07/27 16:44:43 PID: 1 - FETCH - Program Counter: 7
+2024/07/27 16:44:43 PID: 1 - Ejecutando: SET - DX,44
+2024/07/27 16:44:43 PID: 1 - FETCH - Program Counter: 8
+2024/07/27 16:44:43 PID: 1 - Ejecutando: SET - ECX,11
+2024/07/27 16:44:43 PID: 1 - FETCH - Program Counter: 9
+2024/07/27 16:44:43 PID: 1 - Ejecutando: SET - EDX,1
+2024/07/27 16:44:43 PID: 1 - FETCH - Program Counter: 10
+2024/07/27 16:44:43 PID: 1 - Ejecutando: MOV_OUT - ECX,AX
+2024/07/27 16:44:43 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:44:43 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:44:44 PID: 1 - Acción: ESCRIBIR - Dirección Física: 11 - Valor: 87
+2024/07/27 16:44:44 PID: 2 - FETCH - Program Counter: 36
+2024/07/27 16:44:44 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:44 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:44:44 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:44:44 PID: 2 - Acción: ESCRIBIR - Dirección Física: 138 - Valor: 110
+2024/07/27 16:44:44 PID: 2 - FETCH - Program Counter: 37
+2024/07/27 16:44:44 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:44 PID: 2 - FETCH - Program Counter: 38
+2024/07/27 16:44:44 PID: 2 - Ejecutando: SET - AX,116
+2024/07/27 16:44:44 PID: 2 - FETCH - Program Counter: 39
+2024/07/27 16:44:44 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:44 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:44:44 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:44:45 PID: 2 - Acción: ESCRIBIR - Dirección Física: 139 - Valor: 116
+2024/07/27 16:44:45 PID: 1 - FETCH - Program Counter: 11
+2024/07/27 16:44:45 PID: 1 - Ejecutando: SUM - ECX,EDX
+2024/07/27 16:44:45 PID: 1 - FETCH - Program Counter: 12
+2024/07/27 16:44:45 PID: 1 - Ejecutando: MOV_OUT - ECX,BX
+2024/07/27 16:44:45 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:44:45 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:44:45 PID: 1 - Acción: ESCRIBIR - Dirección Física: 12 - Valor: 65
+2024/07/27 16:44:45 PID: 1 - FETCH - Program Counter: 13
+2024/07/27 16:44:45 PID: 1 - Ejecutando: SUM - ECX,EDX
+2024/07/27 16:44:45 PID: 1 - FETCH - Program Counter: 14
+2024/07/27 16:44:45 PID: 1 - Ejecutando: MOV_OUT - ECX,CX
+2024/07/27 16:44:45 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:44:45 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:44:46 PID: 1 - Acción: ESCRIBIR - Dirección Física: 13 - Valor: 82
+2024/07/27 16:44:46 PID: 2 - FETCH - Program Counter: 40
+2024/07/27 16:44:46 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:46 PID: 2 - FETCH - Program Counter: 41
+2024/07/27 16:44:46 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:44:46 PID: 2 - FETCH - Program Counter: 42
+2024/07/27 16:44:46 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:46 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:44:46 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:44:46 PID: 2 - Acción: ESCRIBIR - Dirección Física: 140 - Valor: 32
+2024/07/27 16:44:46 PID: 2 - FETCH - Program Counter: 43
+2024/07/27 16:44:46 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:44:46 PID: 1 - FETCH - Program Counter: 15
+2024/07/27 16:44:46 PID: 1 - Ejecutando: SUM - ECX,EDX
+2024/07/27 16:44:46 PID: 1 - FETCH - Program Counter: 16
+2024/07/27 16:44:46 PID: 1 - Ejecutando: MOV_OUT - ECX,DX
+2024/07/27 16:44:47 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:44:47 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:44:47 PID: 1 - Acción: ESCRIBIR - Dirección Física: 14 - Valor: 44
+2024/07/27 16:44:47 PID: 1 - FETCH - Program Counter: 17
+2024/07/27 16:44:47 PID: 1 - Ejecutando: SUM - ECX,EDX
+2024/07/27 16:44:47 PID: 1 - FETCH - Program Counter: 18
+2024/07/27 16:44:47 PID: 1 - Ejecutando: SET - AX,32
+2024/07/27 16:44:47 PID: 1 - FETCH - Program Counter: 19
+2024/07/27 16:44:47 PID: 1 - Ejecutando: IO_GEN_SLEEP - GENERICA,2
+2024/07/27 16:44:47 PID: 2 - FETCH - Program Counter: 44
+2024/07/27 16:44:47 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:47 PID: 2 - FETCH - Program Counter: 45
+2024/07/27 16:44:47 PID: 2 - Ejecutando: SET - AX,116
+2024/07/27 16:44:47 PID: 2 - FETCH - Program Counter: 46
+2024/07/27 16:44:47 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:48 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:44:48 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:44:48 PID: 2 - Acción: ESCRIBIR - Dirección Física: 141 - Valor: 116
+2024/07/27 16:44:48 PID: 2 - FETCH - Program Counter: 47
+2024/07/27 16:44:48 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:48 PID: 2 - FETCH - Program Counter: 48
+2024/07/27 16:44:48 PID: 2 - Ejecutando: SET - AX,111
+2024/07/27 16:44:48 PID: 1 - FETCH - Program Counter: 20
+2024/07/27 16:44:48 PID: 1 - Ejecutando: MOV_OUT - ECX,AX
+2024/07/27 16:44:48 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:44:48 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:44:48 PID: 1 - Acción: ESCRIBIR - Dirección Física: 15 - Valor: 32
+2024/07/27 16:44:48 PID: 1 - FETCH - Program Counter: 21
+2024/07/27 16:44:48 PID: 1 - Ejecutando: SET - EBX,25
+2024/07/27 16:44:48 PID: 1 - FETCH - Program Counter: 22
+2024/07/27 16:44:49 PID: 1 - Ejecutando: SET - EAX,11
+2024/07/27 16:44:49 PID: 1 - FETCH - Program Counter: 23
+2024/07/27 16:44:49 PID: 1 - Ejecutando: IO_STDOUT_WRITE - MONITOR , EAX , EBX
+2024/07/27 16:44:49 PID: 1 - TLB MISS - Pagina: 0
+2024/07/27 16:44:49 PID: 1 - OBTENER MARCO - Página: 0 - Marco: 0
+2024/07/27 16:44:49 PID: 2 - FETCH - Program Counter: 49
+2024/07/27 16:44:49 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:49 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:44:49 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:44:49 PID: 2 - Acción: ESCRIBIR - Dirección Física: 142 - Valor: 111
+2024/07/27 16:44:49 PID: 2 - FETCH - Program Counter: 50
+2024/07/27 16:44:49 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:49 PID: 2 - FETCH - Program Counter: 51
+2024/07/27 16:44:49 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:44:49 PID: 2 - FETCH - Program Counter: 52
+2024/07/27 16:44:50 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:50 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:44:50 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:44:50 PID: 2 - Acción: ESCRIBIR - Dirección Física: 143 - Valor: 32
+2024/07/27 16:44:50 PID: 1 - FETCH - Program Counter: 24
+2024/07/27 16:44:50 PID: 1 - Ejecutando: EXIT
+2024/07/27 16:44:50 PID: 2 - FETCH - Program Counter: 53
+2024/07/27 16:44:50 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:44:50 PID: 2 - FETCH - Program Counter: 54
+2024/07/27 16:44:50 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:50 PID: 2 - FETCH - Program Counter: 55
+2024/07/27 16:44:51 PID: 2 - Ejecutando: SET - AX,115
+2024/07/27 16:44:51 PID: 2 - FETCH - Program Counter: 56
+2024/07/27 16:44:51 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:51 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:44:51 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:44:51 PID: 2 - Acción: ESCRIBIR - Dirección Física: 144 - Valor: 115
+2024/07/27 16:44:51 PID: 2 - FETCH - Program Counter: 57
+2024/07/27 16:44:51 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:51 PID: 2 - FETCH - Program Counter: 58
+2024/07/27 16:44:51 PID: 2 - Ejecutando: SET - AX,101
+2024/07/27 16:44:51 PID: 2 - FETCH - Program Counter: 59
+2024/07/27 16:44:51 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:51 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:44:52 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:44:52 PID: 2 - Acción: ESCRIBIR - Dirección Física: 145 - Valor: 101
+2024/07/27 16:44:52 PID: 2 - FETCH - Program Counter: 60
+2024/07/27 16:44:52 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:52 PID: 2 - FETCH - Program Counter: 61
+2024/07/27 16:44:52 PID: 2 - Ejecutando: SET - AX,116
+2024/07/27 16:44:52 PID: 3 - FETCH - Program Counter: 5
+2024/07/27 16:44:52 PID: 3 - Ejecutando: SET - SI,0
+2024/07/27 16:44:52 PID: 3 - FETCH - Program Counter: 6
+2024/07/27 16:44:52 PID: 3 - Ejecutando: SET - DI,32
+2024/07/27 16:44:52 PID: 3 - FETCH - Program Counter: 7
+2024/07/27 16:44:52 PID: 3 - Ejecutando: IO_GEN_SLEEP - GENERICA,2
+2024/07/27 16:44:52 PID: 2 - FETCH - Program Counter: 62
+2024/07/27 16:44:52 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:52 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:44:52 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:44:53 PID: 2 - Acción: ESCRIBIR - Dirección Física: 146 - Valor: 116
+2024/07/27 16:44:53 PID: 2 - FETCH - Program Counter: 63
+2024/07/27 16:44:53 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:53 PID: 2 - FETCH - Program Counter: 64
+2024/07/27 16:44:53 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:44:53 PID: 2 - FETCH - Program Counter: 65
+2024/07/27 16:44:53 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:53 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:44:53 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:44:53 PID: 2 - Acción: ESCRIBIR - Dirección Física: 147 - Valor: 32
+2024/07/27 16:44:53 PID: 3 - FETCH - Program Counter: 8
+2024/07/27 16:44:53 PID: 3 - Ejecutando: COPY_STRING - 26
+2024/07/27 16:44:53 PID: 3 - TLB MISS - Pagina: 0
+2024/07/27 16:44:53 PID: 3 - OBTENER MARCO - Página: 0 - Marco: 11
+2024/07/27 16:44:54 PID: 3 - TLB MISS - Pagina: 2
+2024/07/27 16:44:54 PID: 3 - OBTENER MARCO - Página: 2 - Marco: 13
+2024/07/27 16:44:54 PID: 3 - Acción: LEER - Dirección Física: 176 - Valor: Sistemas Operativos 2c2023
+2024/07/27 16:44:54 PID: 3 - Acción: LEER - Dirección Física: 208 - Valor: Sistemas Operativos 2c2023
+2024/07/27 16:44:54 PID: 3 - COPY_STRING ejecutado: 26 bytes copiados desde 176 a 208
+2024/07/27 16:44:54 PID: 3 - FETCH - Program Counter: 9
+2024/07/27 16:44:54 PID: 3 - Ejecutando: SET - DX,52
+2024/07/27 16:44:54 PID: 2 - FETCH - Program Counter: 66
+2024/07/27 16:44:54 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:44:54 PID: 3 - FETCH - Program Counter: 10
+2024/07/27 16:44:54 PID: 3 - Ejecutando: SET - AX,49
+2024/07/27 16:44:54 PID: 3 - FETCH - Program Counter: 11
+2024/07/27 16:44:54 PID: 3 - Ejecutando: MOV_OUT - DX,AX
+2024/07/27 16:44:54 PID: 3 - TLB MISS - Pagina: 3
+2024/07/27 16:44:54 PID: 3 - OBTENER MARCO - Página: 3 - Marco: 14
+2024/07/27 16:44:55 PID: 3 - Acción: ESCRIBIR - Dirección Física: 228 - Valor: 49
+2024/07/27 16:44:55 PID: 3 - FETCH - Program Counter: 12
+2024/07/27 16:44:55 PID: 3 - Ejecutando: SET - AX,52
+2024/07/27 16:44:55 PID: 3 - FETCH - Program Counter: 13
+2024/07/27 16:44:55 PID: 3 - Ejecutando: SET - DX,57
+2024/07/27 16:44:55 PID: 3 - FETCH - Program Counter: 14
+2024/07/27 16:44:55 PID: 3 - Ejecutando: MOV_OUT - DX,AX
+2024/07/27 16:44:55 PID: 3 - TLB MISS - Pagina: 3
+2024/07/27 16:44:55 PID: 3 - OBTENER MARCO - Página: 3 - Marco: 14
+2024/07/27 16:44:55 PID: 3 - Acción: ESCRIBIR - Dirección Física: 233 - Valor: 52
+2024/07/27 16:44:55 PID: 2 - FETCH - Program Counter: 67
+2024/07/27 16:44:55 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:55 PID: 2 - FETCH - Program Counter: 68
+2024/07/27 16:44:55 PID: 2 - Ejecutando: SET - AX,116
+2024/07/27 16:44:55 PID: 2 - FETCH - Program Counter: 69
+2024/07/27 16:44:55 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:56 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:44:56 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:44:56 PID: 2 - Acción: ESCRIBIR - Dirección Física: 148 - Valor: 116
+2024/07/27 16:44:56 PID: 2 - FETCH - Program Counter: 70
+2024/07/27 16:44:56 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:56 PID: 2 - FETCH - Program Counter: 71
+2024/07/27 16:44:56 PID: 2 - Ejecutando: SET - AX,104
+2024/07/27 16:44:56 PID: 3 - FETCH - Program Counter: 15
+2024/07/27 16:44:56 PID: 3 - Ejecutando: IO_GEN_SLEEP - GENERICA,2
+2024/07/27 16:44:56 PID: 2 - FETCH - Program Counter: 72
+2024/07/27 16:44:56 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:56 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:44:56 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:44:56 PID: 2 - Acción: ESCRIBIR - Dirección Física: 149 - Valor: 104
+2024/07/27 16:44:56 PID: 2 - FETCH - Program Counter: 73
+2024/07/27 16:44:57 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:57 PID: 2 - FETCH - Program Counter: 74
+2024/07/27 16:44:57 PID: 2 - Ejecutando: SET - AX,101
+2024/07/27 16:44:57 PID: 2 - FETCH - Program Counter: 75
+2024/07/27 16:44:57 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:57 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:44:57 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:44:57 PID: 2 - Acción: ESCRIBIR - Dirección Física: 150 - Valor: 101
+2024/07/27 16:44:57 PID: 3 - FETCH - Program Counter: 16
+2024/07/27 16:44:57 PID: 3 - Ejecutando: IO_STDOUT_WRITE - MONITOR , BX , CX
+2024/07/27 16:44:57 PID: 3 - TLB MISS - Pagina: 2
+2024/07/27 16:44:57 PID: 3 - OBTENER MARCO - Página: 2 - Marco: 13
+2024/07/27 16:44:57 PID: 2 - FETCH - Program Counter: 76
+2024/07/27 16:44:57 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:57 PID: 2 - FETCH - Program Counter: 77
+2024/07/27 16:44:58 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:44:58 PID: 2 - FETCH - Program Counter: 78
+2024/07/27 16:44:58 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:58 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:44:58 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:44:58 PID: 2 - Acción: ESCRIBIR - Dirección Física: 151 - Valor: 32
+2024/07/27 16:44:58 PID: 2 - FETCH - Program Counter: 79
+2024/07/27 16:44:58 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:44:58 PID: 3 - FETCH - Program Counter: 17
+2024/07/27 16:44:58 PID: 3 - Ejecutando: EXIT
+2024/07/27 16:44:58 PID: 2 - FETCH - Program Counter: 80
+2024/07/27 16:44:58 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:58 PID: 2 - FETCH - Program Counter: 81
+2024/07/27 16:44:59 PID: 2 - Ejecutando: SET - AX,119
+2024/07/27 16:44:59 PID: 2 - FETCH - Program Counter: 82
+2024/07/27 16:44:59 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:59 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:44:59 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:44:59 PID: 2 - Acción: ESCRIBIR - Dirección Física: 152 - Valor: 119
+2024/07/27 16:44:59 PID: 2 - FETCH - Program Counter: 83
+2024/07/27 16:44:59 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:44:59 PID: 2 - FETCH - Program Counter: 84
+2024/07/27 16:44:59 PID: 2 - Ejecutando: SET - AX,111
+2024/07/27 16:44:59 PID: 2 - FETCH - Program Counter: 85
+2024/07/27 16:44:59 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:44:59 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:44:59 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:45:00 PID: 2 - Acción: ESCRIBIR - Dirección Física: 153 - Valor: 111
+2024/07/27 16:45:00 PID: 2 - FETCH - Program Counter: 86
+2024/07/27 16:45:00 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:45:00 PID: 2 - FETCH - Program Counter: 87
+2024/07/27 16:45:00 PID: 2 - Ejecutando: SET - AX,114
+2024/07/27 16:45:00 PID: 2 - FETCH - Program Counter: 88
+2024/07/27 16:45:00 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:45:00 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:45:00 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:45:00 PID: 2 - Acción: ESCRIBIR - Dirección Física: 154 - Valor: 114
+2024/07/27 16:45:00 PID: 2 - FETCH - Program Counter: 89
+2024/07/27 16:45:00 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:45:00 PID: 2 - FETCH - Program Counter: 90
+2024/07/27 16:45:00 PID: 2 - Ejecutando: SET - AX,108
+2024/07/27 16:45:00 PID: 2 - FETCH - Program Counter: 91
+2024/07/27 16:45:00 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:45:01 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:45:01 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:45:01 PID: 2 - Acción: ESCRIBIR - Dirección Física: 155 - Valor: 108
+2024/07/27 16:45:01 PID: 2 - FETCH - Program Counter: 92
+2024/07/27 16:45:01 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:45:01 PID: 2 - FETCH - Program Counter: 93
+2024/07/27 16:45:01 PID: 2 - Ejecutando: SET - AX,100
+2024/07/27 16:45:01 PID: 2 - FETCH - Program Counter: 94
+2024/07/27 16:45:01 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:45:01 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:45:01 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:45:01 PID: 2 - Acción: ESCRIBIR - Dirección Física: 156 - Valor: 100
+2024/07/27 16:45:01 PID: 2 - FETCH - Program Counter: 95
+2024/07/27 16:45:01 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:45:01 PID: 2 - FETCH - Program Counter: 96
+2024/07/27 16:45:02 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:45:02 PID: 2 - FETCH - Program Counter: 97
+2024/07/27 16:45:02 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:45:02 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:45:02 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:45:02 PID: 2 - Acción: ESCRIBIR - Dirección Física: 157 - Valor: 32
+2024/07/27 16:45:02 PID: 2 - FETCH - Program Counter: 98
+2024/07/27 16:45:02 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:45:02 PID: 2 - FETCH - Program Counter: 99
+2024/07/27 16:45:02 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:45:02 PID: 2 - FETCH - Program Counter: 100
+2024/07/27 16:45:03 PID: 2 - Ejecutando: SET - AX,111
+2024/07/27 16:45:03 PID: 2 - FETCH - Program Counter: 101
+2024/07/27 16:45:03 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:45:03 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:45:03 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:45:03 PID: 2 - Acción: ESCRIBIR - Dirección Física: 158 - Valor: 111
+2024/07/27 16:45:03 PID: 2 - FETCH - Program Counter: 102
+2024/07/27 16:45:03 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:45:03 PID: 2 - FETCH - Program Counter: 103
+2024/07/27 16:45:03 PID: 2 - Ejecutando: SET - AX,110
+2024/07/27 16:45:03 PID: 2 - FETCH - Program Counter: 104
+2024/07/27 16:45:03 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:45:03 PID: 2 - TLB MISS - Pagina: 1
+2024/07/27 16:45:03 PID: 2 - OBTENER MARCO - Página: 1 - Marco: 9
+2024/07/27 16:45:04 PID: 2 - Acción: ESCRIBIR - Dirección Física: 159 - Valor: 110
+2024/07/27 16:45:04 PID: 2 - FETCH - Program Counter: 105
+2024/07/27 16:45:04 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:45:04 PID: 2 - FETCH - Program Counter: 106
+2024/07/27 16:45:04 PID: 2 - Ejecutando: SET - AX,32
+2024/07/27 16:45:04 PID: 2 - FETCH - Program Counter: 107
+2024/07/27 16:45:04 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:45:04 PID: 2 - TLB MISS - Pagina: 2
+2024/07/27 16:45:04 PID: 2 - OBTENER MARCO - Página: 2 - Marco: 10
+2024/07/27 16:45:04 PID: 2 - Acción: ESCRIBIR - Dirección Física: 160 - Valor: 32
+2024/07/27 16:45:04 PID: 2 - FETCH - Program Counter: 108
+2024/07/27 16:45:04 PID: 2 - Ejecutando: IO_GEN_SLEEP - GENERICA,1
+2024/07/27 16:45:05 PID: 2 - FETCH - Program Counter: 109
+2024/07/27 16:45:05 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:45:05 PID: 2 - FETCH - Program Counter: 110
+2024/07/27 16:45:05 PID: 2 - Ejecutando: SET - AX,102
+2024/07/27 16:45:05 PID: 2 - FETCH - Program Counter: 111
+2024/07/27 16:45:05 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:45:05 PID: 2 - TLB MISS - Pagina: 2
+2024/07/27 16:45:05 PID: 2 - OBTENER MARCO - Página: 2 - Marco: 10
+2024/07/27 16:45:05 PID: 2 - Acción: ESCRIBIR - Dirección Física: 161 - Valor: 102
+2024/07/27 16:45:05 PID: 2 - FETCH - Program Counter: 112
+2024/07/27 16:45:05 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:45:05 PID: 2 - FETCH - Program Counter: 113
+2024/07/27 16:45:05 PID: 2 - Ejecutando: SET - AX,105
+2024/07/27 16:45:05 PID: 2 - FETCH - Program Counter: 114
+2024/07/27 16:45:05 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:45:06 PID: 2 - TLB MISS - Pagina: 2
+2024/07/27 16:45:06 PID: 2 - OBTENER MARCO - Página: 2 - Marco: 10
+2024/07/27 16:45:06 PID: 2 - Acción: ESCRIBIR - Dirección Física: 162 - Valor: 105
+2024/07/27 16:45:06 PID: 2 - FETCH - Program Counter: 115
+2024/07/27 16:45:06 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:45:06 PID: 2 - FETCH - Program Counter: 116
+2024/07/27 16:45:06 PID: 2 - Ejecutando: SET - AX,114
+2024/07/27 16:45:06 PID: 2 - FETCH - Program Counter: 117
+2024/07/27 16:45:06 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:45:06 PID: 2 - TLB MISS - Pagina: 2
+2024/07/27 16:45:06 PID: 2 - OBTENER MARCO - Página: 2 - Marco: 10
+2024/07/27 16:45:06 PID: 2 - Acción: ESCRIBIR - Dirección Física: 163 - Valor: 114
+2024/07/27 16:45:06 PID: 2 - FETCH - Program Counter: 118
+2024/07/27 16:45:06 PID: 2 - Ejecutando: SUM - BX,CX
+2024/07/27 16:45:06 PID: 2 - FETCH - Program Counter: 119
+2024/07/27 16:45:07 PID: 2 - Ejecutando: SET - AX,101
+2024/07/27 16:45:07 PID: 2 - FETCH - Program Counter: 120
+2024/07/27 16:45:07 PID: 2 - Ejecutando: MOV_OUT - BX,AX
+2024/07/27 16:45:07 PID: 2 - TLB MISS - Pagina: 2
+2024/07/27 16:45:07 PID: 2 - OBTENER MARCO - Página: 2 - Marco: 10
+2024/07/27 16:45:07 PID: 2 - Acción: ESCRIBIR - Dirección Física: 164 - Valor: 101
+2024/07/27 16:45:07 PID: 2 - FETCH - Program Counter: 121
+2024/07/27 16:45:07 PID: 2 - Ejecutando: SET - BX,0
+2024/07/27 16:45:07 PID: 2 - FETCH - Program Counter: 122
+2024/07/27 16:45:07 PID: 2 - Ejecutando: SET - DX,37
+2024/07/27 16:45:07 PID: 2 - FETCH - Program Counter: 123
+2024/07/27 16:45:07 PID: 2 - Ejecutando: IO_STDOUT_WRITE - MONITOR , BX , DX
+2024/07/27 16:45:07 PID: 2 - TLB MISS - Pagina: 0
+2024/07/27 16:45:07 PID: 2 - OBTENER MARCO - Página: 0 - Marco: 8
+2024/07/27 16:45:08 PID: 2 - FETCH - Program Counter: 124
+2024/07/27 16:45:08 PID: 2 - Ejecutando: EXIT

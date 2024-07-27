@@ -36728,3 +36728,776 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/07/26 20:28:37 PID: 0 - Accion: Escribir - Direccion fisica: 80 - Tamaño a escribir: 69
 2024/07/26 20:28:42 aa 32
 2024/07/26 20:28:43 PID: 0 - Accion: Leer - Direccion fisica: 80 - Tamaño a leer: 69
+2024/07/27 16:07:50 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[]]
+2024/07/27 16:07:50 PID: 0 - Tamaño: 64
+2024/07/27 16:07:50 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[]]
+2024/07/27 16:07:50 PID: 1 - Tamaño: 64
+2024/07/27 16:07:50 tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- [map[] map[] map[]]
+2024/07/27 16:07:50 PID: 2 - Tamaño: 64
+2024/07/27 16:07:51 128 128
+
+
+
+2024/07/27 16:07:51 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/07/27 16:07:51 tabla de paginas-------map[0:0 1:1 2:2 3:3 4:4 5:5 6:6 7:7]
+2024/07/27 16:07:51 tabla GLOBAL de paginas------[map[] map[0:0 1:1 2:2 3:3 4:4 5:5 6:6 7:7] map[]]
+2024/07/27 16:07:51 aa 16
+2024/07/27 16:07:51 PID: 1 - Pagina: 1 - Marco: 1
+2024/07/27 16:07:51 40 40
+
+
+
+2024/07/27 16:07:51 PID: 2 - Tamaño Actual: 0 - Tamaño a Ampliar: 40
+2024/07/27 16:07:51 tabla de paginas-------map[0:8 1:9 2:10]
+2024/07/27 16:07:51 tabla GLOBAL de paginas------[map[] map[0:0 1:1 2:2 3:3 4:4 5:5 6:6 7:7] map[0:8 1:9 2:10]]
+2024/07/27 16:07:52 aa 16
+2024/07/27 16:07:52 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:07:52 PID: 2 - Accion: Escribir - Direccion fisica: 128 - Tamaño a escribir: 1
+2024/07/27 16:07:52 64 64
+
+
+
+2024/07/27 16:07:52 http: panic serving 127.0.0.1:59824: runtime error: index out of range [-1]
+goroutine 22 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6a01a0?, 0xc00019c0a8?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.ReservarMemoria({0x7351a0, 0xc00023a380}, 0xc00022e480)
+	/home/utnso/Desktop/SO/tp-2024-1c-EPIC/memoria/utils/utils.go:157 +0x985
+net/http.HandlerFunc.ServeHTTP(0xc00010add0?, {0x7351a0?, 0xc00023a380?}, 0x63001a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x7351a0, 0xc00023a380}, 0xc00022e480)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0001843c0?}, {0x7351a0?, 0xc00023a380?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0001882d0, {0x735708, 0xc000108f00})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/07/27 16:07:52 64 64
+
+
+
+2024/07/27 16:07:52 http: panic serving 127.0.0.1:59826: runtime error: index out of range [-1]
+goroutine 23 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6a01a0?, 0xc00019c0c0?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.ReservarMemoria({0x7351a0, 0xc00023a460}, 0xc00019a6c0)
+	/home/utnso/Desktop/SO/tp-2024-1c-EPIC/memoria/utils/utils.go:157 +0x985
+net/http.HandlerFunc.ServeHTTP(0xc00010add0?, {0x7351a0?, 0xc00023a460?}, 0x63001a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x7351a0, 0xc00023a460}, 0xc00019a6c0)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0001844e0?}, {0x7351a0?, 0xc00023a460?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000188360, {0x735708, 0xc000108f00})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/07/27 16:07:53 aa 16
+2024/07/27 16:07:53 PID: 3 - Pagina: 0 - Marco: 0
+2024/07/27 16:07:53 aa 16
+2024/07/27 16:07:53 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:07:53 PID: 2 - Accion: Escribir - Direccion fisica: 129 - Tamaño a escribir: 1
+2024/07/27 16:07:54 aa 16
+2024/07/27 16:07:54 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:07:54 PID: 2 - Accion: Escribir - Direccion fisica: 130 - Tamaño a escribir: 1
+2024/07/27 16:07:55 aa 16
+2024/07/27 16:07:55 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:07:55 PID: 2 - Accion: Escribir - Direccion fisica: 131 - Tamaño a escribir: 1
+2024/07/27 16:07:55 aa 16
+2024/07/27 16:07:55 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:07:55 PID: 2 - Accion: Escribir - Direccion fisica: 132 - Tamaño a escribir: 1
+2024/07/27 16:07:56 aa 16
+2024/07/27 16:07:56 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:07:56 PID: 2 - Accion: Escribir - Direccion fisica: 133 - Tamaño a escribir: 1
+2024/07/27 16:07:56 aa 16
+2024/07/27 16:07:57 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:07:57 PID: 2 - Accion: Escribir - Direccion fisica: 134 - Tamaño a escribir: 1
+2024/07/27 16:07:57 aa 16
+2024/07/27 16:07:57 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:07:57 PID: 2 - Accion: Escribir - Direccion fisica: 135 - Tamaño a escribir: 1
+2024/07/27 16:07:58 aa 16
+2024/07/27 16:07:58 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:07:58 PID: 2 - Accion: Escribir - Direccion fisica: 136 - Tamaño a escribir: 1
+2024/07/27 16:07:59 aa 16
+2024/07/27 16:07:59 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:07:59 PID: 2 - Accion: Escribir - Direccion fisica: 137 - Tamaño a escribir: 1
+2024/07/27 16:07:59 aa 16
+2024/07/27 16:07:59 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:07:59 PID: 2 - Accion: Escribir - Direccion fisica: 138 - Tamaño a escribir: 1
+2024/07/27 16:08:00 aa 16
+2024/07/27 16:08:00 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:08:00 PID: 2 - Accion: Escribir - Direccion fisica: 139 - Tamaño a escribir: 1
+2024/07/27 16:08:00 aa 16
+2024/07/27 16:08:01 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:08:01 PID: 2 - Accion: Escribir - Direccion fisica: 140 - Tamaño a escribir: 1
+2024/07/27 16:08:01 aa 16
+2024/07/27 16:08:02 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:08:02 PID: 2 - Accion: Escribir - Direccion fisica: 141 - Tamaño a escribir: 1
+2024/07/27 16:08:02 aa 16
+2024/07/27 16:08:02 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:08:02 PID: 2 - Accion: Escribir - Direccion fisica: 142 - Tamaño a escribir: 1
+2024/07/27 16:08:03 aa 16
+2024/07/27 16:08:03 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:08:03 PID: 2 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 1
+2024/07/27 16:08:04 aa 16
+2024/07/27 16:08:04 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:08:04 PID: 2 - Accion: Escribir - Direccion fisica: 144 - Tamaño a escribir: 1
+2024/07/27 16:08:04 aa 16
+2024/07/27 16:08:04 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:08:04 PID: 2 - Accion: Escribir - Direccion fisica: 145 - Tamaño a escribir: 1
+2024/07/27 16:08:05 aa 16
+2024/07/27 16:08:05 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:08:05 PID: 2 - Accion: Escribir - Direccion fisica: 146 - Tamaño a escribir: 1
+2024/07/27 16:08:05 aa 16
+2024/07/27 16:08:06 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:08:06 PID: 2 - Accion: Escribir - Direccion fisica: 147 - Tamaño a escribir: 1
+2024/07/27 16:08:06 aa 16
+2024/07/27 16:08:06 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:08:07 PID: 2 - Accion: Escribir - Direccion fisica: 148 - Tamaño a escribir: 1
+2024/07/27 16:08:07 aa 16
+2024/07/27 16:08:07 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:08:07 PID: 2 - Accion: Escribir - Direccion fisica: 149 - Tamaño a escribir: 1
+2024/07/27 16:08:08 aa 16
+2024/07/27 16:08:08 PID: 1 - Accion: Escribir - Direccion fisica: 16 - Tamaño a escribir: 20
+2024/07/27 16:08:08 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:08:08 PID: 2 - Accion: Escribir - Direccion fisica: 150 - Tamaño a escribir: 1
+2024/07/27 16:08:09 aa 16
+2024/07/27 16:08:09 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:08:09 PID: 1 - Accion: Escribir - Direccion fisica: 11 - Tamaño a escribir: 1
+2024/07/27 16:08:09 aa 16
+2024/07/27 16:08:09 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:08:09 PID: 2 - Accion: Escribir - Direccion fisica: 151 - Tamaño a escribir: 1
+2024/07/27 16:08:10 aa 16
+2024/07/27 16:08:10 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:08:10 PID: 1 - Accion: Escribir - Direccion fisica: 12 - Tamaño a escribir: 1
+2024/07/27 16:08:10 aa 16
+2024/07/27 16:08:10 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:08:11 PID: 1 - Accion: Escribir - Direccion fisica: 13 - Tamaño a escribir: 1
+2024/07/27 16:08:11 aa 16
+2024/07/27 16:08:11 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:08:11 PID: 2 - Accion: Escribir - Direccion fisica: 152 - Tamaño a escribir: 1
+2024/07/27 16:08:12 aa 16
+2024/07/27 16:08:12 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:08:12 PID: 1 - Accion: Escribir - Direccion fisica: 14 - Tamaño a escribir: 1
+2024/07/27 16:08:12 aa 16
+2024/07/27 16:08:12 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:08:13 PID: 2 - Accion: Escribir - Direccion fisica: 153 - Tamaño a escribir: 1
+2024/07/27 16:08:13 aa 16
+2024/07/27 16:08:13 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:08:13 PID: 2 - Accion: Escribir - Direccion fisica: 154 - Tamaño a escribir: 1
+2024/07/27 16:08:13 aa 16
+2024/07/27 16:08:13 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:08:14 PID: 1 - Accion: Escribir - Direccion fisica: 15 - Tamaño a escribir: 1
+2024/07/27 16:08:14 aa 16
+2024/07/27 16:08:14 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:08:14 PID: 1 - Accion: Leer - Direccion fisica: 11 - Tamaño a leer: 25
+2024/07/27 16:08:14 aa 16
+2024/07/27 16:08:15 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:08:15 PID: 2 - Accion: Escribir - Direccion fisica: 155 - Tamaño a escribir: 1
+2024/07/27 16:08:15 aa 16
+2024/07/27 16:08:15 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:08:15 PID: 2 - Accion: Escribir - Direccion fisica: 156 - Tamaño a escribir: 1
+2024/07/27 16:08:16 aa 16
+2024/07/27 16:08:16 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:08:16 PID: 2 - Accion: Escribir - Direccion fisica: 157 - Tamaño a escribir: 1
+2024/07/27 16:08:17 aa 16
+2024/07/27 16:08:17 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:08:17 PID: 2 - Accion: Escribir - Direccion fisica: 158 - Tamaño a escribir: 1
+2024/07/27 16:08:17 aa 16
+2024/07/27 16:08:18 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:08:18 PID: 2 - Accion: Escribir - Direccion fisica: 159 - Tamaño a escribir: 1
+2024/07/27 16:08:18 aa 16
+2024/07/27 16:08:18 PID: 2 - Pagina: 2 - Marco: 10
+2024/07/27 16:08:18 PID: 2 - Accion: Escribir - Direccion fisica: 160 - Tamaño a escribir: 1
+2024/07/27 16:08:19 aa 16
+2024/07/27 16:08:19 PID: 2 - Pagina: 2 - Marco: 10
+2024/07/27 16:08:19 PID: 2 - Accion: Escribir - Direccion fisica: 161 - Tamaño a escribir: 1
+2024/07/27 16:08:20 aa 16
+2024/07/27 16:08:20 PID: 2 - Pagina: 2 - Marco: 10
+2024/07/27 16:08:20 PID: 3 - Accion: Escribir - Direccion fisica: 0 - Tamaño a escribir: 26
+2024/07/27 16:08:20 PID: 2 - Accion: Escribir - Direccion fisica: 162 - Tamaño a escribir: 1
+2024/07/27 16:08:20 http: panic serving 127.0.0.1:52972: runtime error: index out of range [-1]
+goroutine 331 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6a01a0?, 0xc00001cae0?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.EscribirMemoria({0x7351a0, 0xc00017fa40}, 0xc00024f440)
+	/home/utnso/Desktop/SO/tp-2024-1c-EPIC/memoria/utils/utils.go:359 +0xad8
+net/http.HandlerFunc.ServeHTTP(0xc00010add0?, {0x7351a0?, 0xc00017fa40?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x7351a0, 0xc00017fa40}, 0xc00024f440)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x734430?}, {0x7351a0?, 0xc00017fa40?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00025e630, {0x735708, 0xc000108f00})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/07/27 16:08:21 aa 16
+2024/07/27 16:08:21 PID: 2 - Pagina: 2 - Marco: 10
+2024/07/27 16:08:21 PID: 2 - Accion: Escribir - Direccion fisica: 163 - Tamaño a escribir: 1
+2024/07/27 16:08:21 aa 16
+2024/07/27 16:08:21 PID: 2 - Pagina: 2 - Marco: 10
+2024/07/27 16:08:21 PID: 2 - Accion: Escribir - Direccion fisica: 164 - Tamaño a escribir: 1
+2024/07/27 16:08:22 aa 16
+2024/07/27 16:08:22 PID: 3 - Pagina: 0 - Marco: 0
+2024/07/27 16:08:22 aa 16
+2024/07/27 16:08:22 PID: 3 - Pagina: 2 - Marco: 0
+2024/07/27 16:08:22 PID: 3 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 26
+2024/07/27 16:08:22 http: panic serving 127.0.0.1:52994: runtime error: index out of range [-1]
+goroutine 304 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6a01a0?, 0xc0000a4d20?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.LeerMemoria({0x7351a0, 0xc0002a4c40}, 0xc0002aa240)
+	/home/utnso/Desktop/SO/tp-2024-1c-EPIC/memoria/utils/utils.go:436 +0xabc
+net/http.HandlerFunc.ServeHTTP(0xc00010add0?, {0x7351a0?, 0xc0002a4c40?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x7351a0, 0xc0002a4c40}, 0xc0002aa240)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x734430?}, {0x7351a0?, 0xc0002a4c40?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000ee630, {0x735708, 0xc000108f00})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/07/27 16:08:23 aa 16
+2024/07/27 16:08:23 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:08:23 PID: 2 - Accion: Leer - Direccion fisica: 128 - Tamaño a leer: 37
+2024/07/27 16:08:23 aa 16
+2024/07/27 16:08:23 PID: 3 - Pagina: 3 - Marco: 0
+2024/07/27 16:08:23 PID: 3 - Accion: Escribir - Direccion fisica: 4 - Tamaño a escribir: 1
+2024/07/27 16:08:23 http: panic serving 127.0.0.1:52996: runtime error: index out of range [-1]
+goroutine 336 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6a01a0?, 0xc0000a4d50?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.EscribirMemoria({0x7351a0, 0xc00025b420}, 0xc00026c360)
+	/home/utnso/Desktop/SO/tp-2024-1c-EPIC/memoria/utils/utils.go:359 +0xad8
+net/http.HandlerFunc.ServeHTTP(0xc00010add0?, {0x7351a0?, 0xc00025b420?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x7351a0, 0xc00025b420}, 0xc00026c360)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x734430?}, {0x7351a0?, 0xc00025b420?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00025e7e0, {0x735708, 0xc000108f00})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/07/27 16:08:24 aa 16
+2024/07/27 16:08:24 PID: 3 - Pagina: 3 - Marco: 0
+2024/07/27 16:08:24 PID: 3 - Accion: Escribir - Direccion fisica: 9 - Tamaño a escribir: 1
+2024/07/27 16:08:24 http: panic serving 127.0.0.1:53000: runtime error: index out of range [-1]
+goroutine 379 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6a01a0?, 0xc0000a4d68?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.EscribirMemoria({0x7351a0, 0xc00025b960}, 0xc00026ca20)
+	/home/utnso/Desktop/SO/tp-2024-1c-EPIC/memoria/utils/utils.go:359 +0xad8
+net/http.HandlerFunc.ServeHTTP(0xc00010add0?, {0x7351a0?, 0xc00025b960?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x7351a0, 0xc00025b960}, 0xc00026ca20)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x734430?}, {0x7351a0?, 0xc00025b960?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00025ef30, {0x735708, 0xc000108f00})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/07/27 16:08:25 aa 16
+2024/07/27 16:08:25 PID: 3 - Pagina: 2 - Marco: 0
+2024/07/27 16:08:25 PID: 3 - Accion: Leer - Direccion fisica: 0 - Tamaño a leer: 26
+2024/07/27 16:08:25 http: panic serving 127.0.0.1:36720: runtime error: index out of range [-1]
+goroutine 292 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6a01a0?, 0xc00001cdc8?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.LeerMemoria({0x7351a0, 0xc000272000}, 0xc00026d200)
+	/home/utnso/Desktop/SO/tp-2024-1c-EPIC/memoria/utils/utils.go:436 +0xabc
+net/http.HandlerFunc.ServeHTTP(0xc00010add0?, {0x7351a0?, 0xc000272000?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x7351a0, 0xc000272000}, 0xc00026d200)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x734430?}, {0x7351a0?, 0xc000272000?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000dfcb0, {0x735708, 0xc000108f00})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/07/27 16:08:25 http: panic serving 127.0.0.1:59816: runtime error: slice bounds out of range [:-1]
+goroutine 6 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x6a01a0?, 0xc00001cde0?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.removerIndexInt(...)
+	/home/utnso/Desktop/SO/tp-2024-1c-EPIC/memoria/utils/utils.go:286
+memoria/utils.LiberarRecursos({0x7351a0, 0xc0002721c0}, 0xc00026d440)
+	/home/utnso/Desktop/SO/tp-2024-1c-EPIC/memoria/utils/utils.go:270 +0x5f7
+net/http.HandlerFunc.ServeHTTP(0xc00010add0?, {0x7351a0?, 0xc0002721c0?}, 0x63001a?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x467df9?, {0x7351a0, 0xc0002721c0}, 0xc00026d440)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000108ff0?}, {0x7351a0?, 0xc0002721c0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000142120, {0x735708, 0xc000108f00})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/07/27 16:18:18 http: panic serving 127.0.0.1:43196: assignment to entry in nil map
+goroutine 19 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x674ba0?, 0x7319f0?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.CrearProceso({0x734260, 0xc00016a700}, 0xc00013a480)
+	/home/utnso/Desktop/SO/tp-2024-1c-EPIC/memoria/utils/utils.go:212 +0x19e
+net/http.HandlerFunc.ServeHTTP(0xc000119040?, {0x734260?, 0xc00016a700?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x734260, 0xc00016a700}, 0xc00013a480)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x7334f0?}, {0x734260?, 0xc00016a700?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000164120, {0x7347c8, 0xc000116f00})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/07/27 16:18:18 http: panic serving 127.0.0.1:43210: assignment to entry in nil map
+goroutine 21 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x674ba0?, 0x7319f0?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.CrearProceso({0x734260, 0xc000204000}, 0xc00013ab40)
+	/home/utnso/Desktop/SO/tp-2024-1c-EPIC/memoria/utils/utils.go:212 +0x19e
+net/http.HandlerFunc.ServeHTTP(0xc000119040?, {0x734260?, 0xc000204000?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x734260, 0xc000204000}, 0xc00013ab40)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x7334f0?}, {0x734260?, 0xc000204000?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0001643f0, {0x7347c8, 0xc000116f00})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/07/27 16:18:18 http: panic serving 127.0.0.1:43214: assignment to entry in nil map
+goroutine 5 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1898 +0xbe
+panic({0x674ba0?, 0x7319f0?})
+	/usr/local/go/src/runtime/panic.go:770 +0x132
+memoria/utils.CrearProceso({0x734260, 0xc0002040e0}, 0xc00020c000)
+	/home/utnso/Desktop/SO/tp-2024-1c-EPIC/memoria/utils/utils.go:212 +0x19e
+net/http.HandlerFunc.ServeHTTP(0xc000119040?, {0x734260?, 0xc0002040e0?}, 0x10?)
+	/usr/local/go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x410165?, {0x734260, 0xc0002040e0}, 0xc00020c000)
+	/usr/local/go/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0x7334f0?}, {0x734260?, 0xc0002040e0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00007c120, {0x7347c8, 0xc000116f00})
+	/usr/local/go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3285 +0x4b4
+2024/07/27 16:20:11 PID: 1 - Tamaño: 64
+2024/07/27 16:20:11 PID: 2 - Tamaño: 64
+2024/07/27 16:20:11 PID: 3 - Tamaño: 64
+2024/07/27 16:20:11 128 128
+
+
+
+2024/07/27 16:20:11 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/07/27 16:20:11 tabla de paginas-------map[0:0 1:1 2:2 3:3 4:4 5:5 6:6 7:7]
+2024/07/27 16:20:11 tabla GLOBAL de paginas------map[1:map[0:0 1:1 2:2 3:3 4:4 5:5 6:6 7:7] 2:map[] 3:map[]]
+2024/07/27 16:20:12 aa 16
+2024/07/27 16:20:12 PID: 1 - Pagina: 1 - Marco: 1
+2024/07/27 16:20:12 40 40
+
+
+
+2024/07/27 16:20:12 PID: 2 - Tamaño Actual: 0 - Tamaño a Ampliar: 40
+2024/07/27 16:20:12 tabla de paginas-------map[0:8 1:9 2:10]
+2024/07/27 16:20:12 tabla GLOBAL de paginas------map[1:map[0:0 1:1 2:2 3:3 4:4 5:5 6:6 7:7] 2:map[0:8 1:9 2:10] 3:map[]]
+2024/07/27 16:20:12 aa 16
+2024/07/27 16:20:13 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:20:13 PID: 2 - Accion: Escribir - Direccion fisica: 128 - Tamaño a escribir: 1
+2024/07/27 16:20:13 64 64
+
+
+
+2024/07/27 16:20:13 PID: 3 - Tamaño Actual: 0 - Tamaño a Ampliar: 64
+2024/07/27 16:20:13 tabla de paginas-------map[0:11 1:12 2:13 3:14]
+2024/07/27 16:20:13 tabla GLOBAL de paginas------map[1:map[0:0 1:1 2:2 3:3 4:4 5:5 6:6 7:7] 2:map[0:8 1:9 2:10] 3:map[0:11 1:12 2:13 3:14]]
+2024/07/27 16:20:13 aa 16
+2024/07/27 16:20:13 PID: 3 - Pagina: 0 - Marco: 11
+2024/07/27 16:20:14 aa 16
+2024/07/27 16:20:14 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:20:14 PID: 2 - Accion: Escribir - Direccion fisica: 129 - Tamaño a escribir: 1
+2024/07/27 16:20:15 aa 16
+2024/07/27 16:20:15 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:20:15 PID: 2 - Accion: Escribir - Direccion fisica: 130 - Tamaño a escribir: 1
+2024/07/27 16:20:15 aa 16
+2024/07/27 16:20:16 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:20:16 PID: 2 - Accion: Escribir - Direccion fisica: 131 - Tamaño a escribir: 1
+2024/07/27 16:20:16 aa 16
+2024/07/27 16:20:16 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:20:16 PID: 2 - Accion: Escribir - Direccion fisica: 132 - Tamaño a escribir: 1
+2024/07/27 16:20:17 aa 16
+2024/07/27 16:20:17 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:20:17 PID: 2 - Accion: Escribir - Direccion fisica: 133 - Tamaño a escribir: 1
+2024/07/27 16:20:17 aa 16
+2024/07/27 16:20:17 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:20:17 PID: 2 - Accion: Escribir - Direccion fisica: 134 - Tamaño a escribir: 1
+2024/07/27 16:20:18 aa 16
+2024/07/27 16:20:18 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:20:18 PID: 2 - Accion: Escribir - Direccion fisica: 135 - Tamaño a escribir: 1
+2024/07/27 16:20:18 PID: 1 - Accion: Escribir - Direccion fisica: 16 - Tamaño a escribir: 20
+2024/07/27 16:20:19 aa 16
+2024/07/27 16:20:19 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:20:19 PID: 2 - Accion: Escribir - Direccion fisica: 136 - Tamaño a escribir: 1
+2024/07/27 16:20:20 aa 16
+2024/07/27 16:20:20 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:20:20 PID: 1 - Accion: Escribir - Direccion fisica: 11 - Tamaño a escribir: 1
+2024/07/27 16:20:20 aa 16
+2024/07/27 16:20:21 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:20:21 PID: 2 - Accion: Escribir - Direccion fisica: 137 - Tamaño a escribir: 1
+2024/07/27 16:20:21 aa 16
+2024/07/27 16:20:21 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:20:21 PID: 1 - Accion: Escribir - Direccion fisica: 12 - Tamaño a escribir: 1
+2024/07/27 16:20:22 aa 16
+2024/07/27 16:20:22 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:20:22 PID: 1 - Accion: Escribir - Direccion fisica: 13 - Tamaño a escribir: 1
+2024/07/27 16:20:22 aa 16
+2024/07/27 16:20:22 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:20:22 PID: 2 - Accion: Escribir - Direccion fisica: 138 - Tamaño a escribir: 1
+2024/07/27 16:20:23 aa 16
+2024/07/27 16:20:23 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:20:23 PID: 2 - Accion: Escribir - Direccion fisica: 139 - Tamaño a escribir: 1
+2024/07/27 16:20:23 aa 16
+2024/07/27 16:20:23 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:20:23 PID: 1 - Accion: Escribir - Direccion fisica: 14 - Tamaño a escribir: 1
+2024/07/27 16:20:24 aa 16
+2024/07/27 16:20:24 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:20:24 PID: 2 - Accion: Escribir - Direccion fisica: 140 - Tamaño a escribir: 1
+2024/07/27 16:20:25 aa 16
+2024/07/27 16:20:25 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:20:25 PID: 1 - Accion: Escribir - Direccion fisica: 15 - Tamaño a escribir: 1
+2024/07/27 16:20:25 aa 16
+2024/07/27 16:20:25 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:20:25 PID: 1 - Accion: Leer - Direccion fisica: 11 - Tamaño a leer: 25
+2024/07/27 16:20:26 aa 16
+2024/07/27 16:20:26 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:20:26 PID: 2 - Accion: Escribir - Direccion fisica: 141 - Tamaño a escribir: 1
+2024/07/27 16:20:27 aa 16
+2024/07/27 16:20:27 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:20:27 PID: 2 - Accion: Escribir - Direccion fisica: 142 - Tamaño a escribir: 1
+2024/07/27 16:20:27 PID: 3 - Accion: Escribir - Direccion fisica: 176 - Tamaño a escribir: 26
+2024/07/27 16:20:27 aa 16
+2024/07/27 16:20:27 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:20:27 PID: 2 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 1
+2024/07/27 16:20:28 aa 16
+2024/07/27 16:20:28 PID: 3 - Pagina: 0 - Marco: 11
+2024/07/27 16:20:29 aa 16
+2024/07/27 16:20:29 PID: 3 - Pagina: 2 - Marco: 13
+2024/07/27 16:20:29 PID: 3 - Accion: Leer - Direccion fisica: 176 - Tamaño a leer: 26
+2024/07/27 16:20:29 PID: 3 - Accion: Escribir - Direccion fisica: 208 - Tamaño a escribir: 26
+2024/07/27 16:20:29 aa 16
+2024/07/27 16:20:29 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:20:30 PID: 2 - Accion: Escribir - Direccion fisica: 144 - Tamaño a escribir: 1
+2024/07/27 16:20:30 aa 16
+2024/07/27 16:20:30 PID: 3 - Pagina: 3 - Marco: 14
+2024/07/27 16:20:30 PID: 3 - Accion: Escribir - Direccion fisica: 228 - Tamaño a escribir: 1
+2024/07/27 16:20:31 aa 16
+2024/07/27 16:20:31 PID: 3 - Pagina: 3 - Marco: 14
+2024/07/27 16:20:31 PID: 3 - Accion: Escribir - Direccion fisica: 233 - Tamaño a escribir: 1
+2024/07/27 16:20:31 aa 16
+2024/07/27 16:20:31 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:20:31 PID: 2 - Accion: Escribir - Direccion fisica: 145 - Tamaño a escribir: 1
+2024/07/27 16:20:32 aa 16
+2024/07/27 16:20:32 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:20:32 PID: 2 - Accion: Escribir - Direccion fisica: 146 - Tamaño a escribir: 1
+2024/07/27 16:20:32 aa 16
+2024/07/27 16:20:32 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:20:33 PID: 2 - Accion: Escribir - Direccion fisica: 147 - Tamaño a escribir: 1
+2024/07/27 16:20:33 aa 16
+2024/07/27 16:20:33 PID: 3 - Pagina: 2 - Marco: 13
+2024/07/27 16:20:33 PID: 3 - Accion: Leer - Direccion fisica: 208 - Tamaño a leer: 26
+2024/07/27 16:20:33 aa 16
+2024/07/27 16:20:34 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:20:34 PID: 2 - Accion: Escribir - Direccion fisica: 148 - Tamaño a escribir: 1
+2024/07/27 16:20:34 aa 16
+2024/07/27 16:20:34 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:20:34 PID: 2 - Accion: Escribir - Direccion fisica: 149 - Tamaño a escribir: 1
+2024/07/27 16:20:35 aa 16
+2024/07/27 16:20:35 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:20:35 PID: 2 - Accion: Escribir - Direccion fisica: 150 - Tamaño a escribir: 1
+2024/07/27 16:20:35 aa 16
+2024/07/27 16:20:36 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:20:36 PID: 2 - Accion: Escribir - Direccion fisica: 151 - Tamaño a escribir: 1
+2024/07/27 16:20:36 aa 16
+2024/07/27 16:20:36 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:20:37 PID: 2 - Accion: Escribir - Direccion fisica: 152 - Tamaño a escribir: 1
+2024/07/27 16:20:37 aa 16
+2024/07/27 16:20:37 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:20:37 PID: 2 - Accion: Escribir - Direccion fisica: 153 - Tamaño a escribir: 1
+2024/07/27 16:20:38 aa 16
+2024/07/27 16:20:38 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:20:38 PID: 2 - Accion: Escribir - Direccion fisica: 154 - Tamaño a escribir: 1
+2024/07/27 16:20:38 aa 16
+2024/07/27 16:20:38 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:20:38 PID: 2 - Accion: Escribir - Direccion fisica: 155 - Tamaño a escribir: 1
+2024/07/27 16:20:39 aa 16
+2024/07/27 16:20:39 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:20:39 PID: 2 - Accion: Escribir - Direccion fisica: 156 - Tamaño a escribir: 1
+2024/07/27 16:20:39 aa 16
+2024/07/27 16:20:40 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:20:40 PID: 2 - Accion: Escribir - Direccion fisica: 157 - Tamaño a escribir: 1
+2024/07/27 16:20:40 aa 16
+2024/07/27 16:20:41 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:20:41 PID: 2 - Accion: Escribir - Direccion fisica: 158 - Tamaño a escribir: 1
+2024/07/27 16:20:41 aa 16
+2024/07/27 16:20:41 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:20:41 PID: 2 - Accion: Escribir - Direccion fisica: 159 - Tamaño a escribir: 1
+2024/07/27 16:20:42 aa 16
+2024/07/27 16:20:42 PID: 2 - Pagina: 2 - Marco: 10
+2024/07/27 16:20:42 PID: 2 - Accion: Escribir - Direccion fisica: 160 - Tamaño a escribir: 1
+2024/07/27 16:20:43 aa 16
+2024/07/27 16:20:43 PID: 2 - Pagina: 2 - Marco: 10
+2024/07/27 16:20:43 PID: 2 - Accion: Escribir - Direccion fisica: 161 - Tamaño a escribir: 1
+2024/07/27 16:20:43 aa 16
+2024/07/27 16:20:43 PID: 2 - Pagina: 2 - Marco: 10
+2024/07/27 16:20:43 PID: 2 - Accion: Escribir - Direccion fisica: 162 - Tamaño a escribir: 1
+2024/07/27 16:20:44 aa 16
+2024/07/27 16:20:44 PID: 2 - Pagina: 2 - Marco: 10
+2024/07/27 16:20:44 PID: 2 - Accion: Escribir - Direccion fisica: 163 - Tamaño a escribir: 1
+2024/07/27 16:20:44 aa 16
+2024/07/27 16:20:45 PID: 2 - Pagina: 2 - Marco: 10
+2024/07/27 16:20:45 PID: 2 - Accion: Escribir - Direccion fisica: 164 - Tamaño a escribir: 1
+2024/07/27 16:20:45 aa 16
+2024/07/27 16:20:45 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:20:45 PID: 2 - Accion: Leer - Direccion fisica: 128 - Tamaño a leer: 37
+2024/07/27 16:36:06 PID: 1 - Tamaño: 64
+2024/07/27 16:36:07 PID: 2 - Tamaño: 64
+2024/07/27 16:36:07 PID: 3 - Tamaño: 64
+2024/07/27 16:36:07 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/07/27 16:36:07 PID: 1 - Pagina: 1 - Marco: 1
+2024/07/27 16:36:07 PID: 2 - Tamaño Actual: 0 - Tamaño a Ampliar: 40
+2024/07/27 16:36:08 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:36:08 PID: 2 - Accion: Escribir - Direccion fisica: 128 - Tamaño a escribir: 1
+2024/07/27 16:36:09 PID: 3 - Tamaño Actual: 0 - Tamaño a Ampliar: 64
+2024/07/27 16:36:09 PID: 3 - Pagina: 0 - Marco: 11
+2024/07/27 16:36:09 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:36:09 PID: 2 - Accion: Escribir - Direccion fisica: 129 - Tamaño a escribir: 1
+2024/07/27 16:36:10 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:36:10 PID: 2 - Accion: Escribir - Direccion fisica: 130 - Tamaño a escribir: 1
+2024/07/27 16:36:11 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:36:11 PID: 2 - Accion: Escribir - Direccion fisica: 131 - Tamaño a escribir: 1
+2024/07/27 16:36:12 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:36:12 PID: 2 - Accion: Escribir - Direccion fisica: 132 - Tamaño a escribir: 1
+2024/07/27 16:36:12 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:36:12 PID: 2 - Accion: Escribir - Direccion fisica: 133 - Tamaño a escribir: 1
+2024/07/27 16:36:13 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:36:13 PID: 2 - Accion: Escribir - Direccion fisica: 134 - Tamaño a escribir: 1
+2024/07/27 16:36:13 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:36:13 PID: 2 - Accion: Escribir - Direccion fisica: 135 - Tamaño a escribir: 1
+2024/07/27 16:36:14 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:36:14 PID: 2 - Accion: Escribir - Direccion fisica: 136 - Tamaño a escribir: 1
+2024/07/27 16:36:15 PID: 1 - Accion: Escribir - Direccion fisica: 16 - Tamaño a escribir: 20
+2024/07/27 16:36:15 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:36:15 PID: 2 - Accion: Escribir - Direccion fisica: 137 - Tamaño a escribir: 1
+2024/07/27 16:36:16 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:36:16 PID: 1 - Accion: Escribir - Direccion fisica: 11 - Tamaño a escribir: 1
+2024/07/27 16:36:17 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:36:17 PID: 2 - Accion: Escribir - Direccion fisica: 138 - Tamaño a escribir: 1
+2024/07/27 16:36:17 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:36:17 PID: 2 - Accion: Escribir - Direccion fisica: 139 - Tamaño a escribir: 1
+2024/07/27 16:36:18 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:36:18 PID: 1 - Accion: Escribir - Direccion fisica: 12 - Tamaño a escribir: 1
+2024/07/27 16:36:18 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:36:18 PID: 1 - Accion: Escribir - Direccion fisica: 13 - Tamaño a escribir: 1
+2024/07/27 16:36:19 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:36:19 PID: 2 - Accion: Escribir - Direccion fisica: 140 - Tamaño a escribir: 1
+2024/07/27 16:36:19 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:36:19 PID: 1 - Accion: Escribir - Direccion fisica: 14 - Tamaño a escribir: 1
+2024/07/27 16:36:20 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:36:20 PID: 2 - Accion: Escribir - Direccion fisica: 141 - Tamaño a escribir: 1
+2024/07/27 16:36:21 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:36:21 PID: 1 - Accion: Escribir - Direccion fisica: 15 - Tamaño a escribir: 1
+2024/07/27 16:36:22 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:36:22 PID: 1 - Accion: Leer - Direccion fisica: 11 - Tamaño a leer: 25
+2024/07/27 16:36:22 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:36:22 PID: 2 - Accion: Escribir - Direccion fisica: 142 - Tamaño a escribir: 1
+2024/07/27 16:36:22 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:36:23 PID: 2 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 1
+2024/07/27 16:36:24 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:36:24 PID: 2 - Accion: Escribir - Direccion fisica: 144 - Tamaño a escribir: 1
+2024/07/27 16:36:24 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:36:24 PID: 2 - Accion: Escribir - Direccion fisica: 145 - Tamaño a escribir: 1
+2024/07/27 16:36:25 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:36:25 PID: 2 - Accion: Escribir - Direccion fisica: 146 - Tamaño a escribir: 1
+2024/07/27 16:36:25 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:36:26 PID: 2 - Accion: Escribir - Direccion fisica: 147 - Tamaño a escribir: 1
+2024/07/27 16:36:26 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:36:26 PID: 2 - Accion: Escribir - Direccion fisica: 148 - Tamaño a escribir: 1
+2024/07/27 16:36:27 PID: 3 - Accion: Escribir - Direccion fisica: 176 - Tamaño a escribir: 26
+2024/07/27 16:36:27 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:36:27 PID: 2 - Accion: Escribir - Direccion fisica: 149 - Tamaño a escribir: 1
+2024/07/27 16:36:28 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:36:28 PID: 2 - Accion: Escribir - Direccion fisica: 150 - Tamaño a escribir: 1
+2024/07/27 16:36:28 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:36:29 PID: 2 - Accion: Escribir - Direccion fisica: 151 - Tamaño a escribir: 1
+2024/07/27 16:36:29 PID: 3 - Pagina: 0 - Marco: 11
+2024/07/27 16:36:29 PID: 3 - Pagina: 2 - Marco: 13
+2024/07/27 16:36:29 PID: 3 - Accion: Leer - Direccion fisica: 176 - Tamaño a leer: 26
+2024/07/27 16:36:29 PID: 3 - Accion: Escribir - Direccion fisica: 208 - Tamaño a escribir: 26
+2024/07/27 16:36:30 PID: 3 - Pagina: 3 - Marco: 14
+2024/07/27 16:36:30 PID: 3 - Accion: Escribir - Direccion fisica: 228 - Tamaño a escribir: 1
+2024/07/27 16:36:31 PID: 3 - Pagina: 3 - Marco: 14
+2024/07/27 16:36:31 PID: 3 - Accion: Escribir - Direccion fisica: 233 - Tamaño a escribir: 1
+2024/07/27 16:36:31 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:36:31 PID: 2 - Accion: Escribir - Direccion fisica: 152 - Tamaño a escribir: 1
+2024/07/27 16:36:32 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:36:32 PID: 2 - Accion: Escribir - Direccion fisica: 153 - Tamaño a escribir: 1
+2024/07/27 16:36:32 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:36:33 PID: 2 - Accion: Escribir - Direccion fisica: 154 - Tamaño a escribir: 1
+2024/07/27 16:36:33 PID: 3 - Pagina: 2 - Marco: 13
+2024/07/27 16:36:33 PID: 3 - Accion: Leer - Direccion fisica: 208 - Tamaño a leer: 26
+2024/07/27 16:36:33 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:36:33 PID: 2 - Accion: Escribir - Direccion fisica: 155 - Tamaño a escribir: 1
+2024/07/27 16:36:34 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:36:34 PID: 2 - Accion: Escribir - Direccion fisica: 156 - Tamaño a escribir: 1
+2024/07/27 16:36:35 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:36:35 PID: 2 - Accion: Escribir - Direccion fisica: 157 - Tamaño a escribir: 1
+2024/07/27 16:36:36 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:36:36 PID: 2 - Accion: Escribir - Direccion fisica: 158 - Tamaño a escribir: 1
+2024/07/27 16:36:36 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:36:36 PID: 2 - Accion: Escribir - Direccion fisica: 159 - Tamaño a escribir: 1
+2024/07/27 16:36:37 PID: 2 - Pagina: 2 - Marco: 10
+2024/07/27 16:36:37 PID: 2 - Accion: Escribir - Direccion fisica: 160 - Tamaño a escribir: 1
+2024/07/27 16:36:38 PID: 2 - Pagina: 2 - Marco: 10
+2024/07/27 16:36:38 PID: 2 - Accion: Escribir - Direccion fisica: 161 - Tamaño a escribir: 1
+2024/07/27 16:36:39 PID: 2 - Pagina: 2 - Marco: 10
+2024/07/27 16:36:39 PID: 2 - Accion: Escribir - Direccion fisica: 162 - Tamaño a escribir: 1
+2024/07/27 16:36:39 PID: 2 - Pagina: 2 - Marco: 10
+2024/07/27 16:36:39 PID: 2 - Accion: Escribir - Direccion fisica: 163 - Tamaño a escribir: 1
+2024/07/27 16:36:40 PID: 2 - Pagina: 2 - Marco: 10
+2024/07/27 16:36:40 PID: 2 - Accion: Escribir - Direccion fisica: 164 - Tamaño a escribir: 1
+2024/07/27 16:36:40 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:36:40 PID: 2 - Accion: Leer - Direccion fisica: 128 - Tamaño a leer: 37
+2024/07/27 16:44:34 PID: 1 - Tamaño: 64
+2024/07/27 16:44:34 PID: 2 - Tamaño: 64
+2024/07/27 16:44:34 PID: 3 - Tamaño: 64
+2024/07/27 16:44:34 PID: 1 - Tamaño Actual: 0 - Tamaño a Ampliar: 128
+2024/07/27 16:44:34 PID: 1 - Pagina: 1 - Marco: 1
+2024/07/27 16:44:35 PID: 2 - Tamaño Actual: 0 - Tamaño a Ampliar: 40
+2024/07/27 16:44:35 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:44:35 PID: 2 - Accion: Escribir - Direccion fisica: 128 - Tamaño a escribir: 1
+2024/07/27 16:44:36 PID: 3 - Tamaño Actual: 0 - Tamaño a Ampliar: 64
+2024/07/27 16:44:36 PID: 3 - Pagina: 0 - Marco: 11
+2024/07/27 16:44:37 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:44:37 PID: 2 - Accion: Escribir - Direccion fisica: 129 - Tamaño a escribir: 1
+2024/07/27 16:44:38 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:44:38 PID: 2 - Accion: Escribir - Direccion fisica: 130 - Tamaño a escribir: 1
+2024/07/27 16:44:38 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:44:38 PID: 2 - Accion: Escribir - Direccion fisica: 131 - Tamaño a escribir: 1
+2024/07/27 16:44:39 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:44:39 PID: 2 - Accion: Escribir - Direccion fisica: 132 - Tamaño a escribir: 1
+2024/07/27 16:44:39 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:44:40 PID: 2 - Accion: Escribir - Direccion fisica: 133 - Tamaño a escribir: 1
+2024/07/27 16:44:40 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:44:40 PID: 2 - Accion: Escribir - Direccion fisica: 134 - Tamaño a escribir: 1
+2024/07/27 16:44:41 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:44:41 PID: 2 - Accion: Escribir - Direccion fisica: 135 - Tamaño a escribir: 1
+2024/07/27 16:44:42 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:44:42 PID: 2 - Accion: Escribir - Direccion fisica: 136 - Tamaño a escribir: 1
+2024/07/27 16:44:42 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:44:42 PID: 2 - Accion: Escribir - Direccion fisica: 137 - Tamaño a escribir: 1
+2024/07/27 16:44:43 PID: 1 - Accion: Escribir - Direccion fisica: 16 - Tamaño a escribir: 20
+2024/07/27 16:44:43 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:44:44 PID: 1 - Accion: Escribir - Direccion fisica: 11 - Tamaño a escribir: 1
+2024/07/27 16:44:44 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:44:44 PID: 2 - Accion: Escribir - Direccion fisica: 138 - Tamaño a escribir: 1
+2024/07/27 16:44:44 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:44:45 PID: 2 - Accion: Escribir - Direccion fisica: 139 - Tamaño a escribir: 1
+2024/07/27 16:44:45 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:44:45 PID: 1 - Accion: Escribir - Direccion fisica: 12 - Tamaño a escribir: 1
+2024/07/27 16:44:45 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:44:46 PID: 1 - Accion: Escribir - Direccion fisica: 13 - Tamaño a escribir: 1
+2024/07/27 16:44:46 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:44:46 PID: 2 - Accion: Escribir - Direccion fisica: 140 - Tamaño a escribir: 1
+2024/07/27 16:44:47 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:44:47 PID: 1 - Accion: Escribir - Direccion fisica: 14 - Tamaño a escribir: 1
+2024/07/27 16:44:48 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:44:48 PID: 2 - Accion: Escribir - Direccion fisica: 141 - Tamaño a escribir: 1
+2024/07/27 16:44:48 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:44:48 PID: 1 - Accion: Escribir - Direccion fisica: 15 - Tamaño a escribir: 1
+2024/07/27 16:44:49 PID: 1 - Pagina: 0 - Marco: 0
+2024/07/27 16:44:49 PID: 1 - Accion: Leer - Direccion fisica: 11 - Tamaño a leer: 25
+2024/07/27 16:44:49 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:44:49 PID: 2 - Accion: Escribir - Direccion fisica: 142 - Tamaño a escribir: 1
+2024/07/27 16:44:50 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:44:50 PID: 2 - Accion: Escribir - Direccion fisica: 143 - Tamaño a escribir: 1
+2024/07/27 16:44:51 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:44:51 PID: 2 - Accion: Escribir - Direccion fisica: 144 - Tamaño a escribir: 1
+2024/07/27 16:44:51 PID: 3 - Accion: Escribir - Direccion fisica: 176 - Tamaño a escribir: 26
+2024/07/27 16:44:52 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:44:52 PID: 2 - Accion: Escribir - Direccion fisica: 145 - Tamaño a escribir: 1
+2024/07/27 16:44:52 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:44:53 PID: 2 - Accion: Escribir - Direccion fisica: 146 - Tamaño a escribir: 1
+2024/07/27 16:44:53 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:44:53 PID: 2 - Accion: Escribir - Direccion fisica: 147 - Tamaño a escribir: 1
+2024/07/27 16:44:53 PID: 3 - Pagina: 0 - Marco: 11
+2024/07/27 16:44:54 PID: 3 - Pagina: 2 - Marco: 13
+2024/07/27 16:44:54 PID: 3 - Accion: Leer - Direccion fisica: 176 - Tamaño a leer: 26
+2024/07/27 16:44:54 PID: 3 - Accion: Escribir - Direccion fisica: 208 - Tamaño a escribir: 26
+2024/07/27 16:44:54 PID: 3 - Pagina: 3 - Marco: 14
+2024/07/27 16:44:55 PID: 3 - Accion: Escribir - Direccion fisica: 228 - Tamaño a escribir: 1
+2024/07/27 16:44:55 PID: 3 - Pagina: 3 - Marco: 14
+2024/07/27 16:44:55 PID: 3 - Accion: Escribir - Direccion fisica: 233 - Tamaño a escribir: 1
+2024/07/27 16:44:56 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:44:56 PID: 2 - Accion: Escribir - Direccion fisica: 148 - Tamaño a escribir: 1
+2024/07/27 16:44:56 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:44:56 PID: 2 - Accion: Escribir - Direccion fisica: 149 - Tamaño a escribir: 1
+2024/07/27 16:44:57 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:44:57 PID: 2 - Accion: Escribir - Direccion fisica: 150 - Tamaño a escribir: 1
+2024/07/27 16:44:57 PID: 3 - Pagina: 2 - Marco: 13
+2024/07/27 16:44:57 PID: 3 - Accion: Leer - Direccion fisica: 208 - Tamaño a leer: 26
+2024/07/27 16:44:58 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:44:58 PID: 2 - Accion: Escribir - Direccion fisica: 151 - Tamaño a escribir: 1
+2024/07/27 16:44:59 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:44:59 PID: 2 - Accion: Escribir - Direccion fisica: 152 - Tamaño a escribir: 1
+2024/07/27 16:44:59 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:45:00 PID: 2 - Accion: Escribir - Direccion fisica: 153 - Tamaño a escribir: 1
+2024/07/27 16:45:00 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:45:00 PID: 2 - Accion: Escribir - Direccion fisica: 154 - Tamaño a escribir: 1
+2024/07/27 16:45:01 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:45:01 PID: 2 - Accion: Escribir - Direccion fisica: 155 - Tamaño a escribir: 1
+2024/07/27 16:45:01 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:45:01 PID: 2 - Accion: Escribir - Direccion fisica: 156 - Tamaño a escribir: 1
+2024/07/27 16:45:02 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:45:02 PID: 2 - Accion: Escribir - Direccion fisica: 157 - Tamaño a escribir: 1
+2024/07/27 16:45:03 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:45:03 PID: 2 - Accion: Escribir - Direccion fisica: 158 - Tamaño a escribir: 1
+2024/07/27 16:45:03 PID: 2 - Pagina: 1 - Marco: 9
+2024/07/27 16:45:04 PID: 2 - Accion: Escribir - Direccion fisica: 159 - Tamaño a escribir: 1
+2024/07/27 16:45:04 PID: 2 - Pagina: 2 - Marco: 10
+2024/07/27 16:45:04 PID: 2 - Accion: Escribir - Direccion fisica: 160 - Tamaño a escribir: 1
+2024/07/27 16:45:05 PID: 2 - Pagina: 2 - Marco: 10
+2024/07/27 16:45:05 PID: 2 - Accion: Escribir - Direccion fisica: 161 - Tamaño a escribir: 1
+2024/07/27 16:45:06 PID: 2 - Pagina: 2 - Marco: 10
+2024/07/27 16:45:06 PID: 2 - Accion: Escribir - Direccion fisica: 162 - Tamaño a escribir: 1
+2024/07/27 16:45:06 PID: 2 - Pagina: 2 - Marco: 10
+2024/07/27 16:45:06 PID: 2 - Accion: Escribir - Direccion fisica: 163 - Tamaño a escribir: 1
+2024/07/27 16:45:07 PID: 2 - Pagina: 2 - Marco: 10
+2024/07/27 16:45:07 PID: 2 - Accion: Escribir - Direccion fisica: 164 - Tamaño a escribir: 1
+2024/07/27 16:45:07 PID: 2 - Pagina: 0 - Marco: 8
+2024/07/27 16:45:08 PID: 2 - Accion: Leer - Direccion fisica: 128 - Tamaño a leer: 37

@@ -16,12 +16,11 @@ import (
 var memoria []byte
 var bitArray []int
 
-var contadorPID int
-var listaPID []int
-var instruccionesProcesos [][]string
-var tablasPaginasProcesos []map[int]int
+var instruccionesProcesos map[int][]string
+var tablasPaginasProcesos map[int]map[int]int
 
 type BodyRequest struct {
+	PID  int    `json:"pid"`
 	Path string `json:"path"`
 }
 
@@ -50,9 +49,10 @@ func ConfigurarLogger() {
 }
 
 func InicializarMemoriaYTablas() {
-	contadorPID = 0
 	memoria = make([]byte, globals.ClientConfig.MemorySize)
 	bitArray = make([]int, globals.ClientConfig.MemorySize/globals.ClientConfig.PageSize)
+	instruccionesProcesos = make(map[int][]string)
+	tablasPaginasProcesos = make(map[int]map[int]int)
 }
 
 func readFile(fileName string) []string {
@@ -95,22 +95,18 @@ func BuscarMarco(w http.ResponseWriter, r *http.Request) {
 	var marco int
 	var ok bool
 
-	for index, valor := range listaPID {
-		if valor == pidInt {
-			marco, ok = tablasPaginasProcesos[index][numeroPagina]
-			if !ok {
-				http.Error(w, "Error: la pagina buscada no existe", http.StatusInternalServerError)
+	marco, ok = tablasPaginasProcesos[pidInt][numeroPagina]
+	if !ok {
+		http.Error(w, "Error: la pagina buscada no existe", http.StatusInternalServerError)
 
-				respuesta, err := json.Marshal(marco)
-				if err != nil {
-					http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
-					return
-				}
-				w.WriteHeader(http.StatusBadRequest)
-				w.Write(respuesta)
-				return
-			}
+		respuesta, err := json.Marshal(marco)
+		if err != nil {
+			http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
+			return
 		}
+		w.WriteHeader(http.StatusBadRequest)
+		w.Write(respuesta)
+		return
 	}
 
 	respuesta, err := json.Marshal(marco)
@@ -130,14 +126,14 @@ func ReservarMemoria(w http.ResponseWriter, r *http.Request) {
 	tam := r.PathValue("tamaño")
 
 	pidInt, err := strconv.Atoi(pid)
-	//log.Printf("%s %d\n\n\n\n", pid, pidInt)
+
 	if err != nil {
 		http.Error(w, "Error al convertir de json a Int", http.StatusInternalServerError)
 		return
 	}
 
 	tamaño, err := strconv.Atoi(tam)
-	log.Printf("%s %d\n\n\n\n", tam, tamaño)
+
 	if err != nil {
 		http.Error(w, "Error al convertir de json a Int", http.StatusInternalServerError)
 		return
@@ -148,11 +144,7 @@ func ReservarMemoria(w http.ResponseWriter, r *http.Request) {
 		cantidadPaginas++
 	}
 
-	var tablaPaginas map[int]int
-	//log.Printf("hola")
-	index := obtenerIndexProceso(pidInt)
-	//log.Printf("chau %d", index)
-	tablaPaginas = tablasPaginasProcesos[index]
+	tablaPaginas := tablasPaginasProcesos[pidInt]
 
 	if tamaño > len(tablaPaginas)*globals.ClientConfig.PageSize {
 		log.Printf("PID: %d - Tamaño Actual: %d - Tamaño a Ampliar: %d", pidInt, len(tablaPaginas)*globals.ClientConfig.PageSize, tamaño)
@@ -181,9 +173,6 @@ func ReservarMemoria(w http.ResponseWriter, r *http.Request) {
 			delete(tablaPaginas, len(tablaPaginas)-1)
 		}
 	}
-
-	log.Printf("tabla de paginas-------%v", tablaPaginas)
-	log.Printf("tabla GLOBAL de paginas------%v", tablasPaginasProcesos)
 
 	w.WriteHeader(http.StatusOK)
 }
@@ -217,14 +206,11 @@ func CrearProceso(w http.ResponseWriter, r *http.Request) {
 	tablaPaginas := make(map[int]int)
 
 	instrucciones := readFile(request.Path)
-	listaPID = append(listaPID, contadorPID)
-	instruccionesProcesos = append(instruccionesProcesos, instrucciones)
-	tablasPaginasProcesos = append(tablasPaginasProcesos, tablaPaginas)
-	log.Printf("tabla GLOBAL ACTUALIZADA creacion del PROCESO de paginas----- %v", tablasPaginasProcesos)
+	instruccionesProcesos[request.PID] = instrucciones
+	tablasPaginasProcesos[request.PID] = tablaPaginas
 
-	log.Printf("PID: %d - Tamaño: %d", contadorPID, globals.ClientConfig.MemorySize/globals.ClientConfig.PageSize)
+	log.Printf("PID: %d - Tamaño: %d", request.PID, globals.ClientConfig.MemorySize/globals.ClientConfig.PageSize)
 
-	contadorPID++
 	w.WriteHeader(http.StatusOK)
 }
 
@@ -233,19 +219,10 @@ func DevolverInstruccion(w http.ResponseWriter, r *http.Request) {
 	pid := r.PathValue("pid")
 	pc := r.PathValue("pc")
 
-	var indice int
-
 	pidInt, err := strconv.Atoi(pid)
 	if err != nil {
 		http.Error(w, "Error al convertir de json a Int", http.StatusInternalServerError)
 		return
-	}
-
-	for index, valor := range listaPID {
-		if valor == pidInt {
-			indice = index
-			break
-		}
 	}
 
 	subindice, err := strconv.Atoi(pc)
@@ -254,7 +231,7 @@ func DevolverInstruccion(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	respuesta, err := json.Marshal(instruccionesProcesos[indice][subindice])
+	respuesta, err := json.Marshal(instruccionesProcesos[pidInt][subindice])
 	if err != nil {
 		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
 		return
@@ -273,11 +250,9 @@ func LiberarRecursos(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	index := obtenerIndexProceso(pidInt)
-	listaPID = removerIndexInt(listaPID, index)
-	instruccionesProcesos = removerIndexString(instruccionesProcesos, index)
-	liberarPaginas(tablasPaginasProcesos[index])
-	tablasPaginasProcesos = removerIndexMap(tablasPaginasProcesos, index)
+	delete(instruccionesProcesos, pidInt)
+	liberarPaginas(tablasPaginasProcesos[pidInt])
+	delete(tablasPaginasProcesos, pidInt)
 
 	w.WriteHeader(http.StatusOK)
 }
@@ -286,24 +261,6 @@ func liberarPaginas(paginas map[int]int) {
 	for _, value := range paginas {
 		bitArray[value] = 0
 	}
-}
-
-func removerIndexInt(s []int, index int) []int {
-	ret := make([]int, 0)
-	ret = append(ret, s[:index]...)
-	return append(ret, s[index+1:]...)
-}
-
-func removerIndexString(s [][]string, index int) [][]string {
-	ret := make([][]string, 0)
-	ret = append(ret, s[:index]...)
-	return append(ret, s[index+1:]...)
-}
-
-func removerIndexMap(s []map[int]int, index int) []map[int]int {
-	ret := make([]map[int]int, 0)
-	ret = append(ret, s[:index]...)
-	return append(ret, s[index+1:]...)
 }
 
 type BodyEscritura struct {
@@ -360,10 +317,9 @@ func EscribirMemoria(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	index := obtenerIndexProceso(request.PID)
 	inicio := false
 	fin := false
-	tablaProceso := tablasPaginasProcesos[index]
+	tablaProceso := tablasPaginasProcesos[request.PID]
 	marcosModificados := 0
 	for pagina := 0; pagina < len(tablaProceso); pagina++ {
 		if tablaProceso[pagina] == marco {
@@ -435,12 +391,11 @@ func LeerMemoria(w http.ResponseWriter, r *http.Request) {
 		marcosNecesarios++
 	}
 
-	index := obtenerIndexProceso(request.PID)
 	inicio := false
 	fin := false
 	tamañoRestante := request.Tamaño
 	var listaBytes []byte
-	tablaProceso := tablasPaginasProcesos[index]
+	tablaProceso := tablasPaginasProcesos[request.PID]
 
 	for pagina := 0; pagina < len(tablaProceso); pagina++ {
 		if tablaProceso[pagina] == marco {
@@ -498,18 +453,9 @@ func leerPagina(marco int, desplazamiento int, tamaño int) []byte {
 	return lista
 }
 
-func obtenerIndexProceso(pid int) int {
-	for index, value := range listaPID {
-		if value == pid {
-			return index
-		}
-	}
-	return -1
-}
-
 func PageSize(w http.ResponseWriter, r *http.Request) {
 	delayMemoria()
-	log.Printf("aa %d", globals.ClientConfig.PageSize)
+
 	respuesta, err := json.Marshal(globals.ClientConfig.PageSize)
 	if err != nil {
 		http.Error(w, "Error al codificar el tamaño de la página como JSON", http.StatusInternalServerError)

@@ -4041,3 +4041,108 @@ Fallout 2
 Fallout 3
 Fallout: New Vegas
 Fallout 4
+2024/07/27 16:06:58 
+Configuracion cargada con exito!
+2024/07/27 16:07:19 
+Configuracion cargada con exito!
+2024/07/27 16:07:33 
+Configuracion cargada con exito!
+2024/07/27 16:07:53 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:07:57 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:08:01 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:08:03 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:08:06 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:08:08 Se guardo correctamente el mensaje
+2024/07/27 16:08:08 PID: 1 - Operación: IO_STDIN_READ
+2024/07/27 16:08:10 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:08:12 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/27 16:08:14 PID: 1 - Operación: IO_STDOUT_WRITE
+2024/07/27 16:08:14 El texto leido es: WAR, WAR NEVER CHANGES...
+2024/07/27 16:08:16 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:08:18 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:08:20 Error guardando el texto ingresado Post "http://127.0.0.1:8002/escribir": EOF
+2024/07/27 16:08:20 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/27 16:08:23 PID: 2 - Operación: IO_STDOUT_WRITE
+2024/07/27 16:08:23 El texto leido es: I don't want to set the world on fire
+2024/07/27 16:08:24 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/27 16:08:25 error enviando: Post "http://127.0.0.1:8002/leer": EOF
+2024/07/27 16:17:41 
+Configuracion cargada con exito!
+2024/07/27 16:18:00 
+Configuracion cargada con exito!
+2024/07/27 16:18:12 
+Configuracion cargada con exito!
+2024/07/27 16:19:47 
+Configuracion cargada con exito!
+2024/07/27 16:19:57 
+Configuracion cargada con exito!
+2024/07/27 16:20:06 
+Configuracion cargada con exito!
+2024/07/27 16:20:14 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:20:18 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:20:18 Se guardo correctamente el mensaje
+2024/07/27 16:20:18 PID: 1 - Operación: IO_STDIN_READ
+2024/07/27 16:20:24 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/27 16:20:24 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:20:26 PID: 1 - Operación: IO_STDOUT_WRITE
+2024/07/27 16:20:26 El texto leido es: WAR, WAR NEVER CHANGES...
+2024/07/27 16:20:27 Se guardo correctamente el mensaje
+2024/07/27 16:20:27 PID: 3 - Operación: IO_STDIN_READ
+2024/07/27 16:20:28 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/27 16:20:28 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:20:32 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/27 16:20:33 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:20:33 PID: 3 - Operación: IO_STDOUT_WRITE
+2024/07/27 16:20:33 El texto leido es: Sistemas Operativos 1c2024
+2024/07/27 16:20:36 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:20:40 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:20:42 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:20:45 PID: 2 - Operación: IO_STDOUT_WRITE
+2024/07/27 16:20:45 El texto leido es: I don't want to set the world on fire
+2024/07/27 16:35:44 
+Configuracion cargada con exito!
+2024/07/27 16:35:53 
+Configuracion cargada con exito!
+2024/07/27 16:36:02 
+Configuracion cargada con exito!
+2024/07/27 16:36:10 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:36:14 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:36:15 PID: 1 - Operación: IO_STDIN_READ
+2024/07/27 16:36:19 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:36:20 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/27 16:36:22 PID: 1 - Operación: IO_STDOUT_WRITE
+2024/07/27 16:36:23 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:36:26 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:36:27 PID: 3 - Operación: IO_STDIN_READ
+2024/07/27 16:36:28 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/27 16:36:30 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:36:32 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/27 16:36:33 PID: 3 - Operación: IO_STDOUT_WRITE
+2024/07/27 16:36:35 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:36:37 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:36:41 PID: 2 - Operación: IO_STDOUT_WRITE
+2024/07/27 16:44:07 
+Configuracion cargada con exito!
+2024/07/27 16:44:17 
+Configuracion cargada con exito!
+2024/07/27 16:44:29 
+Configuracion cargada con exito!
+2024/07/27 16:44:37 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:44:41 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:44:43 PID: 1 - Operación: IO_STDIN_READ
+2024/07/27 16:44:46 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:44:47 PID: 1 - Operación: IO_GEN_SLEEP
+2024/07/27 16:44:49 PID: 1 - Operación: IO_STDOUT_WRITE
+2024/07/27 16:44:49 El texto leido es: WAR, WAR NEVER CHANGES...
+2024/07/27 16:44:50 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:44:51 PID: 3 - Operación: IO_STDIN_READ
+2024/07/27 16:44:52 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/27 16:44:54 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:44:56 PID: 3 - Operación: IO_GEN_SLEEP
+2024/07/27 16:44:58 PID: 3 - Operación: IO_STDOUT_WRITE
+2024/07/27 16:44:58 El texto leido es: Sistemas Operativos 1c2024
+2024/07/27 16:44:58 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:45:02 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:45:04 PID: 2 - Operación: IO_GEN_SLEEP
+2024/07/27 16:45:08 PID: 2 - Operación: IO_STDOUT_WRITE
+2024/07/27 16:45:08 El texto leido es: I don't want to set the world on fire

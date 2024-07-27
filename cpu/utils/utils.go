@@ -428,7 +428,6 @@ func COPY_STRING(tamS string) {
 		log.Printf("Error al convertir el tamaño a entero: %s", err.Error())
 		return
 	}
-	log.Printf("Tamaño solicitado: %d", tam)
 
 	direccionLogicaLectura := ObtenerValorRegistro("SI")
 	direccionLogicaEscritura := ObtenerValorRegistro("DI")
@@ -791,7 +790,6 @@ func IO_STDOUT_WRITE(nombre string, direccion string, tamaño string) {
 }
 
 func IO_FS_CREATE(interfaz string, nombreArchivo string) {
-	log.Printf("Se entró a IO_FS_CREATE en la CPU")
 	var sending BodyRequestFS
 	sending.Dispositivo = interfaz
 	sending.PID = procesoActual.PID
@@ -1091,7 +1089,6 @@ func SolicitarInstruccion(pid int, pc int) string {
 		log.Printf("Error al decodificar la respuesta JSON: %s", err.Error())
 		return ""
 	}
-	log.Printf("Instruccion: %s", instruccion)
 
 	return instruccion
 }

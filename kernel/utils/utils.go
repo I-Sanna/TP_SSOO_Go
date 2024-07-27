@@ -102,6 +102,7 @@ type BodyRequestFS struct {
 	PtrArchivo int    `json:"ptrarchivo"`
 }
 type BodyRequest struct {
+	PID  int    `json:"pid"`
 	Path string `json:"path"`
 }
 
@@ -175,7 +176,6 @@ func InicializarPlanificador() {
 func planificarFIFO() {
 	for {
 		<-semProcesosListos
-		log.Print("Consumi una señal")
 		planificadorCortoPlazo.Lock()
 		// Selecciona el primer proceso en la lista de procesos
 		mutexColaListos.Lock()
@@ -333,7 +333,7 @@ func IniciarProceso(w http.ResponseWriter, r *http.Request) {
 	}
 
 	nuevoProceso := PCB{
-		PID:            contadorPID,
+		PID:            request.PID,
 		ProgramCounter: 0,
 		Quantum:        globals.ClientConfig.Quantum, // Valor por defecto
 		Estado:         "NEW",
@@ -844,7 +844,6 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 		}
 		dispositivoGenerico.Unlock()
 	case "READ":
-		fmt.Println("Entró en el case de read en kernel")
 		var datosSTD BodySTD
 		datosSTD.PID = request.PID
 		datosSTD.Tamaño = request.Tamaño
@@ -863,7 +862,6 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 		}
 		dispositivoLectura.Unlock()
 	case "WRITE":
-		fmt.Println("Entró en el case de write en kernel")
 		var datosSTD BodySTD
 		datosSTD.PID = request.PID
 		datosSTD.Tamaño = request.Tamaño
@@ -888,8 +886,6 @@ func PedirIO(w http.ResponseWriter, r *http.Request) {
 		datosIO.Tamaño = request.Tamaño
 		datosIO.PtrArchivo = request.PtrArchivo
 		datosIO.Instruccion = instru[1]
-
-		log.Printf("%d", datosIO.Tamaño)
 
 		dispositivoFS.Lock() //Habria que hacer un semaforo por dispostivo
 		puerto, ok := puertosDispFS[request.Dispositivo]
@@ -1272,7 +1268,6 @@ func WAIT(pid int, recurso string) string {
 				return "BLOCKED"
 			} else {
 				listaRecursosOcupados[pid] = append(listaRecursosOcupados[pid], recurso)
-				log.Printf("Lista de recursos añadidos modificada: %s", listaRecursosOcupados[pid])
 				return "OK"
 			}
 		}
@@ -1290,9 +1285,7 @@ func SIGNAL(pid int, recurso string) string {
 			contador := 0
 			for _, recursoLista := range listaRecursos {
 				if recursoLista == recurso {
-					log.Printf("Lista de recursos ocupados sin modificar: %s", listaRecursosOcupados[pid])
 					listaRecursosOcupados[pid] = removerIndexString(listaRecursosOcupados[pid], contador)
-					log.Printf("Lista de recursos ocupados modificada: %s", listaRecursosOcupados[pid])
 				} else {
 					contador++
 				}

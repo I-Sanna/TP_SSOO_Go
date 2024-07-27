@@ -189,7 +189,7 @@ func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
 		return
 	}
-	fmt.Print("El tamaño pedido es: ", tamañoInt)
+
 	direccionInt, err := strconv.Atoi(direccion)
 	if err != nil {
 		http.Error(w, "Error al transformar un string en int", http.StatusInternalServerError)
@@ -197,15 +197,14 @@ func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
 	}
 	fmt.Print("\nEsperando texto en consola... ")
 	textoIngresado := LeerConsola()
-	fmt.Print("\n Paso leer consola ")
+
 	textoBytes := []byte(textoIngresado)
-	fmt.Print("\nConvirtió a array de bytes el texto ")
+
 	if len(textoBytes) > tamañoInt {
 		http.Error(w, "El texto ingresado por consola excede el tamaño en bytes", http.StatusInternalServerError)
 		return
 	}
-	fmt.Print("\nEl texto ingresado es: ", textoIngresado)
-	fmt.Print("\nGuardando texto en memoria... ")
+
 	var requestBody = BodyEscritura{
 		PID:       pidInt,
 		Info:      textoBytes,
@@ -227,9 +226,8 @@ func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
 	if resp.StatusCode != http.StatusOK {
 		log.Printf("Error al guardar el mensaje %s", resp.Status)
 		return
-	} else {
-		log.Printf("Se guardo correctamente el mensaje")
 	}
+
 	respuesta, err := json.Marshal("OK")
 	if err != nil {
 		http.Error(w, "Error al codificar los datos como JSON", http.StatusInternalServerError)
@@ -239,7 +237,6 @@ func IO_STDIN_READ(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	w.Write(respuesta)
 	log.Printf("PID: %d - Operación: IO_STDIN_READ", pidInt)
-	//log.Printf("Direccion: %s - Operación: IO_STDIN_READ", direccion)
 
 }
 
@@ -277,7 +274,7 @@ func IO_STDOUT_WRITE(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	url := "http://" + globals.ClientConfig.IpMemory + ":" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/leer"
-	fmt.Print("URL: ", url)
+
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
 		log.Printf("error enviando: %s", err.Error())
@@ -291,7 +288,7 @@ func IO_STDOUT_WRITE(w http.ResponseWriter, r *http.Request) {
 	}
 	time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
 	respString := string(response)
-	//log.Printf("Direccion: %s - Operación: IO_STDOUT_WRITE", direccion)
+
 	log.Printf("PID: %d - Operación: IO_STDOUT_WRITE", pidInt)
 	log.Printf("El texto leido es: %s", respString)
 }
@@ -508,7 +505,7 @@ func liberarBloques(bitmap []byte, puntero int, cantidad int) []byte {
 			bitmap[puntero-(i-1)] = 0
 		}
 	}
-	fmt.Printf("Puntero: %d - Cantidad: %d", puntero, cantidad)
+
 	return bitmap
 }
 
@@ -562,8 +559,6 @@ func IO_FS_TRUNCATE(w http.ResponseWriter, r *http.Request) {
 	} else {
 		bitmap = liberarBloques(bitmap, metadata.InitialBlock+bloquesOcupados, bloquesOcupados-bloquesNecesarios)
 	}
-
-	log.Printf("\n%b", bitmap)
 
 	metadata = obtenerMetadata(globals.ClientConfig.DialfsPath + "/" + request.NombreArchivo + ".json")
 	metadata.Size = request.Tamaño
@@ -632,7 +627,7 @@ func readFromFile(filename string, ptr int, size int) []byte {
 }
 
 func IO_FS_WRITE(w http.ResponseWriter, r *http.Request) {
-	fmt.Printf("Entro al fs write IO")
+
 	var request BodyRequestFS
 	err := json.NewDecoder(r.Body).Decode(&request)
 	if err != nil {
@@ -664,7 +659,7 @@ func IO_FS_WRITE(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Error al codificar la solicitud %v", err)
 		return
 	}
-	fmt.Printf("\nLlamando a memoria para leer la direc %d, tamaño %d", request.Direccion, request.Tamaño)
+
 	url := "http://" + globals.ClientConfig.IpMemory + ":" + strconv.Itoa(globals.ClientConfig.PortMemory) + "/leer"
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(body))
 	if err != nil {
@@ -678,10 +673,7 @@ func IO_FS_WRITE(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
-	respString := string(response)
 
-	log.Printf("El texto leido es: %s", respString)
-	log.Printf("Escribo el texto en el archivo")
 	writeToFile(request.Archivo, request.PtrArchivo, response)
 	log.Printf("PID: %d - Operación: IO_FS_WRITE", request.PID)
 	log.Printf("PID: %d - Escribir Archivo: %s - Tamaño a Escribir:  %d - Puntero Archivo: %d", request.PID, request.Archivo, request.Tamaño, request.PtrArchivo)
@@ -696,7 +688,6 @@ func IO_FS_WRITE(w http.ResponseWriter, r *http.Request) {
 }
 
 func IO_FS_READ(w http.ResponseWriter, r *http.Request) {
-	fmt.Printf("\nEntro al fs read IO")
 	var request BodyRequestFS
 	err := json.NewDecoder(r.Body).Decode(&request)
 	if err != nil {
@@ -719,8 +710,6 @@ func IO_FS_READ(w http.ResponseWriter, r *http.Request) {
 
 	textoLeido := readFromFile(request.Archivo, request.PtrArchivo, request.Tamaño)
 
-	log.Printf("El texto leido es: %s", string(textoLeido))
-	fmt.Print("\nGuardando texto en memoria... ")
 	var requestBody = BodyEscritura{
 		PID:       request.PID,
 		Info:      textoLeido,
@@ -810,7 +799,6 @@ type FileResponse struct {
 }
 
 func IO_FS_CREATE_Handler(w http.ResponseWriter, r *http.Request) {
-	log.Printf("Se recibió una solicitud en IO_FS_CREATE_Handler")
 
 	var request BodyFileRequest
 	err := json.NewDecoder(r.Body).Decode(&request)
@@ -825,8 +813,6 @@ func IO_FS_CREATE_Handler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Parámetros inválidos", http.StatusBadRequest)
 		return
 	}
-
-	log.Printf("Intentando crear archivo con nombre: %s", request.NombreArchivo)
 
 	err = CrearArchivoFS(request.NombreArchivo)
 	if err != nil {
@@ -848,12 +834,11 @@ func IO_FS_CREATE_Handler(w http.ResponseWriter, r *http.Request) {
 	time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
 	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(response)
-	log.Printf("Archivo '%s' creado", request.NombreArchivo)
+
 	log.Printf("PID: %d - Crear Archivo: %s", request.PID, request.NombreArchivo)
 }
 
 func IO_FS_DELETE_Handler(w http.ResponseWriter, r *http.Request) {
-	log.Printf("Se recibió una solicitud en IO_FS_DELETE_Handler")
 
 	var request BodyFileRequest
 	err := json.NewDecoder(r.Body).Decode(&request)
@@ -868,8 +853,6 @@ func IO_FS_DELETE_Handler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Parámetros inválidos", http.StatusBadRequest)
 		return
 	}
-
-	log.Printf("Intentando eliminar archivo con nombre: %s", request.NombreArchivo)
 
 	err = EliminarArchivoFS(request.NombreArchivo)
 	if err != nil {
@@ -891,12 +874,11 @@ func IO_FS_DELETE_Handler(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(response)
 	time.Sleep(time.Duration(globals.ClientConfig.UnitWorkTime) * time.Millisecond)
-	log.Printf("Archivo '%s' eliminado", request.NombreArchivo)
+
 	log.Printf("PID: %d - Delete Archivo: %s", request.PID, request.NombreArchivo)
 }
 
 func CrearArchivoFS(nombreArchivo string) error {
-	log.Printf("Se entró a CrearArchivoFS con nombreArchivo: %s", nombreArchivo)
 
 	// Ruta al archivo de metadata
 	metadataPath := globals.ClientConfig.DialfsPath + "/" + nombreArchivo + ".json"
@@ -905,8 +887,6 @@ func CrearArchivoFS(nombreArchivo string) error {
 	if _, err := os.Stat(metadataPath); err == nil {
 		return fmt.Errorf("el archivo ya existe")
 	}
-
-	log.Printf("Leyendo archivos de bloques y bitmap")
 
 	// Leer el archivo de bloques y el bitmap
 	bloquesPath := fmt.Sprintf("%s/bloques.dat", globals.ClientConfig.DialfsPath)
@@ -924,16 +904,12 @@ func CrearArchivoFS(nombreArchivo string) error {
 	}
 	defer bitmapFile.Close()
 
-	log.Printf("Leyendo el bitmap")
-
 	// Leer el bitmap
 	bitmap := make([]byte, globals.ClientConfig.DialfsBlockCount)
 	_, err = bitmapFile.Read(bitmap)
 	if err != nil {
 		return fmt.Errorf("no se pudo leer el bitmap: %s", err.Error())
 	}
-
-	log.Printf("Buscando bloque libre")
 
 	// Encontrar un bloque libre
 	var initialBlock int = -1
@@ -947,16 +923,12 @@ func CrearArchivoFS(nombreArchivo string) error {
 		return fmt.Errorf("no hay bloques libres disponibles")
 	}
 
-	log.Printf("Bloque libre encontrado: %d", initialBlock)
-
 	// Marcar el bloque como ocupado en el bitmap
 	bitmap[initialBlock] = 1
 	_, err = bitmapFile.WriteAt(bitmap, 0)
 	if err != nil {
 		return fmt.Errorf("no se pudo actualizar el bitmap: %s", err.Error())
 	}
-
-	log.Printf("Actualización del bitmap completada")
 
 	// Crear el archivo de metadata
 	metadata := Metadata{
@@ -976,7 +948,6 @@ func CrearArchivoFS(nombreArchivo string) error {
 
 	tablaSegmentacion[initialBlock] = nombreArchivo
 
-	log.Printf("Archivo de metadata '%s' creado con éxito", nombreArchivo)
 	return nil
 }
 
@@ -1013,8 +984,6 @@ func EliminarArchivoFS(nombreArchivo string) error {
 	for i := 0; i < bloquesOcupados; i++ {
 		bitmap[initialBlock+i] = 0
 	}
-
-	fmt.Printf("%b", bitmap)
 
 	err = os.WriteFile(bitmapPath, bitmap, 0644)
 	if err != nil {
